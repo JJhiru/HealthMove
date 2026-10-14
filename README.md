@@ -33,7 +33,7 @@ HealthMove/
 ├── docs/revision-catalogo.md     Cómo revisar el catálogo antes de usarlo
 ├── public/                       La PWA (todo lo que se publica)
 │   ├── index.html, estilos.css, manifest.webmanifest, sw.js, icons/
-│   ├── data/catalogo.json        Catálogo de ejercicios (v0.2.0, en borrador)
+│   ├── data/catalogo.json        Catálogo de ejercicios (v0.3.0, 220, en borrador)
 │   └── js/
 │       ├── opciones.js           Opciones del perfil y lo que excluye cada una
 │       ├── perfil.js             Estados del perfil y validación (funciones puras)

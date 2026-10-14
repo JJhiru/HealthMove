@@ -71,8 +71,9 @@ espacio · ejercicios de impacto (la exigencia `impacto` se mantiene para el fut
 aislada de la muñeca (giros o círculos), porque ninguna exigencia la cubre · ejercicios que
 dependen de reposabrazos · ejercicios con material especial (pelotas de terapia, escalones).
 
-El catálogo v0.2.0 tiene 64 ejercicios: sentado, de pie, tumbado en la cama y 2 variantes en el
-suelo. Las fuentes y los huecos están en `docs/revision-catalogo.md`.
+El catálogo v0.3.0 tiene 220 ejercicios. Por posición: 96 sentado, 50 de pie, 61 tumbado en la
+cama y 21 en el suelo (algunos admiten dos posiciones). Las fuentes y los huecos están en
+`docs/revision-catalogo.md`.
 
 ### Lado del cuerpo
 
