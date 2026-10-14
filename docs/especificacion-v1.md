@@ -50,12 +50,12 @@ movimiento o vuelta).
 | 7 | `brazo_sobre_hombro` | codo o mano por encima de la altura del hombro |
 | 8 | `mano_detras` | mano detrás de la espalda o de la cabeza |
 | 9 | `ambos_brazos` | no puede hacerse con un solo brazo |
-| 10 | `agarre` | cerrar la mano sobre algo (**incluye sujetarse a una silla**) |
+| 10 | `agarre` | cerrar la mano, con o sin objeto, aunque sea en parte (**incluye sujetarse a una silla** y cerrar el puño) |
 | 11 | `peso_en_manos` | manos o muñecas soportan parte del peso corporal |
 | 12 | `flexion_profunda_rodilla` | rodilla más de 90°, agacharse o ponerse en cuclillas |
 | 13 | `flexion_amplia_cadera` | muslo más cerca del tronco que al estar sentado |
-| 14 | `puntillas_talones` | apoyo sobre las puntas de los pies o sobre los talones |
-| 15 | `flexion_tronco` | inclinación hacia delante más allá de una inclinación leve |
+| 14 | `puntillas_talones` | de pie, soportar el peso del cuerpo sobre las puntas de los pies o sobre los talones |
+| 15 | `inclinacion_tronco` | inclinar la espalda hacia delante o hacia un lado, o arquearla hacia atrás, más allá de una inclinación leve |
 | 16 | `rotacion_tronco` | girar los hombros respecto a la cadera |
 
 Los umbrales "inclinación leve" y "90°" se fijan con una frase de referencia por umbral y se
@@ -64,7 +64,13 @@ aplican igual en todo el catálogo. No son medidas clínicas.
 ### Exclusiones del catálogo v1 (ningún ejercicio las incluye)
 
 Movimientos de cuello · arrodillarse o apoyar las rodillas en el suelo · desplazarse por el
-espacio · ejercicios de impacto (la exigencia `impacto` se mantiene para el futuro).
+espacio · ejercicios de impacto (la exigencia `impacto` se mantiene para el futuro) · movilidad
+aislada de la muñeca (giros o círculos), porque ninguna exigencia la cubre · ejercicios que
+dependen de reposabrazos · ejercicios con material especial (pelotas de terapia, escalones).
+
+El catálogo v0.1.0 tampoco tiene ejercicios en el suelo, porque no se encontró una fuente fiable
+con instrucciones escritas. Mientras siga así, la pregunta del suelo puede ocultarse en la
+interfaz; el modelo la conserva.
 
 ### Lado del cuerpo
 
@@ -115,7 +121,7 @@ Equilibrio y movilidad (dentro de Posición): "Me cuesta mantener el equilibrio"
 
 | Opción | Excluye |
 |---|---|
-| Me cuesta inclinarme hacia delante | `flexion_tronco` |
+| Me cuesta inclinar o arquear la espalda | `inclinacion_tronco` |
 | Me cuesta girar el tronco | `rotacion_tronco` |
 
 **Indicaciones de un profesional** ("Marca solo lo que te haya indicado un profesional sanitario")
@@ -128,8 +134,10 @@ Equilibrio y movilidad (dentro de Posición): "Me cuesta mantener el equilibrio"
 | No doblar cadera / rodilla, no inclinar / girar la espalda | las mismas exigencias que la dificultad equivalente |
 | **Tengo otra indicación que no aparece aquí** | **bloquea la generación** (HealthMove no puede respetar lo que no puede representar) |
 
-**Recursos y tiempo:** silla estable sin ruedas, pared libre, banda elástica, nada; 10, 15 o
-20 min.
+**Recursos y tiempo:** silla estable sin ruedas (preferiblemente sin reposabrazos), pared libre,
+banda elástica, peso ligero (por ejemplo, una botella de agua llena), toalla de mano; 10, 15 o
+20 min. Todos los ejercicios del catálogo v0.1.0 usan silla o pared, así que sin ninguna de las dos
+no se puede generar una rutina.
 
 ## 6. Estados de sección y condiciones para generar
 
@@ -174,6 +182,13 @@ validación.
 5. Estados de validación: `borrador` → `basado_en_fuente_publica` → `revisado_por_profesional`.
    v1 usa `basado_en_fuente_publica` y lo indica en la app. **La validación profesional queda como
    riesgo abierto.**
+6. El etiquetado inicial lo genera la IA y queda en `borrador`. Solo pasa a
+   `basado_en_fuente_publica` cuando el autor revisa el ejercicio contra su fuente y rellena
+   `revisado_por` y `fecha_revision`. El motor solo usa ejercicios fuera de `borrador`. La IA
+   propone; la persona decide.
+7. Las instrucciones se redactan con palabras propias en español; el texto de la fuente no se
+   copia. Cualquier cambio respecto a la fuente se anota en `adaptaciones`.
+8. Archivo: `public/data/catalogo.json`. Validación: `node scripts/validar-catalogo.mjs`.
 
 ### Casos de referencia
 

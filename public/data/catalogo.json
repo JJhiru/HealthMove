@@ -1,0 +1,2048 @@
+{
+  "version": "0.1.0",
+  "actualizado": "2026-10-14",
+  "exigencias": [
+    "equilibrio_sin_apoyo",
+    "una_pierna",
+    "sentarse_levantarse",
+    "impacto",
+    "carga_externa",
+    "esfuerzo_cardio",
+    "brazo_sobre_hombro",
+    "mano_detras",
+    "ambos_brazos",
+    "agarre",
+    "peso_en_manos",
+    "flexion_profunda_rodilla",
+    "flexion_amplia_cadera",
+    "puntillas_talones",
+    "inclinacion_tronco",
+    "rotacion_tronco"
+  ],
+  "posiciones": [
+    "sentado",
+    "de_pie",
+    "suelo"
+  ],
+  "fases": [
+    "calentamiento",
+    "principal",
+    "calma"
+  ],
+  "recursos": {
+    "silla": "Silla estable, sin ruedas y preferiblemente sin reposabrazos",
+    "pared": "Un trozo de pared libre",
+    "banda": "Banda elástica de resistencia",
+    "peso_ligero": "Peso ligero, por ejemplo una botella de agua llena",
+    "toalla": "Una toalla de mano"
+  },
+  "estados_validacion": [
+    "borrador",
+    "basado_en_fuente_publica",
+    "revisado_por_profesional"
+  ],
+  "ejercicios": [
+    {
+      "id": "estiramiento-pecho-sentado",
+      "nombre": "Estiramiento de pecho",
+      "descripcion": "Abre el pecho y mejora la postura.",
+      "fases": [
+        "calma"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a, sin apoyar la espalda en el respaldo.",
+        "Lleva los hombros hacia atrás y hacia abajo, y extiende los brazos a los lados.",
+        "Empuja suavemente el pecho hacia delante y hacia arriba hasta notar un estiramiento en el pecho."
+      ],
+      "dosis": "Mantén de 5 a 10 segundos. Repite 5 veces.",
+      "duracion_estimada_seg": 75,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "NHS (Reino Unido)",
+        "titulo": "Sitting exercises",
+        "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/sitting-exercises/",
+        "licencia": "Open Government Licence v3.0",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Brazos extendidos a los lados a la altura del hombro, no por encima.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "giro-tronco-sentado",
+      "nombre": "Giro de tronco sentado",
+      "descripcion": "Movilidad de la parte alta de la espalda.",
+      "fases": [
+        "calentamiento",
+        "calma"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": true
+      },
+      "instrucciones": [
+        "Siéntate erguido/a con los pies apoyados en el suelo.",
+        "Cruza los brazos sobre el pecho y lleva cada mano al hombro contrario.",
+        "Sin mover la cadera, gira la parte alta del cuerpo hacia la izquierda hasta donde te resulte cómodo y mantén 5 segundos.",
+        "Vuelve al centro y repite hacia la derecha."
+      ],
+      "dosis": "5 veces hacia cada lado.",
+      "duracion_estimada_seg": 90,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "NHS (Reino Unido)",
+        "titulo": "Sitting exercises",
+        "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/sitting-exercises/",
+        "licencia": "Open Government Licence v3.0",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Las manos van a los hombros por delante: no es mano_detras.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "marcha-sentado-sujetandose",
+      "nombre": "Marcha sentado/a (sujetándote a la silla)",
+      "descripcion": "Fortalece cadera y muslos.",
+      "fases": [
+        "calentamiento",
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": true,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": true,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a sin apoyarte en el respaldo y sujeta los lados de la silla.",
+        "Levanta la pierna izquierda con la rodilla doblada hasta donde te resulte cómodo.",
+        "Baja el pie al suelo con control.",
+        "Repite con la otra pierna."
+      ],
+      "dosis": "5 elevaciones con cada pierna.",
+      "duracion_estimada_seg": 60,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "NHS (Reino Unido)",
+        "titulo": "Sitting exercises",
+        "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/sitting-exercises/",
+        "licencia": "Open Government Licence v3.0",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Subir la rodilla estando sentado acerca el muslo al tronco más que en reposo: flexion_amplia_cadera. Sujetar la silla: agarre.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "marcha-sentado-manos-cadera",
+      "nombre": "Marcha sentado/a (manos en la cadera)",
+      "descripcion": "Versión sin sujetarse: el pie solo se despega un poco.",
+      "fases": [
+        "calentamiento",
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": true,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a con las manos apoyadas en la cadera, sin recostarte en el respaldo.",
+        "Marcha en el sitio levantando cada pie solo un poco del suelo.",
+        "Mantén la espalda recta: no te inclines hacia los lados ni hacia atrás.",
+        "Después de 10 a 20 pasos, descansa."
+      ],
+      "dosis": "10 a 20 pasos, descansa y repite.",
+      "duracion_estimada_seg": 60,
+      "variante_de": "marcha-sentado-sujetandose",
+      "fuente": {
+        "organizacion": "Specialist Mobility Centre, Leicester (publicado por la Chartered Society of Physiotherapy)",
+        "titulo": "Seated Exercises – Information for Patients",
+        "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
+        "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Aunque el pie se levante poco, el muslo se acerca al tronco: flexion_amplia_cadera (ante la duda, se marca). Sin agarre.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "estiramiento-tobillo-sentado",
+      "nombre": "Estiramiento de tobillo con la pierna estirada",
+      "descripcion": "Flexibilidad del tobillo.",
+      "fases": [
+        "calentamiento"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": true,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": true,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a y sujeta el lado de la silla.",
+        "Estira la pierna izquierda con el pie despegado del suelo.",
+        "Con la pierna estirada y elevada, lleva la punta del pie hacia delante y luego hacia ti.",
+        "Repite con la otra pierna."
+      ],
+      "dosis": "2 series de 5 estiramientos con cada pie.",
+      "duracion_estimada_seg": 90,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "NHS (Reino Unido)",
+        "titulo": "Sitting exercises",
+        "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/sitting-exercises/",
+        "licencia": "Open Government Licence v3.0",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Elevar la pierna estirada aumenta la flexión de cadera respecto a estar sentado: se marca por precaución.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "tobillos-punta-talon-sentado",
+      "nombre": "Punta y talón sentado/a",
+      "descripcion": "Activa los tobillos sin despegar la pierna.",
+      "fases": [
+        "calentamiento"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a con los pies apoyados en el suelo y las manos en los muslos.",
+        "Con el pie izquierdo, apoya la punta donde estaba el talón y después el talón donde estaba la punta.",
+        "Repite 4 veces y cambia al pie derecho.",
+        "Aumenta el recorrido poco a poco si te resulta cómodo."
+      ],
+      "dosis": "4 veces con cada pie.",
+      "duracion_estimada_seg": 45,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Age UK Devon",
+        "titulo": "Seated Vitality at Home",
+        "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
+        "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [
+        "La fuente permite sujetarse a la silla; aquí se indica apoyar las manos en los muslos para que no exija agarre."
+      ],
+      "notas_etiquetado": "Sentado no se soporta el peso del cuerpo sobre puntas o talones: no es puntillas_talones.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "inclinacion-lateral-brazo-arriba",
+      "nombre": "Inclinación lateral con brazo arriba",
+      "descripcion": "Estira el costado.",
+      "fases": [
+        "calma"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": true,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": true,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a con la cabeza y los hombros mirando al frente.",
+        "Sube el brazo izquierdo por encima de la cabeza y apoya la mano derecha en la cadera.",
+        "Inclínate con cuidado hacia la derecha, manteniendo los dos glúteos apoyados en el asiento.",
+        "Deberías notar el estiramiento en el costado izquierdo. Vuelve al centro y cambia de lado."
+      ],
+      "dosis": "3 a 5 veces hacia cada lado.",
+      "duracion_estimada_seg": 75,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Specialist Mobility Centre, Leicester (publicado por la Chartered Society of Physiotherapy)",
+        "titulo": "Seated Exercises – Information for Patients",
+        "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
+        "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Brazo por encima de la cabeza e inclinación lateral del tronco.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "inclinacion-lateral-sentado",
+      "nombre": "Inclinación lateral deslizando la mano",
+      "descripcion": "Versión sin elevar el brazo.",
+      "fases": [
+        "calma"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": true,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a con los pies apoyados en el suelo.",
+        "Desliza una mano por el lado de la silla hacia abajo hasta donde puedas.",
+        "No te inclines hacia delante ni hacia atrás. Mantén hasta 10 segundos.",
+        "Vuelve a la posición erguida y repite hacia el otro lado."
+      ],
+      "dosis": "1 o 2 veces hacia cada lado, hasta 10 segundos.",
+      "duracion_estimada_seg": 50,
+      "variante_de": "inclinacion-lateral-brazo-arriba",
+      "fuente": {
+        "organizacion": "Age UK Devon",
+        "titulo": "Seated Vitality at Home",
+        "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
+        "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Inclinación lateral del tronco; sin brazo por encima del hombro.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "estiramiento-isquiotibiales-sentado",
+      "nombre": "Estiramiento de la parte trasera del muslo",
+      "descripcion": "Estira los isquiotibiales.",
+      "fases": [
+        "calma"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": true,
+        "puntillas_talones": false,
+        "inclinacion_tronco": true,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate con la espalda recta y adelanta un poco el cuerpo en el asiento.",
+        "Estira una pierna hacia delante sin bloquear la rodilla, con el talón en el suelo.",
+        "Inclínate hacia delante desde la cadera, con la espalda recta y sin redondearla.",
+        "Mantén cuando notes un estiramiento cómodo detrás del muslo. Cambia de pierna."
+      ],
+      "dosis": "Mantén de 10 a 15 segundos. 3 veces con cada pierna.",
+      "duracion_estimada_seg": 100,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Specialist Mobility Centre, Leicester (publicado por la Chartered Society of Physiotherapy)",
+        "titulo": "Seated Exercises – Information for Patients",
+        "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
+        "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Inclinarse desde la cadera acerca el tronco al muslo y lo inclina hacia delante.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "circulos-hombros-sentado",
+      "nombre": "Círculos de hombros hacia atrás",
+      "descripcion": "Suelta los hombros y mejora la postura.",
+      "fases": [
+        "calentamiento"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a, sin apoyarte en el respaldo.",
+        "Deja las manos y los brazos relajados sobre los muslos.",
+        "Haz círculos lentos con los hombros hacia atrás."
+      ],
+      "dosis": "10 círculos.",
+      "duracion_estimada_seg": 30,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Specialist Mobility Centre, Leicester (publicado por la Chartered Society of Physiotherapy)",
+        "titulo": "Seated Exercises – Information for Patients",
+        "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
+        "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "elevar-rodar-hombros-sentado",
+      "nombre": "Elevar y rodar los hombros",
+      "descripcion": "Moviliza los hombros.",
+      "fases": [
+        "calentamiento"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a. Haz los movimientos despacio y con control.",
+        "Sube los dos hombros hacia las orejas y bájalos todo lo que puedas. Repite 4 veces.",
+        "Sube el hombro izquierdo y llévalo hacia atrás, abajo y adelante. Repite 4 veces.",
+        "Repite con el hombro derecho."
+      ],
+      "dosis": "4 veces cada movimiento.",
+      "duracion_estimada_seg": 60,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Age UK Devon",
+        "titulo": "Seated Vitality at Home",
+        "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
+        "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "curl-biceps-sentado",
+      "nombre": "Flexión de codo con botella",
+      "descripcion": "Fortalece los brazos.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla",
+        "peso_ligero"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": true,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": true,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate cómodamente con una botella llena u otro peso ligero en una mano.",
+        "Gira la mano para que el pulgar mire al techo.",
+        "Dobla el codo despacio llevando el peso hacia el hombro, con el codo pegado al costado.",
+        "Estira el brazo despacio hasta dejar el peso en el regazo. Cambia de brazo."
+      ],
+      "dosis": "10 veces con cada brazo.",
+      "duracion_estimada_seg": 90,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Specialist Mobility Centre, Leicester (publicado por la Chartered Society of Physiotherapy)",
+        "titulo": "Seated Exercises – Information for Patients",
+        "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
+        "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Un brazo cada vez: no exige ambos_brazos.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "toalla-separar-sentado",
+      "nombre": "Estirar la toalla",
+      "descripcion": "Fortalece brazos sin peso.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla",
+        "toalla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": true,
+        "agarre": true,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a y sujeta una toalla con las dos manos, con los brazos cerca del cuerpo.",
+        "Tira con una mano hacia arriba y con la otra hacia abajo, como si quisieras separar la toalla.",
+        "Mantén 5 segundos y relaja.",
+        "Cambia la posición de las manos y repite."
+      ],
+      "dosis": "10 veces con cada posición de manos.",
+      "duracion_estimada_seg": 120,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Specialist Mobility Centre, Leicester (publicado por la Chartered Society of Physiotherapy)",
+        "titulo": "Seated Exercises – Information for Patients",
+        "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
+        "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "La resistencia la genera la propia persona: no es carga_externa.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "boxeo-sentado",
+      "nombre": "Boxeo sentado/a",
+      "descripcion": "Fortalece los brazos con golpes lentos al frente.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": true,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a, sin apoyarte en el respaldo.",
+        "Cierra las manos en puño y súbelas delante del pecho.",
+        "Estira un brazo al frente sin abrir el puño y vuelve a llevarlo al costado.",
+        "Alterna con el otro brazo, despacio, como si boxearas."
+      ],
+      "dosis": "10 a 20 golpes, descansa y repite si puedes.",
+      "duracion_estimada_seg": 60,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Specialist Mobility Centre, Leicester (publicado por la Chartered Society of Physiotherapy)",
+        "titulo": "Seated Exercises – Information for Patients",
+        "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
+        "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [
+        "Se omite la variante con pesos ligeros de la fuente."
+      ],
+      "notas_etiquetado": "Cerrar el puño: agarre. Los brazos van a la altura del pecho.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "boxeo-circulos-alto",
+      "nombre": "Círculos de puños a la altura de la nariz",
+      "descripcion": "Coordinación y resistencia de hombros.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": true,
+        "mano_detras": false,
+        "ambos_brazos": true,
+        "agarre": true,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a, sin apoyarte en el respaldo.",
+        "Cierra las dos manos en puño y súbelas a la altura de la nariz.",
+        "Haz girar los puños uno alrededor del otro hacia delante mientras cuentas hasta 20.",
+        "Después gíralos hacia atrás mientras cuentas hasta 20. Descansa."
+      ],
+      "dosis": "20 hacia delante y 20 hacia atrás.",
+      "duracion_estimada_seg": 60,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Specialist Mobility Centre, Leicester (publicado por la Chartered Society of Physiotherapy)",
+        "titulo": "Seated Exercises – Information for Patients",
+        "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
+        "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "A la altura de la nariz, las manos quedan por encima del hombro.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "boxeo-circulos-pecho",
+      "nombre": "Círculos de puños a la altura del pecho",
+      "descripcion": "Versión más fácil para los hombros.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": true,
+        "agarre": true,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a, sin apoyarte en el respaldo.",
+        "Cierra las dos manos en puño y súbelas a la altura del pecho.",
+        "Haz girar los puños uno alrededor del otro hacia delante mientras cuentas hasta 20.",
+        "Después gíralos hacia atrás mientras cuentas hasta 20. Descansa."
+      ],
+      "dosis": "20 hacia delante y 20 hacia atrás.",
+      "duracion_estimada_seg": 60,
+      "variante_de": "boxeo-circulos-alto",
+      "fuente": {
+        "organizacion": "Specialist Mobility Centre, Leicester (publicado por la Chartered Society of Physiotherapy)",
+        "titulo": "Seated Exercises – Information for Patients",
+        "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
+        "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Variante indicada en la propia fuente para quien tiene molestias en los hombros.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "arquear-espalda-sentado",
+      "nombre": "Estiramiento de espalda con escápulas",
+      "descripcion": "Fortalece y estira la espalda.",
+      "fases": [
+        "principal",
+        "calma"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": true,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate con el peso repartido por igual sobre los dos glúteos.",
+        "Apoya las manos en la cadera.",
+        "Siéntate lo más alto que puedas, arqueando la espalda y juntando los omóplatos y los codos hacia atrás.",
+        "Mantén mientras cuentas hasta 5 y relaja."
+      ],
+      "dosis": "Mantén 5 segundos. 5 veces.",
+      "duracion_estimada_seg": 50,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Specialist Mobility Centre, Leicester (publicado por la Chartered Society of Physiotherapy)",
+        "titulo": "Seated Exercises – Information for Patients",
+        "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
+        "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [
+        "La fuente permite apoyar las manos en la zona lumbar o en la cadera; aquí solo en la cadera para evitar mano_detras."
+      ],
+      "notas_etiquetado": "Arquear la espalda cuenta como inclinacion_tronco.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "movilidad-lumbar-sentado",
+      "nombre": "Movilidad de la zona lumbar",
+      "descripcion": "Alterna arquear y redondear la espalda.",
+      "fases": [
+        "calma"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": true,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate un poco adelantado/a en la silla, sin apoyar la espalda.",
+        "Siéntate lo más alto que puedas, arqueando la parte baja de la espalda.",
+        "Después redondea la espalda todo lo que puedas.",
+        "Alterna los dos movimientos despacio."
+      ],
+      "dosis": "5 veces, descansa y repite si puedes.",
+      "duracion_estimada_seg": 60,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Specialist Mobility Centre, Leicester (publicado por la Chartered Society of Physiotherapy)",
+        "titulo": "Seated Exercises – Information for Patients",
+        "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
+        "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "estiramiento-gemelo-sentado",
+      "nombre": "Estiramiento de gemelo sentado/a",
+      "descripcion": "Moviliza el tobillo y estira la pantorrilla.",
+      "fases": [
+        "calma"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a con los pies apoyados en el suelo.",
+        "Estira una pierna hacia delante y apoya las manos en la rodilla contraria.",
+        "Lleva la punta del pie de la pierna estirada hacia arriba, poco a poco hacia la rodilla.",
+        "Mantén hasta 10 segundos, suelta despacio y cambia de pierna."
+      ],
+      "dosis": "Hasta 10 segundos con cada pierna.",
+      "duracion_estimada_seg": 40,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Age UK Devon",
+        "titulo": "Seated Vitality at Home",
+        "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
+        "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "El talón queda en el suelo y no se inclina el tronco.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "abrir-cerrar-manos",
+      "nombre": "Abrir y cerrar las manos",
+      "descripcion": "Movilidad y fuerza de los dedos.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": true,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a con los pies apoyados en el suelo.",
+        "Extiende los brazos separándolos del cuerpo.",
+        "Cierra los dedos hasta formar un puño.",
+        "Abre y estira bien los dedos."
+      ],
+      "dosis": "Hasta 8 veces.",
+      "duracion_estimada_seg": 30,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Age UK Devon",
+        "titulo": "Seated Vitality at Home",
+        "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
+        "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Cerrar el puño, aunque sea sin objeto, se marca como agarre.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "pulgar-dedos",
+      "nombre": "Pulgar con cada dedo",
+      "descripcion": "Destreza de los dedos.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": true,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Extiende un brazo separado del cuerpo, con la palma hacia abajo y los dedos estirados.",
+        "Toca la punta del pulgar con la punta de cada dedo, uno por uno.",
+        "Cambia de mano y repite."
+      ],
+      "dosis": "Hasta 4 veces con cada mano.",
+      "duracion_estimada_seg": 45,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Age UK Devon",
+        "titulo": "Seated Vitality at Home",
+        "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
+        "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Cierre parcial de la mano: se marca agarre por precaución.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "activacion-sentado",
+      "nombre": "Activación sentado/a",
+      "descripcion": "Calentamiento suave: pies, brazos y palmas.",
+      "fases": [
+        "calentamiento"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": true,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": true,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a con los pies apoyados en el suelo.",
+        "Da toques con la punta de los pies: izquierdo, derecho, alternando y los dos de lado a lado.",
+        "Balancea los brazos hacia delante y hacia atrás, alternando, con los codos pegados al cuerpo.",
+        "Da un golpecito en las rodillas con las manos y luego una palmada a la altura del pecho."
+      ],
+      "dosis": "1 ronda de cada movimiento, a ritmo cómodo.",
+      "duracion_estimada_seg": 120,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Age UK Devon",
+        "titulo": "Seated Vitality at Home",
+        "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
+        "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [
+        "Se incluye solo la primera ronda, la más suave, del calentamiento de la fuente."
+      ],
+      "notas_etiquetado": "La fuente indica que busca subir el pulso: esfuerzo_cardio. Las palmadas exigen los dos brazos.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "banda-remo-sentado",
+      "nombre": "Remo con banda elástica",
+      "descripcion": "Fortalece la parte alta de la espalda y los hombros.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla",
+        "banda"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": true,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": true,
+        "agarre": true,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a y coloca la banda sobre los muslos, bien plana.",
+        "Pasa las manos por debajo de la banda y agárrala.",
+        "Súbela a la altura del abdomen estirándola hacia fuera.",
+        "Llévala hacia el abdomen con los codos pegados al cuerpo y relaja la tensión."
+      ],
+      "dosis": "Hasta 12 veces.",
+      "duracion_estimada_seg": 75,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Age UK Devon",
+        "titulo": "Seated Vitality at Home",
+        "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
+        "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "La banda cuenta como carga_externa.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "banda-curl-sentado",
+      "nombre": "Flexión de codos con banda elástica",
+      "descripcion": "Fortalece brazos y hombros.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla",
+        "banda"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": true,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": true,
+        "agarre": true,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a y pisa la banda con uno o los dos pies.",
+        "Agarra la banda por los dos extremos.",
+        "Sube los puños hacia los hombros con las muñecas alineadas con los brazos.",
+        "Mantén hasta 5 segundos y baja los brazos despacio."
+      ],
+      "dosis": "Hasta 4 veces.",
+      "duracion_estimada_seg": 60,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Age UK Devon",
+        "titulo": "Seated Vitality at Home",
+        "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
+        "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "respiracion-abdominal-sentado",
+      "nombre": "Respiración abdominal",
+      "descripcion": "Respiración lenta para terminar.",
+      "fases": [
+        "calma"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate en una silla que te sostenga la espalda, con los pies apoyados y separados al ancho de la cadera.",
+        "Deja que el aire llegue al abdomen tan hondo como te resulte cómodo, sin forzar.",
+        "Inspira por la nariz de forma suave y constante contando de 1 a 5.",
+        "Espira por la boca de forma suave, contando de 1 a 5 si te ayuda."
+      ],
+      "dosis": "Repite durante el tiempo indicado.",
+      "duracion_estimada_seg": 120,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "NHS (Reino Unido)",
+        "titulo": "Breathing exercises for stress",
+        "url": "https://www.nhs.uk/mental-health/self-help/guides-tools-and-activities/breathing-exercises-for-stress/",
+        "licencia": "Open Government Licence v3.0",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [
+        "La fuente recomienda al menos 5 minutos; en una rutina de 10 a 20 minutos se usa como cierre más breve.",
+        "La fuente apoya los brazos en los reposabrazos; aquí se dejan apoyados de forma cómoda, porque se recomiendan sillas sin brazos."
+      ],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "sentarse-levantarse",
+      "nombre": "Sentarse y levantarse",
+      "descripcion": "Fortalece piernas y glúteos.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado",
+        "de_pie"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": true,
+        "una_pierna": false,
+        "sentarse_levantarse": true,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": true,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate en el borde de la silla con los pies separados al ancho de la cadera, inclinado/a un poco hacia delante.",
+        "Levántate despacio usando las piernas, no los brazos, mirando al frente.",
+        "Ya de pie, vuelve a sentarte despacio. Usa las manos solo como guía si lo necesitas."
+      ],
+      "dosis": "5 veces. Cuanto más despacio, mejor.",
+      "duracion_estimada_seg": 60,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "NHS (Reino Unido)",
+        "titulo": "Strength exercises",
+        "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/strength-exercises/",
+        "licencia": "Open Government Licence v3.0",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Con los pies algo atrasados, la rodilla puede pasar de 90°. Al estar de pie no hay apoyo: equilibrio_sin_apoyo. La inclinación es leve: no es inclinacion_tronco.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "mini-sentadillas",
+      "nombre": "Mini sentadillas con apoyo",
+      "descripcion": "Fortalece piernas con apoyo en la silla.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "de_pie"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": true,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": true,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Ponte de pie detrás de una silla, con los pies separados al ancho de la cadera y las manos en el respaldo.",
+        "Dobla las rodillas despacio hasta donde te resulte cómodo, con las rodillas hacia delante y la espalda recta.",
+        "Vuelve a ponerte de pie despacio, apretando los glúteos al subir."
+      ],
+      "dosis": "5 veces.",
+      "duracion_estimada_seg": 50,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "NHS (Reino Unido)",
+        "titulo": "Strength exercises",
+        "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/strength-exercises/",
+        "licencia": "Open Government Licence v3.0",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "'Hasta donde te resulte cómodo' no limita la flexión: se marca flexion_profunda_rodilla por precaución.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "elevacion-talones-apoyo",
+      "nombre": "Elevación de talones con apoyo",
+      "descripcion": "Fortalece pantorrillas y tobillos.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "de_pie"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": true,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": true,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Ponte de pie detrás de una silla con las manos en el respaldo y los pies apoyados en el suelo.",
+        "Sube los dos talones despacio, hasta donde te resulte cómodo.",
+        "Baja los talones con control."
+      ],
+      "dosis": "5 veces.",
+      "duracion_estimada_seg": 40,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "NHS (Reino Unido)",
+        "titulo": "Strength exercises",
+        "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/strength-exercises/",
+        "licencia": "Open Government Licence v3.0",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "elevacion-talones-sin-apoyo",
+      "nombre": "Elevación de talones sin apoyo",
+      "descripcion": "Versión más difícil: sin sujetarse.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "de_pie"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": true,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": true,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Ponte de pie detrás de una silla, cerca de ella pero sin sujetarte.",
+        "Sube los dos talones despacio, hasta donde te resulte cómodo.",
+        "Baja los talones con control. Si pierdes el equilibrio, sujétate a la silla."
+      ],
+      "dosis": "5 veces.",
+      "duracion_estimada_seg": 40,
+      "variante_de": "elevacion-talones-apoyo",
+      "fuente": {
+        "organizacion": "NHS (Reino Unido)",
+        "titulo": "Strength exercises",
+        "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/strength-exercises/",
+        "licencia": "Open Government Licence v3.0",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Variante más difícil indicada por la fuente. La silla queda cerca como seguridad.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "elevacion-lateral-pierna",
+      "nombre": "Elevación lateral de pierna",
+      "descripcion": "Fortalece cadera y muslos.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "de_pie"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": true,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": true,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Ponte de pie detrás de una silla con las manos en el respaldo.",
+        "Levanta la pierna derecha hacia el lado hasta donde te resulte cómodo, con la espalda y la cadera rectas.",
+        "No te inclines hacia la derecha. Baja la pierna y repite con la izquierda."
+      ],
+      "dosis": "5 veces con cada pierna.",
+      "duracion_estimada_seg": 60,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "NHS (Reino Unido)",
+        "titulo": "Strength exercises",
+        "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/strength-exercises/",
+        "licencia": "Open Government Licence v3.0",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "extension-pierna-atras",
+      "nombre": "Extensión de pierna hacia atrás",
+      "descripcion": "Fortalece glúteos y parte trasera del muslo.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "de_pie"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": true,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": true,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Ponte de pie detrás de una silla con las manos en el respaldo.",
+        "Con la pierna izquierda estirada, llévala hacia atrás sin arquear la espalda.",
+        "Mantén hasta 5 segundos y baja. Repite con la pierna derecha."
+      ],
+      "dosis": "5 veces con cada pierna, hasta 5 segundos.",
+      "duracion_estimada_seg": 75,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "NHS (Reino Unido)",
+        "titulo": "Strength exercises",
+        "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/strength-exercises/",
+        "licencia": "Open Government Licence v3.0",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "La fuente pide no arquear la espalda: no es inclinacion_tronco.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "flexiones-pared",
+      "nombre": "Flexiones contra la pared",
+      "descripcion": "Fortalece brazos, hombros y pecho.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "de_pie"
+      ],
+      "recursos": [
+        "pared"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": true,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Ponte de pie a un brazo de distancia de la pared.",
+        "Apoya las palmas en la pared a la altura del pecho, con los dedos hacia arriba.",
+        "Con la espalda recta y los codos cerca del cuerpo, dobla los brazos y acerca el cuerpo a la pared.",
+        "Empuja despacio hasta volver a la posición inicial."
+      ],
+      "dosis": "3 series de 5 a 10 repeticiones.",
+      "duracion_estimada_seg": 120,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "NHS (Reino Unido)",
+        "titulo": "Strength exercises",
+        "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/strength-exercises/",
+        "licencia": "Open Government Licence v3.0",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Palmas abiertas, sin agarre; las manos soportan parte del peso.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "equilibrio-una-pierna-pared",
+      "nombre": "Apoyo sobre una pierna frente a la pared",
+      "descripcion": "Trabaja el equilibrio con las yemas en la pared.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "de_pie"
+      ],
+      "recursos": [
+        "pared"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": true,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Ponte de pie frente a una pared con los brazos estirados y las yemas de los dedos tocándola.",
+        "Levanta la pierna izquierda con la cadera nivelada y la rodilla derecha un poco doblada.",
+        "Mantén de 5 a 10 segundos y apoya el pie con suavidad. Cambia de pierna."
+      ],
+      "dosis": "3 veces con cada pierna, de 5 a 10 segundos.",
+      "duracion_estimada_seg": 75,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "NHS (Reino Unido)",
+        "titulo": "Balance exercises",
+        "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/balance-exercises/",
+        "licencia": "Open Government Licence v3.0",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Las yemas en la pared son apoyo sin cerrar la mano: no es agarre ni equilibrio_sin_apoyo.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "inclinacion-lateral-de-pie",
+      "nombre": "Inclinación lateral de pie",
+      "descripcion": "Estira el costado.",
+      "fases": [
+        "calma"
+      ],
+      "posiciones": [
+        "de_pie"
+      ],
+      "recursos": [],
+      "exigencias": {
+        "equilibrio_sin_apoyo": true,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": true,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Ponte de pie, erguido/a, con los pies separados al ancho de la cadera y los brazos a los lados.",
+        "Desliza un brazo por el costado hacia abajo hasta donde te resulte cómodo. Notarás el estiramiento en la cadera contraria.",
+        "Mantén 2 segundos y repite con el otro brazo."
+      ],
+      "dosis": "3 veces hacia cada lado.",
+      "duracion_estimada_seg": 30,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "NHS (Reino Unido)",
+        "titulo": "Flexibility exercises",
+        "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/flexibility-exercises/",
+        "licencia": "Open Government Licence v3.0",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "De pie sin sujetarse.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "estiramiento-gemelo-pared",
+      "nombre": "Estiramiento de gemelo en la pared",
+      "descripcion": "Estira la pantorrilla.",
+      "fases": [
+        "calma"
+      ],
+      "posiciones": [
+        "de_pie"
+      ],
+      "recursos": [
+        "pared"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": true,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Apoya las manos en la pared.",
+        "Dobla una rodilla hacia delante y lleva la otra pierna atrás al menos un pie de distancia, con los dos pies planos en el suelo.",
+        "Mantén la pierna de atrás lo más estirada posible, con el talón en el suelo, para estirar la pantorrilla.",
+        "Repite con la otra pierna."
+      ],
+      "dosis": "3 veces con cada pierna.",
+      "duracion_estimada_seg": 60,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "NHS (Reino Unido)",
+        "titulo": "Flexibility exercises",
+        "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/flexibility-exercises/",
+        "licencia": "Open Government Licence v3.0",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Al dar el paso atrás, el peso cae un momento sobre un pie: una_pierna.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    }
+  ]
+}
