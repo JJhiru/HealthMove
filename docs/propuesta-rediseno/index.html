@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HealthMove · Propuesta de rediseño</title>
+<style>
+  @font-face { font-family: "Atkinson Hyperlegible"; src: url(fuente/ah-400.woff2) format("woff2"); font-weight: 400; }
+  @font-face { font-family: "Atkinson Hyperlegible"; src: url(fuente/ah-700.woff2) format("woff2"); font-weight: 700; }
+  :root { --tinta:#12211E; --suave:#50645D; --eucalipto:#136B5A; --menta:#DCEFE7; --cielo:#E7F0F8; --melocoton:#F7E6D8; --niebla:#F4F7F6; --borde:#D6E0DC; }
+  body { margin: 0; background: #fff; color: var(--tinta); font: 18px/1.55 "Atkinson Hyperlegible", system-ui, sans-serif; }
+  main { max-width: 1080px; margin: 0 auto; padding: 32px 20px 80px; }
+  h1 { font-size: 44px; line-height: 1.1; margin: 0 0 12px; letter-spacing: -0.02em; }
+  h2 { font-size: 28px; margin: 56px 0 12px; }
+  h3 { font-size: 20px; margin: 24px 0 8px; }
+  p, li { max-width: 46em; }
+  .suave { color: var(--suave); }
+  .rejilla { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+  figure { margin: 0; }
+  figure img { width: 100%; aspect-ratio: 3/2; object-fit: cover; border-radius: 16px; display: block; background: var(--niebla); }
+  figcaption { font-size: 15px; color: var(--suave); margin-top: 6px; }
+  figcaption strong { color: var(--tinta); }
+  .ilus img { aspect-ratio: 4/3; object-fit: contain; background: var(--niebla); padding: 8px; box-sizing: border-box; }
+  .muestras { display: flex; flex-wrap: wrap; gap: 12px; }
+  .muestra { width: 150px; border: 1px solid var(--borde); border-radius: 14px; overflow: hidden; font-size: 14px; }
+  .muestra span { display: block; height: 64px; }
+  .muestra div { padding: 8px 10px; }
+  pre { background: var(--niebla); border-radius: 14px; padding: 16px; overflow-x: auto; font-size: 13.5px; line-height: 1.35; }
+  table { border-collapse: collapse; width: 100%; font-size: 16px; }
+  th, td { text-align: left; border-bottom: 1px solid var(--borde); padding: 8px 6px; vertical-align: top; }
+  .nota { background: var(--cielo); border-radius: 14px; padding: 14px 18px; }
+  .riesgo { background: #FFF4E2; border-radius: 14px; padding: 14px 18px; }
+</style>
+</head>
+<body>
+<main>
+  <p class="suave">Propuesta para revisar antes de implementar · no modifica la app</p>
+  <h1>HealthMove: dirección artística y plan de rediseño</h1>
+  <p>Una app de movimiento que se sienta como un buen servicio sanitario: cálida, clara y de fiar. Navegación tan simple como un chat, exploración visual como un catálogo de vídeos y la sobriedad de un portal de hospital moderno.</p>
+
+  <h2>1. Identidad visual</h2>
+  <h3>Paleta</h3>
+  <div class="muestras">
+    <div class="muestra"><span style="background:#FFFFFF;border-bottom:1px solid #D6E0DC"></span><div><strong>Blanco</strong><br>#FFFFFF · fondo</div></div>
+    <div class="muestra"><span style="background:#136B5A"></span><div><strong>Eucalipto</strong><br>#136B5A · acción</div></div>
+    <div class="muestra"><span style="background:#DCEFE7"></span><div><strong>Menta</strong><br>#DCEFE7 · seleccionado</div></div>
+    <div class="muestra"><span style="background:#E7F0F8"></span><div><strong>Cielo</strong><br>#E7F0F8 · información</div></div>
+    <div class="muestra"><span style="background:#F7E6D8"></span><div><strong>Melocotón</strong><br>#F7E6D8 · calidez</div></div>
+    <div class="muestra"><span style="background:#12211E"></span><div><strong>Tinta</strong><br>#12211E · texto</div></div>
+    <div class="muestra"><span style="background:#E07B39"></span><div><strong>Movimiento</strong><br>#E07B39 · flechas</div></div>
+    <div class="muestra"><span style="background:#A1261B"></span><div><strong>Detener</strong><br>#A1261B · solo parar</div></div>
+  </div>
+  <h3>Tipografía: Atkinson Hyperlegible</h3>
+  <p>Diseñada por el Braille Institute para personas con baja visión: letras que no se confunden (I, l, 1; O, 0). Licencia OFL, alojada en la propia app y guardada en caché, así que funciona sin conexión. Dos pesos: 400 y 700.</p>
+  <p style="font-size:40px;font-weight:700;line-height:1.1;margin:8px 0">Hola, Ana</p>
+  <p style="font-size:22px;margin:0">Tu rutina de 15 minutos está lista.</p>
+  <p class="suave" style="font-size:16px">Escala: 14 · 16 · 18 (texto) · 22 · 28 · 36 · 48 (portada).</p>
+  <h3>Forma</h3>
+  <p>Fotos con esquinas de 20 px y recorte fijo (3:2 en secciones, 16:9 en portada); controles de 52 px de alto; iconos de Bootstrap Icons (solo los que se usan, como sprite local); una sola sombra suave para lo que flota (barra de navegación), nunca en todas las tarjetas.</p>
+
+  <h2>2. Fotografías reales (Pexels, licencia compatible)</h2>
+  <p>Personas reales y diversas, en entornos cotidianos. Se usan como ambiente en portada y secciones, con el rótulo «Foto ilustrativa», nunca como demostración de cómo se hace un ejercicio (para eso están las ilustraciones). La licencia de Pexels permite usarlas y modificarlas; prohíbe insinuar que las personas respaldan el producto, así que no habrá testimonios junto a las caras.</p>
+  <div class="rejilla">
+    <figure><img src="fotos/portada-clase-sentada-640.webp" alt="Mujer mayor en una clase de ejercicio sentada, con los brazos abiertos"><figcaption><strong>Portada</strong> · Centre for Ageing Better · pexels.com/photo/11674390</figcaption></figure>
+    <figure><img src="fotos/silla-clase-640.webp" alt="Grupo de personas mayores haciendo ejercicio sentadas en sillas"><figcaption><strong>Categoría «En la silla»</strong> · Centre for Ageing Better · 11674389</figcaption></figure>
+    <figure><img src="fotos/de-pie-clase-640.webp" alt="Clase comunitaria de ejercicio de pie junto a sillas"><figcaption><strong>Categoría «De pie»</strong> · Centre for Ageing Better · 40082862</figcaption></figure>
+    <figure><img src="fotos/cama-estiramiento-640.webp" alt="Mujer estirando los brazos sentada en la cama por la mañana"><figcaption><strong>Categoría «En la cama»</strong> · Michelle Leman · 6798725</figcaption></figure>
+    <figure><img src="fotos/calma-te-640.webp" alt="Mujer mayor sentada y relajada con una taza"><figcaption><strong>Calma y respiración</strong> · Antoni Shkraba · 7345402</figcaption></figure>
+    <figure><img src="fotos/acompanamiento-640.webp" alt="Hombre mayor estirando los brazos acompañado por un profesional"><figcaption><strong>Cómo elegimos tus ejercicios</strong> · Kampus Production · 7551627</figcaption></figure>
+    <figure><img src="fotos/bienvenida-silla-ruedas-640.webp" alt="Mujer sonriente en silla de ruedas junto a un jardín"><figcaption><strong>Bienvenida</strong> · Centre for Ageing Better · 33768887</figcaption></figure>
+    <figure><img src="fotos/historial-bici-adaptada-640.webp" alt="Hombre mayor en una bicicleta adaptada en un parque"><figcaption><strong>Historial</strong> · Centre for Ageing Better · 11674388</figcaption></figure>
+  </div>
+
+  <h2>3. Ilustraciones de ejercicios (prototipo)</h2>
+  <p>Cada ejercicio tendrá su ilustración, generada por una figura articulada en SVG: misma figura, mismos colores, mismos apoyos en todo el catálogo. La pose inicial aparece en gris translúcido, la final en sólido, y una flecha naranja marca el movimiento. Los apoyos (silla, pared, cama) se dibujan donde las instrucciones los ponen; las manos y los pies de apoyo quedan fijos. En los ejercicios sin movimiento visible, un círculo marca la zona que trabaja. Son ligeras (2–4 KB cada una) y se guardan en caché.</p>
+  <div class="rejilla ilus">
+    <figure><img src="ilustraciones/extension-rodilla-sentado.svg" alt=""><figcaption><strong>Extensión de rodilla</strong>: estira la rodilla con la punta del pie hacia ti</figcaption></figure>
+    <figure><img src="ilustraciones/marcha-sentado-manos-cadera.svg" alt=""><figcaption><strong>Marcha en la silla</strong>, manos en la cadera</figcaption></figure>
+    <figure><img src="ilustraciones/elevacion-talones-apoyo.svg" alt=""><figcaption><strong>Elevación de talones</strong> con las manos en el respaldo</figcaption></figure>
+    <figure><img src="ilustraciones/flexiones-pared.svg" alt=""><figcaption><strong>Flexiones contra la pared</strong>: pies y manos fijos</figcaption></figure>
+    <figure><img src="ilustraciones/puente-tumbado.svg" alt=""><figcaption><strong>Puente en la cama</strong>: la zona amarilla trabaja</figcaption></figure>
+    <figure><img src="ilustraciones/inclinacion-lateral-sentado.svg" alt=""><figcaption><strong>Inclinación lateral</strong> (vista de frente; por pulir)</figcaption></figure>
+  </div>
+  <p class="nota">Las 64 ilustraciones se revisan como las etiquetas: el autor comprueba cada una contra las instrucciones de su fuente antes de que el ejercicio salga de «borrador». Un test exige que cada ejercicio tenga su ilustración.</p>
+
+  <h2>4. Navegación</h2>
+<pre>MÓVIL                                   ESCRITORIO (≥ 992 px)
+┌──────────────────────────┐            ┌────────────┬─────────────────────────────────────┐
+│ ◉ HealthMove        (A)  │            │ ◉ HealthMove│                                     │
+│                          │            │            │                                     │
+│        contenido         │            │ ▸ Inicio   │            contenido                │
+│                          │            │   Explorar │       (máx. 1100 px, centrado)      │
+│                          │            │   Mi rutina│                                     │
+├──────────────────────────┤            │   Mi perfil│                                     │
+│ Inicio Explorar Rutina Yo│ ← fija     │            │                                     │
+└──────────────────────────┘            │ [Generar mi rutina]                              │
+                                        │ Historial · Ajustes                              │
+                                        └────────────┴─────────────────────────────────────┘
+El reproductor oculta la navegación (modo concentración) y deja «Detener» siempre visible.</pre>
+
+  <h2>5. Pantallas</h2>
+  <h3>Inicio</h3>
+<pre>┌──────────────────────────────────────┐
+│ [ FOTO 16:9: clase sentada ]         │   foto a sangre, degradado inferior blanco
+│                                      │
+│ Hola, Ana                    (48 px) │
+│ Tu rutina de 15 min está lista.      │
+│ [ Generar mi rutina ]  Ver mi perfil │
+├──────────────────────────────────────┤
+│ Tu perfil hoy                        │   fila de «píldoras» con lo que se tiene en cuenta
+│ (En silla) (Sin agarre) (15 min) ✎   │
+├──────────────────────────────────────┤
+│ Para empezar hoy              Ver todo│  raíl horizontal desplazable
+│ ┌─────┐ ┌─────┐ ┌─────┐ ┌──          │   miniatura ilustrada + duración + nombre
+│ │ilus.│ │ilus.│ │ilus.│ │            │
+│ └─────┘ └─────┘ └─────┘ └──          │
+├──────────────────────────────────────┤
+│ Explora por posición                 │   mosaico 2×2 de FOTOS (patrón distinto)
+│ ┌────────────┐ ┌────────────┐        │
+│ │ En la silla│ │ De pie     │        │
+│ ├────────────┤ ├────────────┤        │
+│ │ En la cama │ │ Calma      │        │
+│ └────────────┘ └────────────┘        │
+├──────────────────────────────────────┤
+│ [foto acompañamiento] Cómo elegimos  │   bloque editorial: foto + texto + enlace a fuentes
+│ tus ejercicios · 3 puntos · Fuentes  │
+└──────────────────────────────────────┘</pre>
+  <h3>Explorar (catálogo)</h3>
+<pre>┌──────────────────────────────────────────────────────┐
+│ Explorar                                             │
+│ [✓ Solo compatibles conmigo]                         │   activado por defecto
+│ (Todo)(En la silla)(De pie)(En la cama)(Suelo)       │   chips desplazables
+│ (Calentar)(Fortalecer)(Estirar y calmar)             │
+├──────────────────────────────────────────────────────┤
+│ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐  │  rejilla: 2 col móvil, 4 escritorio
+│ │ ilus 4:3 │ │ ilus 4:3 │ │ ilus 4:3 │ │ ilus 4:3 │  │  insignia de duración sobre la ilus.
+│ │      1:30│ │      0:45│ │      2:00│ │      1:00│  │
+│ └──────────┘ └──────────┘ └──────────┘ └──────────┘  │
+│ Extensión de   Marcha en    Juntar los   Puente en   │
+│ rodilla        la silla     omóplatos    la cama     │
+│ En la silla ·  Fortalecer   …                        │
+└──────────────────────────────────────────────────────┘
+Estados: cargando (siluetas grises), vacío («Ningún ejercicio coincide…»), sin revisar (fuera del modo desarrollo).</pre>
+  <h3>Detalle de ejercicio</h3>
+<pre>┌──────────────────────────────────────┐   escritorio: ilustración a la izquierda,
+│ ← Explorar                           │   texto a la derecha (2 columnas)
+│ [ ILUSTRACIÓN GRANDE ]               │
+│ Inicio en gris · final en sólido     │
+│ Extensión de rodilla en la silla     │
+│ ⏱ 1:30  🪑 En la silla  Fortalecer    │
+│ [✓ Compatible con tu perfil]          │   o aviso: «No compatible: exige…»
+├──────────────────────────────────────┤
+│ Cómo se hace          1 · 2 · 3 · 4  │   pasos numerados grandes
+│ Cuánto: mantén 5 s, de 2 a 10 veces  │
+│ Qué exige: (nada de lo que evitas)   │   exigencias en lenguaje claro
+│ Versión más fácil / más difícil  →   │   enlaces a variantes
+│ Fuente: Royal Devon NHS · Ver ↗      │   + estado de revisión
+└──────────────────────────────────────┘</pre>
+  <h3>Mi rutina y reproductor</h3>
+<pre>RUTINA                                   REPRODUCTOR (pantalla completa)
+┌───────────────────────────────┐        ┌───────────────────────────────┐
+│ Ana, esta es tu rutina        │        │ ▬▬▬▬▬▭▭▭▭  3 de 9              │
+│ 15 min · 9 ejercicios         │        │ [ ILUSTRACIÓN GRANDE ]        │
+│ ● Calentamiento ─ 3 min       │        │ Marcha en la silla            │
+│ │ [mini] Activación  2:00     │        │ 0:42  ━━━━━━━━──────          │
+│ ● Parte principal ─ 9 min     │        │ [Anterior] [Pausar] [Leer]    │
+│ │ [mini] Extensión…  1:30     │        │ 1. Siéntate con la espalda…   │
+│ ● Vuelta a la calma ─ 3 min   │        ├───────────────────────────────┤
+│ Por qué estos ejercicios ▾    │        │ [        Siguiente        ]   │
+│ [ Empezar ] [Otra combinación]│        │ [  Detener: tengo molestias ] │
+└───────────────────────────────┘        └───────────────────────────────┘
+Línea de tiempo vertical (no tarjetas): el orden y las fases se leen de un vistazo.</pre>
+  <h3>Perfil (asistente)</h3>
+<pre>Las opciones de posición llevan ilustración (silla, de pie con apoyo, silla de ruedas, cama, suelo);
+el resto del asistente mantiene la lógica actual: triaje de zonas, «sin dificultades», deshacer,
+resumen y declaración global. Bienvenida con la foto de la mujer en silla de ruedas.</pre>
+
+  <h2>6. Cómo se integra sin romper nada</h2>
+  <table>
+    <tr><th>Pieza</th><th>Plan</th><th>Riesgo y cómo se evita</th></tr>
+    <tr><td>Bootstrap 5.3.3</td><td>Solo el CSS, copiado en <code>public/vendor/</code> con su licencia MIT. Sin su JavaScript.</td><td>Su «reboot» cambia estilos base. Se carga dentro de una capa CSS (<code>@layer bootstrap</code>) para que los estilos propios ganen siempre, sin pelear por especificidad.</td></tr>
+    <tr><td>Precaché</td><td><code>npm run version-sw</code> ya añade todo <code>public/</code> y cambia la versión con cualquier archivo nuevo.</td><td>Peso: hoy ~0,4 MB; con Bootstrap, fuente, 8 fotos (2 tamaños) e ilustraciones, ~1,6 MB. Se descarga una vez en segundo plano.</td></tr>
+    <tr><td>Fuente</td><td>Atkinson Hyperlegible local, <code>font-display: swap</code>.</td><td>La regla «sin fuentes web» busca no bloquear el arranque; al servirse desde caché no bloquea. Se acepta y se documenta.</td></tr>
+    <tr><td>Motor, perfil, historial</td><td>Sin cambios. La interfaz lee de ellos.</td><td>Los 33 tests siguen pasando en cada paso; se añaden tests de ilustraciones, créditos y accesibilidad básica.</td></tr>
+    <tr><td>Explorar</td><td>Muestra solo ejercicios revisados (en modo desarrollo, todos con insignia).</td><td>Enseñar instrucciones sin revisar sería el mismo riesgo que generar rutinas con ellas.</td></tr>
+  </table>
+
+  <h2>7. Orden de trabajo (un commit por paso)</h2>
+  <ol>
+    <li>Bootstrap, fuente, iconos, tokens y la nueva navegación (barra inferior y lateral).</li>
+    <li>Inicio con fotos y CREDITOS.md.</li>
+    <li>Las 64 ilustraciones, Explorar y Detalle.</li>
+    <li>Rutina en línea de tiempo y reproductor con ilustración.</li>
+    <li>Perfil con opciones ilustradas.</li>
+    <li>Revisión en navegador (390 px y 1280 px), sin conexión, actualizaciones y accesibilidad.</li>
+  </ol>
+  <p class="riesgo"><strong>Decisiones que necesito confirmar:</strong> el peso de la precaché (~1,6 MB), la fuente alojada localmente y que Explorar oculte los ejercicios sin revisar fuera del modo desarrollo.</p>
+</main>
+</body>
+</html>
