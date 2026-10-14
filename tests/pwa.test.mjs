@@ -24,3 +24,19 @@ test('index.html usa rutas relativas (funciona en un subdirectorio, p. ej. GitHu
 test('estilos.css respeta el atributo hidden aunque una clase cambie display', () => {
   assert.match(leer('estilos.css'), /\[hidden\]\s*\{\s*display:\s*none\s*!important;?\s*\}/);
 });
+
+test('cada icono que usan el HTML y la interfaz existe en el sprite local', () => {
+  const sprite = leer('iconos.svg');
+  const usados = new Set();
+  for (const f of ['index.html', 'js/app.js']) {
+    for (const m of leer(f).matchAll(/iconos\.svg#i-([a-z0-9-]+)/g)) usados.add(m[1]);
+    for (const m of leer(f).matchAll(/icono\('([a-z0-9-]+)'/g)) usados.add(m[1]);
+  }
+  assert.ok(usados.size > 0);
+  for (const id of usados) assert.ok(sprite.includes(`<symbol id="i-${id}"`), `falta el icono ${id}`);
+});
+
+test('la fuente y los iconos de terceros llevan su licencia', () => {
+  assert.match(leer('fuente/OFL.txt'), /SIL Open Font License/);
+  assert.match(leer('iconos.svg'), /Bootstrap Icons .*MIT/);
+});

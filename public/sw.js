@@ -3,12 +3,16 @@
 //  sin red, y se actualiza en segundo plano.
 //  VERSION y PRECACHE los escribe `npm run version-sw`; no editar a mano.
 // ============================================================
-const VERSION = 'hm-de7e7a8c6f53';
+const VERSION = 'hm-e421d0cf776c';
 const PRECACHE = [
   './',
   'data/catalogo.json',
   'estilos.css',
+  'fuente/OFL.txt',
+  'fuente/atkinson-hyperlegible-400.woff2',
+  'fuente/atkinson-hyperlegible-700.woff2',
   'icon.svg',
+  'iconos.svg',
   'icons/apple-touch-icon.png',
   'icons/icon-192.png',
   'icons/icon-512.png',

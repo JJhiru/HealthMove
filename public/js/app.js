@@ -48,21 +48,40 @@ function cambiarPerfil(nuevo) {
   guardar('perfil', nuevo);
 }
 
-const FLECHA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+// Iconos del sprite local (Bootstrap Icons, MIT). Siempre decorativos: el texto va al lado.
+const icono = (nombre, clase = '') => `<svg class="ico ${clase}" aria-hidden="true"><use href="iconos.svg#i-${nombre}"/></svg>`;
 
 // Cabecera: botón "Atrás" con destino explícito (no depende del historial del navegador).
 function pintarCabecera(atras) {
   cabecera.innerHTML = `
-    ${atras ? `<button type="button" class="atras" data-accion="ir" data-ruta="${atras}">${FLECHA}Atrás</button>` : ''}
+    ${atras ? `<button type="button" class="atras" data-accion="ir" data-ruta="${atras}">${icono('arrow-left')}Atrás</button>` : ''}
     <a class="marca ${atras ? 'marca-derecha' : ''}" href="#inicio">
-      <img src="icon.svg" alt="" width="30" height="30"><span>HealthMove</span>
+      <img src="icon.svg" alt="" width="32" height="32"><span>HealthMove</span>
     </a>`;
 }
 
-function pintar(html, botones = '', atras = null) {
+// ancho: 'normal' (rejillas y portada) o 'lectura' (formularios y textos largos).
+// modo: 'concentracion' oculta la navegación (bienvenida y reproductor).
+function pintar(html, botones = '', atras = null, { ancho = 'normal', modo = null } = {}) {
   pintarCabecera(atras);
-  app.innerHTML = html;
-  acciones.innerHTML = botones;
+  app.innerHTML = `<div class="hoja ${ancho === 'lectura' ? 'hoja-lectura' : ''}">${html}</div>`;
+  acciones.className = `acciones ${ancho === 'lectura' ? 'acciones-lectura' : ''}`;
+  acciones.innerHTML = botones.trim() ? `<div class="acciones-dentro">${botones}</div>` : '';
+  if (modo) document.body.dataset.modo = modo; else delete document.body.dataset.modo;
+}
+
+// Marca en las dos barras de navegación el apartado al que pertenece la pantalla.
+const APARTADO = {
+  inicio: 'inicio', explorar: 'explorar', ejercicio: 'explorar',
+  rutina: 'rutina', reproductor: 'rutina', fin: 'rutina', detenido: 'rutina',
+  resumen: 'perfil', 'perfil/posicion': 'perfil', 'perfil/zonas': 'perfil', 'perfil/seccion': 'perfil', 'perfil/recursos': 'perfil',
+  historial: 'historial', acerca: 'acerca', nombre: 'acerca',
+};
+function marcarNavegacion(clave) {
+  const actual = APARTADO[clave];
+  for (const a of document.querySelectorAll('[data-nav]')) {
+    if (a.dataset.nav === actual) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+  }
 }
 
 // Barra de progreso del perfil: es una secuencia real de 4 pasos.
@@ -113,7 +132,7 @@ function vistaNombre() {
   `, `
     <button type="submit" form="form-nombre" class="primario">${editando ? 'Guardar' : 'Continuar'}</button>
     <button type="button" data-accion="sin-nombre">${editando ? 'Quitar mi nombre' : 'Prefiero no decirlo'}</button>
-  `, editando ? 'acerca' : null);
+  `, editando ? 'acerca' : null, { ancho: 'lectura', modo: editando ? null : 'concentracion' });
 }
 
 function vistaAviso() {
@@ -142,7 +161,7 @@ function vistaAviso() {
     </div>
     ${casilla({ id: 'acepto', nombre: 'acepto', valor: 'si', texto: 'He leído y entiendo estos límites' })}
   `, `<button type="button" class="primario" data-accion="aceptar-aviso">Aceptar y continuar</button>`,
-  estado.nombre === null ? null : 'nombre');
+  estado.nombre === null ? null : 'nombre', { ancho: 'lectura', modo: 'concentracion' });
 }
 
 // --- Inicio --------------------------------------------------------
@@ -196,7 +215,7 @@ function vistaPosicion() {
     </fieldset>
     ${preguntas}
   `, `<button type="button" class="primario" data-accion="tras-posicion">${estado.volverAResumen ? 'Volver al resumen' : 'Siguiente'}</button>`,
-  estado.volverAResumen ? 'resumen' : 'inicio');
+  estado.volverAResumen ? 'resumen' : 'inicio', { ancho: 'lectura' });
 }
 
 function vistaZonas() {
@@ -210,7 +229,7 @@ function vistaZonas() {
       ${SECCIONES.map((s) => casilla({ id: `zona-${s.id}`, nombre: 'zonas', valor: s.id, texto: s.titulo, marcada: elegidas.includes(s.id), datos: 'data-cambio="zona"' })).join('')}
       ${casilla({ id: 'zona-ninguna', nombre: 'zonas', valor: 'ninguna', texto: 'Ninguna', clase: 'opcion-ninguna', marcada: estado.zonas?.length === 0, datos: 'data-cambio="zona"' })}
     </fieldset>
-  `, `<button type="button" class="primario" data-accion="tras-zonas">Siguiente</button>`, 'perfil/posicion');
+  `, `<button type="button" class="primario" data-accion="tras-zonas">Siguiente</button>`, 'perfil/posicion', { ancho: 'lectura' });
 }
 
 function anteriorSeccion(id) {
@@ -250,7 +269,7 @@ function vistaSeccion(id) {
   `, `
     <button type="button" class="primario" data-accion="tras-seccion" data-seccion="${id}">${estado.volverAResumen ? 'Volver al resumen' : 'Siguiente'}</button>
     ${estado.volverAResumen ? '' : '<button type="button" data-accion="ir" data-ruta="perfil/recursos">No tengo más restricciones</button>'}
-  `, anteriorSeccion(id));
+  `, anteriorSeccion(id), { ancho: 'lectura' });
 }
 
 function vistaRecursos() {
@@ -270,7 +289,7 @@ function vistaRecursos() {
       </div>
     </fieldset>
   `, `<button type="button" class="primario" data-accion="ir" data-ruta="resumen">Ver resumen</button>`,
-  estado.volverAResumen ? 'resumen' : zonas.length ? `perfil/seccion/${zonas.at(-1)}` : 'perfil/zonas');
+  estado.volverAResumen ? 'resumen' : zonas.length ? `perfil/seccion/${zonas.at(-1)}` : 'perfil/zonas', { ancho: 'lectura' });
 }
 
 function textoEstado(id) {
@@ -307,7 +326,7 @@ function vistaResumen() {
     </div>` : ''}
     ${problemas.length ? `<div class="nota nota-aviso" id="problemas" tabindex="-1"><p><strong>Para generar tu rutina falta:</strong></p>
       <ul>${problemas.map((x) => `<li>${escapar(x.mensaje)}</li>`).join('')}</ul></div>` : ''}
-  `, `<button type="button" class="primario" data-accion="generar">Generar mi rutina</button>`, 'inicio');
+  `, `<button type="button" class="primario" data-accion="generar">Generar mi rutina</button>`, 'inicio', { ancho: 'lectura' });
 }
 
 // --- Rutina ---------------------------------------------------------
@@ -325,7 +344,8 @@ function explicacionHtml(explicacion) {
 
 function vistaRutina() {
   const r = estado.resultado;
-  if (!r || !estado.catalogo) return ir('inicio');
+  if (!estado.catalogo) return ir('inicio');
+  if (!r) return vistaRutinaVacia();
   const { res } = r;
   if (!res.ok) return vistaSinRutina(res);
   let n = 0;
@@ -355,6 +375,28 @@ function vistaRutina() {
   `, 'inicio');
 }
 
+function vistaRutinaVacia() {
+  const listo = P.validarPerfil(estado.perfil).length === 0;
+  pintar(`
+    <h1>Mi rutina</h1>
+    <div class="vacio">
+      ${icono('list-check')}
+      <p><strong>Todavía no has generado ninguna rutina.</strong></p>
+      <p class="suave">${listo ? 'Prepararemos una con ejercicios compatibles con tu perfil.' : 'Primero termina tu perfil para que sepamos qué evitar.'}</p>
+    </div>
+  `, listo
+    ? '<button type="button" class="primario" data-accion="generar">Generar mi rutina</button>'
+    : '<button type="button" class="primario" data-accion="ir" data-ruta="perfil/posicion">Completar mi perfil</button>', null, { ancho: 'lectura' });
+}
+
+// Provisional: el catálogo visual llega en el paso 4 del rediseño.
+function vistaExplorar() {
+  pintar(`
+    <h1>Explorar</h1>
+    <div class="vacio">${icono('compass')}<p><strong>El catálogo visual está en construcción.</strong></p></div>
+  `);
+}
+
 function vistaSinRutina(res) {
   if (res.motivo === 'perfil_incompleto') return ir('resumen');
   const lim = (res.limitantes || []).map((l) => {
@@ -373,7 +415,7 @@ function vistaSinRutina(res) {
   `, `
     <button type="button" class="primario" data-accion="ir" data-ruta="resumen">Revisar mi perfil</button>
     <button type="button" data-accion="ir" data-ruta="inicio">Volver al inicio</button>
-  `, 'inicio');
+  `, 'inicio', { ancho: 'lectura' });
 }
 
 // --- Reproductor --------------------------------------------------
@@ -411,7 +453,7 @@ function vistaReproductor() {
   `, `
     <button type="button" class="peligro parar" data-accion="detener">Detener: tengo molestias</button>
     <button type="button" class="primario" data-accion="siguiente">${ultimo ? 'Terminar' : 'Siguiente'}</button>
-  `, 'rutina');
+  `, 'rutina', { ancho: 'lectura', modo: 'concentracion' });
   arrancarTemporizador(e);
   mantenerPantalla(true);
 }
@@ -468,7 +510,7 @@ function vistaFin() {
   `, `
     <button type="button" class="primario" data-accion="ir" data-ruta="inicio">Volver al inicio</button>
     <button type="button" data-accion="ir" data-ruta="historial">Ver historial</button>
-  `);
+  `, null, { ancho: 'lectura' });
 }
 
 function vistaDetenido() {
@@ -478,7 +520,7 @@ function vistaDetenido() {
       <p><strong>Si notas dolor en el pecho, falta de aire intensa, mareo fuerte o un dolor nuevo e intenso</strong>, busca atención médica ya: llama al número de emergencias de tu país (911 en Ecuador, 112 en España).</p>
     </div>
     <p>Si la molestia fue leve, descansa. Antes de volver a intentarlo, coméntalo con tu profesional sanitario, sobre todo si se repite.</p>
-  `, `<button type="button" class="primario" data-accion="ir" data-ruta="inicio">Volver al inicio</button>`);
+  `, `<button type="button" class="primario" data-accion="ir" data-ruta="inicio">Volver al inicio</button>`, null, { ancho: 'lectura' });
 }
 
 // --- Historial y ajustes ------------------------------------------
@@ -491,7 +533,7 @@ function vistaHistorial() {
       <span class="fila-titulo">${fecha(x.fecha, { weekday: 'long', day: 'numeric', month: 'long' })}, ${new Date(x.fecha).toLocaleTimeString('es', { hour: '2-digit', minute: '2-digit' })}</span>
       <span class="fila-detalle">${x.estado === 'completada' ? 'Completada' : 'Detenida'}. ${x.duracionMin} minutos, ${x.ejercicios} ejercicios.</span></span></li>`).join('')}</ul>`
       : '<p>Todavía no has hecho ninguna rutina. Cuando termines una, aparecerá aquí.</p>'}
-  `, `<button type="button" data-accion="ir" data-ruta="inicio">Volver al inicio</button>`, 'inicio');
+  `, `<button type="button" data-accion="ir" data-ruta="inicio">Volver al inicio</button>`, 'inicio', { ancho: 'lectura' });
 }
 
 function vistaAcerca() {
@@ -512,7 +554,7 @@ function vistaAcerca() {
     <p>Tu nombre, tu perfil y tu historial se guardan solo en este navegador. No se envían a ningún servidor. Si borras los datos del navegador, se pierden.</p>
     <h2>Fuentes</h2>
     <ul>${[...fuentes.values()].map((f) => `<li><a href="${escapar(f.url)}" rel="noopener">${escapar(f.titulo)}</a>, ${escapar(f.organizacion)}</li>`).join('')}</ul>
-  `, `<button type="button" class="peligro" data-accion="borrar-datos">Borrar mis datos</button>`, 'inicio');
+  `, `<button type="button" class="peligro" data-accion="borrar-datos">Borrar mis datos</button>`, 'inicio', { ancho: 'lectura' });
 }
 
 // --- Navegación ---------------------------------------------------
@@ -545,10 +587,12 @@ function router() {
     detenido: vistaDetenido,
     historial: vistaHistorial,
     acerca: vistaAcerca,
+    explorar: vistaExplorar,
   };
   const clave = vistas[ruta] ? ruta : vistas[`${ruta}/${arg}`] ? `${ruta}/${arg}` : 'inicio';
   if (clave === 'inicio') estado.volverAResumen = false;
   vistas[clave]();
+  marcarNavegacion(clave);
   enfocarTitulo();
 }
 

@@ -11,6 +11,8 @@
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-title" content="HealthMove">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- La fuente está en la caché del service worker: precargarla evita el salto de texto en el primer arranque. -->
+  <link rel="preload" href="fuente/atkinson-hyperlegible-400.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="estilos.css">
   <script>
     // Se registra durante el análisis, no en "load", para que la caché se prepare cuanto antes.
@@ -18,28 +20,58 @@
   </script>
 </head>
 <body>
-  <div class="marco">
-    <header class="cabecera" id="cabecera">
+  <a class="saltar" href="#app">Saltar al contenido</a>
+  <div class="app">
+    <!-- Escritorio (≥ 992 px): menú lateral. -->
+    <nav class="lateral" aria-label="Principal">
       <a class="marca" href="#inicio">
-        <img src="icon.svg" alt="" width="30" height="30">
+        <img src="icon.svg" alt="" width="36" height="36">
         <span>HealthMove</span>
       </a>
-    </header>
+      <ul class="lateral-lista">
+        <li><a href="#inicio" data-nav="inicio"><svg class="ico" aria-hidden="true"><use href="iconos.svg#i-house"/></svg>Inicio</a></li>
+        <li><a href="#explorar" data-nav="explorar"><svg class="ico" aria-hidden="true"><use href="iconos.svg#i-compass"/></svg>Explorar</a></li>
+        <li><a href="#rutina" data-nav="rutina"><svg class="ico" aria-hidden="true"><use href="iconos.svg#i-list-check"/></svg>Mi rutina</a></li>
+        <li><a href="#resumen" data-nav="perfil"><svg class="ico" aria-hidden="true"><use href="iconos.svg#i-person"/></svg>Mi perfil</a></li>
+      </ul>
+      <button type="button" class="primario boton-bloque" data-accion="generar">Generar mi rutina</button>
+      <ul class="lateral-lista lateral-secundaria">
+        <li><a href="#historial" data-nav="historial"><svg class="ico" aria-hidden="true"><use href="iconos.svg#i-clock-history"/></svg>Historial</a></li>
+        <li><a href="#acerca" data-nav="acerca"><svg class="ico" aria-hidden="true"><use href="iconos.svg#i-gear"/></svg>Ajustes y fuentes</a></li>
+      </ul>
+    </nav>
 
-    <div id="aviso-desarrollo" class="franja franja-aviso" hidden>
-      <span>Modo desarrollo: se usan ejercicios <strong>sin revisar</strong>.</span>
-      <button type="button" class="enlace" data-accion="salir-desarrollo">Salir</button>
-    </div>
-    <div id="aviso-version" class="franja" role="status" hidden>
-      <span>Hay una versión nueva.</span>
-      <button type="button" class="enlace" data-accion="recargar">Recargar</button>
-    </div>
+    <div class="columna">
+      <header class="cabecera" id="cabecera">
+        <a class="marca" href="#inicio">
+          <img src="icon.svg" alt="" width="32" height="32">
+          <span>HealthMove</span>
+        </a>
+      </header>
 
-    <main id="app" class="contenido" tabindex="-1">
-      <p>Cargando…</p>
-      <noscript>HealthMove necesita JavaScript para funcionar.</noscript>
-    </main>
-    <div id="acciones" class="acciones"></div>
+      <div id="aviso-desarrollo" class="franja franja-aviso" hidden>
+        <span>Modo desarrollo: incluye ejercicios <strong>sin revisar</strong>.</span>
+        <button type="button" class="enlace" data-accion="salir-desarrollo">Salir</button>
+      </div>
+      <div id="aviso-version" class="franja" role="status" hidden>
+        <span>Hay una versión nueva.</span>
+        <button type="button" class="enlace" data-accion="recargar">Recargar</button>
+      </div>
+
+      <main id="app" class="contenido" tabindex="-1">
+        <div class="hoja"><p>Cargando…</p></div>
+        <noscript>HealthMove necesita JavaScript para funcionar.</noscript>
+      </main>
+      <div id="acciones" class="acciones"></div>
+
+      <!-- Móvil: barra inferior fija. -->
+      <nav class="inferior" aria-label="Principal">
+        <a href="#inicio" data-nav="inicio"><svg class="ico" aria-hidden="true"><use href="iconos.svg#i-house"/></svg><span>Inicio</span></a>
+        <a href="#explorar" data-nav="explorar"><svg class="ico" aria-hidden="true"><use href="iconos.svg#i-compass"/></svg><span>Explorar</span></a>
+        <a href="#rutina" data-nav="rutina"><svg class="ico" aria-hidden="true"><use href="iconos.svg#i-list-check"/></svg><span>Mi rutina</span></a>
+        <a href="#resumen" data-nav="perfil"><svg class="ico" aria-hidden="true"><use href="iconos.svg#i-person"/></svg><span>Mi perfil</span></a>
+      </nav>
+    </div>
   </div>
 
   <script type="module" src="js/app.js"></script>

@@ -1,220 +1,414 @@
 /* ============================================================
    HealthMove — estilos
-   Blanco, una columna, controles grandes, contraste AA,
-   sin fuentes web (la app debe abrir al instante sin red).
+   CSS propio, sin librerías. Se organiza en capas para que el
+   orden de importancia sea explícito y no dependa de la
+   especificidad:
+     tokens → base → estructura → componentes → pantallas → utilidades
+   Fuente: Atkinson Hyperlegible, alojada en la app y en la caché
+   del service worker (no bloquea el arranque sin red).
    ============================================================ */
 
-:root {
-  --blanco: #FFFFFF;
-  --niebla: #F4F7F6;
-  --tinta: #15302B;
-  --tinta-suave: #53675F;
-  --borde: #D6E0DC;
-  --acento: #1F6F5C;
-  --acento-oscuro: #17594A;
-  --acento-claro: #E4F2EC;
-  --aviso: #7A4100;
-  --aviso-fondo: #FFF4E2;
-  --peligro: #A1261B;
-  --foco: #0B57D0;
-  --radio: 16px;
-  --radio-control: 12px;
-  --toque: 3.25rem;           /* 52 px: cómodo con dedos poco precisos */
-  color-scheme: light;
-}
+@layer tokens, base, estructura, componentes, pantallas, utilidades;
 
-* { box-sizing: border-box; }
-/* Cualquier display de una clase (p. ej. .franja con flex) ganaría al [hidden] del navegador. */
+/* Fuera de las capas a propósito: ninguna clase puede mostrar algo marcado con hidden. */
 [hidden] { display: none !important; }
-html, body { margin: 0; height: 100%; }
 
-body {
-  background: var(--blanco);
-  color: var(--tinta);
-  font: 1.125rem/1.55 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: transparent;
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("fuente/atkinson-hyperlegible-400.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("fuente/atkinson-hyperlegible-700.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
 }
 
-/* La página no se desplaza; solo el contenido central. */
-.marco {
-  height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  max-width: 38rem;
-  margin: 0 auto;
+/* ------------------------------------------------------------
+   Tokens
+   ------------------------------------------------------------ */
+@layer tokens {
+  :root {
+    /* Color. Cada pareja texto/fondo cumple WCAG AA (4,5:1) o más. */
+    --blanco: #FFFFFF;
+    --tinta: #12211E;            /* texto principal */
+    --tinta-suave: #50645D;      /* texto secundario, 6,1:1 sobre blanco */
+    --eucalipto: #136B5A;        /* acción, 6,4:1 sobre blanco */
+    --eucalipto-oscuro: #0E5546;
+    --menta: #DCEFE7;            /* seleccionado */
+    --menta-suave: #EEF7F3;
+    --cielo: #E7F0F8;            /* información */
+    --melocoton: #F7E6D8;        /* calidez */
+    --niebla: #F4F7F6;           /* superficies */
+    --borde: #D6E0DC;
+    --borde-fuerte: #AFC0B9;
+    --movimiento: #E07B39;       /* solo flechas de las ilustraciones, nunca texto */
+    --aviso: #7A4100;
+    --aviso-fondo: #FFF4E2;
+    --detener: #A1261B;          /* solo para parar */
+    --detener-fondo: #FBECEA;
+    --foco: #0B57D0;
+
+    /* Tipografía: escala 14 · 16 · 18 · 22 · 28 · 36 · 48 */
+    --fuente: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --t-xs: 0.875rem;
+    --t-s: 1rem;
+    --t-m: 1.125rem;
+    --t-l: 1.375rem;
+    --t-xl: 1.75rem;
+    --t-2xl: 2.25rem;
+    --t-3xl: 3rem;
+
+    /* Espacio (múltiplos de 4 px) */
+    --e-1: 0.25rem; --e-2: 0.5rem; --e-3: 0.75rem; --e-4: 1rem;
+    --e-5: 1.5rem;  --e-6: 2rem;   --e-7: 3rem;    --e-8: 4rem;
+
+    /* Forma */
+    --r-s: 10px;
+    --r-m: 14px;
+    --r-l: 20px;
+    --r-total: 999px;
+    --sombra: 0 10px 30px -12px rgb(18 33 30 / 0.22);
+    --sombra-baja: 0 1px 2px rgb(18 33 30 / 0.06), 0 2px 8px -2px rgb(18 33 30 / 0.08);
+
+    /* Controles: 52 px, cómodos con dedos poco precisos */
+    --toque: 3.25rem;
+    --ancho-lateral: 17rem;
+    --ancho-hoja: 72rem;
+    --ancho-lectura: 42rem;
+    --borde-ancho: 2px;
+
+    --rapido: 120ms;
+    --normal: 200ms;
+    color-scheme: light;
+  }
 }
 
-/* --- Cabecera: atrás + marca + progreso ------------------------ */
-.cabecera {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-height: calc(var(--toque) + 0.5rem);
-  padding: max(env(safe-area-inset-top), 0.5rem) 1rem 0.25rem;
-}
-.marca {
-  display: inline-flex; align-items: center; gap: 0.55rem;
-  min-height: var(--toque);
-  color: var(--tinta); text-decoration: none; font-weight: 700; font-size: 1.05rem;
-}
-.atras {
-  min-height: var(--toque);
-  padding: 0 0.9rem 0 0.6rem;
-  border: 0; background: var(--niebla); color: var(--tinta);
-  border-radius: 999px; font-weight: 650;
-}
-.atras svg { width: 1.2rem; height: 1.2rem; margin-right: 0.3rem; }
-.marca-derecha { margin-left: auto; }
-
-.pasos { display: flex; gap: 0.35rem; margin: 0.25rem 0 1rem; }
-.pasos span { flex: 1; height: 0.35rem; border-radius: 999px; background: var(--borde); }
-.pasos span.hecho { background: var(--acento); }
-.paso-texto { margin: 0; color: var(--tinta-suave); font-size: 0.95rem; }
-
-.contenido {
-  flex: 1; min-height: 0; overflow-y: auto;
-  padding: 0.25rem 1.25rem 2rem;
-  outline: none;
+/* ------------------------------------------------------------
+   Base
+   ------------------------------------------------------------ */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--blanco);
+    color: var(--tinta);
+    font: var(--t-m) / 1.55 var(--fuente);
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+  }
+  img, svg { display: block; max-width: 100%; }
+  h1, h2, h3 { line-height: 1.2; letter-spacing: -0.015em; text-wrap: balance; }
+  h1 { font-size: clamp(var(--t-xl), 3.2vw + 1rem, var(--t-2xl)); margin: var(--e-1) 0 var(--e-3); }
+  h2 { font-size: var(--t-l); margin: var(--e-6) 0 var(--e-3); }
+  h3 { font-size: var(--t-m); margin: var(--e-5) 0 var(--e-2); }
+  h1:focus { outline: none; }
+  p, li { max-width: var(--ancho-lectura); }
+  p { margin: 0 0 var(--e-4); }
+  a { color: var(--eucalipto); font-weight: 700; text-underline-offset: 0.18em; text-decoration-thickness: 0.08em; }
+  a:hover { color: var(--eucalipto-oscuro); }
+  strong { font-weight: 700; }
+  :focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; border-radius: 4px; }
+  ::selection { background: var(--menta); }
 }
 
-.acciones {
-  display: flex; flex-wrap: wrap; gap: 0.6rem;
-  padding: 0.75rem 1.25rem max(env(safe-area-inset-bottom), 0.9rem);
-  background: var(--blanco);
-  box-shadow: 0 -1px 0 var(--borde);
+/* ------------------------------------------------------------
+   Estructura: la página nunca se desplaza; solo el contenido.
+   Móvil: cabecera + contenido + acciones + barra inferior.
+   Escritorio (≥ 992 px): menú lateral + columna.
+   ------------------------------------------------------------ */
+@layer estructura {
+  .app { height: 100dvh; display: grid; grid-template-columns: minmax(0, 1fr); overflow: hidden; }
+  .columna { display: flex; flex-direction: column; min-width: 0; min-height: 0; height: 100dvh; }
+
+  .saltar {
+    position: absolute; left: var(--e-4); top: -4rem; z-index: 10;
+    background: var(--tinta); color: var(--blanco); padding: var(--e-2) var(--e-4); border-radius: var(--r-s);
+  }
+  .saltar:focus { top: var(--e-4); }
+
+  .marca {
+    display: inline-flex; align-items: center; gap: var(--e-2);
+    min-height: var(--toque);
+    color: var(--tinta); text-decoration: none; font-weight: 700; font-size: var(--t-m); letter-spacing: -0.01em;
+  }
+  .marca img { border-radius: 9px; }
+
+  .cabecera {
+    display: flex; align-items: center; gap: var(--e-2);
+    min-height: calc(var(--toque) + var(--e-2));
+    padding: max(env(safe-area-inset-top), var(--e-2)) var(--e-4) var(--e-1);
+  }
+  .cabecera .marca-derecha { margin-left: auto; }
+
+  .contenido { flex: 1; min-height: 0; overflow-y: auto; outline: none; overscroll-behavior: contain; scroll-padding-top: var(--e-4); }
+  .hoja { width: 100%; max-width: var(--ancho-hoja); margin: 0 auto; padding: var(--e-2) var(--e-4) var(--e-7); }
+  .hoja-lectura { max-width: calc(var(--ancho-lectura) + 2 * var(--e-4)); }
+  .hoja-sangre { padding-top: 0; }
+
+  .acciones { background: var(--blanco); box-shadow: 0 -1px 0 var(--borde); padding: var(--e-3) var(--e-4) var(--e-3); }
+  .acciones:empty { display: none; }
+  .acciones-dentro { display: flex; flex-wrap: wrap; gap: var(--e-3); max-width: var(--ancho-hoja); margin: 0 auto; }
+  .acciones-dentro > * { flex: 1 1 auto; white-space: nowrap; }
+  .acciones-lectura .acciones-dentro { max-width: var(--ancho-lectura); }
+
+  /* Barra inferior (móvil) */
+  .inferior {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    background: var(--blanco); border-top: 1px solid var(--borde);
+    padding: var(--e-1) var(--e-2) max(env(safe-area-inset-bottom), var(--e-2));
+  }
+  .inferior a {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+    min-height: var(--toque); padding: var(--e-1) 0;
+    color: var(--tinta-suave); text-decoration: none; font-size: var(--t-xs); font-weight: 700;
+    border-radius: var(--r-m);
+  }
+  .inferior .ico { width: 1.5rem; height: 1.5rem; padding: 2px 14px; box-sizing: content-box; border-radius: var(--r-total); transition: background var(--normal); }
+  .inferior a[aria-current="page"] { color: var(--eucalipto-oscuro); }
+  .inferior a[aria-current="page"] .ico { background: var(--menta); }
+
+  /* Menú lateral (escritorio) */
+  .lateral { display: none; }
+
+  @media (min-width: 62rem) {
+    .app { grid-template-columns: var(--ancho-lateral) minmax(0, 1fr); }
+    .lateral {
+      display: flex; flex-direction: column; gap: var(--e-2);
+      height: 100dvh; padding: var(--e-5) var(--e-4); border-right: 1px solid var(--borde);
+      background: var(--niebla);
+    }
+    .lateral .marca { padding: 0 var(--e-3); margin-bottom: var(--e-4); font-size: var(--t-l); }
+    .lateral-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--e-1); }
+    .lateral-lista a {
+      display: flex; align-items: center; gap: var(--e-3);
+      min-height: 3rem; padding: 0 var(--e-3); border-radius: var(--r-m);
+      color: var(--tinta); text-decoration: none; font-weight: 700;
+    }
+    .lateral-lista a:hover { background: var(--blanco); }
+    .lateral-lista a[aria-current="page"] { background: var(--menta); color: var(--eucalipto-oscuro); }
+    .lateral .boton-bloque { margin: var(--e-4) 0; }
+    .lateral-secundaria { margin-top: auto; }
+    .lateral-secundaria a { font-weight: 400; color: var(--tinta-suave); }
+
+    .inferior { display: none; }
+    .cabecera .marca { display: none; }
+    .cabecera:not(:has(.atras)) { display: none; }
+    .hoja { padding: var(--e-5) var(--e-6) var(--e-8); }
+    .acciones { padding: var(--e-4) var(--e-6); }
+    .acciones-dentro > * { flex: 0 1 auto; min-width: 12rem; }
+  }
+
+  /* Modo concentración: reproductor y bienvenida, sin navegación. */
+  body[data-modo="concentracion"] .lateral,
+  body[data-modo="concentracion"] .inferior { display: none; }
+  @media (min-width: 62rem) {
+    body[data-modo="concentracion"] .app { grid-template-columns: minmax(0, 1fr); }
+    body[data-modo="concentracion"] .cabecera { display: flex; }
+    body[data-modo="concentracion"] .cabecera .marca { display: inline-flex; }
+  }
 }
-.acciones:empty { display: none; }
-.acciones > * { flex: 1 1 10rem; }
 
-/* --- Tipografía ------------------------------------------------ */
-h1 { font-size: 1.65rem; line-height: 1.2; margin: 0.25rem 0 0.6rem; letter-spacing: -0.015em; }
-h2 { font-size: 1.25rem; line-height: 1.3; margin: 1.75rem 0 0.5rem; }
-p, li { max-width: 34em; }
-h1:focus { outline: none; }
-.suave { color: var(--tinta-suave); }
-.pequeno { font-size: 0.95rem; }
+/* ------------------------------------------------------------
+   Componentes
+   ------------------------------------------------------------ */
+@layer componentes {
+  .ico { width: 1.25em; height: 1.25em; fill: currentColor; flex: none; }
 
-/* El saludo es lo único grande de la app. */
-.saludo {
-  font-size: clamp(2.3rem, 11vw, 3.2rem);
-  line-height: 1.05;
-  letter-spacing: -0.03em;
-  margin: 1.25rem 0 0.75rem;
+  /* Botones. Por defecto, secundario (borde); .primario relleno; .peligro solo para parar. */
+  button, .boton {
+    font: inherit; font-weight: 700; line-height: 1.2;
+    min-height: var(--toque);
+    padding: var(--e-3) var(--e-5);
+    border-radius: var(--r-m);
+    border: var(--borde-ancho) solid var(--eucalipto);
+    background: var(--blanco); color: var(--eucalipto);
+    cursor: pointer; text-align: center; text-decoration: none;
+    display: inline-flex; align-items: center; justify-content: center; gap: var(--e-2);
+    touch-action: manipulation;
+    transition: background var(--rapido), border-color var(--rapido), color var(--rapido), box-shadow var(--rapido);
+  }
+  button:hover, .boton:hover { background: var(--menta-suave); }
+  button:active, .boton:active { transform: translateY(1px); }
+  .primario { background: var(--eucalipto); color: var(--blanco); box-shadow: var(--sombra-baja); }
+  .primario:hover { background: var(--eucalipto-oscuro); border-color: var(--eucalipto-oscuro); color: var(--blanco); }
+  .suave { color: var(--tinta-suave); }
+  .boton-suave { background: var(--niebla); border-color: transparent; color: var(--tinta); }
+  .boton-suave:hover { background: var(--menta); }
+  .peligro { background: var(--blanco); border-color: var(--detener); color: var(--detener); }
+  .peligro:hover { background: var(--detener-fondo); }
+  .boton-bloque { width: 100%; }
+  .boton-grande { min-height: 3.75rem; font-size: var(--t-l); padding-inline: var(--e-6); }
+  button:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+  .enlace { border: 0; background: none; padding: 0 var(--e-1); min-height: 2.75rem; color: inherit; text-decoration: underline; text-underline-offset: 0.18em; box-shadow: none; }
+  .enlace:hover { background: none; color: var(--eucalipto-oscuro); }
+
+  .atras {
+    min-height: var(--toque); padding: 0 var(--e-4) 0 var(--e-3);
+    border: 0; background: var(--niebla); color: var(--tinta); border-radius: var(--r-total);
+  }
+  .atras:hover { background: var(--menta); }
+
+  /* Píldoras (información fija) e insignias */
+  .pildoras { display: flex; flex-wrap: wrap; gap: var(--e-2); list-style: none; padding: 0; margin: 0; }
+  .pildora {
+    display: inline-flex; align-items: center; gap: var(--e-1);
+    padding: var(--e-1) var(--e-3); min-height: 2.25rem;
+    background: var(--niebla); border-radius: var(--r-total);
+    font-size: var(--t-s); color: var(--tinta);
+  }
+  .insignia {
+    display: inline-flex; align-items: center; gap: 4px;
+    padding: 2px 10px; border-radius: var(--r-total);
+    font-size: var(--t-xs); font-weight: 700; line-height: 1.5;
+    background: var(--blanco); color: var(--tinta);
+  }
+  .insignia-borrador { background: var(--aviso-fondo); color: var(--aviso); }
+  .insignia-ok { background: var(--menta); color: var(--eucalipto-oscuro); }
+
+  /* Chips (filtros que se pueden marcar) */
+  .chips { display: flex; gap: var(--e-2); overflow-x: auto; padding: var(--e-1) var(--e-4); margin: 0 calc(-1 * var(--e-4)); scrollbar-width: none; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: none; min-height: 2.75rem; padding: var(--e-2) var(--e-4);
+    border: var(--borde-ancho) solid var(--borde); border-radius: var(--r-total);
+    background: var(--blanco); color: var(--tinta); font-weight: 700; font-size: var(--t-s);
+  }
+  .chip:hover { background: var(--niebla); }
+  .chip[aria-pressed="true"] { background: var(--tinta); border-color: var(--tinta); color: var(--blanco); }
+
+  /* Filas de navegación: toda la fila se puede tocar. */
+  .filas { list-style: none; padding: 0; margin: 0; border-radius: var(--r-l); background: var(--niebla); overflow: hidden; }
+  .filas li { max-width: none; }
+  .filas li + li { border-top: 1px solid var(--blanco); }
+  .filas a {
+    display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: var(--e-3);
+    min-height: 4.25rem; padding: var(--e-3) var(--e-4);
+    color: var(--tinta); text-decoration: none; font-weight: 400;
+  }
+  .filas a::after {
+    content: ""; width: 0.6rem; height: 0.6rem; grid-row: 1 / span 2; grid-column: 2;
+    border-right: 2px solid var(--tinta-suave); border-top: 2px solid var(--tinta-suave); transform: rotate(45deg);
+  }
+  .filas a:hover { background: var(--menta-suave); }
+  .fila-titulo { font-weight: 700; }
+  .fila-detalle { color: var(--tinta-suave); font-size: var(--t-s); }
+  .fila-estatica { display: flex; flex-direction: column; justify-content: center; min-height: 4.25rem; padding: var(--e-3) var(--e-4); }
+
+  /* Formularios: cada opción es una tarjeta que se toca entera. */
+  fieldset { border: 0; margin: 0 0 var(--e-5); padding: 0; min-width: 0; }
+  legend { font-weight: 700; font-size: var(--t-m); margin-bottom: var(--e-3); padding: 0; }
+  .opcion {
+    display: flex; align-items: flex-start; gap: var(--e-3);
+    min-height: var(--toque); padding: var(--e-4); margin-bottom: var(--e-2);
+    background: var(--blanco);
+    border: var(--borde-ancho) solid var(--borde); border-radius: var(--r-m);
+    cursor: pointer; transition: border-color var(--rapido), background var(--rapido);
+  }
+  .opcion:hover { border-color: var(--borde-fuerte); }
+  .opcion input { width: 1.5rem; height: 1.5rem; margin: 0.05rem 0 0; flex: none; accent-color: var(--eucalipto); }
+  .opcion:has(input:checked) { border-color: var(--eucalipto); background: var(--menta-suave); box-shadow: inset 0 0 0 1px var(--eucalipto); }
+  .opcion:has(input:focus-visible) { outline: 3px solid var(--foco); outline-offset: 2px; }
+  .opcion-ninguna { background: var(--niebla); border-color: transparent; }
+  .grupo-titulo { font-size: var(--t-s); color: var(--tinta-suave); margin: var(--e-4) 0 var(--e-2); font-weight: 700; }
+  .si-no { display: flex; gap: var(--e-2); flex-wrap: wrap; }
+  .si-no .opcion { flex: 1 1 6rem; }
+
+  .campo-texto {
+    width: 100%; font: inherit; font-size: var(--t-l);
+    min-height: var(--toque); padding: var(--e-3) var(--e-4);
+    border: var(--borde-ancho) solid var(--borde-fuerte); border-radius: var(--r-m);
+    color: var(--tinta); background: var(--blanco);
+  }
+  .campo-texto:focus { border-color: var(--eucalipto); outline: 3px solid var(--foco); outline-offset: 2px; }
+  label.etiqueta { display: block; font-weight: 700; margin-bottom: var(--e-2); }
+
+  /* Notas: información (cielo), aviso, peligro, éxito. */
+  .nota { background: var(--cielo); border-radius: var(--r-l); padding: var(--e-4) var(--e-5); margin: var(--e-4) 0; }
+  .nota > :first-child { margin-top: 0; }
+  .nota > :last-child { margin-bottom: 0; }
+  .nota h2 { margin-top: 0; font-size: var(--t-m); }
+  .nota ul { padding-left: 1.2rem; margin: var(--e-2) 0; }
+  .nota-neutra { background: var(--niebla); }
+  .nota-aviso { background: var(--aviso-fondo); }
+  .nota-aviso strong { color: var(--aviso); }
+  .nota-peligro { background: var(--detener-fondo); }
+  .nota-peligro strong { color: var(--detener); }
+  .nota-exito { background: var(--menta); }
+  .nota-con-icono { display: grid; grid-template-columns: auto 1fr; gap: var(--e-3); align-items: start; }
+  .nota-con-icono > .ico { width: 1.5rem; height: 1.5rem; margin-top: 2px; }
+  details.nota summary { cursor: pointer; font-weight: 700; min-height: 2.75rem; display: flex; align-items: center; }
+
+  .franja { display: flex; align-items: center; justify-content: space-between; gap: var(--e-3); padding: 0 var(--e-2) 0 var(--e-4); background: var(--menta); font-size: var(--t-s); line-height: 1.3; }
+  .franja > span { padding: var(--e-2) 0; }
+  .franja .enlace { font-weight: 700; flex: none; }
+  .franja-aviso { background: var(--aviso-fondo); }
+
+  /* Progreso por pasos */
+  .pasos { display: flex; gap: var(--e-1); margin: var(--e-1) 0 var(--e-2); }
+  .pasos span { flex: 1; height: 0.375rem; border-radius: var(--r-total); background: var(--borde); }
+  .pasos span.hecho { background: var(--eucalipto); }
+  .paso-texto { margin: 0 0 var(--e-2); color: var(--tinta-suave); font-size: var(--t-s); }
+
+  .estado-falta { color: var(--aviso); font-weight: 700; }
+
+  /* Cabecera de sección con enlace a la derecha */
+  .seccion-cabecera { display: flex; align-items: baseline; justify-content: space-between; gap: var(--e-4); margin: var(--e-6) 0 var(--e-3); }
+  .seccion-cabecera h2 { margin: 0; }
+  .seccion-cabecera a { white-space: nowrap; font-size: var(--t-s); }
+
+  /* Esqueletos de carga */
+  .esqueleto { background: linear-gradient(90deg, var(--niebla) 0%, #E9EFED 50%, var(--niebla) 100%); background-size: 200% 100%; animation: brillo 1.4s ease-in-out infinite; border-radius: var(--r-m); }
+  @keyframes brillo { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+
+  /* Estado vacío */
+  .vacio { text-align: center; padding: var(--e-7) var(--e-4); background: var(--niebla); border-radius: var(--r-l); }
+  .vacio > .ico { width: 2.5rem; height: 2.5rem; margin: 0 auto var(--e-3); color: var(--eucalipto); }
+  .vacio p { margin-inline: auto; }
 }
-.saludo-linea { font-size: 1.25rem; line-height: 1.45; margin: 0 0 1.5rem; max-width: 26em; }
 
-/* --- Botones y enlaces ------------------------------------------ */
-button, .boton {
-  font: inherit; font-weight: 650;
-  min-height: var(--toque);
-  padding: 0.65rem 1.15rem;
-  border-radius: var(--radio-control);
-  border: 2px solid var(--acento);
-  background: var(--blanco); color: var(--acento);
-  cursor: pointer; text-align: center; text-decoration: none;
-  display: inline-flex; align-items: center; justify-content: center;
-  touch-action: manipulation;
+/* ------------------------------------------------------------
+   Pantallas
+   ------------------------------------------------------------ */
+@layer pantallas {
+  .saludo { font-size: clamp(2.4rem, 7vw + 0.5rem, var(--t-3xl)); line-height: 1.05; letter-spacing: -0.03em; margin: var(--e-5) 0 var(--e-3); }
+  .saludo-linea { font-size: var(--t-l); line-height: 1.45; margin: 0 0 var(--e-5); max-width: 28em; }
+
+  /* Rutina (lista provisional hasta la línea de tiempo) */
+  .fase-titulo { display: flex; justify-content: space-between; align-items: baseline; gap: var(--e-4); }
+  .fase-titulo span { color: var(--tinta-suave); font-size: var(--t-s); font-weight: 400; }
+  .rutina { padding-left: 1.5rem; margin: 0; }
+  .rutina li { padding: var(--e-2) 0; max-width: none; }
+  .rutina .meta { display: block; color: var(--tinta-suave); font-size: var(--t-s); }
+
+  /* Reproductor */
+  .reproductor { display: flex; flex-direction: column; gap: var(--e-3); }
+  .reproductor .fase { margin: 0; color: var(--tinta-suave); font-size: var(--t-s); }
+  .reproductor h1 { font-size: clamp(1.9rem, 5vw + 0.5rem, 2.5rem); margin: 0; }
+  .reproductor ol { padding-left: 1.4rem; margin: 0; font-size: 1.2rem; }
+  .reproductor ol li { margin-bottom: var(--e-2); }
+  .dosis { font-weight: 700; font-size: 1.15rem; margin: var(--e-1) 0 0; }
+  .tiempo { background: var(--niebla); border-radius: var(--r-l); padding: var(--e-4) var(--e-5); }
+  .tiempo-cifra { font-size: 2.8rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; }
+  .barra { height: 0.6rem; border-radius: var(--r-total); background: var(--borde); overflow: hidden; margin-top: var(--e-3); }
+  .barra > span { display: block; height: 100%; width: 0; background: var(--eucalipto); transition: width 1s linear; }
+  #anuncio { margin: 0; }
+  /* "Detener" va en su propia fila, lejos de "Siguiente", para no tocar el botón equivocado. */
+  .acciones-dentro > .parar { flex-basis: 100%; order: 2; }
 }
-button:active { transform: translateY(1px); }
-.primario { background: var(--acento); color: var(--blanco); }
-.primario:hover { background: var(--acento-oscuro); border-color: var(--acento-oscuro); }
-.peligro { background: var(--blanco); border-color: var(--peligro); color: var(--peligro); }
-button:disabled { opacity: 0.45; cursor: not-allowed; }
-.enlace { border: 0; background: none; padding: 0 0.25rem; min-height: 2.75rem; color: inherit; text-decoration: underline; }
 
-a { color: var(--acento); font-weight: 650; text-underline-offset: 0.15em; }
-:focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; }
-
-/* Filas de navegación: toda la fila se puede tocar. */
-.filas { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--borde); }
-.filas li { max-width: none; border-bottom: 1px solid var(--borde); }
-.filas a {
-  display: flex; flex-direction: column; justify-content: center;
-  min-height: 4rem; padding: 0.6rem 0.25rem;
-  color: var(--tinta); text-decoration: none;
+/* ------------------------------------------------------------
+   Utilidades
+   ------------------------------------------------------------ */
+@layer utilidades {
+  .solo-lectores { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  .pequeno { font-size: var(--t-s); }
+  .centrado { text-align: center; }
+  .sin-margen { margin: 0; }
+  .pila > * + * { margin-top: var(--e-4); }
 }
-.filas a:hover .fila-titulo { text-decoration: underline; }
-.fila-titulo { font-weight: 650; }
-.fila-estatica { display: flex; flex-direction: column; justify-content: center; min-height: 4rem; padding: 0.6rem 0.25rem; }
-.fila-detalle { color: var(--tinta-suave); font-size: 0.95rem; font-weight: 400; }
-
-/* --- Formularios ------------------------------------------------ */
-fieldset { border: 0; margin: 0 0 1.25rem; padding: 0; }
-legend { font-weight: 700; font-size: 1.1rem; margin-bottom: 0.6rem; padding: 0; }
-
-.opcion {
-  display: flex; align-items: flex-start; gap: 0.8rem;
-  min-height: var(--toque);
-  padding: 0.85rem 1rem; margin-bottom: 0.55rem;
-  background: var(--blanco);
-  border: 2px solid var(--borde);
-  border-radius: var(--radio-control);
-  cursor: pointer;
-}
-.opcion input { width: 1.5rem; height: 1.5rem; margin: 0.1rem 0 0; flex: none; accent-color: var(--acento); }
-.opcion:has(input:checked) { border-color: var(--acento); background: var(--acento-claro); }
-.opcion:has(input:focus-visible) { outline: 3px solid var(--foco); outline-offset: 2px; }
-.opcion-ninguna { background: var(--niebla); border-color: transparent; }
-.grupo-titulo { font-size: 1rem; color: var(--tinta-suave); margin: 1.1rem 0 0.45rem; font-weight: 650; }
-.si-no { display: flex; gap: 0.55rem; }
-.si-no .opcion { flex: 1; }
-
-.campo-texto {
-  width: 100%; font: inherit; font-size: 1.3rem;
-  min-height: var(--toque); padding: 0.6rem 0.9rem;
-  border: 2px solid var(--borde); border-radius: var(--radio-control);
-  color: var(--tinta); background: var(--blanco);
-}
-.campo-texto:focus { border-color: var(--acento); outline: 3px solid var(--foco); outline-offset: 2px; }
-label.etiqueta { display: block; font-weight: 700; margin-bottom: 0.5rem; }
-
-/* --- Bloques ---------------------------------------------------- */
-.nota { background: var(--niebla); border-radius: var(--radio); padding: 1rem 1.15rem; margin: 1rem 0; }
-.nota > :first-child { margin-top: 0; }
-.nota > :last-child { margin-bottom: 0; }
-.nota-aviso { background: var(--aviso-fondo); }
-.nota-aviso strong { color: var(--aviso); }
-.nota h2 { margin-top: 0; font-size: 1.1rem; }
-.nota ul { padding-left: 1.2rem; margin: 0.4rem 0; }
-
-details.nota summary { cursor: pointer; font-weight: 650; min-height: 2.75rem; display: flex; align-items: center; }
-
-.franja { display: flex; flex-wrap: wrap; align-items: center; gap: 0 0.5rem; padding: 0.3rem 1.25rem; background: var(--acento-claro); font-size: 0.95rem; }
-.franja-aviso { background: var(--aviso-fondo); }
-
-/* Estado de cada sección en el resumen */
-.estado-falta { color: var(--aviso); font-weight: 650; }
-
-/* Rutina: el orden importa, por eso va numerada */
-.fase-titulo { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
-.fase-titulo span { color: var(--tinta-suave); font-size: 0.95rem; font-weight: 400; }
-.rutina { padding-left: 1.5rem; margin: 0; }
-.rutina li { padding: 0.5rem 0; max-width: none; }
-.rutina .meta { display: block; color: var(--tinta-suave); font-size: 0.95rem; }
-
-/* --- Reproductor ------------------------------------------------ */
-.reproductor { display: flex; flex-direction: column; gap: 0.7rem; }
-.reproductor .fase { margin: 0; color: var(--tinta-suave); font-size: 1rem; }
-.reproductor h1 { font-size: clamp(1.9rem, 7.5vw, 2.5rem); margin: 0; }
-.reproductor ol { padding-left: 1.4rem; margin: 0; font-size: 1.2rem; }
-.reproductor ol li { margin-bottom: 0.55rem; }
-.dosis { font-weight: 650; font-size: 1.15rem; margin: 0.25rem 0 0; }
-
-.tiempo { background: var(--niebla); border-radius: var(--radio); padding: 1rem 1.1rem; }
-.tiempo-cifra { font-size: 2.8rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; }
-.barra { height: 0.6rem; border-radius: 999px; background: var(--borde); overflow: hidden; margin-top: 0.75rem; }
-.barra > span { display: block; height: 100%; width: 0; background: var(--acento); transition: width 1s linear; }
-#anuncio { margin: 0; }
-
-/* "Detener" va en su propia fila, lejos de "Siguiente", para no tocar el botón equivocado. */
-.acciones > .parar { flex-basis: 100%; order: 2; }
 
 @media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
-}
-
-@media (min-width: 48rem) {
-  .contenido { padding-top: 1rem; }
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
