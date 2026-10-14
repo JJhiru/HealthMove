@@ -3,10 +3,11 @@
 //  sin red, y se actualiza en segundo plano.
 //  VERSION y PRECACHE los escribe `npm run version-sw`; no editar a mano.
 // ============================================================
-const VERSION = 'hm-d2969503d496';
+const VERSION = 'hm-a7347234c597';
 const PRECACHE = [
   './',
   'data/catalogo.json',
+  'data/ilustraciones.json',
   'estilos.css',
   'fotos/bici-adaptada-parque-1280.webp',
   'fotos/bici-adaptada-parque-640.webp',
@@ -34,6 +35,7 @@ const PRECACHE = [
   'index.html',
   'js/almacen.js',
   'js/app.js',
+  'js/figura.js',
   'js/motor.js',
   'js/opciones.js',
   'js/perfil.js',

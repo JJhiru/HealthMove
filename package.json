@@ -8,7 +8,8 @@
     "test": "node scripts/validar-catalogo.mjs && node --test \"tests/*.test.mjs\"",
     "validar": "node scripts/validar-catalogo.mjs",
     "servir": "python3 -m http.server 8000 --directory public",
-    "version-sw": "node scripts/version-sw.mjs"
+    "version-sw": "node scripts/version-sw.mjs",
+    "ilustraciones": "node scripts/ilustraciones.mjs"
   },
   "license": "MIT"
 }

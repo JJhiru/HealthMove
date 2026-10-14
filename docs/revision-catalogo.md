@@ -86,3 +86,19 @@ sentarse sobre los talones), 5 de muñeca (círculos, flexión y extensión, gir
 estiramiento con las palmas juntas) y 2 que dependen de reposabrazos. Están en el informe de
 investigación. Para usarlos haría falta añadir exigencias (cuello, muñeca, rodillas en el suelo,
 desplazamiento) y sus preguntas en el perfil.
+
+## Ilustraciones
+
+Cada ejercicio tiene una ilustración generada por una figura articulada (`public/js/figura.js`) a
+partir de su ficha de pose en `scripts/ilustraciones/` (sentado, de pie, tumbado y suelo). La pose
+inicial va en gris, la final en color, y una flecha naranja une las dos. Los apoyos y el material
+(silla, pared, cama, banda, botella, toalla) se dibujan siempre.
+
+- Revisa la ilustración junto con el ejercicio: debe mostrar la misma postura, los mismos apoyos y
+  el mismo movimiento que las instrucciones. Si no, corrige la ficha y ejecuta
+  `npm run ilustraciones`.
+- Los tests comprueban que cada ejercicio tiene ilustración, que la postura dibujada es una de las
+  del ejercicio y que el material dibujado coincide exactamente con `recursos`.
+- Manos, pies y tobillos se muestran con un detalle ampliado en lugar de la figura entera.
+- Limitaciones conocidas: los giros de tronco se indican con una flecha en arco, y tumbado de lado
+  se dibuja visto desde arriba (cama en planta) para que se vea el movimiento.
