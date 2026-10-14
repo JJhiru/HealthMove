@@ -1,0 +1,13 @@
+{
+  "name": "MV10",
+  "short_name": "MV10",
+  "description": "Rutinas de educación física de menos de 20 minutos para clases de colegio.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#14161c",
+  "theme_color": "#14161c",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
