@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { SECCIONES, POSICION, RECURSOS, DURACIONES } from '../public/js/opciones.js';
 import * as P from '../public/js/perfil.js';
-import { calcularRestricciones, generarRutina, crearAleatorio, MINIMOS } from '../public/js/motor.js';
+import { calcularRestricciones, generarRutina, crearAleatorio, MINIMOS, clavePosicion } from '../public/js/motor.js';
 import { catalogoReal, perfilCompleto, ejercicioFalso } from './ayudas.mjs';
 
 const porId = new Map(catalogoReal.ejercicios.map((e) => [e.id, e]));
@@ -140,6 +140,21 @@ test('las fases salen en orden: calentamiento, principal, calma', () => {
   const orden = res.rutina.bloques.map((b) => b.fase);
   const rango = { calentamiento: 0, principal: 1, calma: 2 };
   for (let i = 1; i < orden.length; i++) assert.ok(rango[orden[i - 1]] <= rango[orden[i]]);
+});
+
+test('dentro de cada fase y vuelta, los ejercicios van agrupados por posición (silla, de pie, cama, suelo)', () => {
+  for (let semilla = 1; semilla <= 60; semilla++) {
+    const res = generarRutina(catalogoReal, perfilCompleto((p) => P.elegirDuracion(p, 20)), { semilla, permitirBorrador: true });
+    assert.equal(res.ok, true);
+    const grupos = new Map();
+    for (const b of res.rutina.bloques) {
+      const k = `${b.fase}-${b.ronda}`;
+      grupos.set(k, [...(grupos.get(k) || []), clavePosicion(porId.get(b.ejercicioId))]);
+    }
+    for (const [k, claves] of grupos) {
+      for (let i = 1; i < claves.length; i++) assert.ok(claves[i - 1] <= claves[i], `semilla ${semilla}, ${k}: ${claves}`);
+    }
+  }
 });
 
 test('perfil incompleto: no genera y explica qué falta', () => {

@@ -83,6 +83,10 @@ function barajar(lista, aleatorio) {
 
 const familia = (ej) => ej.variante_de || ej.id;
 
+// Orden de posiciones dentro de una fase: agrupar evita ir y venir entre la silla y la cama.
+export const ORDEN_POSICION = ['sentado', 'de_pie', 'tumbado', 'suelo'];
+export const clavePosicion = (ej) => Math.max(...ej.posiciones.map((p) => ORDEN_POSICION.indexOf(p)));
+
 export function generarRutina(catalogo, perfil, { semilla = 1, permitirBorrador = false } = {}) {
   const problemas = validarPerfil(perfil);
   if (problemas.length) return { ok: false, motivo: 'perfil_incompleto', problemas };
@@ -123,6 +127,8 @@ export function generarRutina(catalogo, perfil, { semilla = 1, permitirBorrador 
   if (Object.keys(faltan).length) {
     return { ok: false, motivo: 'catalogo_insuficiente', faltan, limitantes: limitantes(catalogo, restr, opciones), explicacion };
   }
+
+  for (const fase of Object.keys(porFase)) porFase[fase].sort((a, b) => clavePosicion(a) - clavePosicion(b));
 
   // Bloques: la parte principal puede repetirse en una segunda ronda para llenar el tiempo.
   const bloques = [];

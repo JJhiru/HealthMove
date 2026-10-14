@@ -14,9 +14,11 @@ import { leer, guardar, borrarTodo } from './almacen.js';
 
 const app = document.getElementById('app');
 const acciones = document.getElementById('acciones');
+const cabecera = document.getElementById('cabecera');
 
 const estado = {
   catalogo: null,
+  nombre: leer('nombre', null),     // null = aún no se ha preguntado; '' = prefiere no decirlo
   perfil: P.cargarPerfil(leer('perfil')),
   resultado: leer('resultado'),     // última generación: { res, semilla, fecha }
   historial: leer('historial', []),
@@ -27,6 +29,8 @@ const estado = {
   reproductor: null,
 };
 
+const MAX_NOMBRE = 30;
+
 // --- Utilidades ---------------------------------------------------
 
 const escapar = (txt) => String(txt ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -34,15 +38,37 @@ const minutos = (seg) => Math.round(seg / 60);
 const mmss = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
 const ejercicio = (id) => estado.catalogo.ejercicios.find((e) => e.id === id);
 const ir = (ruta) => { location.hash = ruta; };
+const fecha = (iso, opciones = { day: 'numeric', month: 'long' }) => new Date(iso).toLocaleDateString('es', opciones);
+
+// Texto con el nombre si lo hay; si no, la alternativa sin nombre. El nombre siempre se escapa.
+const conNombre = (con, sin) => (estado.nombre ? con(escapar(estado.nombre)) : sin);
 
 function cambiarPerfil(nuevo) {
   estado.perfil = nuevo;
   guardar('perfil', nuevo);
 }
 
-function pintar(html, botones = '') {
+const FLECHA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+// Cabecera: botón "Atrás" con destino explícito (no depende del historial del navegador).
+function pintarCabecera(atras) {
+  cabecera.innerHTML = `
+    ${atras ? `<button type="button" class="atras" data-accion="ir" data-ruta="${atras}">${FLECHA}Atrás</button>` : ''}
+    <a class="marca ${atras ? 'marca-derecha' : ''}" href="#inicio">
+      <img src="icon.svg" alt="" width="30" height="30"><span>HealthMove</span>
+    </a>`;
+}
+
+function pintar(html, botones = '', atras = null) {
+  pintarCabecera(atras);
   app.innerHTML = html;
   acciones.innerHTML = botones;
+}
+
+// Barra de progreso del perfil: es una secuencia real de 4 pasos.
+function pasos(n, detalle = '') {
+  return `<div class="pasos" aria-hidden="true">${[1, 2, 3, 4].map((i) => `<span class="${i <= n ? 'hecho' : ''}"></span>`).join('')}</div>
+    <p class="paso-texto">Paso ${n} de 4${detalle}</p>`;
 }
 
 // Tras cambiar de pantalla, el foco va al título para que los lectores de pantalla lo anuncien.
@@ -55,7 +81,9 @@ function enfocarTitulo() {
 // Al repintar la misma pantalla (marcar una casilla), el foco vuelve al mismo control.
 function repintarConservandoFoco(fn) {
   const id = document.activeElement?.id;
+  const scroll = app.scrollTop;
   fn();
+  app.scrollTop = scroll;
   if (id) document.getElementById(id)?.focus({ preventScroll: true });
 }
 
@@ -66,57 +94,88 @@ function casilla({ id, nombre, valor, texto, marcada, tipo = 'checkbox', clase =
   </label>`;
 }
 
-// --- Pantallas ----------------------------------------------------
+const fila = (ruta, titulo, detalle = '') =>
+  `<li><a href="#${ruta}"><span class="fila-titulo">${titulo}</span>${detalle ? `<span class="fila-detalle">${detalle}</span>` : ''}</a></li>`;
+
+// --- Bienvenida y aviso -------------------------------------------
+
+function vistaNombre() {
+  const editando = estado.nombre !== null;
+  pintar(`
+    <h1>${editando ? 'Tu nombre' : 'Te damos la bienvenida a HealthMove'}</h1>
+    <p>${editando ? 'Lo usamos para dirigirnos a ti dentro de la app.' : 'Te ayudaremos a encontrar rutinas breves de movimiento que encajen con lo que puedes hacer.'}</p>
+    <form id="form-nombre" novalidate>
+      <label class="etiqueta" for="nombre">¿Cómo quieres que te llamemos?</label>
+      <input class="campo-texto" id="nombre" name="nombre" type="text" autocomplete="given-name"
+        maxlength="${MAX_NOMBRE}" value="${escapar(estado.nombre || '')}" enterkeyhint="done">
+      <p class="suave pequeno">Es opcional. Solo se guarda en este dispositivo.</p>
+    </form>
+  `, `
+    <button type="submit" form="form-nombre" class="primario">${editando ? 'Guardar' : 'Continuar'}</button>
+    <button type="button" data-accion="sin-nombre">${editando ? 'Quitar mi nombre' : 'Prefiero no decirlo'}</button>
+  `, editando ? 'acerca' : null);
+}
 
 function vistaAviso() {
   pintar(`
-    <h1>Antes de empezar</h1>
-    <p>HealthMove te propone rutinas breves de movimiento, de 10 a 20 minutos, elegidas con reglas fijas a partir de lo que tú indiques.</p>
-    <div class="caja">
+    <h1>${conNombre((n) => `${n}, antes de empezar`, 'Antes de empezar')}</h1>
+    <p>HealthMove te propone rutinas de 10 a 20 minutos, elegidas con reglas fijas a partir de lo que tú nos cuentes.</p>
+    <div class="nota">
       <h2>Lo que HealthMove no hace</h2>
       <ul>
         <li>No diagnostica enfermedades ni lesiones.</li>
         <li>No sustituye a tu médico, fisioterapeuta u otro profesional.</li>
         <li>No decide qué tratamiento necesitas.</li>
-        <li>No garantiza que un ejercicio sea seguro para ti: solo comprueba que es compatible con lo que indicaste.</li>
+        <li>No garantiza que un ejercicio sea seguro para ti: solo comprueba que es compatible con lo que indicas.</li>
       </ul>
     </div>
-    <div class="caja">
-      <h2>No la uses si…</h2>
+    <div class="nota">
+      <h2>Mejor no la uses si…</h2>
       <ul>
-        <li>tienes un dolor nuevo, intenso o que no te han valorado;</li>
-        <li>te han operado recientemente y no te han autorizado a hacer ejercicio;</li>
+        <li>tienes un dolor nuevo, intenso o que nadie ha valorado;</li>
+        <li>te han operado hace poco y no te han autorizado a hacer ejercicio;</li>
         <li>un profesional te ha pedido reposo.</li>
       </ul>
     </div>
-    <div class="caja caja-aviso">
-      <p><strong>Detén cualquier ejercicio</strong> si notas dolor en el pecho, falta de aire intensa, mareo, un dolor nuevo o que aumenta. Si es grave, llama al número de emergencias de tu país (911 en Ecuador, 112 en España).</p>
+    <div class="nota nota-aviso">
+      <p><strong>Detén cualquier ejercicio</strong> si notas dolor en el pecho, falta de aire intensa, mareo, o un dolor nuevo o que aumenta. Si es grave, llama al número de emergencias de tu país (911 en Ecuador, 112 en España).</p>
     </div>
-    <p class="suave">Tus respuestas se guardan solo en este dispositivo.</p>
     ${casilla({ id: 'acepto', nombre: 'acepto', valor: 'si', texto: 'He leído y entiendo estos límites' })}
-  `, `<button type="button" class="primario" data-accion="aceptar-aviso">Aceptar y continuar</button>`);
+  `, `<button type="button" class="primario" data-accion="aceptar-aviso">Aceptar y continuar</button>`,
+  estado.nombre === null ? null : 'nombre');
 }
 
+// --- Inicio --------------------------------------------------------
+
 function vistaInicio() {
-  if (!estado.perfil.avisoAceptado) return vistaAviso();
-  const problemas = P.validarPerfil(estado.perfil);
-  const empezado = estado.perfil.posicion !== null;
+  const p = estado.perfil;
+  const problemas = P.validarPerfil(p);
+  const listo = problemas.length === 0;
+  const empezado = p.posicion !== null;
   const ultima = estado.historial.at(-1);
+  const semana = estado.historial.filter((h) => h.estado === 'completada' && Date.now() - new Date(h.fecha) < 7 * 864e5).length;
+
+  const linea = listo
+    ? `Tienes una rutina de ${p.duracionMin} minutos esperándote, preparada con lo que nos contaste.`
+    : empezado
+      ? 'Te falta poco para terminar tu perfil. Retómalo donde lo dejaste.'
+      : 'Cuéntanos qué movimientos te cuestan o tienes indicado evitar. Solo verás las preguntas que te afecten.';
+
+  const restricciones = SECCIONES.reduce((n, s) => n + p.secciones[s.id].opciones.length, 0);
   pintar(`
-    <h1>Hola</h1>
-    ${problemas.length === 0
-      ? `<p>Tu perfil está completo. Puedes generar una rutina de ${estado.perfil.duracionMin} minutos.</p>`
-      : `<p>${empezado ? 'Tu perfil está a medias.' : 'Primero, cuéntanos qué movimientos te cuestan o tienes indicado evitar.'} Solo pasarás por las secciones que te afecten.</p>`}
-    ${ultima ? `<p class="suave">Última rutina: ${new Date(ultima.fecha).toLocaleDateString('es')} · ${ultima.estado === 'completada' ? 'completada' : 'detenida'}.</p>` : ''}
-    <ul class="lista-estado">
-      <li><a href="#resumen">Revisar mi perfil</a></li>
-      <li><a href="#historial">Historial</a></li>
-      <li><a href="#acerca">Límites, fuentes y datos</a></li>
+    <h1 class="saludo">${conNombre((n) => `Hola, ${n}`, 'Hola')}</h1>
+    <p class="saludo-linea">${linea}</p>
+    <ul class="filas">
+      ${fila('resumen', 'Mi perfil', listo ? (restricciones ? `${restricciones} ${restricciones === 1 ? 'cosa' : 'cosas'} que tenemos en cuenta` : 'Sin restricciones indicadas') : 'Sin terminar')}
+      ${fila('historial', 'Historial', ultima ? `${semana ? `${semana} ${semana === 1 ? 'rutina' : 'rutinas'} esta semana. ` : ''}Última, el ${fecha(ultima.fecha)}` : 'Aún no has hecho ninguna rutina')}
+      ${fila('acerca', 'Ajustes, límites y fuentes')}
     </ul>
-  `, problemas.length === 0
-    ? `<button type="button" class="primario" data-accion="generar">Generar rutina</button>`
+  `, listo
+    ? `<button type="button" class="primario" data-accion="generar">Generar mi rutina</button>`
     : `<button type="button" class="primario" data-accion="ir" data-ruta="perfil/posicion">${empezado ? 'Continuar mi perfil' : 'Empezar mi perfil'}</button>`);
 }
+
+// --- Perfil ---------------------------------------------------------
 
 function vistaPosicion() {
   const p = estado.perfil;
@@ -129,28 +188,36 @@ function vistaPosicion() {
       </div>
     </fieldset>`).join('') : '';
   pintar(`
-    <p class="progreso-pasos">Paso 1 de 4</p>
-    <h1>¿Cómo puedes hacer ejercicio?</h1>
+    ${pasos(1)}
+    <h1>${conNombre((n) => `${n}, ¿cómo puedes hacer ejercicio?`, '¿Cómo puedes hacer ejercicio?')}</h1>
     <fieldset>
       <legend>Elige la opción que mejor te describe</legend>
       ${POSICION.map((o) => casilla({ id: `pos-${o.id}`, nombre: 'posicion', valor: o.id, texto: o.texto, tipo: 'radio', marcada: p.posicion === o.id, datos: 'data-cambio="posicion"' })).join('')}
     </fieldset>
     ${preguntas}
-  `, `<button type="button" class="primario" data-accion="tras-posicion">Siguiente</button>`);
+  `, `<button type="button" class="primario" data-accion="tras-posicion">${estado.volverAResumen ? 'Volver al resumen' : 'Siguiente'}</button>`,
+  estado.volverAResumen ? 'resumen' : 'inicio');
 }
 
 function vistaZonas() {
   const elegidas = estado.zonas || [];
   pintar(`
-    <p class="progreso-pasos">Paso 2 de 4</p>
+    ${pasos(2)}
     <h1>¿Dónde tienes alguna dificultad o indicación?</h1>
-    <p class="suave">Marca todas las que correspondan. Solo verás esas secciones.</p>
+    <p class="suave">Marca todas las que correspondan. Solo te preguntaremos por esas.</p>
     <fieldset>
-      <legend>Zonas y aspectos</legend>
+      <legend class="suave pequeno">Puedes marcar varias</legend>
       ${SECCIONES.map((s) => casilla({ id: `zona-${s.id}`, nombre: 'zonas', valor: s.id, texto: s.titulo, marcada: elegidas.includes(s.id), datos: 'data-cambio="zona"' })).join('')}
       ${casilla({ id: 'zona-ninguna', nombre: 'zonas', valor: 'ninguna', texto: 'Ninguna', clase: 'opcion-ninguna', marcada: estado.zonas?.length === 0, datos: 'data-cambio="zona"' })}
     </fieldset>
-  `, `<button type="button" class="primario" data-accion="tras-zonas">Siguiente</button>`);
+  `, `<button type="button" class="primario" data-accion="tras-zonas">Siguiente</button>`, 'perfil/posicion');
+}
+
+function anteriorSeccion(id) {
+  if (estado.volverAResumen) return 'resumen';
+  const zonas = estado.zonas || [];
+  const i = zonas.indexOf(id);
+  return i > 0 ? `perfil/seccion/${zonas[i - 1]}` : 'perfil/zonas';
 }
 
 function vistaSeccion(id) {
@@ -166,13 +233,13 @@ function vistaSeccion(id) {
     return titulo + casilla({ id: `op-${o.id}`, nombre: 'opciones', valor: o.id, texto: o.texto, marcada: sec.opciones.includes(o.id), datos: `data-cambio="opcion" data-seccion="${id}"` });
   }).join('');
   const deshacer = estado.deshacer?.seccionId === id
-    ? `<p class="caja" role="status">${escapar(estado.deshacer.mensaje)} <button type="button" class="enlace" data-accion="deshacer">Deshacer</button></p>` : '';
+    ? `<p class="nota" role="status">${escapar(estado.deshacer.mensaje)} <button type="button" class="enlace" data-accion="deshacer">Deshacer</button></p>` : '';
   const bloquea = sec.opciones.some((o) => s.opciones.find((x) => x.id === o)?.bloquea)
-    ? `<div class="caja caja-aviso" role="alert"><p><strong>HealthMove no podrá generar una rutina.</strong> No puede respetar una indicación que no sabe representar. Consulta con tu profesional sanitario qué ejercicios puedes hacer.</p></div>` : '';
+    ? `<div class="nota nota-aviso" role="alert"><p><strong>No podremos generar una rutina.</strong> HealthMove no puede respetar una indicación que no sabe representar. Pregunta a tu profesional sanitario qué ejercicios puedes hacer.</p></div>` : '';
   pintar(`
-    <p class="progreso-pasos">Paso 3 de 4${n >= 0 ? ` · sección ${n + 1} de ${zonas.length}` : ''}</p>
+    ${pasos(3, n >= 0 && zonas.length > 1 ? `, sección ${n + 1} de ${zonas.length}` : '')}
     <h1>${escapar(s.titulo)}</h1>
-    ${s.aviso ? `<p>${escapar(s.aviso)}</p>` : '<p class="suave">Marca todo lo que te ocurra.</p>'}
+    <p class="suave">${s.aviso ? escapar(s.aviso) : 'Marca todo lo que te ocurra.'}</p>
     <fieldset>
       <legend class="suave pequeno">Puedes marcar varias</legend>
       ${opciones}
@@ -183,13 +250,14 @@ function vistaSeccion(id) {
   `, `
     <button type="button" class="primario" data-accion="tras-seccion" data-seccion="${id}">${estado.volverAResumen ? 'Volver al resumen' : 'Siguiente'}</button>
     ${estado.volverAResumen ? '' : '<button type="button" data-accion="ir" data-ruta="perfil/recursos">No tengo más restricciones</button>'}
-  `);
+  `, anteriorSeccion(id));
 }
 
 function vistaRecursos() {
   const p = estado.perfil;
+  const zonas = estado.zonas || [];
   pintar(`
-    <p class="progreso-pasos">Paso 4 de 4</p>
+    ${pasos(4)}
     <h1>¿Qué tienes a mano?</h1>
     <fieldset>
       <legend>Marca lo que tengas disponible ahora</legend>
@@ -201,16 +269,17 @@ function vistaRecursos() {
         ${DURACIONES.map((m) => casilla({ id: `dur-${m}`, nombre: 'duracion', valor: m, texto: `${m} min`, tipo: 'radio', marcada: p.duracionMin === m, datos: 'data-cambio="duracion"' })).join('')}
       </div>
     </fieldset>
-  `, `<button type="button" class="primario" data-accion="ir" data-ruta="resumen">Ver resumen</button>`);
+  `, `<button type="button" class="primario" data-accion="ir" data-ruta="resumen">Ver resumen</button>`,
+  estado.volverAResumen ? 'resumen' : zonas.length ? `perfil/seccion/${zonas.at(-1)}` : 'perfil/zonas');
 }
 
 function textoEstado(id) {
   const e = P.estadoSeccion(estado.perfil, id);
   const s = seccionPorId(id);
-  if (e === 'con_selecciones') return estado.perfil.secciones[id].opciones.map((o) => s.opciones.find((x) => x.id === o).texto).join('; ');
+  if (e === 'con_selecciones') return estado.perfil.secciones[id].opciones.map((o) => escapar(s.opciones.find((x) => x.id === o).texto)).join('. ');
   if (e === 'sin_dificultades') return 'Sin dificultades';
-  if (e === 'cubierta_por_declaracion') return 'No revisada: confirmaste que no tienes más';
-  return '<span class="estado-falta">Sin responder</span>';
+  if (e === 'cubierta_por_declaracion') return 'No la revisaste; confirmaste que no tienes más';
+  return '<span class="estado-falta">Sin revisar</span>';
 }
 
 function vistaResumen() {
@@ -220,35 +289,38 @@ function vistaResumen() {
   const hayNoRevisadas = SECCIONES.some((s) => p.secciones[s.id].estado === 'no_revisada');
   const pos = POSICION.find((o) => o.id === p.posicion);
   const sn = (v) => (v === true ? 'sí' : v === false ? 'no' : '<span class="estado-falta">sin responder</span>');
+  const detallePos = pos
+    ? `${escapar(pos.texto)}${P.necesitaPreguntasPosicion(p) ? `. Tumbarte en la cama: ${sn(p.cama)}. Bajar al suelo: ${sn(p.suelo)}.` : ''}`
+    : '<span class="estado-falta">Sin responder</span>';
+  const recursos = p.recursos.length ? p.recursos.map((r) => escapar(RECURSOS.find((x) => x.id === r).texto)).join('. ') : 'Nada en especial';
   pintar(`
-    <h1>Resumen de tu perfil</h1>
-    <ul class="lista-estado">
-      <li><span><strong>Posición</strong><br><span class="estado">${pos ? escapar(pos.texto) : '<span class="estado-falta">Sin responder</span>'}
-        ${P.necesitaPreguntasPosicion(p) ? `<br>Tumbarte en la cama: ${sn(p.cama)} · Bajar al suelo: ${sn(p.suelo)}` : ''}</span></span>
-        <a href="#perfil/posicion">Editar</a></li>
-      ${SECCIONES.map((s) => `<li><span><strong>${escapar(s.titulo)}</strong><br><span class="estado">${textoEstado(s.id)}</span></span>
-        <a href="#perfil/seccion/${s.id}">Editar</a></li>`).join('')}
-      <li><span><strong>Recursos y tiempo</strong><br><span class="estado">${p.recursos.length ? p.recursos.map((r) => escapar(RECURSOS.find((x) => x.id === r).texto)).join('; ') : 'Ninguno'} · ${p.duracionMin ? `${p.duracionMin} min` : '<span class="estado-falta">sin duración</span>'}</span></span>
-        <a href="#perfil/recursos">Editar</a></li>
+    <h1>${conNombre((n) => `Esto es lo que sabemos, ${n}`, 'Resumen de tu perfil')}</h1>
+    <p class="suave">Toca cualquier apartado para cambiarlo.</p>
+    <ul class="filas">
+      ${fila('perfil/posicion', 'Posición', detallePos)}
+      ${SECCIONES.map((s) => fila(`perfil/seccion/${s.id}`, escapar(s.titulo), textoEstado(s.id))).join('')}
+      ${fila('perfil/recursos', 'Recursos y tiempo', `${recursos}. ${p.duracionMin ? `${p.duracionMin} minutos.` : '<span class="estado-falta">Sin duración</span>'}`)}
     </ul>
-    ${hayNoRevisadas ? `<div class="caja">
-      <p>Hay secciones que no has revisado.</p>
+    ${hayNoRevisadas ? `<div class="nota">
+      <p>Hay apartados que no has revisado.</p>
       ${casilla({ id: 'declaracion', nombre: 'declaracion', valor: 'si', texto: 'Confirmo que no tengo restricciones ni dificultades además de las indicadas', marcada: p.declaracionGlobal, datos: 'data-cambio="declaracion"' })}
     </div>` : ''}
-    ${problemas.length ? `<div class="caja caja-aviso" id="problemas" tabindex="-1"><p><strong>Para generar una rutina falta:</strong></p>
+    ${problemas.length ? `<div class="nota nota-aviso" id="problemas" tabindex="-1"><p><strong>Para generar tu rutina falta:</strong></p>
       <ul>${problemas.map((x) => `<li>${escapar(x.mensaje)}</li>`).join('')}</ul></div>` : ''}
-  `, `<button type="button" class="primario" data-accion="generar">Generar rutina</button>`);
+  `, `<button type="button" class="primario" data-accion="generar">Generar mi rutina</button>`, 'inicio');
 }
 
+// --- Rutina ---------------------------------------------------------
+
 function explicacionHtml(explicacion) {
-  const items = explicacion.items.filter((i) => i.tipo !== 'recurso' || i.excluidos > 0);
+  const items = explicacion.items;
   if (!items.length) return '<p>Ningún ejercicio del catálogo se descartó por tus respuestas.</p>';
   const linea = (i) => {
     if (i.tipo === 'exigencia') return `exigen <strong>${escapar(ETIQUETA_EXIGENCIA[i.codigo])}</strong>, porque indicaste «${escapar(i.motivos.join('», «'))}»`;
-    if (i.tipo === 'posicion') return `se hacen <strong>${escapar(ETIQUETA_POSICION[i.codigo])}</strong>, según tu respuesta sobre la posición`;
+    if (i.tipo === 'posicion') return `se hacen <strong>${escapar(ETIQUETA_POSICION[i.codigo])}</strong>, por tu respuesta sobre la posición`;
     return `necesitan <strong>${escapar(RECURSOS.find((r) => r.id === i.codigo)?.texto.toLowerCase() || i.codigo)}</strong>, que no marcaste`;
   };
-  return `<p>Se descartaron los ejercicios que…</p><ul>${items.map((i) => `<li>${linea(i)} (${i.excluidos}).</li>`).join('')}</ul>`;
+  return `<p>Dejamos fuera los ejercicios que…</p><ul>${items.map((i) => `<li>${linea(i)} (${i.excluidos}).</li>`).join('')}</ul>`;
 }
 
 function vistaRutina() {
@@ -256,50 +328,52 @@ function vistaRutina() {
   if (!r || !estado.catalogo) return ir('inicio');
   const { res } = r;
   if (!res.ok) return vistaSinRutina(res);
-  const fases = ['calentamiento', 'principal', 'calma'];
   let n = 0;
-  pintar(`
-    <h1>Tu rutina de ${res.rutina.duracionObjetivoMin} minutos</h1>
-    <p class="suave">Unos ${minutos(res.rutina.duracionEstimadaSeg)} minutos, contando pausas breves. Compatible con lo que indicaste; no es una prescripción.</p>
-    ${res.rutina.usaBorrador ? '<div class="caja caja-aviso"><p><strong>Contiene ejercicios sin revisar.</strong> Solo para desarrollo.</p></div>' : ''}
-    ${fases.map((f) => {
-      const bloques = res.rutina.bloques.filter((b) => b.fase === f);
-      return `<h2>${ETIQUETA_FASE[f]}</h2><ol class="rutina" start="${n + 1}">${bloques.map((b) => {
+  const fases = ['calentamiento', 'principal', 'calma'].map((f) => {
+    const bloques = res.rutina.bloques.filter((b) => b.fase === f);
+    const seg = bloques.reduce((t, b) => t + ejercicio(b.ejercicioId).duracion_estimada_seg, 0);
+    return `<h2 class="fase-titulo">${ETIQUETA_FASE[f]} <span>unos ${Math.max(1, minutos(seg))} min</span></h2>
+      <ol class="rutina" start="${n + 1}">${bloques.map((b) => {
         n++;
         const e = ejercicio(b.ejercicioId);
         return `<li>${escapar(e.nombre)}${b.ronda > 1 ? ' (segunda vuelta)' : ''}<span class="meta">${escapar(e.dosis)}</span></li>`;
       }).join('')}</ol>`;
-    }).join('')}
-    <details class="caja">
-      <summary><strong>Por qué estos ejercicios</strong></summary>
+  }).join('');
+  pintar(`
+    <h1>${conNombre((n) => `${n}, esta es tu rutina`, 'Tu rutina')}</h1>
+    <p class="suave">Unos ${minutos(res.rutina.duracionEstimadaSeg)} minutos con pausas breves. Es compatible con lo que nos contaste, pero no es una prescripción.</p>
+    ${res.rutina.usaBorrador ? '<div class="nota nota-aviso"><p><strong>Incluye ejercicios sin revisar.</strong> Solo para desarrollo.</p></div>' : ''}
+    ${fases}
+    <details class="nota">
+      <summary>Por qué estos ejercicios</summary>
       ${explicacionHtml(res.explicacion)}
     </details>
-    <div class="caja caja-aviso"><p><strong>Detente</strong> si notas dolor en el pecho, falta de aire intensa, mareo o un dolor nuevo o que aumenta.</p></div>
+    <div class="nota nota-aviso"><p><strong>Para</strong> si notas dolor en el pecho, falta de aire intensa, mareo, o un dolor nuevo o que aumenta.</p></div>
   `, `
     <button type="button" class="primario" data-accion="empezar">Empezar</button>
     <button type="button" data-accion="otra">Otra combinación</button>
-  `);
+  `, 'inicio');
 }
 
 function vistaSinRutina(res) {
   if (res.motivo === 'perfil_incompleto') return ir('resumen');
   const lim = (res.limitantes || []).map((l) => {
-    if (l.tipo === 'exigencia') return `<li>Evitar <strong>${escapar(ETIQUETA_EXIGENCIA[l.codigo])}</strong> (indicaste «${escapar(l.motivos.join('», «'))}»): sin esta restricción habría ${l.ejerciciosExtra} ejercicios más.</li>`;
-    if (l.tipo === 'posicion') return `<li>No hacer ejercicios <strong>${escapar(ETIQUETA_POSICION[l.codigo])}</strong>: descarta ${l.ejerciciosExtra}.</li>`;
-    return `<li>No tener <strong>${escapar(RECURSOS.find((r) => r.id === l.codigo)?.texto.toLowerCase())}</strong>: descarta ${l.ejerciciosExtra}.</li>`;
+    if (l.tipo === 'exigencia') return `<li>Evitar <strong>${escapar(ETIQUETA_EXIGENCIA[l.codigo])}</strong> (indicaste «${escapar(l.motivos.join('», «'))}»). Sin esa restricción habría ${l.ejerciciosExtra} ejercicios más.</li>`;
+    if (l.tipo === 'posicion') return `<li>No hacer ejercicios <strong>${escapar(ETIQUETA_POSICION[l.codigo])}</strong> deja fuera ${l.ejerciciosExtra}.</li>`;
+    return `<li>No tener <strong>${escapar(RECURSOS.find((r) => r.id === l.codigo)?.texto.toLowerCase())}</strong> deja fuera ${l.ejerciciosExtra}.</li>`;
   }).join('');
   pintar(`
-    <h1>No podemos generar una rutina adecuada</h1>
+    <h1>${conNombre((n) => `${n}, hoy no podemos prepararte una rutina adecuada`, 'Hoy no podemos prepararte una rutina adecuada')}</h1>
     <p>${res.motivo === 'duracion_insuficiente'
       ? `Con tus respuestas solo hay ejercicios para unos ${minutos(res.duracionPosibleSeg)} minutos. Prueba con una duración más corta.`
-      : 'El catálogo actual no tiene suficientes ejercicios compatibles con lo que indicaste.'}</p>
-    <p>HealthMove no va a ignorar ninguna de tus restricciones para conseguirlo.</p>
+      : 'El catálogo todavía no tiene suficientes ejercicios compatibles con lo que nos contaste.'}</p>
+    <p>No vamos a saltarnos ninguna de tus restricciones para conseguirlo.</p>
     ${lim ? `<h2>Lo que más limita</h2><ul>${lim}</ul><p class="suave">Es solo información: cambia tus respuestas únicamente si no eran correctas.</p>` : ''}
-    ${estado.desarrollo ? '' : `<p class="suave">${res.explicacion?.sinRevisar ? `Hay ${res.explicacion.sinRevisar} ejercicios todavía sin revisar que no se usan.` : ''}</p>`}
+    ${!estado.desarrollo && res.explicacion?.sinRevisar ? `<p class="suave">Hay ${res.explicacion.sinRevisar} ejercicios pendientes de revisión que todavía no se usan.</p>` : ''}
   `, `
     <button type="button" class="primario" data-accion="ir" data-ruta="resumen">Revisar mi perfil</button>
     <button type="button" data-accion="ir" data-ruta="inicio">Volver al inicio</button>
-  `);
+  `, 'inicio');
 }
 
 // --- Reproductor --------------------------------------------------
@@ -317,7 +391,8 @@ function vistaReproductor() {
 
   pintar(`
     <section class="reproductor" aria-labelledby="titulo-ej">
-      <p class="fase">${ETIQUETA_FASE[b.fase]} · ejercicio ${rep.i + 1} de ${bloques.length}${b.ronda > 1 ? ' · segunda vuelta' : ''}</p>
+      <div class="pasos" aria-hidden="true">${bloques.map((_, k) => `<span class="${k <= rep.i ? 'hecho' : ''}"></span>`).join('')}</div>
+      <p class="fase">${ETIQUETA_FASE[b.fase]}. Ejercicio ${rep.i + 1} de ${bloques.length}${b.ronda > 1 ? ', segunda vuelta' : ''}.</p>
       <h1 id="titulo-ej">${escapar(e.nombre)}</h1>
       <div class="tiempo">
         <span class="tiempo-cifra" id="cifra" aria-hidden="true">${mmss(rep.restante)}</span>
@@ -336,7 +411,7 @@ function vistaReproductor() {
   `, `
     <button type="button" class="peligro parar" data-accion="detener">Detener: tengo molestias</button>
     <button type="button" class="primario" data-accion="siguiente">${ultimo ? 'Terminar' : 'Siguiente'}</button>
-  `);
+  `, 'rutina');
   arrancarTemporizador(e);
   mantenerPantalla(true);
 }
@@ -353,7 +428,7 @@ function arrancarTemporizador(e) {
     if (cifra) cifra.textContent = mmss(rep.restante);
     if (barra) barra.style.width = `${100 - (rep.restante / e.duracion_estimada_seg) * 100}%`;
     if (rep.restante === 0) {
-      document.getElementById('anuncio').textContent = 'Tiempo cumplido. Pasa al siguiente cuando estés listo/a.';
+      document.getElementById('anuncio').textContent = 'Tiempo cumplido. Pasa al siguiente cuando quieras.';
       try { navigator.vibrate?.(200); } catch { /* sin vibración */ }
     }
   }, 1000);
@@ -385,9 +460,10 @@ function registrar(estadoRutina) {
 }
 
 function vistaFin() {
+  const completadas = estado.historial.filter((h) => h.estado === 'completada').length;
   pintar(`
-    <h1>Rutina terminada</h1>
-    <p>Bien hecho. Se ha guardado en tu historial, solo en este dispositivo.</p>
+    <h1 class="saludo">${conNombre((n) => `Bien hecho, ${n}`, 'Bien hecho')}</h1>
+    <p class="saludo-linea">${completadas === 1 ? 'Has completado tu primera rutina.' : `Ya llevas ${completadas} rutinas completadas.`} La hemos guardado en tu historial, solo en este dispositivo.</p>
     <p class="suave">Si después notas un dolor nuevo o que aumenta, coméntalo con tu profesional sanitario.</p>
   `, `
     <button type="button" class="primario" data-accion="ir" data-ruta="inicio">Volver al inicio</button>
@@ -397,8 +473,8 @@ function vistaFin() {
 
 function vistaDetenido() {
   pintar(`
-    <h1>Has detenido la rutina</h1>
-    <div class="caja caja-aviso">
+    <h1>${conNombre((n) => `${n}, has detenido la rutina`, 'Has detenido la rutina')}</h1>
+    <div class="nota nota-aviso">
       <p><strong>Si notas dolor en el pecho, falta de aire intensa, mareo fuerte o un dolor nuevo e intenso</strong>, busca atención médica ya: llama al número de emergencias de tu país (911 en Ecuador, 112 en España).</p>
     </div>
     <p>Si la molestia fue leve, descansa. Antes de volver a intentarlo, coméntalo con tu profesional sanitario, sobre todo si se repite.</p>
@@ -410,31 +486,33 @@ function vistaDetenido() {
 function vistaHistorial() {
   const h = [...estado.historial].reverse();
   pintar(`
-    <h1>Historial</h1>
-    ${h.length ? `<ul class="lista-estado">${h.map((x) => `<li><span>${new Date(x.fecha).toLocaleString('es', { dateStyle: 'medium', timeStyle: 'short' })}<br>
-      <span class="estado">${x.duracionMin} min · ${x.ejercicios} ejercicios</span></span>
-      <span class="estado">${x.estado === 'completada' ? 'Completada' : 'Detenida'}</span></li>`).join('')}</ul>`
+    <h1>${conNombre((n) => `Tu historial, ${n}`, 'Historial')}</h1>
+    ${h.length ? `<ul class="filas">${h.map((x) => `<li><span class="fila-estatica">
+      <span class="fila-titulo">${fecha(x.fecha, { weekday: 'long', day: 'numeric', month: 'long' })}, ${new Date(x.fecha).toLocaleTimeString('es', { hour: '2-digit', minute: '2-digit' })}</span>
+      <span class="fila-detalle">${x.estado === 'completada' ? 'Completada' : 'Detenida'}. ${x.duracionMin} minutos, ${x.ejercicios} ejercicios.</span></span></li>`).join('')}</ul>`
       : '<p>Todavía no has hecho ninguna rutina. Cuando termines una, aparecerá aquí.</p>'}
-  `, `<button type="button" data-accion="ir" data-ruta="inicio">Volver al inicio</button>`);
+  `, `<button type="button" data-accion="ir" data-ruta="inicio">Volver al inicio</button>`, 'inicio');
 }
 
 function vistaAcerca() {
   const fuentes = new Map();
   for (const e of estado.catalogo?.ejercicios || []) fuentes.set(e.fuente.url, e.fuente);
+  const total = estado.catalogo?.ejercicios.length ?? 0;
   const revisados = (estado.catalogo?.ejercicios || []).filter((e) => e.validacion.estado !== 'borrador').length;
   pintar(`
-    <h1>Límites, fuentes y datos</h1>
-    <h2>Cómo elige los ejercicios</h2>
-    <p>Cada ejercicio del catálogo indica qué movimientos exige. HealthMove descarta todos los que exigen algo que indicaste que te cuesta o que debes evitar, y nunca relaja ese filtro.</p>
-    <p>Las instrucciones están redactadas a partir de materiales públicos de organismos sanitarios y no han sido validadas por un profesional para tu caso. ${revisados} de ${estado.catalogo?.ejercicios.length ?? 0} ejercicios están revisados contra su fuente.</p>
-    <h2>Fuentes</h2>
-    <ul>${[...fuentes.values()].map((f) => `<li><a href="${escapar(f.url)}" rel="noopener">${escapar(f.titulo)}</a> · ${escapar(f.organizacion)}</li>`).join('')}</ul>
+    <h1>Ajustes, límites y fuentes</h1>
+    <ul class="filas">
+      ${fila('nombre', 'Tu nombre', estado.nombre ? escapar(estado.nombre) : 'Sin nombre')}
+      ${fila('resumen', 'Tu perfil de movilidad')}
+    </ul>
+    <h2>Cómo elegimos los ejercicios</h2>
+    <p>Cada ejercicio del catálogo indica qué movimientos exige. Dejamos fuera todos los que piden algo que nos dijiste que te cuesta o que debes evitar, y nunca relajamos ese filtro.</p>
+    <p>Las instrucciones se basan en materiales públicos de organismos sanitarios y no las ha validado un profesional para tu caso. Hay ${revisados} de ${total} ejercicios revisados contra su fuente.</p>
     <h2>Tus datos</h2>
-    <p>Tu perfil y tu historial se guardan solo en este navegador. No se envían a ningún servidor. Si borras los datos del navegador, se pierden.</p>
-  `, `
-    <button type="button" class="peligro" data-accion="borrar-datos">Borrar mis datos</button>
-    <button type="button" data-accion="ir" data-ruta="inicio">Volver al inicio</button>
-  `);
+    <p>Tu nombre, tu perfil y tu historial se guardan solo en este navegador. No se envían a ningún servidor. Si borras los datos del navegador, se pierden.</p>
+    <h2>Fuentes</h2>
+    <ul>${[...fuentes.values()].map((f) => `<li><a href="${escapar(f.url)}" rel="noopener">${escapar(f.titulo)}</a>, ${escapar(f.organizacion)}</li>`).join('')}</ul>
+  `, `<button type="button" class="peligro" data-accion="borrar-datos">Borrar mis datos</button>`, 'inicio');
 }
 
 // --- Navegación ---------------------------------------------------
@@ -448,9 +526,14 @@ function siguienteSeccion(actual) {
 function router() {
   if (!(location.hash.slice(1) || '').startsWith('reproductor')) pararReproductor();
   const [ruta, arg] = (location.hash.slice(1) || 'inicio').split(/\/(?=[^/]+$)/);
-  if (!estado.perfil.avisoAceptado && ruta !== 'acerca') { vistaAviso(); return enfocarTitulo(); }
+
+  // Primera vez: nombre (opcional) y después el aviso. "Límites y fuentes" se puede leer antes.
+  if (estado.nombre === null && ruta !== 'acerca') { vistaNombre(); return enfocarTitulo(); }
+  if (!estado.perfil.avisoAceptado && !['acerca', 'nombre'].includes(ruta)) { vistaAviso(); return enfocarTitulo(); }
+
   const vistas = {
     inicio: vistaInicio,
+    nombre: vistaNombre,
     'perfil/posicion': vistaPosicion,
     'perfil/zonas': vistaZonas,
     'perfil/seccion': () => vistaSeccion(arg),
@@ -464,38 +547,63 @@ function router() {
     acerca: vistaAcerca,
   };
   const clave = vistas[ruta] ? ruta : vistas[`${ruta}/${arg}`] ? `${ruta}/${arg}` : 'inicio';
+  if (clave === 'inicio') estado.volverAResumen = false;
   vistas[clave]();
   enfocarTitulo();
 }
 
-function generar(nuevaSemilla = true) {
+function generar() {
   const problemas = P.validarPerfil(estado.perfil);
   if (problemas.length) {
     if (location.hash !== '#resumen') return ir('resumen');
     return document.getElementById('problemas')?.focus();
   }
-  const semilla = nuevaSemilla ? (Date.now() % 2147483647) : estado.resultado?.semilla ?? 1;
+  const semilla = Date.now() % 2147483647;
   const res = generarRutina(estado.catalogo, estado.perfil, { semilla, permitirBorrador: estado.desarrollo });
   estado.resultado = { res, semilla, fecha: new Date().toISOString() };
   guardar('resultado', estado.resultado);
   if (location.hash === '#rutina') router(); else ir('rutina');
 }
 
+function guardarNombre(valor) {
+  estado.nombre = valor.trim().replace(/\s+/g, ' ').slice(0, MAX_NOMBRE);
+  guardar('nombre', estado.nombre);
+}
+
 // --- Eventos ------------------------------------------------------
+
+app.addEventListener('submit', (ev) => {
+  if (ev.target.id !== 'form-nombre') return;
+  ev.preventDefault();
+  const primeraVez = estado.nombre === null;
+  guardarNombre(document.getElementById('nombre').value);
+  if (primeraVez) router(); else ir('acerca');
+});
+
+// El botón "Guardar/Continuar" está fuera del <form> (en la barra inferior): lo enlaza form="form-nombre".
+acciones.addEventListener('click', (ev) => {
+  const b = ev.target.closest('button[type="submit"][form="form-nombre"]');
+  if (b) { ev.preventDefault(); document.getElementById('form-nombre')?.requestSubmit(); }
+});
 
 document.addEventListener('click', (ev) => {
   const el = ev.target.closest('[data-accion]');
   if (!el) return;
   const rep = estado.reproductor;
   switch (el.dataset.accion) {
-    case 'ir': ir(el.dataset.ruta); break;
+    case 'ir':
+      if (location.hash === `#${el.dataset.ruta}`) router(); else ir(el.dataset.ruta);
+      break;
+    case 'sin-nombre': {
+      const primeraVez = estado.nombre === null;
+      guardarNombre('');
+      if (primeraVez) router(); else ir('acerca');
+      break;
+    }
     case 'aceptar-aviso':
-      if (!document.getElementById('acepto')?.checked) {
-        document.getElementById('acepto')?.focus();
-        return;
-      }
+      if (!document.getElementById('acepto')?.checked) { document.getElementById('acepto')?.focus(); return; }
       cambiarPerfil(P.aceptarAviso(estado.perfil));
-      ir('inicio'); router();
+      if (location.hash === '#inicio') router(); else ir('inicio');
       break;
     case 'tras-posicion': {
       const p = estado.perfil;
@@ -524,8 +632,9 @@ document.addEventListener('click', (ev) => {
     case 'deshacer':
       if (estado.deshacer) { cambiarPerfil(estado.deshacer.perfil); estado.deshacer = null; repintarConservandoFoco(router); }
       break;
-    case 'generar': generar(true); break;
-    case 'otra': generar(true); break;
+    case 'generar':
+    case 'otra':
+      generar(); break;
     case 'empezar': estado.reproductor = null; ir('reproductor'); break;
     case 'anterior': if (rep && rep.i > 0) { rep.i--; rep.restante = null; vistaReproductor(); enfocarTitulo(); } break;
     case 'siguiente': {
@@ -547,11 +656,11 @@ document.addEventListener('click', (ev) => {
     }
     case 'detener': registrar('detenida'); pararReproductor(); ir('detenido'); break;
     case 'borrar-datos':
-      if (confirm('¿Borrar tu perfil y tu historial de este dispositivo? No se puede deshacer.')) {
+      if (confirm('¿Borrar tu nombre, tu perfil y tu historial de este dispositivo? No se puede deshacer.')) {
         borrarTodo();
-        Object.assign(estado, { perfil: P.perfilVacio(), resultado: null, historial: [], zonas: null, desarrollo: false });
+        Object.assign(estado, { nombre: null, perfil: P.perfilVacio(), resultado: null, historial: [], zonas: null, desarrollo: false, volverAResumen: false });
         actualizarFranjaDesarrollo();
-        ir('inicio'); router();
+        if (location.hash === '#inicio') router(); else ir('inicio');
       }
       break;
     case 'salir-desarrollo':
@@ -584,7 +693,7 @@ app.addEventListener('change', (ev) => {
       const id = el.dataset.seccion;
       if (el.checked) {
         const antes = p.secciones[id].opciones.length;
-        estado.deshacer = antes ? { perfil: p, seccionId: id, mensaje: `Se desmarcaron ${antes === 1 ? '1 opción' : `${antes} opciones`} de esta sección.` } : null;
+        estado.deshacer = antes ? { perfil: p, seccionId: id, mensaje: `Desmarcamos ${antes === 1 ? '1 opción' : `${antes} opciones`} de esta sección.` } : null;
         cambiarPerfil(P.marcarSinDificultades(p, id));
       } else {
         cambiarPerfil({ ...p, secciones: { ...p.secciones, [id]: { estado: 'no_revisada', opciones: [] } }, declaracionGlobal: false });
@@ -607,12 +716,11 @@ function actualizarFranjaDesarrollo() {
   document.getElementById('aviso-desarrollo').hidden = !estado.desarrollo;
 }
 
-// Aviso de versión nueva: solo si el controlador cambia a otro distinto del que había.
+// Aviso de versión nueva: solo si ya había un service worker controlando la página.
 if ('serviceWorker' in navigator) {
-  const inicial = navigator.serviceWorker.controller?.scriptURL;
   let habia = Boolean(navigator.serviceWorker.controller);
   navigator.serviceWorker.addEventListener('controllerchange', () => {
-    if (habia || inicial) document.getElementById('aviso-version').hidden = false;
+    if (habia) document.getElementById('aviso-version').hidden = false;
     habia = true;
   });
   navigator.serviceWorker.addEventListener('message', (ev) => {
@@ -632,7 +740,7 @@ async function arrancar() {
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     estado.catalogo = await r.json();
   } catch (e) {
-    pintar(`<h1>No se pudo cargar el catálogo</h1><p>Comprueba tu conexión y vuelve a abrir la app. (${escapar(e.message)})</p>`,
+    pintar(`<h1>No pudimos cargar los ejercicios</h1><p>Comprueba tu conexión y vuelve a abrir la app. (${escapar(e.message)})</p>`,
       '<button type="button" class="primario" data-accion="recargar">Reintentar</button>');
     return;
   }

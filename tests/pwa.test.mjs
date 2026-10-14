@@ -20,3 +20,7 @@ test('index.html usa rutas relativas (funciona en un subdirectorio, p. ej. GitHu
   const html = leer('index.html');
   assert.ok(!/(href|src)="\//.test(html), 'hay una ruta absoluta');
 });
+
+test('estilos.css respeta el atributo hidden aunque una clase cambie display', () => {
+  assert.match(leer('estilos.css'), /\[hidden\]\s*\{\s*display:\s*none\s*!important;?\s*\}/);
+});

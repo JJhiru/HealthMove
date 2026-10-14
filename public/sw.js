@@ -3,7 +3,7 @@
 //  sin red, y se actualiza en segundo plano.
 //  VERSION y PRECACHE los escribe `npm run version-sw`; no editar a mano.
 // ============================================================
-const VERSION = 'hm-5a1bd6f35301';
+const VERSION = 'hm-989b507916a7';
 const PRECACHE = [
   './',
   'data/catalogo.json',
@@ -34,13 +34,22 @@ self.addEventListener('activate', (e) => {
   );
 });
 
+// Una respuesta solo sustituye a la de la caché si llegó entera y, si es el catálogo, si es JSON válido.
+// Así una conexión cortada a medias nunca deja la app sin ejercicios.
+function respuestaCompleta(respuesta, texto, esCatalogo) {
+  const declarada = Number(respuesta.headers.get('content-length'));
+  if (declarada && new TextEncoder().encode(texto).length !== declarada) return false;
+  if (!esCatalogo) return texto.length > 0;
+  try { return Array.isArray(JSON.parse(texto).ejercicios); } catch { return false; }
+}
+
 // Vuelve a pedir el recurso en segundo plano; si cambió, actualiza la caché y avisa a la página.
-async function refrescar(peticion, textoServido) {
+async function refrescar(peticion, textoServido, esCatalogo) {
   try {
     const nueva = await fetch(peticion, { cache: 'no-cache' });
     if (!nueva.ok) return;
     const texto = await nueva.clone().text();
-    if (texto === textoServido) return;
+    if (texto === textoServido || !respuestaCompleta(nueva, texto, esCatalogo)) return;
     const cache = await caches.open(VERSION);
     await cache.put(peticion, nueva);
     for (const cliente of await self.clients.matchAll()) cliente.postMessage('contenido-actualizado');
@@ -62,7 +71,7 @@ self.addEventListener('fetch', (e) => {
       if (esPagina || esCatalogo) {
         // Leer el cuerpo ANTES de entregar la respuesta: después queda bloqueado.
         const texto = await enCache.clone().text();
-        e.waitUntil(refrescar(clave, texto));
+        e.waitUntil(refrescar(clave, texto, esCatalogo));
       }
       return enCache;
     }

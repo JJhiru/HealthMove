@@ -76,7 +76,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a, sin apoyar la espalda en el respaldo.",
+        "Siéntate con la espalda recta, sin apoyar la espalda en el respaldo.",
         "Lleva los hombros hacia atrás y hacia abajo, y extiende los brazos a los lados.",
         "Empuja suavemente el pecho hacia delante y hacia arriba hasta notar un estiramiento en el pecho."
       ],
@@ -102,7 +102,7 @@
     },
     {
       "id": "giro-tronco-sentado",
-      "nombre": "Giro de tronco sentado",
+      "nombre": "Giro de tronco en la silla",
       "descripcion": "Movilidad de la parte alta de la espalda.",
       "fases": [
         "calentamiento",
@@ -133,7 +133,7 @@
         "rotacion_tronco": true
       },
       "instrucciones": [
-        "Siéntate erguido/a con los pies apoyados en el suelo.",
+        "Siéntate con la espalda recta y los pies apoyados en el suelo.",
         "Cruza los brazos sobre el pecho y lleva cada mano al hombro contrario.",
         "Sin mover la cadera, gira la parte alta del cuerpo hacia la izquierda hasta donde te resulte cómodo y mantén 5 segundos.",
         "Vuelve al centro y repite hacia la derecha."
@@ -160,7 +160,7 @@
     },
     {
       "id": "marcha-sentado-sujetandose",
-      "nombre": "Marcha sentado/a (sujetándote a la silla)",
+      "nombre": "Marcha en la silla, sujetándote a ella",
       "descripcion": "Fortalece cadera y muslos.",
       "fases": [
         "calentamiento",
@@ -191,7 +191,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a sin apoyarte en el respaldo y sujeta los lados de la silla.",
+        "Siéntate con la espalda recta, sin apoyarla en el respaldo, y sujeta los lados de la silla.",
         "Levanta la pierna izquierda con la rodilla doblada hasta donde te resulte cómodo.",
         "Baja el pie al suelo con control.",
         "Repite con la otra pierna."
@@ -218,7 +218,7 @@
     },
     {
       "id": "marcha-sentado-manos-cadera",
-      "nombre": "Marcha sentado/a (manos en la cadera)",
+      "nombre": "Marcha en la silla, con las manos en la cadera",
       "descripcion": "Versión sin sujetarse: el pie solo se despega un poco.",
       "fases": [
         "calentamiento",
@@ -249,7 +249,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a con las manos apoyadas en la cadera, sin recostarte en el respaldo.",
+        "Siéntate con la espalda recta y las manos apoyadas en la cadera, sin recostarte en el respaldo.",
         "Marcha en el sitio levantando cada pie solo un poco del suelo.",
         "Mantén la espalda recta: no te inclines hacia los lados ni hacia atrás.",
         "Después de 10 a 20 pasos, descansa."
@@ -306,7 +306,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a y sujeta el lado de la silla.",
+        "Siéntate con la espalda recta y sujeta el lado de la silla.",
         "Estira la pierna izquierda con el pie despegado del suelo.",
         "Con la pierna estirada y elevada, lleva la punta del pie hacia delante y luego hacia ti.",
         "Repite con la otra pierna."
@@ -333,7 +333,7 @@
     },
     {
       "id": "tobillos-punta-talon-sentado",
-      "nombre": "Punta y talón sentado/a",
+      "nombre": "Punta y talón en la silla",
       "descripcion": "Activa los tobillos sin despegar la pierna.",
       "fases": [
         "calentamiento"
@@ -363,7 +363,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a con los pies apoyados en el suelo y las manos en los muslos.",
+        "Siéntate con la espalda recta y los pies apoyados en el suelo y las manos en los muslos.",
         "Con el pie izquierdo, apoya la punta donde estaba el talón y después el talón donde estaba la punta.",
         "Repite 4 veces y cambia al pie derecho.",
         "Aumenta el recorrido poco a poco si te resulta cómodo."
@@ -422,7 +422,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a con la cabeza y los hombros mirando al frente.",
+        "Siéntate con la espalda recta y la cabeza y los hombros mirando al frente.",
         "Sube el brazo izquierdo por encima de la cabeza y apoya la mano derecha en la cadera.",
         "Inclínate con cuidado hacia la derecha, manteniendo los dos glúteos apoyados en el asiento.",
         "Deberías notar el estiramiento en el costado izquierdo. Vuelve al centro y cambia de lado."
@@ -479,7 +479,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a con los pies apoyados en el suelo.",
+        "Siéntate con la espalda recta y los pies apoyados en el suelo.",
         "Desliza una mano por el lado de la silla hacia abajo hasta donde puedas.",
         "No te inclines hacia delante ni hacia atrás. Mantén hasta 10 segundos.",
         "Vuelve a la posición erguida y repite hacia el otro lado."
@@ -593,7 +593,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a, sin apoyarte en el respaldo.",
+        "Siéntate con la espalda recta, sin apoyarte en el respaldo.",
         "Deja las manos y los brazos relajados sobre los muslos.",
         "Haz círculos lentos con los hombros hacia atrás."
       ],
@@ -649,7 +649,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a. Haz los movimientos despacio y con control.",
+        "Siéntate con la espalda recta. Haz los movimientos despacio y con control.",
         "Sube los dos hombros hacia las orejas y bájalos todo lo que puedas. Repite 4 veces.",
         "Sube el hombro izquierdo y llévalo hacia atrás, abajo y adelante. Repite 4 veces.",
         "Repite con el hombro derecho."
@@ -765,7 +765,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a y sujeta una toalla con las dos manos, con los brazos cerca del cuerpo.",
+        "Siéntate con la espalda recta y sujeta una toalla con las dos manos, con los brazos cerca del cuerpo.",
         "Tira con una mano hacia arriba y con la otra hacia abajo, como si quisieras separar la toalla.",
         "Mantén 5 segundos y relaja.",
         "Cambia la posición de las manos y repite."
@@ -792,7 +792,7 @@
     },
     {
       "id": "boxeo-sentado",
-      "nombre": "Boxeo sentado/a",
+      "nombre": "Boxeo en la silla",
       "descripcion": "Fortalece los brazos con golpes lentos al frente.",
       "fases": [
         "principal"
@@ -822,7 +822,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a, sin apoyarte en el respaldo.",
+        "Siéntate con la espalda recta, sin apoyarte en el respaldo.",
         "Cierra las manos en puño y súbelas delante del pecho.",
         "Estira un brazo al frente sin abrir el puño y vuelve a llevarlo al costado.",
         "Alterna con el otro brazo, despacio, como si boxearas."
@@ -881,7 +881,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a, sin apoyarte en el respaldo.",
+        "Siéntate con la espalda recta, sin apoyarte en el respaldo.",
         "Cierra las dos manos en puño y súbelas a la altura de la nariz.",
         "Haz girar los puños uno alrededor del otro hacia delante mientras cuentas hasta 20.",
         "Después gíralos hacia atrás mientras cuentas hasta 20. Descansa."
@@ -938,7 +938,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a, sin apoyarte en el respaldo.",
+        "Siéntate con la espalda recta, sin apoyarte en el respaldo.",
         "Cierra las dos manos en puño y súbelas a la altura del pecho.",
         "Haz girar los puños uno alrededor del otro hacia delante mientras cuentas hasta 20.",
         "Después gíralos hacia atrás mientras cuentas hasta 20. Descansa."
@@ -1055,7 +1055,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate un poco adelantado/a en la silla, sin apoyar la espalda.",
+        "Siéntate en la parte delantera de la silla, sin apoyar la espalda.",
         "Siéntate lo más alto que puedas, arqueando la parte baja de la espalda.",
         "Después redondea la espalda todo lo que puedas.",
         "Alterna los dos movimientos despacio."
@@ -1082,7 +1082,7 @@
     },
     {
       "id": "estiramiento-gemelo-sentado",
-      "nombre": "Estiramiento de gemelo sentado/a",
+      "nombre": "Estiramiento de gemelo en la silla",
       "descripcion": "Moviliza el tobillo y estira la pantorrilla.",
       "fases": [
         "calma"
@@ -1112,7 +1112,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a con los pies apoyados en el suelo.",
+        "Siéntate con la espalda recta y los pies apoyados en el suelo.",
         "Estira una pierna hacia delante y apoya las manos en la rodilla contraria.",
         "Lleva la punta del pie de la pierna estirada hacia arriba, poco a poco hacia la rodilla.",
         "Mantén hasta 10 segundos, suelta despacio y cambia de pierna."
@@ -1169,7 +1169,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a con los pies apoyados en el suelo.",
+        "Siéntate con la espalda recta y los pies apoyados en el suelo.",
         "Extiende los brazos separándolos del cuerpo.",
         "Cierra los dedos hasta formar un puño.",
         "Abre y estira bien los dedos."
@@ -1252,7 +1252,7 @@
     },
     {
       "id": "activacion-sentado",
-      "nombre": "Activación sentado/a",
+      "nombre": "Activación en la silla",
       "descripcion": "Calentamiento suave: pies, brazos y palmas.",
       "fases": [
         "calentamiento"
@@ -1282,7 +1282,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a con los pies apoyados en el suelo.",
+        "Siéntate con la espalda recta y los pies apoyados en el suelo.",
         "Da toques con la punta de los pies: izquierdo, derecho, alternando y los dos de lado a lado.",
         "Balancea los brazos hacia delante y hacia atrás, alternando, con los codos pegados al cuerpo.",
         "Da un golpecito en las rodillas con las manos y luego una palmada a la altura del pecho."
@@ -1342,7 +1342,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a y coloca la banda sobre los muslos, bien plana.",
+        "Siéntate con la espalda recta y coloca la banda sobre los muslos, bien plana.",
         "Pasa las manos por debajo de la banda y agárrala.",
         "Súbela a la altura del abdomen estirándola hacia fuera.",
         "Llévala hacia el abdomen con los codos pegados al cuerpo y relaja la tensión."
@@ -1400,7 +1400,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a y pisa la banda con uno o los dos pies.",
+        "Siéntate con la espalda recta y pisa la banda con uno o los dos pies.",
         "Agarra la banda por los dos extremos.",
         "Sube los puños hacia los hombros con las muñecas alineadas con los brazos.",
         "Mantén hasta 5 segundos y baja los brazos despacio."
@@ -1518,7 +1518,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate en el borde de la silla con los pies separados al ancho de la cadera, inclinado/a un poco hacia delante.",
+        "Siéntate en el borde de la silla con los pies separados al ancho de la cadera y el tronco un poco hacia delante.",
         "Levántate despacio usando las piernas, no los brazos, mirando al frente.",
         "Ya de pie, vuelve a sentarte despacio. Usa las manos solo como guía si lo necesitas."
       ],
@@ -1965,7 +1965,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Ponte de pie, erguido/a, con los pies separados al ancho de la cadera y los brazos a los lados.",
+        "Ponte de pie con la espalda recta, los pies separados al ancho de la cadera y los brazos a los lados.",
         "Desliza un brazo por el costado hacia abajo hasta donde te resulte cómodo. Notarás el estiramiento en la cadera contraria.",
         "Mantén 2 segundos y repite con el otro brazo."
       ],
@@ -2048,7 +2048,7 @@
     },
     {
       "id": "extension-rodilla-sentado",
-      "nombre": "Extensión de rodilla sentado/a",
+      "nombre": "Extensión de rodilla en la silla",
       "descripcion": "Fortalece la parte delantera del muslo.",
       "fases": [
         "principal"
@@ -2078,7 +2078,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a con los pies apoyados en el suelo.",
+        "Siéntate con la espalda recta y los pies apoyados en el suelo.",
         "Lleva la punta del pie hacia ti, aprieta el muslo y estira la rodilla.",
         "Mantén unos 5 segundos.",
         "Baja la pierna despacio hasta apoyar el pie. Cambia de pierna."
@@ -2107,7 +2107,7 @@
     },
     {
       "id": "elevacion-pierna-recta-sentado",
-      "nombre": "Elevación de pierna estirada sentado/a",
+      "nombre": "Elevación de pierna estirada en la silla",
       "descripcion": "Fortalece muslo y cadera.",
       "fases": [
         "principal"
@@ -2137,7 +2137,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a.",
+        "Siéntate con la espalda recta.",
         "Estira una pierna hacia delante con la rodilla lo más recta posible.",
         "Sin doblar la rodilla, sube y baja la pierna.",
         "Cambia de pierna."
@@ -2194,7 +2194,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a, sin apoyar la espalda.",
+        "Siéntate con la espalda recta, sin apoyar la espalda.",
         "Presiona un talón contra el suelo como si quisieras arrastrarlo hacia la silla.",
         "No dobles la rodilla ni muevas el pie: deberías notar trabajar la parte trasera del muslo.",
         "Mantén unos segundos, relaja y cambia de pierna."
@@ -2224,7 +2224,7 @@
     },
     {
       "id": "abduccion-cadera-sentado",
-      "nombre": "Separar la pierna sentado/a",
+      "nombre": "Separar la pierna en la silla",
       "descripcion": "Fortalece la parte externa de la cadera.",
       "fases": [
         "principal"
@@ -2254,7 +2254,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a con los pies apoyados en el suelo.",
+        "Siéntate con la espalda recta y los pies apoyados en el suelo.",
         "Levanta un poco una pierna y llévala hacia fuera.",
         "Vuelve al centro y apoya el pie.",
         "Repite con la otra pierna."
@@ -2283,7 +2283,7 @@
     },
     {
       "id": "apretar-gluteos-sentado",
-      "nombre": "Apretar glúteos sentado/a",
+      "nombre": "Apretar glúteos en la silla",
       "descripcion": "Activa los glúteos sin moverse.",
       "fases": [
         "principal"
@@ -2313,7 +2313,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a.",
+        "Siéntate con la espalda recta.",
         "Aprieta los glúteos y mantén 5 segundos.",
         "Suelta despacio."
       ],
@@ -2428,7 +2428,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a, separado/a del respaldo.",
+        "Siéntate con la espalda recta, sin apoyarla en el respaldo.",
         "Con el brazo estirado, súbelo despacio hacia el techo hasta dejarlo junto a la oreja.",
         "No subas el hombro ni arquees la espalda.",
         "Bájalo despacio. Cambia de brazo."
@@ -2457,7 +2457,7 @@
     },
     {
       "id": "balanceo-brazos-sentado",
-      "nombre": "Balanceo de brazos sentado/a",
+      "nombre": "Balanceo de brazos en la silla",
       "descripcion": "Calentamiento suave de hombros.",
       "fases": [
         "calentamiento"
@@ -2487,7 +2487,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a, separado/a del respaldo, con los pies apoyados bajo las rodillas.",
+        "Siéntate con la espalda recta, sin apoyarla en el respaldo, con los pies apoyados bajo las rodillas.",
         "Dobla los codos.",
         "Balancea los brazos desde el hombro a un ritmo cómodo."
       ],
@@ -2543,7 +2543,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a.",
+        "Siéntate con la espalda recta.",
         "Lleva los dos brazos al frente estirando los codos, con las manos separadas el ancho del pecho.",
         "Recoge los brazos doblando los codos hasta los costados, a la altura del pecho, como si remaras.",
         "Repite a ritmo tranquilo."
@@ -2572,7 +2572,7 @@
     },
     {
       "id": "elevar-talones-sentado",
-      "nombre": "Elevar talones sentado/a",
+      "nombre": "Elevar talones en la silla",
       "descripcion": "Activa pantorrillas y tobillos.",
       "fases": [
         "calentamiento"
@@ -2602,7 +2602,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a, separado/a del respaldo.",
+        "Siéntate con la espalda recta, sin apoyarla en el respaldo.",
         "Levanta los talones dejando las puntas de los pies en el suelo.",
         "Baja los talones."
       ],
@@ -2628,7 +2628,7 @@
     },
     {
       "id": "abdomen-sentado",
-      "nombre": "Activar el abdomen sentado/a",
+      "nombre": "Activar el abdomen en la silla",
       "descripcion": "Trabaja la musculatura del tronco.",
       "fases": [
         "principal"
@@ -2716,7 +2716,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido/a, sin apoyar la espalda.",
+        "Siéntate con la espalda recta, sin apoyar la espalda.",
         "Pasa el peso a un glúteo levantando un poco el otro, con el tronco recto.",
         "Vuelve al centro y repite hacia el otro lado."
       ],
@@ -2773,7 +2773,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate recto/a en la silla.",
+        "Siéntate con la espalda recta.",
         "Con la rodilla doblada y la punta del pie hacia arriba, eleva la rodilla.",
         "Mantenla en el aire 5 segundos.",
         "Baja despacio y cambia de pierna."
@@ -2803,7 +2803,7 @@
     },
     {
       "id": "apretar-gluteos-tumbado",
-      "nombre": "Apretar glúteos tumbado/a",
+      "nombre": "Apretar glúteos en la cama",
       "descripcion": "Activa los glúteos en la cama.",
       "fases": [
         "principal"
@@ -2859,7 +2859,7 @@
     },
     {
       "id": "abduccion-cadera-tumbado",
-      "nombre": "Separar la pierna tumbado/a",
+      "nombre": "Separar la pierna en la cama",
       "descripcion": "Fortalece la parte externa de la cadera.",
       "fases": [
         "principal"
@@ -2917,7 +2917,7 @@
     },
     {
       "id": "elevacion-pierna-recta-tumbado",
-      "nombre": "Elevación de pierna estirada tumbado/a",
+      "nombre": "Elevación de pierna estirada en la cama",
       "descripcion": "Fortalece el muslo.",
       "fases": [
         "principal"
@@ -3145,7 +3145,7 @@
     },
     {
       "id": "bombeo-tobillos-tumbado",
-      "nombre": "Mover los tobillos tumbado/a",
+      "nombre": "Mover los tobillos en la cama",
       "descripcion": "Activa la circulación de las piernas.",
       "fases": [
         "calentamiento"
@@ -3202,7 +3202,7 @@
     },
     {
       "id": "elevacion-brazos-tumbado",
-      "nombre": "Elevar los brazos tumbado/a",
+      "nombre": "Elevar los brazos en la cama",
       "descripcion": "Movilidad de hombros.",
       "fases": [
         "calentamiento",
@@ -3261,7 +3261,7 @@
     },
     {
       "id": "circulos-hombros-tumbado",
-      "nombre": "Círculos de hombros tumbado/a",
+      "nombre": "Círculos de hombros en la cama",
       "descripcion": "Suelta los hombros.",
       "fases": [
         "calentamiento"
@@ -3317,7 +3317,7 @@
     },
     {
       "id": "respiracion-abdominal-tumbado",
-      "nombre": "Respiración abdominal tumbado/a",
+      "nombre": "Respiración abdominal en la cama",
       "descripcion": "Respiración lenta para terminar.",
       "fases": [
         "calma"
@@ -3375,7 +3375,7 @@
     },
     {
       "id": "bascula-pelvica-tumbado",
-      "nombre": "Báscula pélvica tumbado/a",
+      "nombre": "Báscula pélvica en la cama",
       "descripcion": "Movilidad de la zona lumbar.",
       "fases": [
         "principal",

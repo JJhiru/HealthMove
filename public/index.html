@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#1F6F5C">
+  <meta name="theme-color" content="#FFFFFF">
   <meta name="description" content="Rutinas breves de movimiento compatibles con tus restricciones de movilidad.">
   <title>HealthMove</title>
   <link rel="manifest" href="manifest.webmanifest">
@@ -19,19 +19,19 @@
 </head>
 <body>
   <div class="marco">
-    <header class="cabecera">
+    <header class="cabecera" id="cabecera">
       <a class="marca" href="#inicio">
-        <img src="icon.svg" alt="" width="32" height="32">
+        <img src="icon.svg" alt="" width="30" height="30">
         <span>HealthMove</span>
       </a>
     </header>
 
     <div id="aviso-desarrollo" class="franja franja-aviso" hidden>
-      Modo desarrollo: se usan ejercicios <strong>sin revisar</strong>.
+      <span>Modo desarrollo: se usan ejercicios <strong>sin revisar</strong>.</span>
       <button type="button" class="enlace" data-accion="salir-desarrollo">Salir</button>
     </div>
     <div id="aviso-version" class="franja" role="status" hidden>
-      Hay una versión nueva.
+      <span>Hay una versión nueva.</span>
       <button type="button" class="enlace" data-accion="recargar">Recargar</button>
     </div>
 

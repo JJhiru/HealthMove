@@ -9,12 +9,12 @@ export const POSICION = [
   { id: 'de_pie_libre', texto: 'Puedo estar de pie sin sujetarme', excluyeExigencias: [], excluyePosiciones: [] },
   { id: 'de_pie_apoyo', texto: 'Puedo estar de pie solo si me sujeto a algo', excluyeExigencias: ['equilibrio_sin_apoyo'], excluyePosiciones: [] },
   {
-    id: 'solo_sentado', texto: 'Solo puedo hacer ejercicio sentado/a',
+    id: 'solo_sentado', texto: 'Solo puedo hacer ejercicio en una silla o silla de ruedas',
     excluyeExigencias: ['sentarse_levantarse'], excluyePosiciones: ['de_pie', 'tumbado', 'suelo'],
   },
 ];
 
-// Preguntas sí/no que no se hacen si la posición es "solo sentado/a".
+// Preguntas sí/no que no se hacen si la posición es "solo en una silla".
 export const PREGUNTAS_POSICION = [
   { id: 'cama', texto: '¿Puedes tumbarte boca arriba en una cama y volver a sentarte sin ayuda?', siNoExcluye: 'tumbado' },
   { id: 'suelo', texto: '¿Puedes bajar al suelo y levantarte sin ayuda?', siNoExcluye: 'suelo' },
@@ -111,7 +111,7 @@ export const ETIQUETA_EXIGENCIA = {
 };
 
 export const ETIQUETA_POSICION = {
-  sentado: 'sentado/a', de_pie: 'de pie', tumbado: 'tumbado/a en la cama', suelo: 'en el suelo',
+  sentado: 'en una silla', de_pie: 'de pie', tumbado: 'en la cama', suelo: 'en el suelo',
 };
 
 export const ETIQUETA_FASE = { calentamiento: 'Calentamiento', principal: 'Parte principal', calma: 'Vuelta a la calma' };
