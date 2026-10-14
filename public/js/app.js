@@ -282,6 +282,13 @@ function foto(nombre, alt, { clase = '', ancho = '100vw', prioridad = false, rot
 
 // --- Perfil ---------------------------------------------------------
 
+// Dibujos de las tres posiciones del perfil (sin movimiento: solo la postura y el apoyo).
+const FIGURA_POSICION = {
+  de_pie_libre: { base: 'pie' },
+  de_pie_apoyo: { base: 'pie', apoyos: ['silla-delante'], ini: { alcanza: { manoD: 'respaldo', manoI: 'respaldo' } } },
+  solo_sentado: { base: 'silla', apoyos: ['silla'] },
+};
+
 function vistaPosicion() {
   const p = estado.perfil;
   const preguntas = P.necesitaPreguntasPosicion(p) ? PREGUNTAS_POSICION.map((q) => `
@@ -297,7 +304,10 @@ function vistaPosicion() {
     <h1>${conNombre((n) => `${n}, ¿cómo puedes hacer ejercicio?`, '¿Cómo puedes hacer ejercicio?')}</h1>
     <fieldset>
       <legend>Elige la opción que mejor te describe</legend>
-      ${POSICION.map((o) => casilla({ id: `pos-${o.id}`, nombre: 'posicion', valor: o.id, texto: o.texto, tipo: 'radio', marcada: p.posicion === o.id, datos: 'data-cambio="posicion"' })).join('')}
+      <div class="opciones-dibujo">${POSICION.map((o) => `<label class="opcion opcion-dibujo" for="pos-${o.id}">
+        <span class="ilus" aria-hidden="true">${dibujar(FIGURA_POSICION[o.id])}</span>
+        <span class="opcion-dibujo-texto"><input type="radio" id="pos-${o.id}" name="posicion" value="${o.id}" ${p.posicion === o.id ? 'checked' : ''} data-cambio="posicion"><span>${escapar(o.texto)}</span></span>
+      </label>`).join('')}</div>
     </fieldset>
     ${preguntas}
   `, `<button type="button" class="primario" data-accion="tras-posicion">${estado.volverAResumen ? 'Volver al resumen' : 'Siguiente'}</button>`,
@@ -435,30 +445,45 @@ function vistaRutina() {
   const { res } = r;
   if (!res.ok) return vistaSinRutina(res);
   let n = 0;
+  // Línea de tiempo: el orden y las fases se leen de un vistazo.
   const fases = ['calentamiento', 'principal', 'calma'].map((f) => {
     const bloques = res.rutina.bloques.filter((b) => b.fase === f);
+    if (!bloques.length) return '';
     const seg = bloques.reduce((t, b) => t + ejercicio(b.ejercicioId).duracion_estimada_seg, 0);
-    return `<h2 class="fase-titulo">${ETIQUETA_FASE[f]} <span>unos ${Math.max(1, minutos(seg))} min</span></h2>
-      <ol class="rutina" start="${n + 1}">${bloques.map((b) => {
+    return `<li class="fase">
+      <h2 class="fase-titulo">${ETIQUETA_FASE[f]} <span>unos ${Math.max(1, minutos(seg))} min</span></h2>
+      <ol class="rutina-pasos">${bloques.map((b) => {
         n++;
         const e = ejercicio(b.ejercicioId);
-        return `<li>${escapar(e.nombre)}${b.ronda > 1 ? ' (segunda vuelta)' : ''}<span class="meta">${escapar(e.dosis)}</span></li>`;
-      }).join('')}</ol>`;
+        return `<li><a class="paso-rutina" href="#ejercicio/${e.id}">
+          <span class="paso-num" aria-hidden="true">${n}</span>
+          ${ilustracion(e, 'ilus-mini')}
+          <span class="paso-texto"><span class="paso-nombre">${escapar(e.nombre)}${b.ronda > 1 ? ' <span class="suave">(segunda vuelta)</span>' : ''}</span>
+          <span class="paso-meta">${escapar(e.dosis)}</span></span>
+          <span class="paso-tiempo">${mmss(e.duracion_estimada_seg)}</span>
+        </a></li>`;
+      }).join('')}</ol>
+    </li>`;
   }).join('');
   pintar(`
     <h1>${conNombre((n) => `${n}, esta es tu rutina`, 'Tu rutina')}</h1>
-    <p class="suave">Unos ${minutos(res.rutina.duracionEstimadaSeg)} minutos con pausas breves. Es compatible con lo que nos contaste, pero no es una prescripción.</p>
+    <ul class="pildoras rutina-resumen">
+      <li class="pildora">${icono('clock')}Unos ${minutos(res.rutina.duracionEstimadaSeg)} min</li>
+      <li class="pildora">${res.rutina.bloques.length} ejercicios</li>
+      <li class="pildora">Pausas breves entre ellos</li>
+    </ul>
+    <p class="suave">Es compatible con lo que nos contaste, pero no es una prescripción.</p>
     ${res.rutina.usaBorrador ? '<div class="nota nota-aviso"><p><strong>Incluye ejercicios sin revisar.</strong> Solo para desarrollo.</p></div>' : ''}
-    ${fases}
+    <ol class="linea-tiempo">${fases}</ol>
     <details class="nota">
       <summary>Por qué estos ejercicios</summary>
       ${explicacionHtml(res.explicacion)}
     </details>
     <div class="nota nota-aviso"><p><strong>Para</strong> si notas dolor en el pecho, falta de aire intensa, mareo, o un dolor nuevo o que aumenta.</p></div>
   `, `
-    <button type="button" class="primario" data-accion="empezar">Empezar</button>
-    <button type="button" data-accion="otra">Otra combinación</button>
-  `, 'inicio');
+    <button type="button" class="primario" data-accion="empezar">${icono('play-fill')}Empezar</button>
+    <button type="button" data-accion="otra">${icono('arrow-repeat')}Otra combinación</button>
+  `, 'inicio', { ancho: 'lectura' });
 }
 
 function vistaRutinaVacia() {
@@ -635,29 +660,35 @@ function vistaReproductor() {
   if (rep.restante === null) rep.restante = e.duracion_estimada_seg;
   const ultimo = rep.i === bloques.length - 1;
 
+  const hecho = 100 - (rep.restante / e.duracion_estimada_seg) * 100;
   pintar(`
     <section class="reproductor" aria-labelledby="titulo-ej">
       <div class="pasos" aria-hidden="true">${bloques.map((_, k) => `<span class="${k <= rep.i ? 'hecho' : ''}"></span>`).join('')}</div>
-      <p class="fase">${ETIQUETA_FASE[b.fase]}. Ejercicio ${rep.i + 1} de ${bloques.length}${b.ronda > 1 ? ', segunda vuelta' : ''}.</p>
-      <h1 id="titulo-ej">${escapar(e.nombre)}</h1>
-      <div class="tiempo">
-        <span class="tiempo-cifra" id="cifra" aria-hidden="true">${mmss(rep.restante)}</span>
-        <span class="suave"> tiempo orientativo</span>
-        <div class="barra" aria-hidden="true"><span id="barra" style="width:${100 - (rep.restante / e.duracion_estimada_seg) * 100}%"></span></div>
+      <p class="fase">${ETIQUETA_FASE[b.fase]} · Ejercicio ${rep.i + 1} de ${bloques.length}${b.ronda > 1 ? ' · segunda vuelta' : ''}</p>
+      <div class="repro-cuerpo">
+        <div class="repro-ilus">${ilustracion(e, 'ilus-grande')}</div>
+        <div class="repro-texto">
+          <h1 id="titulo-ej">${escapar(e.nombre)}</h1>
+          <div class="tiempo">
+            <span class="tiempo-cifra" id="cifra" aria-hidden="true">${mmss(rep.restante)}</span>
+            <span class="suave pequeno">tiempo orientativo</span>
+            <div class="barra" aria-hidden="true"><span id="barra" style="width:${hecho}%"></span></div>
+          </div>
+          <p id="anuncio" class="suave" aria-live="polite"></p>
+          <div class="controles">
+            <button type="button" class="boton-suave" data-accion="anterior" ${rep.i === 0 ? 'disabled' : ''}>${icono('skip-start-fill')}Anterior</button>
+            <button type="button" class="boton-suave" data-accion="pausa">${rep.pausado ? `${icono('play-fill')}Reanudar` : `${icono('pause-fill')}Pausar`}</button>
+            ${'speechSynthesis' in window ? `<button type="button" class="boton-suave" data-accion="leer">${icono('volume-up-fill')}Leer</button>` : ''}
+          </div>
+          <p class="dosis">${escapar(e.dosis)}</p>
+          <ol class="pasos-numerados">${e.instrucciones.map((t) => `<li>${escapar(t)}</li>`).join('')}</ol>
+        </div>
       </div>
-      <p id="anuncio" class="suave" aria-live="polite"></p>
-      <div class="si-no">
-        <button type="button" data-accion="anterior" ${rep.i === 0 ? 'disabled' : ''}>Anterior</button>
-        <button type="button" data-accion="pausa">${rep.pausado ? 'Reanudar' : 'Pausar'}</button>
-        ${'speechSynthesis' in window ? '<button type="button" data-accion="leer">Leer en voz alta</button>' : ''}
-      </div>
-      <p class="dosis">${escapar(e.dosis)}</p>
-      <ol>${e.instrucciones.map((t) => `<li>${escapar(t)}</li>`).join('')}</ol>
     </section>
   `, `
-    <button type="button" class="peligro parar" data-accion="detener">Detener: tengo molestias</button>
+    <button type="button" class="peligro parar" data-accion="detener">${icono('stop-circle')}Detener: tengo molestias</button>
     <button type="button" class="primario" data-accion="siguiente">${ultimo ? 'Terminar' : 'Siguiente'}</button>
-  `, 'rutina', { ancho: 'lectura', modo: 'concentracion' });
+  `, 'rutina', { modo: 'concentracion' });
   arrancarTemporizador(e);
   mantenerPantalla(true);
 }

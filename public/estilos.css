@@ -495,8 +495,48 @@
   .rutina li { padding: var(--e-2) 0; max-width: none; }
   .rutina .meta { display: block; color: var(--tinta-suave); font-size: var(--t-s); }
 
+  /* Rutina: línea de tiempo vertical, no tarjetas */
+  .rutina-resumen { margin-bottom: var(--e-3); }
+  .rutina-resumen .ico { width: 1em; height: 1em; }
+  .linea-tiempo { list-style: none; margin: var(--e-5) 0 0; padding: 0; }
+  .linea-tiempo > .fase { position: relative; padding-left: var(--e-6); padding-bottom: var(--e-4); max-width: none; }
+  .linea-tiempo > .fase::before { content: ""; position: absolute; left: 9px; top: 0.6rem; bottom: 0; width: 3px; background: var(--menta); border-radius: 2px; }
+  .linea-tiempo > .fase::after { content: ""; position: absolute; left: 2px; top: 0.35rem; width: 17px; height: 17px; border-radius: 50%; background: var(--eucalipto); box-shadow: 0 0 0 4px var(--blanco); }
+  .linea-tiempo .fase-titulo { margin: 0 0 var(--e-3); }
+  .rutina-pasos { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--e-2); }
+  .rutina-pasos li { max-width: none; }
+  .paso-rutina {
+    display: grid; grid-template-columns: auto 5.5rem 1fr auto; align-items: center; gap: var(--e-3);
+    padding: var(--e-2); border-radius: var(--r-l); color: var(--tinta); text-decoration: none; font-weight: 400;
+  }
+  .paso-rutina:hover { background: var(--niebla); }
+  .paso-num { width: 1.75rem; height: 1.75rem; display: grid; place-items: center; border-radius: 50%; background: var(--niebla); font-weight: 700; font-size: var(--t-s); }
+  .ilus-mini { border-radius: var(--r-m); }
+  .paso-texto { display: grid; gap: 2px; min-width: 0; }
+  .paso-nombre { font-weight: 700; line-height: 1.3; }
+  .paso-meta { color: var(--tinta-suave); font-size: var(--t-s); }
+  .paso-tiempo { color: var(--tinta-suave); font-size: var(--t-s); font-variant-numeric: tabular-nums; }
+  @media (max-width: 30rem) { .paso-rutina { grid-template-columns: auto 4.5rem 1fr; } .paso-tiempo { display: none; } }
+
+  /* Perfil: posición con dibujo */
+  .opciones-dibujo { display: grid; gap: var(--e-3); grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); }
+  .opcion-dibujo { flex-direction: column; align-items: stretch; padding: var(--e-3); margin: 0; }
+  .opcion-dibujo .ilus { border-radius: var(--r-m); background: var(--blanco); }
+  .opcion-dibujo-texto { display: flex; gap: var(--e-3); align-items: flex-start; }
+
   /* Reproductor */
   .reproductor { display: flex; flex-direction: column; gap: var(--e-3); }
+  .repro-cuerpo { display: grid; gap: var(--e-4); }
+  .repro-texto { display: grid; gap: var(--e-3); align-content: start; }
+  .controles { display: grid; grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr)); gap: var(--e-2); }
+  .controles button { padding-inline: var(--e-3); }
+  /* En móvil la ilustración no puede empujar los controles fuera de la pantalla. */
+  .repro-ilus .ilus { width: min(100%, calc(26dvh * 4 / 3)); margin-inline: auto; }
+  @media (min-width: 62rem) {
+    .repro-ilus .ilus { width: 100%; }
+    .repro-cuerpo { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--e-6); align-items: start; }
+    .repro-ilus { position: sticky; top: 0; }
+  }
   .reproductor .fase { margin: 0; color: var(--tinta-suave); font-size: var(--t-s); }
   .reproductor h1 { font-size: clamp(1.9rem, 5vw + 0.5rem, 2.5rem); margin: 0; }
   .reproductor ol { padding-left: 1.4rem; margin: 0; font-size: 1.2rem; }
@@ -509,6 +549,10 @@
   #anuncio { margin: 0; }
   /* "Detener" va en su propia fila, lejos de "Siguiente", para no tocar el botón equivocado. */
   .acciones-dentro > .parar { flex-basis: 100%; order: 2; }
+  @media (min-width: 62rem) {
+    /* En escritorio, «Detener» a la izquierda y «Siguiente» a la derecha, bien separados. */
+    .acciones-dentro > .parar { flex-basis: auto; order: 0; margin-right: auto; }
+  }
 }
 
 /* ------------------------------------------------------------
