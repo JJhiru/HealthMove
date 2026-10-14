@@ -1,7 +1,11 @@
 # Revisión del catálogo
 
-Los 35 ejercicios de `public/data/catalogo.json` (v0.1.0) están en estado `borrador`: el etiquetado
-lo propuso la IA. El motor no usará ninguno hasta que lo revises.
+Los 64 ejercicios de `public/data/catalogo.json` (v0.2.0) están en estado `borrador`: el etiquetado
+lo propuso la IA. El motor no usará ninguno fuera del modo desarrollo hasta que lo revises.
+
+Los 29 ejercicios añadidos en la v0.2.0 se redactaron a partir de los resúmenes de agentes de
+investigación, no de una lectura directa: compara cada uno con su PDF original. El informe de
+fuentes está en `~/Documents/deep-research/2026-10-14-ejercicios-movilidad-reducida.md`.
 
 ## Por cada ejercicio
 
@@ -30,11 +34,14 @@ lo propuso la IA. El motor no usará ninguno hasta que lo revises.
 
 ## Huecos conocidos
 
-- **Solo sentado + me cuesta cerrar la mano:** solo hay 2 ejercicios para la parte principal
-  (`marcha-sentado-manos-cadera`, `arquear-espalda-sentado`). Con un mínimo de 3, este perfil no
-  recibe rutina. Hace falta encontrar más ejercicios sentados sin agarre en fuentes fiables, por
-  ejemplo extensiones de rodilla sentado/a.
-- **No hay ejercicios en el suelo.**
-- **Licencias:** el contenido del NHS usa la Open Government Licence. El folleto de Age UK Devon
-  tiene todos los derechos reservados y el de Leicester/CSP no indica licencia. Por eso las
+- **Resuelto en la v0.2.0:** "Solo sentado + me cuesta cerrar la mano" tiene ahora 13 ejercicios
+  para la parte principal (antes 2).
+- **Suelo:** solo hay 2 variantes (puente y báscula pélvica, de MS Trust).
+- **Fuentes específicas de una condición:** MS Trust (esclerosis múltiple), Sant Joan (espalda) y
+  CHGUV (rodilla) aparecen en `fuente.especifica_de`. Los ejercicios son generales, pero conviene
+  tenerlo en cuenta.
+- **Dosis:** varias hojas de hospital dejan las repeticiones en blanco. Se usó la pauta general de
+  NHS Forth Valley (de 2 a 10) y se anotó en `adaptaciones`.
+- **Licencias:** solo las páginas web del NHS usan la Open Government Licence. Las hojas de
+  hospitales, Age UK, MS Trust y las fuentes españolas no tienen licencia abierta. Por eso las
   instrucciones están redactadas con palabras propias y con la fuente citada, no copiadas.

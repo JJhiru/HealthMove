@@ -31,8 +31,11 @@ siempre.
 
 ## 3. Posición (atributo del ejercicio, no exigencia)
 
-Valores: `sentado`, `de pie`, `suelo`. Un ejercicio anota **todas** las posiciones que usa y solo
-es compatible si todas están permitidas.
+Valores: `sentado`, `de_pie`, `tumbado` (boca arriba en una cama, sin bajar al suelo) y `suelo`
+(exige bajar al suelo y levantarse). Un ejercicio anota **todas** las posiciones que usa y solo es
+compatible si todas están permitidas. Si un ejercicio puede hacerse en la cama o en el suelo, se
+registran como dos entradas enlazadas por `variante_de`, y el motor no incluye las dos en la misma
+rutina.
 
 ## 4. Exigencias de movimiento (16)
 
@@ -68,9 +71,8 @@ espacio · ejercicios de impacto (la exigencia `impacto` se mantiene para el fut
 aislada de la muñeca (giros o círculos), porque ninguna exigencia la cubre · ejercicios que
 dependen de reposabrazos · ejercicios con material especial (pelotas de terapia, escalones).
 
-El catálogo v0.1.0 tampoco tiene ejercicios en el suelo, porque no se encontró una fuente fiable
-con instrucciones escritas. Mientras siga así, la pregunta del suelo puede ocultarse en la
-interfaz; el modelo la conserva.
+El catálogo v0.2.0 tiene 64 ejercicios: sentado, de pie, tumbado en la cama y 2 variantes en el
+suelo. Las fuentes y los huecos están en `docs/revision-catalogo.md`.
 
 ### Lado del cuerpo
 
@@ -84,10 +86,15 @@ En v1 una restricción se aplica a **los dos lados**. Es conservador y simplific
 |---|---|
 | Puedo estar de pie sin sujetarme | — |
 | Puedo estar de pie solo si me sujeto a algo | `equilibrio_sin_apoyo` |
-| Solo puedo hacer ejercicio sentado/a | posiciones `de pie` y `suelo`, y `sentarse_levantarse` |
+| Solo puedo hacer ejercicio sentado/a | posiciones `de_pie`, `tumbado` y `suelo`, y `sentarse_levantarse` |
 
-Pregunta obligatoria aparte: "¿Puedes bajar al suelo y levantarte sin ayuda?". Si la respuesta es
-"No", se excluye la posición `suelo`.
+Dos preguntas obligatorias aparte, que no se hacen si la persona eligió "Solo sentado/a":
+
+- "¿Puedes tumbarte boca arriba en una cama y volver a sentarte sin ayuda?". "No" excluye
+  `tumbado`.
+- "¿Puedes bajar al suelo y levantarte sin ayuda?". "No" excluye `suelo`. La única guía fiable
+  encontrada para levantarse del suelo pasa por apoyar las rodillas, así que la pregunta debe ser
+  explícita y no darse por supuesta.
 
 Equilibrio y movilidad (dentro de Posición): "Me cuesta mantener el equilibrio" excluye
 `equilibrio_sin_apoyo` y `una_pierna`. "Me cuesta levantarme de una silla" excluye
@@ -114,7 +121,7 @@ Equilibrio y movilidad (dentro de Posición): "Me cuesta mantener el equilibrio"
 |---|---|
 | Me cuesta doblar mucho la cadera | `flexion_amplia_cadera` |
 | Me cuesta doblar mucho la rodilla o agacharme | `flexion_profunda_rodilla` |
-| No puedo cargar peso sobre una de mis piernas | posición `de pie`, `sentarse_levantarse`, `una_pierna` |
+| No puedo cargar peso sobre una de mis piernas | posición `de_pie`, `sentarse_levantarse`, `una_pierna` |
 | Me cuesta ponerme de puntillas o sobre los talones | `puntillas_talones` |
 
 **Espalda y tronco** (sección añadida)
@@ -135,9 +142,8 @@ Equilibrio y movilidad (dentro de Posición): "Me cuesta mantener el equilibrio"
 | **Tengo otra indicación que no aparece aquí** | **bloquea la generación** (HealthMove no puede respetar lo que no puede representar) |
 
 **Recursos y tiempo:** silla estable sin ruedas (preferiblemente sin reposabrazos), pared libre,
-banda elástica, peso ligero (por ejemplo, una botella de agua llena), toalla de mano; 10, 15 o
-20 min. Todos los ejercicios del catálogo v0.1.0 usan silla o pared, así que sin ninguna de las dos
-no se puede generar una rutina.
+banda elástica, peso ligero (por ejemplo, una botella de agua llena), toalla de mano, cama; 10,
+15 o 20 min.
 
 ## 6. Estados de sección y condiciones para generar
 
@@ -161,7 +167,8 @@ Cada sección de dificultades tiene uno de estos estados:
 - Si el usuario cambia una sección, las demás se conservan, vuelve al resumen y la declaración
   global se invalida si la sección cambiada estaba cubierta por ella.
 
-Para generar una rutina hace falta: posición respondida, pregunta del suelo respondida, recursos y
+Para generar una rutina hace falta: posición respondida, preguntas de cama y suelo respondidas (salvo
+"solo sentado/a"), recursos y
 duración elegidos, ninguna sección `no_revisada`, y no haber marcado "otra indicación".
 
 ## 7. Reglas del catálogo

@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "actualizado": "2026-10-14",
   "exigencias": [
     "equilibrio_sin_apoyo",
@@ -22,6 +22,7 @@
   "posiciones": [
     "sentado",
     "de_pie",
+    "tumbado",
     "suelo"
   ],
   "fases": [
@@ -34,7 +35,8 @@
     "pared": "Un trozo de pared libre",
     "banda": "Banda elástica de resistencia",
     "peso_ligero": "Peso ligero, por ejemplo una botella de agua llena",
-    "toalla": "Una toalla de mano"
+    "toalla": "Una toalla de mano",
+    "cama": "Una cama donde tumbarte boca arriba"
   },
   "estados_validacion": [
     "borrador",
@@ -2040,6 +2042,1677 @@
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "extension-rodilla-sentado",
+      "nombre": "Extensión de rodilla sentado/a",
+      "descripcion": "Fortalece la parte delantera del muslo.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a con los pies apoyados en el suelo.",
+        "Lleva la punta del pie hacia ti, aprieta el muslo y estira la rodilla.",
+        "Mantén unos 5 segundos.",
+        "Baja la pierna despacio hasta apoyar el pie. Cambia de pierna."
+      ],
+      "dosis": "Mantén 5 segundos. De 2 a 10 veces con cada pierna, según te encuentres.",
+      "duracion_estimada_seg": 90,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Royal Devon University Healthcare NHS Foundation Trust",
+        "titulo": "Seated exercise programme",
+        "url": "https://www.royaldevon.nhs.uk/media/bsoft31p/patient-information-leaflet-seated-exercise-programme-rde-20-079-001.pdf",
+        "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [
+        "La fuente deja las repeticiones en blanco; se usa la pauta general de NHS Forth Valley (empezar con 2 o 3 y subir hasta 10)."
+      ],
+      "notas_etiquetado": "El muslo sigue apoyado en el asiento: no aumenta la flexión de cadera.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "elevacion-pierna-recta-sentado",
+      "nombre": "Elevación de pierna estirada sentado/a",
+      "descripcion": "Fortalece muslo y cadera.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": true,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a.",
+        "Estira una pierna hacia delante con la rodilla lo más recta posible.",
+        "Sin doblar la rodilla, sube y baja la pierna.",
+        "Cambia de pierna."
+      ],
+      "dosis": "10 veces con cada pierna.",
+      "duracion_estimada_seg": 80,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Mersey and West Lancashire Teaching Hospitals NHS Trust",
+        "titulo": "Chair based exercises",
+        "url": "https://sthk.merseywestlancs.nhs.uk/media/.leaflets/66016bfe111f20.73905449.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Subir la pierna estirada separa el muslo del asiento: flexion_amplia_cadera.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "talon-al-suelo-sentado",
+      "nombre": "Talón contra el suelo",
+      "descripcion": "Activa la parte trasera del muslo sin moverse.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a, sin apoyar la espalda.",
+        "Presiona un talón contra el suelo como si quisieras arrastrarlo hacia la silla.",
+        "No dobles la rodilla ni muevas el pie: deberías notar trabajar la parte trasera del muslo.",
+        "Mantén unos segundos, relaja y cambia de pierna."
+      ],
+      "dosis": "Mantén 5 segundos. De 2 a 10 veces con cada pierna.",
+      "duracion_estimada_seg": 80,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Royal Berkshire NHS Foundation Trust (Fisioterapia)",
+        "titulo": "Stage 1 exercises",
+        "url": "https://royalberkshire.nhs.uk/media/vdxo0b3m/stage-1-exercises_mar23.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [
+        "La fuente deja las repeticiones en blanco; se usa la pauta general de NHS Forth Valley (empezar con 2 o 3 y subir hasta 10).",
+        "La fuente deja el tiempo de mantenimiento en blanco; se usan 5 segundos como en sus demás ejercicios."
+      ],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "abduccion-cadera-sentado",
+      "nombre": "Separar la pierna sentado/a",
+      "descripcion": "Fortalece la parte externa de la cadera.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": true,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a con los pies apoyados en el suelo.",
+        "Levanta un poco una pierna y llévala hacia fuera.",
+        "Vuelve al centro y apoya el pie.",
+        "Repite con la otra pierna."
+      ],
+      "dosis": "De 2 a 10 veces con cada pierna.",
+      "duracion_estimada_seg": 80,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Royal Devon University Healthcare NHS Foundation Trust",
+        "titulo": "Seated exercise programme",
+        "url": "https://www.royaldevon.nhs.uk/media/bsoft31p/patient-information-leaflet-seated-exercise-programme-rde-20-079-001.pdf",
+        "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [
+        "La fuente deja las repeticiones en blanco; se usa la pauta general de NHS Forth Valley (empezar con 2 o 3 y subir hasta 10)."
+      ],
+      "notas_etiquetado": "Levantar la pierna separa el muslo del asiento: se marca flexion_amplia_cadera por precaución.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "apretar-gluteos-sentado",
+      "nombre": "Apretar glúteos sentado/a",
+      "descripcion": "Activa los glúteos sin moverse.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a.",
+        "Aprieta los glúteos y mantén 5 segundos.",
+        "Suelta despacio."
+      ],
+      "dosis": "Mantén 5 segundos. 10 veces.",
+      "duracion_estimada_seg": 70,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Mersey and West Lancashire Teaching Hospitals NHS Trust",
+        "titulo": "Chair based exercises",
+        "url": "https://sthk.merseywestlancs.nhs.uk/media/.leaflets/66016bfe111f20.73905449.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "juntar-omoplatos-sentado",
+      "nombre": "Juntar los omóplatos",
+      "descripcion": "Mejora la postura de la espalda alta.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate lo más alto que puedas, sin apoyar la espalda si te es posible.",
+        "Junta los omóplatos llevándolos hacia atrás y mantén 5 segundos.",
+        "Relaja y vuelve a la posición inicial."
+      ],
+      "dosis": "Mantén 5 segundos. De 2 a 10 veces.",
+      "duracion_estimada_seg": 60,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Royal Berkshire NHS Foundation Trust (Fisioterapia)",
+        "titulo": "Stage 1 exercises",
+        "url": "https://royalberkshire.nhs.uk/media/vdxo0b3m/stage-1-exercises_mar23.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [
+        "La fuente deja las repeticiones en blanco; se usa la pauta general de NHS Forth Valley (empezar con 2 o 3 y subir hasta 10)."
+      ],
+      "notas_etiquetado": "Los brazos quedan relajados a los lados.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "elevacion-brazo-sentado",
+      "nombre": "Elevar el brazo hasta la oreja",
+      "descripcion": "Movilidad del hombro.",
+      "fases": [
+        "calentamiento",
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": true,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a, separado/a del respaldo.",
+        "Con el brazo estirado, súbelo despacio hacia el techo hasta dejarlo junto a la oreja.",
+        "No subas el hombro ni arquees la espalda.",
+        "Bájalo despacio. Cambia de brazo."
+      ],
+      "dosis": "De 2 a 10 veces con cada brazo.",
+      "duracion_estimada_seg": 80,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Royal Berkshire NHS Foundation Trust (Fisioterapia)",
+        "titulo": "Stage 1 exercises",
+        "url": "https://royalberkshire.nhs.uk/media/vdxo0b3m/stage-1-exercises_mar23.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [
+        "La fuente deja las repeticiones en blanco; se usa la pauta general de NHS Forth Valley (empezar con 2 o 3 y subir hasta 10)."
+      ],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "balanceo-brazos-sentado",
+      "nombre": "Balanceo de brazos sentado/a",
+      "descripcion": "Calentamiento suave de hombros.",
+      "fases": [
+        "calentamiento"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a, separado/a del respaldo, con los pies apoyados bajo las rodillas.",
+        "Dobla los codos.",
+        "Balancea los brazos desde el hombro a un ritmo cómodo."
+      ],
+      "dosis": "30 segundos.",
+      "duracion_estimada_seg": 30,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "NHS Forth Valley",
+        "titulo": "Bed & Seated Exercises",
+        "url": "https://nhsforthvalley.com/wp-content/uploads/2021/08/2Seated-Bed-Exercises.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Las manos van abiertas y no sostienen nada.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "remo-sin-material-sentado",
+      "nombre": "Gesto de remo sin material",
+      "descripcion": "Fortalece espalda alta y brazos.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": true,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a.",
+        "Lleva los dos brazos al frente estirando los codos, con las manos separadas el ancho del pecho.",
+        "Recoge los brazos doblando los codos hasta los costados, a la altura del pecho, como si remaras.",
+        "Repite a ritmo tranquilo."
+      ],
+      "dosis": "De 2 a 10 veces.",
+      "duracion_estimada_seg": 60,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Royal Devon University Healthcare NHS Foundation Trust",
+        "titulo": "Seated exercise programme",
+        "url": "https://www.royaldevon.nhs.uk/media/bsoft31p/patient-information-leaflet-seated-exercise-programme-rde-20-079-001.pdf",
+        "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [
+        "La fuente deja las repeticiones en blanco; se usa la pauta general de NHS Forth Valley (empezar con 2 o 3 y subir hasta 10)."
+      ],
+      "notas_etiquetado": "No se sostiene nada. La fuente lo describe con los dos brazos: ambos_brazos por precaución.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "elevar-talones-sentado",
+      "nombre": "Elevar talones sentado/a",
+      "descripcion": "Activa pantorrillas y tobillos.",
+      "fases": [
+        "calentamiento"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a, separado/a del respaldo.",
+        "Levanta los talones dejando las puntas de los pies en el suelo.",
+        "Baja los talones."
+      ],
+      "dosis": "10 veces.",
+      "duracion_estimada_seg": 30,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "NHS Forth Valley",
+        "titulo": "Bed & Seated Exercises",
+        "url": "https://nhsforthvalley.com/wp-content/uploads/2021/08/2Seated-Bed-Exercises.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Sentado no se carga el peso del cuerpo: no es puntillas_talones.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "abdomen-sentado",
+      "nombre": "Activar el abdomen sentado/a",
+      "descripcion": "Trabaja la musculatura del tronco.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate bien atrás en la silla.",
+        "Relaja el abdomen y después mételo hacia dentro desde debajo de la cintura.",
+        "Mantén mientras cuentas hasta 10, si puedes, sin dejar de respirar.",
+        "Suelta."
+      ],
+      "dosis": "Mantén hasta 10 segundos. De 3 a 5 veces.",
+      "duracion_estimada_seg": 60,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "MS Trust",
+        "titulo": "Exercises: posture",
+        "url": "https://mstrust.org.uk/sites/default/files/2024-03/exercises-posture-2024.pdf",
+        "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
+        "especifica_de": "esclerosis múltiple",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "desplazar-peso-sentado",
+      "nombre": "Pasar el peso de un glúteo a otro",
+      "descripcion": "Movilidad del tronco y la pelvis.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": true,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate erguido/a, sin apoyar la espalda.",
+        "Pasa el peso a un glúteo levantando un poco el otro, con el tronco recto.",
+        "Vuelve al centro y repite hacia el otro lado."
+      ],
+      "dosis": "De 3 a 5 veces hacia cada lado.",
+      "duracion_estimada_seg": 50,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "MS Trust",
+        "titulo": "Exercises: posture",
+        "url": "https://mstrust.org.uk/sites/default/files/2024-03/exercises-posture-2024.pdf",
+        "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
+        "especifica_de": "esclerosis múltiple",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Las costillas del lado elevado se acercan: es una inclinación lateral.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "elevar-rodilla-mantenida-sentado",
+      "nombre": "Elevar la rodilla y mantener",
+      "descripcion": "Fortalece la cadera.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "sentado"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": true,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Siéntate recto/a en la silla.",
+        "Con la rodilla doblada y la punta del pie hacia arriba, eleva la rodilla.",
+        "Mantenla en el aire 5 segundos.",
+        "Baja despacio y cambia de pierna."
+      ],
+      "dosis": "Mantén 5 segundos. De 2 a 10 veces con cada pierna.",
+      "duracion_estimada_seg": 90,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Consorcio Hospital General Universitario de Valencia",
+        "titulo": "10 ejercicios para la rodilla",
+        "url": "https://chguv.san.gva.es/documents/1324933/1356112/5.RODILLA.pdf/e68c6e67-e516-4365-9f8f-505613994f10",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "especifica_de": "rodilla",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [
+        "La fuente no indica repeticiones; se usa la pauta general de NHS Forth Valley."
+      ],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "apretar-gluteos-tumbado",
+      "nombre": "Apretar glúteos tumbado/a",
+      "descripcion": "Activa los glúteos en la cama.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "tumbado"
+      ],
+      "recursos": [
+        "cama"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Túmbate boca arriba con las piernas estiradas.",
+        "Aprieta los glúteos y mantén mientras cuentas hasta 3.",
+        "Relaja."
+      ],
+      "dosis": "Mantén 3 segundos. 10 veces.",
+      "duracion_estimada_seg": 50,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Royal Berkshire NHS Foundation Trust (Fisioterapia)",
+        "titulo": "Bed exercises and stretches",
+        "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "abduccion-cadera-tumbado",
+      "nombre": "Separar la pierna tumbado/a",
+      "descripcion": "Fortalece la parte externa de la cadera.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "tumbado"
+      ],
+      "recursos": [
+        "cama"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Túmbate boca arriba con las piernas estiradas y juntas.",
+        "Desliza una pierna hacia fuera, guiando el movimiento con el talón.",
+        "Vuelve a juntarla. Cambia de pierna."
+      ],
+      "dosis": "10 veces con cada pierna.",
+      "duracion_estimada_seg": 80,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Royal Berkshire NHS Foundation Trust (Fisioterapia)",
+        "titulo": "Bed exercises and stretches",
+        "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [
+        "Se omite la versión más difícil con banda elástica."
+      ],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "elevacion-pierna-recta-tumbado",
+      "nombre": "Elevación de pierna estirada tumbado/a",
+      "descripcion": "Fortalece el muslo.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "tumbado"
+      ],
+      "recursos": [
+        "cama"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Túmbate boca arriba con las piernas estiradas y las puntas de los pies hacia el techo.",
+        "Levanta una pierna de la cama sin doblarla.",
+        "Mantén mientras cuentas hasta 3 y bájala con control.",
+        "Cambia de pierna."
+      ],
+      "dosis": "Mantén 3 segundos. 10 veces con cada pierna.",
+      "duracion_estimada_seg": 100,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Royal Berkshire NHS Foundation Trust (Fisioterapia)",
+        "titulo": "Bed exercises and stretches",
+        "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Tumbado, la pierna se separa poco de la cama: el muslo no se acerca al tronco más que al estar sentado.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "deslizar-talon-tumbado",
+      "nombre": "Deslizar el talón",
+      "descripcion": "Movilidad de rodilla y cadera.",
+      "fases": [
+        "calentamiento",
+        "principal"
+      ],
+      "posiciones": [
+        "tumbado"
+      ],
+      "recursos": [
+        "cama"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": true,
+        "flexion_amplia_cadera": true,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Túmbate boca arriba con las piernas estiradas.",
+        "Dobla una rodilla deslizando el talón hacia los glúteos.",
+        "Vuelve a estirarla. Cambia de pierna."
+      ],
+      "dosis": "10 veces con cada pierna.",
+      "duracion_estimada_seg": 80,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Royal Berkshire NHS Foundation Trust (Fisioterapia)",
+        "titulo": "Bed exercises and stretches",
+        "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Llevar el talón hacia los glúteos dobla la rodilla más de 90°; la cadera también se flexiona.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "puente-tumbado",
+      "nombre": "Puente en la cama",
+      "descripcion": "Fortalece glúteos y espalda baja.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "tumbado"
+      ],
+      "recursos": [
+        "cama"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Túmbate boca arriba con las rodillas dobladas, los pies apoyados y separados al ancho de la cadera y los brazos a los lados.",
+        "Sube los glúteos despacio llevando la cadera hacia el techo mientras los aprietas.",
+        "Mantén mientras cuentas hasta 3.",
+        "Baja despacio, apoyando la espalda poco a poco."
+      ],
+      "dosis": "Mantén 3 segundos. 10 veces.",
+      "duracion_estimada_seg": 70,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Royal Berkshire NHS Foundation Trust (Fisioterapia)",
+        "titulo": "Bed exercises and stretches",
+        "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Es una extensión de cadera, no un arqueo de espalda; las rodillas no pasan de 90°.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "rodilla-al-lado-tumbado",
+      "nombre": "Dejar caer una rodilla hacia fuera",
+      "descripcion": "Movilidad de cadera.",
+      "fases": [
+        "calma"
+      ],
+      "posiciones": [
+        "tumbado"
+      ],
+      "recursos": [
+        "cama"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Túmbate boca arriba con las rodillas dobladas, los pies apoyados y los brazos a los lados.",
+        "Deja caer despacio la rodilla derecha hacia fuera, hacia la cama.",
+        "Mantén mientras cuentas hasta 3 y vuelve al centro.",
+        "Repite con la otra rodilla."
+      ],
+      "dosis": "Mantén 3 segundos. 10 veces con cada lado.",
+      "duracion_estimada_seg": 100,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Royal Berkshire NHS Foundation Trust (Fisioterapia)",
+        "titulo": "Bed exercises and stretches",
+        "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "bombeo-tobillos-tumbado",
+      "nombre": "Mover los tobillos tumbado/a",
+      "descripcion": "Activa la circulación de las piernas.",
+      "fases": [
+        "calentamiento"
+      ],
+      "posiciones": [
+        "tumbado"
+      ],
+      "recursos": [
+        "cama"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Túmbate con las piernas estiradas sobre la cama.",
+        "Dobla y estira los tobillos con energía, todo lo que puedas."
+      ],
+      "dosis": "10 veces.",
+      "duracion_estimada_seg": 30,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Royal Berkshire NHS Foundation Trust (Fisioterapia)",
+        "titulo": "Bed exercises and stretches",
+        "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [
+        "Se omiten los círculos de tobillo que propone la fuente (movilidad articular aislada, igual que la muñeca)."
+      ],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "elevacion-brazos-tumbado",
+      "nombre": "Elevar los brazos tumbado/a",
+      "descripcion": "Movilidad de hombros.",
+      "fases": [
+        "calentamiento",
+        "principal"
+      ],
+      "posiciones": [
+        "tumbado"
+      ],
+      "recursos": [
+        "cama"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": true,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Túmbate boca arriba con los brazos a los lados.",
+        "Sube un brazo por encima de la cabeza.",
+        "Bájalo y repite con el otro brazo."
+      ],
+      "dosis": "10 veces con cada brazo.",
+      "duracion_estimada_seg": 80,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Royal Berkshire NHS Foundation Trust (Fisioterapia)",
+        "titulo": "Bed exercises and stretches",
+        "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [
+        "Se omite la versión con banda elástica."
+      ],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "circulos-hombros-tumbado",
+      "nombre": "Círculos de hombros tumbado/a",
+      "descripcion": "Suelta los hombros.",
+      "fases": [
+        "calentamiento"
+      ],
+      "posiciones": [
+        "tumbado"
+      ],
+      "recursos": [
+        "cama"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Túmbate boca arriba con los brazos a los lados.",
+        "Haz círculos con los hombros: arriba, atrás y abajo.",
+        "Después hazlos hacia delante."
+      ],
+      "dosis": "5 veces en cada sentido.",
+      "duracion_estimada_seg": 30,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Royal Berkshire NHS Foundation Trust (Fisioterapia)",
+        "titulo": "Bed exercises and stretches",
+        "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "respiracion-abdominal-tumbado",
+      "nombre": "Respiración abdominal tumbado/a",
+      "descripcion": "Respiración lenta para terminar.",
+      "fases": [
+        "calma"
+      ],
+      "posiciones": [
+        "tumbado"
+      ],
+      "recursos": [
+        "cama"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Túmbate boca arriba con las rodillas dobladas y los pies apoyados.",
+        "Apoya las manos sobre el abdomen.",
+        "Toma aire por la nariz hinchando el abdomen.",
+        "Suelta el aire por la boca."
+      ],
+      "dosis": "10 respiraciones.",
+      "duracion_estimada_seg": 80,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Hospital Universitario Sant Joan d'Alacant (Medicina Física y Rehabilitación)",
+        "titulo": "Escuela de espalda",
+        "url": "https://sanjuan.san.gva.es/wp-content/uploads/2020/05/ESCUELA-DE-ESPALDA.-2.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "especifica_de": "problemas de espalda",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Las manos solo descansan sobre el abdomen: no es agarre.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "bascula-pelvica-tumbado",
+      "nombre": "Báscula pélvica tumbado/a",
+      "descripcion": "Movilidad de la zona lumbar.",
+      "fases": [
+        "principal",
+        "calma"
+      ],
+      "posiciones": [
+        "tumbado"
+      ],
+      "recursos": [
+        "cama"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": true,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Túmbate boca arriba con las rodillas dobladas y los pies apoyados.",
+        "Toma aire por la nariz hacia el abdomen.",
+        "Al soltarlo por la boca, presiona la zona lumbar hacia abajo hasta notar que toca la cama.",
+        "Relaja."
+      ],
+      "dosis": "10 veces.",
+      "duracion_estimada_seg": 80,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Hospital Universitario Sant Joan d'Alacant (Medicina Física y Rehabilitación)",
+        "titulo": "Escuela de espalda",
+        "url": "https://sanjuan.san.gva.es/wp-content/uploads/2020/05/ESCUELA-DE-ESPALDA.-2.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "especifica_de": "problemas de espalda",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Mover la zona lumbar contra la cama es un movimiento de columna: inclinacion_tronco por precaución.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "rotacion-rodillas-tumbado",
+      "nombre": "Llevar las rodillas de lado a lado",
+      "descripcion": "Movilidad de la espalda baja.",
+      "fases": [
+        "calma"
+      ],
+      "posiciones": [
+        "tumbado"
+      ],
+      "recursos": [
+        "cama"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": true
+      },
+      "instrucciones": [
+        "Túmbate boca arriba con las rodillas dobladas y juntas.",
+        "Al soltar el aire, lleva las dos rodillas hacia un lado.",
+        "Vuelve al centro y llévalas hacia el otro lado."
+      ],
+      "dosis": "10 veces hacia cada lado.",
+      "duracion_estimada_seg": 90,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Hospital Universitario Sant Joan d'Alacant (Medicina Física y Rehabilitación)",
+        "titulo": "Escuela de espalda",
+        "url": "https://sanjuan.san.gva.es/wp-content/uploads/2020/05/ESCUELA-DE-ESPALDA.-2.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "especifica_de": "problemas de espalda",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "Girar las piernas con el tronco quieto rota la columna: rotacion_tronco.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "rodilla-al-pecho-tumbado",
+      "nombre": "Rodilla hacia el pecho sin manos",
+      "descripcion": "Estira la espalda baja y la cadera.",
+      "fases": [
+        "calma"
+      ],
+      "posiciones": [
+        "tumbado"
+      ],
+      "recursos": [
+        "cama"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": true,
+        "flexion_amplia_cadera": true,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Túmbate boca arriba con las rodillas dobladas y los pies apoyados.",
+        "Mientras sueltas el aire, lleva una rodilla hacia el pecho sin ayudarte de las manos.",
+        "Vuelve a apoyar el pie. Cambia de pierna."
+      ],
+      "dosis": "10 veces con cada pierna.",
+      "duracion_estimada_seg": 90,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Hospital Universitario Sant Joan d'Alacant (Medicina Física y Rehabilitación)",
+        "titulo": "Escuela de espalda",
+        "url": "https://sanjuan.san.gva.es/wp-content/uploads/2020/05/ESCUELA-DE-ESPALDA.-2.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "especifica_de": "problemas de espalda",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [
+        "Se omiten las variantes de la fuente que agarran la pierna con las manos."
+      ],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "puente-suelo",
+      "nombre": "Puente en el suelo",
+      "descripcion": "Versión en el suelo del puente.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "suelo"
+      ],
+      "recursos": [],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Túmbate boca arriba en el suelo con las rodillas dobladas y los pies apoyados, separados unos 30 cm.",
+        "Aprieta los glúteos y súbelos formando un puente.",
+        "Mantén un momento y baja despacio. Sube y baja en línea recta, sin balancearte."
+      ],
+      "dosis": "De 3 a 5 veces.",
+      "duracion_estimada_seg": 40,
+      "variante_de": "puente-tumbado",
+      "fuente": {
+        "organizacion": "MS Trust",
+        "titulo": "Exercises: core stability",
+        "url": "https://mstrust.org.uk/sites/default/files/files/exercises-core-stability.pdf",
+        "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
+        "especifica_de": "esclerosis múltiple",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "bascula-pelvica-suelo",
+      "nombre": "Báscula pélvica en el suelo",
+      "descripcion": "Versión en el suelo de la báscula pélvica.",
+      "fases": [
+        "principal",
+        "calma"
+      ],
+      "posiciones": [
+        "suelo"
+      ],
+      "recursos": [],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": true,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Túmbate boca arriba en el suelo con las rodillas dobladas y los pies apoyados, separados unos 30 cm.",
+        "Aprieta el abdomen para inclinar la pelvis y apoyar la espalda en el suelo.",
+        "Suelta."
+      ],
+      "dosis": "De 3 a 5 veces.",
+      "duracion_estimada_seg": 30,
+      "variante_de": "bascula-pelvica-tumbado",
+      "fuente": {
+        "organizacion": "MS Trust",
+        "titulo": "Exercises: core stability",
+        "url": "https://mstrust.org.uk/sites/default/files/files/exercises-core-stability.pdf",
+        "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
+        "especifica_de": "esclerosis múltiple",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "flexion-alterna-piernas-de-pie",
+      "nombre": "Elevar una rodilla de pie con apoyo",
+      "descripcion": "Equilibrio y fuerza de cadera.",
+      "fases": [
+        "principal"
+      ],
+      "posiciones": [
+        "de_pie"
+      ],
+      "recursos": [
+        "silla"
+      ],
+      "exigencias": {
+        "equilibrio_sin_apoyo": false,
+        "una_pierna": true,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": false,
+        "agarre": true,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": true,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Ponte de pie al lado de una silla firme o una mesa y apóyate en ella.",
+        "Eleva una pierna con la rodilla doblada y mantén 5 segundos.",
+        "Bájala y cambia de pierna."
+      ],
+      "dosis": "Mantén 5 segundos. 10 veces con cada pierna; descansa y repite.",
+      "duracion_estimada_seg": 120,
+      "variante_de": null,
+      "fuente": {
+        "organizacion": "Ministerio de Sanidad y semFYC",
+        "titulo": "Prevenir las caídas es posible",
+        "url": "https://estilosdevidasaludable.sanidad.gob.es/seguridad/pdf/Seguridad_Lesiones2.pdf",
+        "licencia": "© Ministerio de Sanidad y semFYC 2016, sin licencia abierta: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [
+        "La fuente permite hacerlo sin apoyo; aquí se indica siempre con apoyo."
+      ],
+      "notas_etiquetado": "Subir la rodilla de pie acerca el muslo al tronco como mínimo igual que sentado: se marca por precaución.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
         "revisado_por": null,
         "fecha_revision": null
       }
