@@ -1,0 +1,13 @@
+{
+  "name": "healthmove",
+  "version": "0.1.0",
+  "private": true,
+  "description": "PWA de rutinas breves de movimiento para personas con restricciones de movilidad (proyecto final CS50x)",
+  "type": "module",
+  "scripts": {
+    "test": "node --test \"tests/*.test.mjs\"",
+    "validar": "node scripts/validar-catalogo.mjs",
+    "servir": "python3 -m http.server 8000 --directory public"
+  },
+  "license": "MIT"
+}
