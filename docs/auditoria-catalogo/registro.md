@@ -5,15 +5,29 @@ Este registro lleva la cuenta de la auditoría documental hecha con la skill `au
 - No es una validación clínica.
 - Ningún estado del catálogo cambia sin una decisión explícita del desarrollador.
 
-## Decisiones del desarrollador
+## Decisiones del desarrollador (2026-10-14)
 
-Todavía no hay ninguna. Las preguntas abiertas son:
+1. **`ambos_brazos`:**
+   - Cada ejercicio original se evalúa según sus propias instrucciones documentadas. En la práctica es el criterio literal.
+   - Cuando una adaptación a un solo brazo cambie de forma relevante la ejecución, las instrucciones o la ilustración, se valora un ejercicio derivado independiente, con id, instrucciones e ilustración propias y enlazado al original con `variante_de`.
+   - No se crea una copia por cada adaptación posible.
+   - **Antes de crearlos hay que presentar una propuesta:** ids afectados, variantes sugeridas, diferencias y fuente que respalda cada cambio.
+2. **Umbral de 90° de la rodilla:**
+   - Referencia operativa reproducible: el ángulo aproximado entre muslo y pierna, visto de lado.
+   - Hay que documentar cómo se evalúan los casos ambiguos, sin inventar precisión cuando la fuente no permita determinar el ángulo.
+   - **Antes de cambiar etiquetas en bloque hay que presentar la lista de ejercicios afectados y el criterio aplicado a cada uno.**
+3. **Folleto de Leicester:**
+   - Se añade `especifica_de` a sus 8 ejercicios: «usuarios de silla de ruedas».
+   - En los dos que hablan de «la pierna que queda» se añade también esa condición.
+   - No se generalizan sus instrucciones ni la procedencia se interpreta como validación clínica.
+   - **Pendiente para la interfaz:** explicar a quién va dirigido el material y que el usuario puede considerar el ejercicio si las instrucciones y adaptaciones lo permiten, sin presentarlo como garantía de seguridad. El texto de la decisión llegó cortado; queda pendiente confirmar el final.
 
-1. Criterio para `ambos_brazos` (ver el resumen del lote 1):
-   - **Literal:** si la instrucción pide los dos brazos, se marca.
-   - **Funcional:** solo se marca si con un brazo el ejercicio no se puede hacer, y entonces se añade una adaptación documentada.
-2. Frase de referencia del umbral de 90° para `flexion_profunda_rodilla`. La pide el §4 de la especificación y no está escrita (ver el lote 2).
-3. Añadir `fuente.especifica_de` a todos los ejercicios del folleto de Leicester, pensado para quien usa silla de ruedas y en parte para personas con amputación (ver el lote 2).
+### Criterio operativo para `flexion_profunda_rodilla` (propuesta)
+
+- **Medida:** ángulo de la rodilla visto de lado, entre el muslo y la pierna. 0° es la pierna recta. Sentado con el pie bajo la rodilla son unos 90°.
+- **TRUE:** el pie queda claramente por detrás de la vertical de la rodilla estando sentado o tumbado, se lleva el talón hacia el glúteo, o la persona se agacha o hace una sentadilla más allá de lo que describe una «mini» sentadilla.
+- **FALSE:** el pie queda bajo la rodilla o por delante, o la rodilla se estira.
+- **REQUIERE_ACLARACION:** la fuente no permite saber dónde queda el pie, por ejemplo cuando dice «tanto como puedas» sin ilustración consultada. En ese caso se aplica §7.1 (se marca) y se anota que es por conservadurismo, no por evidencia.
 
 ## Ejercicios auditados
 
@@ -32,9 +46,20 @@ Todavía no hay ninguna. Las preguntas abiertas son:
 | 3 | elevar-rodar-hombros-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 3 | curl-biceps-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 3 | toalla-separar-sentado | REQUIERE CORRECCIONES | pendiente |
-| 3 | boxeo-sentado | Depende del criterio de `ambos_brazos` | pendiente |
+| 3 | boxeo-sentado | REQUIERE CORRECCIONES (criterio literal adoptado) | pendiente |
 | 3 | boxeo-circulos-alto | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 4 | boxeo-circulos-pecho | LISTO tras añadir `especifica_de` | pendiente |
+| 4 | arquear-espalda-sentado | REQUIERE CORRECCIONES | pendiente |
+| 4 | movilidad-lumbar-sentado | LISTO tras añadir `especifica_de` | pendiente |
+| 4 | estiramiento-gemelo-sentado | REQUIERE CORRECCIONES | pendiente |
+| 4 | abrir-cerrar-manos | REQUIERE CORRECCIONES | pendiente |
+| 4 | pulgar-dedos | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 4 | activacion-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 4 | banda-remo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 4 | banda-curl-sentado | REQUIERE CORRECCIONES | pendiente |
 
 ## Pendientes
 
-- Auditados: 15 de 220. Siguiente: ejercicio 16 del catálogo (`boxeo-circulos-pecho`).
+- Auditados: 24 de 220. Siguiente lote: los 7 de NHS «Strength exercises» y sus páginas hermanas.
+- Lista de candidatos a adaptación unilateral: ver los resúmenes de los lotes 1, 3 y 4.
+- Tarea de interfaz pendiente: comunicar `especifica_de` (decisión 3).
