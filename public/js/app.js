@@ -121,6 +121,7 @@ const fila = (ruta, titulo, detalle = '') =>
 function vistaNombre() {
   const editando = estado.nombre !== null;
   pintar(`
+    ${editando ? '' : foto('bici-adaptada-parque', 'Hombre mayor sonriente en una bicicleta adaptada en un parque', { clase: 'bienvenida-foto', prioridad: true })}
     <h1>${editando ? 'Tu nombre' : 'Te damos la bienvenida a HealthMove'}</h1>
     <p>${editando ? 'Lo usamos para dirigirnos a ti dentro de la app.' : 'Te ayudaremos a encontrar rutinas breves de movimiento que encajen con lo que puedes hacer.'}</p>
     <form id="form-nombre" novalidate>
@@ -168,30 +169,96 @@ function vistaAviso() {
 
 function vistaInicio() {
   const p = estado.perfil;
-  const problemas = P.validarPerfil(p);
-  const listo = problemas.length === 0;
+  const listo = P.validarPerfil(p).length === 0;
   const empezado = p.posicion !== null;
   const ultima = estado.historial.at(-1);
   const semana = estado.historial.filter((h) => h.estado === 'completada' && Date.now() - new Date(h.fecha) < 7 * 864e5).length;
 
   const linea = listo
-    ? `Tienes una rutina de ${p.duracionMin} minutos esperándote, preparada con lo que nos contaste.`
+    ? `Tu rutina de ${p.duracionMin} minutos está lista para prepararse con lo que nos contaste.`
     : empezado
       ? 'Te falta poco para terminar tu perfil. Retómalo donde lo dejaste.'
       : 'Cuéntanos qué movimientos te cuestan o tienes indicado evitar. Solo verás las preguntas que te afecten.';
 
-  const restricciones = SECCIONES.reduce((n, s) => n + p.secciones[s.id].opciones.length, 0);
+  const botones = listo
+    ? `<button type="button" class="primario boton-grande" data-accion="generar">${icono('play-fill')}Generar mi rutina</button>
+       <a class="boton" href="#resumen">Revisar mi perfil</a>`
+    : `<button type="button" class="primario boton-grande" data-accion="ir" data-ruta="perfil/posicion">${empezado ? 'Continuar mi perfil' : 'Empezar mi perfil'}</button>`;
+
   pintar(`
-    <h1 class="saludo">${conNombre((n) => `Hola, ${n}`, 'Hola')}</h1>
-    <p class="saludo-linea">${linea}</p>
-    <ul class="filas">
-      ${fila('resumen', 'Mi perfil', listo ? (restricciones ? `${restricciones} ${restricciones === 1 ? 'cosa' : 'cosas'} que tenemos en cuenta` : 'Sin restricciones indicadas') : 'Sin terminar')}
-      ${fila('historial', 'Historial', ultima ? `${semana ? `${semana} ${semana === 1 ? 'rutina' : 'rutinas'} esta semana. ` : ''}Última, el ${fecha(ultima.fecha)}` : 'Aún no has hecho ninguna rutina')}
-      ${fila('acerca', 'Ajustes, límites y fuentes')}
-    </ul>
-  `, listo
-    ? `<button type="button" class="primario" data-accion="generar">Generar mi rutina</button>`
-    : `<button type="button" class="primario" data-accion="ir" data-ruta="perfil/posicion">${empezado ? 'Continuar mi perfil' : 'Empezar mi perfil'}</button>`);
+    <section class="portada" aria-labelledby="saludo">
+      ${foto('portada-clase-sillas', 'Grupo de personas mayores haciendo ejercicio sentadas en sillas, con los brazos en alto', { clase: 'portada-foto', ancho: '(min-width: 62rem) 40vw, 100vw', prioridad: true })}
+      <div class="portada-texto">
+        <h1 class="saludo" id="saludo">${conNombre((n) => `Hola, ${n}`, 'Hola')}</h1>
+        <p class="saludo-linea">${linea}</p>
+        <div class="portada-botones">${botones}</div>
+        ${ultima ? `<p class="portada-historial">${icono('clock-history')}<a href="#historial">${semana ? `${semana} ${semana === 1 ? 'rutina' : 'rutinas'} esta semana` : `Última rutina el ${fecha(ultima.fecha)}`}</a></p>` : ''}
+      </div>
+    </section>
+
+    ${empezado ? `<section aria-labelledby="t-perfil">
+      <div class="seccion-cabecera"><h2 id="t-perfil">Tu perfil hoy</h2><a href="#resumen">Cambiar</a></div>
+      <ul class="pildoras">${pildorasPerfil(p)}</ul>
+    </section>` : ''}
+
+    <section aria-labelledby="t-posicion">
+      <div class="seccion-cabecera"><h2 id="t-posicion">Explora por posición</h2><a href="#explorar">Ver todo</a></div>
+      <ul class="mosaico">
+        ${azulejo('explorar/sentado', 'En la silla', contarVisibles((e) => e.posiciones.includes('sentado')), 'silla-brazos-abiertos', 'Mujer sentada en una clase de ejercicio con los brazos abiertos')}
+        ${azulejo('explorar/de_pie', 'De pie', contarVisibles((e) => e.posiciones.includes('de_pie')), 'de-pie-estiramiento-acompanado', 'Hombre mayor estirando los brazos de pie, acompañado por un profesional')}
+        ${azulejo('explorar/tumbado', 'En la cama', contarVisibles((e) => e.posiciones.includes('tumbado')), 'cama-estiramiento', 'Mujer sentada en la cama estirando los brazos por la mañana')}
+        ${azulejo('explorar/calma', 'Calma y respiración', contarVisibles((e) => e.fases.includes('calma')), 'calma-te', 'Mujer mayor sentada y relajada con una taza')}
+      </ul>
+    </section>
+
+    <section class="editorial" aria-labelledby="t-como">
+      ${foto('silla-ruedas-jardin', 'Mujer sonriente en silla de ruedas junto a un jardín', { clase: 'editorial-foto', ancho: '(min-width: 62rem) 30vw, 100vw' })}
+      <div>
+        <h2 id="t-como">Cómo elegimos tus ejercicios</h2>
+        <ul class="puntos">
+          <li>${icono('shield-check')}<span><strong>Reglas fijas.</strong> Dejamos fuera todo lo que nos dices que te cuesta o debes evitar, sin excepciones.</span></li>
+          <li>${icono('journal-text')}<span><strong>Fuentes sanitarias.</strong> Las instrucciones salen de materiales de hospitales y organismos públicos, y citamos cada fuente.</span></li>
+          <li>${icono('info-circle-fill')}<span><strong>No es una prescripción.</strong> Tu profesional sanitario tiene siempre la última palabra.</span></li>
+        </ul>
+        <a href="#acerca">Límites y fuentes</a>
+      </div>
+    </section>
+  `);
+}
+
+// Solo se cuentan los ejercicios que la persona puede ver: los revisados, o todos en modo desarrollo.
+const visible = (e) => estado.desarrollo || e.validacion.estado !== 'borrador';
+const contarVisibles = (filtro) => estado.catalogo.ejercicios.filter((e) => visible(e) && filtro(e)).length;
+
+const POSICION_CORTA = { de_pie_libre: 'De pie sin apoyo', de_pie_apoyo: 'De pie con apoyo', solo_sentado: 'Solo sentado/a' };
+
+function pildorasPerfil(p) {
+  const evitar = [...new Set(SECCIONES.flatMap((s) => p.secciones[s.id].opciones
+    .flatMap((o) => s.opciones.find((x) => x.id === o)?.excluyeExigencias || [])))];
+  const items = [];
+  if (p.posicion) items.push(POSICION_CORTA[p.posicion]);
+  for (const x of evitar.slice(0, 3)) items.push(`Sin ${ETIQUETA_EXIGENCIA[x]}`);
+  if (evitar.length > 3) items.push(`y ${evitar.length - 3} más`);
+  if (p.duracionMin) items.push(`${p.duracionMin} min`);
+  if (p.recursos.length) items.push(`${p.recursos.length} ${p.recursos.length === 1 ? 'material' : 'materiales'} a mano`);
+  return items.map((t) => `<li class="pildora">${escapar(t)}</li>`).join('');
+}
+
+function azulejo(ruta, titulo, n, imagen, alt) {
+  return `<li><a class="azulejo" href="#${ruta}">
+    ${foto(imagen, alt, { ancho: '(min-width: 62rem) 18vw, 50vw', rotulo: false })}
+    <span class="azulejo-texto"><span class="azulejo-titulo">${titulo}</span><span class="azulejo-detalle">${n ? `${n} ejercicios` : 'En revisión'}</span></span>
+  </a></li>`;
+}
+
+// Fotos reales de ambiente (créditos en CREDITOS.md). Nunca muestran cómo se hace un ejercicio:
+// para eso están las ilustraciones. Por eso llevan el rótulo «Foto ilustrativa».
+function foto(nombre, alt, { clase = '', ancho = '100vw', prioridad = false, rotulo = true } = {}) {
+  return `<figure class="foto ${clase}">
+    <img src="fotos/${nombre}-640.webp" srcset="fotos/${nombre}-640.webp 640w, fotos/${nombre}-1280.webp 1280w"
+      sizes="${ancho}" alt="${escapar(alt)}" ${prioridad ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">
+    ${rotulo ? '<figcaption class="foto-rotulo">Foto ilustrativa</figcaption>' : ''}
+  </figure>`;
 }
 
 // --- Perfil ---------------------------------------------------------
@@ -587,7 +654,7 @@ function router() {
     detenido: vistaDetenido,
     historial: vistaHistorial,
     acerca: vistaAcerca,
-    explorar: vistaExplorar,
+    explorar: () => vistaExplorar(arg),
   };
   const clave = vistas[ruta] ? ruta : vistas[`${ruta}/${arg}`] ? `${ruta}/${arg}` : 'inicio';
   if (clave === 'inicio') estado.volverAResumen = false;

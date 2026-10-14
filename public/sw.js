@@ -3,11 +3,25 @@
 //  sin red, y se actualiza en segundo plano.
 //  VERSION y PRECACHE los escribe `npm run version-sw`; no editar a mano.
 // ============================================================
-const VERSION = 'hm-e421d0cf776c';
+const VERSION = 'hm-d2969503d496';
 const PRECACHE = [
   './',
   'data/catalogo.json',
   'estilos.css',
+  'fotos/bici-adaptada-parque-1280.webp',
+  'fotos/bici-adaptada-parque-640.webp',
+  'fotos/calma-te-1280.webp',
+  'fotos/calma-te-640.webp',
+  'fotos/cama-estiramiento-1280.webp',
+  'fotos/cama-estiramiento-640.webp',
+  'fotos/de-pie-estiramiento-acompanado-1280.webp',
+  'fotos/de-pie-estiramiento-acompanado-640.webp',
+  'fotos/portada-clase-sillas-1280.webp',
+  'fotos/portada-clase-sillas-640.webp',
+  'fotos/silla-brazos-abiertos-1280.webp',
+  'fotos/silla-brazos-abiertos-640.webp',
+  'fotos/silla-ruedas-jardin-1280.webp',
+  'fotos/silla-ruedas-jardin-640.webp',
   'fuente/OFL.txt',
   'fuente/atkinson-hyperlegible-400.woff2',
   'fuente/atkinson-hyperlegible-700.woff2',

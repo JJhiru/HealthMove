@@ -375,6 +375,60 @@
   .saludo { font-size: clamp(2.4rem, 7vw + 0.5rem, var(--t-3xl)); line-height: 1.05; letter-spacing: -0.03em; margin: var(--e-5) 0 var(--e-3); }
   .saludo-linea { font-size: var(--t-l); line-height: 1.45; margin: 0 0 var(--e-5); max-width: 28em; }
 
+  /* Fotos de ambiente: recorte fijo, esquinas de 20 px y rótulo «Foto ilustrativa». */
+  .foto { position: relative; margin: 0; border-radius: var(--r-l); overflow: hidden; background: var(--niebla); }
+  .foto img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 3 / 2; }
+  .foto-rotulo {
+    position: absolute; right: var(--e-2); bottom: var(--e-2);
+    padding: 2px 8px; border-radius: var(--r-total);
+    background: rgb(18 33 30 / 0.72); color: var(--blanco); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.01em;
+  }
+
+  /* Portada: en móvil la foto va a sangre; en escritorio, texto y foto en dos columnas. */
+  .portada { display: grid; gap: var(--e-2); }
+  .portada-foto { margin: calc(-1 * var(--e-2)) calc(-1 * var(--e-4)) 0; border-radius: 0 0 var(--r-l) var(--r-l); }
+  .portada-foto img { aspect-ratio: 16 / 10; object-position: 50% 30%; }
+  .portada .saludo { margin-top: var(--e-3); }
+  .portada-botones { display: flex; flex-wrap: wrap; gap: var(--e-3); }
+  .portada-botones > * { flex: 1 1 auto; }
+  .portada-historial { display: flex; align-items: center; gap: var(--e-2); margin: var(--e-4) 0 0; color: var(--tinta-suave); }
+  @media (min-width: 62rem) {
+    .portada { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); align-items: center; gap: var(--e-7); padding: var(--e-4) 0 var(--e-2); }
+    .portada-foto { order: 2; margin: 0; border-radius: var(--r-l); }
+    .portada-foto img { aspect-ratio: 4 / 3; }
+    .portada .saludo { margin-top: 0; }
+    .portada-botones > * { flex: 0 1 auto; }
+  }
+
+  /* Mosaico por posición: fotos con el título encima, no tarjetas blancas. */
+  .mosaico { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--e-3); }
+  .mosaico li { max-width: none; }
+  .azulejo { position: relative; display: block; border-radius: var(--r-l); overflow: hidden; color: var(--blanco); text-decoration: none; }
+  .azulejo .foto { border-radius: 0; }
+  .azulejo .foto img { aspect-ratio: 4 / 5; transition: transform var(--normal); }
+  .azulejo:hover .foto img { transform: scale(1.03); }
+  .azulejo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgb(18 33 30 / 0) 40%, rgb(18 33 30 / 0.82) 100%); }
+  .azulejo-texto { position: absolute; left: var(--e-3); right: var(--e-3); bottom: var(--e-3); z-index: 1; display: grid; gap: 2px; }
+  .azulejo-titulo { font-size: var(--t-m); font-weight: 700; line-height: 1.2; }
+  .azulejo-detalle { font-size: var(--t-xs); font-weight: 700; opacity: 0.92; }
+  .azulejo:focus-visible { outline-offset: 3px; }
+  @media (min-width: 48rem) { .mosaico { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--e-4); } }
+
+  /* Bloque editorial: foto + puntos con icono. */
+  .editorial { display: grid; gap: var(--e-4); margin-top: var(--e-7); padding: var(--e-4); background: var(--melocoton); border-radius: calc(var(--r-l) + 4px); }
+  .editorial h2 { margin-top: var(--e-2); }
+  .editorial-foto img { aspect-ratio: 16 / 10; }
+  .puntos { list-style: none; padding: 0; margin: 0 0 var(--e-4); display: grid; gap: var(--e-3); }
+  .puntos li { display: grid; grid-template-columns: auto 1fr; gap: var(--e-3); align-items: start; }
+  .puntos .ico { width: 1.5rem; height: 1.5rem; color: var(--eucalipto); margin-top: 2px; }
+  @media (min-width: 62rem) {
+    .editorial { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); align-items: center; gap: var(--e-6); padding: var(--e-5); }
+    .editorial-foto img { aspect-ratio: 4 / 3; }
+  }
+
+  .bienvenida-foto { margin: 0 0 var(--e-4); }
+  .bienvenida-foto img { aspect-ratio: 16 / 9; }
+
   /* Rutina (lista provisional hasta la línea de tiempo) */
   .fase-titulo { display: flex; justify-content: space-between; align-items: baseline; gap: var(--e-4); }
   .fase-titulo span { color: var(--tinta-suave); font-size: var(--t-s); font-weight: 400; }

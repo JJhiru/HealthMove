@@ -40,3 +40,21 @@ test('la fuente y los iconos de terceros llevan su licencia', () => {
   assert.match(leer('fuente/OFL.txt'), /SIL Open Font License/);
   assert.match(leer('iconos.svg'), /Bootstrap Icons .*MIT/);
 });
+
+test('cada foto de public/fotos tiene su crédito, y cada foto que usa la app existe en sus dos tamaños', async () => {
+  const { readdirSync } = await import('node:fs');
+  const creditos = readFileSync(new URL('../CREDITOS.md', import.meta.url), 'utf8');
+  const archivos = readdirSync(new URL('../public/fotos/', import.meta.url));
+  const nombres = new Set(archivos.map((f) => f.replace(/-(640|1280)\.webp$/, '')));
+  for (const n of nombres) assert.match(creditos, new RegExp('`' + n + '`.*pexels\\.com/photo/\\d+'), `falta el crédito de ${n}`);
+  for (const m of leer('js/app.js').matchAll(/foto\('([a-z0-9-]+)'/g)) {
+    for (const w of [640, 1280]) assert.ok(archivos.includes(`${m[1]}-${w}.webp`), `falta fotos/${m[1]}-${w}.webp`);
+  }
+});
+
+test('ninguna foto pesa más de 130 KB', async () => {
+  const { readdirSync, statSync } = await import('node:fs');
+  for (const f of readdirSync(new URL('../public/fotos/', import.meta.url))) {
+    assert.ok(statSync(new URL(`../public/fotos/${f}`, import.meta.url)).size <= 130 * 1024, f);
+  }
+});
