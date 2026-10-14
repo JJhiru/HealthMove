@@ -58,6 +58,13 @@ export function motivosIncompatibilidad(ej, restr, { permitirBorrador = false } 
 
 export const esCompatible = (ej, restr, opciones) => motivosIncompatibilidad(ej, restr, opciones).length === 0;
 
+// Una rutina guardada que usa ejercicios sin revisar solo vale mientras dure el modo desarrollo:
+// al salir de él no se puede seguir viendo ni reproducir.
+export function resultadoVigente(resultado, { permitirBorrador = false } = {}) {
+  if (!resultado?.res) return false;
+  return permitirBorrador || !(resultado.res.ok && resultado.res.rutina?.usaBorrador);
+}
+
 // --- 3. Generación ----------------------------------------------------
 
 // Generador pseudoaleatorio con semilla (mulberry32): misma semilla, misma rutina.

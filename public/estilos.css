@@ -429,6 +429,65 @@
   .bienvenida-foto { margin: 0 0 var(--e-4); }
   .bienvenida-foto img { aspect-ratio: 16 / 9; }
 
+  /* Ilustraciones de ejercicios */
+  .ilus { display: grid; place-items: center; aspect-ratio: 4 / 3; background: var(--niebla); border-radius: var(--r-l); overflow: hidden; }
+  .ilus .ilustracion { width: 100%; height: 100%; }
+  .insignia-tiempo { position: absolute; right: var(--e-2); bottom: var(--e-2); background: var(--blanco); box-shadow: var(--sombra-baja); }
+  .insignia-tiempo .ico { width: 0.95em; height: 0.95em; }
+
+  /* Tarjeta de ejercicio: la ilustración manda, sin caja blanca alrededor. */
+  .tarjeta-ej { display: grid; gap: 4px; color: var(--tinta); text-decoration: none; font-weight: 400; border-radius: var(--r-l); }
+  .tarjeta-ej-ilus { position: relative; display: block; transition: transform var(--normal), box-shadow var(--normal); border-radius: var(--r-l); }
+  .tarjeta-ej:hover .tarjeta-ej-ilus { transform: translateY(-2px); box-shadow: var(--sombra); }
+  .tarjeta-ej:hover .tarjeta-ej-nombre { text-decoration: underline; }
+  .tarjeta-ej-nombre { font-weight: 700; line-height: 1.3; margin-top: var(--e-1); }
+  .tarjeta-ej-meta { color: var(--tinta-suave); font-size: var(--t-xs); }
+  .tarjeta-ej .insignia-borrador { justify-self: start; }
+
+  .rejilla-ej { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--e-5) var(--e-3); }
+  .rejilla-ej li { max-width: none; }
+  @media (min-width: 48rem) { .rejilla-ej { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--e-6) var(--e-4); } }
+  @media (min-width: 75rem) { .rejilla-ej { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  .mas { margin-top: var(--e-6); }
+
+  /* Fila horizontal desplazable (inicio) */
+  .riel { list-style: none; margin: 0 calc(-1 * var(--e-4)); padding: var(--e-1) var(--e-4) var(--e-3); display: grid; grid-auto-flow: column; grid-auto-columns: 62%; gap: var(--e-3); overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: thin; }
+  .riel li { scroll-snap-align: start; max-width: none; }
+  @media (min-width: 48rem) { .riel { grid-auto-columns: 32%; } }
+  @media (min-width: 62rem) { .riel { grid-auto-columns: 23%; margin: 0; padding-inline: 0; } }
+
+  /* Explorar */
+  .explorar-cabecera { margin-bottom: var(--e-4); }
+  .filtros { display: grid; gap: var(--e-2); margin-bottom: var(--e-3); }
+  .interruptor { display: inline-flex; align-items: center; gap: var(--e-3); min-height: 2.75rem; font-weight: 700; cursor: pointer; justify-self: start; }
+  .interruptor input { appearance: none; width: 3rem; height: 1.75rem; margin: 0; border-radius: var(--r-total); background: var(--borde-fuerte); position: relative; cursor: pointer; transition: background var(--rapido); flex: none; }
+  .interruptor input::after { content: ""; position: absolute; top: 3px; left: 3px; width: calc(1.75rem - 6px); height: calc(1.75rem - 6px); border-radius: 50%; background: var(--blanco); transition: transform var(--rapido); box-shadow: var(--sombra-baja); }
+  .interruptor input:checked { background: var(--eucalipto); }
+  .interruptor input:checked::after { transform: translateX(1.25rem); }
+  .interruptor input:focus-visible { outline: 3px solid var(--foco); outline-offset: 3px; }
+
+  /* Detalle de ejercicio: ilustración y texto en dos columnas en escritorio. */
+  .detalle { display: grid; gap: var(--e-5); }
+  .detalle-ilus { display: grid; gap: var(--e-2); align-content: start; }
+  .ilus-grande { border-radius: var(--r-l); }
+  .leyenda { display: flex; flex-wrap: wrap; align-items: center; gap: var(--e-1) var(--e-3); margin: 0; color: var(--tinta-suave); font-size: var(--t-xs); }
+  .leyenda span { display: inline-block; width: 1.4rem; height: 0.45rem; border-radius: var(--r-total); margin-right: 4px; vertical-align: middle; }
+  .muestra-gris { background: #9AABA4; }
+  .muestra-negra { background: var(--tinta); }
+  .muestra-flecha { background: var(--movimiento); }
+  .detalle-desc { font-size: var(--t-l); color: var(--tinta-suave); }
+  .detalle .pildoras { margin-bottom: var(--e-2); }
+  .detalle .pildora .ico { width: 1em; height: 1em; }
+  .pasos-numerados { list-style: none; counter-reset: paso; padding: 0; margin: 0; display: grid; gap: var(--e-3); }
+  .pasos-numerados li { counter-increment: paso; display: grid; grid-template-columns: 2.25rem 1fr; gap: var(--e-3); align-items: start; }
+  .pasos-numerados li::before { content: counter(paso); display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 50%; background: var(--menta); color: var(--eucalipto-oscuro); font-weight: 700; }
+  .dosis-detalle { margin-top: var(--e-4); padding: var(--e-3) var(--e-4); background: var(--niebla); border-radius: var(--r-m); }
+  .ico-enlace { display: inline; width: 0.85em; height: 0.85em; margin-left: 4px; vertical-align: -1px; }
+  @media (min-width: 62rem) {
+    .detalle { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: var(--e-7); align-items: start; }
+    .detalle-ilus { position: sticky; top: var(--e-4); }
+  }
+
   /* Rutina (lista provisional hasta la línea de tiempo) */
   .fase-titulo { display: flex; justify-content: space-between; align-items: baseline; gap: var(--e-4); }
   .fase-titulo span { color: var(--tinta-suave); font-size: var(--t-s); font-weight: 400; }

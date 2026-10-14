@@ -9,7 +9,8 @@ import {
   ETIQUETA_EXIGENCIA, ETIQUETA_POSICION, ETIQUETA_FASE, seccionPorId,
 } from './opciones.js';
 import * as P from './perfil.js';
-import { generarRutina } from './motor.js';
+import { generarRutina, calcularRestricciones, motivosIncompatibilidad, resultadoVigente } from './motor.js';
+import { dibujar } from './figura.js';
 import { leer, guardar, borrarTodo } from './almacen.js';
 
 const app = document.getElementById('app');
@@ -18,6 +19,8 @@ const cabecera = document.getElementById('cabecera');
 
 const estado = {
   catalogo: null,
+  ilustraciones: {},
+  filtros: { posicion: 'todo', fase: 'todo', compatibles: true, cuantos: 24 },
   nombre: leer('nombre', null),     // null = aún no se ha preguntado; '' = prefiere no decirlo
   perfil: P.cargarPerfil(leer('perfil')),
   resultado: leer('resultado'),     // última generación: { res, semilla, fecha }
@@ -201,6 +204,8 @@ function vistaInicio() {
       <ul class="pildoras">${pildorasPerfil(p)}</ul>
     </section>` : ''}
 
+    ${filaParaHoy()}
+
     <section aria-labelledby="t-posicion">
       <div class="seccion-cabecera"><h2 id="t-posicion">Explora por posición</h2><a href="#explorar">Ver todo</a></div>
       <ul class="mosaico">
@@ -224,6 +229,20 @@ function vistaInicio() {
       </div>
     </section>
   `);
+}
+
+// Ejercicios compatibles para curiosear desde el inicio (cambian cada día, no en cada visita).
+function filaParaHoy() {
+  const restr = restriccionesPerfil();
+  const dia = Math.floor(Date.now() / 864e5);
+  const lista = estado.catalogo.ejercicios
+    .filter((e) => visible(e) && incompatibilidades(e, restr).length === 0)
+    .map((e, i) => [((i + 1) * 2654435761 + dia * 97) % 1000, e]).sort((a, b) => a[0] - b[0]).slice(0, 8).map(([, e]) => e);
+  if (!lista.length) return '';
+  return `<section aria-labelledby="t-hoy">
+    <div class="seccion-cabecera"><h2 id="t-hoy">${restr ? 'Compatibles contigo' : 'Para empezar'}</h2><a href="#explorar">Ver todo</a></div>
+    <ul class="riel">${lista.map(tarjetaEjercicio).join('')}</ul>
+  </section>`;
 }
 
 // Solo se cuentan los ejercicios que la persona puede ver: los revisados, o todos en modo desarrollo.
@@ -456,12 +475,130 @@ function vistaRutinaVacia() {
     : '<button type="button" class="primario" data-accion="ir" data-ruta="perfil/posicion">Completar mi perfil</button>', null, { ancho: 'lectura' });
 }
 
-// Provisional: el catálogo visual llega en el paso 4 del rediseño.
-function vistaExplorar() {
+// --- Explorar y detalle ----------------------------------------------
+
+const POSICIONES_EXPLORAR = [['todo', 'Todo'], ['sentado', 'En la silla'], ['de_pie', 'De pie'], ['tumbado', 'En la cama'], ['suelo', 'En el suelo']];
+const FASES_EXPLORAR = [['todo', 'Todo'], ['calentamiento', 'Calentar'], ['principal', 'Fortalecer y mover'], ['calma', 'Estirar y calmar']];
+const POSICION_CORTA_EJ = { sentado: 'En la silla', de_pie: 'De pie', tumbado: 'En la cama', suelo: 'En el suelo' };
+const FASE_CORTA = { calentamiento: 'Calentar', principal: 'Fortalecer', calma: 'Estirar y calmar' };
+
+const perfilListo = () => P.validarPerfil(estado.perfil).length === 0;
+const restriccionesPerfil = () => (perfilListo() ? calcularRestricciones(estado.perfil) : null);
+const incompatibilidades = (e, restr) => (restr ? motivosIncompatibilidad(e, restr, { permitirBorrador: true }) : []);
+
+// Ilustración de un ejercicio. Si faltara su ficha, un recuadro neutro (nunca otra figura).
+function ilustracion(e, clase = '') {
+  const ficha = estado.ilustraciones[e.id];
+  return `<div class="ilus ${clase}">${ficha ? dibujar(ficha, e.nombre) : `<span class="suave pequeno">Ilustración no disponible</span>`}</div>`;
+}
+
+function tarjetaEjercicio(e) {
+  return `<li><a class="tarjeta-ej" href="#ejercicio/${e.id}">
+    <span class="tarjeta-ej-ilus">${ilustracion(e)}<span class="insignia insignia-tiempo">${icono('clock')}${mmss(e.duracion_estimada_seg)}</span></span>
+    <span class="tarjeta-ej-nombre">${escapar(e.nombre)}</span>
+    <span class="tarjeta-ej-meta">${e.posiciones.map((p) => POSICION_CORTA_EJ[p]).join(' o ')} · ${e.fases.map((f) => FASE_CORTA[f]).join(', ')}</span>
+    ${e.validacion.estado === 'borrador' ? '<span class="insignia insignia-borrador">Sin revisar</span>' : ''}
+  </a></li>`;
+}
+
+function vistaExplorar(arg) {
+  const f = estado.filtros;
+  // Desde el inicio se llega con un filtro ya elegido: #explorar/sentado, #explorar/calma…
+  if (arg && POSICIONES_EXPLORAR.some(([id]) => id === arg)) { f.posicion = arg; f.fase = 'todo'; }
+  if (arg && FASES_EXPLORAR.some(([id]) => id === arg)) { f.fase = arg; f.posicion = 'todo'; }
+  const visibles = estado.catalogo.ejercicios.filter(visible);
+  if (!visibles.length) {
+    pintar(`
+      <h1>Explorar</h1>
+      <div class="vacio">
+        ${icono('shield-check')}
+        <p><strong>El catálogo está en revisión.</strong></p>
+        <p class="suave">Cada ejercicio se compara con su fuente sanitaria antes de mostrarse. Hay ${estado.catalogo.ejercicios.length} pendientes.</p>
+        <a href="#acerca">Cómo revisamos el catálogo</a>
+      </div>`);
+    return;
+  }
+  const restr = restriccionesPerfil();
+  const usarCompat = Boolean(restr) && f.compatibles;
+  const lista = visibles.filter((e) => (f.posicion === 'todo' || e.posiciones.includes(f.posicion))
+    && (f.fase === 'todo' || e.fases.includes(f.fase))
+    && (!usarCompat || incompatibilidades(e, restr).length === 0));
+  const chip = (grupo, [id, texto], actual) => `<button type="button" class="chip" data-accion="filtro" data-grupo="${grupo}" data-valor="${id}" aria-pressed="${actual === id}">${texto}</button>`;
   pintar(`
-    <h1>Explorar</h1>
-    <div class="vacio">${icono('compass')}<p><strong>El catálogo visual está en construcción.</strong></p></div>
+    <div class="explorar-cabecera">
+      <h1>Explorar</h1>
+      <p class="suave sin-margen">${visibles.length} ejercicios${estado.desarrollo ? ', incluidos los que están sin revisar' : ''}.</p>
+    </div>
+    <div class="filtros" role="group" aria-label="Filtros">
+      ${restr ? `<label class="interruptor"><input type="checkbox" data-cambio="compatibles" ${f.compatibles ? 'checked' : ''}><span>Solo los compatibles con mi perfil</span></label>`
+        : '<p class="suave pequeno sin-margen">Completa tu perfil para ver solo los ejercicios compatibles contigo.</p>'}
+      <div class="chips" aria-label="Posición">${POSICIONES_EXPLORAR.map((o) => chip('posicion', o, f.posicion)).join('')}</div>
+      <div class="chips" aria-label="Momento de la rutina">${FASES_EXPLORAR.map((o) => chip('fase', o, f.fase)).join('')}</div>
+    </div>
+    <p class="suave pequeno" role="status">${lista.length === 1 ? '1 ejercicio' : `${lista.length} ejercicios`}</p>
+    ${lista.length ? `<ul class="rejilla-ej">${lista.slice(0, f.cuantos).map(tarjetaEjercicio).join('')}</ul>
+      ${lista.length > f.cuantos ? `<div class="centrado mas"><button type="button" data-accion="mas-ejercicios">Ver más (${lista.length - f.cuantos})</button></div>` : ''}`
+      : `<div class="vacio">${icono('compass')}<p><strong>Ningún ejercicio coincide con estos filtros.</strong></p>
+        <button type="button" data-accion="limpiar-filtros">Quitar filtros</button></div>`}
   `);
+}
+
+function textoMotivo(m) {
+  if (m.tipo === 'exigencia') return `exige ${ETIQUETA_EXIGENCIA[m.codigo]}`;
+  if (m.tipo === 'posicion') return `se hace ${ETIQUETA_POSICION[m.codigo]}`;
+  if (m.tipo === 'recurso') return `necesita ${RECURSOS.find((r) => r.id === m.codigo)?.texto.toLowerCase() || m.codigo}`;
+  return 'está sin revisar';
+}
+
+function vistaEjercicio(id) {
+  const e = ejercicio(id);
+  if (!e) return ir('explorar');
+  if (!visible(e)) {
+    pintar(`<h1>${escapar(e.nombre)}</h1>
+      <div class="vacio">${icono('shield-check')}<p><strong>Este ejercicio está pendiente de revisión.</strong></p>
+      <p class="suave">No mostramos sus instrucciones hasta compararlas con la fuente sanitaria.</p></div>`, '', 'explorar', { ancho: 'lectura' });
+    return;
+  }
+  const restr = restriccionesPerfil();
+  const motivos = incompatibilidades(e, restr).filter((m) => m.tipo !== 'sin_revisar');
+  const exige = Object.entries(e.exigencias).filter(([, v]) => v).map(([k]) => ETIQUETA_EXIGENCIA[k]);
+  const variantes = [...(e.variante_de ? [ejercicio(e.variante_de)] : []), ...estado.catalogo.ejercicios.filter((x) => x.variante_de === e.id)].filter((x) => x && visible(x));
+  const compat = !restr
+    ? `<div class="nota nota-neutra nota-con-icono">${icono('info-circle-fill')}<p>Completa tu perfil para saber si encaja contigo.</p></div>`
+    : motivos.length
+      ? `<div class="nota nota-aviso nota-con-icono">${icono('exclamation-triangle-fill')}<p><strong>No es compatible con tu perfil:</strong> ${escapar(motivos.map(textoMotivo).join('; '))}.</p></div>`
+      : `<div class="nota nota-exito nota-con-icono">${icono('check-circle-fill')}<p><strong>Compatible con tu perfil.</strong> No exige nada de lo que nos dijiste que evitas.</p></div>`;
+  pintar(`
+    <article class="detalle">
+      <div class="detalle-ilus">
+        ${ilustracion(e, 'ilus-grande')}
+        <p class="leyenda"><span class="muestra-gris"></span>Inicio <span class="muestra-negra"></span>Final <span class="muestra-flecha"></span>Movimiento</p>
+      </div>
+      <div class="detalle-texto">
+        ${e.validacion.estado === 'borrador' ? '<p><span class="insignia insignia-borrador">Sin revisar · solo en modo desarrollo</span></p>' : ''}
+        <h1>${escapar(e.nombre)}</h1>
+        <p class="detalle-desc">${escapar(e.descripcion)}</p>
+        <ul class="pildoras">
+          <li class="pildora">${icono('clock')}${mmss(e.duracion_estimada_seg)}</li>
+          ${e.posiciones.map((p) => `<li class="pildora">${POSICION_CORTA_EJ[p]}</li>`).join('')}
+          ${e.fases.map((f) => `<li class="pildora">${FASE_CORTA[f]}</li>`).join('')}
+        </ul>
+        ${compat}
+        <h2>Cómo se hace</h2>
+        <ol class="pasos-numerados">${e.instrucciones.map((t) => `<li>${escapar(t)}</li>`).join('')}</ol>
+        <p class="dosis-detalle"><strong>Cuánto:</strong> ${escapar(e.dosis)}</p>
+        <h2>Qué necesitas y qué exige</h2>
+        <p><strong>Material:</strong> ${e.recursos.length ? escapar(e.recursos.map((r) => RECURSOS.find((x) => x.id === r)?.texto || r).join('. ')) : 'Nada en especial.'}</p>
+        <p><strong>Exige:</strong> ${exige.length ? escapar(exige.join(', ')) : 'nada de la lista de restricciones de HealthMove'}.</p>
+        ${variantes.length ? `<h2>Variantes</h2><ul class="filas">${variantes.map((v) => fila(`ejercicio/${v.id}`, escapar(v.nombre), v.id === e.variante_de ? 'Versión de partida' : 'Otra versión')).join('')}</ul>` : ''}
+        <h2>Fuente</h2>
+        <p><a href="${escapar(e.fuente.url)}" rel="noopener">${escapar(e.fuente.titulo)}${icono('box-arrow-up-right', 'ico-enlace')}</a><br>
+          <span class="suave">${escapar(e.fuente.organizacion)}${e.fuente.especifica_de ? `. Material pensado para: ${escapar(e.fuente.especifica_de)}` : ''}.</span></p>
+        ${e.adaptaciones.length ? `<details class="nota nota-neutra"><summary>Cambios respecto a la fuente</summary><ul>${e.adaptaciones.map((a) => `<li>${escapar(a)}</li>`).join('')}</ul></details>` : ''}
+        <div class="nota nota-aviso"><p><strong>Para</strong> si notas dolor en el pecho, falta de aire intensa, mareo, o un dolor nuevo o que aumenta.</p></div>
+      </div>
+    </article>
+  `, '', 'explorar');
 }
 
 function vistaSinRutina(res) {
@@ -655,6 +792,7 @@ function router() {
     historial: vistaHistorial,
     acerca: vistaAcerca,
     explorar: () => vistaExplorar(arg),
+    ejercicio: () => vistaEjercicio(arg),
   };
   const clave = vistas[ruta] ? ruta : vistas[`${ruta}/${arg}`] ? `${ruta}/${arg}` : 'inicio';
   if (clave === 'inicio') estado.volverAResumen = false;
@@ -775,9 +913,21 @@ document.addEventListener('click', (ev) => {
       }
       break;
     case 'salir-desarrollo':
-      estado.desarrollo = false; guardar('desarrollo', false); actualizarFranjaDesarrollo(); router();
+      estado.desarrollo = false; guardar('desarrollo', false); actualizarFranjaDesarrollo();
+      descartarRutinaNoVigente();
+      router();
       break;
     case 'recargar': location.reload(); break;
+    case 'filtro':
+      estado.filtros[el.dataset.grupo] = el.dataset.valor;
+      estado.filtros.cuantos = 24;
+      if (location.hash === '#explorar') repintarConservandoFoco(() => vistaExplorar()); else ir('explorar');
+      break;
+    case 'mas-ejercicios': estado.filtros.cuantos += 24; repintarConservandoFoco(() => vistaExplorar()); break;
+    case 'limpiar-filtros':
+      Object.assign(estado.filtros, { posicion: 'todo', fase: 'todo', compatibles: false, cuantos: 24 });
+      repintarConservandoFoco(() => vistaExplorar());
+      break;
   }
 });
 
@@ -813,6 +963,7 @@ app.addEventListener('change', (ev) => {
       break;
     }
     case 'recurso': cambiarPerfil(P.alternarRecurso(p, el.value)); break;
+    case 'compatibles': estado.filtros.compatibles = el.checked; repintarConservandoFoco(() => vistaExplorar()); break;
     case 'duracion': cambiarPerfil(P.elegirDuracion(p, Number(el.value))); break;
     case 'declaracion':
       cambiarPerfil(el.checked ? P.confirmarDeclaracionGlobal(p) : { ...p, declaracionGlobal: false });
@@ -822,6 +973,13 @@ app.addEventListener('change', (ev) => {
 });
 
 // --- Arranque -----------------------------------------------------
+
+function descartarRutinaNoVigente() {
+  if (estado.resultado && !resultadoVigente(estado.resultado, { permitirBorrador: estado.desarrollo })) {
+    estado.resultado = null;
+    guardar('resultado', null);
+  }
+}
 
 function actualizarFranjaDesarrollo() {
   document.getElementById('aviso-desarrollo').hidden = !estado.desarrollo;
@@ -847,9 +1005,12 @@ async function arrancar() {
   if (params.has('desarrollo')) { estado.desarrollo = params.get('desarrollo') !== '0'; guardar('desarrollo', estado.desarrollo); }
   actualizarFranjaDesarrollo();
   try {
-    const r = await fetch('data/catalogo.json');
+    const [r, ri] = await Promise.all([fetch('data/catalogo.json'), fetch('data/ilustraciones.json').catch(() => null)]);
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     estado.catalogo = await r.json();
+    // Sin ilustraciones la app sigue funcionando: cada ejercicio muestra un recuadro neutro.
+    if (ri?.ok) estado.ilustraciones = await ri.json().catch(() => ({}));
+    descartarRutinaNoVigente();
   } catch (e) {
     pintar(`<h1>No pudimos cargar los ejercicios</h1><p>Comprueba tu conexión y vuelve a abrir la app. (${escapar(e.message)})</p>`,
       '<button type="button" class="primario" data-accion="recargar">Reintentar</button>');

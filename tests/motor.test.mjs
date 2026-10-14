@@ -163,3 +163,16 @@ test('perfil incompleto: no genera y explica qué falta', () => {
   assert.equal(res.motivo, 'perfil_incompleto');
   assert.ok(res.problemas.some((x) => x.codigo === 'aviso'));
 });
+
+test('una rutina con ejercicios sin revisar deja de valer fuera del modo desarrollo', async () => {
+  const { resultadoVigente } = await import('../public/js/motor.js');
+  const res = generarRutina(catalogoReal, perfilCompleto(), { permitirBorrador: true });
+  assert.equal(res.ok, true);
+  assert.equal(res.rutina.usaBorrador, true);
+  const guardado = { res, semilla: 1, fecha: '2026-10-14' };
+  assert.equal(resultadoVigente(guardado, { permitirBorrador: true }), true);
+  assert.equal(resultadoVigente(guardado, { permitirBorrador: false }), false);
+  // Un aviso de «no hay rutina» no contiene ejercicios: sigue siendo válido.
+  assert.equal(resultadoVigente({ res: { ok: false, motivo: 'catalogo_insuficiente' } }), true);
+  assert.equal(resultadoVigente(null), false);
+});
