@@ -22,6 +22,12 @@ Este registro lleva la cuenta de la auditoría documental hecha con la skill `au
    - No se generalizan sus instrucciones ni la procedencia se interpreta como validación clínica.
    - **Pendiente para la interfaz:** explicar a quién va dirigido el material y que el usuario puede considerar el ejercicio si las instrucciones y adaptaciones lo permiten, sin presentarlo como garantía de seguridad. El texto de la decisión llegó cortado; queda pendiente confirmar el final.
 
+4. **(Abierta) Manos que solo sirven de apoyo y `ambos_brazos`.** El caso de referencia del §7 («Elevar los talones sujetándose a la silla») no marca `ambos_brazos`, mientras que el criterio literal lo marcaría. Opciones:
+   - **A (recomendada):** las manos de apoyo no cuentan y se documenta «apoya una o las dos manos».
+   - **B:** se marca siempre.
+
+   Afecta a todos los ejercicios de pie con apoyo (ver el lote 5).
+
 ### Criterio operativo para `flexion_profunda_rodilla` (propuesta)
 
 - **Medida:** ángulo de la rodilla visto de lado, entre el muslo y la pierna. 0° es la pierna recta. Sentado con el pie bajo la rodilla son unos 90°.
@@ -57,9 +63,19 @@ Este registro lleva la cuenta de la auditoría documental hecha con la skill `au
 | 4 | activacion-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 4 | banda-remo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 4 | banda-curl-sentado | REQUIERE CORRECCIONES | pendiente |
+| 5 | sentarse-levantarse | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 5 | mini-sentadillas | LISTO con la opción A de la decisión 4 | pendiente |
+| 5 | elevacion-talones-apoyo | LISTO con la opción A de la decisión 4 | pendiente |
+| 5 | elevacion-talones-sin-apoyo | REQUIERE CORRECCIONES | pendiente |
+| 5 | elevacion-lateral-pierna | LISTO con la opción A de la decisión 4 | pendiente |
+| 5 | extension-pierna-atras | LISTO con la opción A de la decisión 4 | pendiente |
+| 5 | flexiones-pared | REQUIERE CORRECCIONES | pendiente |
+| 5 | equilibrio-una-pierna-pared | REQUIERE CORRECCIONES | pendiente |
+| 5 | inclinacion-lateral-de-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 5 | estiramiento-gemelo-pared | REQUIERE CORRECCIONES | pendiente |
 
 ## Pendientes
 
-- Auditados: 24 de 220. Siguiente lote: los 7 de NHS «Strength exercises» y sus páginas hermanas.
+- Auditados: 34 de 220. Siguiente: Royal Devon, St Helens, Royal Berkshire Stage 1 y NHS Forth Valley.
 - Lista de candidatos a adaptación unilateral: ver los resúmenes de los lotes 1, 3 y 4.
 - Tarea de interfaz pendiente: comunicar `especifica_de` (decisión 3).
