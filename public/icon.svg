@@ -1,8 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="112" fill="#14161c"/>
-  <!-- Marca MV10: M trazada + acento ámbar -->
-  <g fill="none" stroke="#ffc400" stroke-width="34" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M120 360V150l76 150 76-150v210"/>
-  </g>
-  <circle cx="352" cy="128" r="22" fill="#ffc400"/>
+  <rect width="512" height="512" rx="112" fill="#1F6F5C"/>
+  <circle cx="300" cy="140" r="44" fill="#FFFFFF"/>
+  <path d="M168 404c18-74 52-124 104-150m0 0c34-17 66-14 96 10m-96-10l-6 150" stroke="#FFFFFF" stroke-width="40" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M120 300c40-24 84-36 132-38" stroke="#BFE3D6" stroke-width="28" fill="none" stroke-linecap="round"/>
 </svg>
