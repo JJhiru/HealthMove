@@ -164,7 +164,7 @@ Para cada clave:
   - No inventes ángulos, cargas, apoyos ni movimientos.
   - El contacto no demuestra carga ni agarre.
   - No fijes umbrales numéricos nuevos: usa los de la especificación (rodilla, más de 90°, como ángulo aproximado entre muslo y pierna en vista lateral).
-  - Si el caso depende de un umbral sin formalizar («inclinación leve», **Q3**), identifícalo como pendiente.
+  - «Inclinación leve» (**Q3**, resuelta; protocolo R7.8): si la fuente no da un ángulo, conserva su término original («slightly», «un poco») y no inventes un umbral. Si da un ángulo, úsalo atribuyéndolo a la fuente. Cualquier otro umbral sin formalizar se identifica como pendiente.
 
 Si incluso aplicando el criterio conservador falta información, explica la incertidumbre y no la ocultes mediante una certeza artificial.
 

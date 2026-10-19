@@ -10,12 +10,10 @@
 //    node scripts/disponibilidad.mjs [--perfiles <archivo.json>]
 //        [--escenario <archivo.json>] [--sin-borradores] [--json]
 //
-//  Perfiles por defecto: las dos familias que R9.1 define por
-//  completo («cada opción de opciones.js sola» y «cada posición de
-//  POSICION»), sobre el perfil base que se imprime. Las otras dos
-//  («posición con dos opciones», «solo sentado con tres opciones»)
-//  no están fijadas: se pasan con --perfiles hasta que se apruebe la
-//  lista (decisión D10 del triage).
+//  Perfiles por defecto: los de R9.1, sobre el perfil base que se
+//  imprime: cada posición de POSICION, cada opción de opciones.js
+//  sola, y la lista fija de combinaciones (registro.md, 2026-10-19,
+//  P6). --perfiles añade otros.
 //
 //  --perfiles: [{ "nombre", "posicion", "opciones": [ids], "cama",
 //               "suelo", "recursos": [ids] }]; lo que falte se toma
@@ -69,11 +67,22 @@ export function construirPerfil(def) {
   return P.elegirDuracion(p, 15);
 }
 
-// Las dos familias de R9.1 que están definidas por completo.
+// Combinaciones fijas de R9.1 (registro.md, 2026-10-19, P6).
+export const COMBINACIONES_R91 = Object.freeze([
+  ['de_pie_apoyo', ['un_brazo']],
+  ['de_pie_apoyo', ['cerrar_mano']],
+  ['de_pie_apoyo', ['peso_manos']],
+  ['de_pie_apoyo', ['equilibrio']],
+  ['solo_sentado', ['un_brazo', 'cerrar_mano', 'brazo_arriba']],
+  ['solo_sentado', ['un_brazo', 'cerrar_mano', 'peso_manos']],
+]);
+
+// Todos los perfiles de R9.1: cada posición, cada opción sola y las combinaciones fijas.
 export function perfilesR91() {
   const porPosicion = POSICION.map((o) => ({ nombre: `posición: ${o.id}`, posicion: o.id }));
   const porOpcion = SECCIONES.flatMap((s) => s.opciones.map((o) => ({ nombre: `${s.id}: ${o.id}`, opciones: [o.id] })));
-  return [...porPosicion, ...porOpcion];
+  const combinados = COMBINACIONES_R91.map(([posicion, opciones]) => ({ nombre: `${posicion} + ${opciones.join(' + ')}`, posicion, opciones }));
+  return [...porPosicion, ...porOpcion, ...combinados];
 }
 
 // Aplica un escenario a una copia del catálogo. Rechaza ids, exigencias o valores que no existan.
@@ -164,7 +173,7 @@ function main(args) {
     modo: opciones.permitirBorrador ? 'auditoría (incluye borradores): NO es la disponibilidad real' : 'solo ejercicios aprobados',
     catalogo: { version: catalogo.version, ...versionCatalogo() },
     perfilBase: BASE,
-    perfilesSinFijar: 'posición con dos opciones; solo sentado con tres opciones (D10)',
+    perfiles: `R9.1 (registro.md, 2026-10-19, P6)${extra.length ? ` + ${extra.length} de --perfiles` : ''}`,
     escenario: escenario ? { descripcion: escenario.descripcion ?? '', supuestos: escenario.supuestos ?? [], cambios: escenario.cambios.length } : null,
   };
   if (opciones.json) return console.log(JSON.stringify({ condiciones, resultados }, null, 2));
@@ -172,7 +181,7 @@ function main(args) {
   console.log(`Modo: ${c.modo}`);
   console.log(`Catálogo: v${c.catalogo.version}, commit ${c.catalogo.commit}, blob ${c.catalogo.blob}${c.catalogo.sinConfirmar ? ', CON CAMBIOS SIN CONFIRMAR' : ''}`);
   console.log(`Perfil base: ${JSON.stringify(BASE)}`);
-  console.log(`Perfiles de R9.1 sin fijar: ${c.perfilesSinFijar}`);
+  console.log(`Perfiles: ${c.perfiles}`);
   if (c.escenario) console.log(`Escenario: ${c.escenario.descripcion} · ${c.escenario.cambios} cambios · supuestos: ${c.escenario.supuestos.join(' | ') || '—'}`);
   const fila = (m) => `${m.total} (${FASES.map((f) => `${f.slice(0, 5)} ${m.porFase[f]}`).join(', ')}; de pie ${m.porPosicion.de_pie})`;
   for (const r of resultados) {

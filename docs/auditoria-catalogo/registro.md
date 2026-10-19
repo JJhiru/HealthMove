@@ -161,3 +161,25 @@ Responden a las propuestas P1 a P4 de `propuestas-2026-10-18.md`. Ninguna cambia
    - La copia vigente de `auditar-catalogo-ejercicios` es la de `desarrollo-v1`. Se ha añadido al índice de la rama junto con `CLAUDE.md`, sin commit.
    - La copia antigua de `main` (2026-10-14, anterior al protocolo) se apartó de forma reversible a `.claude/apartado-2026-10-18/auditar-catalogo-ejercicios/` en la copia de trabajo de `main`. SHA-256 de `SKILL.md`: `e2dd75e8fb77dbfac4f273f1bbf8265ccc3a66b703a660c2e3b042553f8ee985`.
    - Para deshacerlo: `mv -n ~/Escritorio/HealthMove/.claude/apartado-2026-10-18/auditar-catalogo-ejercicios ~/Escritorio/HealthMove/.claude/skills/`.
+
+## Decisiones del desarrollador (2026-10-19)
+
+Responden a las decisiones pendientes del informe `deepseek/analisis-claude/sesion-autonoma-2026-10-19.md` §8. El desarrollador las aprobó todas («De acuerdo con todas las decisiones»), con autorización explícita para versionar y seguir. **Ninguna cambia el catálogo ni aprueba ejercicios.** Quedan fuera: D2 (Q2) y D3 (Q1), porque el informe preguntaba qué opción adoptar sin proponer ninguna; y V7/DS-59, que no se ha autorizado registrar.
+
+5. **P5 · Q3, «inclinación leve» (D11):**
+   - Texto de la decisión (literal, tomado de `deepseek/fases/fase-01-protocolo.md`): «Si la fuente no proporciona un ángulo exacto, debe conservarse el término original y no inventarse un umbral numérico. Si la fuente proporciona un ángulo exacto, puede utilizarse en la explicación con atribución a la fuente.»
+   - Se incorpora al protocolo (R7.8 y §13, Q3 resuelta) y a la especificación (§4).
+   - No cambia ninguna etiqueta. La familia `sentarse-levantarse` necesita un plan de cambios: la base y la variante «sin manos» dicen «slightly» en sus fuentes y tienen `inclinacion_tronco` opuesto (`deepseek/analisis-claude/evidencia-fuentes-q1-q2.md` §4 ter).
+6. **P6 · Perfiles fijos de R9.1 (D10):**
+   - La herramienta de disponibilidad ya estaba aprobada (decisión recogida en `deepseek/fases/fase-01-protocolo.md`: «desarrollar una herramienta que analice el impacto de cambios de etiquetas antes de modificar el catálogo… sin alterar datos ni decidir por sí sola que un cambio es correcto»). Es `scripts/disponibilidad.mjs`.
+   - «Posición con dos opciones»: `de_pie_apoyo` + `un_brazo`; `de_pie_apoyo` + `cerrar_mano`; `de_pie_apoyo` + `peso_manos`; `de_pie_apoyo` + `equilibrio`.
+   - «Solo sentado con tres opciones»: `solo_sentado` + `un_brazo` + `cerrar_mano` + `brazo_arriba`; `solo_sentado` + `un_brazo` + `cerrar_mano` + `peso_manos`.
+   - Todos sobre el perfil base que imprime la herramienta (de pie sin sujetarse, cama y suelo sí, todos los recursos).
+7. **P7 · Ediciones del protocolo sin cambio de criterio:**
+   - El estado de la herramienta de disponibilidad en el §9 y el §14.
+   - DS-06: las citas de `app.js:621` pasan a citar la función (`vistaEjercicio`), que no se mueve con cada cambio del archivo.
+   - DS-18: R7.9 remite al procedimiento comprobado de `herramientas.md` (`pdftotext -layout` y `pdftoppm`).
+8. **P8 · Versionado:**
+   - `93b2866`: el trabajo de la aplicación (validación centralizada, Grupos 1 y 2).
+   - `078e3ce`: el conjunto de la auditoría (`herramientas.md` §4), con la auditoría con DeepSeek y la herramienta de disponibilidad.
+   - Fuera: `CONTEXTO_CONTINUIDAD_CHATGPT.md` y la configuración de Obsidian.

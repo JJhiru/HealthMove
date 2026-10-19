@@ -192,8 +192,9 @@ Una adaptación solo es válida si cumple **las cinco**:
   - Discrepancias conocidas: `estiramiento-pecho-sentado` (`sentado.mjs:10`), `banda-curl-sentado` (`sentado.mjs:33`) y `equilibrio-una-pierna-pared` (`depie.mjs:18`).
 - **R7.8.** No se fijan umbrales numéricos nuevos.
   - Se usan los de la especificación: rodilla «más de 90°» (§4), evaluada como ángulo aproximado entre muslo y pierna en vista lateral (decisión 2 del registro).
-  - Si un caso depende de un umbral sin formalizar, se identifica el criterio pendiente y no se inventa una cifra. Es el caso de «inclinación leve» (§4): la especificación promete una frase de referencia que no existe (cuestión **Q3**).
-- **R7.9.** Para PDF a varias columnas, se renderiza la página y se contrasta con el texto extraído. En el lote 2, la extracción mezcló las columnas.
+  - Si un caso depende de un umbral sin formalizar, se identifica el criterio pendiente y no se inventa una cifra.
+  - «Inclinación leve» (§4 de la especificación; Q3, resuelta): si la fuente no da un ángulo exacto, se conserva el término original de la fuente y no se inventa un umbral numérico. Si lo da, puede usarse en la explicación atribuyéndolo a la fuente (`registro.md`, 2026-10-19, P5).
+- **R7.9.** Para PDF a varias columnas, se renderiza la página y se contrasta con el texto extraído. En el lote 2, la extracción mezcló las columnas. Procedimiento comprobado: `herramientas.md`, apartado 1 (`pdftotext -layout` y `pdftoppm`).
 
 ---
 
@@ -268,6 +269,7 @@ Comprobado en `public/js/app.js`:
 
 - **R9.1.** Todo plan de cambios de etiquetas incluye el impacto en la disponibilidad: los ejercicios compatibles por fase para un conjunto fijo de perfiles, antes y después.
   - **Perfiles:** cada opción de `opciones.js` sola; cada posición de `POSICION`; posición con dos opciones; «solo sentado» con tres opciones.
+  - **Lista fija** (`registro.md`, 2026-10-19, P6), sobre el perfil base de la herramienta: «posición con dos opciones» son `de_pie_apoyo` con `un_brazo`, con `cerrar_mano`, con `peso_manos` y con `equilibrio`; «solo sentado con tres opciones» son `solo_sentado` + `un_brazo` + `cerrar_mano` + `brazo_arriba` y `solo_sentado` + `un_brazo` + `cerrar_mano` + `peso_manos`.
 - **R9.2.** Cada medición declara sus condiciones:
   - si es **modo auditoría**, con los ejercicios en `borrador` incluidos (`permitirBorrador: true`);
   - si usa **supuestos de texto**, como identificar los ejercicios «con apoyo» por palabras clave;
@@ -275,7 +277,7 @@ Comprobado en `public/js/app.js`:
   Una medición en modo auditoría **no** es la disponibilidad real. Fuera del modo desarrollo, el motor no usa ningún ejercicio en `borrador`, y hoy lo están los 220.
 - **R9.3.** La disponibilidad es información para decidir, nunca un motivo para retirar una etiqueta. Una marca conservadora costosa se revisa buscando evidencia (R2.2), no se quita.
 - **R9.4.** Las mediciones no son disponibilidad clínica ni idoneidad para nadie: son recuentos del motor sobre etiquetas documentales.
-- **Estado de la herramienta:** no hay un script del proyecto para esto. Existe un prototipo fuera del repositorio, en el directorio temporal de la sesión. Incorporarlo a `scripts/` es una propuesta pendiente (apartado 14).
+- **Herramienta:** `node scripts/disponibilidad.mjs` (desde el 2026-10-19; `registro.md`, P6). Mide por defecto todos los perfiles de R9.1, declara las condiciones de R9.2 y, con `--escenario`, aplica en memoria los cambios de un plan para dar el antes y el después. No modifica datos ni decide si un cambio es correcto. Detalle en `herramientas.md`.
 - **No hay umbral de aviso aprobado.** Se informa sin umbral.
 
 ---
@@ -329,7 +331,7 @@ Comprobado en `public/js/app.js`:
   - Se escribe como un nombre breve de población, coherente con los valores existentes («párkinson», «amputación por debajo de la rodilla», «dolor lumbar»…).
   - Si la fuente adapta un paso a una situación concreta (por ejemplo, «la pierna que queda» en Leicester) y HealthMove lo generaliza, eso es una **adaptación** y va a `adaptaciones`, no dentro de `especifica_de`.
 - **R8.2.** La población de la fuente **no** es un criterio de compatibilidad.
-  - El motor no lee `especifica_de`; solo lo muestra `app.js:621`.
+  - El motor no lee `especifica_de`; solo lo muestra `vistaEjercicio` (`app.js`).
   - La compatibilidad individual depende únicamente de las restricciones del perfil, las exigencias, las posiciones, los recursos y el estado de validación (§8 de la especificación).
   - La auditoría no usa `especifica_de` para marcar ni desmarcar exigencias.
 - **R8.3.** En los informes y en cualquier texto propuesto debe quedar claro:
@@ -395,12 +397,12 @@ Son las cuestiones que este protocolo no resuelve. Mientras sigan abiertas, **no
 |---|---|---|---|
 | **Q1** | ¿`ambos_brazos` en el **apoyo bilateral para estabilidad**? Ejemplo: «Rest your hands on the back of a chair for stability» (NHS) en ejercicios de pie | DG-4 pide analizar la función, y DG-2 permite el `true` conservador si hay duda. Aplicando las dos sin más criterio, la duda acabaría siempre en `true`. **Medición en modo auditoría** (220 ejercicios en borrador; los «con apoyo» identificados por búsqueda de texto; 2026-10-14): para el perfil «Solo puedo usar un brazo» + «Puedo estar de pie solo si me sujeto a algo», los ejercicios de pie compatibles serían 31 si el apoyo no cuenta, 20 si solo cuenta cuando además hay `una_pierna`, y 0 si cuenta siempre | Valor actual sin cambios. Los casos se registran como CN |
 | **Q2** | **Contacto sin evidencia de cierre de la mano:** ¿`agarre` en `true` conservador (R2.1) o no (R7.4)? Ejemplo: «manos en el respaldo», con `agarre` en true en el catálogo | R7.4 prohíbe inferir el agarre del contacto, y R2.1 permite marcar ante la duda. **Propuesta del auditor:** si la instrucción de HealthMove pide expresamente la palma abierta y eso cumple DG-3, `false`; si la instrucción es neutra, `true` conservador con su nota, sin presentarlo como un agarre observado | Valor actual sin cambios |
-| **Q3** | **Umbral de «inclinación leve»** (§4): la especificación promete una frase de referencia que no existe | R7.8 prohíbe inventar una cifra. Afecta a `sentarse-levantarse`: el NHS dice «Lean slightly forwards» en el paso A y la foto del paso B muestra más inclinación | `inclinacion_tronco` de ese ejercicio, pendiente |
+| **Q3** | **Umbral de «inclinación leve»** (§4): la especificación promete una frase de referencia que no existe | **Resuelta** (`registro.md`, decisiones del 2026-10-19, P5): sin ángulo en la fuente, se conserva su término original y no se inventa un umbral; con ángulo, puede usarse atribuyéndolo a la fuente (R7.8) | Sin cambio de etiquetas. La familia `sentarse-levantarse` necesita un plan: el NHS («Lean slightly forwards», con una foto del paso B que muestra más inclinación) y Later Life Training («Lean forwards slightly») dicen lo mismo y las etiquetas difieren |
 | **Q4** | **El §7 de la especificación no dice que sus casos de referencia sean ilustrativos** (DG-1), y dos filas llevan «—» | Editar la especificación está fuera del alcance de esta fase | Este protocolo aplica DG-1. Se propone añadir al §7 una frase como «Los casos de referencia ilustran la aplicación de las definiciones; no son exhaustivos» |
 | **Q5** | **Prueba operativa de R3.1** (el subconjunto de ejecuciones que permite la fuente) | Concreta DG-3.1, pero el texto aprobado no la menciona | Se aplica como criterio de revisión. Si no se confirma, cada adaptación se presenta con su justificación individual |
 | **Q6** | **Dónde vive la skill.** La original está sin seguimiento en la copia de trabajo de `main`. Se ha creado una versión actualizada en `desarrollo-v1`; la de `main` no se ha tocado | **Resuelta** (`registro.md`, decisiones del 2026-10-18, P4): la copia vigente es la de `desarrollo-v1`. La de `main` se apartó de forma reversible a `.claude/apartado-2026-10-18/` | Sin efecto en los datos. Falta versionarla junto con sus dependencias (lista en `herramientas.md`) |
 | **Q7** | **Incertidumbres visibles para el usuario** (DG-8): el catálogo las guarda en `notas_etiquetado`, que la interfaz no muestra | Mostrarlas sería un cambio de interfaz, y quizá de esquema si se quisieran estructuradas | Quedan en la documentación de auditoría y en `notas_etiquetado` |
-| **Q8** | **Interfaz pendiente.** (a) Rótulo `ETIQUETA_EXIGENCIA.ambos_brazos` («usar los dos brazos a la vez», `opciones.js:103`), que contradice DG-4 cuando los brazos se alternan. (b) Mensaje de procedencia (`app.js:621`). (c) Propuestas del apartado 8.4 | Fuera del alcance de esta fase | El rótulo debe cambiarse antes o junto con los cambios de datos de `ambos_brazos`. Para (b), la intención del mensaje está aprobada como aclaración (`registro.md`, 2026-10-18, P2). El texto de interfaz está propuesto en `propuestas-cierre-protocolo.md`, sin implementar |
+| **Q8** | **Interfaz pendiente.** (a) Rótulo `ETIQUETA_EXIGENCIA.ambos_brazos` («usar los dos brazos a la vez», `opciones.js:103`), que contradice DG-4 cuando los brazos se alternan. (b) Mensaje de procedencia (`vistaEjercicio`, en `app.js`). (c) Propuestas del apartado 8.4 | Fuera del alcance de esta fase | El rótulo debe cambiarse antes o junto con los cambios de datos de `ambos_brazos`. Para (b), la intención del mensaje está aprobada como aclaración (`registro.md`, 2026-10-18, P2). El texto de interfaz está propuesto en `propuestas-cierre-protocolo.md`, sin implementar |
 
 **Correspondencia con las decisiones pendientes de `consolidacion-lotes-1-5.md`:**
 
@@ -420,8 +422,7 @@ Son las cuestiones que este protocolo no resuelve. Mientras sigan abiertas, **no
 | Propuesta | Tipo | Motivo para no hacerla ahora |
 |---|---|---|
 | Huella por ejercicio y registro del identificador git del catálogo en los informes | Proceso o herramienta | Identificador git: disponible en `node scripts/auditoria.mjs cabecera` (2026-10-18). Huellas de compatibilidad, contenido y auditoría: definidas como propuesta (`registro.md`, 2026-10-18, P3; texto en `propuestas-cierre-protocolo.md`), sin implementar. Hoy solo existe una huella literal provisional |
-| Script de impacto en la disponibilidad en `scripts/` | Herramienta | Alcance |
-| Frases de umbral en el §4 y aclaración de DG-1 en el §7 de la especificación | Documentación de producto | La especificación queda fuera de esta fase (Q3, Q4) |
+| Frase de umbral de la rodilla en el §4 y aclaración de DG-1 en el §7 de la especificación | Documentación de producto | Q4. La de «inclinación leve» ya está incorporada (Q3, resuelta) |
 | Fichas por fuente en `docs/auditoria-catalogo/fuentes/` | Documentación de auditoría | Se crearán al auditar cada fuente, no por adelantado |
 | Campo estructurado de población o de incertidumbres | Esquema | No hace falta mientras `fuente.especifica_de` y `notas_etiquetado` basten (Q7) |
 | Cambios de interfaz (Q8) | Interfaz | Alcance |
@@ -434,3 +435,4 @@ Son las cuestiones que este protocolo no resuelve. Mientras sigan abiertas, **no
 |---|---|---|
 | 2026-10-16 | 1.0 | Primera versión. Formaliza DG-1 a DG-8 a partir de la propuesta y de la revisión crítica |
 | 2026-10-18 | 1.0 | Sin cambios normativos. Estado de Q6 (resuelta, P4) y Q8(b) (aclaración aprobada, P2). Estado de las herramientas en 10.2 y §14. Los cambios normativos pendientes están en `propuestas-cierre-protocolo.md` |
+| 2026-10-19 | 1.0 | Q3 resuelta (P5), dentro de R7.8, que ya prohibía inventar umbrales. Lista fija de perfiles de R9.1 y herramienta de disponibilidad (P6). Citas de `app.js` por función (DS-06) y procedimiento de R7.9 (DS-18) (P7). Se mantiene la versión 1.0: no cambia ningún criterio aprobado, y la 1.1 está reservada para `propuestas-cierre-protocolo.md` |

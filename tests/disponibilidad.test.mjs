@@ -10,7 +10,7 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { SECCIONES, POSICION } from '../public/js/opciones.js';
 import { calcularRestricciones, esCompatible } from '../public/js/motor.js';
-import { analizar, aplicarEscenario, medir, perfilesR91, construirPerfil, EntradaInvalida } from '../scripts/disponibilidad.mjs';
+import { analizar, aplicarEscenario, medir, perfilesR91, construirPerfil, EntradaInvalida, COMBINACIONES_R91 } from '../scripts/disponibilidad.mjs';
 import { ejercicioFalso, catalogoFalso, catalogoReal } from './ayudas.mjs';
 
 const SCRIPT = fileURLToPath(new URL('../scripts/disponibilidad.mjs', import.meta.url));
@@ -30,11 +30,18 @@ const cat = () => catalogoFalso([
   ejercicioFalso('borr', { estado: 'borrador' }),
 ]);
 
-test('R9.1: un perfil por posición y uno por cada opción, sin inventar los que no están fijados', () => {
+test('R9.1: un perfil por posición, uno por opción y la lista fija de combinaciones (registro, P6)', () => {
   const opciones = SECCIONES.reduce((n, s) => n + s.opciones.length, 0);
   const perfiles = perfilesR91();
-  assert.equal(perfiles.length, POSICION.length + opciones);
-  assert.ok(perfiles.every((p) => !p.opciones || p.opciones.length === 1), 'cada perfil de opción cambia una sola opción');
+  assert.equal(perfiles.length, POSICION.length + opciones + COMBINACIONES_R91.length);
+  const combinados = perfiles.filter((p) => p.opciones?.length > 1);
+  // «Posición con dos opciones»: de_pie_apoyo + una opción; «solo sentado con tres opciones».
+  const dos = perfiles.filter((p) => p.posicion === 'de_pie_apoyo' && p.opciones?.length === 1);
+  assert.equal(dos.length, 4);
+  assert.equal(combinados.length, 2);
+  assert.ok(combinados.every((p) => p.posicion === 'solo_sentado' && p.opciones.length === 3));
+  // Todas las combinaciones se pueden construir: posiciones y opciones existen.
+  for (const p of perfiles) assert.doesNotThrow(() => construirPerfil(p), p.nombre);
 });
 
 test('las cuentas coinciden con el motor, por fase y por posición', () => {

@@ -12,13 +12,13 @@ Las reglas de la auditoría están en `protocolo.md`. Estas herramientas no las 
 | `node scripts/auditoria.mjs validar [informe.md …]` | Comprueba los informes `lote-*.md` (o los indicados) y `registro.md` frente al catálogo y al protocolo. Sale con 1 si hay errores | Nada |
 | `node scripts/auditoria.mjs comparar <A> <B>` | Diferencias por ejercicio entre dos versiones de un informe (ruta o `<revisión>:<ruta>`) | Nada |
 | `node scripts/auditoria.mjs cabecera [id …]` | Datos de la cabecera de un informe y la huella literal provisional de cada ejercicio | Nada |
-| `node scripts/disponibilidad.mjs [--perfiles <json>] [--escenario <json>] [--sin-borradores] [--json]` | Impacto en la disponibilidad (protocolo §9): ejercicios compatibles por fase y por posición con el motor real, para los perfiles de R9.1 que están definidos por completo (cada posición y cada opción sola, sobre un perfil base que se imprime) y los que se pasen con `--perfiles`. Con `--escenario`, aplica cambios de etiquetas **en memoria** y muestra el antes, el después y los ids que se pierden o se ganan. Declara las condiciones de R9.2 (modo auditoría, supuestos del escenario, commit y blob del catálogo) | Nada |
+| `node scripts/disponibilidad.mjs [--perfiles <json>] [--escenario <json>] [--sin-borradores] [--json]` | Impacto en la disponibilidad (protocolo §9): ejercicios compatibles por fase y por posición con el motor real, para todos los perfiles de R9.1 (cada posición, cada opción sola y la lista fija de combinaciones, sobre un perfil base que se imprime) y los que se pasen con `--perfiles`. Con `--escenario`, aplica cambios de etiquetas **en memoria** y muestra el antes, el después y los ids que se pierden o se ganan. Declara las condiciones de R9.2 (modo auditoría, supuestos del escenario, commit y blob del catálogo) | Nada |
 
 Una entrada no válida termina con el código 2 y un mensaje de una línea, sin traza.
 
 **`disponibilidad.mjs`, añadida el 2026-10-19** a partir de la decisión del desarrollador recogida en `deepseek/fases/fase-01-protocolo.md` («desarrollar una herramienta que analice el impacto de cambios de etiquetas antes de modificar el catálogo… sin alterar datos ni decidir por sí sola que un cambio es correcto»):
-- **No fija la lista de perfiles de R9.1.** «Posición con dos opciones» y «solo sentado con tres opciones» quedan pendientes de D10 (triage) y se pasan con `--perfiles`.
-- **El texto del protocolo §9** («no hay un script del proyecto para esto») sigue sin actualizar: editarlo requiere autorización.
+- **Perfiles de R9.1:** mide por defecto la lista fija aprobada el 2026-10-19 (`registro.md`, P6; protocolo R9.1): cada posición, cada opción sola, cuatro combinaciones de `de_pie_apoyo` con una opción y dos de `solo_sentado` con tres. `--perfiles` añade otros.
+- **Protocolo §9 y §14:** actualizados el 2026-10-19 (P7).
 - **Reproducción de DS-66** (Q1, perfil `de_pie_apoyo` + `un_brazo`, ejercicios de pie, modo auditoría): 31 sin cambios; 0 si el apoyo cuenta siempre como `ambos_brazos`; 20 si solo cuenta cuando además hay `una_pierna`. Supuesto de texto declarado: «con apoyo» = `de_pie` y `equilibrio_sin_apoyo: false`.
 - **Pruebas:** `tests/disponibilidad.test.mjs` (9). Se hicieron dos mutaciones a mano: si el escenario modifica el catálogo recibido, falla 1 test; si el modo por omisión excluye los borradores, fallan 3.
 

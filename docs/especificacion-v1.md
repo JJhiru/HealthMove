@@ -64,6 +64,11 @@ movimiento o vuelta).
 Los umbrales "inclinación leve" y "90°" se fijan con una frase de referencia por umbral y se
 aplican igual en todo el catálogo. No son medidas clínicas.
 
+"Inclinación leve" no tiene cifra: si la fuente no da un ángulo exacto, se conserva su término
+original (por ejemplo, "lean slightly forwards") y no se inventa un umbral numérico; si lo da,
+puede usarse en la explicación atribuyéndolo a la fuente (registro de la auditoría, decisiones
+del 2026-10-19, P5).
+
 ### Exclusiones del catálogo v1 (ningún ejercicio las incluye)
 
 Movimientos de cuello · arrodillarse o apoyar las rodillas en el suelo · desplazarse por el
