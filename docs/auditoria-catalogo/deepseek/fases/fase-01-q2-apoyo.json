@@ -1,0 +1,18 @@
+{
+  "id": "fase-01-q2-apoyo",
+  "titulo": "Segunda consulta acotada: definición documental de Q2 (contacto, apoyo, carga y prensión) y significado real de la opción de_pie_apoyo",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-01-q2-apoyo.md",
+  "bloques": [
+    { "id": "protocolo", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/protocolo.md" },
+    { "id": "especificacion", "tipo": "archivo", "ruta": "docs/especificacion-v1.md" },
+    { "id": "registro", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/registro.md" },
+    { "id": "opciones-js", "tipo": "archivo", "ruta": "public/js/opciones.js" },
+    { "id": "validacion-js", "tipo": "archivo", "ruta": "public/js/validacion.js" },
+    { "id": "motor-js", "tipo": "archivo", "ruta": "public/js/motor.js" },
+    { "id": "catalogo-esquema", "tipo": "catalogo-esquema" },
+    { "id": "catalogo-de-pie", "tipo": "catalogo-de-pie" },
+    { "id": "fase-01-respuesta-bloque1", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261019T001226Z-fase-01-protocolo/respuesta.md" },
+    { "id": "fase-01-respuesta-bloque2", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261019T001508Z-fase-01-protocolo-bloque2/respuesta.md" }
+  ]
+}

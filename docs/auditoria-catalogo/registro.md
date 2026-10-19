@@ -12,6 +12,9 @@ Este registro lleva la cuenta de la auditoría documental hecha con la skill `au
    - Cuando una adaptación a un solo brazo cambie de forma relevante la ejecución, las instrucciones o la ilustración, se valora un ejercicio derivado independiente, con id, instrucciones e ilustración propias y enlazado al original con `variante_de`.
    - No se crea una copia por cada adaptación posible.
    - **Antes de crearlos hay que presentar una propuesta:** ids afectados, variantes sugeridas, diferencias y fuente que respalda cada cambio.
+   - **Estado (2026-10-16):** matizada por DG-5 y DG-4.
+     - Un ejercicio derivado solo se crea si una fuente lo describe. Sin fuente, se registra como propuesta pendiente de validación.
+     - `ambos_brazos` se evalúa según la función real de los brazos (protocolo, apartados 5.2 y 7).
 2. **Umbral de 90° de la rodilla:**
    - Referencia operativa reproducible: el ángulo aproximado entre muslo y pierna, visto de lado.
    - Hay que documentar cómo se evalúan los casos ambiguos, sin inventar precisión cuando la fuente no permita determinar el ángulo.
@@ -21,6 +24,10 @@ Este registro lleva la cuenta de la auditoría documental hecha con la skill `au
    - En los dos que hablan de «la pierna que queda» se añade también esa condición.
    - No se generalizan sus instrucciones ni la procedencia se interpreta como validación clínica.
    - **Pendiente para la interfaz:** explicar a quién va dirigido el material y que el usuario puede considerar el ejercicio si las instrucciones y adaptaciones lo permiten, sin presentarlo como garantía de seguridad. El texto de la decisión llegó cortado; queda pendiente confirmar el final.
+   - **Corrección (2026-10-16):**
+     - El folleto de Leicester aporta **11** ejercicios al catálogo, no 8 (lista en `consolidacion-lotes-1-5.md`, 2.1).
+     - Solo `estiramiento-isquiotibiales-sentado` habla de «la pierna que queda». `inclinacion-lateral-brazo-arriba` menciona la amputación solo como motivo del estiramiento.
+     - Según el protocolo (R8.1), `especifica_de` lleva solo la población; la generalización «con cada pierna» va a `adaptaciones`.
 
 4. **(Abierta) Manos que solo sirven de apoyo y `ambos_brazos`.** El caso de referencia del §7 («Elevar los talones sujetándose a la silla») no marca `ambos_brazos`, mientras que el criterio literal lo marcaría. Opciones:
    - **A (recomendada):** las manos de apoyo no cuentan y se documenta «apoya una o las dos manos».
@@ -28,12 +35,37 @@ Este registro lleva la cuenta de la auditoría documental hecha con la skill `au
 
    Afecta a todos los ejercicios de pie con apoyo (ver el lote 5).
 
+   **Estado (2026-10-16):** sustituida por DG-4 (protocolo, apartado 7). Queda abierta la cuestión Q1: apoyo bilateral para estabilidad.
+
 ### Criterio operativo para `flexion_profunda_rodilla` (propuesta)
 
 - **Medida:** ángulo de la rodilla visto de lado, entre el muslo y la pierna. 0° es la pierna recta. Sentado con el pie bajo la rodilla son unos 90°.
 - **TRUE:** el pie queda claramente por detrás de la vertical de la rodilla estando sentado o tumbado, se lleva el talón hacia el glúteo, o la persona se agacha o hace una sentadilla más allá de lo que describe una «mini» sentadilla.
 - **FALSE:** el pie queda bajo la rodilla o por delante, o la rodilla se estira.
 - **REQUIERE_ACLARACION:** la fuente no permite saber dónde queda el pie, por ejemplo cuando dice «tanto como puedas» sin ilustración consultada. En ese caso se aplica §7.1 (se marca) y se anota que es por conservadurismo, no por evidencia.
+
+**Estado (2026-10-16):** esta propuesta queda sustituida por el protocolo (R7.8 y apartado 3).
+- La medida es el ángulo aproximado entre muslo y pierna en vista lateral (decisión 2).
+- La posición del pie no se usa como sustituto universal del ángulo.
+- La evidencia se califica D/I/N.
+- Un `true` por conservadurismo se anota con `[conservadora]` en `notas_etiquetado`.
+
+## Decisiones generales aprobadas (2026-10-16)
+
+Las reglas operativas están en `protocolo.md` (versión 1.0). Resumen:
+
+| Id | Decisión | Protocolo |
+|---|---|---|
+| DG-1 | Los casos de referencia son ilustrativos, no exhaustivos. Los casos nuevos se registran como CN | Apartado 4 |
+| DG-2 | Regla asimétrica: `true` con evidencia o por conservadurismo; `false` solo con evidencia suficiente o una adaptación aprobada. Nada de cambios masivos sin revisión | Apartado 3 |
+| DG-3 | Una adaptación es válida solo si cumple sus cinco condiciones, incluidos todos los filtros de compatibilidad aplicables | Apartado 5.1 |
+| DG-4 | `ambos_brazos` según la función real de los brazos. `agarre` y `peso_en_manos` se evalúan por separado | Apartado 7 |
+| DG-5 | Sin fuente no hay variantes. No existe un proceso profesional que autorice excepciones | Apartado 5.2 |
+| DG-6 | Los consejos preventivos y las contingencias no son exigencias | Apartado 8 |
+| DG-7 | Evidencia D/I/N. No se inventan umbrales ni se infiere carga o agarre del contacto | Apartado 6 |
+| DG-8 | Fuente, población destinataria, adaptaciones e incertidumbres identificables. La población no decide la compatibilidad | Apartado 11 |
+
+Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocolo.
 
 ## Ejercicios auditados
 
@@ -79,3 +111,53 @@ Este registro lleva la cuenta de la auditoría documental hecha con la skill `au
 - Auditados: 34 de 220. Siguiente: Royal Devon, St Helens, Royal Berkshire Stage 1 y NHS Forth Valley.
 - Lista de candidatos a adaptación unilateral: ver los resúmenes de los lotes 1, 3 y 4.
 - Tarea de interfaz pendiente: comunicar `especifica_de` (decisión 3).
+- **Actualización (2026-10-16):**
+  - Los resultados de los lotes 1 a 5 son anteriores al protocolo 1.0 y se revisarán con él antes de aplicar cambios al catálogo.
+  - Las tareas de interfaz están en la cuestión Q8 del protocolo.
+  - Los candidatos a adaptación unilateral pasan a la sección de propuestas de variante (DG-5).
+
+## Casos no contemplados (CN)
+
+Plantilla en `protocolo.md`, R1.4. Ninguno registrado todavía.
+
+## Propuestas retiradas
+
+No deben volver a proponerse sin evidencia nueva.
+
+| Propuesta | Ejercicio | Motivo de la retirada | Dónde |
+|---|---|---|---|
+| Quitar «Aumenta el recorrido poco a poco» | `tobillos-punta-talon-sentado` | La fuente sí lo dice. El error vino de la extracción de un PDF a columnas | `consolidacion-lotes-1-5.md`, 2.1.2 |
+| Limitar el movimiento a «levanta un poco el pie» | `equilibrio-una-pierna-pared` | La foto del NHS fija la rodilla alta; cambiaría el ejercicio | `consolidacion-lotes-1-5.md`, 2.1.4 |
+| Crear derivados para un solo brazo sin fuente | `boxeo-sentado`, `abrir-cerrar-manos`, `giro-tronco-sentado` | Contradice el §1 de la especificación y DG-5 | `revision-critica-protocolo.md`, caso 5.7; DG-5 |
+
+## Propuestas de variante pendientes de validación (DG-5)
+
+No se incorporan al catálogo. Solo se reabren si aparece una fuente que las describa.
+
+| Ejercicio de partida | Cambio | Exigencias que cambiarían | Perfil que se beneficiaría | Búsqueda de fuente |
+|---|---|---|---|---|
+| `giro-tronco-sentado` | Una mano al hombro contrario y el otro brazo relajado | `ambos_brazos` | «Solo puedo usar un brazo» | No realizada |
+| `boxeo-sentado` | Golpes con un solo brazo | `ambos_brazos` | «Solo puedo usar un brazo» | No realizada |
+| `abrir-cerrar-manos` | Una sola mano | `ambos_brazos` | «Solo puedo usar un brazo» | No realizada |
+
+## Decisiones del desarrollador (2026-10-18)
+
+Responden a las propuestas P1 a P4 de `propuestas-2026-10-18.md`. Ninguna cambia el catálogo, aprueba ejercicios ni modifica el protocolo.
+
+1. **P1 · `fuente.especifica_de` en las filas compuestas de la consolidación (3.2):**
+   - Cada fila se resuelve según su fuente.
+   - «usuarios de silla de ruedas» solo se usa si la fuente lo respalda. El campo no se rellena por defecto.
+   - La evidencia de cada ejercicio y el valor propuesto están en `propuestas-2026-10-18.md`, P1. Para cambiar el catálogo hace falta un plan aprobado.
+2. **P2 · Final del mensaje de interfaz de la decisión 3:**
+   - El original estaba cortado en origen.
+   - Se aprueba como **aclaración** una continuación nueva. No es una reconstrucción del original. Se revisó con `healthmove-safety-reviewer`.
+   - Texto de la aclaración: «La interfaz debe explicar que el folleto está dirigido a un grupo concreto de personas (en este caso, quienes pueden estar usando una silla de ruedas); que eso no hace el ejercicio exclusivo de ese grupo ni adecuado para todas las personas que lo forman; y que una persona puede hacerlo aunque no pertenezca a ese grupo cuando sus exigencias, instrucciones y adaptaciones documentadas son compatibles con las restricciones que ha indicado, sin que esa posibilidad se presente como una garantía de seguridad.»
+   - El texto concreto de la interfaz y su implementación siguen pendientes (Q8(b)).
+3. **P3 · Huellas:**
+   - Se definen por separado las de compatibilidad, contenido y auditoría.
+   - Los cambios del protocolo se proponen antes de implementarlas.
+   - Hoy solo existe la huella literal de `node scripts/auditoria.mjs cabecera`.
+4. **P4 · Skill:**
+   - La copia vigente de `auditar-catalogo-ejercicios` es la de `desarrollo-v1`. Se ha añadido al índice de la rama junto con `CLAUDE.md`, sin commit.
+   - La copia antigua de `main` (2026-10-14, anterior al protocolo) se apartó de forma reversible a `.claude/apartado-2026-10-18/auditar-catalogo-ejercicios/` en la copia de trabajo de `main`. SHA-256 de `SKILL.md`: `e2dd75e8fb77dbfac4f273f1bbf8265ccc3a66b703a660c2e3b042553f8ee985`.
+   - Para deshacerlo: `mv -n ~/Escritorio/HealthMove/.claude/apartado-2026-10-18/auditar-catalogo-ejercicios ~/Escritorio/HealthMove/.claude/skills/`.
