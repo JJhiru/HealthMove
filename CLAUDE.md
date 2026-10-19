@@ -47,6 +47,7 @@ El script solo comprueba estructura, trazabilidad e invariantes. No juzga la evi
 - **Trabajo preparado y pendiente de aprobación:**
   - `docs/auditoria-catalogo/propuestas-cierre-protocolo.md`: protocolo 1.1, huellas y texto de Q8(b).
   - `docs/auditoria-catalogo/plan-cambios-leicester.md`: plan para el catálogo.
+  - `docs/auditoria-catalogo/plan-cambios-q3-sentarse-levantarse.md`: `inclinacion_tronco` en la familia `sentarse-levantarse` tras resolver Q3 (opciones A, B y C, con su impacto medido).
 
 ## Reglas que no cambian
 
