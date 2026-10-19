@@ -194,6 +194,18 @@ validación.
    `basado_en_fuente_publica` cuando el autor revisa el ejercicio contra su fuente y rellena
    `revisado_por` y `fecha_revision`. El motor solo usa ejercicios fuera de `borrador`. La IA
    propone; la persona decide.
+   - Todo ejercicio cuyo estado no sea `borrador` debe tener `revisado_por` (texto no vacío) y
+     `fecha_revision`. Si falta cualquiera de los dos o no es válido, ese ejercicio queda
+     bloqueado.
+   - `fecha_revision` es una cadena con el formato exacto `AAAA-MM-DD` (cuatro cifras de año, dos
+     de mes y dos de día, separadas por guiones) que corresponde a una fecha real del calendario
+     gregoriano, años bisiestos incluidos (`2024-02-29` es válida; `2023-02-29` y `2026-04-31`
+     no). No se admiten otros formatos (`17/10/2026`, `2026-1-7`, `20261017`), marcas de tiempo
+     (`2026-10-17T10:00:00Z`), espacios, cadenas vacías ni valores que no sean texto.
+   - En `borrador`, `revisado_por` y `fecha_revision` pueden faltar o estar incompletos; no se
+     comprueban hasta que el ejercicio sale de ese estado.
+   - No se exige ninguna relación entre `fecha_revision` y la fecha actual ni con
+     `fuente.consultado` o `fuente.actualizado`.
 7. Las instrucciones se redactan con palabras propias en español; el texto de la fuente no se
    copia. Cualquier cambio respecto a la fuente se anota en `adaptaciones`.
 8. Archivo: `public/data/catalogo.json`. Validación: `node scripts/validar-catalogo.mjs`.

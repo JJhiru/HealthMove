@@ -2,8 +2,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { SECCIONES, POSICION, RECURSOS, DURACIONES } from '../public/js/opciones.js';
 import * as P from '../public/js/perfil.js';
-import { calcularRestricciones, generarRutina, crearAleatorio, MINIMOS, clavePosicion } from '../public/js/motor.js';
-import { catalogoReal, perfilCompleto, ejercicioFalso } from './ayudas.mjs';
+import { calcularRestricciones, generarRutina, crearAleatorio, MINIMOS, clavePosicion, calcularFamilias } from '../public/js/motor.js';
+import { catalogoReal, perfilCompleto, ejercicioFalso, catalogoFalso } from './ayudas.mjs';
 
 const porId = new Map(catalogoReal.ejercicios.map((e) => [e.id, e]));
 
@@ -73,16 +73,13 @@ test('PROPIEDAD DE SEGURIDAD: ninguna rutina contiene un ejercicio incompatible 
 });
 
 test('si no hay ejercicios suficientes, informa y no relaja ningún filtro', () => {
-  const catalogo = {
-    exigencias: catalogoReal.exigencias,
-    ejercicios: [
-      ejercicioFalso('calentar', { fases: ['calentamiento'] }),
-      ejercicioFalso('calma', { fases: ['calma'] }),
-      ejercicioFalso('fuerza-1'),
-      ejercicioFalso('fuerza-agarre-1', { si: ['agarre'] }),
-      ejercicioFalso('fuerza-agarre-2', { si: ['agarre'] }),
-    ],
-  };
+  const catalogo = catalogoFalso([
+    ejercicioFalso('calentar', { fases: ['calentamiento'] }),
+    ejercicioFalso('calma', { fases: ['calma'] }),
+    ejercicioFalso('fuerza-1'),
+    ejercicioFalso('fuerza-agarre-1', { si: ['agarre'] }),
+    ejercicioFalso('fuerza-agarre-2', { si: ['agarre'] }),
+  ]);
   const sinRestriccion = generarRutina(catalogo, perfilCompleto((p) => P.elegirDuracion(p, 10)));
   assert.equal(sinRestriccion.ok, true);
 
@@ -102,10 +99,122 @@ test('un ejercicio y su variante nunca aparecen en la misma rutina', () => {
     ejercicioFalso('otro-1'), ejercicioFalso('otro-2'),
   ];
   for (let semilla = 1; semilla <= 30; semilla++) {
-    const res = generarRutina({ exigencias: catalogoReal.exigencias, ejercicios: ej }, perfilCompleto((p) => P.elegirDuracion(p, 10)), { semilla });
+    const res = generarRutina(catalogoFalso(ej), perfilCompleto((p) => P.elegirDuracion(p, 10)), { semilla });
     assert.equal(res.ok, true);
     const ids = new Set(res.rutina.bloques.map((b) => b.ejercicioId));
     assert.ok(!(ids.has('base') && ids.has('variante')), `semilla ${semilla}`);
+  }
+});
+
+// Cadenas de variante_de (DS-38, C-1): A es variante de B y B de C. Ningún par de la cadena puede coincidir,
+// tampoco A con su original directo B ni el primero con el último.
+for (const largo of [3, 4]) {
+  test(`cadena de ${largo} ejercicios: nunca coinciden dos de la misma cadena`, () => {
+    const cadena = Array.from({ length: largo }, (_, i) => `cadena-${i}`);
+    const ej = [
+      ejercicioFalso('c', { fases: ['calentamiento'] }), ejercicioFalso('k', { fases: ['calma'] }),
+      ...cadena.map((id, i) => ejercicioFalso(id, { variante_de: cadena[i + 1] ?? null })),
+      ejercicioFalso('otro-1'), ejercicioFalso('otro-2'),
+    ];
+    const vistos = new Set();
+    for (let semilla = 1; semilla <= 60; semilla++) {
+      const res = generarRutina(catalogoFalso(ej), perfilCompleto((p) => P.elegirDuracion(p, 10)), { semilla });
+      assert.equal(res.ok, true);
+      const deLaCadena = new Set(res.rutina.bloques.map((b) => b.ejercicioId).filter((id) => cadena.includes(id)));
+      assert.equal(deLaCadena.size, 1, `semilla ${semilla}: ${[...deLaCadena]}`);
+      deLaCadena.forEach((id) => vistos.add(id));
+    }
+    assert.deepEqual([...vistos].sort(), cadena, 'cada miembro de la cadena sigue pudiendo salir');
+  });
+}
+
+test('ejercicios de familias distintas sí coinciden en la misma rutina', () => {
+  // Tres familias en la parte principal, que necesita tres ejercicios: cada rutina lleva uno de cada una.
+  const ej = [
+    ejercicioFalso('c', { fases: ['calentamiento'] }), ejercicioFalso('k', { fases: ['calma'] }),
+    ejercicioFalso('x-base'), ejercicioFalso('x-variante', { variante_de: 'x-base' }),
+    ejercicioFalso('y-base'), ejercicioFalso('y-variante', { variante_de: 'y-base' }), ejercicioFalso('y-variante-2', { variante_de: 'y-variante' }),
+    ejercicioFalso('z'),
+  ];
+  const familia = (id) => id.split('-')[0];
+  for (let semilla = 1; semilla <= 30; semilla++) {
+    const res = generarRutina(catalogoFalso(ej), perfilCompleto((p) => P.elegirDuracion(p, 10)), { semilla });
+    assert.equal(res.ok, true);
+    const principal = [...new Set(res.rutina.bloques.filter((b) => b.fase === 'principal').map((b) => b.ejercicioId))];
+    assert.deepEqual(principal.map(familia).sort(), ['x', 'y', 'z'], `semilla ${semilla}: ${principal}`);
+  }
+});
+
+test('un ciclo de variante_de no bloquea el motor y sus miembros cuentan como una sola familia', () => {
+  // El validador hoy no rechaza ciclos (DS-33); el catálogo real no tiene ninguno. 'ciclo-c' entra en el ciclo por una cola.
+  const ej = [
+    ejercicioFalso('c', { fases: ['calentamiento'] }), ejercicioFalso('k', { fases: ['calma'] }),
+    ejercicioFalso('ciclo-a', { variante_de: 'ciclo-b' }), ejercicioFalso('ciclo-b', { variante_de: 'ciclo-a' }),
+    ejercicioFalso('ciclo-c', { variante_de: 'ciclo-a' }),
+    ejercicioFalso('otro-1'), ejercicioFalso('otro-2'),
+  ];
+  const fam = calcularFamilias(ej);
+  assert.equal(new Set(['ciclo-a', 'ciclo-b', 'ciclo-c'].map((id) => fam.get(id))).size, 1);
+  for (let semilla = 1; semilla <= 30; semilla++) {
+    const res = generarRutina(catalogoFalso(ej), perfilCompleto((p) => P.elegirDuracion(p, 10)), { semilla });
+    assert.equal(res.ok, true);
+    const delCiclo = new Set(res.rutina.bloques.map((b) => b.ejercicioId).filter((id) => id.startsWith('ciclo-')));
+    assert.equal(delCiclo.size, 1, `semilla ${semilla}: ${[...delCiclo]}`);
+  }
+});
+
+test('cadena con el eslabón central inválido: sus extremos siguen siendo una familia', () => {
+  // A → B → C (A es variante de B y B de C). B es inválido (una exigencia sin revisar) y el motor lo descarta,
+  // pero las familias se calculan con el catálogo completo: A y C siguen siendo de la misma familia.
+  const invalido = (e) => { e.exigencias.agarre = null; return e; };
+  const base = [
+    ejercicioFalso('c', { fases: ['calentamiento'] }), ejercicioFalso('k', { fases: ['calma'] }),
+    ejercicioFalso('cadena-a', { variante_de: 'cadena-b' }),
+    invalido(ejercicioFalso('cadena-b', { variante_de: 'cadena-c' })),
+    ejercicioFalso('cadena-c'),
+    ejercicioFalso('otro-1'),
+  ];
+  const perfil = perfilCompleto((p) => P.elegirDuracion(p, 10));
+
+  // Determinista: la parte principal necesita 3 ejercicios y solo hay A, C y otro-1, es decir, dos familias.
+  // Si las familias se calcularan después de descartar B, A y C serían familias distintas y cualquier semilla los juntaría.
+  for (let semilla = 1; semilla <= 10; semilla++) {
+    const res = generarRutina(catalogoFalso(base), perfil, { semilla });
+    assert.equal(res.explicacion.invalidos, 1, 'B debe quedar descartado por inválido');
+    assert.equal(res.ok, false, `semilla ${semilla}: A y C no pueden completar juntos la parte principal`);
+    assert.equal(res.motivo, 'catalogo_insuficiente');
+    assert.deepEqual(res.faltan, { principal: 1 });
+  }
+
+  // Con otro ejercicio más ya hay rutina: B nunca sale, A y C no coinciden y los dos siguen pudiendo salir.
+  const vistos = new Set();
+  for (let semilla = 1; semilla <= 60; semilla++) {
+    const res = generarRutina(catalogoFalso([...base, ejercicioFalso('otro-2')]), perfil, { semilla });
+    assert.equal(res.ok, true);
+    const ids = new Set(res.rutina.bloques.map((b) => b.ejercicioId));
+    assert.ok(!ids.has('cadena-b'), `semilla ${semilla}: B es inválido`);
+    assert.ok(!(ids.has('cadena-a') && ids.has('cadena-c')), `semilla ${semilla}: A y C juntos`);
+    for (const id of ['cadena-a', 'cadena-c']) if (ids.has(id)) vistos.add(id);
+  }
+  assert.deepEqual([...vistos].sort(), ['cadena-a', 'cadena-c']);
+});
+
+test('catálogo real: las cadenas de variantes comparten familia y no coinciden en una rutina', () => {
+  const fam = calcularFamilias(catalogoReal.ejercicios);
+  const cadenas = [
+    ['marcha-apertura-brazos-sentado', 'marcha-sentado-manos-cadera', 'marcha-sentado-sujetandose'],
+    ['abdomen-boca-abajo', 'abdomen-profundo-tumbado', 'abdomen-sentado'],
+    ['flexor-cadera-tumbado', 'abrazar-rodilla-tumbado', 'rodilla-al-pecho-tumbado'],
+  ];
+  for (const c of cadenas) assert.deepEqual(c.map((id) => fam.get(id)), [c[2], c[2], c[2]], c.join(' → '));
+  for (const duracion of [10, 15, 20]) {
+    for (let semilla = 1; semilla <= 150; semilla++) {
+      const res = generarRutina(catalogoReal, perfilCompleto((p) => P.elegirDuracion(p, duracion)), { semilla, permitirBorrador: true });
+      assert.equal(res.ok, true);
+      const porFamilia = new Map();
+      for (const id of new Set(res.rutina.bloques.map((b) => b.ejercicioId))) porFamilia.set(fam.get(id), [...(porFamilia.get(fam.get(id)) || []), id]);
+      for (const ids of porFamilia.values()) assert.equal(ids.length, 1, `${duracion} min, semilla ${semilla}: ${ids}`);
+    }
   }
 });
 
@@ -114,8 +223,11 @@ test('un ejercicio con alguna exigencia sin revisar no se usa', () => {
   delete roto.exigencias.agarre;
   roto.exigencias.agarre = null;
   const ej = [ejercicioFalso('c', { fases: ['calentamiento'] }), ejercicioFalso('k', { fases: ['calma'] }), ejercicioFalso('a'), ejercicioFalso('b'), roto];
-  const res = generarRutina({ exigencias: catalogoReal.exigencias, ejercicios: ej }, perfilCompleto((p) => P.elegirDuracion(p, 10)));
+  const res = generarRutina(catalogoFalso(ej), perfilCompleto((p) => P.elegirDuracion(p, 10)));
   assert.equal(res.ok, false);
+  // Falla porque el ejercicio roto queda fuera (faltan principales), no porque se rechace el catálogo entero.
+  assert.equal(res.motivo, 'catalogo_insuficiente');
+  assert.equal(res.explicacion.invalidos, 1);
 });
 
 test('la misma semilla produce la misma rutina', () => {
