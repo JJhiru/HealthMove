@@ -9,11 +9,11 @@
 - **Fuente no disponible:** Royal Devon, «Seated exercise programme» (`royaldevon.nhs.uk`), devolvió **403 Access Denied** dos veces, también con cabeceras de navegador. Sus 3 ejercicios (`extension-rodilla-sentado`, `abduccion-cadera-sentado`, `remo-sin-material-sentado`) quedan sin auditar. Hace falta descargar el PDF a mano.
 - **Fuentes abiertas** (2026-10-21):
 
-| Fuente | URL | Datos | Revisado |
-|---|---|---|---|
-| Royal Berkshire NHS FT (Fisioterapia), «Stage 1 exercises» | `https://royalberkshire.nhs.uk/media/vdxo0b3m/stage-1-exercises_mar23.pdf` | PDF de 7 páginas, marzo de 2023. SHA-256 `178da6fd4688cea0e8a77022b6573219109e83a33c34ae688c821ecb4e35cd7f` | Texto (`pdftotext -layout`) y páginas 3 a 6 renderizadas, con sus dibujos |
-| NHS, «Breathing exercises for stress» | `https://www.nhs.uk/mental-health/self-help/guides-tools-and-activities/breathing-exercises-for-stress/` | HTML (prefijo SHA-256 `5010a2e1c8d0d64d`), revisado el 12-06-2026. Open Government Licence v3.0 | Texto; la página no tiene fotos del ejercicio |
-| NHS Forth Valley, «Seated & Bed Exercises» (fundamento de las dosis) | `https://nhsforthvalley.com/wp-content/uploads/2021/08/2Seated-Bed-Exercises.pdf` | SHA-256 (prefijo) `d18e24d920faf5e3` | «To start with, try each exercise 2 or 3 times… working up to 10 repetitions» (D) |
+| Fuente                                                               | URL                                                                                                      | Datos                                                                                                       | Revisado                                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Royal Berkshire NHS FT (Fisioterapia), «Stage 1 exercises»           | `https://royalberkshire.nhs.uk/media/vdxo0b3m/stage-1-exercises_mar23.pdf`                               | PDF de 7 páginas, marzo de 2023. SHA-256 `178da6fd4688cea0e8a77022b6573219109e83a33c34ae688c821ecb4e35cd7f` | Texto (`pdftotext -layout`) y páginas 3 a 6 renderizadas, con sus dibujos         |
+| NHS, «Breathing exercises for stress»                                | `https://www.nhs.uk/mental-health/self-help/guides-tools-and-activities/breathing-exercises-for-stress/` | HTML (prefijo SHA-256 `5010a2e1c8d0d64d`), revisado el 12-06-2026. Open Government Licence v3.0             | Texto; la página no tiene fotos del ejercicio                                     |
+| NHS Forth Valley, «Seated & Bed Exercises» (fundamento de las dosis) | `https://nhsforthvalley.com/wp-content/uploads/2021/08/2Seated-Bed-Exercises.pdf`                        | SHA-256 (prefijo) `d18e24d920faf5e3`                                                                        | «To start with, try each exercise 2 or 3 times… working up to 10 repetitions» (D) |
 
 - **Población declarada (Royal Berkshire, D):** «During and after a stay in hospital… helpful in your rehabilitation». `especifica_de` = «rehabilitación tras un ingreso hospitalario» (R8.1). El folleto añade: «Only complete the exercises that your physiotherapist has taught you». Es un consejo preventivo (DG-6, clase 2): no cambia ninguna etiqueta. Al usuario le llega con la aclaración de procedencia (P17).
 - **Población (NHS, respiración):** técnica para el estrés y la ansiedad, para cualquier persona. No declara un grupo.
@@ -40,24 +40,24 @@
 
 ### Auditoría de exigencias
 
-| Exigencia | Etiqueta actual | Evidencia (D/I/N) y fundamento | Regla | Resultado propuesto | Motivo |
-|---|---|---|---|---|---|
-| equilibrio_sin_apoyo | false | D: sentado | evidencia | FALSE | — |
-| una_pierna | false | D: sentado | evidencia | FALSE | — |
-| sentarse_levantarse | false | D: siempre sentado | evidencia | FALSE | — |
-| impacto | false | D: isométrico, «not… move your foot» | evidencia | FALSE | — |
-| carga_externa | false | D: estructural | evidencia | FALSE | — |
-| esfuerzo_cardio | false | D: isométrico | evidencia | FALSE | — |
-| brazo_sobre_hombro | false | D: estructural | evidencia | FALSE | — |
-| mano_detras | false | D: estructural | evidencia | FALSE | — |
-| ambos_brazos | false | D: estructural | evidencia | FALSE | — |
-| agarre | false | D: estructural | evidencia | FALSE | — |
-| peso_en_manos | false | D: estructural | evidencia | FALSE | — |
-| flexion_profunda_rodilla | false | D (dibujo): el pie queda por delante de la rodilla; «not to necessarily bend your knee» | evidencia | FALSE | — |
-| flexion_amplia_cadera | false | D: sentado erguido | evidencia | FALSE | — |
-| puntillas_talones | false | D: sentado | evidencia | FALSE | — |
-| inclinacion_tronco | false | D: «maintain an upright posture» | evidencia | FALSE | — |
-| rotacion_tronco | false | D: sin giro | evidencia | FALSE | — |
+| Exigencia                | Etiqueta actual | Evidencia (D/I/N) y fundamento                                                          | Regla     | Resultado propuesto | Motivo |
+| ------------------------ | --------------- | --------------------------------------------------------------------------------------- | --------- | ------------------- | ------ |
+| equilibrio_sin_apoyo     | false           | D: sentado                                                                              | evidencia | FALSE               | —      |
+| una_pierna               | false           | D: sentado                                                                              | evidencia | FALSE               | —      |
+| sentarse_levantarse      | false           | D: siempre sentado                                                                      | evidencia | FALSE               | —      |
+| impacto                  | false           | D: isométrico, «not… move your foot»                                                    | evidencia | FALSE               | —      |
+| carga_externa            | false           | D: estructural                                                                          | evidencia | FALSE               | —      |
+| esfuerzo_cardio          | false           | D: isométrico                                                                           | evidencia | FALSE               | —      |
+| brazo_sobre_hombro       | false           | D: estructural                                                                          | evidencia | FALSE               | —      |
+| mano_detras              | false           | D: estructural                                                                          | evidencia | FALSE               | —      |
+| ambos_brazos             | false           | D: estructural                                                                          | evidencia | FALSE               | —      |
+| agarre                   | false           | D: estructural                                                                          | evidencia | FALSE               | —      |
+| peso_en_manos            | false           | D: estructural                                                                          | evidencia | FALSE               | —      |
+| flexion_profunda_rodilla | false           | D (dibujo): el pie queda por delante de la rodilla; «not to necessarily bend your knee» | evidencia | FALSE               | —      |
+| flexion_amplia_cadera    | false           | D: sentado erguido                                                                      | evidencia | FALSE               | —      |
+| puntillas_talones        | false           | D: sentado                                                                              | evidencia | FALSE               | —      |
+| inclinacion_tronco       | false           | D: «maintain an upright posture»                                                        | evidencia | FALSE               | —      |
+| rotacion_tronco          | false           | D: sin giro                                                                             | evidencia | FALSE               | —      |
 
 ### Otros campos
 - Fase `principal`, posición, recurso, dosis y duración: coherentes.
@@ -92,24 +92,24 @@ LISTO PARA APROBACIÓN DOCUMENTAL. Cambios aplicados el 2026-10-21 (P20).
 
 ### Auditoría de exigencias
 
-| Exigencia | Etiqueta actual | Evidencia (D/I/N) y fundamento | Regla | Resultado propuesto | Motivo |
-|---|---|---|---|---|---|
-| equilibrio_sin_apoyo | false | D: sentado | evidencia | FALSE | — |
-| una_pierna | false | D: sentado | evidencia | FALSE | — |
-| sentarse_levantarse | false | D: siempre sentado | evidencia | FALSE | — |
-| impacto | false | D: isométrico | evidencia | FALSE | — |
-| carga_externa | false | D: estructural | evidencia | FALSE | — |
-| esfuerzo_cardio | false | D: isométrico | evidencia | FALSE | — |
-| brazo_sobre_hombro | false | D (dibujo): brazos abajo | evidencia | FALSE | — |
-| mano_detras | false | D (dibujo): manos a los lados | evidencia | FALSE | — |
-| ambos_brazos | false | D (dibujo): los brazos reposan; trabajan los omóplatos (§7.1) | evidencia | FALSE | — |
-| agarre | false | D (dibujo): manos abiertas | evidencia | FALSE | — |
-| peso_en_manos | false | D: estructural | evidencia | FALSE | — |
-| flexion_profunda_rodilla | false | D: sentado normal | evidencia | FALSE | — |
-| flexion_amplia_cadera | false | D: erguido | evidencia | FALSE | — |
-| puntillas_talones | false | D: sentado | evidencia | FALSE | — |
-| inclinacion_tronco | false | D: «sit up as tall as you can» | evidencia | FALSE | — |
-| rotacion_tronco | false | D: sin giro | evidencia | FALSE | — |
+| Exigencia                | Etiqueta actual | Evidencia (D/I/N) y fundamento                                | Regla     | Resultado propuesto | Motivo |
+| ------------------------ | --------------- | ------------------------------------------------------------- | --------- | ------------------- | ------ |
+| equilibrio_sin_apoyo     | false           | D: sentado                                                    | evidencia | FALSE               | —      |
+| una_pierna               | false           | D: sentado                                                    | evidencia | FALSE               | —      |
+| sentarse_levantarse      | false           | D: siempre sentado                                            | evidencia | FALSE               | —      |
+| impacto                  | false           | D: isométrico                                                 | evidencia | FALSE               | —      |
+| carga_externa            | false           | D: estructural                                                | evidencia | FALSE               | —      |
+| esfuerzo_cardio          | false           | D: isométrico                                                 | evidencia | FALSE               | —      |
+| brazo_sobre_hombro       | false           | D (dibujo): brazos abajo                                      | evidencia | FALSE               | —      |
+| mano_detras              | false           | D (dibujo): manos a los lados                                 | evidencia | FALSE               | —      |
+| ambos_brazos             | false           | D (dibujo): los brazos reposan; trabajan los omóplatos (§7.1) | evidencia | FALSE               | —      |
+| agarre                   | false           | D (dibujo): manos abiertas                                    | evidencia | FALSE               | —      |
+| peso_en_manos            | false           | D: estructural                                                | evidencia | FALSE               | —      |
+| flexion_profunda_rodilla | false           | D: sentado normal                                             | evidencia | FALSE               | —      |
+| flexion_amplia_cadera    | false           | D: erguido                                                    | evidencia | FALSE               | —      |
+| puntillas_talones        | false           | D: sentado                                                    | evidencia | FALSE               | —      |
+| inclinacion_tronco       | false           | D: «sit up as tall as you can»                                | evidencia | FALSE               | —      |
+| rotacion_tronco          | false           | D: sin giro                                                   | evidencia | FALSE               | —      |
 
 ### Otros campos
 - Fase `principal`, posición, recurso, dosis y duración: coherentes.
@@ -144,24 +144,24 @@ LISTO PARA APROBACIÓN DOCUMENTAL. Cambios aplicados el 2026-10-21 (P20).
 
 ### Auditoría de exigencias
 
-| Exigencia | Etiqueta actual | Evidencia (D/I/N) y fundamento | Regla | Resultado propuesto | Motivo |
-|---|---|---|---|---|---|
-| equilibrio_sin_apoyo | false | D: sentado | evidencia | FALSE | — |
-| una_pierna | false | D: sentado | evidencia | FALSE | — |
-| sentarse_levantarse | false | D: siempre sentado | evidencia | FALSE | — |
-| impacto | false | D: «slowly» | evidencia | FALSE | — |
-| carga_externa | false | D: estructural | evidencia | FALSE | — |
-| esfuerzo_cardio | false | D: movilidad | evidencia | FALSE | — |
-| brazo_sobre_hombro | true | D: «arm next to your ear» | evidencia | TRUE | — |
-| mano_detras | false | D (dibujo): el brazo sube por delante, sin pasar detrás de la cabeza | evidencia | FALSE | — |
-| ambos_brazos | false | D: un brazo cada vez, en series por lado (P9); el otro reposa | evidencia | FALSE | — |
-| agarre | false | D (dibujo): mano abierta | evidencia | FALSE | — |
-| peso_en_manos | false | D: estructural | evidencia | FALSE | — |
-| flexion_profunda_rodilla | false | D (dibujo): sentado normal | evidencia | FALSE | — |
-| flexion_amplia_cadera | false | D: erguido | evidencia | FALSE | — |
-| puntillas_talones | false | D: sentado | evidencia | FALSE | — |
-| inclinacion_tronco | false | D: «not arching your back» | evidencia | FALSE | — |
-| rotacion_tronco | false | D: sin giro | evidencia | FALSE | — |
+| Exigencia                | Etiqueta actual | Evidencia (D/I/N) y fundamento                                       | Regla     | Resultado propuesto | Motivo |
+| ------------------------ | --------------- | -------------------------------------------------------------------- | --------- | ------------------- | ------ |
+| equilibrio_sin_apoyo     | false           | D: sentado                                                           | evidencia | FALSE               | —      |
+| una_pierna               | false           | D: sentado                                                           | evidencia | FALSE               | —      |
+| sentarse_levantarse      | false           | D: siempre sentado                                                   | evidencia | FALSE               | —      |
+| impacto                  | false           | D: «slowly»                                                          | evidencia | FALSE               | —      |
+| carga_externa            | false           | D: estructural                                                       | evidencia | FALSE               | —      |
+| esfuerzo_cardio          | false           | D: movilidad                                                         | evidencia | FALSE               | —      |
+| brazo_sobre_hombro       | true            | D: «arm next to your ear»                                            | evidencia | TRUE                | —      |
+| mano_detras              | false           | D (dibujo): el brazo sube por delante, sin pasar detrás de la cabeza | evidencia | FALSE               | —      |
+| ambos_brazos             | false           | D: un brazo cada vez, en series por lado (P9); el otro reposa        | evidencia | FALSE               | —      |
+| agarre                   | false           | D (dibujo): mano abierta                                             | evidencia | FALSE               | —      |
+| peso_en_manos            | false           | D: estructural                                                       | evidencia | FALSE               | —      |
+| flexion_profunda_rodilla | false           | D (dibujo): sentado normal                                           | evidencia | FALSE               | —      |
+| flexion_amplia_cadera    | false           | D: erguido                                                           | evidencia | FALSE               | —      |
+| puntillas_talones        | false           | D: sentado                                                           | evidencia | FALSE               | —      |
+| inclinacion_tronco       | false           | D: «not arching your back»                                           | evidencia | FALSE               | —      |
+| rotacion_tronco          | false           | D: sin giro                                                          | evidencia | FALSE               | —      |
 
 ### Otros campos
 - Fases (`calentamiento`, `principal`), posición, recurso, dosis y duración: coherentes.
@@ -196,24 +196,24 @@ LISTO PARA APROBACIÓN DOCUMENTAL. Cambios aplicados el 2026-10-21 (P20).
 
 ### Auditoría de exigencias
 
-| Exigencia | Etiqueta actual | Evidencia (D/I/N) y fundamento | Regla | Resultado propuesto | Motivo |
-|---|---|---|---|---|---|
-| equilibrio_sin_apoyo | false | D: tumbado | evidencia | FALSE | — |
-| una_pierna | false | D: tumbado | evidencia | FALSE | — |
-| sentarse_levantarse | false | D: siempre tumbado | evidencia | FALSE | — |
-| impacto | false | D: isométrico | evidencia | FALSE | — |
-| carga_externa | false | D: se empuja la almohada; no se sostiene ningún peso | evidencia | FALSE | — |
-| esfuerzo_cardio | false | D: isométrico | evidencia | FALSE | — |
-| brazo_sobre_hombro | false | D (dibujo): brazo junto al cuerpo | evidencia | FALSE | — |
-| mano_detras | false | D: junto al cuerpo | evidencia | FALSE | — |
-| ambos_brazos | false | D: «on each side», un brazo cada vez | evidencia | FALSE | — |
-| agarre | false | D: se empuja con el antebrazo, sin cerrar la mano | evidencia | FALSE | — |
-| peso_en_manos | false | D: tumbado; el antebrazo empuja la almohada sin soportar el peso del cuerpo | evidencia | FALSE | — |
-| flexion_profunda_rodilla | false | D: estructural | evidencia | FALSE | — |
-| flexion_amplia_cadera | false | D: tumbado plano | evidencia | FALSE | — |
-| puntillas_talones | false | D: tumbado | evidencia | FALSE | — |
-| inclinacion_tronco | false | D: tumbado | evidencia | FALSE | — |
-| rotacion_tronco | false | D: sin giro | evidencia | FALSE | — |
+| Exigencia                | Etiqueta actual | Evidencia (D/I/N) y fundamento                                              | Regla     | Resultado propuesto | Motivo |
+| ------------------------ | --------------- | --------------------------------------------------------------------------- | --------- | ------------------- | ------ |
+| equilibrio_sin_apoyo     | false           | D: tumbado                                                                  | evidencia | FALSE               | —      |
+| una_pierna               | false           | D: tumbado                                                                  | evidencia | FALSE               | —      |
+| sentarse_levantarse      | false           | D: siempre tumbado                                                          | evidencia | FALSE               | —      |
+| impacto                  | false           | D: isométrico                                                               | evidencia | FALSE               | —      |
+| carga_externa            | false           | D: se empuja la almohada; no se sostiene ningún peso                        | evidencia | FALSE               | —      |
+| esfuerzo_cardio          | false           | D: isométrico                                                               | evidencia | FALSE               | —      |
+| brazo_sobre_hombro       | false           | D (dibujo): brazo junto al cuerpo                                           | evidencia | FALSE               | —      |
+| mano_detras              | false           | D: junto al cuerpo                                                          | evidencia | FALSE               | —      |
+| ambos_brazos             | false           | D: «on each side», un brazo cada vez                                        | evidencia | FALSE               | —      |
+| agarre                   | false           | D: se empuja con el antebrazo, sin cerrar la mano                           | evidencia | FALSE               | —      |
+| peso_en_manos            | false           | D: tumbado; el antebrazo empuja la almohada sin soportar el peso del cuerpo | evidencia | FALSE               | —      |
+| flexion_profunda_rodilla | false           | D: estructural                                                              | evidencia | FALSE               | —      |
+| flexion_amplia_cadera    | false           | D: tumbado plano                                                            | evidencia | FALSE               | —      |
+| puntillas_talones        | false           | D: tumbado                                                                  | evidencia | FALSE               | —      |
+| inclinacion_tronco       | false           | D: tumbado                                                                  | evidencia | FALSE               | —      |
+| rotacion_tronco          | false           | D: sin giro                                                                 | evidencia | FALSE               | —      |
 
 ### Otros campos
 - Recursos (`cama`, `toalla`), fase `principal` y duración: coherentes.

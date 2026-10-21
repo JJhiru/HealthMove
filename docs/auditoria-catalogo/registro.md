@@ -73,44 +73,44 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 |---|---|---|---|
 | 1 | estiramiento-pecho-sentado | REQUIERE CORRECCIONES | pendiente |
 | 1 | giro-tronco-sentado | REQUIERE CORRECCIONES | pendiente |
-| 7 | marcha-sentado-sujetandose | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 6 | marcha-sentado-manos-cadera | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 7 | estiramiento-tobillo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 7 | marcha-sentado-sujetandose | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 6 | marcha-sentado-manos-cadera | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 7 | estiramiento-tobillo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 2 | tobillos-punta-talon-sentado | REQUIERE CORRECCIONES | pendiente |
-| 6 | inclinacion-lateral-brazo-arriba | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 6 | inclinacion-lateral-brazo-arriba | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 2 | inclinacion-lateral-sentado | REQUIERE CORRECCIONES | pendiente |
-| 6 | estiramiento-isquiotibiales-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 6 | circulos-hombros-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 8 | elevar-rodar-hombros-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 6 | curl-biceps-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 6 | toalla-separar-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 6 | boxeo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 6 | boxeo-circulos-alto | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 6 | boxeo-circulos-pecho | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 6 | arquear-espalda-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 6 | movilidad-lumbar-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 6 | estiramiento-isquiotibiales-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 6 | circulos-hombros-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 8 | elevar-rodar-hombros-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 6 | curl-biceps-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 6 | toalla-separar-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 6 | boxeo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 6 | boxeo-circulos-alto | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 6 | boxeo-circulos-pecho | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 6 | arquear-espalda-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 6 | movilidad-lumbar-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 4 | estiramiento-gemelo-sentado | REQUIERE CORRECCIONES | pendiente |
 | 4 | abrir-cerrar-manos | REQUIERE CORRECCIONES | pendiente |
-| 8 | pulgar-dedos | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 8 | activacion-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 8 | banda-remo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 9 | talon-al-suelo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 9 | juntar-omoplatos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 9 | elevacion-brazo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 9 | extension-codo-toalla-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 9 | flexion-hombro-lado-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 9 | respiracion-abdominal-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 9 | respiracion-tranquila-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 8 | pulgar-dedos | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 8 | activacion-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 8 | banda-remo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 9 | talon-al-suelo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 9 | juntar-omoplatos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 9 | elevacion-brazo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 9 | extension-codo-toalla-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 9 | flexion-hombro-lado-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 9 | respiracion-abdominal-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 9 | respiracion-tranquila-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 4 | banda-curl-sentado | REQUIERE CORRECCIONES | pendiente |
-| 7 | sentarse-levantarse | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 7 | mini-sentadillas | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 7 | elevacion-talones-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 7 | sentarse-levantarse | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 7 | mini-sentadillas | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 7 | elevacion-talones-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 5 | elevacion-talones-sin-apoyo | REQUIERE CORRECCIONES | pendiente |
-| 7 | elevacion-lateral-pierna | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 7 | extension-pierna-atras | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 7 | elevacion-lateral-pierna | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
+| 7 | extension-pierna-atras | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 5 | flexiones-pared | REQUIERE CORRECCIONES | pendiente |
 | 5 | equilibrio-una-pierna-pared | REQUIERE CORRECCIONES | pendiente |
-| 7 | inclinacion-lateral-de-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 7 | inclinacion-lateral-de-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 5 | estiramiento-gemelo-pared | REQUIERE CORRECCIONES | pendiente |
 
 ## Pendientes
@@ -298,3 +298,14 @@ El desarrollador pidió seguir con «las demas cosas a corregir» sin consultarl
     - Royal Devon devolvió 403: sus 3 ejercicios quedan sin auditar.
     - **Incidencia de aplicación, ya corregida:** un reemplazo global cambió por error una frase de adaptación en 20 ejercicios de otras fuentes. Se revirtió antes de confirmar y se comprobó contra `HEAD`.
     - Los 7 quedan en LISTO PARA APROBACIÓN DOCUMENTAL (`lote-09.md`). Siguen en `borrador`.
+
+## Aprobaciones del desarrollador (2026-10-21)
+
+**Este es el apartado en el que se aprueban ejercicios.** Cada aprobación también figura en la columna «Decisión del desarrollador» de la tabla «Ejercicios auditados». Surte efecto en `public/data/catalogo.json` (`validacion.estado`, `revisado_por`, `fecha_revision`). `node scripts/auditoria.mjs validar` da error si un ejercicio sale de `borrador` sin una aprobación registrada aquí.
+
+21. **P21 · Primer lote público: 30 ejercicios aprobados como `basado_en_fuente_publica`.**
+    - Texto de la decisión (literal): «Sí, apruébalos y pon revisado_por: JJhiru».
+    - Ejercicios: los 30 de la tabla con «aprobado (2026-10-21, P21)». Son los de los lotes 6 a 9, todos auditados con el protocolo 1.0 y con resultado LISTO PARA APROBACIÓN DOCUMENTAL.
+    - En el catálogo: `estado` = `basado_en_fuente_publica`, `revisado_por` = «JJhiru», `fecha_revision` = `2026-10-21` (especificación §7.6).
+    - **Qué significa:** la auditoría documental contrastó cada ejercicio con su fuente pública, y su autor lo revisó. **No es una validación clínica ni profesional:** `revisado_por_profesional` queda sin usar, y la validación profesional sigue como riesgo abierto (especificación §7.5).
+    - Efecto: fuera del modo desarrollo, el motor ya puede usar estos 30. Los otros 190 siguen en `borrador`.

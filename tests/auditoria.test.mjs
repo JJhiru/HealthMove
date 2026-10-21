@@ -126,7 +126,10 @@ test('un id inexistente o mal declarado es un error', () => {
 test('el registro debe coincidir con los informes y con el catálogo', () => {
   const informes = new Map([[99, leerInforme(informe())]]);
   const reg = (filas, n = filas.length) => leerRegistro(['## Ejercicios auditados', '| Lote | ID | Resultado | Decisión |', '|---|---|---|---|', ...filas, '## Pendientes', `- Auditados: ${n} de ${catalogo.ejercicios.length}.`].join('\n'));
-  const msgs = (r, cat = catalogo) => comprobarRegistro(r, informes, cat).filter((p) => p.nivel === 'error').map((p) => p.msg);
+  // El catálogo de prueba, entero en borrador: así lo que se comprueba no depende de los estados reales.
+  const enBorrador = structuredClone(catalogo);
+  for (const e of enBorrador.ejercicios) e.validacion = { ...e.validacion, estado: 'borrador', revisado_por: null, fecha_revision: null };
+  const msgs = (r, cat = enBorrador) => comprobarRegistro(r, informes, cat).filter((p) => p.nivel === 'error').map((p) => p.msg);
 
   assert.deepEqual(msgs(reg([`| 99 | ${ej.id} | REQUIERE CORRECCIONES | pendiente |`])), []);
   assert.ok(msgs(reg([`| 99 | ${ej.id} | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |`])).some((m) => m.includes('el informe del lote')));
@@ -135,7 +138,7 @@ test('el registro debe coincidir con los informes y con el catálogo', () => {
   assert.ok(msgs(reg([`| 99 | ${ej.id} | REQUIERE CORRECCIONES | pendiente |`], 5)).some((m) => m.includes('Auditados: 5')));
 
   // Ningún estado cambia sin decisión registrada (protocolo, principio 1).
-  const aprobado = structuredClone(catalogo);
+  const aprobado = structuredClone(enBorrador);
   aprobado.ejercicios.find((e) => e.id === ej.id).validacion.estado = 'basado_en_fuente_publica';
   assert.ok(msgs(reg([`| 99 | ${ej.id} | REQUIERE CORRECCIONES | pendiente |`]), aprobado).some((m) => m.includes('sin decisión')));
 });

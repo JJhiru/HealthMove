@@ -2,7 +2,7 @@
 // Comprueban lo que se ve en pantalla y lo que queda en localStorage, no el código fuente.
 // Uso: npm run test:navegador   (navegador: HM_CHROME, PATH o caché de Playwright; si no hay, se omiten)
 //
-// Todos los ejercicios del catálogo real están en borrador, así que los flujos normales se prueban
+// La mayoría de los ejercicios del catálogo real siguen en borrador, así que los flujos normales se prueban
 // en modo desarrollo; el flujo sin modo desarrollo se prueba sirviendo una copia con ejercicios aprobados.
 import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';

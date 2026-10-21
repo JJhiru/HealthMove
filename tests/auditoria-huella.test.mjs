@@ -40,14 +40,14 @@ test('NO cambia con la evidencia del informe ni con la decisión del registro', 
   const seccion = (t) => leerInforme(t).ejercicios.find((e) => e.id === original.id).texto;
   assert.notEqual(seccion(otraEvidencia), seccion(informe), 'el informe de prueba debe cambiar de verdad');
   const registro = readFileSync(ruta('docs/auditoria-catalogo/registro.md'), 'utf8')
-    .replace('| 6 | curl-biceps-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |', '| 6 | curl-biceps-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado |');
-  assert.equal(leerRegistro(registro).filas.find((f) => f.id === original.id).decision, 'aprobado');
+    .replace('| 6 | curl-biceps-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |', '| 6 | curl-biceps-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |');
+  assert.equal(leerRegistro(registro).filas.find((f) => f.id === original.id).decision, 'pendiente');
   assert.equal(huella(copia()), huella(original));
 });
 
 test('SÍ cambia con datos de gestión (estado y revisión), aunque el contenido sea el mismo', () => {
-  assert.ok(cambia((e) => { e.validacion.estado = 'basado_en_fuente_publica'; }));
-  assert.ok(cambia((e) => { e.validacion.revisado_por = 'Autor'; }));
+  assert.ok(cambia((e) => { e.validacion.estado = e.validacion.estado === 'borrador' ? 'basado_en_fuente_publica' : 'borrador'; }));
+  assert.ok(cambia((e) => { e.validacion.revisado_por = `${e.validacion.revisado_por ?? ''}Otra persona`; }));
 });
 
 test('SÍ cambia con el orden de claves o de elementos aunque el significado no cambie', () => {

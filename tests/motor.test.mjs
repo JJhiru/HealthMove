@@ -29,11 +29,24 @@ test('responder "No" a cama o suelo excluye esa posición', () => {
 });
 
 test('sin modo desarrollo, los ejercicios en borrador nunca se usan', () => {
-  const res = generarRutina(catalogoReal, perfilCompleto());
-  // El catálogo real está entero en borrador: no debe haber rutina.
+  // Con todo el catálogo en borrador no debe haber rutina.
+  const todoBorrador = structuredClone(catalogoReal);
+  for (const e of todoBorrador.ejercicios) e.validacion = { ...e.validacion, estado: 'borrador' };
+  const res = generarRutina(todoBorrador, perfilCompleto());
   assert.equal(res.ok, false);
   assert.equal(res.motivo, 'catalogo_insuficiente');
   assert.equal(res.explicacion.sinRevisar, catalogoReal.ejercicios.length);
+  // Con el catálogo real (aprobados y borradores mezclados), la rutina solo usa aprobados.
+  const estado = new Map(catalogoReal.ejercicios.map((e) => [e.id, e.validacion.estado]));
+  let generadas = 0;
+  for (let semilla = 1; semilla <= 20; semilla++) {
+    const real = generarRutina(catalogoReal, perfilCompleto(), { semilla });
+    if (!real.ok) continue;
+    generadas++;
+    assert.equal(real.rutina.usaBorrador, false);
+    for (const b of real.rutina.bloques) assert.notEqual(estado.get(b.ejercicioId), 'borrador', `semilla ${semilla}: ${b.ejercicioId}`);
+  }
+  assert.ok(generadas > 0, 'con los aprobados del catálogo real se genera alguna rutina');
 });
 
 test('con modo desarrollo se genera una rutina marcada como borrador', () => {

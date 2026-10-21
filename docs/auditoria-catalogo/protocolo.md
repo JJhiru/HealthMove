@@ -274,7 +274,7 @@ Comprobado en `public/js/app.js`:
   - si es **modo auditoría**, con los ejercicios en `borrador` incluidos (`permitirBorrador: true`);
   - si usa **supuestos de texto**, como identificar los ejercicios «con apoyo» por palabras clave;
   - la versión exacta del catálogo (apartado 10.2).
-  Una medición en modo auditoría **no** es la disponibilidad real. Fuera del modo desarrollo, el motor no usa ningún ejercicio en `borrador`, y hoy lo están los 220.
+  Una medición en modo auditoría **no** es la disponibilidad real. Fuera del modo desarrollo, el motor no usa ningún ejercicio en `borrador`; desde el 2026-10-21 (`registro.md`, P21) hay 30 aprobados y 190 en `borrador`. Para la disponibilidad real, `node scripts/disponibilidad.mjs --sin-borradores`.
 - **R9.3.** La disponibilidad es información para decidir, nunca un motivo para retirar una etiqueta. Una marca conservadora costosa se revisa buscando evidencia (R2.2), no se quita.
 - **R9.4.** Las mediciones no son disponibilidad clínica ni idoneidad para nadie: son recuentos del motor sobre etiquetas documentales.
 - **Herramienta:** `node scripts/disponibilidad.mjs` (desde el 2026-10-19; `registro.md`, P6). Mide por defecto todos los perfiles de R9.1, declara las condiciones de R9.2 y, con `--escenario`, aplica en memoria los cambios de un plan para dar el antes y el después. No modifica datos ni decide si un cambio es correcto. Detalle en `herramientas.md`.
@@ -321,7 +321,7 @@ Comprobado en `public/js/app.js`:
 | Elemento | Campo actual |
 |---|---|
 | De dónde proviene | `fuente.organizacion`, `fuente.titulo`, `fuente.url`, `fuente.licencia` y `fuente.consultado` |
-| Población a la que se dirigía la fuente | `fuente.especifica_de`, solo si la fuente la declara. Hoy está en 49 de los 220 ejercicios |
+| Población a la que se dirigía la fuente | `fuente.especifica_de`, solo si la fuente la declara. El 2026-10-21 está en 65 de los 220 ejercicios |
 | Adaptaciones documentadas | `adaptaciones`, que el usuario ve en «Cambios respecto a la fuente» |
 | Incertidumbres pendientes | `notas_etiquetado` (no visible), el informe y `registro.md` (Q7) |
 

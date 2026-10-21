@@ -209,11 +209,11 @@
       "adaptaciones": [],
       "notas_etiquetado": "Subir la rodilla estando sentado acerca el muslo al tronco más que en reposo: flexion_amplia_cadera. Sujetar la silla: agarre. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -271,11 +271,11 @@
       ],
       "notas_etiquetado": "Levantar la pierna del asiento acerca el muslo al tronco: flexion_amplia_cadera (evidencia D de la fuente). Sin agarre. La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -328,11 +328,11 @@
       "adaptaciones": [],
       "notas_etiquetado": "[conservadora] flexion_amplia_cadera: la pierna estirada y elevada sube algo el muslo. Se cerraría con: una imagen lateral de la cadera.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -447,11 +447,11 @@
       ],
       "notas_etiquetado": "Brazo por encima de la cabeza e inclinación lateral del tronco.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -566,11 +566,11 @@
       ],
       "notas_etiquetado": "Inclinarse desde la cadera acerca el tronco al muslo y lo inclina hacia delante.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -623,11 +623,11 @@
       "adaptaciones": [],
       "notas_etiquetado": "La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -680,11 +680,11 @@
       "adaptaciones": [],
       "notas_etiquetado": "",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -739,11 +739,11 @@
       "adaptaciones": [],
       "notas_etiquetado": "Un brazo cada vez: no exige ambos_brazos. brazo_sobre_hombro: la mano pasa del hombro al doblar el codo (foto de la fuente; CN-1). La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -798,11 +798,11 @@
       "adaptaciones": [],
       "notas_etiquetado": "La resistencia la genera la propia persona: no es carga_externa.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -858,11 +858,11 @@
       ],
       "notas_etiquetado": "Cerrar el puño: agarre. Los brazos van a la altura del pecho.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -916,11 +916,11 @@
       "adaptaciones": [],
       "notas_etiquetado": "A la altura de la nariz, las manos quedan por encima del hombro. La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -974,11 +974,11 @@
       "adaptaciones": [],
       "notas_etiquetado": "Variante descrita en la propia fuente («HINT!»), con las manos a la altura del pecho. La condición de la fuente sobre el dolor de hombros no se traslada al usuario (protocolo, 8.4). La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1036,11 +1036,11 @@
       ],
       "notas_etiquetado": "Arquear la espalda cuenta como inclinacion_tronco. La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1094,11 +1094,11 @@
       "adaptaciones": [],
       "notas_etiquetado": "La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1264,11 +1264,11 @@
       "adaptaciones": [],
       "notas_etiquetado": "[conservadora] agarre: tocar el pulgar con cada dedo flexiona los dedos, lo que parece un cierre parcial de la mano (§4). Se cerraría con: un criterio sobre si la pinza cuenta como agarre. [conservadora] brazo_sobre_hombro: la foto de la fuente muestra la mano por encima del hombro y el texto no fija la altura. Se cerraría con: evidencia D de la altura en la ejecución que pide HealthMove.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1323,11 +1323,11 @@
       ],
       "notas_etiquetado": "[conservadora] esfuerzo_cardio: la fuente dice que el calentamiento completo sube el pulso; aquí solo va la primera ronda. Se cerraría con: una fuente sobre la primera ronda sola. Las palmadas exigen los dos brazos.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1381,11 +1381,11 @@
       "adaptaciones": [],
       "notas_etiquetado": "La banda cuenta como carga_externa.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1499,11 +1499,11 @@
       ],
       "notas_etiquetado": "",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1556,11 +1556,11 @@
       "adaptaciones": [],
       "notas_etiquetado": "Con los pies algo atrasados, la rodilla puede pasar de 90°. Al estar de pie no hay apoyo: equilibrio_sin_apoyo. [conservadora] inclinacion_tronco: el texto dice «slightly», pero la foto B de la fuente muestra más (Q3). Se cerraría con: revisión profesional.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1612,11 +1612,11 @@
       "adaptaciones": [],
       "notas_etiquetado": "[conservadora] flexion_profunda_rodilla: «as far as is comfortable» no limita la flexión. Se cerraría con: una fuente que fije el límite. [conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1668,11 +1668,11 @@
       "adaptaciones": [],
       "notas_etiquetado": "[conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1780,11 +1780,11 @@
       "adaptaciones": [],
       "notas_etiquetado": "[conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1836,11 +1836,11 @@
       "adaptaciones": [],
       "notas_etiquetado": "La fuente pide no arquear la espalda: no es inclinacion_tronco. [conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -2003,11 +2003,11 @@
       "adaptaciones": [],
       "notas_etiquetado": "De pie sin sujetarse.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -2237,11 +2237,11 @@
       ],
       "notas_etiquetado": "",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -2411,11 +2411,11 @@
       ],
       "notas_etiquetado": "Los brazos quedan relajados a los lados.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -2472,11 +2472,11 @@
       ],
       "notas_etiquetado": "",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -10792,11 +10792,11 @@
       ],
       "notas_etiquetado": "",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA a partir de informes de agentes que leyeron la fuente; verificar contra la fuente)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -12622,11 +12622,11 @@
       ],
       "notas_etiquetado": "[conservadora] flexion_profunda_rodilla y flexion_amplia_cadera: tumbado de lado, ni la fuente ni la instrucción dicen cómo van las piernas. Se cerraría con: una fuente que fije la postura de las piernas.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA a partir de informes de agentes que leyeron la fuente; verificar contra la fuente)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -12680,11 +12680,11 @@
       ],
       "notas_etiquetado": "",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA a partir de informes de agentes que leyeron la fuente; verificar contra la fuente)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
