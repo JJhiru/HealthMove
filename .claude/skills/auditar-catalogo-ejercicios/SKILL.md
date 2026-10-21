@@ -155,7 +155,12 @@ Para cada clave:
   - Clasifica primero la función de cada mano: ejecución, reposo, contacto, apoyo para estabilidad, carga o agarre.
   - No confundas contacto con apoyo, apoyo con carga, ni carga con agarre.
   - Evalúa `ambos_brazos`, `agarre` y `peso_en_manos` por separado.
-  - El apoyo bilateral para estabilidad y `ambos_brazos` es la cuestión abierta **Q1**; el contacto sin evidencia de cierre y `agarre`, la **Q2**. Mientras sigan abiertas, no propongas cambiar esas etiquetas: regístralo.
+  - **Q1 (resuelta, `registro.md` P9):** cuentan como `ambos_brazos`, con su nota `[conservadora]` cuando el `true` viene del apoyo o de la duda:
+    - el apoyo de las dos manos;
+    - el uso simultáneo de los dos brazos, también una mano que se apoya mientras el otro brazo trabaja;
+    - la alternancia continua de los dos brazos.
+  - Con Q1 no cuentan las series hechas con un brazo y después con el otro, ni las manos en reposo.
+  - **Q2 (resuelta, P10):** el contacto o el apoyo sin evidencia de prensión se marca `agarre: true` como conservador, con su nota. La instrucción usa el verbo de la fuente («apoya»), no una fórmula neutra.
 - **Seguridad (DG-6):**
   - Solo las exigencias del ejercicio cuentan para las etiquetas.
   - Un consejo preventivo («ten una silla cerca») o una indicación de contingencia («si pierdes el equilibrio, detente…») no justifica ninguna etiqueta.
