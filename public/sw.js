@@ -3,7 +3,7 @@
 //  sin red, y se actualiza en segundo plano.
 //  VERSION y PRECACHE los escribe `npm run version-sw`; no editar a mano.
 // ============================================================
-const VERSION = 'hm-0d2499874e88';
+const VERSION = 'hm-565dd425c2a2';
 const PRECACHE = [
   './',
   'data/catalogo.json',

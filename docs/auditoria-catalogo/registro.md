@@ -183,3 +183,35 @@ Responden a las decisiones pendientes del informe `deepseek/analisis-claude/sesi
    - `93b2866`: el trabajo de la aplicación (validación centralizada, Grupos 1 y 2).
    - `078e3ce`: el conjunto de la auditoría (`herramientas.md` §4), con la auditoría con DeepSeek y la herramienta de disponibilidad.
    - Fuera: `CONTEXTO_CONTINUIDAD_CHATGPT.md` y la configuración de Obsidian.
+
+## Decisiones del desarrollador (2026-10-20)
+
+Responden a D2 (Q2) y D3 (Q1) del informe `deepseek/analisis-claude/sesion-autonoma-2026-10-19.md` §8. **Cambian el catálogo, pero no aprueban ningún ejercicio:** los 220 siguen en `borrador`. Detalle completo, con cada cambio, su regla y la medición de disponibilidad: `plan-cambios-q1-q2.md`.
+
+9. **P9 · Q1 (D3) resuelta: `ambos_brazos` por el criterio conservador.**
+   - Texto de la decisión (literal): «D3 (Q1): SI, me remito al criterio conservador». Después, al preguntarle si D3 cubre también el trabajo simultáneo de los dos brazos: «Si, Cierra D3 si ya esta».
+   - Cuentan como `ambos_brazos`:
+     - el apoyo de las dos manos para la estabilidad;
+     - el uso de los dos brazos a la vez, también cuando una mano se apoya y el otro brazo trabaja;
+     - la alternancia continua de los dos brazos.
+   - No cuentan las series hechas con un brazo y después con el otro, ni las manos en reposo (§7.1).
+   - Los `true` que se apoyan en el apoyo, la duda o la alternancia llevan la nota `[conservadora]` (R2.4).
+   - Aplicado: 50 ejercicios pasan a `ambos_brazos: true`.
+   - Quedan pendientes, porque «sujétate» no dice con cuántas manos: `estiramiento-aductores-pie` y `marcha-sitio-apoyo`.
+10. **P10 · Q2 (D2) resuelta: `agarre` por el criterio conservador, con el verbo de la fuente.**
+    - Texto de la decisión (literal): «D2. De acuerdo con la aplicacion propuesta, solo una modificacion, apliquemos el criterio conservador y mantengamos como "true", solamente apliquemos lo de usar el verbo de la fuente. Cierra Q2 y documenta esta decision.»
+    - Antes, se exploraron con DeepSeek las objeciones a D2 (consulta C2, DS-97 a DS-108; `deepseek/analisis-claude/fase-01-d2-objeciones.md`). La que se sostenía (DS-100, DS-105) era que la regla asimétrica no permite un `false` con una instrucción neutra. Queda resuelta porque la etiqueta se mantiene en `true`.
+    - El contacto o el apoyo sin evidencia de prensión no demuestra un agarre (R7.4), pero se marca `agarre: true` con la nota `[conservadora]`.
+    - La instrucción usa el verbo de la fuente: «apoya las manos en el respaldo», en lugar de «con las manos en el respaldo».
+    - Aplicado: 5 instrucciones reescritas y 9 notas en `agarre` (7 de apoyo sin prensión, `deslizar-toalla-pared` y `remo-inclinado-botella`, cuyo agarre es por la botella). Ninguna etiqueta de `agarre` cambia de valor.
+    - Se cerraría con una revisión profesional que confirme que basta apoyar la palma abierta (DS-95, DS-102).
+11. **P11 · Q8(a), el rótulo:** `ETIQUETA_EXIGENCIA.ambos_brazos` pasa de «usar los dos brazos a la vez» a «usar los dos brazos» (propuesta D11 de `consolidacion-lotes-1-5.md`). Se cambia junto con P9, como pide el protocolo. Los filtros no cambian.
+12. **Ediciones de documentación:**
+    - El protocolo: Q1, Q2 y Q8(a) en §13, R7.5, la fila «Apoyo para estabilidad» de §7.1 y el historial. Se mantiene la versión 1.0.
+    - La especificación §7.4: dos viñetas.
+    - Por indicación del desarrollador, **no se actualizan** `deepseek/ESTADO.md` ni `CONTEXTO_CONTINUIDAD_CHATGPT.md`.
+13. **Entorno:** el desarrollador autorizó crear `.claude/settings.json` en la copia de trabajo de `main`, con `"worktree": {"bgIsolation": "none"}`, para que los trabajos en segundo plano de Claude Code puedan editar el worktree `desarrollo-v1`. Las credenciales de git no intervenían: el repositorio no tiene remotos.
+
+**Efectos conocidos:**
+- `node scripts/auditoria.mjs validar` da 13 avisos nuevos (18 en total). Los informes de los lotes 1 a 5 recogen el valor anterior de `ambos_brazos`. Por regla, no se sobrescriben; se revisarán con el protocolo.
+- El bloque `catalogo-de-pie` que se envía a DeepSeek queda en 59 851 de los 60 000 caracteres permitidos. Por eso las notas son breves. **La próxima nota en un ejercicio de pie lo hará superar el límite**, y habrá que dividir el bloque o revisar el límite antes de la siguiente fase con DeepSeek.

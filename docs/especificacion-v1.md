@@ -192,6 +192,14 @@ validación.
 4. En los ejercicios de pie se usa una silla o una pared como apoyo, salvo que estén marcados con
    `equilibrio_sin_apoyo`. Conviene incluir variantes con la palma abierta contra la pared, porque
    sujetarse a una silla es `agarre`.
+   - Apoyar la mano sin que la instrucción ni la fuente pidan cerrarla no es, por sí solo, un
+     agarre; en v1 se marca `agarre` por precaución (regla 1), con su nota `[conservadora]`. La
+     instrucción usa el verbo de la fuente («apoya las manos»), no una fórmula neutra («las manos
+     en el respaldo»). Cerrado como Q2 del protocolo (2026-10-20).
+   - Apoyar las dos manos para la estabilidad, usar los dos brazos a la vez o alternarlos sin
+     pausa como parte del movimiento cuenta como `ambos_brazos`, también por precaución. Hacer las
+     series con un brazo y después con el otro no cuenta, y tampoco las manos que solo reposan.
+     Cerrado como Q1 del protocolo (2026-10-20).
 5. Estados de validación: `borrador` → `basado_en_fuente_publica` → `revisado_por_profesional`.
    v1 usa `basado_en_fuente_publica` y lo indica en la app. **La validación profesional queda como
    riesgo abierto.**

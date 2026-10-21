@@ -100,7 +100,7 @@ export const ETIQUETA_EXIGENCIA = {
   esfuerzo_cardio: 'esfuerzos que agitan',
   brazo_sobre_hombro: 'subir el brazo por encima del hombro',
   mano_detras: 'llevar la mano detrás de la espalda o la cabeza',
-  ambos_brazos: 'usar los dos brazos a la vez',
+  ambos_brazos: 'usar los dos brazos',
   agarre: 'cerrar la mano o sujetarse',
   peso_en_manos: 'apoyar peso en las manos',
   flexion_profunda_rodilla: 'doblar mucho la rodilla',

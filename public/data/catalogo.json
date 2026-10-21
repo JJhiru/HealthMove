@@ -66,7 +66,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -123,7 +123,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -181,7 +181,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -207,7 +207,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Subir la rodilla estando sentado acerca el muslo al tronco más que en reposo: flexion_amplia_cadera. Sujetar la silla: agarre.",
+      "notas_etiquetado": "Subir la rodilla estando sentado acerca el muslo al tronco más que en reposo: flexion_amplia_cadera. Sujetar la silla: agarre. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -812,7 +812,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -986,7 +986,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -1159,7 +1159,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -1564,7 +1564,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": true,
@@ -1574,7 +1574,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Ponte de pie detrás de una silla, con los pies separados al ancho de la cadera y las manos en el respaldo.",
+        "Ponte de pie detrás de una silla, con los pies separados al ancho de la cadera, y apoya las manos en el respaldo.",
         "Dobla las rodillas despacio hasta donde te resulte cómodo, con las rodillas hacia delante y la espalda recta.",
         "Vuelve a ponerte de pie despacio, apretando los glúteos al subir."
       ],
@@ -1589,7 +1589,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "'Hasta donde te resulte cómodo' no limita la flexión: se marca flexion_profunda_rodilla por precaución.",
+      "notas_etiquetado": "'Hasta donde te resulte cómodo' no limita la flexión: se marca flexion_profunda_rodilla por precaución. [conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -1620,7 +1620,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -1630,7 +1630,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Ponte de pie detrás de una silla con las manos en el respaldo y los pies apoyados en el suelo.",
+        "Ponte de pie detrás de una silla, con los pies en el suelo, y apoya las manos en el respaldo.",
         "Sube los dos talones despacio, hasta donde te resulte cómodo.",
         "Baja los talones con control."
       ],
@@ -1645,7 +1645,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -1732,7 +1732,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -1742,7 +1742,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Ponte de pie detrás de una silla con las manos en el respaldo.",
+        "Ponte de pie detrás de una silla y apoya las manos en el respaldo.",
         "Levanta la pierna derecha hacia el lado hasta donde te resulte cómodo, con la espalda y la cadera rectas.",
         "No te inclines hacia la derecha. Baja la pierna y repite con la izquierda."
       ],
@@ -1757,7 +1757,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -1788,7 +1788,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -1798,7 +1798,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Ponte de pie detrás de una silla con las manos en el respaldo.",
+        "Ponte de pie detrás de una silla y apoya las manos en el respaldo.",
         "Con la pierna izquierda estirada, llévala hacia atrás sin arquear la espalda.",
         "Mantén hasta 5 segundos y baja. Repite con la pierna derecha."
       ],
@@ -1813,7 +1813,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "La fuente pide no arquear la espalda: no es inclinacion_tronco.",
+      "notas_etiquetado": "La fuente pide no arquear la espalda: no es inclinacion_tronco. [conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -1844,7 +1844,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": true,
         "flexion_profunda_rodilla": false,
@@ -1901,7 +1901,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -1926,7 +1926,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Las yemas en la pared son apoyo sin cerrar la mano: no es agarre ni equilibrio_sin_apoyo.",
+      "notas_etiquetado": "Las yemas en la pared son apoyo sin cerrar la mano: no es agarre ni equilibrio_sin_apoyo. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -2011,7 +2011,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -2037,7 +2037,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Al dar el paso atrás, el peso cae un momento sobre un pie: una_pierna.",
+      "notas_etiquetado": "Al dar el paso atrás, el peso cae un momento sobre un pie: una_pierna. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -2477,7 +2477,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -3708,7 +3708,7 @@
       "adaptaciones": [
         "La fuente permite hacerlo sin apoyo; aquí se indica siempre con apoyo."
       ],
-      "notas_etiquetado": "Subir la rodilla de pie acerca el muslo al tronco como mínimo igual que sentado: se marca por precaución.",
+      "notas_etiquetado": "Subir la rodilla de pie acerca el muslo al tronco como mínimo igual que sentado: se marca por precaución. [conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -3796,7 +3796,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -3968,7 +3968,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -4143,7 +4143,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -4200,7 +4200,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -4432,7 +4432,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -4489,7 +4489,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -4664,7 +4664,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -4692,7 +4692,7 @@
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
       ],
-      "notas_etiquetado": "La fuente recomienda calentar antes las manos con agua tibia.",
+      "notas_etiquetado": "La fuente recomienda calentar antes las manos con agua tibia. [conservadora] ambos_brazos: no consta si los brazos solo reposan (Q1). Se cerraría con: la fuente o su imagen.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -5641,7 +5641,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": true,
         "flexion_profunda_rodilla": false,
@@ -5669,7 +5669,7 @@
       "adaptaciones": [
         "La fuente lo plantea en un sofá; aquí se usa una silla estable."
       ],
-      "notas_etiquetado": "Las manos apoyadas pueden soportar parte del peso: se marca peso en manos por prudencia.",
+      "notas_etiquetado": "Las manos apoyadas pueden soportar parte del peso: se marca peso en manos por prudencia. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -6339,7 +6339,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -6396,7 +6396,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -6454,7 +6454,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -6510,7 +6510,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -6535,7 +6535,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: brazos alternos sin pausa (Q1). Se cerraría con: fuente con un brazo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -6566,7 +6566,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -6591,7 +6591,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: brazos alternos sin pausa (Q1). Se cerraría con: fuente con un brazo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -6740,7 +6740,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -6765,7 +6765,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Las fuentes de Otago proponen pasar de dos manos a una y a ninguna; aquí se mantiene el apoyo.",
+      "notas_etiquetado": "Las fuentes de Otago proponen pasar de dos manos a una y a ninguna; aquí se mantiene el apoyo. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -6796,7 +6796,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -6822,7 +6822,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7022,7 +7022,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -7047,7 +7047,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7133,7 +7133,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": true,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -7159,7 +7159,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7200,7 +7200,7 @@
         "rotacion_tronco": true
       },
       "instrucciones": [
-        "Ponte de pie, alto, con una mano en el respaldo de una silla firme.",
+        "Ponte de pie, alto, y apoya una mano en el respaldo de una silla firme.",
         "Gira despacio los hombros hacia un lado sin mover la cadera.",
         "Vuelve al centro y gira hacia el otro lado."
       ],
@@ -7215,7 +7215,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7362,7 +7362,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": true,
@@ -7419,7 +7419,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -7444,7 +7444,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7591,7 +7591,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -7616,7 +7616,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Deja que el brazo se mueva por su peso, sin usar la fuerza del hombro.",
+      "notas_etiquetado": "Deja que el brazo se mueva por su peso, sin usar la fuerza del hombro. [conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional. [conservadora] ambos_brazos: una mano apoya y el otro brazo trabaja (Q1). Se cerraría con: fuente sin apoyo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7648,7 +7648,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -7676,7 +7676,7 @@
       "adaptaciones": [
         "La fuente no da la dosis de este ejercicio; se usan las 10 repeticiones del resto de la hoja."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "agarre: por la botella; la otra mano solo se apoya (Q2). [conservadora] ambos_brazos: una mano apoya y el otro brazo trabaja (Q1). Se cerraría con: fuente sin apoyo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7765,7 +7765,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -7821,7 +7821,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -8172,7 +8172,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -8229,7 +8229,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": true,
         "flexion_profunda_rodilla": false,
@@ -8374,7 +8374,7 @@
       "adaptaciones": [
         "La fuente propone 5 minutos en total; aquí unos 2."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] agarre: la fuente dice «held» (Q2). Se cerraría con: la imagen de la fuente.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -8641,7 +8641,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -8669,7 +8669,7 @@
       "adaptaciones": [
         "La guía propone 5 veces; aquí 2 para que quepa en la rutina."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -9055,7 +9055,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": true,
@@ -9637,7 +9637,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -10441,7 +10441,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -10500,7 +10500,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -11029,7 +11029,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -11055,7 +11055,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: no consta si los brazos solo reposan (Q1). Se cerraría con: la fuente o su imagen.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -11084,7 +11084,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": true,
         "flexion_profunda_rodilla": false,
@@ -11141,7 +11141,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": true,
         "flexion_profunda_rodilla": false,
@@ -11365,7 +11365,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -11391,7 +11391,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: no consta si los brazos solo reposan (Q1). Se cerraría con: la fuente o su imagen.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -11814,7 +11814,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": true,
@@ -11842,7 +11842,7 @@
       "adaptaciones": [
         "La fuente no fija tiempos; se usa la pauta del NIA para estiramientos."
       ],
-      "notas_etiquetado": "No hacerlo tras una prótesis de cadera: cruza la pierna.",
+      "notas_etiquetado": "No hacerlo tras una prótesis de cadera: cruza la pierna. [conservadora] ambos_brazos: no consta si los brazos solo reposan (Q1). Se cerraría con: la fuente o su imagen.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -11871,7 +11871,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
