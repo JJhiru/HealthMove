@@ -1,6 +1,6 @@
 # Plan de cambios · `inclinacion_tronco` en la familia `sentarse-levantarse` (Q3)
 
-> **Propuesta de Claude, no aprobada.** No se ha modificado el catálogo. Cada cambio necesita la aprobación del desarrollador (R2.6) y, una vez aplicado, `validar-catalogo`, `version-sw` y `npm test`.
+> **Aplicada la opción B el 2026-10-20** (§6; `registro.md`, P14). Las secciones 1 a 5 son la propuesta original y no se han editado.
 >
 > **Base normativa:** Q3, resuelta el 2026-10-19 (`registro.md`, P5; protocolo R7.8): «Si la fuente no proporciona un ángulo exacto, debe conservarse el término original y no inventarse un umbral numérico». La especificación §4 define `inclinacion_tronco` como inclinar la espalda «más allá de una inclinación leve».
 >
@@ -61,3 +61,33 @@ R9.3: la disponibilidad informa, pero no decide. La elección depende de la evid
 2. Si es A: añadir `sentarse-levantarse` a «Discrepancias conocidas» de R7.7 en el protocolo, que hoy lista tres ilustraciones.
 3. `npm run version-sw`, `node scripts/validar-catalogo.mjs`, `npm test` y `node scripts/auditoria.mjs validar`.
 4. Anotar la decisión en `registro.md`.
+
+## 6. Decisión y aplicación (2026-10-20)
+
+**Quién decide.** El desarrollador pidió seguir con este plan sin más consultas, salvo que hubiera algo crítico, y en Q1 y Q2 eligió dos veces el criterio conservador. Antes de aplicar, Claude consultó a DeepSeek (C3, `deepseek/ejecuciones/20261021T001620Z-fase-02-q3-sentarse/`, DS-109 a DS-123).
+- DeepSeek no eligió ninguna opción.
+- Según DeepSeek, la A es la más coherente si el texto de la fuente es evidencia D, y la B, si la foto B es evidencia suficiente en contra.
+- Para decidir, había que calificar la foto B del NHS y los dibujos de Ealing (DS-120, DS-121).
+
+**Calificación de las imágenes** (Claude, 2026-10-20, imágenes descargadas y examinadas):
+
+| Imagen | SHA-256 | Calificación (DG-7) |
+|---|---|---|
+| NHS, «Sit-to-stand», fotos A-B-C (`STRENGTH_EXERCISES-_Sit-to-stand.width-1019.jpg`) | `df7a0a88…b3e9` (otra resolución que la del §1) | **D**: en la foto B, la transición, el tronco se inclina hacia delante claramente más que «slightly», en torno a 45° respecto a la vertical (estimación aproximada, R7.2; no es un umbral) |
+| Ealing, p. 34, «Sit To Stand No Hands» (PDF `9e53985c…`) | — | **N** para la fase de inclinación: los dibujos muestran solo el inicio (sentado) y el final (de pie) |
+
+**Opción aplicada: B.**
+- En la base, la única imagen de la transición (D) contradice el texto («slightly»). Con R7.5 y R2.1, ante esa duda se marca la exigencia como conservadora.
+- La variante describe el mismo movimiento de levantarse, y su fuente no muestra la transición (N). Mantenerla en `true` deja la familia coherente.
+- DS-115 tenía razón: R7.7 trata de las ilustraciones de HealthMove, no de las fotos de la fuente. Con la B, no hace falta añadir nada a R7.7.
+
+| Ejercicio | Cambio |
+|---|---|
+| `sentarse-levantarse` | `inclinacion_tronco`: `false` → `true`. La nota «La inclinación es leve: no es inclinacion_tronco.» se sustituye por «[conservadora] inclinacion_tronco: el texto dice «slightly», pero la foto B de la fuente muestra más (Q3). Se cerraría con: revisión profesional.» |
+| `sentarse-levantarse-sin-manos` | Sin cambio de etiqueta (`true`). Nota nueva, la que exigía R2.4: «[conservadora] inclinacion_tronco: la fuente dice «slightly» y sus dibujos no muestran la fase; la foto del NHS de la base muestra más (Q3). Se cerraría con: una imagen de la transición.» |
+| `banda-sentarse-levantarse` | Sin cambio |
+
+**Disponibilidad**, medida después de aplicar. Es modo auditoría (no es la disponibilidad real), y solo cambian dos perfiles:
+- `espalda: inclinar` y `indicaciones: no_inclinar_espalda`: de 197 a 196 (principal, de 94 a 93; de pie, de 40 a 39).
+
+Las instrucciones de HealthMove no cambian: «el tronco un poco hacia delante» traduce «slightly» y conserva el término de la fuente (P5).

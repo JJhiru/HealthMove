@@ -1,0 +1,14 @@
+{
+  "id": "fase-02-q3-sentarse",
+  "titulo": "Consulta acotada (C3): opciones A, B y C del plan de Q3 para la familia sentarse-levantarse",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-02-q3-sentarse.md",
+  "bloques": [
+    { "id": "protocolo", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/protocolo.md" },
+    { "id": "especificacion", "tipo": "archivo", "ruta": "docs/especificacion-v1.md" },
+    { "id": "registro", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/registro.md" },
+    { "id": "plan-q3", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/plan-cambios-q3-sentarse-levantarse.md" },
+    { "id": "evidencia-fuentes", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/deepseek/analisis-claude/evidencia-fuentes-q1-q2.md" },
+    { "id": "catalogo-de-pie", "tipo": "catalogo-de-pie" }
+  ]
+}

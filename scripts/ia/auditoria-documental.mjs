@@ -23,7 +23,8 @@ import { leerProtocolo } from '../auditoria/informes.mjs';
 export const CARPETA = 'docs/auditoria-catalogo/deepseek';
 export const MAX_INTENTOS = 2;
 const HTTP_REINTENTABLE = new Set([429, 500, 503]);
-const TIPOS = ['archivo', 'catalogo-esquema', 'catalogo-de-pie'];
+const TIPOS = ['archivo', 'catalogo-esquema', 'catalogo-de-pie', 'catalogo-ids'];
+const ID_EJERCICIO = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 
 export class FaseInvalida extends Error {}
 
@@ -55,13 +56,32 @@ export function leerFase(raiz, id) {
   for (const b of fase.bloques) {
     if (!b || !TIPOS.includes(b.tipo) || typeof b.id !== 'string' || ids.has(b.id)) throw new FaseInvalida(`bloque no válido: ${JSON.stringify(b).slice(0, 80)}`);
     if (b.tipo === 'archivo' && typeof b.ruta !== 'string') throw new FaseInvalida(`${b.id}: falta la ruta`);
+    if (b.parte !== undefined && (b.tipo !== 'catalogo-de-pie' || !leerParte(b.parte))) throw new FaseInvalida(`${b.id}: "parte" solo vale en catalogo-de-pie, con la forma "n/m"`);
+    if ((b.tipo === 'catalogo-ids') !== (b.ids !== undefined)) throw new FaseInvalida(`${b.id}: "ids" va solo, y siempre, en catalogo-ids`);
+    if (b.tipo === 'catalogo-ids' && (!Array.isArray(b.ids) || !b.ids.length || b.ids.some((x) => typeof x !== 'string' || !ID_EJERCICIO.test(x)) || new Set(b.ids).size !== b.ids.length)) throw new FaseInvalida(`${b.id}: "ids" debe ser una lista de ids de ejercicio distintos`);
     ids.add(b.id);
   }
   return fase;
 }
 
+// "parte": "n/m" divide catalogo-de-pie en m tramos contiguos para no superar MAX_CARACTERES_BLOQUE.
+function leerParte(parte) {
+  const m = typeof parte === 'string' && /^([1-9])\/([1-9])$/.exec(parte);
+  return m && Number(m[1]) <= Number(m[2]) ? { n: Number(m[1]), de: Number(m[2]) } : null;
+}
+
 // Datos derivados del catálogo por este script (no por el modelo). Se declaran como tales.
-function derivado(catalogo, tipo) {
+function derivado(catalogo, tipo, parte, ids) {
+  if (tipo === 'catalogo-ids') {
+    // Los ejercicios pedidos, completos y en el orden pedido. Un id inexistente es un error de la fase, no un hueco.
+    const porId = new Map(catalogo.ejercicios.map((e) => [e.id, e]));
+    const faltan = ids.filter((id) => !porId.has(id));
+    if (faltan.length) throw new FaseInvalida(`ids que no están en el catálogo: ${faltan.join(', ')}`);
+    return JSON.stringify({
+      nota: `Ejercicios pedidos por la fase (${ids.length}), completos, extraídos de public/data/catalogo.json por scripts/ia/auditoria-documental.mjs, sin modificar sus valores.`,
+      ejercicios: ids.map((id) => porId.get(id)),
+    });
+  }
   if (tipo === 'catalogo-esquema') {
     const ej = catalogo.ejercicios;
     const cuenta = (f) => ej.reduce((a, e) => { for (const k of [].concat(f(e))) a[k] = (a[k] || 0) + 1; return a; }, {});
@@ -77,9 +97,13 @@ function derivado(catalogo, tipo) {
     }, null, 1);
   }
   // catalogo-de-pie: los ejercicios con de_pie, con los campos que deciden la compatibilidad y su texto.
+  const dePie = catalogo.ejercicios.filter((e) => e.posiciones.includes('de_pie'));
+  const p = parte ? leerParte(parte) : null;
+  const tramo = p ? Math.ceil(dePie.length / p.de) : dePie.length;
+  const elegidos = p ? dePie.slice((p.n - 1) * tramo, p.n * tramo) : dePie;
   return JSON.stringify({
-    nota: 'Ejercicios con «de_pie» en posiciones, extraídos de public/data/catalogo.json por scripts/ia/auditoria-documental.mjs, sin modificar sus valores.',
-    ejercicios: catalogo.ejercicios.filter((e) => e.posiciones.includes('de_pie')).map((e) => ({
+    nota: `Ejercicios con «de_pie» en posiciones, extraídos de public/data/catalogo.json por scripts/ia/auditoria-documental.mjs, sin modificar sus valores.${p ? ` Parte ${p.n} de ${p.de}: ${elegidos.length} de los ${dePie.length}, en el orden del catálogo.` : ''}`,
+    ejercicios: elegidos.map((e) => ({
       id: e.id, posiciones: e.posiciones, recursos: e.recursos, variante_de: e.variante_de, exigencias: e.exigencias,
       instrucciones: e.instrucciones, dosis: e.dosis, adaptaciones: e.adaptaciones, notas_etiquetado: e.notas_etiquetado,
       fuente: { organizacion: e.fuente?.organizacion, titulo: e.fuente?.titulo, url: e.fuente?.url, especifica_de: e.fuente?.especifica_de ?? null },
@@ -93,7 +117,7 @@ export function prepararFase(raiz, fase) {
   const catalogo = JSON.parse(leer('public/data/catalogo.json'));
   const bloques = fase.bloques.map((b) => (b.tipo === 'archivo'
     ? { id: b.id, procedencia: b.ruta, texto: leer(b.ruta) }
-    : { id: b.id, procedencia: `public/data/catalogo.json#${b.tipo}`, texto: derivado(catalogo, b.tipo) }));
+    : { id: b.id, procedencia: `public/data/catalogo.json#${b.tipo}${b.parte ? `-${b.parte.replace('/', '-de-')}` : ''}`, texto: derivado(catalogo, b.tipo, b.parte, b.ids) }));
   for (const b of bloques) comprobarBloque(b);
   const instrucciones = leer(fase.instrucciones);
   const tarea = leer(fase.tarea);

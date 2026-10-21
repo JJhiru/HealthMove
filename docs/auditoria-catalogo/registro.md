@@ -214,4 +214,15 @@ Responden a D2 (Q2) y D3 (Q1) del informe `deepseek/analisis-claude/sesion-auton
 
 **Efectos conocidos:**
 - `node scripts/auditoria.mjs validar` da 13 avisos nuevos (18 en total). Los informes de los lotes 1 a 5 recogen el valor anterior de `ambos_brazos`. Por regla, no se sobrescriben; se revisarán con el protocolo.
-- El bloque `catalogo-de-pie` que se envía a DeepSeek queda en 59 851 de los 60 000 caracteres permitidos. Por eso las notas son breves. **La próxima nota en un ejercicio de pie lo hará superar el límite**, y habrá que dividir el bloque o revisar el límite antes de la siguiente fase con DeepSeek.
+- El bloque `catalogo-de-pie` que se envía a DeepSeek queda en 59 851 de los 60 000 caracteres permitidos. Por eso las notas son breves. **La próxima nota en un ejercicio de pie lo hará superar el límite**, y habrá que dividir el bloque o revisar el límite antes de la siguiente fase con DeepSeek. *Resuelto en P15.*
+
+14. **P14 · Plan de Q3 (familia `sentarse-levantarse`): opción B.**
+    - Texto de la indicación (literal): «Haz el commit y sigue con el plan de Q3 y las demas cosas a corregir. Puedes seguir llamando a Deepseek con normalidad». Antes, el desarrollador había pedido no consultarle más, salvo que fuera crítico.
+    - Claude eligió la B por tres motivos: el criterio conservador que el desarrollador adoptó en P9 y P10; la consulta C3 a DeepSeek (DS-109 a DS-123); y la calificación de las imágenes (la foto B del NHS es D de una inclinación mayor que la leve, y los dibujos de Ealing son N).
+    - Aplicado: `sentarse-levantarse` pasa a `inclinacion_tronco: true` y se sustituye su nota «La inclinación es leve…». `sentarse-levantarse-sin-manos` recibe la nota `[conservadora]` que le faltaba.
+    - Detalle: `plan-cambios-q3-sentarse-levantarse.md` §6. Análisis de C3: `deepseek/analisis-claude/fase-02-q3-sentarse.md`.
+    - Si el desarrollador prefiere la A, se revierte cambiando dos campos.
+15. **P15 · Herramienta de DeepSeek: bloque de pie por partes.**
+    - Los bloques `catalogo-de-pie` admiten `"parte": "n/m"`, que envía el tramo n de m en el orden del catálogo, para no superar `MAX_CARACTERES_BLOQUE` (60 000). El límite no se ha subido.
+    - Las fases ya ejecutadas no se editan: son el registro de lo que se envió.
+    - Prueba: `tests/auditoria-ia-documental.test.mjs`. Comprueba que las partes, juntas, son exactamente los ejercicios de pie y que se rechazan las partes mal formadas.

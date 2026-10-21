@@ -1514,7 +1514,7 @@
         "flexion_profunda_rodilla": true,
         "flexion_amplia_cadera": false,
         "puntillas_talones": false,
-        "inclinacion_tronco": false,
+        "inclinacion_tronco": true,
         "rotacion_tronco": false
       },
       "instrucciones": [
@@ -1533,7 +1533,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Con los pies algo atrasados, la rodilla puede pasar de 90°. Al estar de pie no hay apoyo: equilibrio_sin_apoyo. La inclinación es leve: no es inclinacion_tronco.",
+      "notas_etiquetado": "Con los pies algo atrasados, la rodilla puede pasar de 90°. Al estar de pie no hay apoyo: equilibrio_sin_apoyo. [conservadora] inclinacion_tronco: el texto dice «slightly», pero la foto B de la fuente muestra más (Q3). Se cerraría con: revisión profesional.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7329,7 +7329,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] inclinacion_tronco: la fuente dice «slightly» y sus dibujos no muestran la fase; la foto del NHS de la base muestra más (Q3). Se cerraría con: una imagen de la transición.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",

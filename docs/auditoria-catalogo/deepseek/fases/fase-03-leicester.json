@@ -1,0 +1,14 @@
+{
+  "id": "fase-03-leicester",
+  "titulo": "Revisión del lote 6 (reauditoría con el protocolo 1.0 de los 11 ejercicios del folleto de Leicester) y del plan de cambios de Leicester",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-03-leicester.md",
+  "bloques": [
+    { "id": "protocolo", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/protocolo.md" },
+    { "id": "especificacion", "tipo": "archivo", "ruta": "docs/especificacion-v1.md" },
+    { "id": "registro", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/registro.md" },
+    { "id": "opciones-js", "tipo": "archivo", "ruta": "public/js/opciones.js" },
+    { "id": "plan-leicester", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/plan-cambios-leicester.md" },
+    { "id": "catalogo-leicester", "tipo": "catalogo-ids", "ids": ["marcha-sentado-manos-cadera", "inclinacion-lateral-brazo-arriba", "estiramiento-isquiotibiales-sentado", "circulos-hombros-sentado", "curl-biceps-sentado", "toalla-separar-sentado", "boxeo-sentado", "boxeo-circulos-alto", "boxeo-circulos-pecho", "arquear-espalda-sentado", "movilidad-lumbar-sentado"] }
+  ]
+}

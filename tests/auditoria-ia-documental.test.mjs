@@ -17,7 +17,9 @@ const RAIZ = fileURLToPath(new URL('..', import.meta.url));
 const CLAVE = 'clave-de-prueba-0123456789abcdef';
 const config = { ...leerConfiguracion({}), maxTokensEntrada: 200000, maxTokensSalida: 16000, presupuestoUSD: 1, maxSolicitudes: 10 };
 const sha = (t) => createHash('sha256').update(t).digest('hex');
-const prep = prepararFase(RAIZ, leerFase(RAIZ, 'fase-01-protocolo'));
+// La fase 01 con su bloque de pie en dos partes: entero ya no cabe en MAX_CARACTERES_BLOQUE.
+const fase01 = leerFase(RAIZ, 'fase-01-protocolo');
+const prep = prepararFase(RAIZ, { ...fase01, bloques: fase01.bloques.flatMap((b) => (b.tipo === 'catalogo-de-pie' ? ['1/2', '2/2'].map((parte, i) => ({ ...b, id: `${b.id}-${i + 1}`, parte })) : [b])) });
 
 // Texto difícil de conservar: Unicode, espacios al final, \r\n, tabuladores, comillas y markdown.
 const LITERAL = '# Informe\r\n\nDS-1 · «ambos_brazos» — evidencia: "sujétate con las dos manos"  \n\t- ñ, ü, 😀, ½\n\n```js\nconst x = 1;\n```\n';
@@ -28,12 +30,14 @@ const transporteDe = (...respuestas) => { const cola = [...respuestas]; let llam
 const ejecutar = (transporte, cfg = config) => ejecutarFase(prep, { config: cfg, clave: CLAVE, presupuesto: new Presupuesto(cfg), transporte });
 
 test('fase: solo ids, claves y rutas válidas del repositorio', () => {
-  assert.equal(prep.bloques.length, 9);
+  assert.equal(prep.bloques.length, 10);
   assert.equal(prep.mensajes[0].role, 'system');
   assert.ok(prep.mensajes[1].content.includes('<<<INICIO id="protocolo" procedencia="docs/auditoria-catalogo/protocolo.md">>>'));
   const catalogo = JSON.parse(readFileSync(join(RAIZ, 'public/data/catalogo.json'), 'utf8'));
-  const dePie = JSON.parse(prep.bloques.find((b) => b.id === 'catalogo-de-pie').texto).ejercicios;
-  assert.equal(dePie.length, catalogo.ejercicios.filter((e) => e.posiciones.includes('de_pie')).length, 'no se envía el catálogo entero');
+  const partes = ['catalogo-de-pie-1', 'catalogo-de-pie-2'].map((id) => prep.bloques.find((b) => b.id === id));
+  assert.deepEqual(partes.map((b) => b.procedencia), ['public/data/catalogo.json#catalogo-de-pie-1-de-2', 'public/data/catalogo.json#catalogo-de-pie-2-de-2']);
+  const dePie = partes.flatMap((b) => JSON.parse(b.texto).ejercicios.map((e) => e.id));
+  assert.deepEqual(dePie, catalogo.ejercicios.filter((e) => e.posiciones.includes('de_pie')).map((e) => e.id), 'las partes, juntas y en orden, son los de pie: ni el catálogo entero ni huecos');
   for (const id of ['../x', 'fase-1', 'FASE-01', 'fase-01/../../x', '']) assert.throws(() => leerFase(RAIZ, id), FaseInvalida, id);
   const raiz = mkdtempSync(join(tmpdir(), 'hm-fase-'));
   try {
@@ -45,6 +49,12 @@ test('fase: solo ids, claves y rutas válidas del repositorio', () => {
     assert.throws(fase({ ...base, id: 'fase-98' }), FaseInvalida);
     assert.throws(fase({ ...base, bloques: [{ id: 'a', tipo: 'url', ruta: 'x' }] }), FaseInvalida);
     assert.throws(fase({ ...base, bloques: [{ id: 'a', tipo: 'archivo', ruta: 'a.md' }, { id: 'a', tipo: 'archivo', ruta: 'b.md' }] }), FaseInvalida);
+    assert.doesNotThrow(fase({ ...base, bloques: [{ id: 'a', tipo: 'catalogo-de-pie', parte: '2/3' }] }));
+    for (const parte of ['3/2', '0/2', '1-2', 2, '']) assert.throws(fase({ ...base, bloques: [{ id: 'a', tipo: 'catalogo-de-pie', parte }] }), FaseInvalida, String(parte));
+    assert.throws(fase({ ...base, bloques: [{ id: 'a', tipo: 'archivo', ruta: 'a.md', parte: '1/2' }] }), FaseInvalida);
+    assert.doesNotThrow(fase({ ...base, bloques: [{ id: 'a', tipo: 'catalogo-ids', ids: ['boxeo-sentado', 'pulgar-dedos'] }] }));
+    for (const ids of [undefined, [], ['Boxeo'], ['a', 'a'], ['../x'], [1], 'boxeo-sentado']) assert.throws(fase({ ...base, bloques: [{ id: 'a', tipo: 'catalogo-ids', ids }] }), FaseInvalida, JSON.stringify(ids));
+    assert.throws(fase({ ...base, bloques: [{ id: 'a', tipo: 'catalogo-de-pie', ids: ['x'] }] }), FaseInvalida);
     // Rutas fuera del repositorio o prohibidas no se leen.
     writeFileSync(join(raiz, '.env'), 'DEEPSEEK_API_KEY=x');
     writeFileSync(join(raiz, 'i.md'), 'i'); writeFileSync(join(raiz, 't.md'), 't');
@@ -53,6 +63,7 @@ test('fase: solo ids, claves y rutas válidas del repositorio', () => {
     for (const ruta of ['../fuera.md', '/etc/passwd', '.env', 'no-existe.md']) {
       assert.throws(() => prepararFase(raiz, { ...base, bloques: [{ id: 'a', tipo: 'archivo', ruta }] }), Error, ruta);
     }
+    assert.throws(() => prepararFase(raiz, { ...base, bloques: [{ id: 'a', tipo: 'catalogo-ids', ids: ['no-existe'] }] }), FaseInvalida, 'un id que no está en el catálogo');
   } finally { rmSync(raiz, { recursive: true, force: true }); }
 });
 
@@ -109,7 +120,7 @@ test('guardado: respuesta y cuerpo literales byte a byte, con hashes verificable
     assert.equal(meta.hashes.respuesta, sha(leer('respuesta')));
     assert.equal(meta.hashes.respuestaApi, sha(leer('respuestaApi')));
     assert.equal(meta.estado, 'completa');
-    assert.equal(meta.bloques.length, 9);
+    assert.equal(meta.bloques.length, prep.bloques.length);
     assert.ok(!JSON.stringify(meta).includes(CLAVE) && !leer('solicitud').toString().includes(CLAVE));
     assert.throws(() => guardarEjecucion(raiz, { prep, resultado, ahora, clave: CLAVE, config }), /EEXIST/, 'una ejecución nunca se sobrescribe');
   } finally { rmSync(raiz, { recursive: true, force: true }); }
@@ -169,11 +180,12 @@ test('CLI: auditar-documentos simula sin red ni clave y no crea ejecuciones', ()
   const antes = existsSync(carpeta) ? readdirSync(carpeta) : null;
   const entorno = Object.fromEntries(Object.entries(process.env).filter(([k]) => k !== 'DEEPSEEK_API_KEY' && !k.startsWith('HM_IA_')));
   const cli = (...a) => spawnSync(process.execPath, ['--import', 'data:text/javascript,globalThis.fetch=()=>{throw new Error("RED-PROHIBIDA")}', join(RAIZ, 'scripts/auditoria-ia.mjs'), ...a], { encoding: 'utf8', env: entorno });
-  const sim = cli('auditar-documentos', 'fase-01-protocolo');
+  // Una fase vigente: las ya ejecutadas no se editan y su bloque de pie entero ya no cabe.
+  const sim = cli('auditar-documentos', 'fase-03-leicester');
   assert.equal(sim.status, 0, sim.stderr);
   assert.match(sim.stdout, /SIMULACIÓN \(no se llama a la API\)/);
   assert.doesNotMatch(sim.stdout + sim.stderr, /RED-PROHIBIDA/);
-  const sinClave = cli('auditar-documentos', 'fase-01-protocolo', '--ejecutar');
+  const sinClave = cli('auditar-documentos', 'fase-03-leicester', '--ejecutar');
   assert.equal(sinClave.status, 2);
   assert.match(sinClave.stderr, /falta DEEPSEEK_API_KEY/);
   for (const a of [['auditar-documentos'], ['auditar-documentos', '../x'], ['auditar-documentos', 'fase-01-protocolo', '--borrar']]) {

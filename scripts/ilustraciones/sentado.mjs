@@ -21,7 +21,7 @@ export const SENTADO = {
   'curl-biceps-sentado': S({ brazoD: 2, codoD: 4 }, { codoD: 150 }, { botella: ['manoD'] }),
   'toalla-separar-sentado': SF({ brazoD: 14, codoD: 168, brazoI: 12, codoI: -20 }, {}, { toalla: [['manoD', 'manoI']], zona: ['brazo'] }),
   'boxeo-sentado': S(PUNO_PECHO, { brazoD: 88, codoD: 90 }),
-  'boxeo-circulos-alto': S({ brazoD: 35, codoD: 125, brazoI: 31, codoI: 121 }, {}, { circulo: ['manoD'] }),
+  'boxeo-circulos-alto': S({ brazoD: 70, codoD: 150, brazoI: 66, codoI: 146 }, {}, { circulo: ['manoD'] }), // puños a la altura de la nariz (fuente: «level with your nose»)
   'boxeo-circulos-pecho': S({ brazoD: 22, codoD: 100, brazoI: 18, codoI: 96 }, {}, { circulo: ['manoD'] }),
   'arquear-espalda-sentado': S(MANOS_CADERA, { tronco: -9, brazoD: -38, brazoI: -38 }, { zona: ['pecho'] }),
   'movilidad-lumbar-sentado': S({ tronco: -6 }, { tronco: 20 }),
