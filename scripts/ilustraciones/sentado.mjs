@@ -29,7 +29,8 @@ export const SENTADO = {
   'abrir-cerrar-manos': MANO('abierta', 'puno', 'palma'),
   'pulgar-dedos': MANO('pulgar-indice', 'pulgar-menique', 'palma'),
   'activacion-sentado': S({ brazoD: -28, codoD: 45, brazoI: 35, codoI: 110 }, { brazoD: 35, codoD: 110, brazoI: -28, codoI: 45, pieD: 135 }),
-  'banda-remo-sentado': S({ brazoD: 50, codoD: 62, brazoI: 46, codoI: 58 }, { brazoD: -18, codoD: 80, brazoI: -22, codoI: 76 }, { banda: [['manoD', 'manoI']] }),
+  // De frente, como la fuente: la banda pasa de los muslos al abdomen y se estira hacia los lados (no es un remo hacia atrás).
+  'banda-remo-sentado': SF({ brazoD: 4, codoD: -35, brazoI: 4, codoI: -35, ...F({ antebrazo: 0.7 }) }, { brazoD: 14, codoD: 75, brazoI: 14, codoI: 75, ...F({ antebrazo: 0.4 }) }, { banda: [['manoD', 'manoI']] }),
   'banda-curl-sentado': S({ brazoD: 4, codoD: 20 }, { codoD: 150 }, { banda: [['manoD', 'pieD']] }),
   'respiracion-abdominal-sentado': S(MANOS_ABDOMEN, {}, { zona: ['abdomen'], aire: 'entra' }),
   'extension-rodilla-sentado': S({}, { rodillaD: 88, pieD: 172 }, { zona: ['muslo'] }),

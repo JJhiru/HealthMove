@@ -81,7 +81,7 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 2 | inclinacion-lateral-sentado | REQUIERE CORRECCIONES | pendiente |
 | 6 | estiramiento-isquiotibiales-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 6 | circulos-hombros-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 3 | elevar-rodar-hombros-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 8 | elevar-rodar-hombros-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 6 | curl-biceps-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 6 | toalla-separar-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 6 | boxeo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
@@ -91,9 +91,9 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 6 | movilidad-lumbar-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 4 | estiramiento-gemelo-sentado | REQUIERE CORRECCIONES | pendiente |
 | 4 | abrir-cerrar-manos | REQUIERE CORRECCIONES | pendiente |
-| 4 | pulgar-dedos | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 4 | activacion-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 4 | banda-remo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 8 | pulgar-dedos | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 8 | activacion-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 8 | banda-remo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 4 | banda-curl-sentado | REQUIERE CORRECCIONES | pendiente |
 | 7 | sentarse-levantarse | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 7 | mini-sentadillas | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
@@ -121,7 +121,7 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 Plantilla en `protocolo.md`, R1.4.
 
 ### CN-1 · La mano pasa del hombro al doblar el codo, con el brazo abajo
-- Ejercicio(s): `curl-biceps-sentado` (lote 6). Casos equivalentes sin auditar: `flexion-codo-tumbado`. `extension-codo-botella-sentado` ya tiene `brazo_sobre_hombro: true`.
+- Ejercicio(s): `curl-biceps-sentado` (lote 6) y `pulgar-dedos` (lote 8, por una foto con la mano a la altura de la cabeza y un texto que no fija la altura; ahí la regla es «conservadora»). Casos equivalentes sin auditar: `flexion-codo-tumbado`. `extension-codo-botella-sentado` ya tiene `brazo_sobre_hombro: true`.
 - Detalle: la especificación §4 define `brazo_sobre_hombro` como «codo **o mano** por encima de la altura del hombro». La opción del perfil (`brazo_arriba`) y el rótulo hablan de «levantar el brazo por encima del hombro». En un curl, la mano sube por encima del hombro solo porque se dobla el codo; el brazo no se levanta.
 - Evidencia: D, la foto 2 del ejercicio 6 del folleto de Leicester (p. 5 impresa) muestra la botella a la altura de la boca, con el codo pegado al costado.
 - Reglas consideradas y por qué no resuelven: la definición literal de §4 da `true` con evidencia D, y así se ha aplicado. Pero el texto de la opción sugiere que el filtro busca la elevación del brazo. Elegir entre la definición y la intención de la opción es un criterio que el protocolo no tiene.
@@ -265,3 +265,17 @@ El desarrollador pidió seguir con «las demas cosas a corregir» sin consultarl
     - Fuentes abiertas de nuevo (texto y fotos); ilustraciones comparadas sin discrepancias.
     - Aplicado: dos notas conservadoras pasan al formato de R2.4 (`estiramiento-tobillo-sentado` y `mini-sentadillas`). Ninguna etiqueta cambia.
     - Los 8 quedan en LISTO PARA APROBACIÓN DOCUMENTAL (`lote-07.md`). Siguen en `borrador`.
+19. **P19 · Lote 8: reauditoría de 4 ejercicios de Age UK Devon.**
+    - Ejercicios: `elevar-rodar-hombros-sentado`, `pulgar-dedos`, `activacion-sentado` y `banda-remo-sentado`.
+    - El PDF se abrió de nuevo (SHA-256 `32ccd13c…`) y se renderizaron las páginas a dos columnas (R7.9).
+    - Aplicado:
+      - `pulgar-dedos`: `brazo_sobre_hombro` pasa de `false` a `true`, conservador (clase de CN-1), y la nota de `agarre` pasa a evidencia D (§4, cierre parcial);
+      - `banda-remo-sentado`: ilustración frontal y nombre «Abrir la banda a la altura del abdomen» (antes, «Remo con banda elástica», que sugería otro movimiento; R7.6);
+      - `consultado` en los 4.
+    - Tras la revisión de DeepSeek (C6, DS-157 a DS-167):
+      - el `agarre` de `pulgar-dedos` y el `esfuerzo_cardio` de `activacion-sentado` pasan a conservadores, con su nota (no cambia ningún valor);
+      - se aclara la instrucción 4 de `banda-remo-sentado`;
+      - **se aprueba la adaptación «solo la primera ronda» de `activacion-sentado`** (R3.1: subconjunto de la fuente).
+    - Disponibilidad (modo auditoría): `brazos: brazo_arriba` pasa de 183 a 182.
+    - Los 4 quedan en LISTO PARA APROBACIÓN DOCUMENTAL (`lote-08.md`). Siguen en `borrador`.
+    - **Con este lote hay 23 ejercicios en LISTO PARA APROBACIÓN DOCUMENTAL, todos reauditados con el protocolo 1.0** (lotes 6 a 8). Son los 18 «LISTO» de los lotes 1 a 5 y 5 de Leicester que requerían correcciones. Los otros 11 «REQUIERE CORRECCIONES» de los lotes 1 a 5 quedan para la revisión posterior que pidió el desarrollador.

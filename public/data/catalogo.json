@@ -675,7 +675,7 @@
         "titulo": "Seated Vitality at Home",
         "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -1235,7 +1235,7 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": false,
         "agarre": true,
@@ -1259,10 +1259,10 @@
         "titulo": "Seated Vitality at Home",
         "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Cierre parcial de la mano: se marca agarre por precaución.",
+      "notas_etiquetado": "[conservadora] agarre: tocar el pulgar con cada dedo flexiona los dedos, lo que parece un cierre parcial de la mano (§4). Se cerraría con: un criterio sobre si la pinza cuenta como agarre. [conservadora] brazo_sobre_hombro: la foto de la fuente muestra la mano por encima del hombro y el texto no fija la altura. Se cerraría con: evidencia D de la altura en la ejecución que pide HealthMove.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -1316,12 +1316,12 @@
         "titulo": "Seated Vitality at Home",
         "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
         "Se incluye solo la primera ronda, la más suave, del calentamiento de la fuente."
       ],
-      "notas_etiquetado": "La fuente indica que busca subir el pulso: esfuerzo_cardio. Las palmadas exigen los dos brazos.",
+      "notas_etiquetado": "[conservadora] esfuerzo_cardio: la fuente dice que el calentamiento completo sube el pulso; aquí solo va la primera ronda. Se cerraría con: una fuente sobre la primera ronda sola. Las palmadas exigen los dos brazos.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -1332,7 +1332,7 @@
     },
     {
       "id": "banda-remo-sentado",
-      "nombre": "Remo con banda elástica",
+      "nombre": "Abrir la banda a la altura del abdomen",
       "descripcion": "Fortalece la parte alta de la espalda y los hombros.",
       "fases": [
         "principal"
@@ -1366,7 +1366,7 @@
         "Siéntate con la espalda recta y coloca la banda sobre los muslos, bien plana.",
         "Pasa las manos por debajo de la banda y agárrala.",
         "Súbela a la altura del abdomen estirándola hacia fuera.",
-        "Llévala hacia el abdomen con los codos pegados al cuerpo y relaja la tensión."
+        "Vuelve a llevarla hacia el abdomen con los codos pegados al cuerpo. Después adelanta las manos, relaja los brazos y suelta la tensión."
       ],
       "dosis": "Hasta 12 veces.",
       "duracion_estimada_seg": 75,
@@ -1376,7 +1376,7 @@
         "titulo": "Seated Vitality at Home",
         "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [],
       "notas_etiquetado": "La banda cuenta como carga_externa.",

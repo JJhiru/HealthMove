@@ -1,0 +1,13 @@
+{
+  "id": "fase-05-lote08",
+  "titulo": "Revisión del lote 8 (reauditoría con el protocolo 1.0 de 4 ejercicios de Age UK Devon)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-05-lote08.md",
+  "bloques": [
+    { "id": "protocolo", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/protocolo.md" },
+    { "id": "especificacion", "tipo": "archivo", "ruta": "docs/especificacion-v1.md" },
+    { "id": "registro", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/registro.md" },
+    { "id": "lote-08", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/lote-08.md" },
+    { "id": "catalogo-lote08", "tipo": "catalogo-ids", "ids": ["elevar-rodar-hombros-sentado", "pulgar-dedos", "activacion-sentado", "banda-remo-sentado"] }
+  ]
+}
