@@ -326,7 +326,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Elevar la pierna estirada aumenta la flexión de cadera respecto a estar sentado: se marca por precaución.",
+      "notas_etiquetado": "[conservadora] flexion_amplia_cadera: la pierna estirada y elevada sube algo el muslo. Se cerraría con: una imagen lateral de la cadera.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -1610,7 +1610,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "'Hasta donde te resulte cómodo' no limita la flexión: se marca flexion_profunda_rodilla por precaución. [conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
+      "notas_etiquetado": "[conservadora] flexion_profunda_rodilla: «as far as is comfortable» no limita la flexión. Se cerraría con: una fuente que fije el límite. [conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",

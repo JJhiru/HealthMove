@@ -73,9 +73,9 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 |---|---|---|---|
 | 1 | estiramiento-pecho-sentado | REQUIERE CORRECCIONES | pendiente |
 | 1 | giro-tronco-sentado | REQUIERE CORRECCIONES | pendiente |
-| 1 | marcha-sentado-sujetandose | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 7 | marcha-sentado-sujetandose | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 6 | marcha-sentado-manos-cadera | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 1 | estiramiento-tobillo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 7 | estiramiento-tobillo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 2 | tobillos-punta-talon-sentado | REQUIERE CORRECCIONES | pendiente |
 | 6 | inclinacion-lateral-brazo-arriba | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 2 | inclinacion-lateral-sentado | REQUIERE CORRECCIONES | pendiente |
@@ -95,15 +95,15 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 4 | activacion-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 4 | banda-remo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 4 | banda-curl-sentado | REQUIERE CORRECCIONES | pendiente |
-| 5 | sentarse-levantarse | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 5 | mini-sentadillas | LISTO con la opción A de la decisión 4 | pendiente |
-| 5 | elevacion-talones-apoyo | LISTO con la opción A de la decisión 4 | pendiente |
+| 7 | sentarse-levantarse | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 7 | mini-sentadillas | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 7 | elevacion-talones-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 5 | elevacion-talones-sin-apoyo | REQUIERE CORRECCIONES | pendiente |
-| 5 | elevacion-lateral-pierna | LISTO con la opción A de la decisión 4 | pendiente |
-| 5 | extension-pierna-atras | LISTO con la opción A de la decisión 4 | pendiente |
+| 7 | elevacion-lateral-pierna | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 7 | extension-pierna-atras | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 5 | flexiones-pared | REQUIERE CORRECCIONES | pendiente |
 | 5 | equilibrio-una-pierna-pared | REQUIERE CORRECCIONES | pendiente |
-| 5 | inclinacion-lateral-de-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 7 | inclinacion-lateral-de-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 5 | estiramiento-gemelo-pared | REQUIERE CORRECCIONES | pendiente |
 
 ## Pendientes
@@ -260,3 +260,8 @@ El desarrollador pidió seguir con «las demas cosas a corregir» sin consultarl
     - Aparece en `vistaEjercicio` (`public/js/app.js`, constante `PROCEDENCIA`) bajo «Material pensado para: …», y solo si hay `especifica_de`.
     - Prueba en el navegador: `tests/navegador/flujos.test.mjs`, «ficha: la aclaración de procedencia…».
     - Era necesario antes de publicar cualquiera de los 60 ejercicios con `especifica_de`.
+18. **P18 · Lote 7: reauditoría de 8 ejercicios del NHS.**
+    - Ejercicios: `marcha-sentado-sujetandose`, `estiramiento-tobillo-sentado`, `sentarse-levantarse`, `mini-sentadillas`, `elevacion-talones-apoyo`, `elevacion-lateral-pierna`, `extension-pierna-atras` e `inclinacion-lateral-de-pie`.
+    - Fuentes abiertas de nuevo (texto y fotos); ilustraciones comparadas sin discrepancias.
+    - Aplicado: dos notas conservadoras pasan al formato de R2.4 (`estiramiento-tobillo-sentado` y `mini-sentadillas`). Ninguna etiqueta cambia.
+    - Los 8 quedan en LISTO PARA APROBACIÓN DOCUMENTAL (`lote-07.md`). Siguen en `borrador`.

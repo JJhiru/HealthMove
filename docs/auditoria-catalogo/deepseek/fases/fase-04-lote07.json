@@ -1,0 +1,14 @@
+{
+  "id": "fase-04-lote07",
+  "titulo": "Revisión del lote 7 (reauditoría con el protocolo 1.0 de 8 ejercicios del NHS)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-04-lote07.md",
+  "bloques": [
+    { "id": "protocolo", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/protocolo.md" },
+    { "id": "especificacion", "tipo": "archivo", "ruta": "docs/especificacion-v1.md" },
+    { "id": "registro", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/registro.md" },
+    { "id": "evidencia-fuentes", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/deepseek/analisis-claude/evidencia-fuentes-q1-q2.md" },
+    { "id": "lote-07", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/lote-07.md" },
+    { "id": "catalogo-lote07", "tipo": "catalogo-ids", "ids": ["marcha-sentado-sujetandose", "estiramiento-tobillo-sentado", "sentarse-levantarse", "mini-sentadillas", "elevacion-talones-apoyo", "elevacion-lateral-pierna", "extension-pierna-atras", "inclinacion-lateral-de-pie"] }
+  ]
+}
