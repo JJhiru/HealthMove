@@ -94,6 +94,13 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 8 | pulgar-dedos | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 8 | activacion-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 8 | banda-remo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 9 | talon-al-suelo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 9 | juntar-omoplatos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 9 | elevacion-brazo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 9 | extension-codo-toalla-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 9 | flexion-hombro-lado-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 9 | respiracion-abdominal-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 9 | respiracion-tranquila-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 4 | banda-curl-sentado | REQUIERE CORRECCIONES | pendiente |
 | 7 | sentarse-levantarse | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 7 | mini-sentadillas | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
@@ -108,7 +115,7 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 
 ## Pendientes
 
-- Auditados: 34 de 220. Siguiente: Royal Devon, St Helens, Royal Berkshire Stage 1 y NHS Forth Valley.
+- Auditados: 41 de 220. Siguiente: St Helens y NHS Forth Valley. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
 - Lista de candidatos a adaptación unilateral: ver los resúmenes de los lotes 1, 3 y 4.
 - Tarea de interfaz pendiente: comunicar `especifica_de` (decisión 3).
 - **Actualización (2026-10-16):**
@@ -279,3 +286,15 @@ El desarrollador pidió seguir con «las demas cosas a corregir» sin consultarl
     - Disponibilidad (modo auditoría): `brazos: brazo_arriba` pasa de 183 a 182.
     - Los 4 quedan en LISTO PARA APROBACIÓN DOCUMENTAL (`lote-08.md`). Siguen en `borrador`.
     - **Con este lote hay 23 ejercicios en LISTO PARA APROBACIÓN DOCUMENTAL, todos reauditados con el protocolo 1.0** (lotes 6 a 8). Son los 18 «LISTO» de los lotes 1 a 5 y 5 de Leicester que requerían correcciones. Los otros 11 «REQUIERE CORRECCIONES» de los lotes 1 a 5 quedan para la revisión posterior que pidió el desarrollador.
+20. **P20 · Lote 9: primera auditoría de 7 ejercicios** (Royal Berkshire «Stage 1» y NHS «Breathing exercises for stress»).
+    - Se eligieron para llenar los huecos del primer lote público: la parte principal sentada sin agarre y la calma sin inclinar la espalda.
+    - Fuentes abiertas: los PDF y la página, con sus hashes; también NHS Forth Valley, para verificar la pauta de dosis que se cita.
+    - Aplicado:
+      - `especifica_de` = «rehabilitación tras un ingreso hospitalario» en los 5 de Royal Berkshire (R8.1: «During and after a stay in hospital»);
+      - la dosis de los 2 tumbados pasa a la pauta verificada de Forth Valley (antes, una pauta sin fundamento);
+      - `flexion-hombro-lado-tumbado`: `flexion_profunda_rodilla` y `flexion_amplia_cadera` pasan a `true` conservador, porque no consta la postura de las piernas. Efecto: `rodilla` de 199 a 198 y `cadera` de 185 a 184;
+      - `respiracion-tranquila-tumbado`: **se retira una nota que atribuía a la fuente un consejo que la página no contiene**;
+      - `consultado` en los 7.
+    - Royal Devon devolvió 403: sus 3 ejercicios quedan sin auditar.
+    - **Incidencia de aplicación, ya corregida:** un reemplazo global cambió por error una frase de adaptación en 20 ejercicios de otras fuentes. Se revirtió antes de confirmar y se comprobó contra `HEAD`.
+    - Los 7 quedan en LISTO PARA APROBACIÓN DOCUMENTAL (`lote-09.md`). Siguen en `borrador`.

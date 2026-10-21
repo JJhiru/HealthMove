@@ -1491,7 +1491,7 @@
         "titulo": "Breathing exercises for stress",
         "url": "https://www.nhs.uk/mental-health/self-help/guides-tools-and-activities/breathing-exercises-for-stress/",
         "licencia": "Open Government Licence v3.0",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
         "La fuente recomienda al menos 5 minutos; en una rutina de 10 a 20 minutos se usa como cierre más breve.",
@@ -2228,7 +2228,8 @@
         "titulo": "Stage 1 exercises",
         "url": "https://royalberkshire.nhs.uk/media/vdxo0b3m/stage-1-exercises_mar23.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "rehabilitación tras un ingreso hospitalario",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco; se usa la pauta general de NHS Forth Valley (empezar con 2 o 3 y subir hasta 10).",
@@ -2402,7 +2403,8 @@
         "titulo": "Stage 1 exercises",
         "url": "https://royalberkshire.nhs.uk/media/vdxo0b3m/stage-1-exercises_mar23.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "rehabilitación tras un ingreso hospitalario",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco; se usa la pauta general de NHS Forth Valley (empezar con 2 o 3 y subir hasta 10)."
@@ -2462,7 +2464,8 @@
         "titulo": "Stage 1 exercises",
         "url": "https://royalberkshire.nhs.uk/media/vdxo0b3m/stage-1-exercises_mar23.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "rehabilitación tras un ingreso hospitalario",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco; se usa la pauta general de NHS Forth Valley (empezar con 2 o 3 y subir hasta 10)."
@@ -10773,7 +10776,7 @@
         "Empuja el antebrazo hacia abajo estirando el codo y aguanta.",
         "Vuelve a doblar el brazo."
       ],
-      "dosis": "Mantén de 5 a 10 segundos. De 5 a 10 veces con cada brazo.",
+      "dosis": "Mantén de 5 a 10 segundos. De 2 a 10 veces con cada brazo.",
       "duracion_estimada_seg": 90,
       "variante_de": null,
       "fuente": {
@@ -10781,10 +10784,11 @@
         "titulo": "Stage 1 exercises",
         "url": "https://royalberkshire.nhs.uk/media/vdxo0b3m/stage-1-exercises_mar23.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "rehabilitación tras un ingreso hospitalario",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
-        "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
+        "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa la pauta general de NHS Forth Valley (empezar con 2 o 3 y subir hasta 10)."
       ],
       "notas_etiquetado": "",
       "validacion": {
@@ -12591,8 +12595,8 @@
         "ambos_brazos": false,
         "agarre": false,
         "peso_en_manos": false,
-        "flexion_profunda_rodilla": false,
-        "flexion_amplia_cadera": false,
+        "flexion_profunda_rodilla": true,
+        "flexion_amplia_cadera": true,
         "puntillas_talones": false,
         "inclinacion_tronco": false,
         "rotacion_tronco": false
@@ -12602,7 +12606,7 @@
         "Sube el brazo con el codo estirado hasta dejarlo junto a la oreja.",
         "Bájalo despacio. Gírate y cambia de brazo."
       ],
-      "dosis": "De 5 a 10 veces con cada brazo.",
+      "dosis": "De 2 a 10 veces con cada brazo.",
       "duracion_estimada_seg": 75,
       "variante_de": "elevacion-brazos-tumbado",
       "fuente": {
@@ -12610,12 +12614,13 @@
         "titulo": "Stage 1 exercises",
         "url": "https://royalberkshire.nhs.uk/media/vdxo0b3m/stage-1-exercises_mar23.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "rehabilitación tras un ingreso hospitalario",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
-        "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
+        "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa la pauta general de NHS Forth Valley (empezar con 2 o 3 y subir hasta 10)."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] flexion_profunda_rodilla y flexion_amplia_cadera: tumbado de lado, ni la fuente ni la instrucción dicen cómo van las piernas. Se cerraría con: una fuente que fije la postura de las piernas.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -12668,12 +12673,12 @@
         "titulo": "Breathing exercises for stress",
         "url": "https://www.nhs.uk/mental-health/self-help/guides-tools-and-activities/breathing-exercises-for-stress/",
         "licencia": "Open Government Licence v3.0",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
         "La fuente recomienda al menos 5 minutos; aquí unos 3 para que quepa en la rutina."
       ],
-      "notas_etiquetado": "La fuente aconseja consultar a un profesional si el ejercicio angustia o si el estrés o la ansiedad son intensos.",
+      "notas_etiquetado": "",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
