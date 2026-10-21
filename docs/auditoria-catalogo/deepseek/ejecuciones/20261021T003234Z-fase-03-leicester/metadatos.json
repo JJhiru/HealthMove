@@ -1,0 +1,113 @@
+{
+  "idEjecucion": "20261021T003234Z-fase-03-leicester",
+  "fecha": "2026-10-21T00:32:34.736Z",
+  "fase": {
+    "id": "fase-03-leicester",
+    "titulo": "Revisión del lote 6 (reauditoría con el protocolo 1.0 de los 11 ejercicios del folleto de Leicester) y del plan de cambios de Leicester",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-03-leicester.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "fc2fd312-403d-452c-8a19-55f356352d7f",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 640,
+    "falloCache": 47783,
+    "salida": 10641,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 78544,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "fc2fd312-403d-452c-8a19-55f356352d7f",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 640,
+        "falloCache": 47783,
+        "salida": 10641,
+        "razonamiento": 0
+      },
+      "coste": 0.027107939999999997,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.027107939999999997,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "d179beb37be806f1cc972bdf0055704c05ed68ec",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "ea2420585e3860f73120b3c6860d613c36fa9529",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/lote-06.md"
+    ]
+  },
+  "bloque": 1,
+  "continuacion": null,
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36381,
+      "sha256": "30e21bcb1d161543535770c2f46924eaca686d1a0724047a2be42f66821f0f3b"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 14440,
+      "sha256": "49f0378f38670d1a81ca0913410446f2f2df8af37ff202ffacb70022f8d41504"
+    },
+    {
+      "id": "registro",
+      "procedencia": "docs/auditoria-catalogo/registro.md",
+      "caracteres": 20844,
+      "sha256": "489faadc84973c179bea89404cef3f47d2160c6d390f369b2c5196a0e946ef12"
+    },
+    {
+      "id": "opciones-js",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6246,
+      "sha256": "4430708c5729fd9d4f75a783a575a7a6d826cccc0d94bc6e5d6c2e63636eaf4b"
+    },
+    {
+      "id": "plan-leicester",
+      "procedencia": "docs/auditoria-catalogo/plan-cambios-leicester.md",
+      "caracteres": 13966,
+      "sha256": "52c85fd549c4f3bab0cfa0cce83a9984bf27903e3c0b3eef19da7b3d543d8f99"
+    },
+    {
+      "id": "lote-06",
+      "procedencia": "docs/auditoria-catalogo/lote-06.md",
+      "caracteres": 41407,
+      "sha256": "230df67d18ca3e61f9780754cec7fb8e2cf7d07edd03841a25fe247dc3615945"
+    },
+    {
+      "id": "catalogo-leicester",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 18644,
+      "sha256": "00bb7b62f0e67c592de9157dc7fd0f13fef8ec0d4044b93198f40e45980410a5"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "022174c996014688a638a7f7c4ce83984ce00a4cde6314ca9b01c8eab3a1dd10",
+    "respuestaApi": "abf47f22d7f86f6dc80468a01b683fb179012470b261bdca180b6f93235bb20f"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261021T003234Z-fase-03-leicester/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261021T003234Z-fase-03-leicester/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261021T003234Z-fase-03-leicester/respuesta-api.json"
+  }
+}

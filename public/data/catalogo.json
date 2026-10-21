@@ -249,7 +249,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate con la espalda recta y las manos apoyadas en la cadera, sin recostarte en el respaldo.",
+        "Siéntate con la espalda recta y las manos descansando en la cadera, sin recostarte en el respaldo.",
         "Marcha en el sitio levantando cada pie solo un poco del suelo.",
         "Mantén la espalda recta: no te inclines hacia los lados ni hacia atrás.",
         "Después de 10 a 20 pasos, descansa."
@@ -262,10 +262,14 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
-      "adaptaciones": [],
-      "notas_etiquetado": "Aunque el pie se levante poco, el muslo se acerca al tronco: flexion_amplia_cadera (ante la duda, se marca). Sin agarre.",
+      "adaptaciones": [
+        "La fuente también permite hacerlo sentado en la cama; aquí se hace en una silla.",
+        "Se omite la versión más difícil de la fuente, que añade el movimiento de los brazos."
+      ],
+      "notas_etiquetado": "Levantar la pierna del asiento acerca el muslo al tronco: flexion_amplia_cadera (evidencia D de la fuente). Sin agarre. La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -424,7 +428,7 @@
       "instrucciones": [
         "Siéntate con la espalda recta y la cabeza y los hombros mirando al frente.",
         "Sube el brazo izquierdo por encima de la cabeza y apoya la mano derecha en la cadera.",
-        "Inclínate con cuidado hacia la derecha, manteniendo los dos glúteos apoyados en el asiento.",
+        "Inclínate con cuidado hacia la derecha, estirándote hacia arriba desde la cintura y manteniendo los dos glúteos apoyados en el asiento.",
         "Deberías notar el estiramiento en el costado izquierdo. Vuelve al centro y cambia de lado."
       ],
       "dosis": "3 a 5 veces hacia cada lado.",
@@ -435,9 +439,12 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "La fuente también permite apoyar la mano en el reposabrazos; aquí se apoya en la cadera."
+      ],
       "notas_etiquetado": "Brazo por encima de la cabeza e inclinación lateral del tronco.",
       "validacion": {
         "estado": "borrador",
@@ -537,11 +544,11 @@
       },
       "instrucciones": [
         "Siéntate con la espalda recta y adelanta un poco el cuerpo en el asiento.",
-        "Estira una pierna hacia delante sin bloquear la rodilla, con el talón en el suelo.",
+        "Estira una pierna hacia delante sin bloquear la rodilla, con el talón en el suelo, y deja el otro pie apoyado bajo la rodilla.",
         "Inclínate hacia delante desde la cadera, con la espalda recta y sin redondearla.",
         "Mantén cuando notes un estiramiento cómodo detrás del muslo. Cambia de pierna."
       ],
-      "dosis": "Mantén de 10 a 15 segundos. 3 veces con cada pierna.",
+      "dosis": "Mantén de 10 a 15 segundos. De 3 a 5 veces con cada pierna.",
       "duracion_estimada_seg": 100,
       "variante_de": null,
       "fuente": {
@@ -549,9 +556,14 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "En la fuente, este estiramiento está escrito para la pierna que queda tras una amputación; aquí se hace con cada pierna, con el otro pie apoyado bajo la rodilla.",
+        "La fuente indica mantener la posición de 10 a 15 sin decir la unidad; aquí se entiende como segundos.",
+        "La fuente también permite apoyar el talón en un taburete o escalón bajo; aquí se apoya en el suelo."
+      ],
       "notas_etiquetado": "Inclinarse desde la cadera acerca el tronco al muslo y lo inclina hacia delante.",
       "validacion": {
         "estado": "borrador",
@@ -605,10 +617,11 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -695,7 +708,7 @@
         "impacto": false,
         "carga_externa": true,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": false,
         "agarre": true,
@@ -707,7 +720,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate cómodamente con una botella llena u otro peso ligero en una mano.",
+        "Siéntate cómodamente con una botella de bebida u otro peso ligero en una mano.",
         "Gira la mano para que el pulgar mire al techo.",
         "Dobla el codo despacio llevando el peso hacia el hombro, con el codo pegado al costado.",
         "Estira el brazo despacio hasta dejar el peso en el regazo. Cambia de brazo."
@@ -720,10 +733,11 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Un brazo cada vez: no exige ambos_brazos.",
+      "notas_etiquetado": "Un brazo cada vez: no exige ambos_brazos. brazo_sobre_hombro: la mano pasa del hombro al doblar el codo (foto de la fuente; CN-1). La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -770,7 +784,7 @@
         "Mantén 5 segundos y relaja.",
         "Cambia la posición de las manos y repite."
       ],
-      "dosis": "10 veces con cada posición de manos.",
+      "dosis": "10 veces con cada posición de manos. De 2 a 3 series, según puedas.",
       "duracion_estimada_seg": 120,
       "variante_de": null,
       "fuente": {
@@ -778,7 +792,8 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [],
       "notas_etiquetado": "La resistencia la genera la propia persona: no es carga_externa.",
@@ -835,7 +850,8 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
         "Se omite la variante con pesos ligeros de la fuente."
@@ -886,7 +902,7 @@
         "Haz girar los puños uno alrededor del otro hacia delante mientras cuentas hasta 20.",
         "Después gíralos hacia atrás mientras cuentas hasta 20. Descansa."
       ],
-      "dosis": "20 hacia delante y 20 hacia atrás.",
+      "dosis": "Mientras cuentas hasta 20 hacia delante y hasta 20 hacia atrás. Descansa y repite si puedes.",
       "duracion_estimada_seg": 60,
       "variante_de": null,
       "fuente": {
@@ -894,10 +910,11 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "A la altura de la nariz, las manos quedan por encima del hombro.",
+      "notas_etiquetado": "A la altura de la nariz, las manos quedan por encima del hombro. La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -943,7 +960,7 @@
         "Haz girar los puños uno alrededor del otro hacia delante mientras cuentas hasta 20.",
         "Después gíralos hacia atrás mientras cuentas hasta 20. Descansa."
       ],
-      "dosis": "20 hacia delante y 20 hacia atrás.",
+      "dosis": "Mientras cuentas hasta 20 hacia delante y hasta 20 hacia atrás. Descansa y repite si puedes.",
       "duracion_estimada_seg": 60,
       "variante_de": "boxeo-circulos-alto",
       "fuente": {
@@ -951,10 +968,11 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Variante indicada en la propia fuente para quien tiene molestias en los hombros.",
+      "notas_etiquetado": "Variante descrita en la propia fuente («HINT!»), con las manos a la altura del pecho. La condición de la fuente sobre el dolor de hombros no se traslada al usuario (protocolo, 8.4). La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -1009,12 +1027,14 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
-        "La fuente permite apoyar las manos en la zona lumbar o en la cadera; aquí solo en la cadera para evitar mano_detras."
+        "La fuente permite apoyar las manos en la zona lumbar o en la cadera; aquí solo en la cadera para evitar mano_detras.",
+        "La fuente no indica cuántas veces repetirlo; aquí se proponen 5."
       ],
-      "notas_etiquetado": "Arquear la espalda cuenta como inclinacion_tronco.",
+      "notas_etiquetado": "Arquear la espalda cuenta como inclinacion_tronco. La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -1068,10 +1088,11 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",

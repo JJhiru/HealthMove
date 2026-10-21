@@ -207,9 +207,11 @@ export function comprobarInforme(informe, catalogo, protocolo) {
       }
       if (f.regla === 'conservadora' && f.resultado === 'FALSE') add('error', e.id, `${f.exigencia}: la regla conservadora solo lleva a TRUE (R2.1)`);
       if (f.regla === 'evidencia' && f.nivel === 'N') add('error', e.id, `${f.exigencia}: con evidencia N el valor no puede basarse en la evidencia (R2.1)`);
-      // Q1 y Q2 abiertas: no se proponen cambios de ambos_brazos ni agarre.
-      if (['ambos_brazos', 'agarre'].includes(f.exigencia) && f.resultado && f.resultado !== 'REQUIERE_ACLARACION' && f.resultado.toLowerCase() !== actual) {
-        add('aviso', e.id, `${f.exigencia}: propone cambiar la etiqueta; comprueba que no dependa de Q1 o Q2 (protocolo, apartado 13)`);
+      // Mientras Q1 (ambos_brazos) o Q2 (agarre) sigan abiertas, no se proponen cambios de esa etiqueta.
+      const cuestion = { ambos_brazos: 'Q1', agarre: 'Q2' }[f.exigencia];
+      const abierta = cuestion && !protocolo.cuestiones?.find((q) => q.id === cuestion)?.resuelta;
+      if (abierta && f.resultado && f.resultado !== 'REQUIERE_ACLARACION' && f.resultado.toLowerCase() !== actual) {
+        add('aviso', e.id, `${f.exigencia}: propone cambiar la etiqueta; comprueba que no dependa de ${cuestion} (protocolo, apartado 13)`);
       }
     }
 

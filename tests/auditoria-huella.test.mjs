@@ -40,7 +40,7 @@ test('NO cambia con la evidencia del informe ni con la decisión del registro', 
   const seccion = (t) => leerInforme(t).ejercicios.find((e) => e.id === original.id).texto;
   assert.notEqual(seccion(otraEvidencia), seccion(informe), 'el informe de prueba debe cambiar de verdad');
   const registro = readFileSync(ruta('docs/auditoria-catalogo/registro.md'), 'utf8')
-    .replace('| 3 | curl-biceps-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |', '| 3 | curl-biceps-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado |');
+    .replace('| 6 | curl-biceps-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |', '| 6 | curl-biceps-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado |');
   assert.equal(leerRegistro(registro).filas.find((f) => f.id === original.id).decision, 'aprobado');
   assert.equal(huella(copia()), huella(original));
 });

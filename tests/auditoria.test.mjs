@@ -89,6 +89,14 @@ test('rechaza niveles, reglas, valores y decisiones que no existen en el protoco
   assert.ok(errores(informe({ decision: '**APROBADO.**' })).some((m) => m.includes('decisión final')));
 });
 
+test('cambiar ambos_brazos o agarre solo avisa mientras Q1 o Q2 siguen abiertas', () => {
+  const texto = informe({ filas: { agarre: ['D · x', 'evidencia', 'FALSE'] } });
+  const avisos = (prot) => comprobarInforme(leerInforme(texto), catalogo, prot).filter((p) => p.nivel === 'aviso' && p.msg.includes('Q2')).length;
+  const conQ2 = (resuelta) => ({ ...protocolo, cuestiones: protocolo.cuestiones.map((q) => (q.id === 'Q2' ? { ...q, resuelta } : q)) });
+  assert.equal(avisos(conQ2(false)), 1);
+  assert.equal(avisos(conQ2(true)), 0);
+});
+
 test('la cabecera 1.0 exige versión del protocolo e identificador del catálogo', () => {
   const e = errores(informe({ cabecera: false }));
   assert.ok(e.some((m) => m.includes('Versión del protocolo')));

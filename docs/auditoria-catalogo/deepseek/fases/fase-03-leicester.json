@@ -9,6 +9,7 @@
     { "id": "registro", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/registro.md" },
     { "id": "opciones-js", "tipo": "archivo", "ruta": "public/js/opciones.js" },
     { "id": "plan-leicester", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/plan-cambios-leicester.md" },
+    { "id": "lote-06", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/lote-06.md" },
     { "id": "catalogo-leicester", "tipo": "catalogo-ids", "ids": ["marcha-sentado-manos-cadera", "inclinacion-lateral-brazo-arriba", "estiramiento-isquiotibiales-sentado", "circulos-hombros-sentado", "curl-biceps-sentado", "toalla-separar-sentado", "boxeo-sentado", "boxeo-circulos-alto", "boxeo-circulos-pecho", "arquear-espalda-sentado", "movilidad-lumbar-sentado"] }
   ]
 }

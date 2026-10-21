@@ -74,21 +74,21 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 1 | estiramiento-pecho-sentado | REQUIERE CORRECCIONES | pendiente |
 | 1 | giro-tronco-sentado | REQUIERE CORRECCIONES | pendiente |
 | 1 | marcha-sentado-sujetandose | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 1 | marcha-sentado-manos-cadera | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 6 | marcha-sentado-manos-cadera | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 1 | estiramiento-tobillo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 2 | tobillos-punta-talon-sentado | REQUIERE CORRECCIONES | pendiente |
-| 2 | inclinacion-lateral-brazo-arriba | REQUIERE CORRECCIONES | pendiente |
+| 6 | inclinacion-lateral-brazo-arriba | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 2 | inclinacion-lateral-sentado | REQUIERE CORRECCIONES | pendiente |
-| 2 | estiramiento-isquiotibiales-sentado | REQUIERE CORRECCIONES | pendiente |
-| 2 | circulos-hombros-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 6 | estiramiento-isquiotibiales-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 6 | circulos-hombros-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 3 | elevar-rodar-hombros-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 3 | curl-biceps-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 3 | toalla-separar-sentado | REQUIERE CORRECCIONES | pendiente |
-| 3 | boxeo-sentado | REQUIERE CORRECCIONES (criterio literal adoptado) | pendiente |
-| 3 | boxeo-circulos-alto | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 4 | boxeo-circulos-pecho | LISTO tras añadir `especifica_de` | pendiente |
-| 4 | arquear-espalda-sentado | REQUIERE CORRECCIONES | pendiente |
-| 4 | movilidad-lumbar-sentado | LISTO tras añadir `especifica_de` | pendiente |
+| 6 | curl-biceps-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 6 | toalla-separar-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 6 | boxeo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 6 | boxeo-circulos-alto | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 6 | boxeo-circulos-pecho | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 6 | arquear-espalda-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 6 | movilidad-lumbar-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 4 | estiramiento-gemelo-sentado | REQUIERE CORRECCIONES | pendiente |
 | 4 | abrir-cerrar-manos | REQUIERE CORRECCIONES | pendiente |
 | 4 | pulgar-dedos | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
@@ -118,7 +118,16 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 
 ## Casos no contemplados (CN)
 
-Plantilla en `protocolo.md`, R1.4. Ninguno registrado todavía.
+Plantilla en `protocolo.md`, R1.4.
+
+### CN-1 · La mano pasa del hombro al doblar el codo, con el brazo abajo
+- Ejercicio(s): `curl-biceps-sentado` (lote 6). Casos equivalentes sin auditar: `flexion-codo-tumbado`. `extension-codo-botella-sentado` ya tiene `brazo_sobre_hombro: true`.
+- Detalle: la especificación §4 define `brazo_sobre_hombro` como «codo **o mano** por encima de la altura del hombro». La opción del perfil (`brazo_arriba`) y el rótulo hablan de «levantar el brazo por encima del hombro». En un curl, la mano sube por encima del hombro solo porque se dobla el codo; el brazo no se levanta.
+- Evidencia: D, la foto 2 del ejercicio 6 del folleto de Leicester (p. 5 impresa) muestra la botella a la altura de la boca, con el codo pegado al costado.
+- Reglas consideradas y por qué no resuelven: la definición literal de §4 da `true` con evidencia D, y así se ha aplicado. Pero el texto de la opción sugiere que el filtro busca la elevación del brazo. Elegir entre la definición y la intención de la opción es un criterio que el protocolo no tiene.
+- Propuesta del auditor (sin aplicar): mantener la definición literal (más restrictiva, en línea con el criterio conservador de P9, P10 y P14) y, si se quiere afinar, cambiar el texto de la opción (Q8) en lugar de la etiqueta.
+- Valor provisional: `true` en `curl-biceps-sentado`, por la definición literal con evidencia D (aplicado el 2026-10-21, P16).
+- Estado: pendiente.
 
 ## Propuestas retiradas
 
@@ -226,3 +235,23 @@ Responden a D2 (Q2) y D3 (Q1) del informe `deepseek/analisis-claude/sesion-auton
     - Los bloques `catalogo-de-pie` admiten `"parte": "n/m"`, que envía el tramo n de m en el orden del catálogo, para no superar `MAX_CARACTERES_BLOQUE` (60 000). El límite no se ha subido.
     - Las fases ya ejecutadas no se editan: son el registro de lo que se envió.
     - Prueba: `tests/auditoria-ia-documental.test.mjs`. Comprueba que las partes, juntas, son exactamente los ejercicios de pie y que se rechazan las partes mal formadas.
+    - Además, un tipo de bloque `catalogo-ids` envía ejercicios concretos, completos, por su id. Lo usa la consulta C4.
+
+## Decisiones aplicadas por delegación (2026-10-21)
+
+El desarrollador pidió seguir con «las demas cosas a corregir» sin consultarle salvo que fuera crítico. Lo que sigue lo decidió Claude, con la evidencia citada, y se puede revertir.
+
+16. **P16 · Plan de Leicester, revisado y aplicado; lote 6.**
+    - Reauditoría con el protocolo 1.0 de los 11 ejercicios del folleto (`lote-06.md`), con la fuente abierta de nuevo. Mismo SHA-256 que el 2026-10-18; texto e imágenes revisados.
+    - La revisó DeepSeek (consulta C4, DS-124 a DS-144). Las correcciones aceptadas y las rechazadas, con su motivo, están en el informe, en «Revisión de DeepSeek y aplicación».
+    - Aplicado a los 11:
+      - `fuente.especifica_de` = «usuarios de silla de ruedas», según la decisión 3;
+      - las aclaraciones y adaptaciones del plan;
+      - `fuente.consultado` = 2026-10-21;
+      - notas de series en blanco (§5.1).
+    - Respecto al plan de 2026-10-18:
+      - en `estiramiento-isquiotibiales-sentado`, el otro pie bajo la rodilla, una adaptación con su tabla R3.3;
+      - en `marcha-sentado-manos-cadera`, «descansando en la cadera»;
+      - en `curl-biceps-sentado`, `brazo_sobre_hombro`: `false` → `true` por evidencia D (CN-1). Efecto: `brazo_arriba` pasa de 184 a 183 en modo auditoría.
+    - Ilustración de `boxeo-circulos-alto` corregida (los puños, a la altura de la nariz; R7.6), en `d179beb`.
+    - Los 11 quedan en LISTO PARA APROBACIÓN DOCUMENTAL. **Siguen en `borrador`:** pasar a `basado_en_fuente_publica` exige que el desarrollador los revise y rellene `revisado_por` y `fecha_revision` (especificación §7.6).
