@@ -58,6 +58,8 @@ const estado = {
 };
 
 const MAX_NOMBRE = 30;
+// Aclaración bajo «Material pensado para: …» (registro de la auditoría, 2026-10-18, P2; Q8(b)).
+const PROCEDENCIA = 'Este material se escribió para ese grupo de personas, pero no es exclusivo de él ni adecuado para todas las que lo forman. Puedes hacerlo aunque no formes parte de ese grupo si es compatible con las restricciones que has indicado en tu perfil; lo ves al principio de esta página. Que sea compatible no garantiza que sea seguro para ti.';
 
 // --- Utilidades ---------------------------------------------------
 
@@ -688,6 +690,7 @@ function vistaEjercicio(id) {
         <h2>Fuente</h2>
         <p><a href="${escapar(e.fuente.url)}" rel="noopener">${escapar(e.fuente.titulo)}${icono('box-arrow-up-right', 'ico-enlace')}</a><br>
           <span class="suave">${escapar(e.fuente.organizacion)}${e.fuente.especifica_de ? `. Material pensado para: ${escapar(e.fuente.especifica_de)}` : ''}.</span></p>
+        ${e.fuente.especifica_de ? `<p class="suave" data-procedencia>${PROCEDENCIA}</p>` : ''}
         ${e.adaptaciones.length ? `<details class="nota nota-neutra"><summary>Cambios respecto a la fuente</summary><ul>${e.adaptaciones.map((a) => `<li>${escapar(a)}</li>`).join('')}</ul></details>` : ''}
         <div class="nota nota-aviso"><p><strong>Para</strong> si notas dolor en el pecho, falta de aire intensa, mareo, o un dolor nuevo o que aumenta.</p></div>
       </div>

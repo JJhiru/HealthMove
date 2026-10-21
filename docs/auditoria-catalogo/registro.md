@@ -255,3 +255,8 @@ El desarrollador pidió seguir con «las demas cosas a corregir» sin consultarl
       - en `curl-biceps-sentado`, `brazo_sobre_hombro`: `false` → `true` por evidencia D (CN-1). Efecto: `brazo_arriba` pasa de 184 a 183 en modo auditoría.
     - Ilustración de `boxeo-circulos-alto` corregida (los puños, a la altura de la nariz; R7.6), en `d179beb`.
     - Los 11 quedan en LISTO PARA APROBACIÓN DOCUMENTAL. **Siguen en `borrador`:** pasar a `basado_en_fuente_publica` exige que el desarrollador los revise y rellene `revisado_por` y `fecha_revision` (especificación §7.6).
+17. **P17 · Q8(b): texto de procedencia en la ficha.**
+    - Se implementa, sin cambios, el texto propuesto en `propuestas-cierre-protocolo.md` §2. Es fiel a la aclaración aprobada en P2: el material se dirige a un grupo, pero no es exclusivo de él ni adecuado para todo el grupo; vale si es compatible con el perfil, y eso no es una garantía de seguridad.
+    - Aparece en `vistaEjercicio` (`public/js/app.js`, constante `PROCEDENCIA`) bajo «Material pensado para: …», y solo si hay `especifica_de`.
+    - Prueba en el navegador: `tests/navegador/flujos.test.mjs`, «ficha: la aclaración de procedencia…».
+    - Era necesario antes de publicar cualquiera de los 60 ejercicios con `especifica_de`.

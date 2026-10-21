@@ -261,6 +261,22 @@ test('sin modo desarrollo, con ejercicios aprobados (copia servida): generar y e
   assert.deepEqual(t.errores, []);
 }));
 
+test('ficha: la aclaración de procedencia sale solo si el material declara su población (Q8(b))', { skip: omitir }, () => conPestana(async (t) => {
+  const conPoblacion = catalogoReal.ejercicios.find((e) => e.fuente.especifica_de);
+  const sinPoblacion = catalogoReal.ejercicios.find((e) => !e.fuente.especifica_de);
+  await t.sembrar({ valores: { nombre: '', perfil: perfil.base, desarrollo: true } });
+  await t.abrirApp(`#ejercicio/${conPoblacion.id}`);
+  await t.hasta('!!document.querySelector("[data-procedencia]")', { mensaje: 'aparece la aclaración' });
+  const texto = await t.texto();
+  assert.ok(texto.includes(`Material pensado para: ${conPoblacion.fuente.especifica_de}`));
+  assert.match(texto, /no es exclusivo de él ni adecuado para todas las que lo forman/);
+  assert.match(texto, /no garantiza que sea seguro para ti/);
+  await t.abrirApp(`#ejercicio/${sinPoblacion.id}`);
+  await t.hasta(`document.querySelector("#app h1")?.textContent === ${JSON.stringify(sinPoblacion.nombre)}`, { mensaje: 'se abre la otra ficha' });
+  assert.equal(await t.existe('[data-procedencia]'), false);
+  assert.deepEqual(t.errores, []);
+}));
+
 test('catálogo con la estructura rota: pantalla de error y nada guardado cambia', { skip: omitir }, () => conPestana(async (t) => {
   const roto = JSON.parse(JSON.stringify(catalogoReal)); roto.exigencias.pop();
   servidor.catalogo = JSON.stringify(roto);
