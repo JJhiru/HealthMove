@@ -1,0 +1,95 @@
+{
+  "idEjecucion": "20261021T014919Z-fase-07-pendientes",
+  "fecha": "2026-10-21T01:49:19.810Z",
+  "fase": {
+    "id": "fase-07-pendientes",
+    "titulo": "Revisión del informe de problemas críticos y graves pendientes (C8)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-07-pendientes.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "7c91da03-a5a9-453c-9a95-4eca236b50b6",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 640,
+    "falloCache": 28122,
+    "salida": 4808,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 46430,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "7c91da03-a5a9-453c-9a95-4eca236b50b6",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 640,
+        "falloCache": 28122,
+        "salida": 4808,
+        "razonamiento": 0
+      },
+      "coste": 0.01421004,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.01421004,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "04c49c7383a232df1623ca23bdf8d6155a9e2942",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "185ad76b7b6edbd7d30c1c24eac607af2deb2ef3",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/problemas-pendientes-2026-10-21.md"
+    ]
+  },
+  "bloque": 1,
+  "continuacion": null,
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36607,
+      "sha256": "98cbd65f05787149f961258084ce37a4b17bf58e130d9407ce9d3c151df598c9"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 14440,
+      "sha256": "49f0378f38670d1a81ca0913410446f2f2df8af37ff202ffacb70022f8d41504"
+    },
+    {
+      "id": "registro",
+      "procedencia": "docs/auditoria-catalogo/registro.md",
+      "caracteres": 30909,
+      "sha256": "b5a1a087307a64898082ccac45f4aea0905b188128bbcda1c1918f279a3c370b"
+    },
+    {
+      "id": "informe",
+      "procedencia": "docs/auditoria-catalogo/problemas-pendientes-2026-10-21.md",
+      "caracteres": 7050,
+      "sha256": "5cdbbe847876c85e89ab75b66ef356db76d23fcc86254585f82e7f9266f1d3bd"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "a854df77890825cbea59ba999574012b00cf78253e97f7dc44005383989b89d3",
+    "respuestaApi": "784ed27a99a27a672e9676cbc98dac6d90c80746e2769144c3ab373997d2e516"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261021T014919Z-fase-07-pendientes/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261021T014919Z-fase-07-pendientes/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261021T014919Z-fase-07-pendientes/respuesta-api.json"
+  }
+}

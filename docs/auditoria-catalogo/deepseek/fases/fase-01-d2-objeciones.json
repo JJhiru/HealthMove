@@ -1,0 +1,17 @@
+{
+  "id": "fase-01-d2-objeciones",
+  "titulo": "Tercera consulta acotada (C2): objeciones a la decisión D2 del desarrollador sobre Q2 (el contacto sin prensión no es agarre)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-01-d2-objeciones.md",
+  "bloques": [
+    { "id": "protocolo", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/protocolo.md" },
+    { "id": "especificacion", "tipo": "archivo", "ruta": "docs/especificacion-v1.md" },
+    { "id": "registro", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/registro.md" },
+    { "id": "opciones-js", "tipo": "archivo", "ruta": "public/js/opciones.js" },
+    { "id": "catalogo-esquema", "tipo": "catalogo-esquema" },
+    { "id": "catalogo-de-pie", "tipo": "catalogo-de-pie" },
+    { "id": "evidencia-fuentes", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/deepseek/analisis-claude/evidencia-fuentes-q1-q2.md" },
+    { "id": "c1-respuesta-bloque1", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261019T185547Z-fase-01-q2-apoyo/respuesta.md" },
+    { "id": "c1-respuesta-bloque2", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261019T185654Z-fase-01-q2-apoyo-bloque2/respuesta.md" }
+  ]
+}

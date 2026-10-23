@@ -9,30 +9,57 @@ import {
   ETIQUETA_EXIGENCIA, ETIQUETA_POSICION, ETIQUETA_FASE, seccionPorId,
 } from './opciones.js';
 import * as P from './perfil.js';
-import { generarRutina, calcularRestricciones, motivosIncompatibilidad, resultadoVigente } from './motor.js';
+import { generarRutina, calcularRestricciones, motivosIncompatibilidad, comprobarRutina } from './motor.js';
+import { validarCatalogo, estadoUtilizable } from './validacion.js';
 import { dibujar } from './figura.js';
-import { leer, guardar, borrarTodo } from './almacen.js';
+import { leer, leerTexto, guardar, borrarTodo } from './almacen.js';
 
 const app = document.getElementById('app');
 const acciones = document.getElementById('acciones');
 const cabecera = document.getElementById('cabecera');
+
+// Perfil guardado. Si no se puede cargar, su texto original exacto se copia en `hm_perfil_original`
+// ANTES de que nada pueda sobrescribirlo. Si la copia falla, el perfil no se volverá a guardar
+// (`protegido`) para no destruir el original. Aquí no se repara ni se reinterpreta ningún dato.
+function cargarPerfilGuardado() {
+  const texto = leerTexto('perfil');
+  const { perfil, problema } = P.diagnosticarPerfil(texto);
+  if (!problema) return { perfil, problema: null, protegido: false };
+  let copias = [];
+  const textoCopias = leerTexto('perfil_original');
+  if (textoCopias !== null) {
+    try { copias = JSON.parse(textoCopias); } catch { copias = null; }
+    // Si las copias anteriores no se pueden leer, no se tocan: tampoco se sobrescribe el perfil.
+    if (!Array.isArray(copias)) return { perfil, problema, protegido: true };
+  }
+  const nuevas = P.anadirCopiaPerfil(copias, texto, problema, new Date().toISOString());
+  const copiado = nuevas === copias || guardar('perfil_original', nuevas);
+  return { perfil, problema, protegido: !copiado };
+}
+const cargaPerfil = cargarPerfilGuardado();
 
 const estado = {
   catalogo: null,
   ilustraciones: {},
   filtros: { posicion: 'todo', fase: 'todo', compatibles: true, cuantos: 24 },
   nombre: leer('nombre', null),     // null = aún no se ha preguntado; '' = prefiere no decirlo
-  perfil: P.cargarPerfil(leer('perfil')),
+  perfil: cargaPerfil.perfil,
+  perfilNoCargado: cargaPerfil.problema, // null, o por qué no se pudo cargar el perfil guardado
+  perfilProtegido: cargaPerfil.protegido, // true: no se guarda el perfil para no perder el original
   resultado: leer('resultado'),     // última generación: { res, semilla, fecha }
   historial: leer('historial', []),
-  desarrollo: leer('desarrollo', false),
+  desarrollo: leer('desarrollo', false) === true,
   zonas: leer('zonas', null),       // secciones elegidas en el triaje, en orden
   volverAResumen: false,
   deshacer: null,                   // { perfil, seccionId, mensaje }
   reproductor: null,
+  invalidos: new Set(),             // ids de ejercicios con datos inválidos: nunca se muestran ni se usan
+  empezarConfirmado: false,         // la persona pulsó «Empezar» después de ver la rutina (y su aviso, si lo había)
 };
 
 const MAX_NOMBRE = 30;
+// Aclaración bajo «Material pensado para: …» (registro de la auditoría, 2026-10-18, P2; Q8(b)).
+const PROCEDENCIA = 'Este material se escribió para ese grupo de personas, pero no es exclusivo de él ni adecuado para todas las que lo forman. Puedes hacerlo aunque no formes parte de ese grupo si es compatible con las restricciones que has indicado en tu perfil; lo ves al principio de esta página. Que sea compatible no garantiza que sea seguro para ti.';
 
 // --- Utilidades ---------------------------------------------------
 
@@ -48,7 +75,7 @@ const conNombre = (con, sin) => (estado.nombre ? con(escapar(estado.nombre)) : s
 
 function cambiarPerfil(nuevo) {
   estado.perfil = nuevo;
-  guardar('perfil', nuevo);
+  if (!estado.perfilProtegido) guardar('perfil', nuevo);
 }
 
 // Iconos del sprite local (Bootstrap Icons, MIT). Siempre decorativos: el texto va al lado.
@@ -139,9 +166,20 @@ function vistaNombre() {
   `, editando ? 'acerca' : null, { ancho: 'lectura', modo: editando ? null : 'concentracion' });
 }
 
+// Aviso cuando el perfil guardado no se pudo cargar. Se muestra durante la sesión en la que se detectó.
+function notaPerfilNoCargado() {
+  if (!estado.perfilNoCargado) return '';
+  const porque = { ilegible: 'sus datos están dañados', version: 'es de otra versión de HealthMove', estructura: 'algunos de sus datos no son válidos' }[estado.perfilNoCargado];
+  const copia = estado.perfilProtegido
+    ? 'No hemos podido guardar una copia de esos datos, así que, para no perderlos, no guardaremos en este dispositivo los cambios que hagas en tu perfil.'
+    : 'Hemos guardado una copia exacta de esos datos en este dispositivo y no la borraremos.';
+  return `<div class="nota nota-aviso" role="status"><p><strong>No hemos podido cargar el perfil que tenías guardado</strong>, porque ${porque}. ${copia} Para preparar rutinas tendrás que completar tu perfil de nuevo.</p></div>`;
+}
+
 function vistaAviso() {
   pintar(`
     <h1>${conNombre((n) => `${n}, antes de empezar`, 'Antes de empezar')}</h1>
+    ${notaPerfilNoCargado()}
     <p>HealthMove te propone rutinas de 10 a 20 minutos, elegidas con reglas fijas a partir de lo que tú nos cuentes.</p>
     <div class="nota">
       <h2>Lo que HealthMove no hace</h2>
@@ -189,6 +227,7 @@ function vistaInicio() {
     : `<button type="button" class="primario boton-grande" data-accion="ir" data-ruta="perfil/posicion">${empezado ? 'Continuar mi perfil' : 'Empezar mi perfil'}</button>`;
 
   pintar(`
+    ${notaPerfilNoCargado()}
     <section class="portada" aria-labelledby="saludo">
       ${foto('portada-clase-sillas', 'Grupo de personas mayores haciendo ejercicio sentadas en sillas, con los brazos en alto', { clase: 'portada-foto', ancho: '(min-width: 62rem) 40vw, 100vw', prioridad: true })}
       <div class="portada-texto">
@@ -245,8 +284,9 @@ function filaParaHoy() {
   </section>`;
 }
 
-// Solo se cuentan los ejercicios que la persona puede ver: los revisados, o todos en modo desarrollo.
-const visible = (e) => estado.desarrollo || e.validacion.estado !== 'borrador';
+// Solo se cuentan los ejercicios que la persona puede ver: los revisados, o también los borradores en modo desarrollo.
+// Un ejercicio con datos inválidos no se ve nunca, ni siquiera en modo desarrollo.
+const visible = (e) => !estado.invalidos.has(e.id) && estadoUtilizable(e, { permitirBorrador: estado.desarrollo });
 const contarVisibles = (filtro) => estado.catalogo.ejercicios.filter((e) => visible(e) && filtro(e)).length;
 
 const POSICION_CORTA = { de_pie_libre: 'De pie sin apoyo', de_pie_apoyo: 'De pie con apoyo', solo_sentado: 'Solo sentado/a' };
@@ -410,6 +450,7 @@ function vistaResumen() {
   const recursos = p.recursos.length ? p.recursos.map((r) => escapar(RECURSOS.find((x) => x.id === r).texto)).join('. ') : 'Nada en especial';
   pintar(`
     <h1>${conNombre((n) => `Esto es lo que sabemos, ${n}`, 'Resumen de tu perfil')}</h1>
+    ${notaPerfilNoCargado()}
     <p class="suave">Toca cualquier apartado para cambiarlo.</p>
     <ul class="filas">
       ${fila('perfil/posicion', 'Posición', detallePos)}
@@ -442,8 +483,13 @@ function vistaRutina() {
   const r = estado.resultado;
   if (!estado.catalogo) return ir('inicio');
   if (!r) return vistaRutinaVacia();
+  // Un intento de generar que no dio rutina se explica como siempre.
+  if (r.res?.ok === false) return vistaSinRutina(r.res);
+  // Antes de mostrar los ejercicios, se comprueba cada bloque con el perfil y el catálogo actuales.
+  // Una rutina guardada mal formada, con borradores fuera del modo desarrollo o incompatible queda bloqueada, sin borrarla.
+  const comprobacion = comprobarRutina(r, estado.catalogo, estado.perfil, { permitirBorrador: estado.desarrollo });
+  if (comprobacion.estado === 'bloqueada') return vistaRutinaBloqueada(comprobacion);
   const { res } = r;
-  if (!res.ok) return vistaSinRutina(res);
   let n = 0;
   // Línea de tiempo: el orden y las fases se leen de un vistazo.
   const fases = ['calentamiento', 'principal', 'calma'].map((f) => {
@@ -473,6 +519,8 @@ function vistaRutina() {
       <li class="pildora">Pausas breves entre ellos</li>
     </ul>
     <p class="suave">Es compatible con lo que nos contaste, pero no es una prescripción.</p>
+    ${comprobacion.aviso === 'sin_huella' ? '<div class="nota nota-aviso" role="status"><p><strong>No sabemos con qué perfil se preparó esta rutina.</strong> Hemos vuelto a comprobar cada ejercicio con tu perfil actual y todos son compatibles con lo que nos contaste. Si lo prefieres, genera otra.</p></div>' : ''}
+    ${comprobacion.aviso === 'cambio' ? '<div class="nota nota-aviso" role="status"><p><strong>Tu perfil o el catálogo han cambiado desde que se preparó esta rutina.</strong> Hemos vuelto a comprobar cada ejercicio y todos siguen siendo compatibles con tu perfil actual. Si lo prefieres, genera otra.</p></div>' : ''}
     ${res.rutina.usaBorrador ? '<div class="nota nota-aviso"><p><strong>Incluye ejercicios sin revisar.</strong> Solo para desarrollo.</p></div>' : ''}
     <ol class="linea-tiempo">${fases}</ol>
     <details class="nota">
@@ -484,6 +532,29 @@ function vistaRutina() {
     <button type="button" class="primario" data-accion="empezar">${icono('play-fill')}Empezar</button>
     <button type="button" data-accion="otra">${icono('arrow-repeat')}Otra combinación</button>
   `, 'inicio', { ancho: 'lectura' });
+}
+
+// Rutina guardada que ya no se puede usar. No se arregla sola: se explica por qué y se ofrece generar otra.
+function vistaRutinaBloqueada(comprobacion) {
+  const nombre = (id) => (typeof id === 'string' && ejercicio(id)?.nombre) || 'Un ejercicio que ya no está en el catálogo';
+  const linea = (m) => {
+    if (m.tipo === 'no_existe') return `${escapar(nombre(m.ejercicioId))}.`;
+    if (m.tipo === 'invalido') return `${escapar(nombre(m.ejercicioId))}: sus datos no son válidos.`;
+    if (m.tipo === 'incompatible') return `${escapar(nombre(m.ejercicioId))}: ${escapar(m.motivos.map(textoMotivo).join('; '))}.`;
+    if (m.tipo === 'fase') return `${escapar(nombre(m.ejercicioId))}: no corresponde a esa parte de la rutina.`;
+    if (m.tipo === 'perfil_incompleto') return 'Tu perfil tiene datos pendientes o no válidos.';
+    if (m.tipo === 'catalogo_invalido') return 'El catálogo de ejercicios no es válido.';
+    return 'La rutina guardada no tiene un formato válido.';
+  };
+  const perfil = comprobacion.motivos.some((m) => m.tipo === 'perfil_incompleto');
+  const conBorradores = comprobacion.motivos.some((m) => m.tipo === 'incompatible' && m.motivos.some((x) => x.tipo === 'sin_revisar'));
+  pintar(`
+    <h1>Esta rutina ya no se puede usar</h1>
+    <div class="nota nota-aviso"><p><strong>Hemos vuelto a comprobar la rutina guardada y no coincide con tu perfil o con el catálogo actuales.</strong> No la cambiamos ni la borramos por nuestra cuenta: puedes generar otra.${conBorradores ? ' Se preparó en modo desarrollo con ejercicios que todavía no se han revisado contra su fuente.' : ''}</p>
+      <ul>${comprobacion.motivos.map((m) => `<li>${linea(m)}</li>`).join('')}</ul></div>
+  `, perfil
+    ? '<button type="button" class="primario" data-accion="ir" data-ruta="resumen">Revisar mi perfil</button>'
+    : `<button type="button" class="primario" data-accion="otra">${icono('arrow-repeat')}Generar otra rutina</button>`, 'inicio', { ancho: 'lectura' });
 }
 
 function vistaRutinaVacia() {
@@ -619,6 +690,7 @@ function vistaEjercicio(id) {
         <h2>Fuente</h2>
         <p><a href="${escapar(e.fuente.url)}" rel="noopener">${escapar(e.fuente.titulo)}${icono('box-arrow-up-right', 'ico-enlace')}</a><br>
           <span class="suave">${escapar(e.fuente.organizacion)}${e.fuente.especifica_de ? `. Material pensado para: ${escapar(e.fuente.especifica_de)}` : ''}.</span></p>
+        ${e.fuente.especifica_de ? `<p class="suave" data-procedencia>${PROCEDENCIA}</p>` : ''}
         ${e.adaptaciones.length ? `<details class="nota nota-neutra"><summary>Cambios respecto a la fuente</summary><ul>${e.adaptaciones.map((a) => `<li>${escapar(a)}</li>`).join('')}</ul></details>` : ''}
         <div class="nota nota-aviso"><p><strong>Para</strong> si notas dolor en el pecho, falta de aire intensa, mareo, o un dolor nuevo o que aumenta.</p></div>
       </div>
@@ -652,7 +724,12 @@ function vistaSinRutina(res) {
 function vistaReproductor() {
   const r = estado.resultado?.res;
   if (!r?.ok || !estado.catalogo) return ir('inicio');
-  if (!estado.reproductor) estado.reproductor = { i: 0, restante: null, pausado: false, temporizador: null, bloqueo: null };
+  // Al empezar, al reanudar y en cada paso: si algún bloque ya no vale, no se reproduce nada.
+  const comprobacion = comprobarRutina(estado.resultado, estado.catalogo, estado.perfil, { permitirBorrador: estado.desarrollo });
+  if (comprobacion.estado === 'bloqueada') { pararReproductor(); return ir('rutina'); }
+  // Si algo cambió, la persona tiene que haber visto el aviso en la rutina antes de empezar.
+  if (!estado.reproductor && comprobacion.estado === 'ok_con_aviso' && !estado.empezarConfirmado) return ir('rutina');
+  if (!estado.reproductor) { estado.reproductor = { i: 0, restante: null, pausado: false, temporizador: null, bloqueo: null }; estado.empezarConfirmado = false; }
   const rep = estado.reproductor;
   const bloques = r.rutina.bloques;
   const b = bloques[rep.i];
@@ -773,9 +850,10 @@ function vistaHistorial() {
 
 function vistaAcerca() {
   const fuentes = new Map();
-  for (const e of estado.catalogo?.ejercicios || []) fuentes.set(e.fuente.url, e.fuente);
+  const validos = (estado.catalogo?.ejercicios || []).filter((e) => !estado.invalidos.has(e.id));
+  for (const e of validos) fuentes.set(e.fuente.url, e.fuente);
   const total = estado.catalogo?.ejercicios.length ?? 0;
-  const revisados = (estado.catalogo?.ejercicios || []).filter((e) => e.validacion.estado !== 'borrador').length;
+  const revisados = validos.filter((e) => estadoUtilizable(e)).length;
   pintar(`
     <h1>Ajustes, límites y fuentes</h1>
     <ul class="filas">
@@ -915,7 +993,7 @@ document.addEventListener('click', (ev) => {
     case 'generar':
     case 'otra':
       generar(); break;
-    case 'empezar': estado.reproductor = null; ir('reproductor'); break;
+    case 'empezar': estado.reproductor = null; estado.empezarConfirmado = true; ir('reproductor'); break;
     case 'anterior': if (rep && rep.i > 0) { rep.i--; rep.restante = null; vistaReproductor(); enfocarTitulo(); } break;
     case 'siguiente': {
       if (!rep) return;
@@ -925,7 +1003,8 @@ document.addEventListener('click', (ev) => {
     }
     case 'pausa': if (rep) { rep.pausado = !rep.pausado; repintarConservandoFoco(vistaReproductor); } break;
     case 'leer': {
-      const e = ejercicio(estado.resultado.res.rutina.bloques[rep.i].ejercicioId);
+      const e = rep && ejercicio(estado.resultado?.res?.rutina?.bloques?.[rep.i]?.ejercicioId);
+      if (!e) break;
       try {
         speechSynthesis.cancel();
         const u = new SpeechSynthesisUtterance(`${e.nombre}. ${e.instrucciones.join(' ')} ${e.dosis}`);
@@ -938,15 +1017,14 @@ document.addEventListener('click', (ev) => {
     case 'borrar-datos':
       if (confirm('¿Borrar tu nombre, tu perfil y tu historial de este dispositivo? No se puede deshacer.')) {
         borrarTodo();
-        Object.assign(estado, { nombre: null, perfil: P.perfilVacio(), resultado: null, historial: [], zonas: null, desarrollo: false, volverAResumen: false });
+        Object.assign(estado, { nombre: null, perfil: P.perfilVacio(), resultado: null, historial: [], zonas: null, desarrollo: false, volverAResumen: false, perfilNoCargado: null, perfilProtegido: false });
         actualizarFranjaDesarrollo();
         if (location.hash === '#inicio') router(); else ir('inicio');
       }
       break;
     case 'salir-desarrollo':
       estado.desarrollo = false; guardar('desarrollo', false); actualizarFranjaDesarrollo();
-      descartarRutinaNoVigente();
-      router();
+      router(); // la rutina guardada se conserva; si tiene borradores, la vista de la rutina la muestra bloqueada
       break;
     case 'recargar': location.reload(); break;
     case 'filtro':
@@ -1005,13 +1083,6 @@ app.addEventListener('change', (ev) => {
 
 // --- Arranque -----------------------------------------------------
 
-function descartarRutinaNoVigente() {
-  if (estado.resultado && !resultadoVigente(estado.resultado, { permitirBorrador: estado.desarrollo })) {
-    estado.resultado = null;
-    guardar('resultado', null);
-  }
-}
-
 function actualizarFranjaDesarrollo() {
   document.getElementById('aviso-desarrollo').hidden = !estado.desarrollo;
 }
@@ -1038,10 +1109,21 @@ async function arrancar() {
   try {
     const [r, ri] = await Promise.all([fetch('data/catalogo.json'), fetch('data/ilustraciones.json').catch(() => null)]);
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    estado.catalogo = await r.json();
+    const catalogo = await r.json();
+    // Un catálogo con la estructura rota no se usa: no se muestra ni se genera nada con él.
+    const validacion = validarCatalogo(catalogo);
+    if (!validacion.valido) {
+      console.error('Catálogo no válido:', validacion.errores);
+      pintar(`<h1>No podemos usar los ejercicios</h1><p>Los datos de ejercicios descargados no son válidos, así que no los usaremos para preparar rutinas. Vuelve a abrir la app más tarde.</p>`,
+        '<button type="button" class="primario" data-accion="recargar">Reintentar</button>');
+      return;
+    }
+    // Un ejercicio con datos inválidos se aparta: no se ve ni entra en ninguna rutina.
+    if (validacion.porEjercicio.size) console.warn('Ejercicios con datos inválidos:', Object.fromEntries(validacion.porEjercicio));
+    estado.invalidos = new Set(validacion.porEjercicio.keys());
+    estado.catalogo = catalogo;
     // Sin ilustraciones la app sigue funcionando: cada ejercicio muestra un recuadro neutro.
     if (ri?.ok) estado.ilustraciones = await ri.json().catch(() => ({}));
-    descartarRutinaNoVigente();
   } catch (e) {
     pintar(`<h1>No pudimos cargar los ejercicios</h1><p>Comprueba tu conexión y vuelve a abrir la app. (${escapar(e.message)})</p>`,
       '<button type="button" class="primario" data-accion="recargar">Reintentar</button>');

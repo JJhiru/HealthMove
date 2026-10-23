@@ -14,6 +14,16 @@ export function leer(clave, porDefecto = null) {
   }
 }
 
+// Texto guardado tal cual, sin interpretarlo (null si no hay nada o no se puede leer).
+// Sirve para conservar datos que no se pueden cargar sin perder ni un carácter.
+export function leerTexto(clave) {
+  try {
+    return localStorage.getItem(PREFIJO + clave);
+  } catch {
+    return null;
+  }
+}
+
 export function guardar(clave, valor) {
   try {
     localStorage.setItem(PREFIJO + clave, JSON.stringify(valor));

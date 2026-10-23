@@ -1,0 +1,17 @@
+{
+  "id": "fase-01-protocolo",
+  "titulo": "Coherencia del protocolo con la especificación, el esquema, el validador, el motor y las opciones; casos límite de Q1 y Q2",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-01-protocolo.md",
+  "bloques": [
+    { "id": "protocolo", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/protocolo.md" },
+    { "id": "especificacion", "tipo": "archivo", "ruta": "docs/especificacion-v1.md" },
+    { "id": "registro", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/registro.md" },
+    { "id": "propuestas-cierre", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/propuestas-cierre-protocolo.md" },
+    { "id": "opciones-js", "tipo": "archivo", "ruta": "public/js/opciones.js" },
+    { "id": "validacion-js", "tipo": "archivo", "ruta": "public/js/validacion.js" },
+    { "id": "motor-js", "tipo": "archivo", "ruta": "public/js/motor.js" },
+    { "id": "catalogo-esquema", "tipo": "catalogo-esquema" },
+    { "id": "catalogo-de-pie", "tipo": "catalogo-de-pie" }
+  ]
+}

@@ -1,0 +1,153 @@
+# Auditoría · fase-09-lote10 (consulta C10)
+
+Reviso el informe `lote-10`, el `registro` (P24, P26) y los 5 ejercicios de `catalogo-lote10`. No he visto las fuentes originales: las citas y descripciones de imágenes son de Claude y las trato como tales. No emito juicios clínicos ni apruebo ejercicios.
+
+Antes de los hallazgos, una nota de método: el informe del lote 10 se escribió **antes** de aplicar P24 y conserva la columna «Etiqueta actual» con los valores previos. Eso es correcto según su propia cabecera, pero obliga a comparar cada fila con el catálogo aplicado, no con la columna. Lo he hecho así.
+
+---
+
+## 1. Filas que aplican mal una regla aprobada o mezclan evidencia y regla
+
+### DS-223 · `ambos_brazos` en `recoger-toalla-dedos-pies`: `false` con fundamento que no es D
+- **Ubicación:** `lote-10`, ejercicio 66, tabla de exigencias, fila `ambos_brazos`.
+- **Evidencia:** «D (texto): el movimiento es del pie, sin función de los brazos; I (imagen): una sola mano en el asiento» · Regla: `evidencia` · Resultado: `FALSE` · Motivo: «Una mano que se apoya sin que el otro brazo trabaje no cuenta (Q1, P9)».
+- **Problema:** la fila mezcla una evidencia D (el pie ejecuta) con una I (una mano en el asiento) y concluye `false` con regla `evidencia`. R2.2 exige, para un `false`, «evidencia D de que la exigencia no aparece en ningún momento» o una adaptación aprobada. La parte de la imagen es I, no D. Además, Q1 (P9) dice que cuentan como `ambos_brazos` «el apoyo de las dos manos» y «una mano que se apoya mientras el otro brazo trabaja»; aquí solo se apoya una mano y el otro brazo no trabaja, así que el resultado puede ser correcto, pero el fundamento citado no es el que sostiene el `false`. El `false` se sostiene por el texto (D: el movimiento es del pie), no por la imagen.
+- **Consecuencia:** la trazabilidad queda confusa; un lector puede creer que la imagen se ha calificado como D cuando el propio informe la califica como I. Si en el futuro se descubre que la mano sí forma parte de la ejecución, la fila no permite saber qué evidencia cambió.
+- **Certeza:** alta (la incoherencia está en el texto del informe).
+- **Recomendación:** separar el fundamento: `false` por D del texto (el pie ejecuta, los brazos no intervienen); la imagen (I) se registra como incertidumbre que no cambia el valor, con la nota de por qué no se aplica Q1.
+- **Prueba:** releer la fila con R2.2 y Q1 delante; comprobar que el `false` no depende de la I.
+- **¿Requiere decisión humana?:** no para corregir la redacción; sí si el desarrollador quiere que la I de la imagen cuente como apoyo bilateral (sería un criterio nuevo, R1.4 paso 4).
+
+### DS-224 · `flexion_profunda_rodilla` en `banda-tobillo-fuera-sentado`: `true` conservador con fundamento N, pero la nota no cita la regla que lo permite
+- **Ubicación:** `lote-10`, ejercicio 67, fila `flexion_profunda_rodilla`; y `catalogo-lote10`, `notas_etiquetado` del mismo ejercicio.
+- **Evidencia:** «N: la imagen es frontal y el texto no dice dónde queda el pie» · Regla: `conservadora` · Resultado: `TRUE`. Nota aplicada: «[conservadora] flexion_profunda_rodilla: la imagen de la fuente es frontal y no deja ver el ángulo de la rodilla. Se cerraría con: una vista lateral o un texto que diga dónde queda el pie.»
+- **Problema:** la fila y la nota son coherentes entre sí y con R2.1/R2.4. No hay error de regla. Lo señalo porque el informe lo compara con `flexion-hombro-lado-tumbado` (lote 9) y esa comparación es correcta: misma clase de `true` conservador por falta de vista. No requiere cambio. Lo dejo como confirmación, no como hallazgo abierto.
+- **Certeza:** alta.
+- **Recomendación:** ninguna.
+- **¿Requiere decisión humana?:** no.
+
+### DS-225 · `ambos_brazos` y `agarre` en `cruce-piernas-isometrico`: `true` conservador con fundamento D de la imagen, pero el texto no lo pide
+- **Ubicación:** `lote-10`, ejercicio 69, filas `ambos_brazos` y `agarre`; `catalogo-lote10`, `notas_etiquetado`.
+- **Evidencia:** «D (imagen): las dos manos se sujetan al borde; el texto no lo pide» · Regla: `conservadora` · Resultado: `TRUE`. Nota: «[conservadora] ambos_brazos: la imagen de la fuente muestra las dos manos sujetando el borde del asiento y el texto no lo pide. Se cerraría con: evidencia de que sujetarse no forma parte de la ejecución.»
+- **Problema:** aquí la evidencia es D (la imagen muestra claramente las dos manos sujetando el borde), no I. La regla aplicada es `conservadora`, que según R2.1 se usa «cuando la evidencia es N o insuficiente». Con evidencia D de que las manos sujetan, el `true` no es conservador: es un `true` por evidencia. La nota `[conservadora]` y el «Se cerraría con: evidencia de que sujetarse no forma parte de la ejecución» describen una incertidumbre que la propia fila dice que no existe (la imagen es D). Hay una mezcla entre «la imagen lo muestra» (D) y «el texto no lo pide» (que no es una incertidumbre sobre la imagen, sino sobre si la imagen forma parte de la ejecución).
+- **Consecuencia:** la nota no cumple R2.4 en su forma: R2.4 pide `<motivo>` y `<evidencia que falta>`. Aquí el motivo es «la imagen lo muestra» y lo que falta no es evidencia de la imagen, sino una decisión sobre si la imagen cuenta. Eso es un criterio nuevo (R1.4 paso 4), no una lectura de Q1/Q2. El informe lo reconoce en «Incidencias» («Es la misma clase que el apoyo que solo aparece en la imagen del ejercicio 66»), pero la fila no lo refleja.
+- **Certeza:** alta (la incoherencia está en el texto).
+- **Recomendación:** o bien se registra como `true` por evidencia D (imagen) con nota que explique que el texto no lo pide y que se cierra con una decisión sobre si la imagen cuenta; o bien se registra como `true` conservador reconociendo que la imagen es D pero que la duda es sobre la función, no sobre la observación. En ambos casos, la nota debe decir qué falta exactamente.
+- **Prueba:** comparar con la fila `agarre` del ejercicio 66, donde la imagen es I («no se sabe si forma parte de la ejecución»). Aquí la imagen es D y la duda es distinta.
+- **¿Requiere decisión humana?:** sí. Es la misma clase que DS-226 (apoyo que solo aparece en la imagen). El desarrollador debe decidir si un apoyo que solo aparece en la imagen, y que el texto no pide, cuenta como exigencia. Eso sería un criterio nuevo (R1.4 paso 4), no una lectura de Q1/Q2.
+
+### DS-226 · El `true` conservador de `agarre` en `recoger-toalla-dedos-pies` (y el de `ambos_brazos`/`agarre` en `cruce-piernas-isometrico`) por un apoyo que solo aparece en la imagen: ¿está bien fundado en R7.5, Q1 y Q2?
+- **Ubicación:** `lote-10`, ejercicios 66 y 69, «Incidencias» y «Propuesta de cambios»; `protocolo` R7.5, Q1, Q2; `registro` P9, P10.
+- **Evidencia:** R7.5: «Si la imagen no determina un requisito, se registra la incertidumbre y se aplica la regla conservadora de esa exigencia (R2.1). La relación entre R7.4 y R2.1 la resuelve Q2: el contacto sin prensión se marca `agarre` como conservador, con su nota, y no se presenta como un agarre observado.» Q2 (P10): «El contacto o el apoyo sin evidencia de prensión no demuestra un agarre (R7.4), pero se marca `agarre: true` por el criterio conservador (R2.1), con su nota `[conservadora]` (R2.4).» Q1 (P9): «Cuentan como `ambos_brazos` el apoyo de las dos manos, el uso simultáneo de los dos brazos (también una mano que se apoya mientras el otro brazo trabaja) y la alternancia continua de los dos brazos. Cuando el `true` se apoya en la duda o en el apoyo, se marca como conservador, con su nota `[conservadora]` (R2.4).»
+- **Problema:** R7.5, Q1 y Q2 están pensadas para cuando la imagen **no determina** el requisito (I o N). En el ejercicio 66, la imagen es I («no se sabe si forma parte de la ejecución»); en el 69, la imagen es D («las dos manos se sujetan al borde»). En el 66, el `true` conservador de `agarre` encaja con Q2 (contacto sin prensión → conservador). En el 69, el `true` de `ambos_brazos` y `agarre` no encaja con Q1/Q2 tal como están escritas, porque la imagen sí determina el apoyo (D). Lo que no determina es si ese apoyo forma parte de la ejecución, y eso no es lo que Q1/Q2 resuelven. El informe lo reconoce: «Se ha resuelto con las reglas existentes (R7.5, Q1, Q2) y da `true` conservador. Si el desarrollador quiere otro criterio, sería una regla nueva.» Pero la afirmación «se ha resuelto con las reglas existentes» no es exacta para el 69: las reglas existentes no cubren el caso «la imagen muestra un apoyo que el texto no pide».
+- **Consecuencia:** el `true` conservador del 69 se presenta como aplicación de Q1/Q2 cuando en realidad es una extensión de su ámbito. Si el desarrollador acepta esa extensión, debería registrarse como criterio (R1.4 paso 4) o como CN. Si no la acepta, el `true` del 69 no tiene fundamento en las reglas actuales.
+- **Certeza:** alta para la distinción D/I; media para la conclusión (depende de cómo se lea «la imagen no determina un requisito» en R7.5: ¿no determina la observación, o no determina si forma parte del ejercicio?).
+- **Recomendación:** registrar el caso del 69 como CN (o como extensión de Q1/Q2) antes de dar por buena la aplicación. El del 66 (imagen I) sí encaja en Q2.
+- **Prueba:** releer R7.5 con la distinción D/I del propio informe; comprobar si Q1/Q2 mencionan el caso «imagen D pero texto no lo pide».
+- **¿Requiere decisión humana?:** sí. El desarrollador debe decidir si un apoyo que solo aparece en la imagen, y que el texto no pide, cuenta como exigencia. Eso sería un criterio nuevo (R1.4 paso 4), no una lectura de Q1/Q2.
+
+### DS-227 · `flexion_amplia_cadera` en `cuadriceps-estatico-sentado`: `false` con fundamento que no es D
+- **Ubicación:** `lote-10`, ejercicio 68, fila `flexion_amplia_cadera`.
+- **Evidencia:** «D: sentado con la pierna estirada y el talón en el suelo, el muslo no se acerca al tronco más que sentado» · Regla: `evidencia` · Resultado: `FALSE`.
+- **Problema:** la definición de §4 es «muslo más cerca del tronco que al estar sentado». La fila dice «el muslo no se acerca al tronco más que sentado», que es exactamente la negación de la definición, pero la evidencia que cita es la postura de HealthMove (sentado con la pierna estirada), no la de la fuente (tumbado). La fuente describe el ejercicio tumbado; la versión de HealthMove es sentada. La fila evalúa la versión de HealthMove, lo cual es correcto según la cabecera del ejercicio («Etiquetas de la versión de HealthMove (en silla)»), pero entonces la evidencia D no es de la fuente, sino de la instrucción de HealthMove. Eso es coherente con R4.2 («La lectura de la función sigue la instrucción que verá el usuario, contrastada con la fuente»), pero la fila no lo dice. El riesgo es que un lector crea que la fuente muestra la pierna estirada sentada.
+- **Consecuencia:** menor: la fila es correcta en el resultado, pero el fundamento mezcla la fuente (tumbado) con la instrucción de HealthMove (sentado). Si Q5 decide que la silla no pasa R3.1, esta fila deja de valer y el ejercicio es una modificación (DG-5).
+- **Certeza:** media (depende de si se lee como fundamento de la versión de HealthMove o de la fuente).
+- **Recomendación:** aclarar en la fila que la evidencia es de la instrucción de HealthMove, no de la imagen de la fuente.
+- **Prueba:** comparar con la fila `flexion_profunda_rodilla` del mismo ejercicio, que sí cita «keeping your leg straight» (texto de la fuente).
+- **¿Requiere decisión humana?:** no para la redacción; sí para Q5 (si la silla pasa R3.1).
+
+### DS-228 · `brazo_sobre_hombro` en `recoger-toalla-dedos-pies`: `false` con fundamento D de la imagen, pero la imagen es un dibujo con una sola vista
+- **Ubicación:** `lote-10`, ejercicio 66, fila `brazo_sobre_hombro`.
+- **Evidencia:** «D (imagen): la mano en el borde del asiento» · Regla: `evidencia` · Resultado: `FALSE`.
+- **Problema:** la fila concluye `false` con evidencia D de la imagen. Pero el propio informe dice en «Limitaciones de la verificación»: «la imagen es un dibujo, con una sola vista lateral». Una sola vista lateral no permite descartar que la mano pase del hombro en algún momento (por ejemplo, al colocar la toalla o al estirarla). La instrucción 3 original («Estírala de nuevo») se retira en la propuesta, pero la instrucción 1 («Siéntate con una toalla en el suelo delante de ti») implica agacharse o llegar al suelo, lo que puede llevar la mano por debajo del hombro, no por encima. El `false` es plausible, pero la evidencia D de una sola vista no es suficiente para descartar la exigencia en todo el ejercicio (R2.2 exige D de que no aparece en ningún momento).
+- **Consecuencia:** si el desarrollador aplica R2.2 estrictamente, esta fila debería ser `true` conservador o requerir aclaración. El informe no lo hace.
+- **Certeza:** media (depende de si se acepta que una vista lateral D basta para descartar `brazo_sobre_hombro` en un ejercicio sentado con las manos cerca del regazo).
+- **Recomendación:** revisar si la imagen permite descartar la exigencia en todo el ejercicio; si no, aplicar R2.1.
+- **Prueba:** ver la imagen original (no la tengo); comprobar si la mano en el borde del asiento está claramente por debajo del hombro en la vista lateral.
+- **¿Requiere decisión humana?:** no para la revisión; sí si se concluye que hace falta un criterio sobre qué vistas bastan para descartar una exigencia.
+
+### DS-229 · `inclinacion_tronco` en `recoger-toalla-dedos-pies`: `false` con una condición que remite a CN-2
+- **Ubicación:** `lote-10`, ejercicio 66, fila `inclinacion_tronco`.
+- **Evidencia:** «D (imagen): tronco erguido durante el ejercicio» · Regla: `evidencia` · Resultado: `FALSE` · Motivo: «Siempre que se retire "Estírala de nuevo" o se diga que es con el pie; si no, ver CN-2».
+- **Problema:** la fila condiciona el `false` a una decisión que aún no está tomada (retirar «Estírala de nuevo» o decir que es con el pie). Eso es coherente con el estado del ejercicio (PENDIENTE DE DECISIÓN por CN-2), pero la fila no debería presentar un `false` incondicional cuando el propio motivo lo condiciona. La propuesta de cambios retira «Estírala de nuevo», así que el `false` se sostiene si se aplica la propuesta; pero la fila no distingue entre «valor actual» y «valor propuesto condicionado».
+- **Consecuencia:** menor: la fila es correcta si se aplica la propuesta, pero el lector puede confundir el valor actual con el propuesto.
+- **Certeza:** alta (la incoherencia está en el texto).
+- **Recomendación:** separar el valor actual (condicionado) del propuesto (incondicional si se aplica la propuesta).
+- **Prueba:** comparar con la columna «Etiqueta actual» y la «Resultado propuesto».
+- **¿Requiere decisión humana?:** no.
+
+### DS-230 · `peso_en_manos` en `cruce-piernas-isometrico`: `false` con fundamento D, pero la imagen muestra las manos sujetando el borde
+- **Ubicación:** `lote-10`, ejercicio 69, fila `peso_en_manos`.
+- **Evidencia:** «D: sentado; las manos sujetan el borde, sin soportar el peso del cuerpo, que está en el asiento (como en el lote 7)» · Regla: `evidencia` · Resultado: `FALSE`.
+- **Problema:** la fila es coherente con R7.3 («El contacto con una superficie no demuestra carga sobre ella»). No hay error. Lo señalo porque el informe lo cita como «como en el lote 7» y esa comparación es correcta. No requiere cambio.
+- **Certeza:** alta.
+- **Recomendación:** ninguna.
+- **¿Requiere decisión humana?:** no.
+
+---
+
+## 2. El `true` conservador de `agarre` (y de `ambos_brazos` en `cruce-piernas-isometrico`) por un apoyo que solo aparece en la imagen
+
+Ya tratado en DS-225 y DS-226. Resumen:
+
+- **Ejercicio 66 (`agarre`):** la imagen es I («no se sabe si forma parte de la ejecución»). El `true` conservador encaja con Q2 (contacto sin prensión → conservador). **Bien fundado.**
+- **Ejercicio 69 (`ambos_brazos` y `agarre`):** la imagen es D («las dos manos se sujetan al borde»). El `true` conservador no encaja con Q1/Q2 tal como están escritas, porque la imagen sí determina el apoyo. Lo que no determina es si ese apoyo forma parte de la ejecución. **No bien fundado en las reglas actuales; requiere CN o extensión de Q1/Q2.**
+
+El protocolo pide (R7.5) que «si la imagen no determina un requisito, se registra la incertidumbre y se aplica la regla conservadora». En el 69, la imagen sí determina el requisito (las manos sujetan); lo que no determina es si el requisito forma parte del ejercicio. Eso no es lo que R7.5 cubre.
+
+---
+
+## 3. CN-2 (preparar el material): ¿bien planteado? ¿Hay alguna regla existente que ya lo resuelva?
+
+### DS-231 · CN-2 está bien planteado como caso no contemplado, pero su alcance es más amplio de lo que el informe reconoce
+- **Ubicación:** `registro`, «Casos no contemplados (CN)», CN-2; `lote-10`, ejercicios 66 y 67, «Incidencias».
+- **Evidencia:** CN-2: «la especificación §4 marca una exigencia si aparece "en cualquier momento del ejercicio (posición inicial, movimiento o vuelta)". No dice si cuenta la preparación del material: atar un lazo de banda (dos manos y cerrar la mano), meter el pie en él o dejar una toalla en el suelo (llegar al pie o al suelo).» §4: «Una exigencia se marca si aparece en **cualquier momento** del ejercicio (posición inicial, movimiento o vuelta).»
+- **Problema:** CN-2 está bien planteado: §4 enumera las fases y la preparación no está entre ellas ni excluida; R2.1 permitiría marcar ante la duda, pero se aplica a una exigencia dudosa del ejercicio, no a decidir qué forma parte del ejercicio; DG-6 trata consejos de seguridad, no preparación. **No hay regla existente que lo resuelva.** Lo que sí matizo: el alcance de CN-2 es más amplio de lo que el informe reconoce. El informe lo limita a «los que piden poner un lazo de banda en las rodillas, los muslos, los tobillos o los pies» y a «dejar una toalla en el suelo». Pero la misma clase de caso incluye cualquier preparación que exija una exigencia: colocar una banda en los tobillos, atar un lazo, poner una toalla en el suelo, colocar una botella, etc. El informe cita cuatro ejercicios de banda y dos del lote 10, pero no dice cuántos ejercicios del catálogo tienen preparación de material. Sin ese recuento, no se puede saber el impacto de la opción (a) («la preparación cuenta»).
+- **Consecuencia:** si el desarrollador elige la opción (a), el cambio afecta a más ejercicios de los que el informe enumera. Si elige la (b) o la (c), el impacto es menor, pero el informe no lo cuantifica.
+- **Certeza:** alta para el planteamiento; media para el alcance (no tengo el catálogo completo para contar).
+- **Recomendación:** añadir a CN-2 el recuento de ejercicios afectados por cada opción, con la búsqueda realizada. Sin ese dato, la decisión no es informada.
+- **Prueba:** buscar en el catálogo los ejercicios con `recursos` que incluyan `banda` o `toalla` y con instrucciones que pidan preparación; contar cuántos cambiarían con cada opción.
+- **¿Requiere decisión humana?:** sí. El desarrollador debe elegir entre (a), (b) y (c). El informe ya lo plantea así.
+
+### DS-232 · CN-2 y la opción (b): el texto de interfaz que propone no está en el alcance del protocolo
+- **Ubicación:** `registro`, CN-2, «Propuesta del auditor (sin aplicar)», opción (b); `protocolo` §8.4 y Q8.
+- **Evidencia:** CN-2, opción (b): «No cuenta si la puede hacer otra persona antes, y la instrucción la separa como preparación ("Antes de empezar, o con ayuda: …"). Es un texto de interfaz y pasaría por `healthmove-safety-reviewer`.» Protocolo §8.4: «No se implementan en esta fase. Sus textos no están validados profesionalmente.» Q8: «Interfaz pendiente.»
+- **Problema:** la opción (b) de CN-2 propone un texto de interfaz («Antes de empezar, o con ayuda: …») que no está en el alcance de esta fase (Q8) y que, según §8.4, requeriría revisión profesional. El informe lo reconoce («pasaría por `healthmove-safety-reviewer`»), pero no lo marca como fuera de alcance. Si el desarrollador elige (b), estaría aprobando un cambio de interfaz no previsto.
+- **Consecuencia:** la opción (b) no es solo una decisión de etiquetado; es una decisión de interfaz y de texto que el protocolo deja fuera de esta fase.
+- **Certeza:** alta.
+- **Recomendación:** marcar la opción (b) como fuera del alcance de esta fase (Q8) y, si el desarrollador la elige, registrarla como propuesta de interfaz pendiente, no como cambio aplicable ahora.
+- **Prueba:** releer §8.4 y Q8 con la opción (b) delante.
+- **¿Requiere decisión humana?:** sí. El desarrollador debe decidir si la opción (b) entra en esta fase o se aplaza con Q8.
+
+---
+
+## 4. Los casos de Q5 de los ejercicios 68 y 69
+
+### DS-233 · Q5 en `cuadriceps-estatico-sentado`: el informe describe bien la duda, pero no cita la prueba de R3.1 que aplica
+- **Ubicación:** `lote-10`, ejercicio 68, «Incidencias» y «Decisión pendiente»; `protocolo` R3.1 y Q5.
+- **Evidencia:** R3.1: «**Prueba operativa:** la ejecución que pide HealthMove es una de las que permite la fuente. Si el texto concede un rango ("as far as is comfortable"), la imagen es un ejemplo dentro de ese rango. Si el texto no da rango y la imagen lo muestra, la imagen fija el rango. Si la prueba falla, es una **modificación**, es decir, otro ejercicio, y se aplica DG-5. **Esta prueba concreta está pendiente de confirmación (Q5)**.» Informe: «con la prueba de R3.1 tal como está escrita, "a sitting position" es un rango que da el texto y la silla cabría. Pero la misma organización, cuando concreta, se sienta con las piernas estiradas sobre el suelo, un sofá o una cama, y en una silla la rodilla no puede empujar contra nada.»
+- **Problema:** el informe describe bien la duda y cita la prueba de R3.1. Pero la prueba de R3.1 tiene tres ramas: (i) el texto concede un rango; (ii) el texto no da rango y la imagen lo muestra; (iii) la prueba falla. En este caso, el texto concede un rango («a sitting position»), pero la imagen muestra tumbado, no sentado. La rama (i) dice que «la imagen es un ejemplo dentro de ese rango»; la imagen no es un ejemplo de sentado, es un ejemplo de tumbado. La rama (ii) no aplica porque el texto sí da rango. La rama (iii) no aplica porque el texto permite sentado. El informe no dice qué rama aplica. La conclusión («la silla cabría») es plausible, pero no se deriva de la prueba tal como está escrita.
+- **Consecuencia:** la decisión de Q5 para este ejercicio no está bien fundada en la prueba de R3.1; el informe lo reconoce («Claude no lo decide»), pero no identifica la rama que falta.
+- **Certeza:** media (depende de cómo se lea «rango» en R3.1: ¿rango de ejecución o rango de posiciones?).
+- **Recomendación:** identificar qué rama de R3.1 aplica y qué falta para cerrarla. Si la prueba no cubre el caso «el texto da un rango de posiciones y la imagen muestra otra», eso es un hueco de Q5, no de este ejercicio.
+- **Prueba:** releer R3.1 con el caso del 68 delante; comprobar si «a sitting position» es un rango de ejecución o de posiciones.
+- **¿Requiere decisión humana?:** sí. Q5 está pendiente y el desarrollador la revisará (`registro`, P22).
+
+### DS-234 · Q5 en `cruce-piernas-isometrico`: el informe describe bien la duda, pero la discrepancia de ilustración (R7.7) no está bien caracterizada
+- **Ubicación:** `lote-10`, ejercicio 69, «Otros campos» (Ilustración) y «Incidencias»; `protocolo` R7.6 y R7.7.
+- **Evidencia:** R7.7: «Mientras haya una discrepancia de ilustración que induzca a interpretar el ejercicio de otra forma, esa ilustración no se da por válida y el ejercicio no se propone para aprobación documental.» Informe: «**Ilustración:** sentado en una silla con los pies cerca del suelo y las rodillas dobladas. La fuente muestra las piernas estiradas en el aire. Induce otra postura (R7.6): **discrepancia de R7.7** mientras no se decida si la postura de HealthMove pasa R3.1.»
+- **Problema:** el informe califica la discrepancia como R7.7, pero R7.7 se refiere a «las ilustraciones de HealthMove» comparadas con la fuente (R7.6). Aquí la ilustración de HealthMove muestra una postura (pies cerca del suelo) y la fuente muestra otra (piernas estiradas en el aire). Eso es una discrepancia de R7.6, y R7.7 dice que mientras exista, el ejercicio no se propone para aprobación documental. El informe lo aplica correctamente. Lo que no está bien caracterizado es la relación con Q5: si Q5 decide que la postura de HealthMove pasa R3.1, la ilustración de HealthMove sería fiel a la instrucción de HealthMove (aunque no a la fuente), y la discrepancia de R7.6 seguiría existiendo (la fuente muestra otra postura). El informe dice «mientras no se decida si la postura de HealthMove pasa R3.1», lo que sugiere que la discrepancia desaparecería si Q5 se resuelve a favor de HealthMove. Eso no es correcto: la discrepancia de R7.6 es entre la ilustración de HealthMove y la fuente, no entre la instrucción de HealthMove y la fuente. Si la instrucción de HealthMove cambia (como propone el informe: «con las piernas estiradas al frente»), la ilustración también debe cambiar.
+- **Consecuencia:** la discrepancia de R7.7 no se resuelve solo con Q5; requiere cambiar la ilustración (o la instrucción, y con ella la ilustración).
+- **Certeza:** alta (la distinción entre R7.6 y R7.7 está en el protocolo).
+- **Recomendación:** separar las dos decisiones: (i) Q5 decide si la postura de HealthMove pasa R3.1; (ii) R7.7 exige cambiar la ilustración si la postura de HealthMove se mantiene distinta de la fuente. La segunda no depende de la primera.
+- **Prueba:** releer R7.6 y R7.7 con el caso del 69 delante.
+- **¿Requiere decisión humana?:** sí. Q5 está pendiente; el cambio de ilustración también.
+
+---
+
+## 5. Errores de hecho entre el informe, `registro` y `catalogo-lote10`
+
+### DS-235 · El informe del lote 10 dice «Revisión de DeepSeek: pendiente» y `registro` P24 dice «Revisión de DeepSeek del lote: pendiente (la consulta C9 de CN-1 no se pudo enviar: la clave leída no tenía un formato válido)». El informe no menciona el fallo de la consulta C9.
+- **Ubicación:** `lote-10`, «Revisión de DeepSeek»; `registro`, P24.
+- **Evidencia:** `lote-10`: «Pendiente. No se ha enviado la consulta: el lote no aplica cambios, y se puede revisar con DeepSeek antes de aplicarlos, como en los lotes 6 a 9.» `registro` P24: «Revisión de DeepSeek del lote: pendiente (la consulta C9 de CN-1 no se pudo enviar: la clave leída no tenía un formato válido).»
+- **Problema:** el informe dice que la consulta no se ha enviado porque «el lote no aplica cambios», pero el registro dice que la consulta C9 (de CN-1, no del lote 10) no se pudo enviar por un fallo de clave. Son dos razones distintas para dos consultas distintas

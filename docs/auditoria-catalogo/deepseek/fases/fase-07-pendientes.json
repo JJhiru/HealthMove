@@ -1,0 +1,12 @@
+{
+  "id": "fase-07-pendientes",
+  "titulo": "Revisión del informe de problemas críticos y graves pendientes (C8)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-07-pendientes.md",
+  "bloques": [
+    { "id": "protocolo", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/protocolo.md" },
+    { "id": "especificacion", "tipo": "archivo", "ruta": "docs/especificacion-v1.md" },
+    { "id": "registro", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/registro.md" },
+    { "id": "informe", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/problemas-pendientes-2026-10-21.md" }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "idEjecucion": "20261019T185547Z-fase-01-q2-apoyo",
+  "fecha": "2026-10-19T18:55:47.543Z",
+  "fase": {
+    "id": "fase-01-q2-apoyo",
+    "titulo": "Segunda consulta acotada: definición documental de Q2 (contacto, apoyo, carga y prensión) y significado real de la opción de_pie_apoyo",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-01-q2-apoyo.md"
+  },
+  "estado": "truncada",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "dc89d840-31af-4f57-adfe-4dea134a3fd4",
+  "finishReason": "length",
+  "uso": {
+    "aciertoCache": 640,
+    "falloCache": 75625,
+    "salida": 12000,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 122933,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "truncada",
+      "finishReason": "length",
+      "id": "dc89d840-31af-4f57-adfe-4dea134a3fd4",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 640,
+        "falloCache": 75625,
+        "salida": 12000,
+        "razonamiento": 0
+      },
+      "coste": 0.03709134,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.03709134,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "defd8b0b47217de26e5f77629788046bc063cbd5",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "72fda34f80d2e3222eabd5c0ce583c21c83d7699",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/protocolo.md",
+      "docs/especificacion-v1.md",
+      "docs/auditoria-catalogo/registro.md",
+      "public/js/validacion.js",
+      "public/js/motor.js",
+      "docs/auditoria-catalogo/deepseek/ejecuciones/20261019T001226Z-fase-01-protocolo/respuesta.md",
+      "docs/auditoria-catalogo/deepseek/ejecuciones/20261019T001508Z-fase-01-protocolo-bloque2/respuesta.md"
+    ]
+  },
+  "bloque": 1,
+  "continuacion": null,
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 33288,
+      "sha256": "cb8914f0e22953b590bb283f7c458468729df2cd00f227c710e8aff64e324d06"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 13440,
+      "sha256": "189898106b6a4ec400ffaa62918174ae87820004e334dde510076f3f75df92b6"
+    },
+    {
+      "id": "registro",
+      "procedencia": "docs/auditoria-catalogo/registro.md",
+      "caracteres": 12671,
+      "sha256": "be717005f53a367e0155121e2598d2050c87b101d774a953d5dd5f9808f8c7b5"
+    },
+    {
+      "id": "opciones-js",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6255,
+      "sha256": "09054da3b336574d9c482237566a6669770dd72a4fb773fb0bd83cb6db7ce11a"
+    },
+    {
+      "id": "validacion-js",
+      "procedencia": "public/js/validacion.js",
+      "caracteres": 8211,
+      "sha256": "953ae741d4392f52be69040099274bb836254022d07f91a8e03c578648e6d92e"
+    },
+    {
+      "id": "motor-js",
+      "procedencia": "public/js/motor.js",
+      "caracteres": 14982,
+      "sha256": "246a5ea4fa23f7e530c62724238c9ce12fa6364d1305942dcee124720050c053"
+    },
+    {
+      "id": "catalogo-esquema",
+      "procedencia": "public/data/catalogo.json#catalogo-esquema",
+      "caracteres": 3247,
+      "sha256": "b14df1d07f9fd7a1d4ba51dd4bacb6fa373601db1a5c4258b3b674e78bbed66d"
+    },
+    {
+      "id": "catalogo-de-pie",
+      "procedencia": "public/data/catalogo.json#catalogo-de-pie",
+      "caracteres": 57711,
+      "sha256": "0c7b52217e07ec0cd252426c6f1f6b223e21f6fb47baeff836f12f657ae49492"
+    },
+    {
+      "id": "fase-01-respuesta-bloque1",
+      "procedencia": "docs/auditoria-catalogo/deepseek/ejecuciones/20261019T001226Z-fase-01-protocolo/respuesta.md",
+      "caracteres": 52218,
+      "sha256": "6f1f596bbbae1f78b6ed1e3c4cf743bfc8174dd14359fdaf8a339d90c9274e75"
+    },
+    {
+      "id": "fase-01-respuesta-bloque2",
+      "procedencia": "docs/auditoria-catalogo/deepseek/ejecuciones/20261019T001508Z-fase-01-protocolo-bloque2/respuesta.md",
+      "caracteres": 33490,
+      "sha256": "316aa112dfe44b38d8d72bed3bf841a61de9b3d62820734e119ac6816e65f34b"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "84c4a24eb07deb275a36bedcb2e8264ed7a42f5c39c02aaa6e4b7c1dd3e78bf1",
+    "respuestaApi": "ca496c1cc6702f72d4007a09ca598aa9e06dc5b1dbf181085c8133ac6ce88563"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261019T185547Z-fase-01-q2-apoyo/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261019T185547Z-fase-01-q2-apoyo/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261019T185547Z-fase-01-q2-apoyo/respuesta-api.json"
+  }
+}

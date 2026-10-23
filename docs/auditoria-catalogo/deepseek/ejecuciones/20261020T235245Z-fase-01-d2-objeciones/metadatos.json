@@ -1,0 +1,123 @@
+{
+  "idEjecucion": "20261020T235245Z-fase-01-d2-objeciones",
+  "fecha": "2026-10-20T23:52:45.830Z",
+  "fase": {
+    "id": "fase-01-d2-objeciones",
+    "titulo": "Tercera consulta acotada (C2): objeciones a la decisión D2 del desarrollador sobre Q2 (el contacto sin prensión no es agarre)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-01-d2-objeciones.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "23f289ca-783f-4985-bb45-54d3eac75bae",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 640,
+    "falloCache": 70577,
+    "salida": 11663,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 111695,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "23f289ca-783f-4985-bb45-54d3eac75bae",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 640,
+        "falloCache": 70577,
+        "salida": 11663,
+        "razonamiento": 0
+      },
+      "coste": 0.03517254,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.03517254,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "8161842692bb1d7d2398b5215125c55c42105b3a",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "72fda34f80d2e3222eabd5c0ce583c21c83d7699",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": []
+  },
+  "bloque": 1,
+  "continuacion": null,
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 34623,
+      "sha256": "d9ea6731eb1568b42d46641132d28063c0d87c57015f8929f7734244cbfc25d1"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 13747,
+      "sha256": "106fea207160623a79bdcf8273b8073d6aa982fe2943c6447b17b1d8c12b38e7"
+    },
+    {
+      "id": "registro",
+      "procedencia": "docs/auditoria-catalogo/registro.md",
+      "caracteres": 15361,
+      "sha256": "18d53d1eb1521ca6f8da33508dbee2cb972877ce294e29002665cad6ec22eb6a"
+    },
+    {
+      "id": "opciones-js",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6255,
+      "sha256": "09054da3b336574d9c482237566a6669770dd72a4fb773fb0bd83cb6db7ce11a"
+    },
+    {
+      "id": "catalogo-esquema",
+      "procedencia": "public/data/catalogo.json#catalogo-esquema",
+      "caracteres": 3247,
+      "sha256": "b14df1d07f9fd7a1d4ba51dd4bacb6fa373601db1a5c4258b3b674e78bbed66d"
+    },
+    {
+      "id": "catalogo-de-pie",
+      "procedencia": "public/data/catalogo.json#catalogo-de-pie",
+      "caracteres": 57711,
+      "sha256": "0c7b52217e07ec0cd252426c6f1f6b223e21f6fb47baeff836f12f657ae49492"
+    },
+    {
+      "id": "evidencia-fuentes",
+      "procedencia": "docs/auditoria-catalogo/deepseek/analisis-claude/evidencia-fuentes-q1-q2.md",
+      "caracteres": 22298,
+      "sha256": "c24e7e20ffbff3641fd8697ddfdac828c4459ded66341ba181dbccd31b565522"
+    },
+    {
+      "id": "c1-respuesta-bloque1",
+      "procedencia": "docs/auditoria-catalogo/deepseek/ejecuciones/20261019T185547Z-fase-01-q2-apoyo/respuesta.md",
+      "caracteres": 36539,
+      "sha256": "84c4a24eb07deb275a36bedcb2e8264ed7a42f5c39c02aaa6e4b7c1dd3e78bf1"
+    },
+    {
+      "id": "c1-respuesta-bloque2",
+      "procedencia": "docs/auditoria-catalogo/deepseek/ejecuciones/20261019T185654Z-fase-01-q2-apoyo-bloque2/respuesta.md",
+      "caracteres": 22720,
+      "sha256": "c5d4a11e3e4e07ac428fc0ad1ad0bb8247929cfc9390b186218bf80675936cb5"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "ef15cbc9750893abaeb9b4481db5b69b1631a19c1bc7c3bed81935bf0607aed5",
+    "respuestaApi": "569ed009e684165359f3cdd0c74023963264f877390932b5cd018e29b024ccb3"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261020T235245Z-fase-01-d2-objeciones/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261020T235245Z-fase-01-d2-objeciones/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261020T235245Z-fase-01-d2-objeciones/respuesta-api.json"
+  }
+}

@@ -21,7 +21,7 @@ export const SENTADO = {
   'curl-biceps-sentado': S({ brazoD: 2, codoD: 4 }, { codoD: 150 }, { botella: ['manoD'] }),
   'toalla-separar-sentado': SF({ brazoD: 14, codoD: 168, brazoI: 12, codoI: -20 }, {}, { toalla: [['manoD', 'manoI']], zona: ['brazo'] }),
   'boxeo-sentado': S(PUNO_PECHO, { brazoD: 88, codoD: 90 }),
-  'boxeo-circulos-alto': S({ brazoD: 35, codoD: 125, brazoI: 31, codoI: 121 }, {}, { circulo: ['manoD'] }),
+  'boxeo-circulos-alto': S({ brazoD: 70, codoD: 150, brazoI: 66, codoI: 146 }, {}, { circulo: ['manoD'] }), // puños a la altura de la nariz (fuente: «level with your nose»)
   'boxeo-circulos-pecho': S({ brazoD: 22, codoD: 100, brazoI: 18, codoI: 96 }, {}, { circulo: ['manoD'] }),
   'arquear-espalda-sentado': S(MANOS_CADERA, { tronco: -9, brazoD: -38, brazoI: -38 }, { zona: ['pecho'] }),
   'movilidad-lumbar-sentado': S({ tronco: -6 }, { tronco: 20 }),
@@ -29,7 +29,8 @@ export const SENTADO = {
   'abrir-cerrar-manos': MANO('abierta', 'puno', 'palma'),
   'pulgar-dedos': MANO('pulgar-indice', 'pulgar-menique', 'palma'),
   'activacion-sentado': S({ brazoD: -28, codoD: 45, brazoI: 35, codoI: 110 }, { brazoD: 35, codoD: 110, brazoI: -28, codoI: 45, pieD: 135 }),
-  'banda-remo-sentado': S({ brazoD: 50, codoD: 62, brazoI: 46, codoI: 58 }, { brazoD: -18, codoD: 80, brazoI: -22, codoI: 76 }, { banda: [['manoD', 'manoI']] }),
+  // De frente, como la fuente: la banda pasa de los muslos al abdomen y se estira hacia los lados (no es un remo hacia atrás).
+  'banda-remo-sentado': SF({ brazoD: 4, codoD: -35, brazoI: 4, codoI: -35, ...F({ antebrazo: 0.7 }) }, { brazoD: 14, codoD: 75, brazoI: 14, codoI: 75, ...F({ antebrazo: 0.4 }) }, { banda: [['manoD', 'manoI']] }),
   'banda-curl-sentado': S({ brazoD: 4, codoD: 20 }, { codoD: 150 }, { banda: [['manoD', 'pieD']] }),
   'respiracion-abdominal-sentado': S(MANOS_ABDOMEN, {}, { zona: ['abdomen'], aire: 'entra' }),
   'extension-rodilla-sentado': S({}, { rodillaD: 88, pieD: 172 }, { zona: ['muslo'] }),

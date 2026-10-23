@@ -1,0 +1,133 @@
+{
+  "idEjecucion": "20261019T001508Z-fase-01-protocolo-bloque2",
+  "fecha": "2026-10-19T00:15:08.215Z",
+  "fase": {
+    "id": "fase-01-protocolo",
+    "titulo": "Coherencia del protocolo con la especificación, el esquema, el validador, el motor y las opciones; casos límite de Q1 y Q2",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-01-protocolo.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "65e25a31-b0eb-4671-937f-28915bbfc0e3",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 68608,
+    "falloCache": 141,
+    "salida": 10123,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 111021,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "65e25a31-b0eb-4671-937f-28915bbfc0e3",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 68608,
+        "falloCache": 141,
+        "salida": 10123,
+        "razonamiento": 0
+      },
+      "coste": 0.012601548,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.012601548,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "defd8b0b47217de26e5f77629788046bc063cbd5",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "72fda34f80d2e3222eabd5c0ce583c21c83d7699",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/protocolo.md",
+      "docs/auditoria-catalogo/registro.md",
+      "docs/auditoria-catalogo/propuestas-cierre-protocolo.md",
+      "public/js/validacion.js",
+      "public/js/motor.js"
+    ]
+  },
+  "bloque": 2,
+  "continuacion": {
+    "continuaDe": "20261019T001226Z-fase-01-protocolo",
+    "raiz": "20261019T001226Z-fase-01-protocolo",
+    "orden": "Tu respuesta anterior se interrumpió por el límite de longitud. Continúa exactamente desde el punto donde se cortó, sin repetir lo ya escrito, sin resumirlo y manteniendo el mismo formato y la numeración de los hallazgos."
+  },
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 33288,
+      "sha256": "cb8914f0e22953b590bb283f7c458468729df2cd00f227c710e8aff64e324d06"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 12482,
+      "sha256": "28cc5ecba5db5aa406e2014339238f3b47d4d80ea57627f0d1774e01197cdc70"
+    },
+    {
+      "id": "registro",
+      "procedencia": "docs/auditoria-catalogo/registro.md",
+      "caracteres": 12671,
+      "sha256": "be717005f53a367e0155121e2598d2050c87b101d774a953d5dd5f9808f8c7b5"
+    },
+    {
+      "id": "propuestas-cierre",
+      "procedencia": "docs/auditoria-catalogo/propuestas-cierre-protocolo.md",
+      "caracteres": 8745,
+      "sha256": "3978e06b530c5396b62b94d2fd0758a7b71f933654d327b1f48e8799cef29276"
+    },
+    {
+      "id": "opciones-js",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6255,
+      "sha256": "09054da3b336574d9c482237566a6669770dd72a4fb773fb0bd83cb6db7ce11a"
+    },
+    {
+      "id": "validacion-js",
+      "procedencia": "public/js/validacion.js",
+      "caracteres": 7277,
+      "sha256": "7bba9d0808c5301d9d7a1c32252b4fe56a4e995bf99c7b03b1d2ccfa9827ed78"
+    },
+    {
+      "id": "motor-js",
+      "procedencia": "public/js/motor.js",
+      "caracteres": 14107,
+      "sha256": "e79725af19ab5249a7e342d4d8eec6ffac2833fa1f5a721f0daaa0d7fa3f7360"
+    },
+    {
+      "id": "catalogo-esquema",
+      "procedencia": "public/data/catalogo.json#catalogo-esquema",
+      "caracteres": 3247,
+      "sha256": "b14df1d07f9fd7a1d4ba51dd4bacb6fa373601db1a5c4258b3b674e78bbed66d"
+    },
+    {
+      "id": "catalogo-de-pie",
+      "procedencia": "public/data/catalogo.json#catalogo-de-pie",
+      "caracteres": 57711,
+      "sha256": "0c7b52217e07ec0cd252426c6f1f6b223e21f6fb47baeff836f12f657ae49492"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "316aa112dfe44b38d8d72bed3bf841a61de9b3d62820734e119ac6816e65f34b",
+    "respuestaApi": "26aa283c88647d9e2641d85f95f5927a14063c487769fe16b87ab52258aa3d8c"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261019T001508Z-fase-01-protocolo-bloque2/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261019T001508Z-fase-01-protocolo-bloque2/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261019T001508Z-fase-01-protocolo-bloque2/respuesta-api.json"
+  }
+}

@@ -7,6 +7,13 @@ const DE_PIE = { caderaD: 0, rodillaD: 0, caderaI: 0, rodillaI: 0, tronco: 0, dx
 const CRUZADOS = { brazoD: 15, codoD: 160, brazoI: 11, codoI: 156 };
 
 export const DE_PIE_FICHAS = {
+  // --- Versiones de pie separadas de su versión sentada (C2, P23): mismos brazos, sin apoyo ---
+  'estiramiento-hombro-cruzado-pie': PF({}, { alcanza: { manoD: 'hombroI', manoI: 'codoD' } }, { zona: ['hombro'] }),
+  'estiramiento-triceps-pie': PF({}, { brazoD: 165, codoD: 205, alcanza: { manoI: 'codoD' } }, { zona: ['brazo'] }),
+  'estiramiento-pecho-manos-lumbar-pie': P({ brazoD: -35, codoD: -5, brazoI: -35, codoI: -5 }, { brazoD: -55, codoD: 10, brazoI: -55, codoI: 10 }, { zona: ['pecho'] }),
+  'estiramiento-pecho-manos-detras-pie': P({ brazoD: -20, codoD: -20, brazoI: -20, codoI: -20 }, { brazoD: -45, codoD: -45, brazoI: -45, codoI: -45 }, { zona: ['pecho'] }),
+  'manos-espalda-codo-contrario-pie': P({}, { brazoD: -30, codoD: -90, brazoI: -30, codoI: -90, cortoD: { antebrazo: 0.35 }, cortoI: { antebrazo: 0.35 } }, { zona: ['hombro'] }),
+
   // --- Catálogo v0.2.0 ---
   'sentarse-levantarse': P({ ...SENTADO_EN_PIE, brazoD: 30, codoD: 60, brazoI: 26, codoI: 56 }, { ...DE_PIE, brazoD: 4, codoD: 4, brazoI: -4, codoI: -4 }, { apoyos: ['silla-detras'] }),
   'mini-sentadillas': PA({}, { caderaD: 35, rodillaD: -15, caderaI: 35, rodillaI: -15, tronco: 15, dx: -19 }),
@@ -42,7 +49,7 @@ export const DE_PIE_FICHAS = {
   'elevaciones-laterales-botella': PF({ brazoD: 6, codoD: 6, brazoI: 6, codoI: 6 }, { brazoD: 88, codoD: 88, brazoI: 88, codoI: 88 }, { botella: ['manoD', 'manoI'] }),
   'press-hombros-botella-pie': PF({ brazoD: 90, codoD: 175, brazoI: 90, codoI: 175 }, { brazoD: 165, codoD: 170, brazoI: 165, codoI: 170 }, { botella: ['manoD', 'manoI'] }),
   'banda-deslizar-brazos-pared': PP({ inclina: 8 }, { inclina: 10, alcanza: { manoD: 'paredAlta', manoI: 'paredAlta' } }, { banda: [['manoD', 'manoI']], paredX: 270 }),
-  'banda-elevar-brazos-pie': PF({ brazoD: 60, codoD: 60, brazoI: 60, codoI: 60 }, { brazoD: 150, codoD: 150, brazoI: 150, codoI: 150 }, { banda: [['manoD', 'manoI']] }),
+  'banda-elevar-brazos-pie': PF({ brazoD: 8, codoD: 8, brazoI: 8, codoI: 8 }, { brazoD: 150, codoD: 150, brazoI: 150, codoI: 150 }, { banda: [['manoD', 'manoI']] }),
   'descanso-apoyado-pared': PP({ inclina: 14 }, {}, { paredX: 262, aire: 'sale', ini: { inclina: 14, alcanza: { manoD: 'paredAlta', manoI: 'paredAlta' } }, fin: {} }),
   'descanso-espalda-pared': P({ inclina: -7 }, {}, { apoyos: ['pared-detras'], paredX: 150, aire: 'sale' }),
   'abrir-pierna-brazo-pared': PF({ alcanza: { manoD: 'pared' } }, { caderaI: 25, rodillaI: 25, brazoI: 90, codoI: 90, alcanza: { manoD: 'pared' } }, { apoyos: ['pared-detras'], paredX: 118 }),

@@ -1,0 +1,103 @@
+{
+  "idEjecucion": "20261023T022202Z-fase-09-lote10",
+  "fecha": "2026-10-23T02:22:02.924Z",
+  "fase": {
+    "id": "fase-09-lote10",
+    "titulo": "Revisión del lote 10 (4 ejercicios sentados de Arthritis UK) y de la corrección de banda-elevar-brazos-pie (C10)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-09-lote10.md"
+  },
+  "estado": "truncada",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "98b24b36-b63f-4add-b38b-1c68adf16003",
+  "finishReason": "length",
+  "uso": {
+    "aciertoCache": 640,
+    "falloCache": 42153,
+    "salida": 8000,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 69308,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "truncada",
+      "finishReason": "length",
+      "id": "98b24b36-b63f-4add-b38b-1c68adf16003",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 640,
+        "falloCache": 42153,
+        "salida": 8000,
+        "razonamiento": 0
+      },
+      "coste": 0.022249739999999997,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.022249739999999997,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "fcb38be9aac0b69cf178e61b93c9ec143492222c",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "185ad76b7b6edbd7d30c1c24eac607af2deb2ef3",
+      "sinConfirmar": true
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/especificacion-v1.md",
+      "docs/auditoria-catalogo/registro.md",
+      "docs/auditoria-catalogo/lote-10.md"
+    ]
+  },
+  "bloque": 1,
+  "continuacion": null,
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36607,
+      "sha256": "98cbd65f05787149f961258084ce37a4b17bf58e130d9407ce9d3c151df598c9"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 15262,
+      "sha256": "d67c2dc5e7a1b89fa5254671cb97faadf31c1cb9269eb7c6c40ba0b80ce7092d"
+    },
+    {
+      "id": "registro",
+      "procedencia": "docs/auditoria-catalogo/registro.md",
+      "caracteres": 40631,
+      "sha256": "773006c0966e6852c64146de78c9c66300c9dd6d3b4cd7425e2069f9defe4720"
+    },
+    {
+      "id": "lote-10",
+      "procedencia": "docs/auditoria-catalogo/lote-10.md",
+      "caracteres": 30571,
+      "sha256": "46835b7c3d8b16a9bf7df50e5a3fc4b9a3c716f4c657422794e1bef81dd12732"
+    },
+    {
+      "id": "catalogo-lote10",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 10669,
+      "sha256": "644babd3409ba50aee4aaedcfa6669c75a9881426603f0a712ad88dd39a4ea13"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "d9cda6a4a2b07e1cf679cdac3adbaf813ae3770a896a347dc7a70aa2fcf8bdda",
+    "respuestaApi": "566eb5342e34df9073624edf83402b2f26762001e42659c7336d219481af0789"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261023T022202Z-fase-09-lote10/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261023T022202Z-fase-09-lote10/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261023T022202Z-fase-09-lote10/respuesta-api.json"
+  }
+}

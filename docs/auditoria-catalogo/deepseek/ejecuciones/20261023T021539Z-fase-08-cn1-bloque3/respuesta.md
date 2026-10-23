@@ -1,0 +1,201 @@
+### 4.2. Si C y E se deciden «cuenta» (lectura conservadora)
+
+Cambiarían a `true` conservador con nota `[conservadora]` (R2.1, R2.4), **solo si no hay D de que el brazo no supera la altura**:
+
+| Ejercicio | Valor actual | Cambio propuesto | Nota |
+|---|---|---|---|
+| `elevaciones-laterales-botella` | `false` | `true` conservador | «[conservadora] brazo_sobre_hombro: el texto dice "hasta la altura"; no consta que no la supere. Se cerraría con: imagen de la fuente.» |
+| `banda-elevaciones-laterales-sentado` | `false` | `true` conservador | «[conservadora] brazo_sobre_hombro: "casi la altura"; no consta que no la supere. Se cerraría con: imagen de la fuente.» |
+| `estiramiento-espalda-alta-sentado` | `false` | `true` conservador | «[conservadora] brazo_sobre_hombro: brazos a la altura de los hombros; no consta que no la superen. Se cerraría con: imagen de la fuente.» |
+| `abrir-pierna-brazo-pared` | `false` | `true` conservador | «[conservadora] brazo_sobre_hombro: "hasta la altura del hombro"; no consta que no la supere. Se cerraría con: imagen de la fuente.» |
+| `respiracion-lado-brazo-adelante` | `false` | No cambiar por C (DS-187); revisar por F o caso nuevo. | — |
+| `deslizar-toalla-pared` | `true` | No cambiar por C (DS-186); ya es `true` por A. | — |
+
+**Conclusión:** C/E «cuenta» sí justifica cuatro `true` conservadores nuevos, todos en `borrador` (sin efecto en disponibilidad real). Ninguno publicado.
+
+### 4.3. Si B y D se deciden «cuenta» (definición literal, lo actual)
+
+Cambiarían a `true` **solo si la fuente lo confirma** (D o I), o a `true` conservador si no hay D de ausencia:
+
+| Ejercicio | Valor actual | Cambio propuesto | Nota |
+|---|---|---|---|
+| `banda-curl-sentado` | `false` | `true` (D o conservador) | «Sube los puños hacia los hombros»: la mano llega al hombro por flexión de codo. Si la fuente no fija la altura, conservador. |
+| `flexion-codo-tumbado` | `false` | `true` (D o conservador) | «Dobla el codo llevando la mano hacia el hombro»: mismo caso. |
+| `banda-flexion-codo-tumbado` | `false` | `true` conservador | «Dobla el codo contra la banda»: el texto no fija la altura; conservador. |
+| `talones-flexion-codo-sentado` | `false` | `true` conservador | «Dobla el codo del brazo contrario»: el texto no fija la altura; conservador. |
+| `curl-biceps-sentado` | `true` | Se mantiene `true` (ya aplicado por P16). | — |
+| `boxeo-circulos-alto` | `true` | Se mantiene `true` (D: altura de la nariz). | — |
+| `pulgar-dedos` | `true` | Se mantiene `true` conservador (ya aplicado por P19). | — |
+
+**Conclusión:** B/D «cuenta» justifica cuatro `true` nuevos, todos en `borrador`. No cambia ningún publicado. Es la opción coherente con la definición literal y con R2.2.
+
+### 4.4. Si B y D se deciden «no cuenta» (lectura de la opción)
+
+Cambiarían a `false` **solo si hay D de que la mano no está por encima del hombro**:
+
+| Ejercicio | Valor actual | ¿Hay D? | Cambio propuesto |
+|---|---|---|---|
+| `curl-biceps-sentado` | `true` | La foto de la fuente muestra la botella a la altura de la boca (D de que la mano está por encima). | **No se puede cambiar a `false` sin contradecir R2.2.** Requeriría una regla nueva que modifique DG-2 o §4. |
+| `boxeo-circulos-alto` | `true` | El texto dice «a la altura de la nariz» (D de que la mano está por encima). | Igual: no se puede cambiar a `false` sin regla nueva. |
+| `pulgar-dedos` | `true` conservador | La foto muestra la mano por encima (I/N). | Si se decide «no cuenta», el `true` conservador deja de tener sentido; pero el `false` tampoco tiene D. Queda en CN. |
+| `banda-curl-sentado` | `false` | No hay D de que la mano no esté por encima. | Se mantiene `false` solo si la nueva regla lo justifica; si no, `true` conservador. |
+| `flexion-codo-tumbado` | `false` | Igual. | Igual. |
+| `banda-flexion-codo-tumbado` | `false` | Igual. | Igual. |
+| `talones-flexion-codo-sentado` | `false` | Igual. | Igual. |
+
+**Conclusión:** B/D «no cuenta» **no es aplicable con los bloques actuales** sin una regla nueva que modifique DG-2 o §4, porque los tres publicados tienen D de que la mano está por encima. La propuesta no lo advierte con suficiente claridad (DS-193, DS-208).
+
+### 4.5. Resumen de cambios por casilla
+
+| Casilla | Decisión | Ejercicios que cambian | Publicados afectados | ¿Requiere regla nueva? |
+|---|---|---|---|---|
+| C/E | «no cuenta» | Ninguno (no hay D de ausencia) | Ninguno | No |
+| C/E | «cuenta» | 4 (`elevaciones-laterales-botella`, `banda-elevaciones-laterales-sentado`, `estiramiento-espalda-alta-sentado`, `abrir-pierna-brazo-pared`) | Ninguno | No |
+| B/D | «cuenta» | 4 (`banda-curl-sentado`, `flexion-codo-tumbado`, `banda-flexion-codo-tumbado`, `talones-flexion-codo-sentado`) | Ninguno | No |
+| B/D | «no cuenta» | 3 publicados (`curl-biceps-sentado`, `boxeo-circulos-alto`, `pulgar-dedos`) + 4 en borrador | **3** | **Sí** (modifica DG-2 o §4) |
+
+---
+
+## 5. Hallazgos adicionales sobre el encargo
+
+### DS-211 · El encargo pide «cerrar» CN-1, pero CN-1 no se puede cerrar sin una decisión del desarrollador que modifique el protocolo o la especificación
+
+- **Ubicación:** `registro` P22 («CN-1 sigue pendiente»), P23 («el desarrollador acepta la propuesta de `cn1-ejemplos-2026-10-22.md` y pide cerrarla con DeepSeek»); `propuesta-cn1` §3.
+- **Evidencia:** CN-1 dice: «Elegir entre la definición y la intención de la opción es un criterio que el protocolo no tiene». R1.4.4: «Una regla nueva solo se crea con la aprobación del desarrollador y se añade a este protocolo con fecha».
+- **Problema:** la consulta C9 pide «cerrar» las casillas C/E y B/D, pero cerrarlas implica crear un criterio nuevo (qué cuenta como «por encima del hombro»). Eso no lo puede hacer una consulta a DeepSeek: lo tiene que aprobar el desarrollador y registrarlo en el protocolo. La consulta puede **proponer** el criterio, pero no **cerrarlo**.
+- **Consecuencia:** si se trata la respuesta de DeepSeek como «cierre», se salta R1.4.4 y se crea una regla sin aprobación.
+- **Certeza:** alta.
+- **Recomendación:** la respuesta de DeepSeek se registra como propuesta; el cierre lo hace el desarrollador en `registro.md` y, si crea regla, en `protocolo.md`.
+- **Prueba:** comparar el encargo con R1.4.4 y P22.
+- **¿Requiere decisión humana?:** sí (el desarrollador debe aprobar el criterio y registrarlo).
+
+### DS-212 · La propuesta no incluye el impacto en disponibilidad que exige R2.6
+
+- **Ubicación:** `propuesta-cn1` §4; `protocolo` R2.6 y R9.1.
+- **Evidencia:** R2.6: «Los cambios de etiquetas se presentan antes como plan, con estos datos por cada uno: … impacto en la disponibilidad (apartado 9)». §4 de `propuesta-cn1` solo dice «Ninguno publicado» o «Los tres están publicados», sin medición.
+- **Problema:** la propuesta no cumple R2.6. No hay medición de disponibilidad antes/después para ningún escenario.
+- **Consecuencia:** si se aprueba un cambio, se hace sin el dato que R2.6 exige.
+- **Certeza:** alta.
+- **Recomendación:** añadir a §4 la medición con `node scripts/disponibilidad.mjs --escenario` para cada escenario (C/E «cuenta», B/D «cuenta», B/D «no cuenta»), declarando condiciones (R9.2).
+- **Prueba:** ejecutar la herramienta con cada escenario.
+- **¿Requiere decisión humana?:** no (es un requisito del protocolo).
+
+### DS-213 · La propuesta no distingue «criterio conservador» de «evidencia directa» en las casillas C/E y B/D
+
+- **Ubicación:** `propuesta-cn1` §3 y §4.
+- **Evidencia:** §3.3 y §3.4 ofrecen «cuenta / no cuenta» sin decir si el «cuenta» es por D o por conservadurismo. §4 dice «Los 5 de C en `false`» sin distinguir si hay D.
+- **Problema:** el protocolo (2.3, DG-7) exige distinguir D, I y N. La propuesta mezcla los tres en una sola casilla.
+- **Consecuencia:** un «cuenta» aprobado sin distinguir D de conservador puede acabar aplicándose como si fuera D, lo que contradice el principio 3 del protocolo («hechos, inferencias e incertidumbres se escriben por separado»).
+- **Certeza:** alta.
+- **Recomendación:** en §3, cada casilla debe indicar si el «cuenta» es por D, por I o por conservador, y si el «no cuenta» requiere D.
+- **Prueba:** comparar §3 con 2.3 y DG-7.
+- **¿Requiere decisión humana?:** no (aclaración).
+
+### DS-214 · La propuesta no cita la fuente de `curl-biceps-sentado` con la precisión que exige CN-1
+
+- **Ubicación:** `propuesta-cn1` §2.B, fila `curl-biceps-sentado`.
+- **Evidencia:** CN-1 cita «la foto 2 del ejercicio 6 del folleto de Leicester (p. 5 impresa)». `propuesta-cn1` solo dice «la foto de la fuente muestra la botella a la altura de la boca», sin página ni número de foto.
+- **Problema:** la cita es menos precisa que la de CN-1. Para trazabilidad (10.1), conviene mantener la referencia completa.
+- **Consecuencia:** si se revisa la decisión, no se sabe qué foto mirar.
+- **Certeza:** alta.
+- **Recomendación:** recuperar la cita completa de CN-1.
+- **Prueba:** comparar §2.B con CN-1.
+- **¿Requiere decisión humana?:** no.
+
+### DS-215 · La propuesta no recoge que `pulgar-dedos` ya está en `true` conservador por P19 y que su nota dice «Se cerraría con: evidencia D de la altura en la ejecución que pide HealthMove»
+
+- **Ubicación:** `propuesta-cn1` §2.D, fila `pulgar-dedos`; `ejercicios-cn1` `notas_etiquetado`.
+- **Evidencia:** `notas_etiquetado`: «[conservadora] brazo_sobre_hombro: la foto de la fuente muestra la mano por encima del hombro y el texto no fija la altura. Se cerraría con: evidencia D de la altura en la ejecución que pide HealthMove».
+- **Problema:** la propuesta lo pone en D con `true` conservador, pero no recoge que su nota ya dice cómo se cerraría. Si se decide B/D «cuenta», la nota sigue siendo válida; si se decide «no cuenta», la nota tendría que cambiar. La propuesta no lo señala.
+- **Consecuencia:** la nota de `pulgar-dedos` quedaría desactualizada según la decisión.
+- **Certeza:** alta.
+- **Recomendación:** añadir a §4 una nota sobre qué pasa con las notas `[conservadora]` de los ejercicios afectados.
+- **Prueba:** comparar §2.D con `notas_etiquetado` de `pulgar-dedos`.
+- **¿Requiere decisión humana?:** no (aclaración).
+
+### DS-216 · La propuesta no recoge que `marcha-circulos-codos-sentado` tiene una nota que dice «Los codos pueden pasar la altura del hombro en el círculo», que es una inferencia (I), no D
+
+- **Ubicación:** `propuesta-cn1` §2.E, fila `marcha-circulos-codos-sentado`; `ejercicios-cn1` `notas_etiquetado`.
+- **Evidencia:** `notas_etiquetado`: «Los codos pueden pasar la altura del hombro en el círculo».
+- **Problema:** la nota usa «pueden», que es una inferencia. La propuesta lo pone en E con `true` sin señalar que es I, no D. Si E se decide «no cuenta», el `true` actual no tiene D que lo sostenga; si se decide «cuenta», el `true` es conservador, no D.
+- **Consecuencia:** la trazabilidad de la evidencia se pierde.
+- **Certeza:** alta.
+- **Recomendación:** marcar la nota como `[conservadora]` o como inferencia explícita.
+- **Prueba:** comparar la nota con DG-7.
+- **¿Requiere decisión humana?:** no.
+
+### DS-217 · La propuesta no recoge que `estiramiento-triceps` y `estiramiento-hombro-cruzado` se separaron en dos entradas el 2026-10-22 (P23) y que su posición está pendiente de auditoría
+
+- **Ubicación:** `propuesta-cn1` §2.E, filas `estiramiento-triceps` y `estiramiento-hombro-cruzado`; `ejercicios-cn1` `notas_etiquetado`.
+- **Evidencia:** `notas_etiquetado` de `estiramiento-triceps`: «Posición: el 2026-10-22 se separó en dos entradas (C2, P23): esta, sentada, y estiramiento-triceps-pie, de pie. La fuente no indica la posición de este ejercicio; las dos versiones quedan pendientes de auditoría». `notas_etiquetado` de `estiramiento-hombro-cruzado`: «Posición: el 2026-10-22 se separó en dos entradas (C2, P23): esta, sentada, y estiramiento-hombro-cruzado-pie, de pie. La fuente indica "De pie o sentado"».
+- **Problema:** la propuesta los trata como ejercicios normales, pero su posición está pendiente de auditoría (Q5). Si la posición cambia, la evaluación de `brazo_sobre_hombro` puede cambiar (por ejemplo, de pie vs sentado). La propuesta no lo señala.
+- **Consecuencia:** la decisión sobre E podría aplicarse a un ejercicio cuya posición aún no está cerrada.
+- **Certeza:** alta.
+- **Recomendación:** añadir a §2.E una nota: «Estos dos ejercicios tienen la posición pendiente de Q5; su evaluación de `brazo_sobre_hombro` puede cambiar cuando se cierre».
+- **Prueba:** comparar §2.E con `notas_etiquetado` de ambos.
+- **¿Requiere decisión humana?:** no (aclaración).
+
+### DS-218 · La propuesta no recoge que `elevacion-pasiva-brazo-tumbado` tiene una nota sobre la fuente que no se traslada al usuario
+
+- **Ubicación:** `propuesta-cn1` §2.F, fila `elevacion-pasiva-brazo-tumbado`; `ejercicios-cn1` `notas_etiquetado`.
+- **Evidencia:** `notas_etiquetado`: «La fuente avisa de que es normal una molestia leve de estiramiento que cede pronto».
+- **Problema:** la nota es un consejo de la fuente (clase 2 o 3, DG-6) que no afecta a la etiqueta, pero la propuesta no lo señala. No es un error, pero conviene distinguirlo para no confundirlo con una exigencia.
+- **Consecuencia:** menor; trazabilidad.
+- **Certeza:** alta.
+- **Recomendación:** añadir una nota en §2.F.
+- **Prueba:** comparar §2.F con DG-6.
+- **¿Requiere decisión humana?:** no.
+
+### DS-219 · La propuesta no recoge que `cuadriceps-lado-suelo` tiene una nota sobre la fuente que no se traslada al usuario
+
+- **Ubicación:** `propuesta-cn1` §2.F, fila `cuadriceps-lado-suelo`; `ejercicios-cn1` `notas_etiquetado`.
+- **Evidencia:** `notas_etiquetado`: «La fuente propone la versión de pie si cuesta bajar al suelo, y consultar antes tras una operación de cadera o espalda».
+- **Problema:** la nota es un consejo de la fuente (clase 2 o 3, DG-6) que no afecta a la etiqueta. La propuesta no lo señala.
+- **Consecuencia:** menor; trazabilidad.
+- **Certeza:** alta.
+- **Recomendación:** añadir una nota en §2.F.
+- **Prueba:** comparar §2.F con DG-6.
+- **¿Requiere decisión humana?:** no.
+
+### DS-220 · La propuesta no recoge que `extension-cadera-boca-abajo` tiene una adaptación («La guía pone una almohada bajo el ombligo; aquí se omite») que puede afectar a la postura
+
+- **Ubicación:** `propuesta-cn1` §2.F, fila `extension-cadera-boca-abajo`; `ejercicios-cn1` `adaptaciones`.
+- **Evidencia:** `adaptaciones`: «La guía pone una almohada bajo el ombligo; aquí se omite».
+- **Problema:** la adaptación cambia la postura (sin almohada, la espalda puede arquearse más). Eso podría afectar a `inclinacion_tronco` o a `brazo_sobre_hombro`. La propuesta no lo señala.
+- **Consecuencia:** la evaluación de F podría cambiar si la adaptación afecta a la postura.
+- **Certeza:** media.
+- **Recomendación:** revisar la adaptación con R3.3 (evaluar todas las exigencias) antes de decidir F.
+- **Prueba:** comparar la adaptación con R3.3.
+- **¿Requiere decisión humana?:** sí (revisar la adaptación).
+
+### DS-221 · La propuesta no recoge que `elevacion-lateral-botella-tumbado` tiene una adaptación («La fuente deja las repeticiones en blanco…») que no afecta a la etiqueta pero sí a la trazabilidad
+
+- **Ubicación:** `propuesta-cn1` §2.F, fila `elevacion-lateral-botella-tumbado`; `ejercicios-cn1` `adaptaciones`.
+- **Evidencia:** `adaptaciones`: «La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10».
+- **Problema:** la adaptación es de dosis, no de etiqueta, pero la propuesta no la distingue. No es un error, pero conviene separar.
+- **Consecuencia:** menor; trazabilidad.
+- **Certeza:** alta.
+- **Recomendación:** añadir una nota en §2.F.
+- **Prueba:** comparar §2.F con DG-3.
+- **¿Requiere decisión humana?:** no.
+
+### DS-222 · La propuesta no recoge que `elevar-brazo-boca-abajo` tiene una fuente de Arthritis UK con «Todos los derechos reservados» y que su uso en el catálogo puede requerir revisión de licencia
+
+- **Ubicación:** `propuesta-cn1` §2.F, fila `elevar-brazo-boca-abajo`; `ejercicios-cn1` `fuente.licencia`.
+- **Evidencia:** `fuente.licencia`: «Todos los derechos reservados: instrucciones redactadas con palabras propias».
+- **Problema:** la licencia no afecta a la etiqueta, pero sí a la trazabilidad. La propuesta no lo señala. No es un hallazgo de esta consulta, pero conviene registrarlo.
+- **Consecuencia:** menor; fuera del alcance de CN-1.
+- **Certeza:** alta.
+- **Recomendación:** registrar en el informe de lote correspondiente, no en CN-1.
+- **Prueba:** comparar `fuente.licencia` con el protocolo §1.
+- **¿Requiere decisión humana?:** no (fuera de alcance).
+
+---
+
+## 6. Resumen ejecutivo para el desarrollador
+
+1. **Qué manda si definición y opción chocan:** la definición literal de §4, por jerarquía documental, por R2.2 (un `false` sin D está prohibido) y por el precedente P9/P10/P14. La opción es un rótulo de interfaz, no una redefinición.
+2. **Casillas C y E:** `false` solo con D de que el brazo no supera la altura. Sin D, `true` conservador. Los cinco `false` actuales de C no tienen D y, según R2.2, deberían ser `true` conservador. La propuesta no lo dice.
+3. **Casillas B y D:** `true` (definición literal). Los cuatro `false` actuales de B no tienen D y deberían ser `true` conservador. Los tres publicados (`curl-biceps-sentado`, `boxeo-circulos-alto`, `pulgar-dedos`) ya están en `true` y no se pueden cambiar a `false` sin una regla nueva que modifique DG-2 o §4.
+4. **Errores de clasificación en `propuesta-cn1`:** `deslizar-toalla-pared` (DS-186), `respiracion-lado-brazo-adelante` (DS-187), `estiramiento-espalda-alta-sentado` (DS-188), `banda-elevaciones-laterales-sentado` (DS-189), `marcha-circulos-codos-sentado` (DS-190), `estiramiento-triceps` (DS-191), `pulgar-dedos` (DS-192), `curl-biceps-sentado` (DS-193), `elevacion-lateral-botella-tumbado` (DS-194), `cuadriceps-lado-suelo` y `extension-cadera-boca-abajo` (DS-195), `elevar-brazo-boca-abajo` (DS-196), `elevacion-pasiva-brazo-tumbado` (DS-197), `giro-tronco-sentado` (DS-198), `estiramiento-hombro-cruzado` (DS-199), los cuatro de B (DS-200), los dos de A (DS-201).
+5. **Huecos de redacción:** casos que no encajan en A-F (DS-202), «más allá de la horizontal» (DS-203), «como si la persona estuviera de pie» (DS-204), postura inicial vs apoyo (DS-205), movimiento pasivo (DS-206), «casi» vs «a la altura»

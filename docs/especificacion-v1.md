@@ -64,6 +64,20 @@ movimiento o vuelta).
 Los umbrales "inclinación leve" y "90°" se fijan con una frase de referencia por umbral y se
 aplican igual en todo el catálogo. No son medidas clínicas.
 
+"Inclinación leve" no tiene cifra: si la fuente no da un ángulo exacto, se conserva su término
+original (por ejemplo, "lean slightly forwards") y no se inventa un umbral numérico; si lo da,
+puede usarse en la explicación atribuyéndolo a la fuente (registro de la auditoría, decisiones
+del 2026-10-19, P5).
+
+`brazo_sobre_hombro` se aplica con su definición literal: codo **o mano** por encima de la altura
+del hombro, en cualquier momento (también en la postura de partida o de apoyo) y lo mueva quien lo
+mueva. Cuenta también la mano que pasa del hombro solo porque se dobla el codo. Un `false` necesita
+evidencia directa, así que se marca por precaución cuando el brazo llega «hasta» o «a» la altura
+del hombro (o «casi») sin que conste que no la pasa, y cuando, tumbado o boca abajo, el brazo se
+separa del tronco (estirado, en cruz o por encima de la cabeza), porque la altura no se puede
+comparar. No se marca la mano apoyada en el hombro con el codo por debajo, si el texto lo fija
+(registro de la auditoría, CN-1 y P25).
+
 ### Exclusiones del catálogo v1 (ningún ejercicio las incluye)
 
 Movimientos de cuello · arrodillarse o apoyar las rodillas en el suelo · desplazarse por el
@@ -71,8 +85,8 @@ espacio · ejercicios de impacto (la exigencia `impacto` se mantiene para el fut
 aislada de la muñeca (giros o círculos), porque ninguna exigencia la cubre · ejercicios que
 dependen de reposabrazos · ejercicios con material especial (pelotas de terapia, escalones).
 
-El catálogo v0.3.0 tiene 220 ejercicios. Por posición: 96 sentado, 50 de pie, 61 tumbado en la
-cama y 21 en el suelo (algunos admiten dos posiciones). Las fuentes y los huecos están en
+El catálogo v0.3.0 tiene 225 ejercicios (220 hasta el 2026-10-22, cuando 5 se separaron en versión sentada y de pie; registro, P23). Por posición: 96 sentado, 50 de pie, 61 tumbado en la
+cama y 21 en el suelo (los 3 de sentarse y levantarse usan dos). Las fuentes y los huecos están en
 `docs/revision-catalogo.md`.
 
 ### Lado del cuerpo
@@ -187,6 +201,14 @@ validación.
 4. En los ejercicios de pie se usa una silla o una pared como apoyo, salvo que estén marcados con
    `equilibrio_sin_apoyo`. Conviene incluir variantes con la palma abierta contra la pared, porque
    sujetarse a una silla es `agarre`.
+   - Apoyar la mano sin que la instrucción ni la fuente pidan cerrarla no es, por sí solo, un
+     agarre; en v1 se marca `agarre` por precaución (regla 1), con su nota `[conservadora]`. La
+     instrucción usa el verbo de la fuente («apoya las manos»), no una fórmula neutra («las manos
+     en el respaldo»). Cerrado como Q2 del protocolo (2026-10-20).
+   - Apoyar las dos manos para la estabilidad, usar los dos brazos a la vez o alternarlos sin
+     pausa como parte del movimiento cuenta como `ambos_brazos`, también por precaución. Hacer las
+     series con un brazo y después con el otro no cuenta, y tampoco las manos que solo reposan.
+     Cerrado como Q1 del protocolo (2026-10-20).
 5. Estados de validación: `borrador` → `basado_en_fuente_publica` → `revisado_por_profesional`.
    v1 usa `basado_en_fuente_publica` y lo indica en la app. **La validación profesional queda como
    riesgo abierto.**
@@ -194,6 +216,18 @@ validación.
    `basado_en_fuente_publica` cuando el autor revisa el ejercicio contra su fuente y rellena
    `revisado_por` y `fecha_revision`. El motor solo usa ejercicios fuera de `borrador`. La IA
    propone; la persona decide.
+   - Todo ejercicio cuyo estado no sea `borrador` debe tener `revisado_por` (texto no vacío) y
+     `fecha_revision`. Si falta cualquiera de los dos o no es válido, ese ejercicio queda
+     bloqueado.
+   - `fecha_revision` es una cadena con el formato exacto `AAAA-MM-DD` (cuatro cifras de año, dos
+     de mes y dos de día, separadas por guiones) que corresponde a una fecha real del calendario
+     gregoriano, años bisiestos incluidos (`2024-02-29` es válida; `2023-02-29` y `2026-04-31`
+     no). No se admiten otros formatos (`17/10/2026`, `2026-1-7`, `20261017`), marcas de tiempo
+     (`2026-10-17T10:00:00Z`), espacios, cadenas vacías ni valores que no sean texto.
+   - En `borrador`, `revisado_por` y `fecha_revision` pueden faltar o estar incompletos; no se
+     comprueban hasta que el ejercicio sale de ese estado.
+   - No se exige ninguna relación entre `fecha_revision` y la fecha actual ni con
+     `fuente.consultado` o `fuente.actualizado`.
 7. Las instrucciones se redactan con palabras propias en español; el texto de la fuente no se
    copia. Cualquier cambio respecto a la fuente se anota en `adaptaciones`.
 8. Archivo: `public/data/catalogo.json`. Validación: `node scripts/validar-catalogo.mjs`.

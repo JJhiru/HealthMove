@@ -1,0 +1,153 @@
+# Auditoría · fase-08-cn1 (consulta C9)
+
+**Alcance y límites de esta respuesta.** Solo he podido contrastar los documentos entregados: `protocolo`, `especificacion`, `registro`, `opciones-js`, `propuesta-cn1` y `ejercicios-cn1`. No he abierto las fuentes originales (folletos, PDF, páginas web) ni el catálogo completo, ni `app.js`, `motor.js` ni `validar-catalogo.mjs`. No emito juicio clínico: cuando una decisión depende de qué espera una persona concreta al marcar una opción del perfil, lo señalo como cuestión que requiere evidencia o revisión profesional, no la resuelvo.
+
+**Nota sobre el encargo.** El desarrollador pide «cerrar con DeepSeek» las casillas C/E y B/D. Yo no cierro nada: propongo hallazgos para que decida. Además, la propia `propuesta-cn1` advierte que «Si choca con `protocolo.md` o `registro.md`, mandan ellos», y el `registro` (P22, P23) mantiene CN-1 como **pendiente**. Cualquier «cierre» que se derive de esta consulta tendrá que registrarse como decisión del desarrollador en `registro.md` y, si crea criterio nuevo, como regla nueva en el protocolo (R1.4.4).
+
+---
+
+## 1. Qué valor es coherente con cada casilla
+
+### 1.1. Marco normativo que se aplica hoy
+
+- **Definición literal (§4 de la especificación):** «`brazo_sobre_hombro` | codo o mano por encima de la altura del hombro». Es la única definición operativa de la exigencia en los documentos entregados.
+- **Opción del perfil (`opciones-js`):** `brazo_arriba` = «No puedo, o me cuesta, levantar el brazo por encima del hombro», que excluye `brazo_sobre_hombro`. El rótulo de la exigencia (`ETIQUETA_EXIGENCIA.brazo_sobre_hombro`) es «subir el brazo por encima del hombro».
+- **Criterio del proyecto (DG-2, R2.1-R2.3):** `true` con D, I o por conservadurismo; `false` **solo** con D de ausencia en todo el ejercicio o con adaptación aprobada (DG-3). «La falta de evidencia no demuestra la ausencia».
+- **Precedentes P9, P10, P14:** en los tres, ante una duda entre una lectura restrictiva y otra permisiva, el desarrollador eligió la restrictiva (`true` conservador con nota `[conservadora]`), y en P14 se apoyó explícitamente en «el criterio conservador que el desarrollador adoptó en P9 y P10».
+- **CN-1 (registro):** «la definición literal de §4 da `true` con evidencia D, y así se ha aplicado. Pero el texto de la opción sugiere que el filtro busca la elevación del brazo. Elegir entre la definición y la intención de la opción es un criterio que el protocolo no tiene». **Sigue pendiente** (P22, P23).
+
+### 1.2. Qué manda si la definición literal y la opción chocan
+
+Según los bloques entregados, **manda la definición literal de §4**, por tres razones verificables:
+
+1. **Jerarquía documental.** La especificación §4 es la que define la exigencia; `opciones.js` se declara a sí mismo «Fuente de verdad: docs/especificacion-v1.md, §5» y solo traduce la opción a la exigencia. El texto de la opción es un rótulo para el usuario, no una redefinición.
+2. **Regla asimétrica.** R2.2 exige evidencia D de ausencia para un `false`. La lectura de la opción («levantar el brazo») no aporta evidencia D de que la mano no esté por encima del hombro; solo cambia la interpretación. Un `false` basado en la lectura de la opción sería un `false` sin D, prohibido por R2.2 y R2.3.
+3. **Precedente del propio proyecto.** CN-1 ya está aplicado así en `curl-biceps-sentado` (P16: «`brazo_sobre_hombro`: `false` → `true` por evidencia D (CN-1)»), y P9/P10/P14 confirman el sesgo conservador.
+
+**Matiz importante:** que la definición literal «mande» no significa que la opción sea irrelevante. La opción es la que el usuario ve y la que decide qué ejercicios se le ocultan. Si la definición literal y la opción dicen cosas distintas, el problema es de **interfaz** (Q8), no de etiqueta. Eso es lo que ya apuntaba CN-1 («si se quiere afinar, cambiar el texto de la opción (Q8) en lugar de la etiqueta»).
+
+### 1.3. Casillas C y E («hasta la altura del hombro» / «el codo a la altura del hombro»)
+
+- **Definición literal:** «por encima» excluye «a la altura». Un brazo que llega **hasta** la altura del hombro y no la supera no cumple la definición literal.
+- **Opción del perfil:** «levantar el brazo por encima del hombro» también excluye «a la altura».
+- **Criterio del proyecto:** aquí no hay choque entre definición y opción; ambas apuntan a `false`. Pero R2.2 exige **D de ausencia en todo el ejercicio** para un `false`. Si la fuente no permite verificar que el brazo nunca supera la altura del hombro (por ejemplo, porque la imagen no se ha consultado o porque el texto dice «hasta» sin fijar el tope real), no hay D y el `false` no está justificado por R2.2.
+- **Valor coherente con los bloques:** `false` **solo si hay D** de que el brazo no supera la altura del hombro en ningún momento. Si no hay D, `true` conservador con nota `[conservadora]` (R2.1, R2.4), en línea con P9/P10/P14.
+- **Caso especial `deslizar-toalla-pared`:** el texto dice «una toalla bajo la mano, a la altura del hombro. Desliza la toalla hacia arriba…». El movimiento **sube** desde la altura del hombro. Eso no es «hasta la altura»: es «desde la altura hacia arriba». La casilla C no lo cubre; lo cubre A (brazo sube). Su `true` actual es coherente con A, no con C. La `propuesta-cn1` lo mete en C, lo cual es un error de clasificación (ver DS-188).
+
+### 1.4. Casillas B y D (mano por encima del hombro solo por doblar el codo, con el codo abajo)
+
+- **Definición literal:** «codo **o mano** por encima de la altura del hombro». Si la mano queda por encima del hombro, aunque sea por flexión de codo, la definición literal da `true`.
+- **Opción del perfil:** «levantar el brazo por encima del hombro» sugiere elevación del brazo, no flexión del codo. Hay choque con la definición literal.
+- **Criterio del proyecto:** manda la definición literal (1.2). Además, R2.2 impide un `false` sin D de ausencia, y la lectura de la opción no aporta esa D.
+- **Valor coherente con los bloques:** `true` (definición literal), con nota `[conservadora]` si la evidencia es I o N, y con evidencia D si la fuente muestra la mano por encima del hombro (como en `curl-biceps-sentado`, foto 2 del folleto de Leicester, p. 5 impresa, según CN-1).
+- **Caso D (`boxeo-circulos-alto`, `pulgar-dedos`):** la mano está por encima del hombro (a la altura de la nariz en `boxeo-circulos-alto`; la foto de la fuente en `pulgar-dedos`). La definición literal da `true`. Si se decidiera B/D «no cuenta», D también cambiaría, como advierte la propia `propuesta-cn1` §4. Eso afectaría a **tres ejercicios publicados** (`curl-biceps-sentado`, `boxeo-circulos-alto`, `pulgar-dedos`), lo que es un cambio de disponibilidad real, no de modo auditoría.
+
+### 1.5. Resumen de coherencia
+
+| Casilla | Definición literal §4 | Opción `brazo_arriba` | Criterio del proyecto (DG-2, P9/P10/P14) | Valor coherente |
+|---|---|---|---|---|
+| **C** («hasta la altura») | `false` (no supera) | `false` (no supera) | `false` solo con D; si no hay D, `true` conservador | `false` con D; `true` conservador sin D |
+| **E** («codo a la altura») | Depende de si el codo supera la altura; si solo llega, `false` | Igual | Igual | Igual que C |
+| **B** (mano por encima por flexión de codo) | `true` | `false` (sugiere elevación) | Manda la definición literal; `false` prohibido sin D | `true` (con D o conservador) |
+| **D** (mano a la altura de la cara, codo abajo) | `true` | `false` | Igual que B | `true` (con D o conservador) |
+
+**Discrepancia que señalo, no resuelvo:** la `propuesta-cn1` §3 ofrece como opción «B y D: no cuenta (lectura de la opción)». Esa opción, si se aprobara, obligaría a cambiar tres ejercicios publicados y a crear una regla nueva que contradice R2.2 (un `false` sin D). No digo que sea imposible; digo que no es coherente con los bloques tal como están hoy, y que requeriría una decisión explícita del desarrollador que modifique DG-2 o la definición de §4.
+
+---
+
+## 2. Errores en la clasificación de los ejemplos de `propuesta-cn1`
+
+### DS-186 · `deslizar-toalla-pared` está mal clasificado en C
+
+- **Ubicación:** `propuesta-cn1`, §2.C, fila `deslizar-toalla-pared`; y §4, fila «C y E "cuenta"».
+- **Evidencia:** `ejercicios-cn1` instrucción 1: «Ponte de cara a la pared con una toalla bajo la mano, a la altura del hombro»; instrucción 2: «Desliza la toalla hacia arriba y hacia abajo…». `propuesta-cn1` lo mete en C («El brazo sube **hasta** la altura del hombro, no más»).
+- **Problema:** el ejercicio **empieza** a la altura del hombro y **sube** desde ahí. No es un caso de «hasta la altura»; es un caso de A (el brazo sube). La propia `propuesta-cn1` lo reconoce en la columna «Valor»: «`true` (empieza a la altura y sube)». Pero clasificarlo en C contamina la casilla C con un caso que no le corresponde.
+- **Consecuencia:** si se decide C «no cuenta», `deslizar-toalla-pared` no debería verse afectado, pero la tabla §4 lo incluye implícitamente en «Los 5 de C en `false`». Riesgo de cambio indebido.
+- **Certeza:** alta.
+- **Recomendación:** moverlo a A (o a un caso propio «empieza a la altura y sube»), no a C.
+- **Prueba:** releer §2.C y §4 de `propuesta-cn1` contra las instrucciones de `ejercicios-cn1`.
+- **¿Requiere decisión humana?:** no (es corrección de clasificación).
+
+### DS-187 · `respiracion-lado-brazo-adelante` está mal clasificado en C
+
+- **Ubicación:** `propuesta-cn1`, §2.C, fila `respiracion-lado-brazo-adelante`.
+- **Evidencia:** `ejercicios-cn1` instrucción 2: «Al tomar aire por la nariz, estira el brazo de arriba hacia delante, como para tocar la pared de enfrente». `propuesta-cn1` lo mete en C con el texto «…estira el brazo de arriba hacia delante, como para tocar la pared de enfrente».
+- **Problema:** el texto **no menciona la altura del hombro**. La instrucción habla de estirar el brazo hacia delante, no de llevarlo a la altura del hombro. La clasificación en C («hasta la altura del hombro») no se sostiene con la cita. Es un caso de F (tumbado de lado, la altura del hombro no tiene el mismo sentido) o de un caso nuevo.
+- **Consecuencia:** la casilla C incluye un ejercicio que no ilustra C. Si se decide C, este ejercicio no debería cambiar por esa decisión.
+- **Certeza:** alta.
+- **Recomendación:** reclasificarlo (F o caso nuevo) y corregir la cita.
+- **Prueba:** comparar la instrucción literal con la cita de `propuesta-cn1`.
+- **¿Requiere decisión humana?:** no.
+
+### DS-188 · `estiramiento-espalda-alta-sentado` está mal clasificado en C
+
+- **Ubicación:** `propuesta-cn1`, §2.C, fila `estiramiento-espalda-alta-sentado`.
+- **Evidencia:** `ejercicios-cn1` instrucción 2: «Estira los brazos a la altura de los hombros y alarga el alcance, con los hombros relajados». `propuesta-cn1` lo cita como «Estira los brazos a la altura de los hombros…».
+- **Problema:** el texto dice «a la altura de los hombros», no «hasta la altura». La diferencia es relevante: «a la altura» describe una posición estática (los brazos extendidos horizontalmente), no un recorrido que llega hasta ahí. La casilla C habla de «sube hasta la altura»; este ejercicio no sube, mantiene. Es un caso distinto (brazos horizontales, sin elevación).
+- **Consecuencia:** mismo riesgo que DS-186/DS-187: contamina C.
+- **Certeza:** media (la diferencia «a la altura» vs «hasta la altura» es real, pero podría considerarse equivalente si el desarrollador decide que ambas cuentan igual).
+- **Recomendación:** separar «brazos horizontales mantenidos» de «brazo que sube hasta la altura». Si se agrupan, decirlo explícitamente.
+- **Prueba:** decisión del desarrollador sobre si «a la altura» y «hasta la altura» son la misma casilla.
+- **¿Requiere decisión humana?:** sí (agrupar o separar).
+
+### DS-189 · `banda-elevaciones-laterales-sentado` cita «casi la altura» y se clasifica en C sin advertirlo
+
+- **Ubicación:** `propuesta-cn1`, §2.C, fila `banda-elevaciones-laterales-sentado`.
+- **Evidencia:** `ejercicios-cn1` instrucción 2: «…sube los brazos por los lados hasta casi la altura de los hombros». `propuesta-cn1` lo cita correctamente («hasta casi la altura»), pero lo mete en C sin señalar que «casi» es un caso aún más claro de no superar la altura.
+- **Problema:** no es un error de cita, pero sí de clasificación: «casi la altura» es un caso **más fuerte** que «hasta la altura» para `false`. Mezclarlo con C diluye la casilla. Además, «casi» es una palabra que la fuente usa y que la propuesta no problematiza: ¿qué significa «casi»? ¿Es un umbral? R7.8 prohíbe inventar umbrales; «casi» es el término de la fuente y se conserva, pero la casilla C no lo distingue.
+- **Consecuencia:** si se decide C «no cuenta», este ejercicio también cambia, pero por un motivo distinto («casi» vs «hasta»). Conviene separarlo.
+- **Certeza:** media.
+- **Recomendación:** subcasilla C' («casi la altura») o nota explícita.
+- **Prueba:** decisión del desarrollador.
+- **¿Requiere decisión humana?:** sí.
+
+### DS-190 · `marcha-circulos-codos-sentado` está en E con un valor `true` que la propia propuesta no justifica
+
+- **Ubicación:** `propuesta-cn1`, §2.E, fila `marcha-circulos-codos-sentado`.
+- **Evidencia:** `ejercicios-cn1` instrucción 2: «Dibuja círculos hacia atrás con los codos…». `notas_etiquetado`: «Los codos pueden pasar la altura del hombro en el círculo». `propuesta-cn1` lo pone en E con valor `true`.
+- **Problema:** la nota del catálogo dice «pueden pasar», que es una inferencia (I), no una evidencia D. La `propuesta-cn1` no lo señala. Si E se decide «no cuenta», este ejercicio tendría que revisarse; si se decide «cuenta», su `true` actual es coherente pero por I, no por D. La propuesta no distingue.
+- **Consecuencia:** la tabla §4 («C y E "cuenta" → … en E, `estiramiento-hombro-cruzado`») **omite** `marcha-circulos-codos-sentado`, que también está en E. Es un error de la tabla §4.
+- **Certeza:** alta (la omisión es verificable).
+- **Recomendación:** incluir `marcha-circulos-codos-sentado` en la lista de E afectados por la decisión.
+- **Prueba:** comparar §2.E con §4 de `propuesta-cn1`.
+- **¿Requiere decisión humana?:** no (corrección de tabla).
+
+### DS-191 · `estiramiento-triceps` está en E pero su texto no encaja en E
+
+- **Ubicación:** `propuesta-cn1`, §2.E, fila `estiramiento-triceps`.
+- **Evidencia:** `ejercicios-cn1` instrucción 2: «Dobla un brazo y lleva la mano por encima del hombro hacia el omóplato». `propuesta-cn1` lo cita como «Dobla un brazo y lleva la mano por encima del hombro hacia el omóplato…».
+- **Problema:** el texto dice «por encima del hombro», no «el codo a la altura del hombro». Es un caso de B/D (mano por encima por flexión de codo), no de E. La `propuesta-cn1` lo mete en E porque el codo sube al llevar la mano al omóplato, pero eso no es lo que dice el texto. Es una inferencia del auditor, no una cita.
+- **Consecuencia:** si E se decide «no cuenta», este ejercicio no debería cambiar por E; cambiaría por B/D.
+- **Certeza:** media (el codo efectivamente sube en la ejecución, pero el texto no lo dice; la clasificación en E es una inferencia).
+- **Recomendación:** moverlo a B/D o marcar la inferencia.
+- **Prueba:** comparar la instrucción literal con la casilla E.
+- **¿Requiere decisión humana?:** no.
+
+### DS-192 · `pulgar-dedos` está en D con un valor `true` conservador, pero la propuesta no lo distingue de `boxeo-circulos-alto` (D)
+
+- **Ubicación:** `propuesta-cn1`, §2.D, filas `boxeo-circulos-alto` y `pulgar-dedos`.
+- **Evidencia:** `ejercicios-cn1` `pulgar-dedos` `notas_etiquetado`: «[conservadora] brazo_sobre_hombro: la foto de la fuente muestra la mano por encima del hombro y el texto no fija la altura». `boxeo-circulos-alto` `notas_etiquetado`: «A la altura de la nariz, las manos quedan por encima del hombro».
+- **Problema:** `boxeo-circulos-alto` tiene evidencia D (el texto fija la altura de la nariz, que está por encima del hombro). `pulgar-dedos` tiene evidencia I/N (la foto muestra la mano por encima, pero el texto no fija la altura). La `propuesta-cn1` los agrupa en D sin distinguir el nivel de evidencia. Eso importa para R2.2: si se decidiera B/D «no cuenta», `boxeo-circulos-alto` necesitaría D de que la mano no está por encima (no la hay, el texto dice lo contrario), mientras que `pulgar-dedos` ya está en conservador.
+- **Consecuencia:** la tabla §4 («B y D "no cuenta" → `boxeo-circulos-alto` y `pulgar-dedos` se revisan por la altura del codo») los trata igual, pero su situación probatoria es distinta.
+- **Certeza:** alta.
+- **Recomendación:** separar D (evidencia D) de D' (evidencia I/N conservadora).
+- **Prueba:** comparar las notas de etiquetado de ambos ejercicios.
+- **¿Requiere decisión humana?:** no.
+
+### DS-193 · `curl-biceps-sentado` está en B con valor `true` y la propuesta no recoge que ya está aplicado por P16
+
+- **Ubicación:** `propuesta-cn1`, §2.B, fila `curl-biceps-sentado`; §4, fila «B y D "no cuenta"».
+- **Evidencia:** `registro` P16: «en `curl-biceps-sentado`, `brazo_sobre_hombro`: `false` → `true` por evidencia D (CN-1)». `ejercicios-cn1` `curl-biceps-sentado` `notas_etiquetado`: «brazo_sobre_hombro: la mano pasa del hombro al doblar el codo (foto de la fuente; CN-1)».
+- **Problema:** la propuesta dice «`true` (la foto de la fuente muestra la botella a la altura de la boca)», pero no recoge que ese `true` ya está aplicado y que es el único de los cinco de B que está publicado. La tabla §4 dice «B y D "no cuenta" → `curl-biceps-sentado` vuelve a `false`», lo cual es correcto, pero no señala que eso **revierte una decisión ya aplicada** (P16) y que afecta a un ejercicio publicado.
+- **Consecuencia:** si el desarrollador decide B/D «no cuenta», no es solo un cambio de etiqueta: es revertir P16 y cambiar la disponibilidad real de un ejercicio publicado. La propuesta no lo advierte con la suficiente claridad.
+- **Certeza:** alta.
+- **Recomendación:** añadir a §4 una nota: «B/D "no cuenta" revierte P16 y afecta a un ejercicio publicado».
+- **Prueba:** `registro` P16 y `ejercicios-cn1` `validacion.estado` de `curl-biceps-sentado`.
+- **¿Requiere decisión humana?:** sí (el desarrollador debe saber que revierte P16).
+
+### DS-194 · `elevacion-lateral-botella-tumbado` está en F con valor `false` y la propuesta no cita la nota del catálogo
+
+- **Ubicación:** `propuesta-cn1`, §2.F, fila `elevacion-lateral-botella-tumbado`.
+- **Evidencia:** `ejercicios-cn1` `notas_etiquetado`: «La fuente no dice hasta dónde se abre el brazo». `propuesta-cn1` lo cita como «`false` (el texto no dice hasta dónde)».
+- **Problema:** la propuesta reconoce que el texto no dice hasta dónde, pero mantiene el `false`. Según R2.2, un `false` sin D de ausencia no está justificado; según R2.1, la duda se marca `true` conservador. La propuesta no aplica la regla asimétrica a este caso: lo deja en `false` sin D. Es una incoherencia interna de la propuesta.
+- **Consecuencia:** si se aplica DG-2, este ejercicio debería ser `true` conservador

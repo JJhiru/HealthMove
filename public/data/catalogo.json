@@ -64,9 +64,9 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -91,7 +91,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Brazos extendidos a los lados a la altura del hombro, no por encima.",
+      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -123,7 +123,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -181,7 +181,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -207,13 +207,13 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Subir la rodilla estando sentado acerca el muslo al tronco más que en reposo: flexion_amplia_cadera. Sujetar la silla: agarre.",
+      "notas_etiquetado": "Subir la rodilla estando sentado acerca el muslo al tronco más que en reposo: flexion_amplia_cadera. Sujetar la silla: agarre. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -249,7 +249,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate con la espalda recta y las manos apoyadas en la cadera, sin recostarte en el respaldo.",
+        "Siéntate con la espalda recta y las manos descansando en la cadera, sin recostarte en el respaldo.",
         "Marcha en el sitio levantando cada pie solo un poco del suelo.",
         "Mantén la espalda recta: no te inclines hacia los lados ni hacia atrás.",
         "Después de 10 a 20 pasos, descansa."
@@ -262,16 +262,20 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
-      "adaptaciones": [],
-      "notas_etiquetado": "Aunque el pie se levante poco, el muslo se acerca al tronco: flexion_amplia_cadera (ante la duda, se marca). Sin agarre.",
+      "adaptaciones": [
+        "La fuente también permite hacerlo sentado en la cama; aquí se hace en una silla.",
+        "Se omite la versión más difícil de la fuente, que añade el movimiento de los brazos."
+      ],
+      "notas_etiquetado": "Levantar la pierna del asiento acerca el muslo al tronco: flexion_amplia_cadera (evidencia D de la fuente). Sin agarre. La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -322,13 +326,13 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Elevar la pierna estirada aumenta la flexión de cadera respecto a estar sentado: se marca por precaución.",
+      "notas_etiquetado": "[conservadora] flexion_amplia_cadera: la pierna estirada y elevada sube algo el muslo. Se cerraría con: una imagen lateral de la cadera.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -424,7 +428,7 @@
       "instrucciones": [
         "Siéntate con la espalda recta y la cabeza y los hombros mirando al frente.",
         "Sube el brazo izquierdo por encima de la cabeza y apoya la mano derecha en la cadera.",
-        "Inclínate con cuidado hacia la derecha, manteniendo los dos glúteos apoyados en el asiento.",
+        "Inclínate con cuidado hacia la derecha, estirándote hacia arriba desde la cintura y manteniendo los dos glúteos apoyados en el asiento.",
         "Deberías notar el estiramiento en el costado izquierdo. Vuelve al centro y cambia de lado."
       ],
       "dosis": "3 a 5 veces hacia cada lado.",
@@ -435,16 +439,19 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "La fuente también permite apoyar la mano en el reposabrazos; aquí se apoya en la cadera."
+      ],
       "notas_etiquetado": "Brazo por encima de la cabeza e inclinación lateral del tronco.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -537,11 +544,11 @@
       },
       "instrucciones": [
         "Siéntate con la espalda recta y adelanta un poco el cuerpo en el asiento.",
-        "Estira una pierna hacia delante sin bloquear la rodilla, con el talón en el suelo.",
+        "Estira una pierna hacia delante sin bloquear la rodilla, con el talón en el suelo, y deja el otro pie apoyado bajo la rodilla.",
         "Inclínate hacia delante desde la cadera, con la espalda recta y sin redondearla.",
         "Mantén cuando notes un estiramiento cómodo detrás del muslo. Cambia de pierna."
       ],
-      "dosis": "Mantén de 10 a 15 segundos. 3 veces con cada pierna.",
+      "dosis": "Mantén de 10 a 15 segundos. De 3 a 5 veces con cada pierna.",
       "duracion_estimada_seg": 100,
       "variante_de": null,
       "fuente": {
@@ -549,16 +556,21 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "En la fuente, este estiramiento está escrito para la pierna que queda tras una amputación; aquí se hace con cada pierna, con el otro pie apoyado bajo la rodilla.",
+        "La fuente indica mantener la posición de 10 a 15 sin decir la unidad; aquí se entiende como segundos.",
+        "La fuente también permite apoyar el talón en un taburete o escalón bajo; aquí se apoya en el suelo."
+      ],
       "notas_etiquetado": "Inclinarse desde la cadera acerca el tronco al muslo y lo inclina hacia delante.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -605,16 +617,17 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -662,16 +675,16 @@
         "titulo": "Seated Vitality at Home",
         "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -695,7 +708,7 @@
         "impacto": false,
         "carga_externa": true,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": false,
         "agarre": true,
@@ -707,7 +720,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate cómodamente con una botella llena u otro peso ligero en una mano.",
+        "Siéntate cómodamente con una botella de bebida u otro peso ligero en una mano.",
         "Gira la mano para que el pulgar mire al techo.",
         "Dobla el codo despacio llevando el peso hacia el hombro, con el codo pegado al costado.",
         "Estira el brazo despacio hasta dejar el peso en el regazo. Cambia de brazo."
@@ -720,16 +733,17 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Un brazo cada vez: no exige ambos_brazos.",
+      "notas_etiquetado": "Un brazo cada vez: no exige ambos_brazos. brazo_sobre_hombro: la mano pasa del hombro al doblar el codo (foto de la fuente; CN-1). La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -770,7 +784,7 @@
         "Mantén 5 segundos y relaja.",
         "Cambia la posición de las manos y repite."
       ],
-      "dosis": "10 veces con cada posición de manos.",
+      "dosis": "10 veces con cada posición de manos. De 2 a 3 series, según puedas.",
       "duracion_estimada_seg": 120,
       "variante_de": null,
       "fuente": {
@@ -778,16 +792,17 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [],
       "notas_etiquetado": "La resistencia la genera la propia persona: no es carga_externa.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -812,7 +827,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -835,18 +850,19 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
         "Se omite la variante con pesos ligeros de la fuente."
       ],
       "notas_etiquetado": "Cerrar el puño: agarre. Los brazos van a la altura del pecho.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -886,7 +902,7 @@
         "Haz girar los puños uno alrededor del otro hacia delante mientras cuentas hasta 20.",
         "Después gíralos hacia atrás mientras cuentas hasta 20. Descansa."
       ],
-      "dosis": "20 hacia delante y 20 hacia atrás.",
+      "dosis": "Mientras cuentas hasta 20 hacia delante y hasta 20 hacia atrás. Descansa y repite si puedes.",
       "duracion_estimada_seg": 60,
       "variante_de": null,
       "fuente": {
@@ -894,16 +910,17 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "A la altura de la nariz, las manos quedan por encima del hombro.",
+      "notas_etiquetado": "A la altura de la nariz, las manos quedan por encima del hombro. La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -943,7 +960,7 @@
         "Haz girar los puños uno alrededor del otro hacia delante mientras cuentas hasta 20.",
         "Después gíralos hacia atrás mientras cuentas hasta 20. Descansa."
       ],
-      "dosis": "20 hacia delante y 20 hacia atrás.",
+      "dosis": "Mientras cuentas hasta 20 hacia delante y hasta 20 hacia atrás. Descansa y repite si puedes.",
       "duracion_estimada_seg": 60,
       "variante_de": "boxeo-circulos-alto",
       "fuente": {
@@ -951,16 +968,17 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Variante indicada en la propia fuente para quien tiene molestias en los hombros.",
+      "notas_etiquetado": "Variante descrita en la propia fuente («HINT!»), con las manos a la altura del pecho. La condición de la fuente sobre el dolor de hombros no se traslada al usuario (protocolo, 8.4). La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -986,7 +1004,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -1009,18 +1027,20 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
-        "La fuente permite apoyar las manos en la zona lumbar o en la cadera; aquí solo en la cadera para evitar mano_detras."
+        "La fuente permite apoyar las manos en la zona lumbar o en la cadera; aquí solo en la cadera para evitar mano_detras.",
+        "La fuente no indica cuántas veces repetirlo; aquí se proponen 5."
       ],
-      "notas_etiquetado": "Arquear la espalda cuenta como inclinacion_tronco.",
+      "notas_etiquetado": "Arquear la espalda cuenta como inclinacion_tronco. La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1068,16 +1088,17 @@
         "titulo": "Seated Exercises – Information for Patients",
         "url": "https://www.csp.org.uk/system/files/documents/2018-09/leicester_seated_exercise_booklet_0.pdf",
         "licencia": "Sin licencia abierta indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "usuarios de silla de ruedas",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "La fuente deja en blanco el número de series («___ sets»).",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1159,7 +1180,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -1214,7 +1235,7 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": false,
         "agarre": true,
@@ -1238,16 +1259,16 @@
         "titulo": "Seated Vitality at Home",
         "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Cierre parcial de la mano: se marca agarre por precaución.",
+      "notas_etiquetado": "[conservadora] agarre: tocar el pulgar con cada dedo flexiona los dedos, lo que parece un cierre parcial de la mano (§4). Se cerraría con: un criterio sobre si la pinza cuenta como agarre. [conservadora] brazo_sobre_hombro: la foto de la fuente muestra la mano por encima del hombro y el texto no fija la altura. Se cerraría con: evidencia D de la altura en la ejecución que pide HealthMove.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1295,23 +1316,23 @@
         "titulo": "Seated Vitality at Home",
         "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
         "Se incluye solo la primera ronda, la más suave, del calentamiento de la fuente."
       ],
-      "notas_etiquetado": "La fuente indica que busca subir el pulso: esfuerzo_cardio. Las palmadas exigen los dos brazos.",
+      "notas_etiquetado": "[conservadora] esfuerzo_cardio: la fuente dice que el calentamiento completo sube el pulso; aquí solo va la primera ronda. Se cerraría con: una fuente sobre la primera ronda sola. Las palmadas exigen los dos brazos.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
       "id": "banda-remo-sentado",
-      "nombre": "Remo con banda elástica",
+      "nombre": "Abrir la banda a la altura del abdomen",
       "descripcion": "Fortalece la parte alta de la espalda y los hombros.",
       "fases": [
         "principal"
@@ -1345,7 +1366,7 @@
         "Siéntate con la espalda recta y coloca la banda sobre los muslos, bien plana.",
         "Pasa las manos por debajo de la banda y agárrala.",
         "Súbela a la altura del abdomen estirándola hacia fuera.",
-        "Llévala hacia el abdomen con los codos pegados al cuerpo y relaja la tensión."
+        "Vuelve a llevarla hacia el abdomen con los codos pegados al cuerpo. Después adelanta las manos, relaja los brazos y suelta la tensión."
       ],
       "dosis": "Hasta 12 veces.",
       "duracion_estimada_seg": 75,
@@ -1355,16 +1376,16 @@
         "titulo": "Seated Vitality at Home",
         "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [],
       "notas_etiquetado": "La banda cuenta como carga_externa.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1388,7 +1409,7 @@
         "impacto": false,
         "carga_externa": true,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": true,
         "agarre": true,
@@ -1416,7 +1437,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: al doblar el codo, la mano puede pasar de la altura del hombro (CN-1, P25). Se cerraría con: evidencia de la fuente de que la mano no pasa del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -1470,7 +1491,7 @@
         "titulo": "Breathing exercises for stress",
         "url": "https://www.nhs.uk/mental-health/self-help/guides-tools-and-activities/breathing-exercises-for-stress/",
         "licencia": "Open Government Licence v3.0",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
         "La fuente recomienda al menos 5 minutos; en una rutina de 10 a 20 minutos se usa como cierre más breve.",
@@ -1478,11 +1499,11 @@
       ],
       "notas_etiquetado": "",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1514,7 +1535,7 @@
         "flexion_profunda_rodilla": true,
         "flexion_amplia_cadera": false,
         "puntillas_talones": false,
-        "inclinacion_tronco": false,
+        "inclinacion_tronco": true,
         "rotacion_tronco": false
       },
       "instrucciones": [
@@ -1533,13 +1554,13 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Con los pies algo atrasados, la rodilla puede pasar de 90°. Al estar de pie no hay apoyo: equilibrio_sin_apoyo. La inclinación es leve: no es inclinacion_tronco.",
+      "notas_etiquetado": "Con los pies algo atrasados, la rodilla puede pasar de 90°. Al estar de pie no hay apoyo: equilibrio_sin_apoyo. [conservadora] inclinacion_tronco: el texto dice «slightly», pero la foto B de la fuente muestra más (Q3). Se cerraría con: revisión profesional.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1564,7 +1585,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": true,
@@ -1574,7 +1595,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Ponte de pie detrás de una silla, con los pies separados al ancho de la cadera y las manos en el respaldo.",
+        "Ponte de pie detrás de una silla, con los pies separados al ancho de la cadera, y apoya las manos en el respaldo.",
         "Dobla las rodillas despacio hasta donde te resulte cómodo, con las rodillas hacia delante y la espalda recta.",
         "Vuelve a ponerte de pie despacio, apretando los glúteos al subir."
       ],
@@ -1589,13 +1610,13 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "'Hasta donde te resulte cómodo' no limita la flexión: se marca flexion_profunda_rodilla por precaución.",
+      "notas_etiquetado": "[conservadora] flexion_profunda_rodilla: «as far as is comfortable» no limita la flexión. Se cerraría con: una fuente que fije el límite. [conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1620,7 +1641,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -1630,7 +1651,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Ponte de pie detrás de una silla con las manos en el respaldo y los pies apoyados en el suelo.",
+        "Ponte de pie detrás de una silla, con los pies en el suelo, y apoya las manos en el respaldo.",
         "Sube los dos talones despacio, hasta donde te resulte cómodo.",
         "Baja los talones con control."
       ],
@@ -1645,13 +1666,13 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1732,7 +1753,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -1742,7 +1763,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Ponte de pie detrás de una silla con las manos en el respaldo.",
+        "Ponte de pie detrás de una silla y apoya las manos en el respaldo.",
         "Levanta la pierna derecha hacia el lado hasta donde te resulte cómodo, con la espalda y la cadera rectas.",
         "No te inclines hacia la derecha. Baja la pierna y repite con la izquierda."
       ],
@@ -1757,13 +1778,13 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1788,7 +1809,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -1798,7 +1819,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Ponte de pie detrás de una silla con las manos en el respaldo.",
+        "Ponte de pie detrás de una silla y apoya las manos en el respaldo.",
         "Con la pierna izquierda estirada, llévala hacia atrás sin arquear la espalda.",
         "Mantén hasta 5 segundos y baja. Repite con la pierna derecha."
       ],
@@ -1813,13 +1834,13 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "La fuente pide no arquear la espalda: no es inclinacion_tronco.",
+      "notas_etiquetado": "La fuente pide no arquear la espalda: no es inclinacion_tronco. [conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -1844,7 +1865,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": true,
         "flexion_profunda_rodilla": false,
@@ -1899,9 +1920,9 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -1926,7 +1947,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Las yemas en la pared son apoyo sin cerrar la mano: no es agarre ni equilibrio_sin_apoyo.",
+      "notas_etiquetado": "Las yemas en la pared son apoyo sin cerrar la mano: no es agarre ni equilibrio_sin_apoyo. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano. [conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -1982,11 +2003,11 @@
       "adaptaciones": [],
       "notas_etiquetado": "De pie sin sujetarse.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -2009,9 +2030,9 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -2037,7 +2058,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Al dar el paso atrás, el peso cae un momento sobre un pie: una_pierna.",
+      "notas_etiquetado": "Al dar el paso atrás, el peso cae un momento sobre un pie: una_pierna. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano. [conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -2207,7 +2228,8 @@
         "titulo": "Stage 1 exercises",
         "url": "https://royalberkshire.nhs.uk/media/vdxo0b3m/stage-1-exercises_mar23.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "rehabilitación tras un ingreso hospitalario",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco; se usa la pauta general de NHS Forth Valley (empezar con 2 o 3 y subir hasta 10).",
@@ -2215,11 +2237,11 @@
       ],
       "notas_etiquetado": "",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -2381,18 +2403,19 @@
         "titulo": "Stage 1 exercises",
         "url": "https://royalberkshire.nhs.uk/media/vdxo0b3m/stage-1-exercises_mar23.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "rehabilitación tras un ingreso hospitalario",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco; se usa la pauta general de NHS Forth Valley (empezar con 2 o 3 y subir hasta 10)."
       ],
       "notas_etiquetado": "Los brazos quedan relajados a los lados.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -2441,18 +2464,19 @@
         "titulo": "Stage 1 exercises",
         "url": "https://royalberkshire.nhs.uk/media/vdxo0b3m/stage-1-exercises_mar23.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "rehabilitación tras un ingreso hospitalario",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco; se usa la pauta general de NHS Forth Valley (empezar con 2 o 3 y subir hasta 10)."
       ],
       "notas_etiquetado": "",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA a partir de resúmenes de agentes de investigación; verificar contra la fuente)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -2475,9 +2499,9 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -2502,7 +2526,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Las manos van abiertas y no sostienen nada.",
+      "notas_etiquetado": "Las manos van abiertas y no sostienen nada. [conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -2531,7 +2555,7 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": true,
         "agarre": false,
@@ -2561,7 +2585,7 @@
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco; se usa la pauta general de NHS Forth Valley (empezar con 2 o 3 y subir hasta 10)."
       ],
-      "notas_etiquetado": "No se sostiene nada. La fuente lo describe con los dos brazos: ambos_brazos por precaución.",
+      "notas_etiquetado": "No se sostiene nada. La fuente lo describe con los dos brazos: ambos_brazos por precaución. [conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -3708,7 +3732,7 @@
       "adaptaciones": [
         "La fuente permite hacerlo sin apoyo; aquí se indica siempre con apoyo."
       ],
-      "notas_etiquetado": "Subir la rodilla de pie acerca el muslo al tronco como mínimo igual que sentado: se marca por precaución.",
+      "notas_etiquetado": "Subir la rodilla de pie acerca el muslo al tronco como mínimo igual que sentado: se marca por precaución. [conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -3796,7 +3820,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -3968,7 +3992,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -4024,7 +4048,7 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": false,
         "agarre": true,
@@ -4053,7 +4077,7 @@
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: al doblar el codo, la mano puede pasar de la altura del hombro (CN-1, P25). Se cerraría con: evidencia de la fuente de que la mano no pasa del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -4143,7 +4167,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -4200,7 +4224,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -4314,7 +4338,7 @@
         "impacto": false,
         "carga_externa": true,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": true,
         "agarre": true,
@@ -4342,7 +4366,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -4430,9 +4454,9 @@
         "impacto": false,
         "carga_externa": true,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -4457,7 +4481,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -4489,7 +4513,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -4550,18 +4574,18 @@
         "ambos_brazos": false,
         "agarre": false,
         "peso_en_manos": false,
-        "flexion_profunda_rodilla": false,
+        "flexion_profunda_rodilla": true,
         "flexion_amplia_cadera": false,
         "puntillas_talones": false,
         "inclinacion_tronco": false,
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Pasa un lazo de la banda por el pie y sujeta el otro extremo con el otro pie o átalo a la pata de la silla.",
+        "Haz un lazo con la banda y sujétalo con el otro pie o con la pata de una mesa o silla. Mete un pie en el lazo.",
         "Con el talón apoyado, gira la punta del pie hacia fuera contra la banda.",
         "Vuelve despacio."
       ],
-      "dosis": "10 veces con cada pie.",
+      "dosis": "Hasta 10 veces con cada pie.",
       "duracion_estimada_seg": 75,
       "variante_de": null,
       "fuente": {
@@ -4569,12 +4593,14 @@
         "titulo": "Exercises for the toes, feet and ankles",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-toes-feet-and-ankles/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-22",
+        "especifica_de": "pies y tobillos"
       },
       "adaptaciones": [
-        "La fuente propone llegar a 3 series al día; aquí se usa una serie dentro de la rutina."
+        "La fuente propone ir subiendo hasta 10 repeticiones y hacer la serie 3 veces al día; aquí se hace una serie dentro de la rutina.",
+        "La fuente describe el ejercicio con un pie; aquí se hace con cada pie."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] flexion_profunda_rodilla: la imagen de la fuente es frontal y no deja ver el ángulo de la rodilla. Se cerraría con: una vista lateral o un texto que diga dónde queda el pie. agarre y ambos_brazos: pendientes de CN-2 (atar y colocar el lazo).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -4664,7 +4690,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -4692,7 +4718,7 @@
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
       ],
-      "notas_etiquetado": "La fuente recomienda calentar antes las manos con agua tibia.",
+      "notas_etiquetado": "La fuente recomienda calentar antes las manos con agua tibia. [conservadora] ambos_brazos: no consta si los brazos solo reposan (Q1). Se cerraría con: la fuente o su imagen.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -5150,12 +5176,13 @@
         "titulo": "Exercises for the hips",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-hips/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-22",
+        "especifica_de": "cadera"
       },
       "adaptaciones": [
         "La fuente indica el tiempo pero no las repeticiones; se usan 10."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "Posición: la fuente lo describe tumbado y dice que también puede hacerse sentado, sin precisar cómo; si la silla es válida depende de Q5 (lote 10).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -5300,7 +5327,7 @@
         "brazo_sobre_hombro": false,
         "mano_detras": false,
         "ambos_brazos": false,
-        "agarre": false,
+        "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
         "flexion_amplia_cadera": false,
@@ -5309,9 +5336,9 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Pon una toalla en el suelo delante de ti.",
-        "Con el talón apoyado, arruga la toalla con los dedos del pie para acercarla.",
-        "Estírala de nuevo y repite con el otro pie."
+        "Siéntate con una toalla en el suelo delante de ti.",
+        "Con el talón apoyado, levanta la toalla arrugándola entre los dedos del pie.",
+        "Suelta la toalla y repite. Después, cambia de pie."
       ],
       "dosis": "De 10 a 20 veces con cada pie.",
       "duracion_estimada_seg": 75,
@@ -5321,10 +5348,14 @@
         "titulo": "Exercises for the toes, feet and ankles",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-toes-feet-and-ankles/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-22",
+        "especifica_de": "pies y tobillos"
       },
-      "adaptaciones": [],
-      "notas_etiquetado": "",
+      "adaptaciones": [
+        "La fuente no dice si se hace con los dos pies; aquí se hace con cada pie.",
+        "Se omite la versión más difícil de la fuente, que añade un peso pequeño sobre la toalla."
+      ],
+      "notas_etiquetado": "[conservadora] agarre: la imagen de la fuente muestra una mano sujetando el borde del asiento y el texto no lo pide. Se cerraría con: evidencia de que sujetarse no forma parte de la ejecución.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -5582,8 +5613,8 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
-        "agarre": false,
+        "ambos_brazos": true,
+        "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
         "flexion_amplia_cadera": false,
@@ -5592,7 +5623,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate y cruza los tobillos.",
+        "Siéntate en el borde del asiento y cruza los tobillos.",
         "Empuja la pierna de delante hacia atrás y la de atrás hacia delante, una contra otra, hasta que se tensen los muslos.",
         "Aguanta todo lo que puedas sin dolor y relaja.",
         "Cambia el cruce."
@@ -5605,12 +5636,14 @@
         "titulo": "Exercises for the knees",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-knees/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-22",
+        "especifica_de": "rodilla"
       },
       "adaptaciones": [
-        "La fuente pide descansar 1 minuto entre repeticiones; aquí el descanso es libre para que quepa en la rutina."
+        "La fuente pide descansar 1 minuto entre repeticiones; aquí el descanso es libre para que quepa en la rutina.",
+        "La fuente dice que se aguante todo lo posible; HealthMove añade que sea sin dolor."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: la imagen de la fuente muestra las dos manos sujetando el borde del asiento y el texto no lo pide. Se cerraría con: evidencia de que sujetarse no forma parte de la ejecución. [conservadora] agarre: la imagen de la fuente muestra las manos rodeando el borde del asiento. Se cerraría con: la misma evidencia que ambos_brazos. Postura de las piernas: la imagen las muestra estiradas al frente; depende de Q5 (lote 10).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -5641,7 +5674,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": true,
         "flexion_profunda_rodilla": false,
@@ -5669,7 +5702,7 @@
       "adaptaciones": [
         "La fuente lo plantea en un sofá; aquí se usa una silla estable."
       ],
-      "notas_etiquetado": "Las manos apoyadas pueden soportar parte del peso: se marca peso en manos por prudencia.",
+      "notas_etiquetado": "Las manos apoyadas pueden soportar parte del peso: se marca peso en manos por prudencia. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -5686,8 +5719,7 @@
         "calma"
       ],
       "posiciones": [
-        "sentado",
-        "de_pie"
+        "sentado"
       ],
       "recursos": [
         "silla"
@@ -5711,6 +5743,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
+        "Siéntate con la espalda recta.",
         "Pon una mano sobre el hombro contrario con el codo pegado al pecho.",
         "Con la otra mano, empuja el codo suavemente hacia el hombro contrario hasta notar el estiramiento.",
         "Mantén, descansa unos segundos y cambia de lado."
@@ -5726,11 +5759,66 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "Posición: el 2026-10-22 se separó en dos entradas (C2, P23): esta, sentada, y estiramiento-hombro-cruzado-pie, de pie. La fuente indica «De pie o sentado» (evidencia-fuentes-q1-q2.md §3).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA a partir de informes de agentes que leyeron la fuente; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "estiramiento-hombro-cruzado-pie",
+      "nombre": "Estirar la parte de atrás del hombro de pie",
+      "descripcion": "Estira el hombro.",
+      "fases": [
+        "calma"
+      ],
+      "posiciones": [
+        "de_pie"
+      ],
+      "recursos": [],
+      "exigencias": {
+        "equilibrio_sin_apoyo": true,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": false,
+        "ambos_brazos": true,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Ponte de pie.",
+        "Pon una mano sobre el hombro contrario con el codo pegado al pecho.",
+        "Con la otra mano, empuja el codo suavemente hacia el hombro contrario hasta notar el estiramiento.",
+        "Mantén, descansa unos segundos y cambia de lado."
+      ],
+      "dosis": "Mantén de 10 a 12 segundos. 2 o 3 veces por lado.",
+      "duracion_estimada_seg": 90,
+      "variante_de": "estiramiento-hombro-cruzado",
+      "fuente": {
+        "organizacion": "Programa Vivifrail (Erasmus+, Universidad Pública de Navarra)",
+        "titulo": "Programa de ejercicio físico multicomponente Vivifrail: guía práctica (copia de munideporte.com)",
+        "url": "https://munideporte.com/imagenes/documentacion/ficheros/0134414D.pdf",
+        "licencia": "© Vivifrail, prohíbe la reproducción: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "equilibrio_sin_apoyo: con las dos manos ocupadas no hay forma de sujetarse a nada (especificación §7, regla 4; C2, P23). Versión de pie separada de estiramiento-hombro-cruzado el 2026-10-22. La fuente indica «De pie o sentado» (evidencia-fuentes-q1-q2.md §3).",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (2026-10-22: versión de pie separada de estiramiento-hombro-cruzado por C2, P23; pendiente de auditoría)",
         "revisado_por": null,
         "fecha_revision": null
       }
@@ -5743,8 +5831,7 @@
         "calma"
       ],
       "posiciones": [
-        "sentado",
-        "de_pie"
+        "sentado"
       ],
       "recursos": [
         "silla"
@@ -5768,6 +5855,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
+        "Siéntate con la espalda recta.",
         "Dobla un brazo y lleva la mano por encima del hombro hacia el omóplato.",
         "Con la otra mano, empuja suavemente el codo hacia atrás hasta notar el estiramiento.",
         "Mantén sin rebotes y cambia de brazo."
@@ -5784,11 +5872,67 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "Posición: el 2026-10-22 se separó en dos entradas (C2, P23): esta, sentada, y estiramiento-triceps-pie, de pie. La fuente no indica la posición de este ejercicio; las dos versiones quedan pendientes de auditoría.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA a partir de informes de agentes que leyeron la fuente; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "estiramiento-triceps-pie",
+      "nombre": "Estirar la parte de atrás del brazo de pie",
+      "descripcion": "Estira el brazo y el hombro.",
+      "fases": [
+        "calma"
+      ],
+      "posiciones": [
+        "de_pie"
+      ],
+      "recursos": [],
+      "exigencias": {
+        "equilibrio_sin_apoyo": true,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": true,
+        "mano_detras": true,
+        "ambos_brazos": true,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Ponte de pie.",
+        "Dobla un brazo y lleva la mano por encima del hombro hacia el omóplato.",
+        "Con la otra mano, empuja suavemente el codo hacia atrás hasta notar el estiramiento.",
+        "Mantén sin rebotes y cambia de brazo."
+      ],
+      "dosis": "Mantén 15 segundos con cada brazo.",
+      "duracion_estimada_seg": 60,
+      "variante_de": "estiramiento-triceps",
+      "fuente": {
+        "organizacion": "South Tees Hospitals NHS FT (Rehabilitación cardiaca)",
+        "titulo": "Cardiac rehabilitation exercise programme",
+        "url": "https://www.southtees.nhs.uk/resources/cardiac-rehabilitation-exercise-programme",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "especifica_de": "rehabilitación cardiaca",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "equilibrio_sin_apoyo: con las dos manos ocupadas no hay forma de sujetarse a nada (especificación §7, regla 4; C2, P23). Versión de pie separada de estiramiento-triceps el 2026-10-22. La fuente no indica la posición de este ejercicio; las dos versiones quedan pendientes de auditoría.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (2026-10-22: versión de pie separada de estiramiento-triceps por C2, P23; pendiente de auditoría)",
         "revisado_por": null,
         "fecha_revision": null
       }
@@ -5801,8 +5945,7 @@
         "calma"
       ],
       "posiciones": [
-        "sentado",
-        "de_pie"
+        "sentado"
       ],
       "recursos": [
         "silla"
@@ -5826,6 +5969,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
+        "Siéntate con la espalda recta.",
         "Pon las manos en la parte baja de la espalda.",
         "Junta los codos por detrás, llevando los omóplatos hacia atrás y sacando el pecho.",
         "Mantén mientras notas un estiramiento suave en el pecho."
@@ -5841,12 +5985,70 @@
         "especifica_de": "enfermedad pulmonar",
         "consultado": "2026-10-14"
       },
-      "adaptaciones": [],
-      "notas_etiquetado": "",
+      "adaptaciones": [
+        "La fuente lo describe de pie; aquí se hace sentado."
+      ],
+      "notas_etiquetado": "Posición: el 2026-10-22 se separó en dos entradas (C2, P23): esta, sentada, y estiramiento-pecho-manos-lumbar-pie, de pie. La fuente lo describe de pie («Stand upright»); la versión sentada es una adaptación pendiente de auditoría (R3.1, Q5).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA a partir de informes de agentes que leyeron la fuente; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "estiramiento-pecho-manos-lumbar-pie",
+      "nombre": "Abrir el pecho con las manos en la espalda de pie",
+      "descripcion": "Estira el pecho.",
+      "fases": [
+        "calma"
+      ],
+      "posiciones": [
+        "de_pie"
+      ],
+      "recursos": [],
+      "exigencias": {
+        "equilibrio_sin_apoyo": true,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": true,
+        "ambos_brazos": true,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Ponte de pie.",
+        "Pon las manos en la parte baja de la espalda.",
+        "Junta los codos por detrás, llevando los omóplatos hacia atrás y sacando el pecho.",
+        "Mantén mientras notas un estiramiento suave en el pecho."
+      ],
+      "dosis": "Mantén de 15 a 20 segundos. 2 o 3 veces.",
+      "duracion_estimada_seg": 75,
+      "variante_de": "estiramiento-pecho-manos-lumbar",
+      "fuente": {
+        "organizacion": "Royal Berkshire NHS Foundation Trust (Fisioterapia)",
+        "titulo": "Pulmonary Rehabilitation Exercise Booklet",
+        "url": "https://www.royalberkshire.nhs.uk/media/m2yl2u1z/pulmonary-rehabilitation-exercises_mar25.pdf",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "especifica_de": "enfermedad pulmonar",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "equilibrio_sin_apoyo: con las dos manos ocupadas no hay forma de sujetarse a nada (especificación §7, regla 4; C2, P23). Versión de pie separada de estiramiento-pecho-manos-lumbar el 2026-10-22. La fuente lo describe de pie («Stand upright»); la versión sentada es una adaptación pendiente de auditoría (R3.1, Q5).",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (2026-10-22: versión de pie separada de estiramiento-pecho-manos-lumbar por C2, P23; pendiente de auditoría)",
         "revisado_por": null,
         "fecha_revision": null
       }
@@ -5859,8 +6061,7 @@
         "calma"
       ],
       "posiciones": [
-        "sentado",
-        "de_pie"
+        "sentado"
       ],
       "recursos": [
         "silla"
@@ -5884,6 +6085,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
+        "Siéntate con la espalda recta.",
         "Entrelaza las manos detrás de la espalda.",
         "Con los brazos rectos, sepáralos del cuerpo hacia atrás hasta notar el estiramiento en el pecho.",
         "Mantén sin rebotes."
@@ -5902,11 +6104,69 @@
       "adaptaciones": [
         "La fuente indica el tiempo pero no las repeticiones; se usan 2."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "Posición: el 2026-10-22 se separó en dos entradas (C2, P23): esta, sentada, y estiramiento-pecho-manos-detras-pie, de pie. La fuente no indica la posición de este ejercicio; las dos versiones quedan pendientes de auditoría.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA a partir de informes de agentes que leyeron la fuente; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "estiramiento-pecho-manos-detras-pie",
+      "nombre": "Abrir el pecho con las manos entrelazadas detrás de pie",
+      "descripcion": "Estira el pecho y los hombros.",
+      "fases": [
+        "calma"
+      ],
+      "posiciones": [
+        "de_pie"
+      ],
+      "recursos": [],
+      "exigencias": {
+        "equilibrio_sin_apoyo": true,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": true,
+        "ambos_brazos": true,
+        "agarre": true,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Ponte de pie.",
+        "Entrelaza las manos detrás de la espalda.",
+        "Con los brazos rectos, sepáralos del cuerpo hacia atrás hasta notar el estiramiento en el pecho.",
+        "Mantén sin rebotes."
+      ],
+      "dosis": "Mantén 15 segundos. 2 veces.",
+      "duracion_estimada_seg": 60,
+      "variante_de": "estiramiento-pecho-manos-detras",
+      "fuente": {
+        "organizacion": "South Tees Hospitals NHS FT (Rehabilitación cardiaca)",
+        "titulo": "Cardiac rehabilitation exercise programme",
+        "url": "https://www.southtees.nhs.uk/resources/cardiac-rehabilitation-exercise-programme",
+        "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
+        "especifica_de": "rehabilitación cardiaca",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [
+        "La fuente indica el tiempo pero no las repeticiones; se usan 2."
+      ],
+      "notas_etiquetado": "equilibrio_sin_apoyo: con las dos manos ocupadas no hay forma de sujetarse a nada (especificación §7, regla 4; C2, P23). Versión de pie separada de estiramiento-pecho-manos-detras el 2026-10-22. La fuente no indica la posición de este ejercicio; las dos versiones quedan pendientes de auditoría.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (2026-10-22: versión de pie separada de estiramiento-pecho-manos-detras por C2, P23; pendiente de auditoría)",
         "revisado_por": null,
         "fecha_revision": null
       }
@@ -5931,7 +6191,7 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": true,
         "agarre": true,
@@ -5958,7 +6218,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -5975,8 +6235,7 @@
         "calma"
       ],
       "posiciones": [
-        "sentado",
-        "de_pie"
+        "sentado"
       ],
       "recursos": [
         "silla"
@@ -6000,7 +6259,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate en el borde de la silla o ponte de pie.",
+        "Siéntate en el borde de la silla.",
         "Lleva las manos detrás de la espalda e intenta tocar con cada mano el codo contrario, o acércate lo que puedas.",
         "Mantén y suelta."
       ],
@@ -6015,11 +6274,65 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "Posición: el 2026-10-22 se separó en dos entradas (C2, P23): esta, sentada, y manos-espalda-codo-contrario-pie, de pie. Fuente no verificada (403); la instrucción anterior ofrecía las dos posiciones.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA a partir de informes de agentes que leyeron la fuente; verificar contra la fuente)",
+        "revisado_por": null,
+        "fecha_revision": null
+      }
+    },
+    {
+      "id": "manos-espalda-codo-contrario-pie",
+      "nombre": "Manos a la espalda hacia el codo contrario de pie",
+      "descripcion": "Estira hombros y pecho.",
+      "fases": [
+        "calma"
+      ],
+      "posiciones": [
+        "de_pie"
+      ],
+      "recursos": [],
+      "exigencias": {
+        "equilibrio_sin_apoyo": true,
+        "una_pierna": false,
+        "sentarse_levantarse": false,
+        "impacto": false,
+        "carga_externa": false,
+        "esfuerzo_cardio": false,
+        "brazo_sobre_hombro": false,
+        "mano_detras": true,
+        "ambos_brazos": true,
+        "agarre": false,
+        "peso_en_manos": false,
+        "flexion_profunda_rodilla": false,
+        "flexion_amplia_cadera": false,
+        "puntillas_talones": false,
+        "inclinacion_tronco": false,
+        "rotacion_tronco": false
+      },
+      "instrucciones": [
+        "Ponte de pie.",
+        "Lleva las manos detrás de la espalda e intenta tocar con cada mano el codo contrario, o acércate lo que puedas.",
+        "Mantén y suelta."
+      ],
+      "dosis": "Mantén unos 10 segundos. 3 veces.",
+      "duracion_estimada_seg": 60,
+      "variante_de": "manos-espalda-codo-contrario",
+      "fuente": {
+        "organizacion": "CDC y Tufts University",
+        "titulo": "Growing Stronger: Strength Training for Older Adults",
+        "url": "https://stacks.cdc.gov/view/cdc/11447/cdc_11447_DS1.pdf",
+        "licencia": "© 2002 Tufts University: instrucciones redactadas con palabras propias",
+        "consultado": "2026-10-14"
+      },
+      "adaptaciones": [],
+      "notas_etiquetado": "equilibrio_sin_apoyo: con las dos manos ocupadas no hay forma de sujetarse a nada (especificación §7, regla 4; C2, P23). Versión de pie separada de manos-espalda-codo-contrario el 2026-10-22. Fuente no verificada (403); la instrucción anterior ofrecía las dos posiciones.",
+      "validacion": {
+        "estado": "borrador",
+        "responsable": "Autor de HealthMove (sin titulación sanitaria)",
+        "etiquetado_por": "Claude (2026-10-22: versión de pie separada de manos-espalda-codo-contrario por C2, P23; pendiente de auditoría)",
         "revisado_por": null,
         "fecha_revision": null
       }
@@ -6339,7 +6652,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -6396,7 +6709,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -6454,7 +6767,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -6479,7 +6792,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Los codos pueden pasar la altura del hombro en el círculo.",
+      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: los codos pueden pasar la altura del hombro en el círculo (CN-1, P25). Se cerraría con: evidencia de la fuente de la altura de los codos.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -6510,7 +6823,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -6535,7 +6848,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: brazos alternos sin pausa (Q1). Se cerraría con: fuente con un brazo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -6564,9 +6877,9 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -6591,7 +6904,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: brazos alternos sin pausa (Q1). Se cerraría con: fuente con un brazo. [conservadora] brazo_sobre_hombro: al doblar el codo, la mano puede pasar de la altura del hombro (CN-1, P25). Se cerraría con: evidencia de la fuente de que la mano no pasa del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -6740,7 +7053,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -6765,7 +7078,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Las fuentes de Otago proponen pasar de dos manos a una y a ninguna; aquí se mantiene el apoyo.",
+      "notas_etiquetado": "Las fuentes de Otago proponen pasar de dos manos a una y a ninguna; aquí se mantiene el apoyo. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -6796,7 +7109,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -6822,7 +7135,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7022,7 +7335,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -7047,7 +7360,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7133,7 +7446,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": true,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -7159,7 +7472,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7200,7 +7513,7 @@
         "rotacion_tronco": true
       },
       "instrucciones": [
-        "Ponte de pie, alto, con una mano en el respaldo de una silla firme.",
+        "Ponte de pie, alto, y apoya una mano en el respaldo de una silla firme.",
         "Gira despacio los hombros hacia un lado sin mover la cadera.",
         "Vuelve al centro y gira hacia el otro lado."
       ],
@@ -7215,7 +7528,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7329,7 +7642,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] inclinacion_tronco: la fuente dice «slightly» y sus dibujos no muestran la fase; la foto del NHS de la base muestra más (Q3). Se cerraría con: una imagen de la transición.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7362,7 +7675,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": true,
@@ -7419,7 +7732,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -7444,7 +7757,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7591,7 +7904,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -7616,7 +7929,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Deja que el brazo se mueva por su peso, sin usar la fuerza del hombro.",
+      "notas_etiquetado": "Deja que el brazo se mueva por su peso, sin usar la fuerza del hombro. [conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional. [conservadora] ambos_brazos: una mano apoya y el otro brazo trabaja (Q1). Se cerraría con: fuente sin apoyo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7648,7 +7961,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -7676,7 +7989,7 @@
       "adaptaciones": [
         "La fuente no da la dosis de este ejercicio; se usan las 10 repeticiones del resto de la hoja."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "agarre: por la botella; la otra mano solo se apoya (Q2). [conservadora] ambos_brazos: una mano apoya y el otro brazo trabaja (Q1). Se cerraría con: fuente sin apoyo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7763,9 +8076,9 @@
         "impacto": false,
         "carga_externa": true,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -7790,7 +8103,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7821,7 +8134,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -7940,7 +8253,7 @@
         "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": true,
-        "agarre": false,
+        "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
         "flexion_amplia_cadera": false,
@@ -7949,10 +8262,10 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Ponte de pie y sujeta una banda en lazo con las dos manos.",
-        "Ábrela hasta que los brazos queden paralelos al suelo.",
-        "Sin perder la tensión, sube los brazos despacio hasta donde te resulte cómodo.",
-        "Vuelve despacio."
+        "Ponte de pie con los brazos abajo, delante de los muslos, y sujeta una banda en lazo con las dos manos.",
+        "Abre el lazo hasta que los brazos queden paralelos entre sí.",
+        "Sin perder la tensión, sube los brazos despacio y con control hasta donde te resulte cómodo.",
+        "Vuelve despacio a la posición de partida."
       ],
       "dosis": "De 5 a 10 veces.",
       "duracion_estimada_seg": 60,
@@ -7962,12 +8275,13 @@
         "titulo": "Rotator cuff in standing with resistance band",
         "url": "https://www.southtees.nhs.uk/?p=32161",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-22"
       },
       "adaptaciones": [
-        "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
+        "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10.",
+        "La fuente dice subir los brazos hasta donde indique el fisioterapeuta; aquí, hasta donde te resulte cómodo."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "agarre: las fotos de la fuente (Fig. A a C) muestran las dos manos cerradas sobre la banda. equilibrio_sin_apoyo: de pie, con las dos manos en la banda y sin apoyo en las fotos (DS-27, M3). brazo_sobre_hombro: la Fig. C muestra los brazos completamente arriba.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7996,7 +8310,7 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": false,
         "agarre": false,
@@ -8025,7 +8339,7 @@
       "adaptaciones": [
         "La fuente no fija la duración; se usan 1 o 2 minutos."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -8112,7 +8426,7 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": false,
         "agarre": false,
@@ -8141,7 +8455,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "El pie se desliza por el suelo, nunca se salta.",
+      "notas_etiquetado": "El pie se desliza por el suelo, nunca se salta. [conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -8172,7 +8486,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -8229,7 +8543,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": true,
         "flexion_profunda_rodilla": false,
@@ -8374,7 +8688,7 @@
       "adaptaciones": [
         "La fuente propone 5 minutos en total; aquí unos 2."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] agarre: la fuente dice «held» (Q2). Se cerraría con: la imagen de la fuente.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -8641,7 +8955,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -8669,7 +8983,7 @@
       "adaptaciones": [
         "La guía propone 5 veces; aquí 2 para que quepa en la rutina."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -9055,7 +9369,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": true,
@@ -9578,7 +9892,7 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": false,
         "agarre": false,
@@ -9605,7 +9919,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: al doblar el codo, la mano puede pasar de la altura del hombro (CN-1, P25). Se cerraría con: evidencia de la fuente de que la mano no pasa del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -9637,7 +9951,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -9809,7 +10123,7 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": false,
         "agarre": false,
@@ -9837,7 +10151,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: tumbado, la altura del hombro no se puede comparar y el brazo se separa del tronco (estirado, en cruz o por encima de la cabeza) (CN-1, P25). Se cerraría con: evidencia de la fuente del ángulo del brazo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -10441,7 +10755,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -10500,7 +10814,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -10752,7 +11066,7 @@
         "Empuja el antebrazo hacia abajo estirando el codo y aguanta.",
         "Vuelve a doblar el brazo."
       ],
-      "dosis": "Mantén de 5 a 10 segundos. De 5 a 10 veces con cada brazo.",
+      "dosis": "Mantén de 5 a 10 segundos. De 2 a 10 veces con cada brazo.",
       "duracion_estimada_seg": 90,
       "variante_de": null,
       "fuente": {
@@ -10760,18 +11074,19 @@
         "titulo": "Stage 1 exercises",
         "url": "https://royalberkshire.nhs.uk/media/vdxo0b3m/stage-1-exercises_mar23.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "rehabilitación tras un ingreso hospitalario",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
-        "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
+        "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa la pauta general de NHS Forth Valley (empezar con 2 o 3 y subir hasta 10)."
       ],
       "notas_etiquetado": "",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA a partir de informes de agentes que leyeron la fuente; verificar contra la fuente)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -10795,7 +11110,7 @@
         "impacto": false,
         "carga_externa": true,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": true,
         "agarre": true,
@@ -10825,7 +11140,7 @@
       "adaptaciones": [
         "La fuente permite atar la banda a la barandilla de la cama; aquí se sujeta con la otra mano."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: al doblar el codo, la mano puede pasar de la altura del hombro (CN-1, P25). Se cerraría con: evidencia de la fuente de que la mano no pasa del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -11027,9 +11342,9 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -11055,7 +11370,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: no consta si los brazos solo reposan (Q1). Se cerraría con: la fuente o su imagen. [conservadora] brazo_sobre_hombro: tumbado, la altura del hombro no se puede comparar y el brazo se separa del tronco (estirado, en cruz o por encima de la cabeza) (CN-1, P25). Se cerraría con: evidencia de la fuente del ángulo del brazo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -11082,9 +11397,9 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": true,
         "flexion_profunda_rodilla": false,
@@ -11112,7 +11427,7 @@
       "adaptaciones": [
         "La fuente no indica repeticiones; se usan 2 o 3."
       ],
-      "notas_etiquetado": "Los antebrazos soportan parte del peso: se marca peso en manos por prudencia.",
+      "notas_etiquetado": "Los antebrazos soportan parte del peso: se marca peso en manos por prudencia. [conservadora] brazo_sobre_hombro: tumbado, la altura del hombro no se puede comparar y el brazo se separa del tronco (estirado, en cruz o por encima de la cabeza) (CN-1, P25). Se cerraría con: evidencia de la fuente del ángulo del brazo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -11141,7 +11456,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": true,
         "flexion_profunda_rodilla": false,
@@ -11253,7 +11568,7 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": false,
         "agarre": true,
@@ -11281,7 +11596,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "La fuente propone la versión de pie si cuesta bajar al suelo, y consultar antes tras una operación de cadera o espalda.",
+      "notas_etiquetado": "La fuente propone la versión de pie si cuesta bajar al suelo, y consultar antes tras una operación de cadera o espalda. [conservadora] brazo_sobre_hombro: tumbado, la altura del hombro no se puede comparar y el brazo se separa del tronco (estirado, en cruz o por encima de la cabeza) (CN-1, P25). Se cerraría con: evidencia de la fuente del ángulo del brazo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -11363,9 +11678,9 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -11391,7 +11706,7 @@
         "consultado": "2026-10-14"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: no consta si los brazos solo reposan (Q1). Se cerraría con: la fuente o su imagen. [conservadora] brazo_sobre_hombro: tumbado, la altura del hombro no se puede comparar y el brazo se separa del tronco (estirado, en cruz o por encima de la cabeza) (CN-1, P25). Se cerraría con: evidencia de la fuente del ángulo del brazo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -11475,7 +11790,7 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": false,
         "agarre": false,
@@ -11504,7 +11819,7 @@
       "adaptaciones": [
         "La guía pone una almohada bajo el ombligo; aquí se omite."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: tumbado, la altura del hombro no se puede comparar y el brazo se separa del tronco (estirado, en cruz o por encima de la cabeza) (CN-1, P25). Se cerraría con: evidencia de la fuente del ángulo del brazo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -11814,7 +12129,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": true,
@@ -11842,7 +12157,7 @@
       "adaptaciones": [
         "La fuente no fija tiempos; se usa la pauta del NIA para estiramientos."
       ],
-      "notas_etiquetado": "No hacerlo tras una prótesis de cadera: cruza la pierna.",
+      "notas_etiquetado": "No hacerlo tras una prótesis de cadera: cruza la pierna. [conservadora] ambos_brazos: no consta si los brazos solo reposan (Q1). Se cerraría con: la fuente o su imagen.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -11871,7 +12186,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -12446,7 +12761,7 @@
         "impacto": false,
         "carga_externa": true,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": false,
         "agarre": true,
@@ -12476,7 +12791,7 @@
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
       ],
-      "notas_etiquetado": "La fuente no dice hasta dónde se abre el brazo.",
+      "notas_etiquetado": "La fuente no dice hasta dónde se abre el brazo. [conservadora] brazo_sobre_hombro: tumbado, la altura del hombro no se puede comparar y el brazo se separa del tronco (estirado, en cruz o por encima de la cabeza) (CN-1, P25). Se cerraría con: evidencia de la fuente del ángulo del brazo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -12570,8 +12885,8 @@
         "ambos_brazos": false,
         "agarre": false,
         "peso_en_manos": false,
-        "flexion_profunda_rodilla": false,
-        "flexion_amplia_cadera": false,
+        "flexion_profunda_rodilla": true,
+        "flexion_amplia_cadera": true,
         "puntillas_talones": false,
         "inclinacion_tronco": false,
         "rotacion_tronco": false
@@ -12581,7 +12896,7 @@
         "Sube el brazo con el codo estirado hasta dejarlo junto a la oreja.",
         "Bájalo despacio. Gírate y cambia de brazo."
       ],
-      "dosis": "De 5 a 10 veces con cada brazo.",
+      "dosis": "De 2 a 10 veces con cada brazo.",
       "duracion_estimada_seg": 75,
       "variante_de": "elevacion-brazos-tumbado",
       "fuente": {
@@ -12589,18 +12904,19 @@
         "titulo": "Stage 1 exercises",
         "url": "https://royalberkshire.nhs.uk/media/vdxo0b3m/stage-1-exercises_mar23.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "especifica_de": "rehabilitación tras un ingreso hospitalario",
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
-        "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
+        "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa la pauta general de NHS Forth Valley (empezar con 2 o 3 y subir hasta 10)."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] flexion_profunda_rodilla y flexion_amplia_cadera: tumbado de lado, ni la fuente ni la instrucción dicen cómo van las piernas. Se cerraría con: una fuente que fije la postura de las piernas.",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA a partir de informes de agentes que leyeron la fuente; verificar contra la fuente)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {
@@ -12647,18 +12963,18 @@
         "titulo": "Breathing exercises for stress",
         "url": "https://www.nhs.uk/mental-health/self-help/guides-tools-and-activities/breathing-exercises-for-stress/",
         "licencia": "Open Government Licence v3.0",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-21"
       },
       "adaptaciones": [
         "La fuente recomienda al menos 5 minutos; aquí unos 3 para que quepa en la rutina."
       ],
-      "notas_etiquetado": "La fuente aconseja consultar a un profesional si el ejercicio angustia o si el estrés o la ansiedad son intensos.",
+      "notas_etiquetado": "",
       "validacion": {
-        "estado": "borrador",
+        "estado": "basado_en_fuente_publica",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
         "etiquetado_por": "Claude (borrador generado con IA a partir de informes de agentes que leyeron la fuente; verificar contra la fuente)",
-        "revisado_por": null,
-        "fecha_revision": null
+        "revisado_por": "JJhiru",
+        "fecha_revision": "2026-10-21"
       }
     },
     {

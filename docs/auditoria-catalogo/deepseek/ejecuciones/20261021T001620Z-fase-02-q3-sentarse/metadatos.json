@@ -1,0 +1,105 @@
+{
+  "idEjecucion": "20261021T001620Z-fase-02-q3-sentarse",
+  "fecha": "2026-10-21T00:16:20.785Z",
+  "fase": {
+    "id": "fase-02-q3-sentarse",
+    "titulo": "Consulta acotada (C3): opciones A, B y C del plan de Q3 para la familia sentarse-levantarse",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-02-q3-sentarse.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "334a469a-c165-4036-8de6-253e6249652c",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 640,
+    "falloCache": 50832,
+    "salida": 6687,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 81246,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "334a469a-c165-4036-8de6-253e6249652c",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 640,
+        "falloCache": 50832,
+        "salida": 6687,
+        "razonamiento": 0
+      },
+      "coste": 0.023277839999999998,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.023277839999999998,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "f65703627d0dff673f9ab83ce31d08ee4fc2cc7c",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "25b6d1be013d708d046d439fe7dd53cdd06b26c2",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": []
+  },
+  "bloque": 1,
+  "continuacion": null,
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36304,
+      "sha256": "21664d9fbb0ce8caa3691fb4a2b7e174167e79499b5f7fe7750fac5329e7886a"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 14440,
+      "sha256": "49f0378f38670d1a81ca0913410446f2f2df8af37ff202ffacb70022f8d41504"
+    },
+    {
+      "id": "registro",
+      "procedencia": "docs/auditoria-catalogo/registro.md",
+      "caracteres": 19320,
+      "sha256": "9a7ac8071e6bc65c5561f6c559de5dc6fa7abdb5037a3576518eac8f6498fa5f"
+    },
+    {
+      "id": "plan-q3",
+      "procedencia": "docs/auditoria-catalogo/plan-cambios-q3-sentarse-levantarse.md",
+      "caracteres": 4729,
+      "sha256": "306bf0161b94aa487c1febb72f4d14e3b6d571c6f0d95c320cf759c2b006657b"
+    },
+    {
+      "id": "evidencia-fuentes",
+      "procedencia": "docs/auditoria-catalogo/deepseek/analisis-claude/evidencia-fuentes-q1-q2.md",
+      "caracteres": 22298,
+      "sha256": "c24e7e20ffbff3641fd8697ddfdac828c4459ded66341ba181dbccd31b565522"
+    },
+    {
+      "id": "catalogo-de-pie",
+      "procedencia": "public/data/catalogo.json#catalogo-de-pie",
+      "caracteres": 59851,
+      "sha256": "08737376db7d15d600b2136af9e8ce9336f617422aa8e86494231cdaf05c3088"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "59968d36bc4111896203ba4fca50906e0616c652a2111bb870e45f8d460402ad",
+    "respuestaApi": "1ed94d56da8fb8d25c720e3a7b53fad5412aa57ae1fdae623efc1bc42a9d659c"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261021T001620Z-fase-02-q3-sentarse/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261021T001620Z-fase-02-q3-sentarse/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261021T001620Z-fase-02-q3-sentarse/respuesta-api.json"
+  }
+}
