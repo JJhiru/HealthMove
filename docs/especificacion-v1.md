@@ -69,6 +69,15 @@ original (por ejemplo, "lean slightly forwards") y no se inventa un umbral numé
 puede usarse en la explicación atribuyéndolo a la fuente (registro de la auditoría, decisiones
 del 2026-10-19, P5).
 
+`brazo_sobre_hombro` se aplica con su definición literal: codo **o mano** por encima de la altura
+del hombro, en cualquier momento (también en la postura de partida o de apoyo) y lo mueva quien lo
+mueva. Cuenta también la mano que pasa del hombro solo porque se dobla el codo. Un `false` necesita
+evidencia directa, así que se marca por precaución cuando el brazo llega «hasta» o «a» la altura
+del hombro (o «casi») sin que conste que no la pasa, y cuando, tumbado o boca abajo, el brazo se
+separa del tronco (estirado, en cruz o por encima de la cabeza), porque la altura no se puede
+comparar. No se marca la mano apoyada en el hombro con el codo por debajo, si el texto lo fija
+(registro de la auditoría, CN-1 y P25).
+
 ### Exclusiones del catálogo v1 (ningún ejercicio las incluye)
 
 Movimientos de cuello · arrodillarse o apoyar las rodillas en el suelo · desplazarse por el
@@ -76,8 +85,8 @@ espacio · ejercicios de impacto (la exigencia `impacto` se mantiene para el fut
 aislada de la muñeca (giros o círculos), porque ninguna exigencia la cubre · ejercicios que
 dependen de reposabrazos · ejercicios con material especial (pelotas de terapia, escalones).
 
-El catálogo v0.3.0 tiene 220 ejercicios. Por posición: 96 sentado, 50 de pie, 61 tumbado en la
-cama y 21 en el suelo (algunos admiten dos posiciones). Las fuentes y los huecos están en
+El catálogo v0.3.0 tiene 225 ejercicios (220 hasta el 2026-10-22, cuando 5 se separaron en versión sentada y de pie; registro, P23). Por posición: 96 sentado, 50 de pie, 61 tumbado en la
+cama y 21 en el suelo (los 3 de sentarse y levantarse usan dos). Las fuentes y los huecos están en
 `docs/revision-catalogo.md`.
 
 ### Lado del cuerpo

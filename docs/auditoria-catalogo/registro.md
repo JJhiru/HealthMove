@@ -112,12 +112,16 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 5 | equilibrio-una-pierna-pared | REQUIERE CORRECCIONES | pendiente |
 | 7 | inclinacion-lateral-de-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 5 | estiramiento-gemelo-pared | REQUIERE CORRECCIONES | pendiente |
+| 10 | recoger-toalla-dedos-pies | PENDIENTE DE DECISIÓN | pendiente |
+| 10 | banda-tobillo-fuera-sentado | PENDIENTE DE DECISIÓN | pendiente |
+| 10 | cuadriceps-estatico-sentado | PENDIENTE DE DECISIÓN | pendiente |
+| 10 | cruce-piernas-isometrico | PENDIENTE DE DECISIÓN | pendiente |
 
 ## Pendientes
 
-- Auditados: 41 de 220. Siguiente: St Helens y NHS Forth Valley. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
+- Auditados: 45 de 225 (220 hasta P23, que separa 5 versiones de pie) (el lote 10, Arthritis UK, se adelantó por el hueco de C3 del informe de pendientes). Siguiente: St Helens y NHS Forth Valley. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
 - Lista de candidatos a adaptación unilateral: ver los resúmenes de los lotes 1, 3 y 4.
-- Tarea de interfaz pendiente: comunicar `especifica_de` (decisión 3).
+- ~~Tarea de interfaz pendiente: comunicar `especifica_de` (decisión 3).~~ Hecha en P17 (2026-10-21).
 - **Actualización (2026-10-16):**
   - Los resultados de los lotes 1 a 5 son anteriores al protocolo 1.0 y se revisarán con él antes de aplicar cambios al catálogo.
   - Las tareas de interfaz están en la cuestión Q8 del protocolo.
@@ -134,6 +138,25 @@ Plantilla en `protocolo.md`, R1.4.
 - Reglas consideradas y por qué no resuelven: la definición literal de §4 da `true` con evidencia D, y así se ha aplicado. Pero el texto de la opción sugiere que el filtro busca la elevación del brazo. Elegir entre la definición y la intención de la opción es un criterio que el protocolo no tiene.
 - Propuesta del auditor (sin aplicar): mantener la definición literal (más restrictiva, en línea con el criterio conservador de P9, P10 y P14) y, si se quiere afinar, cambiar el texto de la opción (Q8) en lugar de la etiqueta.
 - Valor provisional: `true` en `curl-biceps-sentado`, por la definición literal con evidencia D (aplicado el 2026-10-21, P16).
+- Estado: **resuelto por P25 (2026-10-22)**. Manda la definición literal; la mano que pasa del hombro al doblar el codo cuenta. Ver P25 y `deepseek/analisis-claude/fase-08-cn1.md`.
+
+### CN-2 · Preparar el material antes de empezar
+- Ejercicio(s): `banda-tobillo-fuera-sentado` y `recoger-toalla-dedos-pies` (lote 10). Casos equivalentes sin auditar: los que piden poner un lazo de banda en las rodillas, los muslos, los tobillos o los pies (por ejemplo, `banda-separar-pierna-tumbado`, `banda-puente-tumbado`, `banda-elevacion-pierna-tumbado` y `banda-deslizar-talon-tumbado`).
+- Detalle: la especificación §4 marca una exigencia si aparece «en cualquier momento del ejercicio (posición inicial, movimiento o vuelta)». No dice si cuenta la preparación del material: atar un lazo de banda (dos manos y cerrar la mano), meter el pie en él o dejar una toalla en el suelo (llegar al pie o al suelo).
+- Evidencia: D, «Make a loop out of a piece of elastic fitness band» (Arthritis UK, «Seated ankle out stretch with resistance band») y la imagen, con el nudo. D, «Sit down with a towel on the floor in front of you».
+- Reglas consideradas y por qué no resuelven: §4 enumera las fases del ejercicio, y la preparación no está entre ellas ni excluida. R2.1 permitiría marcar ante la duda, pero se aplica a una exigencia dudosa del ejercicio, no a decidir qué forma parte del ejercicio. DG-6 trata los consejos de seguridad, no la preparación.
+- Propuesta del auditor (sin aplicar): tres opciones. (a) La preparación cuenta: más `true` (`agarre`, `ambos_brazos`, y a veces `inclinacion_tronco` o `flexion_amplia_cadera`) en todos los ejercicios con banda en las piernas. (b) No cuenta si la puede hacer otra persona antes, y la instrucción la separa como preparación («Antes de empezar, o con ayuda: …»). Es un texto de interfaz y pasaría por `healthmove-safety-reviewer`. (c) No cuenta nunca.
+- Valor provisional: el actual en los dos ejercicios. Ningún cambio sin aprobación.
+- Alcance (DS-231, 2026-10-22): 23 ejercicios con banda o toalla y un paso de preparación, 22 en borrador y 1 publicado (`extension-codo-toalla-tumbado`, «Pon una toalla doblada bajo el antebrazo»). Con la opción (a) cambiarían 14, entre ellos el publicado. La opción (b) incluye un texto de interfaz (Q8, DS-232).
+- Estado: pendiente.
+
+### CN-3 · Apoyo de las manos que solo aparece en la imagen
+- Ejercicio(s): `cruce-piernas-isometrico` (lote 10; las dos manos sujetan el borde en la imagen). Relacionado: `recoger-toalla-dedos-pies` (una mano; la imagen es I y encaja en Q2).
+- Detalle: la imagen de la fuente muestra con claridad (D) que las manos se sujetan, pero el texto no lo pide. No se sabe si ese apoyo forma parte de la ejecución o es solo la postura del dibujo.
+- Evidencia: D (imagen «Leg Cross Stretch», Arthritis UK). El texto: «Sit on the edge of a table, seat or bed and cross your ankles».
+- Reglas consideradas y por qué no resuelven: Q1 y Q2 tratan el contacto o el apoyo cuya prensión no se ve. R7.5 trata la imagen que no determina un requisito. Aquí la imagen determina el apoyo, pero no si el ejercicio lo exige (DS-226).
+- Propuesta del auditor (sin aplicar): (a) cuenta, con `true` conservador, que es el valor actual; (b) no cuenta si el texto no lo pide y el movimiento no lo necesita.
+- Valor provisional: `ambos_brazos` y `agarre` en `true` conservador (P24).
 - Estado: pendiente.
 
 ## Propuestas retiradas
@@ -309,3 +332,62 @@ El desarrollador pidió seguir con «las demas cosas a corregir» sin consultarl
     - En el catálogo: `estado` = `basado_en_fuente_publica`, `revisado_por` = «JJhiru», `fecha_revision` = `2026-10-21` (especificación §7.6).
     - **Qué significa:** la auditoría documental contrastó cada ejercicio con su fuente pública, y su autor lo revisó. **No es una validación clínica ni profesional:** `revisado_por_profesional` queda sin usar, y la validación profesional sigue como riesgo abierto (especificación §7.5).
     - Efecto: fuera del modo desarrollo, el motor ya puede usar estos 30. Los otros 190 siguen en `borrador`.
+
+## Decisiones del desarrollador (2026-10-22)
+
+Sobre el informe `problemas-pendientes-2026-10-21.md`.
+
+22. **P22 · Aplazamientos y encargos.**
+    - **C1 (validación profesional), aplazado.** Texto (literal): «Ignoralo y marca la razon (aun no tenemos profesionales trabajando)». El riesgo sigue abierto y declarado en la app (especificación §7.5). No cambia `revisado_por_profesional`.
+    - **G7 y G8, aplazados.** Texto (literal): «dejemoslos para despues». Los archivos de continuidad no se actualizan y las fuentes con error 403 siguen sin descargar.
+    - **C3: continuar auditando** por lotes, con aprobación del desarrollador en cada uno (P21).
+    - **CN-1:** el desarrollador pide ejemplos que se repitan para precisar la definición. Preparados en `cn1-ejemplos-2026-10-22.md`. CN-1 sigue pendiente.
+    - **Q5:** el desarrollador revisará todas las adaptaciones frente a su fuente. Preparado en `adaptaciones-q5-2026-10-22.md`. Q5 sigue pendiente.
+    - En el informe, G1 pasa a la tabla de críticos como C4 (DS-180).
+
+23. **P23 · C2 (D5) por la opción (c); C4 y Q5 para después; autorización para modificar el catálogo.**
+    - **Textos (literales):** «C2: opcion c», «C4: Para despues», «Q5: luego lo reviso», «te doy autorizacion de modificar el catalogo si lo necesitas».
+    - **C2 / D5, aplicado:** los 5 ejercicios con `sentado,de_pie` que eran alternativas, y no una secuencia, se separan en dos entradas. La que conserva el id es sentada (`posiciones: [sentado]`). La nueva, `<id>-pie`, es de pie (`posiciones: [de_pie]`, sin `silla`) con `equilibrio_sin_apoyo: true` y `variante_de` apuntando a la sentada: con las dos manos ocupadas no hay forma de sujetarse (especificación §7, regla 4).
+      - Ejercicios: `estiramiento-hombro-cruzado`, `estiramiento-triceps`, `estiramiento-pecho-manos-lumbar`, `estiramiento-pecho-manos-detras` y `manos-espalda-codo-contrario`.
+      - Cada versión lleva un primer paso con su posición. `estiramiento-pecho-manos-lumbar` sentado lleva la adaptación «La fuente lo describe de pie; aquí se hace sentado» (R3.1, pendiente de Q5). Lo que dice cada fuente sobre la posición está en `notas_etiquetado`.
+      - Ninguna otra etiqueta cambia. Los 10 siguen en `borrador`, sin auditar.
+      - Con esto, `posiciones` significa en todo el catálogo «todas las que usa el ejercicio» (especificación §3): los otros 3 con `sentado,de_pie` son secuencias de sentarse y levantarse. **D5 queda resuelta.**
+      - Ilustraciones de pie nuevas en `scripts/ilustraciones/depie.mjs` (225 en total); `sw.js` actualizado.
+      - El catálogo pasa de 220 a 225 ejercicios. No cambian `version` ni `actualizado`, como en P16 a P21.
+    - **C4 (huellas, protocolo 1.1) y Q5:** aplazados.
+    - **Autorización:** Claude puede modificar `public/data/catalogo.json` cuando lo necesite, con la evidencia y las decisiones de este registro. Aprobar ejercicios (P21) y fijar criterios nuevos siguen siendo decisiones del desarrollador.
+    - **CN-1:** el desarrollador acepta la propuesta de `cn1-ejemplos-2026-10-22.md` y pide cerrarla con DeepSeek (consulta C9, `deepseek/fases/fase-08-cn1.*`).
+24. **P24 · Lote 10: cambios aplicados por la autorización de P23.**
+    - Se aplica todo lo de `lote-10.md` que no depende de CN-2 ni de Q5.
+    - Etiquetas, todas `true` conservadoras con su nota: `agarre` en `recoger-toalla-dedos-pies`; `flexion_profunda_rodilla` en `banda-tobillo-fuera-sentado`; `ambos_brazos` y `agarre` en `cruce-piernas-isometrico`.
+    - Textos: las aclaraciones de las instrucciones, la dosis «Hasta 10 veces» y las adaptaciones del informe; `especifica_de` («pies y tobillos», «cadera», «rodilla») y `consultado` (2026-10-22) en los 4.
+    - Sin aplicar: lo que depende de CN-2 (`agarre` y `ambos_brazos` de `banda-tobillo-fuera-sentado`) y de Q5 (la posición de `cuadriceps-estatico-sentado` y la postura de las piernas y la ilustración de `cruce-piernas-isometrico`).
+    - `recoger-toalla-dedos-pies` pasa de REQUIERE CORRECCIONES a PENDIENTE DE DECISIÓN (CN-2). Los 4 siguen en `borrador`.
+    - Revisión de DeepSeek del lote: pendiente (la consulta C9 de CN-1 no se pudo enviar: la clave leída no tenía un formato válido).
+25. **P25 · CN-1 resuelto con DeepSeek (consulta C9), por delegación de P23.**
+    - Consulta: `deepseek/ejecuciones/20261023T021407Z-fase-08-cn1` y sus dos continuaciones (DS-186 a DS-222). Análisis: `deepseek/analisis-claude/fase-08-cn1.md`.
+    - **Criterio**, incorporado a la especificación §4:
+      - manda la definición literal: codo o mano por encima de la altura del hombro, en cualquier momento (también en la postura de partida) y lo mueva quien lo mueva;
+      - cuenta la mano que pasa del hombro solo porque se dobla el codo;
+      - `true` conservador si el brazo llega «hasta», «a» o «casi» a la altura del hombro sin que conste que no la pasa, y si, tumbado, el brazo se separa del tronco;
+      - `false` con evidencia si la mano se apoya en el hombro con el codo por debajo y el texto lo fija.
+    - **No es una regla nueva:** aplica la definición de §4 con R2.1 y R2.2. Se retiran de la propuesta los dos umbrales sin definir («más allá de la horizontal» y «como si estuviera de pie»), como pedía DeepSeek (DS-203 y DS-204).
+    - **Aplicado:** 23 ejercicios en `borrador` pasan `brazo_sobre_hombro` a `true` conservador, con su nota; la nota de `marcha-circulos-codos-sentado` pasa al formato `[conservadora]`. Ningún publicado cambia. `brazo_arriba` (modo auditoría): 186 → 163.
+    - **Pendiente, de interfaz (DS-210, Q8):** el texto de la opción `brazo_arriba` describe menos de lo que filtra. Propuesta sin aplicar: «No puedo, o me cuesta, subir el brazo o la mano por encima del hombro».
+26. **P26 · M3 (DS-27) revisado: ningún falso negativo; corrección de `banda-elevar-brazos-pie`.**
+    - Encargo (literal): «M3: arreglalo entonces we».
+    - Ya se habían revisado las fuentes de los 11 ejercicios con `equilibrio_sin_apoyo: true` (`deepseek/analisis-claude/evidencia-fuentes-q1-q2.md` §4 quater). En 9, la fuente pide hacerlo sin apoyo o con las manos ocupadas. `sentarse-levantarse` se cerró en el lote 7 (DS-154). En `elevaciones-laterales-botella`, poner la mano libre en un apoyo sería una variante sin fuente (DG-5). Las 5 versiones de pie de P23 tienen las manos ocupadas. **Ninguna etiqueta de `equilibrio_sin_apoyo` cambia.**
+    - El único caso abierto, `banda-elevar-brazos-pie`, se abrió de nuevo: South Tees, «Rotator cuff in standing with resistance band», `https://www.southtees.nhs.uk/?p=32161`, actualizada el 09-07-2024, HTML con SHA-256 (prefijo) `f796dbe915372ef7`, texto y figuras A a C.
+      - Las fotos: de pie, sin apoyo, con las dos manos cerradas sobre la banda. `equilibrio_sin_apoyo: true` es correcto (D).
+      - **Corregido:**
+        - `agarre` pasa de `false` a `true` (D: las fotos);
+        - las instrucciones: «Arms are parallel» (Fig. A) son los brazos paralelos entre sí, colgando delante de los muslos, no «paralelos al suelo»;
+        - nueva adaptación: «hasta donde te resulte cómodo» en lugar de «as high as the physiotherapist has directed»;
+        - la ilustración empieza con los brazos abajo (R7.6);
+        - `consultado` = 2026-10-22.
+      - Sigue en `borrador`: no tiene informe de lote. Efecto: sale de `cerrar_mano` (modo auditoría).
+27. **P27 · Revisión de DeepSeek del lote 10 (consulta C10).**
+    - Consulta: `deepseek/ejecuciones/20261023T022202Z-fase-09-lote10` y su continuación (DS-223 a DS-240). Análisis: `deepseek/analisis-claude/fase-09-lote10.md`.
+    - Nuevo **CN-3** (apoyo que solo aparece en la imagen), con el valor actual como provisional. Se cuenta el alcance de CN-2. Ninguna etiqueta cambia.
+    - La consulta C9 (CN-1), que en P24 figuraba como no enviada, se hizo después con la clave del `.env` (P25).
+

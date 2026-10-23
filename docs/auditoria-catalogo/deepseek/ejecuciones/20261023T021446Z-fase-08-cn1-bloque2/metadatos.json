@@ -1,0 +1,113 @@
+{
+  "idEjecucion": "20261023T021446Z-fase-08-cn1-bloque2",
+  "fecha": "2026-10-23T02:14:46.452Z",
+  "fase": {
+    "id": "fase-08-cn1",
+    "titulo": "CN-1: definición de brazo_sobre_hombro con los ejemplos que se repiten (C9)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-08-cn1.md"
+  },
+  "estado": "truncada",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "970245ca-39cd-490e-a85a-938dfb550b22",
+  "finishReason": "length",
+  "uso": {
+    "aciertoCache": 54400,
+    "falloCache": 153,
+    "salida": 6000,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 86978,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "truncada",
+      "finishReason": "length",
+      "id": "970245ca-39cd-490e-a85a-938dfb550b22",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 54400,
+        "falloCache": 153,
+        "salida": 6000,
+        "razonamiento": 0
+      },
+      "coste": 0.0075723,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.0075723,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "fcb38be9aac0b69cf178e61b93c9ec143492222c",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "185ad76b7b6edbd7d30c1c24eac607af2deb2ef3",
+      "sinConfirmar": true
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/especificacion-v1.md",
+      "docs/auditoria-catalogo/registro.md",
+      "docs/auditoria-catalogo/cn1-ejemplos-2026-10-22.md"
+    ]
+  },
+  "bloque": 2,
+  "continuacion": {
+    "continuaDe": "20261023T021407Z-fase-08-cn1",
+    "raiz": "20261023T021407Z-fase-08-cn1",
+    "orden": "Tu respuesta anterior se interrumpió por el límite de longitud. Continúa exactamente desde el punto donde se cortó, sin repetir lo ya escrito, sin resumirlo y manteniendo el mismo formato y la numeración de los hallazgos."
+  },
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36607,
+      "sha256": "98cbd65f05787149f961258084ce37a4b17bf58e130d9407ce9d3c151df598c9"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 14541,
+      "sha256": "d3d5a5e513bf3d6fe00a6bdbac01e38380b23117f7d3744e0c77b16679927ff4"
+    },
+    {
+      "id": "registro",
+      "procedencia": "docs/auditoria-catalogo/registro.md",
+      "caracteres": 37349,
+      "sha256": "a5236fa4bde6670d2813acdb720c989067139db0c0f102c8de8bcc2e93028657"
+    },
+    {
+      "id": "opciones-js",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6246,
+      "sha256": "4430708c5729fd9d4f75a783a575a7a6d826cccc0d94bc6e5d6c2e63636eaf4b"
+    },
+    {
+      "id": "propuesta-cn1",
+      "procedencia": "docs/auditoria-catalogo/cn1-ejemplos-2026-10-22.md",
+      "caracteres": 9099,
+      "sha256": "cff5e939d4e28012ed13374dc8330e8b999a9479a7922df6b93db95a82720354"
+    },
+    {
+      "id": "ejercicios-cn1",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 46168,
+      "sha256": "276cce195102b533ed7bee96e369648c3451a5487772990c72b08a5abeb96390"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "c82073300cb10226d82735729c45535952a05a5d595badd2026d160fdc72cbb8",
+    "respuestaApi": "653aff37bb0cd46a880c8e192583ce9420305396c9a4aafc249642c2aea1893b"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261023T021446Z-fase-08-cn1-bloque2/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261023T021446Z-fase-08-cn1-bloque2/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261023T021446Z-fase-08-cn1-bloque2/respuesta-api.json"
+  }
+}

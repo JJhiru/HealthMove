@@ -1,0 +1,21 @@
+{
+  "id": "fase-08-cn1",
+  "titulo": "CN-1: definición de brazo_sobre_hombro con los ejemplos que se repiten (C9)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-08-cn1.md",
+  "bloques": [
+    { "id": "protocolo", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/protocolo.md" },
+    { "id": "especificacion", "tipo": "archivo", "ruta": "docs/especificacion-v1.md" },
+    { "id": "registro", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/registro.md" },
+    { "id": "opciones-js", "tipo": "archivo", "ruta": "public/js/opciones.js" },
+    { "id": "propuesta-cn1", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/cn1-ejemplos-2026-10-22.md" },
+    { "id": "ejercicios-cn1", "tipo": "catalogo-ids", "ids": [
+      "elevacion-brazo-sentado", "inclinacion-lateral-brazo-arriba", "press-encima-cabeza-sentado", "elevacion-brazos-tumbado",
+      "curl-biceps-sentado", "banda-curl-sentado", "flexion-codo-tumbado", "banda-flexion-codo-tumbado", "talones-flexion-codo-sentado",
+      "elevaciones-laterales-botella", "banda-elevaciones-laterales-sentado", "estiramiento-espalda-alta-sentado", "abrir-pierna-brazo-pared", "respiracion-lado-brazo-adelante", "deslizar-toalla-pared",
+      "boxeo-circulos-alto", "boxeo-circulos-pecho", "pulgar-dedos",
+      "marcha-circulos-codos-sentado", "estiramiento-triceps", "estiramiento-hombro-cruzado", "giro-tronco-sentado",
+      "elevar-brazo-boca-abajo", "elevacion-pasiva-brazo-tumbado", "cuadriceps-lado-suelo", "extension-cadera-boca-abajo", "elevacion-lateral-botella-tumbado"
+    ] }
+  ]
+}

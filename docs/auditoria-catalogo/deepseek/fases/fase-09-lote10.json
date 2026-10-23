@@ -1,0 +1,13 @@
+{
+  "id": "fase-09-lote10",
+  "titulo": "Revisión del lote 10 (4 ejercicios sentados de Arthritis UK) y de la corrección de banda-elevar-brazos-pie (C10)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-09-lote10.md",
+  "bloques": [
+    { "id": "protocolo", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/protocolo.md" },
+    { "id": "especificacion", "tipo": "archivo", "ruta": "docs/especificacion-v1.md" },
+    { "id": "registro", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/registro.md" },
+    { "id": "lote-10", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/lote-10.md" },
+    { "id": "catalogo-lote10", "tipo": "catalogo-ids", "ids": ["recoger-toalla-dedos-pies", "banda-tobillo-fuera-sentado", "cuadriceps-estatico-sentado", "cruce-piernas-isometrico", "banda-elevar-brazos-pie"] }
+  ]
+}
