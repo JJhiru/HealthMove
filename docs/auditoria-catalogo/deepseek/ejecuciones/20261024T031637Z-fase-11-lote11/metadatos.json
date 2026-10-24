@@ -1,0 +1,113 @@
+{
+  "idEjecucion": "20261024T031637Z-fase-11-lote11",
+  "fecha": "2026-10-24T03:16:37.503Z",
+  "fase": {
+    "id": "fase-11-lote11",
+    "titulo": "Auditoría del lote 11 (9 ejercicios: St Helens, NHS Forth Valley y NHS Fife), borrador de DeepSeek sobre la evidencia de Claude (C12)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-11-lote11.md"
+  },
+  "estado": "truncada",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "a5d88a1c-6841-4460-92ca-3fb912d243cf",
+  "finishReason": "length",
+  "uso": {
+    "aciertoCache": 640,
+    "falloCache": 53422,
+    "salida": 16000,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 86786,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "truncada",
+      "finishReason": "length",
+      "id": "a5d88a1c-6841-4460-92ca-3fb912d243cf",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 640,
+        "falloCache": 53422,
+        "salida": 16000,
+        "razonamiento": 0
+      },
+      "coste": 0.03523044,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.03523044,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "c912d3fc9bcea84f1a9af12f1342a627a9127ade",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "c56183bcef150aabf885298cd472fcb52e21df18",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/evidencia/lote-11.md"
+    ]
+  },
+  "bloque": 1,
+  "continuacion": null,
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36949,
+      "sha256": "4a7cbb32481a6295fec3a0eb92181f8f472194629754a8422e4b50b56524d332"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 15774,
+      "sha256": "7c96d4bd545c4fbfe0b6a1e2508bf923cb7c6abec44520ad3cfc2feaf88dc775"
+    },
+    {
+      "id": "registro",
+      "procedencia": "docs/auditoria-catalogo/registro.md",
+      "caracteres": 46052,
+      "sha256": "49f0db16cdd13efade9a9f58d423ba615cbb2dc9620b9d185a03b3aa547a035a"
+    },
+    {
+      "id": "opciones",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6246,
+      "sha256": "4430708c5729fd9d4f75a783a575a7a6d826cccc0d94bc6e5d6c2e63636eaf4b"
+    },
+    {
+      "id": "ejemplo-formato-lote-10",
+      "procedencia": "docs/auditoria-catalogo/lote-10.md",
+      "caracteres": 32497,
+      "sha256": "2dc987f230763b2297fdbef105fcac8bf1389e5e6a4719374e7dcad0c4ca1038"
+    },
+    {
+      "id": "evidencia-lote-11",
+      "procedencia": "docs/auditoria-catalogo/evidencia/lote-11.md",
+      "caracteres": 12061,
+      "sha256": "35430fe782fb75e9f0976f63124b615de9d223fc76d7cdabaa65dbc9e63c8357"
+    },
+    {
+      "id": "catalogo-lote11",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 16011,
+      "sha256": "469e9740709d4c60e9e399e291d8e9e6e09842da8b9458627457db83dc2f0b2f"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "83023bc6018dc10b3f40a1ad782bec0d5c926faa29f4c9dc81e1411a6d8d8c92",
+    "respuestaApi": "bcd1d49d30bf355dd5c4daf6ce390bb36391626281d21493dedbb422cdbd50da"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T031637Z-fase-11-lote11/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T031637Z-fase-11-lote11/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T031637Z-fase-11-lote11/respuesta-api.json"
+  }
+}

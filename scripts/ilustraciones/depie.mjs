@@ -31,7 +31,7 @@ export const DE_PIE_FICHAS = {
   'elevar-puntas-pies-apoyo': PA({}, { pieD: 125, pieI: 125 }),
   'flexion-rodilla-pie-apoyo': PA({}, { rodillaD: -95 }),
   'tandem-apoyo': P({ caderaD: 9, rodillaD: 9, caderaI: -9, rodillaI: -9, alcanza: { manoD: 'respaldo' } }, {}, { apoyos: ['silla-delante'] }),
-  'de-pie-mano-preparada': P({ brazoD: 40, codoD: 40, caderaD: 4, caderaI: -4 }, {}, { apoyos: ['silla-delante'] }),
+  'de-pie-mano-preparada': P({ brazoD: 52, codoD: 52, caderaD: 4, caderaI: -4 }, {}, { apoyos: ['silla-delante'] }),
   'circulos-cadera-pie': PA({}, {}, { circulo: ['cadera'] }),
   'paso-atras-apoyo': PA({}, { caderaI: -25, rodillaI: -25 }),
   'marcha-sitio-apoyo': PA({}, { caderaD: 70, rodillaD: -10 }),

@@ -116,10 +116,19 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 10 | banda-tobillo-fuera-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 10 | cuadriceps-estatico-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 10 | cruce-piernas-isometrico | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 11 | elevacion-pierna-recta-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 11 | apretar-gluteos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 11 | de-pie-mano-preparada | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 11 | balanceo-brazos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 11 | elevar-talones-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 11 | secarse-toalla-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 11 | paso-atras-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 11 | abrazar-rodilla-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 11 | gemelo-banda-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 
 ## Pendientes
 
-- Auditados: 45 de 225 (220 hasta P23, que separa 5 versiones de pie) (el lote 10, Arthritis UK, se adelantó por el hueco de C3 del informe de pendientes). Siguiente: St Helens y NHS Forth Valley. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
+- Auditados: 54 de 225 (lote 11, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
 - Lista de candidatos a adaptación unilateral: ver los resúmenes de los lotes 1, 3 y 4.
 - ~~Tarea de interfaz pendiente: comunicar `especifica_de` (decisión 3).~~ Hecha en P17 (2026-10-21).
 - **Actualización (2026-10-16):**
@@ -400,3 +409,9 @@ Sobre el informe `problemas-pendientes-2026-10-21.md`.
     - **Lote 10:** los 4 pasan a LISTO PARA APROBACIÓN DOCUMENTAL. Siguen en `borrador` hasta que el desarrollador los apruebe (P21).
     - **M2:** se deja como está (ya decidido el 2026-10-22). Sin cambios. **Comprobado en el código:** `vistaAcerca` (`app.js`) lista las fuentes de todos los ejercicios válidos, también los borradores: 79 documentos, de los que solo 7 (de 4 organizaciones) tienen ejercicios publicados. Si se quiere que salgan solo esos, es la propuesta original de M2 (filtrar con `estadoUtilizable`).
     - **M5 (Q7):** consulta C11 a DeepSeek hecha (`deepseek/ejecuciones/20261024T024933Z-fase-10-m5`, DS-241 a DS-250; análisis en `deepseek/analisis-claude/fase-10-m5.md`). Recomienda, sin decidir, un aviso genérico en la ficha y en el resumen de exclusiones (O4), después de que el validador compruebe el formato `[conservadora]` (m3) y con revisión de seguridad del texto. Q7 sigue abierta hasta que el desarrollador elija.
+29. **P29 · Auditoría del resto del catálogo, repartida con DeepSeek; aprobaciones al final.**
+    - **Texto (literal):** «Mira, con lo que ya se puede auditar la mayoria del catalogo, divide entre tu y deepseek sin importar el costo de api, y las revisiones finales la dejamos para despues. Manda el commit»
+    - **Reparto:** Claude abre las fuentes y escribe la evidencia (`evidencia/lote-NN.md`); DeepSeek redacta el borrador del lote (fase `fase-NN-loteNN`); Claude lo verifica contra las fuentes, escribe `lote-NN.md` y aplica los cambios con la autorización de P23. Las correcciones de Claude al borrador se listan en cada informe.
+    - **Aprobaciones:** ningún ejercicio cambia de `borrador` hasta la revisión final del desarrollador. Tampoco los nombres nuevos de `especifica_de` ni las adaptaciones nuevas (Q5, una a una), que se listan en cada resumen de lote.
+    - **Bloqueados:** los 7 ejercicios de fuentes que devuelven 403 (Royal Devon, CDC/Tufts y la copia de ACPRC) siguen esperando G8.
+    - **Lote 11** (St Helens, NHS Forth Valley y NHS Fife): 9 ejercicios, los 9 listos. Consulta C12.

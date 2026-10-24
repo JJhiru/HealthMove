@@ -2148,8 +2148,8 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
-        "agarre": false,
+        "ambos_brazos": true,
+        "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
         "flexion_amplia_cadera": true,
@@ -2160,7 +2160,7 @@
       "instrucciones": [
         "Siéntate con la espalda recta.",
         "Estira una pierna hacia delante con la rodilla lo más recta posible.",
-        "Sin doblar la rodilla, sube y baja la pierna.",
+        "Con la rodilla lo más recta posible, sube y baja la pierna.",
         "Cambia de pierna."
       ],
       "dosis": "10 veces con cada pierna.",
@@ -2171,10 +2171,10 @@
         "titulo": "Chair based exercises",
         "url": "https://sthk.merseywestlancs.nhs.uk/media/.leaflets/66016bfe111f20.73905449.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Subir la pierna estirada separa el muslo del asiento: flexion_amplia_cadera.",
+      "notas_etiquetado": "[conservadora] flexion_amplia_cadera: la foto de la fuente muestra el muslo de la pierna recta separándose un poco del asiento al elevarla; el texto no lo dice. Se cerraría con: una vista lateral que muestre el ángulo entre el muslo y el tronco. [conservadora] ambos_brazos: la foto muestra las dos manos apoyadas en el borde del asiento y el texto no lo pide (CN-3). Se cerraría con: evidencia de que apoyarse no forma parte de la ejecución. [conservadora] agarre: las mismas manos en el borde, sin que se vea si lo agarran (Q2, CN-3). Se cerraría con: la misma evidencia que ambos_brazos.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -2347,10 +2347,10 @@
         "titulo": "Chair based exercises",
         "url": "https://sthk.merseywestlancs.nhs.uk/media/.leaflets/66016bfe111f20.73905449.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "La foto de la fuente muestra un sillón con reposabrazos y los antebrazos descansando en ellos; el ejercicio no los usa ni depende de ellos.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -2523,7 +2523,8 @@
         "titulo": "Bed & Seated Exercises",
         "url": "https://nhsforthvalley.com/wp-content/uploads/2021/08/2Seated-Bed-Exercises.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "residencias"
       },
       "adaptaciones": [],
       "notas_etiquetado": "Las manos van abiertas y no sostienen nada. [conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
@@ -2638,7 +2639,8 @@
         "titulo": "Bed & Seated Exercises",
         "url": "https://nhsforthvalley.com/wp-content/uploads/2021/08/2Seated-Bed-Exercises.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "residencias"
       },
       "adaptaciones": [],
       "notas_etiquetado": "Sentado no se carga el peso del cuerpo: no es puntillas_talones.",
@@ -4120,8 +4122,8 @@
       },
       "instrucciones": [
         "Dobla la toalla a lo largo y sujeta un extremo con cada mano.",
-        "Pásala por encima de la cabeza hasta dejarla en la parte alta de la espalda.",
-        "Muévela de un lado a otro sobre los hombros, como al secarte después de la ducha."
+        "Pásala por encima de la cabeza hasta que toque el cuello.",
+        "Muévela de un lado a otro sobre el cuello y los hombros, como al secarte después de la ducha."
       ],
       "dosis": "10 veces. Puedes repetirlo hasta 5 veces.",
       "duracion_estimada_seg": 90,
@@ -4132,10 +4134,12 @@
         "url": "https://www.nhsfife.org/media/39645/home-grasp-version-1.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
         "especifica_de": "ictus",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
-      "adaptaciones": [],
-      "notas_etiquetado": "En el programa GRASP la toalla se coge primero de una mesa; aquí se sostiene desde el principio.",
+      "adaptaciones": [
+        "La fuente empieza con la toalla doblada sobre una mesa; aquí se sostiene desde el principio."
+      ],
+      "notas_etiquetado": "[conservadora] mano_detras: las fotos muestran la toalla por detrás de la cabeza y del cuello con las manos a los lados de la cabeza; no se ve si la mano pasa por detrás. Se cerraría con: una vista lateral o un texto que diga dónde quedan las manos.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7247,7 +7251,7 @@
         "titulo": "Balance exercises (low level)",
         "url": "https://sthk.merseywestlancs.nhs.uk/leaflets/download/sthk-606eccc802c744.80446620",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -7359,10 +7363,13 @@
         "titulo": "Strength and Balance Retraining Exercise Programme (lectura fácil)",
         "url": "https://www.nhsfife.org/media/33404/easy-read-strength-and-balance.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "discapacidad intelectual"
       },
-      "adaptaciones": [],
-      "notas_etiquetado": "[conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
+      "adaptaciones": [
+        "La fuente lo hace frente a la encimera de la cocina; aquí también vale el respaldo de una silla firme."
+      ],
+      "notas_etiquetado": "ambos_brazos y agarre: la fuente pide sujetarse con las dos manos («Hold on with both hands»).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -9383,7 +9390,7 @@
       "instrucciones": [
         "Túmbate boca arriba en la cama. Dobla las rodillas con los pies apoyados.",
         "Lleva una rodilla hacia el pecho y abrázala suavemente con las manos.",
-        "Respira con calma, baja despacio y cambia de pierna."
+        "Baja despacio y cambia de pierna."
       ],
       "dosis": "Mantén 5 segundos. 5 veces con cada pierna.",
       "duracion_estimada_seg": 75,
@@ -9394,9 +9401,12 @@
         "url": "https://www.nhsfife.org/media/33403/back-pain-advice-updated-21052020.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "dolor de espalda",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "La fuente deja usar las manos como ayuda; aquí se abraza la rodilla con las manos.",
+        "Se omite la versión de la fuente con las dos rodillas a la vez."
+      ],
       "notas_etiquetado": "",
       "validacion": {
         "estado": "borrador",
@@ -12673,10 +12683,13 @@
         "titulo": "Calf stretches",
         "url": "https://www.nhsfife.org/services/all-services/patient-advice/calf-stretches/",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
-      "adaptaciones": [],
-      "notas_etiquetado": "La banda solo sirve para tirar del pie: no se marca carga externa.",
+      "adaptaciones": [
+        "La fuente permite hacerlo sentado en el suelo o en la cama; aquí se hace en el suelo, con la espalda en la pared.",
+        "La fuente no dice con cuántas manos se sujeta la banda; aquí se usan las dos."
+      ],
+      "notas_etiquetado": "La banda solo sirve para tirar del pie: no se marca carga externa. [conservadora] ambos_brazos: el texto dice que se tire de la banda («pull the band») y no con cuántas manos; no hay imagen. Se cerraría con: evidencia de la fuente de que basta una mano. [conservadora] agarre: tirar de la banda exige sujetarla, y el texto no dice cómo. Se cerraría con: evidencia de que no se cierra la mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
