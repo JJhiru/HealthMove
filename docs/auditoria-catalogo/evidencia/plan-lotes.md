@@ -19,7 +19,7 @@
 | 23 | Arthritis UK: todas sus páginas (une los lotes 23 y 24 previstos) | 15 | Hecho (2026-10-24) |
 | 24 | Wrightington, Wigan and Leigh (3 documentos), East Sussex | 11 | Hecho (2026-10-24) |
 | 25 | Cambridge University Hospitals (4 páginas), British Heart Foundation (2) | 11 | Hecho (2026-10-24) |
-| 26 | University Hospitals Plymouth, NHS Grampian, North Cheshire and Mersey (2) | 11 | Pendiente |
+| 26 | University Hospitals Plymouth, NHS Grampian, North Cheshire and Mersey (2) | 11 | Hecho (2026-10-24) |
 | 27 | MS Trust (2), Moving Medicine, Versus Arthritis | 8 | Pendiente |
 | 28 | St George's, ACPRC (Right Decisions), Berkshire Healthcare, Calderdale and Huddersfield, Sherwood Forest | 8 | Pendiente |
 | 29 | Repetición con el protocolo 1.0 de los 11 ejercicios de los lotes 1 a 5 en REQUIERE CORRECCIONES | 11 | Pendiente |

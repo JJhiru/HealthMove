@@ -1,0 +1,123 @@
+{
+  "idEjecucion": "20261024T145946Z-fase-26-lote26-bloque2",
+  "fecha": "2026-10-24T14:59:46.649Z",
+  "fase": {
+    "id": "fase-26-lote26",
+    "titulo": "Auditoría del lote 26 (11 ejercicios: University Hospitals Plymouth, NHS Grampian y North Cheshire and Mersey), borrador de DeepSeek sobre la evidencia de Claude (C27)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-26-lote26.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "8fc8f05f-42b1-4527-a93b-a80034cf6581",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 83968,
+    "falloCache": 160,
+    "salida": 2297,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 133810,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "8fc8f05f-42b1-4527-a93b-a80034cf6581",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 83968,
+        "falloCache": 160,
+        "salida": 2297,
+        "razonamiento": 0
+      },
+      "coste": 0.003308208,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.003308208,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "69987fd68fa9a02ff0c9520761222dddf0525039",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "33668ec29e7de2fa7af7300a2ad243d2c0538008",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/evidencia/lote-26.md"
+    ]
+  },
+  "bloque": 2,
+  "continuacion": {
+    "continuaDe": "20261024T145927Z-fase-26-lote26",
+    "raiz": "20261024T145927Z-fase-26-lote26",
+    "orden": "Tu respuesta anterior se interrumpió por el límite de longitud. Continúa exactamente desde el punto donde se cortó, sin repetir lo ya escrito, sin resumirlo y manteniendo el mismo formato y la numeración de los hallazgos."
+  },
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36949,
+      "sha256": "4a7cbb32481a6295fec3a0eb92181f8f472194629754a8422e4b50b56524d332"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 15774,
+      "sha256": "7c96d4bd545c4fbfe0b6a1e2508bf923cb7c6abec44520ad3cfc2feaf88dc775"
+    },
+    {
+      "id": "registro-1",
+      "procedencia": "docs/auditoria-catalogo/registro.md#parte-1-de-2",
+      "caracteres": 31727,
+      "sha256": "69b9c78e91be492a275fe292c7452a542efec5fceb662fb21e793b99f6281664"
+    },
+    {
+      "id": "registro-2",
+      "procedencia": "docs/auditoria-catalogo/registro.md#parte-2-de-2",
+      "caracteres": 32110,
+      "sha256": "712056f9e6f6989e7d1814c3f8dfebec4eb32fea14ccccf8528b14159cfc8c23"
+    },
+    {
+      "id": "opciones",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6246,
+      "sha256": "4430708c5729fd9d4f75a783a575a7a6d826cccc0d94bc6e5d6c2e63636eaf4b"
+    },
+    {
+      "id": "ejemplo-formato-lote-25",
+      "procedencia": "docs/auditoria-catalogo/lote-25.md",
+      "caracteres": 52528,
+      "sha256": "490001fa0fe7a3055ca6905ff2c143b2fb7266bbbbecb36d316f063040f22522"
+    },
+    {
+      "id": "evidencia-lote-26",
+      "procedencia": "docs/auditoria-catalogo/evidencia/lote-26.md",
+      "caracteres": 9028,
+      "sha256": "dce7009e81558d45d41530be3c6e905f398d8d30168982e3df8a056b02d0f218"
+    },
+    {
+      "id": "catalogo-lote26",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 24054,
+      "sha256": "14d0c32c4715976547d126ae2d68b6b583f2cb690bfa57a0572c0ad058aecdaf"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "0ad810392b39bce08fb29bb5314a280239693d930a952822073f36575039ffea",
+    "respuestaApi": "e93bb86728e130f053f8cfbee812b1cdd2ca31338b9e4310d9564a2b6d17aff6"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T145946Z-fase-26-lote26-bloque2/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T145946Z-fase-26-lote26-bloque2/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T145946Z-fase-26-lote26-bloque2/respuesta-api.json"
+  }
+}

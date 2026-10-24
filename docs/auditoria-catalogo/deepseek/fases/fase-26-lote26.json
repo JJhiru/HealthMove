@@ -1,0 +1,65 @@
+{
+  "id": "fase-26-lote26",
+  "titulo": "Auditoría del lote 26 (11 ejercicios: University Hospitals Plymouth, NHS Grampian y North Cheshire and Mersey), borrador de DeepSeek sobre la evidencia de Claude (C27)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-26-lote26.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "registro-1",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md",
+      "parte": "1/2"
+    },
+    {
+      "id": "registro-2",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md",
+      "parte": "2/2"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "ejemplo-formato-lote-25",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/lote-25.md"
+    },
+    {
+      "id": "evidencia-lote-26",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/evidencia/lote-26.md"
+    },
+    {
+      "id": "catalogo-lote26",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "hombros-abajo-tumbado",
+        "press-pecho-botella-tumbado",
+        "elevacion-lateral-botella-tumbado",
+        "flexion-hombro-botella-tumbado",
+        "marcha-apertura-brazos-sentado",
+        "toques-laterales-brazos-arriba-sentado",
+        "arrancar-cortacesped-sentado",
+        "estiramiento-isquios-pie",
+        "limpiaparabrisas-pie-sentado",
+        "deslizar-toalla-pared",
+        "estiramiento-pecho-pared",
+        "marcha-sentado-manos-cadera",
+        "juntar-omoplatos-sentado",
+        "elevacion-brazos-tumbado"
+      ]
+    }
+  ]
+}

@@ -5617,7 +5617,8 @@
         "titulo": "Ankle range of motion exercises",
         "url": "https://northcheshireandmersey.nhs.uk/media/5ndj32ll/ankle-range-of-motion-exercises-patient-advice-sheet.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "tobillo"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -6727,7 +6728,7 @@
         "url": "https://www.nhsgrampian.org/globalassets/foidocument/foi-public-documents1---all-documents/1968.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "párkinson",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -6785,7 +6786,7 @@
         "url": "https://www.nhsgrampian.org/globalassets/foidocument/foi-public-documents1---all-documents/1968.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "párkinson",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -7056,7 +7057,7 @@
         "flexion_profunda_rodilla": false,
         "flexion_amplia_cadera": false,
         "puntillas_talones": false,
-        "inclinacion_tronco": false,
+        "inclinacion_tronco": true,
         "rotacion_tronco": true
       },
       "instrucciones": [
@@ -7074,13 +7075,13 @@
         "url": "https://www.nhsgrampian.org/globalassets/foidocument/foi-public-documents1---all-documents/1968.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "párkinson",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente pide hacerlo con velocidad y fuerza; aquí a ritmo moderado.",
         "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] inclinacion_tronco: en la foto de la fuente el tronco se inclina al bajar la mano hacia el pie contrario. Se cerraría con: evidencia de que la inclinación es leve.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -8764,12 +8765,13 @@
         "titulo": "Shoulder range of motion exercises",
         "url": "https://northcheshireandmersey.nhs.uk/media/luzaxp34/shoulder-range-of-motion-exercises-patient-advice-sheet.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "hombro"
       },
       "adaptaciones": [
         "La fuente propone 5 minutos en total; aquí unos 2."
       ],
-      "notas_etiquetado": "[conservadora] agarre: la fuente dice «held» (Q2). Se cerraría con: la imagen de la fuente.",
+      "notas_etiquetado": "[conservadora] agarre: el texto dice «with a towel in your hand, held», pero la foto muestra la palma abierta apoyada sobre la toalla (Q2). Se cerraría con: una decisión sobre si sostener la toalla con la palma cuenta como agarre.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -8823,7 +8825,8 @@
         "titulo": "Shoulder range of motion exercises",
         "url": "https://northcheshireandmersey.nhs.uk/media/luzaxp34/shoulder-range-of-motion-exercises-patient-advice-sheet.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "hombro"
       },
       "adaptaciones": [
         "La fuente propone 5 repeticiones y 3 series; aquí se acorta para la rutina."
@@ -8989,7 +8992,7 @@
       },
       "instrucciones": [
         "Sujétate al respaldo de una silla firme con un pie delante del otro.",
-        "Dobla la rodilla de la pierna de atrás y deja recta la de delante.",
+        "Dobla la rodilla de delante y deja recta la pierna de atrás.",
         "Inclínate suavemente hacia delante hasta notar el estiramiento.",
         "Cambia de pierna."
       ],
@@ -9002,7 +9005,7 @@
         "url": "https://www.nhsgrampian.org/globalassets/foidocument/foi-public-documents1---all-documents/1968.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "párkinson",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -9946,10 +9949,10 @@
         "url": "https://www.plymouthhospitals.nhs.uk/display-pil/pil-your-bed-rest-exercises-4208/",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "reposo en cama tras neurocirugía",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
-        "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
+        "La fuente deja el tiempo en blanco y no da repeticiones, para que los fije el fisioterapeuta; se usa una pauta de 5 segundos y de 5 a 10 veces."
       ],
       "notas_etiquetado": "",
       "validacion": {
@@ -10063,7 +10066,7 @@
         "url": "https://www.plymouthhospitals.nhs.uk/display-pil/pil-your-bed-rest-exercises-4208/",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "reposo en cama tras neurocirugía",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
@@ -12910,12 +12913,13 @@
         "url": "https://www.plymouthhospitals.nhs.uk/display-pil/pil-your-bed-rest-exercises-4208/",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "reposo en cama tras neurocirugía",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
-        "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
+        "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10.",
+        "Las fotos de la fuente abren los dos brazos a la vez; aquí se hace con un brazo cada vez."
       ],
-      "notas_etiquetado": "La fuente no dice hasta dónde se abre el brazo. [conservadora] brazo_sobre_hombro: tumbado, la altura del hombro no se puede comparar y el brazo se separa del tronco (estirado, en cruz o por encima de la cabeza) (CN-1, P25). Se cerraría con: evidencia de la fuente del ángulo del brazo.",
+      "notas_etiquetado": "Las fotos de la fuente abren los brazos en cruz, a la altura de los hombros. [conservadora] brazo_sobre_hombro: tumbado, la altura del hombro no se puede comparar y el brazo se separa del tronco (CN-1, P25). Se cerraría con: la decisión de CN-1 para el brazo en cruz tumbado.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -12970,7 +12974,7 @@
         "url": "https://www.plymouthhospitals.nhs.uk/display-pil/pil-your-bed-rest-exercises-4208/",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "reposo en cama tras neurocirugía",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
