@@ -3402,7 +3402,7 @@
         "url": "https://sanjuan.san.gva.es/wp-content/uploads/2020/05/ESCUELA-DE-ESPALDA.-2.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "problemas de espalda",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
       "notas_etiquetado": "Las manos solo descansan sobre el abdomen: no es agarre.",
@@ -3461,10 +3461,10 @@
         "url": "https://sanjuan.san.gva.es/wp-content/uploads/2020/05/ESCUELA-DE-ESPALDA.-2.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "problemas de espalda",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Mover la zona lumbar contra la cama es un movimiento de columna: inclinacion_tronco por precaución.",
+      "notas_etiquetado": "[conservadora] inclinacion_tronco: presionar la zona lumbar contra la camilla es un movimiento pequeño de la columna que §4 no define con claridad. Se cerraría con: un criterio sobre si la báscula pélvica cuenta como inclinación o arqueo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -3518,7 +3518,7 @@
         "url": "https://sanjuan.san.gva.es/wp-content/uploads/2020/05/ESCUELA-DE-ESPALDA.-2.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "problemas de espalda",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
       "notas_etiquetado": "Girar las piernas con el tronco quieto rota la columna: rotacion_tronco.",
@@ -3575,7 +3575,7 @@
         "url": "https://sanjuan.san.gva.es/wp-content/uploads/2020/05/ESCUELA-DE-ESPALDA.-2.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "problemas de espalda",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "Se omiten las variantes de la fuente que agarran la pierna con las manos."
@@ -9126,10 +9126,10 @@
         "url": "https://www.sermef.es/wp-content/uploads/2023/10/Hombro_SdSubacromial_Isometricos.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "síndrome subacromial",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "equilibrio_sin_apoyo: de pie, una mano empuja la pared y la otra queda libre para sujetarse: no exige estar sin apoyo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -9185,10 +9185,10 @@
         "url": "https://www.sermef.es/wp-content/uploads/2023/10/Hombro_SdSubacromial_Isometricos.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "síndrome subacromial",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
-        "La fuente no fija la postura; se propone sentado."
+        "La fuente lo muestra de pie; aquí se hace sentado."
       ],
       "notas_etiquetado": "",
       "validacion": {
@@ -9527,9 +9527,9 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Túmbate de lado con la pierna de abajo doblada.",
+        "Túmbate de lado con las dos piernas estiradas.",
         "Con la pierna de arriba estirada y alineada con el cuerpo, súbela despacio.",
-        "Bájala despacio, sin que la cadera ruede hacia atrás.",
+        "Bájala despacio.",
         "Gírate y repite con la otra pierna."
       ],
       "dosis": "10 veces con cada pierna.",
@@ -9540,7 +9540,8 @@
         "titulo": "Guía informativa de ejercicio terapéutico: capacidad física baja",
         "url": "https://www.saludcastillayleon.es/CHLeon/es/cuidados-enfermeria-paciente/guia-informativa-ejercicios-terapeuticos.ficheros/1567504-GU%C3%8DA%20INFORMATIVA%20PARA%20EJERCICIOS%20TERAPEUTICOS%20%20CAPACIDAD%20F%C3%8DSICA%20BAJA.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "ingreso hospitalario por COVID-19"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -9775,7 +9776,8 @@
         "titulo": "Guía informativa de ejercicio terapéutico: capacidad física baja",
         "url": "https://www.saludcastillayleon.es/CHLeon/es/cuidados-enfermeria-paciente/guia-informativa-ejercicios-terapeuticos.ficheros/1567504-GU%C3%8DA%20INFORMATIVA%20PARA%20EJERCICIOS%20TERAPEUTICOS%20%20CAPACIDAD%20F%C3%8DSICA%20BAJA.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "ingreso hospitalario por COVID-19"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -12645,7 +12647,7 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": false,
         "agarre": false,
@@ -12670,10 +12672,11 @@
         "titulo": "Guía informativa de ejercicio terapéutico: capacidad física baja",
         "url": "https://www.saludcastillayleon.es/CHLeon/es/cuidados-enfermeria-paciente/guia-informativa-ejercicios-terapeuticos.ficheros/1567504-GU%C3%8DA%20INFORMATIVA%20PARA%20EJERCICIOS%20TERAPEUTICOS%20%20CAPACIDAD%20F%C3%8DSICA%20BAJA.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "ingreso hospitalario por COVID-19"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "La guía muestra la altura del brazo en un dibujo; no se marca brazo sobre el hombro, pero conviene comprobarlo.",
+      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: tumbado de lado, el brazo sube y la guía no dice hasta dónde (este apartado no tiene dibujo) (CN-1, P25). Se cerraría con: evidencia de la fuente de la altura del brazo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",

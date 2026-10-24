@@ -10,7 +10,7 @@
 | 14 | Hospital Clínico San Carlos, columna lumbar | 7 | Hecho (2026-10-24) |
 | 15 | Hospital Clínico San Carlos, rodilla; Hospital General de Valencia; Ministerio de Sanidad y semFYC | 8 | Hecho (2026-10-24) |
 | 16 | Hospital Universitario San Cecilio | 8 | Hecho (2026-10-24) |
-| 17 | Hospital Sant Joan d'Alacant, Hospital de León, SERMEF | 9 | Pendiente |
+| 17 | Hospital Sant Joan d'Alacant, Hospital de León, SERMEF | 9 | Hecho (2026-10-24) |
 | 18 | National Institute on Aging | 8 | Pendiente |
 | 19 | Worcestershire County Council, Medway, York and Scarborough | 9 | Pendiente |
 | 20 | Later Life Training (Otago), Royal Wolverhampton (2), James Paget | 9 | Pendiente |

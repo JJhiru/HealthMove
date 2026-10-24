@@ -172,10 +172,19 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 16 | torax-codos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 16 | agarrar-sabana-dedos-pies | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 16 | pedaleo-pies-cama | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 17 | respiracion-abdominal-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 17 | bascula-pelvica-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 17 | rotacion-rodillas-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 17 | rodilla-al-pecho-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 17 | isometrico-hombro-fuera-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 17 | isometrico-hombro-dentro | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 17 | elevar-pierna-lado-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 17 | separar-juntar-rodillas-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 17 | elevar-brazo-lado-respiracion | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 
 ## Pendientes
 
-- Auditados: 101 de 225 (lote 16, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
+- Auditados: 110 de 225 (lote 17, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
 - Lista de candidatos a adaptación unilateral: ver los resúmenes de los lotes 1, 3 y 4.
 - ~~Tarea de interfaz pendiente: comunicar `especifica_de` (decisión 3).~~ Hecha en P17 (2026-10-21).
 - **Actualización (2026-10-16):**
@@ -485,3 +494,4 @@ Sobre el informe `problemas-pendientes-2026-10-21.md`.
     - **Lote 14** (Hospital Clínico San Carlos, columna lumbar): 7 ejercicios; 5 listos, `movilizacion-ciatico-tumbado` REQUIERE REVISIÓN PROFESIONAL y `cruzar-pierna-tumbado` PENDIENTE DE DECISIÓN (DS-378). Consulta C15.
     - **Lote 15** (San Carlos rodilla, Valencia, Ministerio de Sanidad): 8 ejercicios, los 8 listos. Consulta C16. Nuevo CN-4 (mano hacia atrás hasta el pie), con `true` conservador provisional.
     - **Lote 16** (San Cecilio, ejercicios en cama): 8 ejercicios, los 8 listos. Consulta C17. Nuevo CN-5 (rodillas dobladas tumbado, sin ángulo).
+    - **Lote 17** (Sant Joan d'Alacant, León, SERMEF): 9 ejercicios, los 9 listos. Consulta C18.
