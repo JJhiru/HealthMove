@@ -1,0 +1,55 @@
+{
+  "id": "fase-13-lote13",
+  "titulo": "Auditoría del lote 13 (9 ejercicios: Royal Berkshire (pulmonar y core), Royal Papworth y RUH Bath), borrador de DeepSeek sobre la evidencia de Claude (C14)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-13-lote13.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "registro",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "ejemplo-formato-lote-12",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/lote-12.md"
+    },
+    {
+      "id": "evidencia-lote-13",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/evidencia/lote-13.md"
+    },
+    {
+      "id": "catalogo-lote13",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "puno-extension-codo-sentado",
+        "estiramiento-pecho-manos-lumbar",
+        "estiramiento-pecho-manos-lumbar-pie",
+        "abrir-pierna-brazo-pared",
+        "suelo-pelvico-lentas",
+        "suelo-pelvico-rapidas",
+        "manos-entrelazadas-arriba-tumbado",
+        "circulos-pierna-lado-suelo",
+        "rodillas-lado-lado-suelo",
+        "elevar-pierna-lado-tumbado",
+        "rotacion-rodillas-tumbado"
+      ]
+    }
+  ]
+}

@@ -4089,7 +4089,7 @@
         "titulo": "Chair Exercises",
         "url": "https://www.ruh.nhs.uk/patients/patient_information/chair_exercises.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
@@ -6004,7 +6004,7 @@
         "url": "https://www.royalberkshire.nhs.uk/media/m2yl2u1z/pulmonary-rehabilitation-exercises_mar25.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "enfermedad pulmonar",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente lo describe de pie; aquí se hace sentado."
@@ -6062,10 +6062,10 @@
         "url": "https://www.royalberkshire.nhs.uk/media/m2yl2u1z/pulmonary-rehabilitation-exercises_mar25.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "enfermedad pulmonar",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "equilibrio_sin_apoyo: con las dos manos ocupadas no hay forma de sujetarse a nada (especificación §7, regla 4; C2, P23). Versión de pie separada de estiramiento-pecho-manos-lumbar el 2026-10-22. La fuente lo describe de pie («Stand upright»); la versión sentada es una adaptación pendiente de auditoría (R3.1, Q5).",
+      "notas_etiquetado": "equilibrio_sin_apoyo: con las dos manos ocupadas no hay forma de sujetarse a nada (especificación §7, regla 4; C2, P23). Versión de pie separada de estiramiento-pecho-manos-lumbar el 2026-10-22. La fuente lo describe de pie («Stand upright»); la versión sentada se aprobó como adaptación (Q5, P28).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -8449,11 +8449,11 @@
         "sentarse_levantarse": false,
         "impacto": false,
         "carga_externa": false,
-        "esfuerzo_cardio": false,
+        "esfuerzo_cardio": true,
         "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": false,
-        "agarre": false,
+        "ambos_brazos": true,
+        "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
         "flexion_amplia_cadera": false,
@@ -8476,10 +8476,12 @@
         "url": "https://www.royalberkshire.nhs.uk/media/m2yl2u1z/pulmonary-rehabilitation-exercises_mar25.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "enfermedad pulmonar",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
-      "adaptaciones": [],
-      "notas_etiquetado": "El pie se desliza por el suelo, nunca se salta. [conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
+      "adaptaciones": [
+        "La fuente permite apoyarse en la pared solo si hace falta; aquí se apoya una mano siempre."
+      ],
+      "notas_etiquetado": "El pie se desliza por el suelo, nunca se salta. esfuerzo_cardio: la fuente lo incluye entre los ejercicios aeróbicos, con los que hay que quedar «moderately breathless». [conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro. [conservadora] ambos_brazos: una mano se apoya mientras el otro brazo trabaja (Q1, P9). Se cerraría con: una fuente de que basta un brazo. [conservadora] agarre: apoyo en la pared sin prensión visible (Q2, P10). Se cerraría con: revisión profesional.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -10060,9 +10062,12 @@
         "titulo": "Pelvic floor exercises for women",
         "url": "https://royalpapworth.nhs.uk/download_file/1536/305",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "mujeres"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "La fuente permite hacerlo en cualquier posición; aquí se hace tumbado."
+      ],
       "notas_etiquetado": "La fuente desaconseja practicar cortando la orina más de una vez cada quince días.",
       "validacion": {
         "estado": "borrador",
@@ -10105,10 +10110,10 @@
       },
       "instrucciones": [
         "Túmbate boca arriba en la cama. Dobla las rodillas.",
-        "Aprieta y sube rápido los músculos del suelo pélvico.",
-        "Suéltalos enseguida."
+        "Aprieta y sube rápido los músculos del suelo pélvico y mantén un segundo.",
+        "Suéltalos y descansa un segundo."
       ],
-      "dosis": "De 5 a 10 veces.",
+      "dosis": "10 veces.",
       "duracion_estimada_seg": 40,
       "variante_de": "suelo-pelvico-lentas",
       "fuente": {
@@ -10116,10 +10121,11 @@
         "titulo": "Pelvic floor exercises for women",
         "url": "https://royalpapworth.nhs.uk/download_file/1536/305",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "mujeres"
       },
       "adaptaciones": [
-        "No se pudo leer completa la dosis de la fuente; se usa una pauta de 5 a 10. Compruébalo en el PDF."
+        "La fuente permite hacerlo en cualquier posición; aquí se hace tumbado."
       ],
       "notas_etiquetado": "",
       "validacion": {
@@ -11340,7 +11346,7 @@
         "titulo": "Bed Exercises",
         "url": "https://www.ruh.nhs.uk/patients/patient_information/Bed_Exercises.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
@@ -11656,7 +11662,7 @@
         "brazo_sobre_hombro": false,
         "mano_detras": false,
         "ambos_brazos": false,
-        "agarre": false,
+        "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
         "flexion_amplia_cadera": false,
@@ -11678,10 +11684,12 @@
         "titulo": "Core exercise programme",
         "url": "https://royalberkshire.nhs.uk/media/qfljlxzd/physio-core-exercise-programme-matplusgynae.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
-      "adaptaciones": [],
-      "notas_etiquetado": "",
+      "adaptaciones": [
+        "La fuente permite apoyar la mano de delante solo si hace falta; aquí se apoya siempre."
+      ],
+      "notas_etiquetado": "[conservadora] agarre: la mano de delante se apoya en el suelo sin prensión visible (Q2, P10). Se cerraría con: revisión profesional.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -11708,9 +11716,9 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": true,
+        "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": true,
+        "ambos_brazos": false,
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -11720,7 +11728,7 @@
         "rotacion_tronco": true
       },
       "instrucciones": [
-        "Túmbate boca arriba en el suelo con las rodillas dobladas, los pies apoyados y los brazos en cruz.",
+        "Túmbate boca arriba en el suelo con las rodillas dobladas, los pies apoyados y los brazos junto al cuerpo.",
         "Deja caer las dos rodillas juntas hacia un lado, con los hombros apoyados.",
         "Vuelve al centro y repite hacia el otro lado."
       ],
@@ -11733,10 +11741,12 @@
         "url": "https://www.ruh.nhs.uk/patients/patient_information/ANA034_Back_exercises.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
         "especifica_de": "dolor de espalda",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
-      "adaptaciones": [],
-      "notas_etiquetado": "[conservadora] ambos_brazos: no consta si los brazos solo reposan (Q1). Se cerraría con: la fuente o su imagen. [conservadora] brazo_sobre_hombro: tumbado, la altura del hombro no se puede comparar y el brazo se separa del tronco (estirado, en cruz o por encima de la cabeza) (CN-1, P25). Se cerraría con: evidencia de la fuente del ángulo del brazo.",
+      "adaptaciones": [
+        "La fuente permite hacerlo en la cama o en el suelo; aquí se hace en el suelo."
+      ],
+      "notas_etiquetado": "Los brazos reposan junto al cuerpo, como en las fotos de la fuente: no cuentan como ambos_brazos ni como brazo_sobre_hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
