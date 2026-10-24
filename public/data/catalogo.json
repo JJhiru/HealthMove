@@ -2871,9 +2871,12 @@
         "titulo": "Bed exercises and stretches",
         "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "encamados"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "La fuente también permite hacerlo sentado en la cama o en una silla; aquí se hace tumbado."
+      ],
       "notas_etiquetado": "",
       "validacion": {
         "estado": "borrador",
@@ -2927,7 +2930,8 @@
         "titulo": "Bed exercises and stretches",
         "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "encamados"
       },
       "adaptaciones": [
         "Se omite la versión más difícil con banda elástica."
@@ -2986,7 +2990,8 @@
         "titulo": "Bed exercises and stretches",
         "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "encamados"
       },
       "adaptaciones": [],
       "notas_etiquetado": "Tumbado, la pierna se separa poco de la cama: el muslo no se acerca al tronco más que al estar sentado.",
@@ -3043,10 +3048,11 @@
         "titulo": "Bed exercises and stretches",
         "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "encamados"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Llevar el talón hacia los glúteos dobla la rodilla más de 90°; la cadera también se flexiona.",
+      "notas_etiquetado": "[conservadora] flexion_profunda_rodilla: el dibujo de la fuente muestra la rodilla en torno a 90° y el texto («towards your buttocks») no fija hasta dónde. Se cerraría con: evidencia de la fuente de que la rodilla no pasa de 90°. [conservadora] flexion_amplia_cadera: el muslo sube hacia el tronco y no consta si más que al estar sentado. Se cerraría con: una vista que muestre el ángulo entre el muslo y el tronco.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -3080,7 +3086,7 @@
         "ambos_brazos": false,
         "agarre": false,
         "peso_en_manos": false,
-        "flexion_profunda_rodilla": false,
+        "flexion_profunda_rodilla": true,
         "flexion_amplia_cadera": false,
         "puntillas_talones": false,
         "inclinacion_tronco": false,
@@ -3100,10 +3106,13 @@
         "titulo": "Bed exercises and stretches",
         "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "encamados"
       },
-      "adaptaciones": [],
-      "notas_etiquetado": "Es una extensión de cadera, no un arqueo de espalda; las rodillas no pasan de 90°.",
+      "adaptaciones": [
+        "Se omite la versión más difícil de la fuente, que levanta un pie de la cama al repetir."
+      ],
+      "notas_etiquetado": "Es una extensión de cadera, no un arqueo de espalda: no es inclinacion_tronco. [conservadora] flexion_profunda_rodilla: el dibujo de la fuente muestra la rodilla en torno a 90° y no consta que no los pase. Se cerraría con: una vista lateral que muestre la rodilla por debajo de 90°.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -3157,7 +3166,8 @@
         "titulo": "Bed exercises and stretches",
         "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "encamados"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -3212,10 +3222,11 @@
         "titulo": "Bed exercises and stretches",
         "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "encamados"
       },
       "adaptaciones": [
-        "Se omiten los círculos de tobillo que propone la fuente (movilidad articular aislada, igual que la muñeca)."
+        "Se omiten los círculos de tobillo que añade la fuente; en HealthMove son un ejercicio aparte."
       ],
       "notas_etiquetado": "",
       "validacion": {
@@ -3271,7 +3282,8 @@
         "titulo": "Bed exercises and stretches",
         "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "encamados"
       },
       "adaptaciones": [
         "Se omite la versión con banda elástica."
@@ -3329,9 +3341,12 @@
         "titulo": "Bed exercises and stretches",
         "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "encamados"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "La fuente también permite hacerlo sentado en la cama; aquí se hace tumbado."
+      ],
       "notas_etiquetado": "",
       "validacion": {
         "estado": "borrador",
@@ -11147,7 +11162,8 @@
         "titulo": "Bed exercises and stretches",
         "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "encamados"
       },
       "adaptaciones": [
         "La fuente permite atar la banda a la barandilla de la cama; aquí se sujeta con la otra mano."
@@ -11207,7 +11223,8 @@
         "titulo": "Bed exercises and stretches",
         "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "encamados"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -11245,7 +11262,7 @@
         "ambos_brazos": false,
         "agarre": false,
         "peso_en_manos": false,
-        "flexion_profunda_rodilla": false,
+        "flexion_profunda_rodilla": true,
         "flexion_amplia_cadera": false,
         "puntillas_talones": false,
         "inclinacion_tronco": false,
@@ -11265,10 +11282,11 @@
         "titulo": "Bed exercises and stretches",
         "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "encamados"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "Es una extensión de cadera, no un arqueo de espalda: no es inclinacion_tronco. [conservadora] flexion_profunda_rodilla: el dibujo de la fuente muestra la rodilla en torno a 90° y no consta que no los pase. Se cerraría con: una vista lateral que muestre la rodilla por debajo de 90°.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -12442,7 +12460,7 @@
         "Levanta una pierna recta de la cama y aguanta mientras cuentas hasta 3.",
         "Bájala despacio y cambia de pierna."
       ],
-      "dosis": "10 veces con cada pierna.",
+      "dosis": "Mantén 3 segundos. 10 veces con cada pierna.",
       "duracion_estimada_seg": 90,
       "variante_de": "elevacion-pierna-recta-tumbado",
       "fuente": {
@@ -12450,7 +12468,8 @@
         "titulo": "Bed exercises and stretches",
         "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "encamados"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -12508,10 +12527,11 @@
         "titulo": "Bed exercises and stretches",
         "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "encamados"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] flexion_profunda_rodilla: el dibujo de la fuente muestra la rodilla en torno a 90° y el texto («towards your buttocks») no fija hasta dónde. Se cerraría con: evidencia de la fuente de que la rodilla no pasa de 90°. [conservadora] flexion_amplia_cadera: el muslo sube hacia el tronco y no consta si más que al estar sentado. Se cerraría con: una vista que muestre el ángulo entre el muslo y el tronco.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -12566,7 +12586,8 @@
         "titulo": "Bed exercises and stretches",
         "url": "https://royalberkshire.nhs.uk/media/tc0hidxw/bed-exercises-and-stretches_jul24.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "encamados"
       },
       "adaptaciones": [
         "La fuente permite atar la banda a la barandilla de la cama; aquí se sujeta con la otra mano."

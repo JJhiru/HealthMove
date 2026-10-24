@@ -125,10 +125,25 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 11 | paso-atras-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 11 | abrazar-rodilla-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 11 | gemelo-banda-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 12 | elevacion-brazos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 12 | banda-elevar-brazo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 12 | banda-flexion-codo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 12 | circulos-hombros-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 12 | apretar-gluteos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 12 | abduccion-cadera-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 12 | banda-separar-pierna-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 12 | elevacion-pierna-recta-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 12 | banda-elevacion-pierna-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 12 | deslizar-talon-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 12 | banda-deslizar-talon-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 12 | puente-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 12 | banda-puente-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 12 | rodilla-al-lado-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 12 | bombeo-tobillos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 
 ## Pendientes
 
-- Auditados: 54 de 225 (lote 11, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
+- Auditados: 69 de 225 (lote 12, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
 - Lista de candidatos a adaptación unilateral: ver los resúmenes de los lotes 1, 3 y 4.
 - ~~Tarea de interfaz pendiente: comunicar `especifica_de` (decisión 3).~~ Hecha en P17 (2026-10-21).
 - **Actualización (2026-10-16):**
@@ -415,3 +430,4 @@ Sobre el informe `problemas-pendientes-2026-10-21.md`.
     - **Aprobaciones:** ningún ejercicio cambia de `borrador` hasta la revisión final del desarrollador. Tampoco los nombres nuevos de `especifica_de` ni las adaptaciones nuevas (Q5, una a una), que se listan en cada resumen de lote.
     - **Bloqueados:** los 7 ejercicios de fuentes que devuelven 403 (Royal Devon, CDC/Tufts y la copia de ACPRC) siguen esperando G8.
     - **Lote 11** (St Helens, NHS Forth Valley y NHS Fife): 9 ejercicios, los 9 listos. Consulta C12.
+    - **Lote 12** (Royal Berkshire, «Bed exercises and stretches»): 15 ejercicios, los 15 listos. Consulta C13. `especifica_de` «encamados» y `flexion_profunda_rodilla` conservadora en los dos puentes.
