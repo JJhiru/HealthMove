@@ -3862,10 +3862,10 @@
         "titulo": "Sitting exercises",
         "url": "https://www.hse.ie/living-well/exercise/exercise-at-home/sitting-exercises/",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Puede hacerse con un solo brazo.",
+      "notas_etiquetado": "ambos_brazos: la fuente pide subir los dos brazos a la vez (D). [conservadora] brazo_sobre_hombro: «as far as is comfortable» no fija la altura. Se cerraría con: evidencia de la fuente de que el brazo no pasa del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -4436,7 +4436,7 @@
       "instrucciones": [
         "Enrolla los extremos de la banda en las manos.",
         "Empieza con las manos juntas a la altura de las rodillas.",
-        "Separa los brazos en diagonal hacia arriba y hacia fuera, estirando los codos.",
+        "Separa los brazos en diagonal: uno sube hacia arriba y hacia fuera y el otro baja hacia la cadera contraria, estirando los codos.",
         "Vuelve despacio."
       ],
       "dosis": "10 veces. Descansa y repite otras 10.",
@@ -4447,10 +4447,11 @@
         "titulo": "Programa de ejercicio físico multicomponente Vivifrail: guía práctica (copia de munideporte.com)",
         "url": "https://munideporte.com/imagenes/documentacion/ficheros/0134414D.pdf",
         "licencia": "© Vivifrail, prohíbe la reproducción: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores de 70"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "La fuente no dice hasta qué altura suben las manos; se marca brazo sobre el hombro por prudencia.",
+      "notas_etiquetado": "brazo_sobre_hombro: el dibujo de la fuente muestra una mano por encima de la cabeza (D).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -4918,9 +4919,12 @@
         "titulo": "Programa de ejercicio físico multicomponente Vivifrail: guía práctica (copia de munideporte.com)",
         "url": "https://munideporte.com/imagenes/documentacion/ficheros/0134414D.pdf",
         "licencia": "© Vivifrail, prohíbe la reproducción: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores de 70"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "La fuente lo describe de pie; aquí se hace sentado."
+      ],
       "notas_etiquetado": "La resistencia la pone la propia persona: no se marca carga externa.",
       "validacion": {
         "estado": "borrador",
@@ -5727,12 +5731,12 @@
         "url": "https://www.edinburghparkinsons.org/wp-content/uploads/2020/06/PUK-Staying-active-and-exercise-at-home.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
         "especifica_de": "párkinson",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente lo plantea en un sofá; aquí se usa una silla estable."
       ],
-      "notas_etiquetado": "Las manos apoyadas pueden soportar parte del peso: se marca peso en manos por prudencia. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
+      "notas_etiquetado": "[conservadora] peso_en_manos: las manos se apoyan en el asiento con el tronco algo inclinado hacia atrás y pueden soportar parte del peso. Se cerraría con: revisión profesional. [conservadora] ambos_brazos: apoyo de las dos manos (Q1). Se cerraría con: fuente de que basta una mano. inclinacion_tronco: el tronco se inclina un poco hacia atrás con la espalda recta; no es inclinarse hacia delante o hacia un lado ni arquear (§4).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -5786,7 +5790,8 @@
         "titulo": "Programa de ejercicio físico multicomponente Vivifrail: guía práctica (copia de munideporte.com)",
         "url": "https://munideporte.com/imagenes/documentacion/ficheros/0134414D.pdf",
         "licencia": "© Vivifrail, prohíbe la reproducción: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores de 70"
       },
       "adaptaciones": [],
       "notas_etiquetado": "Posición: el 2026-10-22 se separó en dos entradas (C2, P23): esta, sentada, y estiramiento-hombro-cruzado-pie, de pie. La fuente indica «De pie o sentado» (evidencia-fuentes-q1-q2.md §3).",
@@ -5841,7 +5846,8 @@
         "titulo": "Programa de ejercicio físico multicomponente Vivifrail: guía práctica (copia de munideporte.com)",
         "url": "https://munideporte.com/imagenes/documentacion/ficheros/0134414D.pdf",
         "licencia": "© Vivifrail, prohíbe la reproducción: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores de 70"
       },
       "adaptaciones": [],
       "notas_etiquetado": "equilibrio_sin_apoyo: con las dos manos ocupadas no hay forma de sujetarse a nada (especificación §7, regla 4; C2, P23). Versión de pie separada de estiramiento-hombro-cruzado el 2026-10-22. La fuente indica «De pie o sentado» (evidencia-fuentes-q1-q2.md §3).",
@@ -7101,8 +7107,8 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Ponte detrás de una silla firme o junto a una encimera y sujétate con las dos manos.",
-        "Con los pies al ancho de los hombros, echa el peso hacia los talones y levanta las puntas de los pies del suelo, con las rodillas flojas.",
+        "Ponte detrás de una silla firme o junto al fregadero y sujétate.",
+        "Echa el peso hacia los talones y levanta las puntas de los pies del suelo.",
         "Baja despacio sin sacar el trasero hacia atrás."
       ],
       "dosis": "Mantén 3 segundos arriba. 10 veces.",
@@ -7113,10 +7119,11 @@
         "titulo": "Helping older people stay active at home",
         "url": "https://www.csp.org.uk/public-patient/keeping-active-and-healthy/staying-healthy-you-age/staying-strong-you-age/strength",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Las fuentes de Otago proponen pasar de dos manos a una y a ninguna; aquí se mantiene el apoyo. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
+      "notas_etiquetado": "Texto de la fuente leído con la herramienta web (la página devuelve 403 al script) y su imagen no se ha visto: PENDIENTE_DE_FUENTE. [conservadora] ambos_brazos: la fuente no dice con cuántas manos se sujeta (Q1). Se cerraría con: la fuente original. [conservadora] agarre: apoyo sin prensión visible (Q2). Se cerraría con: revisión profesional.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7800,10 +7807,11 @@
         "titulo": "Programa de ejercicio físico multicomponente Vivifrail: guía práctica (copia de munideporte.com)",
         "url": "https://munideporte.com/imagenes/documentacion/ficheros/0134414D.pdf",
         "licencia": "© Vivifrail, prohíbe la reproducción: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores de 70"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "[conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano.",
+      "notas_etiquetado": "[conservadora] ambos_brazos: apoyo bilateral (Q1); la fuente dice «apoyado en una mesa o barandilla» sin decir con cuántas manos. Se cerraría con: fuente de que basta una mano. [conservadora] agarre: apoyo sin prensión visible (Q2). Se cerraría con: revisión profesional.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",

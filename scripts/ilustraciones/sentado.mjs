@@ -59,7 +59,7 @@ export const SENTADO = {
   'banda-prensa-pierna-sentado': S({ caderaD: 120, rodillaD: 40, pieD: 120, brazoD: -15, codoD: 60 }, { caderaD: 95, rodillaD: 70, pieD: 140 }, { banda: [['manoD', 'pieD']] }),
   'banda-separar-rodillas-sentado': SF({}, { caderaD: 24, rodillaD: 12, caderaI: 24, rodillaI: 12 }, { banda: [['rodillaD', 'rodillaI']] }),
   'banda-aperturas-sentado': SF({ brazoD: 80, codoD: 80, brazoI: 80, codoI: 80, ...F({ brazo: 0.3, antebrazo: 0.3 }) }, { brazoD: 90, codoD: 90, brazoI: 90, codoI: 90, ...F() }, { banda: [['manoD', 'manoI']] }),
-  'banda-aperturas-diagonal-sentado': SF({ brazoD: -15, codoD: -20, brazoI: -15, codoI: -20 }, { brazoD: 130, codoD: 130, brazoI: 130, codoI: 130 }, { banda: [['manoD', 'manoI']] }),
+  'banda-aperturas-diagonal-sentado': SF({ brazoD: -15, codoD: -20, brazoI: -15, codoI: -20 }, { brazoD: 140, codoD: 140, brazoI: 25, codoI: 25 }, { banda: [['manoD', 'manoI']] }),
   'banda-elevaciones-laterales-sentado': SF({ brazoD: 8, codoD: 8, brazoI: 8, codoI: 8 }, { brazoD: 85, codoD: 85, brazoI: 85, codoI: 85 }, { banda: [['manoD', 'pieD'], ['manoI', 'pieI']] }),
   'banda-empuje-pie-sentado': S({ caderaD: 95, rodillaD: 92, pieD: 185, brazoD: -15, codoD: 60 }, { pieD: 120 }, { banda: [['manoD', 'pieD']] }),
   'banda-tobillo-fuera-sentado': PIE({}, {}, { lados: true, banda: true }),
