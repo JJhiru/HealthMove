@@ -56,7 +56,7 @@ export const TUMBADO = {
   'oblicuos-isometricos-tumbado': C({ caderaI: 40, rodillaI: -40, caderaD: 90, rodillaD: 0, alcanza: { manoI: 'rodillaD' } }, {}, { zona: ['abdomen'] }),
   'abdominal-isometrico-muslos': C({ ...RODILLAS, alcanza: { manoD: 'rodillaD' } }, {}, { zona: ['abdomen'] }),
   'control-abdominal-brazos-arriba': C(RODILLAS, { brazoD: 160, codoD: 160, brazoI: 156, codoI: 156 }, { zona: ['abdomen'] }),
-  'cruzar-pierna-tumbado': CP({}, { caderaD: -25, rodillaD: 10, cortoD: { muslo: 0.7 } }, { zona: ['gluteo'] }),
+  'cruzar-pierna-tumbado': CP({}, { caderaD: -25, rodillaD: 10, cortoD: { muslo: 0.7 }, alcanza: { manoI: 'rodillaD' } }, { zona: ['gluteo'] }),
   'movilizacion-ciatico-tumbado': C({ caderaD: 70, rodillaD: 70, pieD: 130 }, { pieD: 175 }),
   'psoas-borde-cama': C({ caderaD: 120, rodillaD: 30, alcanza: { manoD: 'rodillaD' }, caderaI: -25, rodillaI: -25 }, {}, { zona: ['musloI'], x: 315 }),
   'extension-codo-toalla-tumbado': C({ codoD: 40 }, { codoD: 0 }, { toalla: ['bajoAntebrazoD'] }),

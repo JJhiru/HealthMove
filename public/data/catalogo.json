@@ -6461,11 +6461,12 @@
         "titulo": "Guía de ejercicios para el cuidado de la columna lumbar",
         "url": "https://www.comunidad.madrid/hospital/clinicosancarlos/sites/clinicosancarlos/files/inline-files/DI-FISI-009-2020%20Guia%20Ejercicios%20Cuidado%20Columna%20Lumbar%20modificada%202025_2.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "especifica_de": "dolor lumbar",
-        "consultado": "2026-10-14"
+        "especifica_de": "cuidado de la columna lumbar",
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
-        "La guía no indica repeticiones; se usa una pauta de 5 a 10."
+        "La guía no indica repeticiones; se usa una pauta de 5 a 10.",
+        "La guía pide además meter la barbilla («sacando papada»); HealthMove no incluye posiciones ni movimientos de cuello."
       ],
       "notas_etiquetado": "",
       "validacion": {
@@ -10668,7 +10669,7 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": true,
         "agarre": true,
@@ -10693,13 +10694,14 @@
         "titulo": "Guía de ejercicios para el cuidado de la columna lumbar",
         "url": "https://www.comunidad.madrid/hospital/clinicosancarlos/sites/clinicosancarlos/files/inline-files/DI-FISI-009-2020%20Guia%20Ejercicios%20Cuidado%20Columna%20Lumbar%20modificada%202025_2.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "especifica_de": "dolor lumbar",
-        "consultado": "2026-10-14"
+        "especifica_de": "cuidado de la columna lumbar",
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
-        "La guía no indica repeticiones; se usan 5 por sentido."
+        "La guía no indica repeticiones; se usan 5 por sentido.",
+        "La guía pide además meter la barbilla («sacando papada»); HealthMove no incluye posiciones ni movimientos de cuello."
       ],
-      "notas_etiquetado": "La rodilla queda a 90° sobre la cadera, no sobre el pecho.",
+      "notas_etiquetado": "La rodilla queda a 90° sobre la cadera, no sobre el pecho («rodilla sobre la cadera, no sobre el pecho»): no es flexion_amplia_cadera. [conservadora] brazo_sobre_hombro: tumbado, los brazos se separan del tronco para sujetar la rodilla y la altura del hombro no se puede comparar (CN-1, P25). Se cerraría con: evidencia de la fuente del ángulo del brazo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -10734,7 +10736,7 @@
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
-        "flexion_amplia_cadera": false,
+        "flexion_amplia_cadera": true,
         "puntillas_talones": false,
         "inclinacion_tronco": false,
         "rotacion_tronco": false
@@ -10753,11 +10755,13 @@
         "titulo": "Guía de ejercicios para el cuidado de la columna lumbar",
         "url": "https://www.comunidad.madrid/hospital/clinicosancarlos/sites/clinicosancarlos/files/inline-files/DI-FISI-009-2020%20Guia%20Ejercicios%20Cuidado%20Columna%20Lumbar%20modificada%202025_2.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "especifica_de": "dolor lumbar",
-        "consultado": "2026-10-14"
+        "especifica_de": "cuidado de la columna lumbar",
+        "consultado": "2026-10-24"
       },
-      "adaptaciones": [],
-      "notas_etiquetado": "Mantén la zona lumbar apoyada.",
+      "adaptaciones": [
+        "La guía pide además meter la barbilla («sacando papada»); HealthMove no incluye posiciones ni movimientos de cuello."
+      ],
+      "notas_etiquetado": "Mantén la zona lumbar apoyada. [conservadora] flexion_amplia_cadera: el muslo elevado queda más o menos vertical y el texto no fija el ángulo. Se cerraría con: evidencia de que el muslo no se acerca al tronco más que al estar sentado.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -10810,11 +10814,12 @@
         "titulo": "Guía de ejercicios para el cuidado de la columna lumbar",
         "url": "https://www.comunidad.madrid/hospital/clinicosancarlos/sites/clinicosancarlos/files/inline-files/DI-FISI-009-2020%20Guia%20Ejercicios%20Cuidado%20Columna%20Lumbar%20modificada%202025_2.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "especifica_de": "dolor lumbar",
-        "consultado": "2026-10-14"
+        "especifica_de": "cuidado de la columna lumbar",
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
-        "La guía no indica repeticiones; se usa una pauta de 5 a 10."
+        "La guía no indica repeticiones; se usa una pauta de 5 a 10.",
+        "La guía pide además meter la barbilla («sacando papada»); HealthMove no incluye posiciones ni movimientos de cuello."
       ],
       "notas_etiquetado": "No se levanta la cabeza: no es un abdominal clásico.",
       "validacion": {
@@ -10870,11 +10875,12 @@
         "titulo": "Guía de ejercicios para el cuidado de la columna lumbar",
         "url": "https://www.comunidad.madrid/hospital/clinicosancarlos/sites/clinicosancarlos/files/inline-files/DI-FISI-009-2020%20Guia%20Ejercicios%20Cuidado%20Columna%20Lumbar%20modificada%202025_2.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "especifica_de": "dolor lumbar",
-        "consultado": "2026-10-14"
+        "especifica_de": "cuidado de la columna lumbar",
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
-        "La guía no indica repeticiones; se usa una pauta de 5 a 10."
+        "La guía no indica repeticiones; se usa una pauta de 5 a 10.",
+        "La guía pide además meter la barbilla («sacando papada»); HealthMove no incluye posiciones ni movimientos de cuello."
       ],
       "notas_etiquetado": "",
       "validacion": {
@@ -10930,11 +10936,11 @@
         "titulo": "Guía de ejercicios para el cuidado de la columna lumbar",
         "url": "https://www.comunidad.madrid/hospital/clinicosancarlos/sites/clinicosancarlos/files/inline-files/DI-FISI-009-2020%20Guia%20Ejercicios%20Cuidado%20Columna%20Lumbar%20modificada%202025_2.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "especifica_de": "dolor lumbar",
-        "consultado": "2026-10-14"
+        "especifica_de": "cuidado de la columna lumbar",
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "No hacerlo tras una prótesis de cadera: cruzar la pierna está desaconsejado durante la recuperación.",
+      "notas_etiquetado": "Observación de HealthMove, no de la guía: cruzar la pierna suele desaconsejarse tras una prótesis de cadera. No llega al usuario (Q7); pendiente de decisión (DS-378).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -10988,8 +10994,8 @@
         "titulo": "Guía de ejercicios para el cuidado de la columna lumbar",
         "url": "https://www.comunidad.madrid/hospital/clinicosancarlos/sites/clinicosancarlos/files/inline-files/DI-FISI-009-2020%20Guia%20Ejercicios%20Cuidado%20Columna%20Lumbar%20modificada%202025_2.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "especifica_de": "dolor lumbar",
-        "consultado": "2026-10-14"
+        "especifica_de": "cuidado de la columna lumbar",
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La guía no indica repeticiones; se usa una pauta de 5 a 10."

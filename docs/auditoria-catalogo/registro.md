@@ -149,10 +149,17 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 13 | manos-entrelazadas-arriba-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 13 | circulos-pierna-lado-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 13 | rodillas-lado-lado-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 14 | circulos-rodilla-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 14 | control-abdominal-brazos-arriba | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 14 | abdominal-isometrico-muslos | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 14 | oblicuos-isometricos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 14 | movilizacion-ciatico-tumbado | REQUIERE REVISIÓN PROFESIONAL | pendiente |
+| 14 | cruzar-pierna-tumbado | PENDIENTE DE DECISIÓN | pendiente |
+| 14 | autoelongacion-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 
 ## Pendientes
 
-- Auditados: 78 de 225 (lote 13, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
+- Auditados: 85 de 225 (lote 14, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
 - Lista de candidatos a adaptación unilateral: ver los resúmenes de los lotes 1, 3 y 4.
 - ~~Tarea de interfaz pendiente: comunicar `especifica_de` (decisión 3).~~ Hecha en P17 (2026-10-21).
 - **Actualización (2026-10-16):**
@@ -441,3 +448,4 @@ Sobre el informe `problemas-pendientes-2026-10-21.md`.
     - **Lote 11** (St Helens, NHS Forth Valley y NHS Fife): 9 ejercicios, los 9 listos. Consulta C12.
     - **Lote 12** (Royal Berkshire, «Bed exercises and stretches»): 15 ejercicios, los 15 listos. Consulta C13. `especifica_de` «encamados» y `flexion_profunda_rodilla` conservadora en los dos puentes.
     - **Lote 13** (Royal Berkshire pulmonar y core, Royal Papworth, RUH Bath): 9 ejercicios, los 9 listos. Consulta C14. `esfuerzo_cardio` en Star Jacks; «mujeres» en el suelo pélvico.
+    - **Lote 14** (Hospital Clínico San Carlos, columna lumbar): 7 ejercicios; 5 listos, `movilizacion-ciatico-tumbado` REQUIERE REVISIÓN PROFESIONAL y `cruzar-pierna-tumbado` PENDIENTE DE DECISIÓN (DS-378). Consulta C15.

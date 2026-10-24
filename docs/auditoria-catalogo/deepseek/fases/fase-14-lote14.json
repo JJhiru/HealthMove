@@ -1,0 +1,51 @@
+{
+  "id": "fase-14-lote14",
+  "titulo": "Auditoría del lote 14 (7 ejercicios: Hospital Clínico San Carlos, columna lumbar), borrador de DeepSeek sobre la evidencia de Claude (C15)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-14-lote14.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "registro",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "ejemplo-formato-lote-13",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/lote-13.md"
+    },
+    {
+      "id": "evidencia-lote-14",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/evidencia/lote-14.md"
+    },
+    {
+      "id": "catalogo-lote14",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "circulos-rodilla-tumbado",
+        "control-abdominal-brazos-arriba",
+        "abdominal-isometrico-muslos",
+        "oblicuos-isometricos-tumbado",
+        "movilizacion-ciatico-tumbado",
+        "cruzar-pierna-tumbado",
+        "autoelongacion-sentado"
+      ]
+    }
+  ]
+}
