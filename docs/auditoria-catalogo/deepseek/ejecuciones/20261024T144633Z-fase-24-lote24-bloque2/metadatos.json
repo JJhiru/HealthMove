@@ -1,0 +1,121 @@
+{
+  "idEjecucion": "20261024T144633Z-fase-24-lote24-bloque2",
+  "fecha": "2026-10-24T14:46:33.363Z",
+  "fase": {
+    "id": "fase-24-lote24",
+    "titulo": "Auditoría del lote 24 (11 ejercicios: Wrightington, Wigan and Leigh y East Sussex), borrador de DeepSeek sobre la evidencia de Claude (C25)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-24-lote24.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "c4712560-0c56-4aca-bbf1-20eba07747b2",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 82432,
+    "falloCache": 167,
+    "salida": 8239,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 131422,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "c4712560-0c56-4aca-bbf1-20eba07747b2",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 82432,
+        "falloCache": 167,
+        "salida": 8239,
+        "razonamiento": 0
+      },
+      "coste": 0.010431491999999999,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.010431491999999999,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "2c237c057f4a15f472d34216aa1bb6d73377cffd",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "af20374a385a4b72f5da8aad3356cbd30f840a8f",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": []
+  },
+  "bloque": 2,
+  "continuacion": {
+    "continuaDe": "20261024T144601Z-fase-24-lote24",
+    "raiz": "20261024T144601Z-fase-24-lote24",
+    "orden": "Tu respuesta anterior se interrumpió por el límite de longitud. Continúa exactamente desde el punto donde se cortó, sin repetir lo ya escrito, sin resumirlo y manteniendo el mismo formato y la numeración de los hallazgos."
+  },
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36949,
+      "sha256": "4a7cbb32481a6295fec3a0eb92181f8f472194629754a8422e4b50b56524d332"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 15774,
+      "sha256": "7c96d4bd545c4fbfe0b6a1e2508bf923cb7c6abec44520ad3cfc2feaf88dc775"
+    },
+    {
+      "id": "registro-1",
+      "procedencia": "docs/auditoria-catalogo/registro.md#parte-1-de-2",
+      "caracteres": 29784,
+      "sha256": "bc6d21f5e817711c6165f6b8a9e0bf19feb53a3bc289cc859960f4cc5d7f541e"
+    },
+    {
+      "id": "registro-2",
+      "procedencia": "docs/auditoria-catalogo/registro.md#parte-2-de-2",
+      "caracteres": 31810,
+      "sha256": "b302f8a557b4b69c6cec52fdee3ae4a1d7517a06ee7a074c255e7f936d494406"
+    },
+    {
+      "id": "opciones",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6246,
+      "sha256": "4430708c5729fd9d4f75a783a575a7a6d826cccc0d94bc6e5d6c2e63636eaf4b"
+    },
+    {
+      "id": "ejemplo-formato-lote-22",
+      "procedencia": "docs/auditoria-catalogo/lote-22.md",
+      "caracteres": 52796,
+      "sha256": "f1eb90ea8a3053f3e91746d801d5b00931120abe4ba4f8528c451e949112650d"
+    },
+    {
+      "id": "evidencia-lote-24",
+      "procedencia": "docs/auditoria-catalogo/evidencia/lote-24.md",
+      "caracteres": 7913,
+      "sha256": "4f17230ce38ae247ec879da358a550727a8f3201486274c0c4b07e49576fadd0"
+    },
+    {
+      "id": "catalogo-lote24",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 22560,
+      "sha256": "65ed4fe2c71a5ed549af65e6688917645e91ea6ca966b8f6a9a97e53e28e1d7e"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "70adfa02b72a3f7ebed78af53577d95ed44649de1b0d3d7f891857a356527101",
+    "respuestaApi": "c97a9b9447024f6466eb8e634b99029df0e3a795142512ccbabe29e938634282"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T144633Z-fase-24-lote24-bloque2/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T144633Z-fase-24-lote24-bloque2/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T144633Z-fase-24-lote24-bloque2/respuesta-api.json"
+  }
+}

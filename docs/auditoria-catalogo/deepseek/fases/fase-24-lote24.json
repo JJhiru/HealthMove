@@ -1,0 +1,64 @@
+{
+  "id": "fase-24-lote24",
+  "titulo": "Auditoría del lote 24 (11 ejercicios: Wrightington, Wigan and Leigh y East Sussex), borrador de DeepSeek sobre la evidencia de Claude (C25)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-24-lote24.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "registro-1",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md",
+      "parte": "1/2"
+    },
+    {
+      "id": "registro-2",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md",
+      "parte": "2/2"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "ejemplo-formato-lote-22",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/lote-22.md"
+    },
+    {
+      "id": "evidencia-lote-24",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/evidencia/lote-24.md"
+    },
+    {
+      "id": "catalogo-lote24",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "remo-inclinado-botella",
+        "elevaciones-frontales-botella",
+        "elevaciones-laterales-botella",
+        "press-hombros-botella-pie",
+        "banda-deslizar-brazos-pared",
+        "cruz-suelo",
+        "extension-lumbar-antebrazos",
+        "abrir-rodillas-plantas-juntas",
+        "toalla-entre-rodillas-tumbado",
+        "pierna-adelante-atras-lado",
+        "flexor-cadera-tumbado",
+        "press-encima-cabeza-sentado",
+        "abrazar-rodilla-tumbado"
+      ]
+    }
+  ]
+}

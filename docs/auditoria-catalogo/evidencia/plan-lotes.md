@@ -17,7 +17,7 @@
 | 21 | Vivifrail, Chartered Society of Physiotherapy, HSE, Parkinson's UK | 8 | Hecho (2026-10-24; CSP, 403) |
 | 22 | South Tees (rehabilitación cardiaca y 4 páginas) | 10 | Hecho (2026-10-24) |
 | 23 | Arthritis UK: todas sus páginas (une los lotes 23 y 24 previstos) | 15 | Hecho (2026-10-24) |
-| 25 | Wrightington, Wigan and Leigh (3 documentos), East Sussex | 11 | Pendiente |
+| 24 | Wrightington, Wigan and Leigh (3 documentos), East Sussex | 11 | Hecho (2026-10-24) |
 | 26 | Cambridge University Hospitals (4 páginas), British Heart Foundation (2) | 11 | Pendiente |
 | 27 | University Hospitals Plymouth, NHS Grampian, North Cheshire and Mersey (2) | 11 | Pendiente |
 | 28 | MS Trust (2), Moving Medicine, Versus Arthritis | 8 | Pendiente |

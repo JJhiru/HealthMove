@@ -240,10 +240,21 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 23 | elevar-brazo-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 23 | rodilla-deslizar-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 23 | elevacion-pierna-recta-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 24 | remo-inclinado-botella | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 24 | elevaciones-frontales-botella | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 24 | elevaciones-laterales-botella | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 24 | press-hombros-botella-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 24 | banda-deslizar-brazos-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 24 | cruz-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 24 | extension-lumbar-antebrazos | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 24 | abrir-rodillas-plantas-juntas | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 24 | toalla-entre-rodillas-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 24 | pierna-adelante-atras-lado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 24 | flexor-cadera-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 
 ## Pendientes
 
-- Auditados: 169 de 225 (lote 23, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
+- Auditados: 180 de 225 (lote 24, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
 - Lista de candidatos a adaptación unilateral: ver los resúmenes de los lotes 1, 3 y 4.
 - ~~Tarea de interfaz pendiente: comunicar `especifica_de` (decisión 3).~~ Hecha en P17 (2026-10-21).
 - **Actualización (2026-10-16):**
@@ -298,7 +309,7 @@ Plantilla en `protocolo.md`, R1.4.
 - Evidencia: N o I en la mayoría (texto sin ángulo, sin foto lateral).
 - Reglas consideradas y por qué no resuelven: R2.2 pide D para un `false`; aplicarla a toda la clase quitaría de los perfiles de rodilla casi todos los ejercicios tumbados. Q4 (frase de umbral de la rodilla en la especificación) es la cuestión de fondo.
 - Propuesta del auditor (sin aplicar): (a) `true` conservador en toda la clase; (b) una frase de referencia (Q4): «tumbado con los pies apoyados cerca de los glúteos» cuenta, «con los pies apoyados» sin más no cuenta.
-- Valor provisional: el actual en cada ejercicio. DeepSeek (DS-394, C17) lo señaló.
+- Valor provisional: el actual en cada ejercicio auditado antes del lote 24. Desde el lote 24 (`abrir-rodillas-plantas-juntas`, DS-455), `true` conservador, porque R2.2 no admite un `false` sin D. DeepSeek (DS-394, C17) lo señaló.
 - Estado: pendiente.
 
 ## Propuestas retiradas
@@ -560,3 +571,4 @@ Sobre el informe `problemas-pendientes-2026-10-21.md`.
     - **Lote 21** (Vivifrail, HSE, CSP, Parkinson's UK): 8 ejercicios; 7 listos y `elevar-puntas-pies-apoyo` PENDIENTE_DE_FUENTE (CSP, 403). Consulta C22.
     - **Lote 22** (South Tees): 10 ejercicios, los 10 listos. Consulta C23.
     - **Lote 23** (Arthritis UK): 15 ejercicios; 13 listos, 2 PENDIENTE DE DECISIÓN por la posición (181 y 187). Consulta C24.
+    - **Lote 24** (Wrightington, Wigan and Leigh; East Sussex): 11 ejercicios, los 11 listos. Consulta C25. `elevaciones-laterales-botella` corregido hacia la fuente (un brazo).

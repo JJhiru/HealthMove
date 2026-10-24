@@ -8045,12 +8045,14 @@
         "titulo": "Shoulder Exercises Level 3",
         "url": "https://www.wwl.nhs.uk/pdfreader/accessiblePDF/cnv-wwl-68ca8bcea9f618.75465388",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "hombro"
       },
       "adaptaciones": [
-        "La fuente no da la dosis de este ejercicio; se usan las 10 repeticiones del resto de la hoja."
+        "La fuente no da la dosis de este ejercicio; se usan las 10 repeticiones del resto de la hoja.",
+        "La fuente deja el peso como opcional; aquí se usa siempre la botella."
       ],
-      "notas_etiquetado": "agarre: por la botella; la otra mano solo se apoya (Q2). [conservadora] ambos_brazos: una mano apoya y el otro brazo trabaja (Q1). Se cerraría con: fuente sin apoyo.",
+      "notas_etiquetado": "agarre: la mano que trabaja sujeta la botella (D). [conservadora] ambos_brazos: una mano se apoya mientras el otro brazo trabaja (Q1). Se cerraría con: una fuente sin apoyo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -8103,12 +8105,14 @@
         "titulo": "Shoulder Exercises Level 3",
         "url": "https://www.wwl.nhs.uk/pdfreader/accessiblePDF/cnv-wwl-68ca8bcea9f618.75465388",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "hombro"
       },
       "adaptaciones": [
-        "La fuente propone 3 series; aquí una serie dentro de la rutina."
+        "La fuente propone 3 series; aquí una serie dentro de la rutina.",
+        "El texto de la fuente habla de alternar los brazos, aunque su foto lo muestra con las dos manos; aquí se sube con las dos manos."
       ],
-      "notas_etiquetado": "La fuente no indica la altura; se marca brazo sobre el hombro por prudencia.",
+      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: la foto deja los brazos a la altura de los hombros y no consta que no la pasen (CN-1). Se cerraría con: evidencia de que no pasan del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -8131,7 +8135,7 @@
         "peso_ligero"
       ],
       "exigencias": {
-        "equilibrio_sin_apoyo": true,
+        "equilibrio_sin_apoyo": false,
         "una_pierna": false,
         "sentarse_levantarse": false,
         "impacto": false,
@@ -8139,7 +8143,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": true,
         "mano_detras": false,
-        "ambos_brazos": true,
+        "ambos_brazos": false,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -8149,11 +8153,11 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Ponte de pie con una botella en cada mano y los brazos a los lados.",
-        "Sube los brazos por los lados, con los codos estirados, hasta la altura de los hombros.",
-        "Baja despacio."
+        "Ponte de pie con una botella en una mano y los brazos a los lados.",
+        "Sube ese brazo por el lado, con el codo estirado, hasta la altura del hombro.",
+        "Baja despacio. Después, cambia de brazo."
       ],
-      "dosis": "10 veces.",
+      "dosis": "10 veces con cada brazo.",
       "duracion_estimada_seg": 60,
       "variante_de": null,
       "fuente": {
@@ -8161,10 +8165,11 @@
         "titulo": "Shoulder Exercises Level 3",
         "url": "https://www.wwl.nhs.uk/pdfreader/accessiblePDF/cnv-wwl-68ca8bcea9f618.75465388",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "hombro"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
+      "notas_etiquetado": "Un solo brazo con el peso, como en la fuente (texto y foto); la otra mano queda libre: no es ambos_brazos ni exige estar sin apoyo. [conservadora] brazo_sobre_hombro: el brazo sube «hasta» la altura del hombro (en la foto de la fuente, por encima) (CN-1). Se cerraría con: evidencia de que el brazo no pasa del hombro.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -8217,7 +8222,8 @@
         "titulo": "Shoulder Exercises Level 3",
         "url": "https://www.wwl.nhs.uk/pdfreader/accessiblePDF/cnv-wwl-68ca8bcea9f618.75465388",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "hombro"
       },
       "adaptaciones": [
         "La fuente no da la dosis de este ejercicio; se usan las 10 repeticiones del resto de la hoja."
@@ -8255,8 +8261,8 @@
         "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": true,
-        "agarre": false,
-        "peso_en_manos": false,
+        "agarre": true,
+        "peso_en_manos": true,
         "flexion_profunda_rodilla": false,
         "flexion_amplia_cadera": false,
         "puntillas_talones": false,
@@ -8277,12 +8283,13 @@
         "titulo": "Shoulder Exercises Level 3",
         "url": "https://www.wwl.nhs.uk/pdfreader/accessiblePDF/cnv-wwl-68ca8bcea9f618.75465388",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "hombro"
       },
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "agarre: las manos sujetan la banda (D). [conservadora] peso_en_manos: al inclinarse hacia la pared, los antebrazos soportan parte del peso (I). Se cerraría con: revisión profesional.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -9398,7 +9405,7 @@
         "url": "https://www.esht.nhs.uk/wp-content/uploads/2017/06/0103.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
         "especifica_de": "amputación por debajo de la rodilla",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente lo hace sentado en la cama con las piernas estiradas; también vale tumbado.",
@@ -9519,7 +9526,7 @@
         "url": "https://www.esht.nhs.uk/wp-content/uploads/2017/06/0103.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
         "especifica_de": "amputación por debajo de la rodilla",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
@@ -9735,7 +9742,7 @@
         "ambos_brazos": false,
         "agarre": false,
         "peso_en_manos": false,
-        "flexion_profunda_rodilla": false,
+        "flexion_profunda_rodilla": true,
         "flexion_amplia_cadera": false,
         "puntillas_talones": false,
         "inclinacion_tronco": false,
@@ -9756,12 +9763,12 @@
         "url": "https://wwl.nhs.uk/media/.leaflets/61e53984e25a50.07167029.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
         "especifica_de": "cadera",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente propone 3 series; aquí una."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] flexion_profunda_rodilla: tumbado con las rodillas dobladas y las plantas juntas, sin ángulo en la fuente (clase de CN-5). Se cerraría con: la decisión de CN-5 o una vista lateral.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -11457,10 +11464,10 @@
         "url": "https://www.wwl.nhs.uk/pdfreader/accessiblePDF/cnv-wwl-68ca8bcead92a5.12189098",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
         "especifica_de": "dolor lumbar",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "[conservadora] ambos_brazos: no consta si los brazos solo reposan (Q1). Se cerraría con: la fuente o su imagen. [conservadora] brazo_sobre_hombro: tumbado, la altura del hombro no se puede comparar y el brazo se separa del tronco (estirado, en cruz o por encima de la cabeza) (CN-1, P25). Se cerraría con: evidencia de la fuente del ángulo del brazo.",
+      "notas_etiquetado": "ambos_brazos: los dos brazos en cruz sobre el suelo, en reposo; se mantiene `true` conservador (Q1: no consta que no intervengan para estabilizar). [conservadora] brazo_sobre_hombro: tumbado, los brazos en cruz se separan del tronco (CN-1, P25). Se cerraría con: evidencia del ángulo del brazo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -11512,12 +11519,12 @@
         "url": "https://www.wwl.nhs.uk/pdfreader/accessiblePDF/cnv-wwl-68ca8bcead92a5.12189098",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
         "especifica_de": "dolor lumbar",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente no indica repeticiones; se usan 2 o 3."
       ],
-      "notas_etiquetado": "Los antebrazos soportan parte del peso: se marca peso en manos por prudencia. [conservadora] brazo_sobre_hombro: tumbado, la altura del hombro no se puede comparar y el brazo se separa del tronco (estirado, en cruz o por encima de la cabeza) (CN-1, P25). Se cerraría con: evidencia de la fuente del ángulo del brazo.",
+      "notas_etiquetado": "[conservadora] peso_en_manos: los antebrazos soportan parte del peso del tronco. Se cerraría con: revisión profesional. [conservadora] brazo_sobre_hombro: tumbado boca abajo, los brazos se separan del tronco (CN-1, P25). Se cerraría con: evidencia del ángulo del brazo.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -13130,7 +13137,7 @@
         "url": "https://www.esht.nhs.uk/wp-content/uploads/2017/06/0103.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
         "especifica_de": "amputación por debajo de la rodilla",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco; se usan 2."

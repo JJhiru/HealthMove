@@ -46,7 +46,7 @@ export const DE_PIE_FICHAS = {
   'pendulo-hombro': P({ tronco: 45, alcanza: { manoI: 'respaldo' }, brazoD: 0, codoD: 0 }, { brazoD: 24, codoD: 24, alcanza: { manoI: 'respaldo' } }, { apoyos: ['silla-delante'], circulo: ['manoD'] }),
   'remo-inclinado-botella': P({ tronco: 40, alcanza: { manoI: 'respaldo' }, brazoD: 0, codoD: 0 }, { brazoD: -40, codoD: 30, alcanza: { manoI: 'respaldo' } }, { apoyos: ['silla-delante'], botella: ['manoD'] }),
   'elevaciones-frontales-botella': P({ brazoD: 5, codoD: 5, brazoI: 5, codoI: 5 }, { brazoD: 95, codoD: 95 }, { botella: ['manoD'] }),
-  'elevaciones-laterales-botella': PF({ brazoD: 6, codoD: 6, brazoI: 6, codoI: 6 }, { brazoD: 88, codoD: 88, brazoI: 88, codoI: 88 }, { botella: ['manoD', 'manoI'] }),
+  'elevaciones-laterales-botella': PF({ brazoD: 6, codoD: 6, brazoI: 6, codoI: 6 }, { brazoD: 88, codoD: 88, brazoI: 6, codoI: 6 }, { botella: ['manoD'] }),
   'press-hombros-botella-pie': PF({ brazoD: 90, codoD: 175, brazoI: 90, codoI: 175 }, { brazoD: 165, codoD: 170, brazoI: 165, codoI: 170 }, { botella: ['manoD', 'manoI'] }),
   'banda-deslizar-brazos-pared': PP({ inclina: 8 }, { inclina: 10, alcanza: { manoD: 'paredAlta', manoI: 'paredAlta' } }, { banda: [['manoD', 'manoI']], paredX: 270 }),
   'banda-elevar-brazos-pie': PF({ brazoD: 8, codoD: 8, brazoI: 8, codoI: 8 }, { brazoD: 150, codoD: 150, brazoI: 150, codoI: 150 }, { banda: [['manoD', 'manoI']] }),
