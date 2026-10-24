@@ -112,10 +112,10 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 5 | equilibrio-una-pierna-pared | REQUIERE CORRECCIONES | pendiente |
 | 7 | inclinacion-lateral-de-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 5 | estiramiento-gemelo-pared | REQUIERE CORRECCIONES | pendiente |
-| 10 | recoger-toalla-dedos-pies | PENDIENTE DE DECISIÓN | pendiente |
-| 10 | banda-tobillo-fuera-sentado | PENDIENTE DE DECISIÓN | pendiente |
-| 10 | cuadriceps-estatico-sentado | PENDIENTE DE DECISIÓN | pendiente |
-| 10 | cruce-piernas-isometrico | PENDIENTE DE DECISIÓN | pendiente |
+| 10 | recoger-toalla-dedos-pies | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 10 | banda-tobillo-fuera-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 10 | cuadriceps-estatico-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 10 | cruce-piernas-isometrico | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 
 ## Pendientes
 
@@ -148,7 +148,7 @@ Plantilla en `protocolo.md`, R1.4.
 - Propuesta del auditor (sin aplicar): tres opciones. (a) La preparación cuenta: más `true` (`agarre`, `ambos_brazos`, y a veces `inclinacion_tronco` o `flexion_amplia_cadera`) en todos los ejercicios con banda en las piernas. (b) No cuenta si la puede hacer otra persona antes, y la instrucción la separa como preparación («Antes de empezar, o con ayuda: …»). Es un texto de interfaz y pasaría por `healthmove-safety-reviewer`. (c) No cuenta nunca.
 - Valor provisional: el actual en los dos ejercicios. Ningún cambio sin aprobación.
 - Alcance (DS-231, 2026-10-22): 23 ejercicios con banda o toalla y un paso de preparación, 22 en borrador y 1 publicado (`extension-codo-toalla-tumbado`, «Pon una toalla doblada bajo el antebrazo»). Con la opción (a) cambiarían 14, entre ellos el publicado. La opción (b) incluye un texto de interfaz (Q8, DS-232).
-- Estado: pendiente.
+- Estado: **resuelto por P28 (2026-10-23), opción (c)**: la preparación del material no cuenta como parte del ejercicio. Ninguna etiqueta cambia. Incorporado a la especificación §4.
 
 ### CN-3 · Apoyo de las manos que solo aparece en la imagen
 - Ejercicio(s): `cruce-piernas-isometrico` (lote 10; las dos manos sujetan el borde en la imagen). Relacionado: `recoger-toalla-dedos-pies` (una mano; la imagen es I y encaja en Q2).
@@ -157,7 +157,7 @@ Plantilla en `protocolo.md`, R1.4.
 - Reglas consideradas y por qué no resuelven: Q1 y Q2 tratan el contacto o el apoyo cuya prensión no se ve. R7.5 trata la imagen que no determina un requisito. Aquí la imagen determina el apoyo, pero no si el ejercicio lo exige (DS-226).
 - Propuesta del auditor (sin aplicar): (a) cuenta, con `true` conservador, que es el valor actual; (b) no cuenta si el texto no lo pide y el movimiento no lo necesita.
 - Valor provisional: `ambos_brazos` y `agarre` en `true` conservador (P24).
-- Estado: pendiente.
+- Estado: **aplazado (P28, 2026-10-23)**. Se mantiene el valor provisional.
 
 ## Propuestas retiradas
 
@@ -390,4 +390,13 @@ Sobre el informe `problemas-pendientes-2026-10-21.md`.
     - Consulta: `deepseek/ejecuciones/20261023T022202Z-fase-09-lote10` y su continuación (DS-223 a DS-240). Análisis: `deepseek/analisis-claude/fase-09-lote10.md`.
     - Nuevo **CN-3** (apoyo que solo aparece en la imagen), con el valor actual como provisional. Se cuenta el alcance de CN-2. Ninguna etiqueta cambia.
     - La consulta C9 (CN-1), que en P24 figuraba como no enviada, se hizo después con la clave del `.env` (P25).
-
+28. **P28 · CN-2, D8, CN-3, Q5, M2 y M5.**
+    - **Textos (literales):** «CN-2: la decisión era que preparar el material para el ejercicio no cuenta como parte del mismo.», «D8/G5: opción A», «CN-3: para después», «Q5: ya los revisé, apruébalos.», «M2: se muestran sólo 4 ejercicios porque el resto no han sido aprobados.», «M5: consulta a Deepseek alguna solución.»
+    - **CN-2, opción (c):** preparar el material (atar o colocar una banda, dejar una toalla en el suelo o bajo el brazo) no marca exigencias. Incorporado a la especificación §4 y a la skill de auditoría (§5, paso 2). Ninguna etiqueta cambia: `agarre` y `ambos_brazos` de `banda-tobillo-fuera-sentado` quedan en `false` (nota actualizada) y el publicado `extension-codo-toalla-tumbado` no cambia.
+    - **D8 (G5), opción (a):** el validador sigue comprobando solo `impacto`. Las demás exclusiones del catálogo v1 las comprueba la auditoría de cada ejercicio. Documentado en la especificación §4 y añadido a «Otros campos» de la skill de auditoría, que antes no lo pedía. Sin cambios en el validador.
+    - **CN-3:** aplazado. Valor provisional, el actual (`true` conservador).
+    - **Q5:** el desarrollador aprueba las adaptaciones de `adaptaciones-q5-2026-10-22.md` (apartados 1 a 4). La columna «¿Pasa R3.1?» del documento no se rellenó: la aprobación es global. Se registra como **aprobación individual** de las adaptaciones presentadas (la salida que prevé el protocolo §13 si la prueba no se confirma), no como confirmación de la prueba: `cruce-piernas-isometrico` con los pies en el suelo no pasa la cláusula «si el texto no da rango y la imagen lo muestra, la imagen fija el rango». En el apartado 2 el texto de la fuente estaba pendiente; su auditoría (C3) sigue contrastando cada adaptación con la fuente.
+      - Aplicado en el catálogo: `cuadriceps-estatico-sentado` (las dos adaptaciones de `lote-10.md`, nota de posición); `cruce-piernas-isometrico` (adaptación «La fuente muestra las piernas estiradas al frente; aquí se hacen con los pies apoyados en el suelo.», instrucción 1 «Siéntate en el borde del asiento, con los pies apoyados en el suelo, y cruza los tobillos.», nota). La ilustración ya sigue esa postura: la discrepancia de R7.7 queda cerrada. `estiramiento-pecho-manos-lumbar`: nota (la versión sentada se acepta; sigue sin auditar).
+    - **Lote 10:** los 4 pasan a LISTO PARA APROBACIÓN DOCUMENTAL. Siguen en `borrador` hasta que el desarrollador los apruebe (P21).
+    - **M2:** se deja como está (ya decidido el 2026-10-22). Sin cambios. **Comprobado en el código:** `vistaAcerca` (`app.js`) lista las fuentes de todos los ejercicios válidos, también los borradores: 79 documentos, de los que solo 7 (de 4 organizaciones) tienen ejercicios publicados. Si se quiere que salgan solo esos, es la propuesta original de M2 (filtrar con `estadoUtilizable`).
+    - **M5 (Q7):** consulta C11 a DeepSeek hecha (`deepseek/ejecuciones/20261024T024933Z-fase-10-m5`, DS-241 a DS-250; análisis en `deepseek/analisis-claude/fase-10-m5.md`). Recomienda, sin decidir, un aviso genérico en la ficha y en el resumen de exclusiones (O4), después de que el validador compruebe el formato `[conservadora]` (m3) y con revisión de seguridad del texto. Q7 sigue abierta hasta que el desarrollador elija.

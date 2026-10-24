@@ -136,7 +136,7 @@ Revisa individualmente todas las claves definidas por la especificación vigente
 Para cada clave:
 
 1. Recupera su definición exacta de la especificación.
-2. Busca evidencia en los pasos del ejercicio y en las posiciones inicial y final. La exigencia cuenta si aparece en cualquier momento (§4).
+2. Busca evidencia en los pasos del ejercicio y en las posiciones inicial y final. La exigencia cuenta si aparece en cualquier momento (§4). La preparación del material antes de empezar (atar o colocar una banda, dejar una toalla) no cuenta (**CN-2**, resuelta, `registro.md` P28).
 3. Considera el movimiento principal, los apoyos, las transiciones y las exigencias de ejecución.
 4. Asigna la **evidencia** (D directa, I indicio, N no determinable), su **fundamento** (texto o imagen de la fuente, instrucción de HealthMove o estructural) y la **regla** del valor (`evidencia`, `conservadora` o `adaptación`).
 5. Compara con la etiqueta actual y explica cualquier discrepancia.
@@ -178,7 +178,7 @@ No conviertas observaciones biomecánicas preliminares en afirmaciones clínicas
 ## 6. Revisión de adaptaciones, variantes e ilustraciones
 
 **Una adaptación solo es válida si cumple las cinco condiciones de DG-3** (protocolo, 5.1):
-1. Conserva el movimiento y el propósito relevantes, sin inventar una variante. Prueba operativa (pendiente de confirmación, **Q5**): la ejecución de HealthMove es una de las que permite la fuente.
+1. Conserva el movimiento y el propósito relevantes, sin inventar una variante. Prueba operativa (**Q5**): la ejecución de HealthMove es una de las que permite la fuente. El desarrollador aprobó una a una las adaptaciones de `adaptaciones-q5-2026-10-22.md` (`registro.md` P28), incluida una que la cláusula «la imagen fija el rango» no dejaba pasar. Las adaptaciones nuevas se presentan cada una con su justificación para que las apruebe.
 2. Está documentada y su fundamento es verificable.
 3. Se evalúa frente a las 16 exigencias, con una tabla nueva y completa.
 4. Supera todos los filtros de compatibilidad que se dicen favorecidos. Compruébalo con `opciones.js`: si falla uno, no se presenta como compatible con ese perfil.
@@ -263,6 +263,8 @@ No omitas las exigencias FALSE.
 
 ### Otros campos
 Revisa fases, posiciones, recursos, dosis, duración estimada, variantes, ilustración y consistencia interna.
+
+Comprueba también que el ejercicio no cae en ninguna de las **exclusiones del catálogo v1** (especificación §4): cuello, rodillas en el suelo, desplazarse, impacto, muñeca aislada, reposabrazos y material especial. El validador solo comprueba el impacto; las demás las comprueba esta auditoría (**D8**, opción a, `registro.md` P28). Si cae en una, regístralo en «Incidencias»: el ejercicio no se propone para aprobación documental y la decisión es del desarrollador.
 
 ### Incidencias
 - Discrepancias, incertidumbres y cuestiones que requieren investigación o revisión profesional.

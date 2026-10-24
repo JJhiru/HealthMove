@@ -1,0 +1,54 @@
+{
+  "id": "fase-10-m5",
+  "titulo": "M5 (Q7): cómo hacer visibles a la persona las exigencias marcadas por precaución (C11)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-10-m5.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "informe-medios-menores",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/problemas-medios-menores-2026-10-22.md"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "motor",
+      "tipo": "archivo",
+      "ruta": "public/js/motor.js"
+    },
+    {
+      "id": "app-extracto",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/deepseek/fases/fase-10-m5-app-extracto.js"
+    },
+    {
+      "id": "catalogo-publicados-conservadora",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "marcha-sentado-sujetandose",
+        "estiramiento-tobillo-sentado",
+        "pulgar-dedos",
+        "activacion-sentado",
+        "sentarse-levantarse",
+        "mini-sentadillas",
+        "elevacion-talones-apoyo",
+        "elevacion-lateral-pierna",
+        "extension-pierna-atras",
+        "flexion-hombro-lado-tumbado"
+      ]
+    }
+  ]
+}

@@ -6,6 +6,8 @@
 > - 225 ejercicios: 30 publicados (`basado_en_fuente_publica`) y 195 en `borrador`; 45 auditados.
 > - `npm test` 210/210 y `node scripts/auditoria.mjs validar` con 0 errores (29 avisos: informes antiguos con valores ya corregidos).
 >
+> **Actualizado el 2026-10-23 (P28):** CN-2 resuelto (opción c: preparar el material no cuenta). G5/D8 resuelto (opción a: auditoría, documentado en la especificación §4). G3/Q5: adaptaciones aprobadas; los 4 del lote 10 quedan listos para aprobación. CN-3 aplazado. M2 sin cambios. M5: DeepSeek consultado (C11), pendiente de decisión.
+>
 > **Actualizado el 2026-10-22 (P25 a P27):** CN-1 resuelto con DeepSeek (C9). M3 revisado: ningún falso negativo (P26). M7 hecho (C10, P27). M1 confirmado y enviado con push. M2 se deja así: solo 4 fuentes tienen ejercicios publicados porque el resto está sin revisar.
 
 ## 1. Cómo quedan los críticos y graves

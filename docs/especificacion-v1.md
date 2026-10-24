@@ -40,7 +40,9 @@ rutina.
 ## 4. Exigencias de movimiento (16)
 
 Una exigencia se marca si aparece en **cualquier momento** del ejercicio (posición inicial,
-movimiento o vuelta).
+movimiento o vuelta). La preparación del material antes de empezar (atar un lazo de banda,
+colocarlo en el pie, dejar una toalla en el suelo o bajo el brazo) **no forma parte del ejercicio**
+y no marca exigencias (registro de la auditoría, CN-2 y P28).
 
 | # | Código | Se marca si… |
 |---|---|---|
@@ -84,6 +86,10 @@ Movimientos de cuello · arrodillarse o apoyar las rodillas en el suelo · despl
 espacio · ejercicios de impacto (la exigencia `impacto` se mantiene para el futuro) · movilidad
 aislada de la muñeca (giros o círculos), porque ninguna exigencia la cubre · ejercicios que
 dependen de reposabrazos · ejercicios con material especial (pelotas de terapia, escalones).
+
+El validador (`public/js/validacion.js`) solo comprueba la de impacto: rechaza un ejercicio con
+`impacto: true`. Las demás no se pueden expresar con las exigencias y las comprueba la auditoría
+documental de cada ejercicio, frente a su fuente (registro de la auditoría, D8 y P28).
 
 El catálogo v0.3.0 tiene 225 ejercicios (220 hasta el 2026-10-22, cuando 5 se separaron en versión sentada y de pie; registro, P23). Por posición: 96 sentado, 50 de pie, 61 tumbado en la
 cama y 21 en el suelo (los 3 de sentarse y levantarse usan dos). Las fuentes y los huecos están en

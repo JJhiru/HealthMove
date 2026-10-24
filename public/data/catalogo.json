@@ -4600,7 +4600,7 @@
         "La fuente propone ir subiendo hasta 10 repeticiones y hacer la serie 3 veces al día; aquí se hace una serie dentro de la rutina.",
         "La fuente describe el ejercicio con un pie; aquí se hace con cada pie."
       ],
-      "notas_etiquetado": "[conservadora] flexion_profunda_rodilla: la imagen de la fuente es frontal y no deja ver el ángulo de la rodilla. Se cerraría con: una vista lateral o un texto que diga dónde queda el pie. agarre y ambos_brazos: pendientes de CN-2 (atar y colocar el lazo).",
+      "notas_etiquetado": "[conservadora] flexion_profunda_rodilla: la imagen de la fuente es frontal y no deja ver el ángulo de la rodilla. Se cerraría con: una vista lateral o un texto que diga dónde queda el pie. agarre y ambos_brazos: false. Atar y colocar el lazo es preparación del material y no cuenta como parte del ejercicio (CN-2, P28).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -5180,9 +5180,10 @@
         "especifica_de": "cadera"
       },
       "adaptaciones": [
-        "La fuente indica el tiempo pero no las repeticiones; se usan 10."
+        "La fuente lo describe tumbado, con la rodilla empujando contra el suelo, y dice que también puede hacerse sentado, sin precisar cómo; aquí se hace en una silla.",
+        "La fuente indica el tiempo, pero no las repeticiones ni el cambio de pierna; se usan 10 con cada pierna."
       ],
-      "notas_etiquetado": "Posición: la fuente lo describe tumbado y dice que también puede hacerse sentado, sin precisar cómo; si la silla es válida depende de Q5 (lote 10).",
+      "notas_etiquetado": "Posición: la fuente lo describe tumbado y dice que también puede hacerse sentado, sin precisar cómo; la silla se acepta como una de las posiciones sentadas que permite la fuente (Q5, P28).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -5623,7 +5624,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate en el borde del asiento y cruza los tobillos.",
+        "Siéntate en el borde del asiento, con los pies apoyados en el suelo, y cruza los tobillos.",
         "Empuja la pierna de delante hacia atrás y la de atrás hacia delante, una contra otra, hasta que se tensen los muslos.",
         "Aguanta todo lo que puedas sin dolor y relaja.",
         "Cambia el cruce."
@@ -5641,9 +5642,10 @@
       },
       "adaptaciones": [
         "La fuente pide descansar 1 minuto entre repeticiones; aquí el descanso es libre para que quepa en la rutina.",
-        "La fuente dice que se aguante todo lo posible; HealthMove añade que sea sin dolor."
+        "La fuente dice que se aguante todo lo posible; HealthMove añade que sea sin dolor.",
+        "La fuente muestra las piernas estiradas al frente; aquí se hacen con los pies apoyados en el suelo."
       ],
-      "notas_etiquetado": "[conservadora] ambos_brazos: la imagen de la fuente muestra las dos manos sujetando el borde del asiento y el texto no lo pide. Se cerraría con: evidencia de que sujetarse no forma parte de la ejecución. [conservadora] agarre: la imagen de la fuente muestra las manos rodeando el borde del asiento. Se cerraría con: la misma evidencia que ambos_brazos. Postura de las piernas: la imagen las muestra estiradas al frente; depende de Q5 (lote 10).",
+      "notas_etiquetado": "[conservadora] ambos_brazos: la imagen de la fuente muestra las dos manos sujetando el borde del asiento y el texto no lo pide. Se cerraría con: evidencia de que sujetarse no forma parte de la ejecución. [conservadora] agarre: la imagen de la fuente muestra las manos rodeando el borde del asiento. Se cerraría con: la misma evidencia que ambos_brazos. Postura de las piernas: la imagen las muestra estiradas al frente; los pies apoyados en el suelo se aceptan como adaptación (Q5, P28).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -5988,7 +5990,7 @@
       "adaptaciones": [
         "La fuente lo describe de pie; aquí se hace sentado."
       ],
-      "notas_etiquetado": "Posición: el 2026-10-22 se separó en dos entradas (C2, P23): esta, sentada, y estiramiento-pecho-manos-lumbar-pie, de pie. La fuente lo describe de pie («Stand upright»); la versión sentada es una adaptación pendiente de auditoría (R3.1, Q5).",
+      "notas_etiquetado": "Posición: el 2026-10-22 se separó en dos entradas (C2, P23): esta, sentada, y estiramiento-pecho-manos-lumbar-pie, de pie. La fuente lo describe de pie («Stand upright»); la versión sentada se acepta como adaptación (Q5, P28); el ejercicio sigue sin auditar.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",

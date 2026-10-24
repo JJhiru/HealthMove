@@ -231,8 +231,10 @@ test('preparación: solo el ejercicio indicado y el contexto normativo, sin secr
 
 test('informe: marcado como IA, separa lo determinista y se guarda solo en su carpeta sin sobrescribir', async () => {
   const p = prepararRevisionEjercicio({ raiz: RAIZ, id: 'banda-curl-sentado' });
+  // El contexto real crece con el registro; aquí se prueba el informe, no el límite de entrada.
+  const amplia = { ...config, maxTokensEntrada: 60000 };
   const salida = await revisar(p, {
-    config, clave: CLAVE, presupuesto: new Presupuesto(config),
+    config: amplia, clave: CLAVE, presupuesto: new Presupuesto(amplia),
     transporte: async () => completada(JSON.stringify({ resumen: 'x', hallazgos: [hallazgo({ evidencia: { procedencia: 'catalogo-banda-curl-sentado', cita: 'banda-curl-sentado' } })], limitaciones: [] })),
   });
   const md = informeMarkdown({ prep: p, salida, fecha: '2026-10-18T00:00:00.000Z' });
