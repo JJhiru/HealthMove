@@ -1,0 +1,119 @@
+{
+  "idEjecucion": "20261024T150431Z-fase-27-lote27",
+  "fecha": "2026-10-24T15:04:31.746Z",
+  "fase": {
+    "id": "fase-27-lote27",
+    "titulo": "Auditoría del lote 27 (8 ejercicios: MS Trust, Moving Medicine y Versus Arthritis), borrador de DeepSeek sobre la evidencia de Claude (C28)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-27-lote27.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "a7dd26e2-6d7c-489f-87eb-7e928998c0e2",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 640,
+    "falloCache": 64139,
+    "salida": 14539,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 102746,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "a7dd26e2-6d7c-489f-87eb-7e928998c0e2",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 640,
+        "falloCache": 64139,
+        "salida": 14539,
+        "razonamiento": 0
+      },
+      "coste": 0.036692340000000004,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.036692340000000004,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "f2157695ffa6e156b5f93d164b463bd7bb7b2388",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "d4b8b305aaf2e09ba2e2d7f87f63b5333b09104a",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/evidencia/lote-27.md"
+    ]
+  },
+  "bloque": 1,
+  "continuacion": null,
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36949,
+      "sha256": "4a7cbb32481a6295fec3a0eb92181f8f472194629754a8422e4b50b56524d332"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 15774,
+      "sha256": "7c96d4bd545c4fbfe0b6a1e2508bf923cb7c6abec44520ad3cfc2feaf88dc775"
+    },
+    {
+      "id": "registro-1",
+      "procedencia": "docs/auditoria-catalogo/registro.md#parte-1-de-2",
+      "caracteres": 32658,
+      "sha256": "b671c4d36407896c80348e3cd0c4ef641cb4109fc5f58412639ea31a2c75feda"
+    },
+    {
+      "id": "registro-2",
+      "procedencia": "docs/auditoria-catalogo/registro.md#parte-2-de-2",
+      "caracteres": 32323,
+      "sha256": "0fe7d0c544e55c918ca73a728af01daab36536807fe18277978fb68016ddadbb"
+    },
+    {
+      "id": "opciones",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6246,
+      "sha256": "4430708c5729fd9d4f75a783a575a7a6d826cccc0d94bc6e5d6c2e63636eaf4b"
+    },
+    {
+      "id": "ejemplo-formato-lote-26",
+      "procedencia": "docs/auditoria-catalogo/lote-26.md",
+      "caracteres": 51027,
+      "sha256": "602729b2d540ff2bb39a3209f90d61da02133c76704f20151438a6a37ad3e6d4"
+    },
+    {
+      "id": "evidencia-lote-27",
+      "procedencia": "docs/auditoria-catalogo/evidencia/lote-27.md",
+      "caracteres": 6447,
+      "sha256": "e2d3d9029f80ffdbc61b5f51416c4a99197a01c8d73b7a104d6df6792ab46a40"
+    },
+    {
+      "id": "catalogo-lote27",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 16279,
+      "sha256": "d82f920a2137d47ab1f13fb4027d7099721e44cb67c6f66ae44f8c2b4027ae25"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "2a8f2db7ad1dd30f5f60e0aec34f74730e20aa6f17e94bc2ec7e641589cfdc75",
+    "respuestaApi": "9449411a707bf1456f9bb3adab83a11523c9a2207f8decd1e1efe3dd4c2a3d5f"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T150431Z-fase-27-lote27/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T150431Z-fase-27-lote27/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T150431Z-fase-27-lote27/respuesta-api.json"
+  }
+}

@@ -2698,9 +2698,11 @@
         "url": "https://mstrust.org.uk/sites/default/files/2024-03/exercises-posture-2024.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
         "especifica_de": "esclerosis múltiple",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "La fuente lo describe a cuatro patas y ofrece la variante sentada como alternativa; aquí se hace sentado."
+      ],
       "notas_etiquetado": "",
       "validacion": {
         "estado": "borrador",
@@ -2755,10 +2757,10 @@
         "url": "https://mstrust.org.uk/sites/default/files/2024-03/exercises-posture-2024.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
         "especifica_de": "esclerosis múltiple",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Las costillas del lado elevado se acercan: es una inclinación lateral.",
+      "notas_etiquetado": "[conservadora] inclinacion_tronco: las costillas del lado elevado se acercan y el tronco se curva ligeramente de lado; la fuente pide mantenerlo erguido y no da ángulo (Q3). Se cerraría con: una vista frontal que muestre que la curva no pasa de leve.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -3612,7 +3614,7 @@
         "ambos_brazos": false,
         "agarre": false,
         "peso_en_manos": false,
-        "flexion_profunda_rodilla": false,
+        "flexion_profunda_rodilla": true,
         "flexion_amplia_cadera": false,
         "puntillas_talones": false,
         "inclinacion_tronco": false,
@@ -3632,10 +3634,10 @@
         "url": "https://mstrust.org.uk/sites/default/files/files/exercises-core-stability.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
         "especifica_de": "esclerosis múltiple",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] flexion_profunda_rodilla: tumbado con las rodillas dobladas, en torno a 90° en el dibujo de la fuente, sin ángulo en el texto (clase de CN-5). Se cerraría con: la decisión de CN-5 o una vista lateral.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -3668,7 +3670,7 @@
         "ambos_brazos": false,
         "agarre": false,
         "peso_en_manos": false,
-        "flexion_profunda_rodilla": false,
+        "flexion_profunda_rodilla": true,
         "flexion_amplia_cadera": false,
         "puntillas_talones": false,
         "inclinacion_tronco": true,
@@ -3688,10 +3690,10 @@
         "url": "https://mstrust.org.uk/sites/default/files/files/exercises-core-stability.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
         "especifica_de": "esclerosis múltiple",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] flexion_profunda_rodilla: tumbado con las rodillas dobladas, en torno a 90° en el dibujo de la fuente, sin ángulo en el texto (clase de CN-5). Se cerraría con: la decisión de CN-5 o una vista lateral. [conservadora] inclinacion_tronco: bascular la pelvis para apoyar la zona lumbar es un movimiento pequeño de la columna que la especificación (§4) no define con claridad. Se cerraría con: un criterio sobre si la báscula pélvica cuenta como inclinación.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -3975,7 +3977,8 @@
         "titulo": "Chair-based Exercise Programme",
         "url": "https://australia.movingmedicine.ac.uk/wp-content/uploads/2020/04/Chair-exercise-programme-v.3-final-2.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "estancia en el hospital"
       },
       "adaptaciones": [
         "La fuente permite sujetarse al reposabrazos con la otra mano si hay inestabilidad; aquí se omite para no depender de reposabrazos."
@@ -4034,10 +4037,11 @@
         "titulo": "Chair-based Exercise Programme",
         "url": "https://australia.movingmedicine.ac.uk/wp-content/uploads/2020/04/Chair-exercise-programme-v.3-final-2.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "estancia en el hospital"
       },
       "adaptaciones": [
-        "La fuente empieza con un cojín y propone cambiarlo por un peso pequeño; aquí se usa directamente la botella."
+        "La fuente empuja un cojín con las dos manos y propone cambiarlo por un peso pequeño; aquí se usa directamente una botella en cada mano."
       ],
       "notas_etiquetado": "",
       "validacion": {
@@ -5270,7 +5274,8 @@
         "titulo": "Exercises you can do sitting down",
         "url": "https://versusarthritis.org/news/2023/september/exercises-you-can-do-sitting-down",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "artritis"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -5326,7 +5331,8 @@
         "titulo": "Exercises you can do sitting down",
         "url": "https://versusarthritis.org/news/2023/september/exercises-you-can-do-sitting-down",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "artritis"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",

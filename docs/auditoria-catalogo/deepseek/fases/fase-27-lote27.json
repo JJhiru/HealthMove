@@ -1,0 +1,61 @@
+{
+  "id": "fase-27-lote27",
+  "titulo": "Auditoría del lote 27 (8 ejercicios: MS Trust, Moving Medicine y Versus Arthritis), borrador de DeepSeek sobre la evidencia de Claude (C28)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-27-lote27.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "registro-1",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md",
+      "parte": "1/2"
+    },
+    {
+      "id": "registro-2",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md",
+      "parte": "2/2"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "ejemplo-formato-lote-26",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/lote-26.md"
+    },
+    {
+      "id": "evidencia-lote-27",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/evidencia/lote-27.md"
+    },
+    {
+      "id": "catalogo-lote27",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "abdomen-sentado",
+        "desplazar-peso-sentado",
+        "puente-suelo",
+        "bascula-pelvica-suelo",
+        "alcance-cruzado-sentado",
+        "press-encima-cabeza-sentado",
+        "circulos-tobillo-sentado",
+        "separar-dedos-pies-sentado",
+        "puente-tumbado",
+        "bascula-pelvica-tumbado"
+      ]
+    }
+  ]
+}

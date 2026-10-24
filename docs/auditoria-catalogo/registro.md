@@ -273,10 +273,18 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 26 | limpiaparabrisas-pie-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 26 | deslizar-toalla-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 26 | estiramiento-pecho-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 27 | abdomen-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 27 | desplazar-peso-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 27 | puente-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 27 | bascula-pelvica-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 27 | alcance-cruzado-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 27 | press-encima-cabeza-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 27 | circulos-tobillo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 27 | separar-dedos-pies-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 
 ## Pendientes
 
-- Auditados: 202 de 225 (lote 26, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
+- Auditados: 210 de 225 (lote 27, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
 - Lista de candidatos a adaptación unilateral: ver los resúmenes de los lotes 1, 3 y 4.
 - ~~Tarea de interfaz pendiente: comunicar `especifica_de` (decisión 3).~~ Hecha en P17 (2026-10-21).
 - **Actualización (2026-10-16):**
@@ -596,3 +604,4 @@ Sobre el informe `problemas-pendientes-2026-10-21.md`.
     - **Lote 24** (Wrightington, Wigan and Leigh; East Sussex): 11 ejercicios, los 11 listos. Consulta C25. `elevaciones-laterales-botella` corregido hacia la fuente (un brazo).
     - **Lote 25** (Cambridge University Hospitals, British Heart Foundation): 11 ejercicios, los 11 listos. Consulta C26.
     - **Lote 26** (University Hospitals Plymouth, NHS Grampian, North Cheshire and Mersey): 11 ejercicios, los 11 listos. Consulta C27. `estiramiento-isquios-pie` corregido hacia la fuente (qué rodilla se dobla).
+    - **Lote 27** (MS Trust, Moving Medicine, Versus Arthritis): 8 ejercicios, los 8 listos. Consulta C28.
