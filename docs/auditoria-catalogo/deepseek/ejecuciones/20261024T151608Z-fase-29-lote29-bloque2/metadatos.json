@@ -1,0 +1,123 @@
+{
+  "idEjecucion": "20261024T151608Z-fase-29-lote29-bloque2",
+  "fecha": "2026-10-24T15:16:08.875Z",
+  "fase": {
+    "id": "fase-29-lote29",
+    "titulo": "Auditoría del lote 29 (11 ejercicios: Reauditoría con el protocolo 1.0 de los 11 ejercicios de los lotes 1 a 5 en REQUIERE CORRECCIONES (NHS y Age UK Devon). Nota de Claude: la comprobación de R7.6 la hace Claude (renderiza las ilustraciones; corrigió las de 243 y 252); compara también el motivo antiguo de cada ejercicio con el estado actual del catálogo.), borrador de DeepSeek sobre la evidencia de Claude (C30)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-29-lote29.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "efc875ff-6e26-41d3-82e4-7bc2c9b4552d",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 79872,
+    "falloCache": 245,
+    "salida": 2205,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 126607,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "efc875ff-6e26-41d3-82e4-7bc2c9b4552d",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 79872,
+        "falloCache": 245,
+        "salida": 2205,
+        "razonamiento": 0
+      },
+      "coste": 0.003198732,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.003198732,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "fdc2c2a9ac99c68701946732cf6c7204b616d80b",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "679b44810a13eef1cbe0248c7f99b235a4d03d9b",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/evidencia/lote-29.md"
+    ]
+  },
+  "bloque": 2,
+  "continuacion": {
+    "continuaDe": "20261024T151549Z-fase-29-lote29",
+    "raiz": "20261024T151549Z-fase-29-lote29",
+    "orden": "Tu respuesta anterior se interrumpió por el límite de longitud. Continúa exactamente desde el punto donde se cortó, sin repetir lo ya escrito, sin resumirlo y manteniendo el mismo formato y la numeración de los hallazgos."
+  },
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36949,
+      "sha256": "4a7cbb32481a6295fec3a0eb92181f8f472194629754a8422e4b50b56524d332"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 15774,
+      "sha256": "7c96d4bd545c4fbfe0b6a1e2508bf923cb7c6abec44520ad3cfc2feaf88dc775"
+    },
+    {
+      "id": "registro-1",
+      "procedencia": "docs/auditoria-catalogo/registro.md#parte-1-de-2",
+      "caracteres": 33297,
+      "sha256": "3c7c3bc95917b52ab4d029c8b915516bc99e2ed551de01229ec144e4cb588fa5"
+    },
+    {
+      "id": "registro-2",
+      "procedencia": "docs/auditoria-catalogo/registro.md#parte-2-de-2",
+      "caracteres": 33214,
+      "sha256": "da53d1cb95482f6bf69414afa91ab32f4ae06d397b4300ef0599066efea94bee"
+    },
+    {
+      "id": "opciones",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6246,
+      "sha256": "4430708c5729fd9d4f75a783a575a7a6d826cccc0d94bc6e5d6c2e63636eaf4b"
+    },
+    {
+      "id": "ejemplo-formato-lote-28",
+      "procedencia": "docs/auditoria-catalogo/lote-28.md",
+      "caracteres": 39597,
+      "sha256": "d23a573e61e8e6b7913399abee7f27fde9bf7099d606b7a5cdfa8c15ca6c1d57"
+    },
+    {
+      "id": "evidencia-lote-29",
+      "procedencia": "docs/auditoria-catalogo/evidencia/lote-29.md",
+      "caracteres": 9460,
+      "sha256": "aae95fbe580a4fc753a16a5b7791a956e2ef636f58b8dd3be444e7887e00a1bd"
+    },
+    {
+      "id": "catalogo-lote29",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 19811,
+      "sha256": "96d55756e40ab3f240519a58134415c45586012aa135868a02023589a0b2443a"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "239f5608fd575a6ec660df1b0951ecb56cbdad204845b25883ade4df56c952e5",
+    "respuestaApi": "23f02c70df10e7ad05c89fd29948c30f25ef252d0e3b8242e3e3002dbed547cf"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T151608Z-fase-29-lote29-bloque2/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T151608Z-fase-29-lote29-bloque2/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T151608Z-fase-29-lote29-bloque2/respuesta-api.json"
+  }
+}

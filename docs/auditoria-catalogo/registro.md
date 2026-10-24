@@ -71,14 +71,14 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 
 | Lote | ID | Resultado de la auditoría | Decisión del desarrollador |
 |---|---|---|---|
-| 1 | estiramiento-pecho-sentado | REQUIERE CORRECCIONES | pendiente |
-| 1 | giro-tronco-sentado | REQUIERE CORRECCIONES | pendiente |
+| 29 | estiramiento-pecho-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 29 | giro-tronco-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 | 7 | marcha-sentado-sujetandose | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 6 | marcha-sentado-manos-cadera | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 7 | estiramiento-tobillo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 2 | tobillos-punta-talon-sentado | REQUIERE CORRECCIONES | pendiente |
+| 29 | tobillos-punta-talon-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 | 6 | inclinacion-lateral-brazo-arriba | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 2 | inclinacion-lateral-sentado | REQUIERE CORRECCIONES | pendiente |
+| 29 | inclinacion-lateral-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 | 6 | estiramiento-isquiotibiales-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 6 | circulos-hombros-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 8 | elevar-rodar-hombros-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
@@ -89,8 +89,8 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 6 | boxeo-circulos-pecho | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 6 | arquear-espalda-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 6 | movilidad-lumbar-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 4 | estiramiento-gemelo-sentado | REQUIERE CORRECCIONES | pendiente |
-| 4 | abrir-cerrar-manos | REQUIERE CORRECCIONES | pendiente |
+| 29 | estiramiento-gemelo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 29 | abrir-cerrar-manos | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 | 8 | pulgar-dedos | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 8 | activacion-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 8 | banda-remo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
@@ -101,25 +101,198 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 9 | flexion-hombro-lado-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 9 | respiracion-abdominal-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 9 | respiracion-tranquila-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 4 | banda-curl-sentado | REQUIERE CORRECCIONES | pendiente |
+| 29 | banda-curl-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 | 7 | sentarse-levantarse | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 7 | mini-sentadillas | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 7 | elevacion-talones-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 5 | elevacion-talones-sin-apoyo | REQUIERE CORRECCIONES | pendiente |
+| 29 | elevacion-talones-sin-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 | 7 | elevacion-lateral-pierna | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 7 | extension-pierna-atras | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 5 | flexiones-pared | REQUIERE CORRECCIONES | pendiente |
-| 5 | equilibrio-una-pierna-pared | REQUIERE CORRECCIONES | pendiente |
+| 29 | flexiones-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 29 | equilibrio-una-pierna-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 | 7 | inclinacion-lateral-de-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 5 | estiramiento-gemelo-pared | REQUIERE CORRECCIONES | pendiente |
-| 10 | recoger-toalla-dedos-pies | PENDIENTE DE DECISIÓN | pendiente |
-| 10 | banda-tobillo-fuera-sentado | PENDIENTE DE DECISIÓN | pendiente |
-| 10 | cuadriceps-estatico-sentado | PENDIENTE DE DECISIÓN | pendiente |
-| 10 | cruce-piernas-isometrico | PENDIENTE DE DECISIÓN | pendiente |
+| 29 | estiramiento-gemelo-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 10 | recoger-toalla-dedos-pies | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 10 | banda-tobillo-fuera-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 10 | cuadriceps-estatico-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 10 | cruce-piernas-isometrico | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 11 | elevacion-pierna-recta-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 11 | apretar-gluteos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 11 | de-pie-mano-preparada | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 11 | balanceo-brazos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 11 | elevar-talones-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 11 | secarse-toalla-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 11 | paso-atras-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 11 | abrazar-rodilla-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 11 | gemelo-banda-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | elevacion-brazos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | banda-elevar-brazo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | banda-flexion-codo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | circulos-hombros-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | apretar-gluteos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | abduccion-cadera-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | banda-separar-pierna-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | elevacion-pierna-recta-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | banda-elevacion-pierna-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | deslizar-talon-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | banda-deslizar-talon-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | puente-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | banda-puente-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | rodilla-al-lado-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | bombeo-tobillos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 13 | puno-extension-codo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 13 | estiramiento-pecho-manos-lumbar | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 13 | estiramiento-pecho-manos-lumbar-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 13 | abrir-pierna-brazo-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 13 | suelo-pelvico-lentas | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 13 | suelo-pelvico-rapidas | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 13 | manos-entrelazadas-arriba-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 13 | circulos-pierna-lado-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 13 | rodillas-lado-lado-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 14 | circulos-rodilla-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 14 | control-abdominal-brazos-arriba | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 14 | abdominal-isometrico-muslos | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 14 | oblicuos-isometricos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 14 | movilizacion-ciatico-tumbado | REQUIERE REVISIÓN PROFESIONAL | pendiente |
+| 14 | cruzar-pierna-tumbado | PENDIENTE DE DECISIÓN | pendiente |
+| 14 | autoelongacion-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 15 | elevar-rodilla-mantenida-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 15 | flexion-alterna-piernas-de-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 15 | toalla-entre-rodillas-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 15 | estiramiento-soleo-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 15 | estiramiento-lateral-muslo-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 15 | psoas-borde-cama | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 15 | extension-cadera-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 15 | cuadriceps-boca-abajo-toalla | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 16 | respiracion-costal-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 16 | flexion-codo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 16 | respiracion-lado-brazo-adelante | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 16 | apertura-pecho-lado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 16 | torax-manos-entrelazadas-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 16 | torax-codos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 16 | agarrar-sabana-dedos-pies | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 16 | pedaleo-pies-cama | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 17 | respiracion-abdominal-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 17 | bascula-pelvica-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 17 | rotacion-rodillas-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 17 | rodilla-al-pecho-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 17 | isometrico-hombro-fuera-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 17 | isometrico-hombro-dentro | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 17 | elevar-pierna-lado-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 17 | separar-juntar-rodillas-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 17 | elevar-brazo-lado-respiracion | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 18 | flexion-tronco-delante-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 18 | estiramiento-espalda-alta-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 18 | extension-codo-botella-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 18 | estiramiento-cuadriceps-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 18 | estiramiento-hombros-espalda-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 18 | subir-manos-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 18 | toalla-detras-espalda-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 18 | cuadriceps-lado-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 19 | banda-press-pecho-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 19 | banda-prensa-pierna-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 19 | banda-separar-rodillas-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 19 | banda-aperturas-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 19 | banda-elevaciones-laterales-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 19 | banda-empuje-pie-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 19 | banda-sentarse-levantarse | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 19 | cuadriceps-estatico-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 19 | flexion-rodilla-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 20 | brazos-arriba-manos-entrelazadas-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 20 | flexion-rodilla-pie-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 20 | tandem-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 20 | circulos-cadera-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 20 | marcha-sitio-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 20 | arquear-espalda-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 20 | giro-tronco-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 20 | sentadilla-sin-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 20 | sentarse-levantarse-sin-manos | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 21 | banda-aperturas-diagonal-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 21 | escurrir-toalla-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 21 | estiramiento-hombro-cruzado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 21 | estiramiento-hombro-cruzado-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 21 | puntillas-talones-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 21 | elevacion-lateral-brazos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 21 | elevar-puntas-pies-apoyo | PENDIENTE_DE_FUENTE | pendiente |
+| 21 | elevar-piernas-borde-silla | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | estiramiento-triceps | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | estiramiento-triceps-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | estiramiento-pecho-manos-detras | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | estiramiento-pecho-manos-detras-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | banda-elevar-brazos-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | estiramiento-flexor-cadera-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | estiramiento-aductores-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | almeja-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | isquios-toalla-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | gluteo-figura-cuatro-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | deslizamiento-tendones-dedos | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | estiramiento-pulgar | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | rotacion-cadera-fuera-sentado | PENDIENTE DE DECISIÓN | pendiente |
+| 23 | alfabeto-pie-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | estiramiento-planta-pie-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | estiramiento-pie-toalla-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | codos-atras-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | pendulo-hombro | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | cuadriceps-toalla-rodilla-tumbado | PENDIENTE DE DECISIÓN | pendiente |
+| 23 | rodilla-cama-toalla-tobillo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | rodilla-doblada-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | abdomen-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | elevar-brazo-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | rodilla-deslizar-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | elevacion-pierna-recta-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | remo-inclinado-botella | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | elevaciones-frontales-botella | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | elevaciones-laterales-botella | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | press-hombros-botella-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | banda-deslizar-brazos-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | cruz-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | extension-lumbar-antebrazos | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | abrir-rodillas-plantas-juntas | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | toalla-entre-rodillas-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | pierna-adelante-atras-lado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | flexor-cadera-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | abrazar-rodilla-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | circulos-cadera-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | marcha-circulos-codos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | rodilla-mano-contraria-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | talones-flexion-codo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | circulos-tobillo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | abdomen-profundo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | extension-lumbar-manos | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | abrir-codos-toalla-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | gluteo-pierna-cruzada-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | mariposa-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | hombros-abajo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | press-pecho-botella-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | elevacion-lateral-botella-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | flexion-hombro-botella-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | marcha-apertura-brazos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | toques-laterales-brazos-arriba-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | arrancar-cortacesped-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | estiramiento-isquios-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | limpiaparabrisas-pie-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | deslizar-toalla-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | estiramiento-pecho-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 27 | abdomen-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 27 | desplazar-peso-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 27 | puente-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 27 | bascula-pelvica-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 27 | alcance-cruzado-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 27 | press-encima-cabeza-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 27 | circulos-tobillo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 27 | separar-dedos-pies-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 28 | separar-juntar-dedos | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 28 | dedos-hacia-pulgar | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 28 | descanso-inclinado-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 28 | descanso-apoyado-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 28 | descanso-espalda-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 28 | circulos-grandes-brazos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 28 | abrazar-ambas-rodillas | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 28 | elevacion-pasiva-brazo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 
 ## Pendientes
 
-- Auditados: 45 de 225 (220 hasta P23, que separa 5 versiones de pie) (el lote 10, Arthritis UK, se adelantó por el hueco de C3 del informe de pendientes). Siguiente: St Helens y NHS Forth Valley. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
+- Auditados: 218 de 225 (lote 28, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
 - Lista de candidatos a adaptación unilateral: ver los resúmenes de los lotes 1, 3 y 4.
 - ~~Tarea de interfaz pendiente: comunicar `especifica_de` (decisión 3).~~ Hecha en P17 (2026-10-21).
 - **Actualización (2026-10-16):**
@@ -148,7 +321,7 @@ Plantilla en `protocolo.md`, R1.4.
 - Propuesta del auditor (sin aplicar): tres opciones. (a) La preparación cuenta: más `true` (`agarre`, `ambos_brazos`, y a veces `inclinacion_tronco` o `flexion_amplia_cadera`) en todos los ejercicios con banda en las piernas. (b) No cuenta si la puede hacer otra persona antes, y la instrucción la separa como preparación («Antes de empezar, o con ayuda: …»). Es un texto de interfaz y pasaría por `healthmove-safety-reviewer`. (c) No cuenta nunca.
 - Valor provisional: el actual en los dos ejercicios. Ningún cambio sin aprobación.
 - Alcance (DS-231, 2026-10-22): 23 ejercicios con banda o toalla y un paso de preparación, 22 en borrador y 1 publicado (`extension-codo-toalla-tumbado`, «Pon una toalla doblada bajo el antebrazo»). Con la opción (a) cambiarían 14, entre ellos el publicado. La opción (b) incluye un texto de interfaz (Q8, DS-232).
-- Estado: pendiente.
+- Estado: **resuelto por P28 (2026-10-23), opción (c)**: la preparación del material no cuenta como parte del ejercicio. Ninguna etiqueta cambia. Incorporado a la especificación §4.
 
 ### CN-3 · Apoyo de las manos que solo aparece en la imagen
 - Ejercicio(s): `cruce-piernas-isometrico` (lote 10; las dos manos sujetan el borde en la imagen). Relacionado: `recoger-toalla-dedos-pies` (una mano; la imagen es I y encaja en Q2).
@@ -157,6 +330,24 @@ Plantilla en `protocolo.md`, R1.4.
 - Reglas consideradas y por qué no resuelven: Q1 y Q2 tratan el contacto o el apoyo cuya prensión no se ve. R7.5 trata la imagen que no determina un requisito. Aquí la imagen determina el apoyo, pero no si el ejercicio lo exige (DS-226).
 - Propuesta del auditor (sin aplicar): (a) cuenta, con `true` conservador, que es el valor actual; (b) no cuenta si el texto no lo pide y el movimiento no lo necesita.
 - Valor provisional: `ambos_brazos` y `agarre` en `true` conservador (P24).
+- Estado: **aplazado (P28, 2026-10-23)**. Se mantiene el valor provisional.
+
+### CN-4 · La mano que va hacia atrás, hasta el pie
+- Ejercicio(s): `cuadriceps-boca-abajo-toalla` (lote 15). Casos equivalentes sin auditar: `estiramiento-cuadriceps-pie`, `cuadriceps-lado-suelo` y cualquier estiramiento de cuádriceps en que la mano coge el pie o el tobillo por detrás.
+- Detalle: la especificación §4 marca `mano_detras` con «mano detrás de la espalda o de la cabeza», y la opción del perfil dice «Me cuesta llevar la mano a la espalda o detrás de la cabeza». Al coger el pie por detrás, la mano va hacia atrás, junto al glúteo, sin llegar a la espalda.
+- Evidencia: D (San Carlos, «Ejercicios de Rodilla», p. 13: la mano del mismo lado coge el tobillo por detrás).
+- Reglas consideradas y por qué no resuelven: §4 no dice si «detrás de la espalda» incluye la mano que va hacia atrás por debajo de la cintura. R2.1 permite marcar ante la duda, pero no fija el criterio para toda la clase.
+- Propuesta del auditor (sin aplicar): (a) cuenta: `true` en toda la clase; (b) no cuenta si la mano no pasa de la cintura.
+- Valor provisional: `true` conservador (R2.1), en `cuadriceps-boca-abajo-toalla` desde P29 y en los demás al auditarlos. DeepSeek (C16) lo proponía como `true`.
+- Estado: pendiente.
+
+### CN-5 · Tumbado con las rodillas dobladas y los pies apoyados, sin ángulo
+- Ejercicio(s): `agarrar-sabana-dedos-pies` (lote 16). Casos equivalentes ya auditados con el valor actual (`false`): los de suelo pélvico (lote 13), `abdominal-isometrico-muslos`, `control-abdominal-brazos-arriba` y `rodilla-al-lado-tumbado` (lotes 12 y 14). Los puentes del lote 12 llevan `true` conservador porque su dibujo deja la rodilla en torno a 90°.
+- Detalle: §4 marca `flexion_profunda_rodilla` con «rodilla más de 90°». La postura de partida tumbado con los pies apoyados deja la rodilla en torno a 90°, más o menos según dónde se pongan los pies, y casi ninguna fuente lo fija.
+- Evidencia: N o I en la mayoría (texto sin ángulo, sin foto lateral).
+- Reglas consideradas y por qué no resuelven: R2.2 pide D para un `false`; aplicarla a toda la clase quitaría de los perfiles de rodilla casi todos los ejercicios tumbados. Q4 (frase de umbral de la rodilla en la especificación) es la cuestión de fondo.
+- Propuesta del auditor (sin aplicar): (a) `true` conservador en toda la clase; (b) una frase de referencia (Q4): «tumbado con los pies apoyados cerca de los glúteos» cuenta, «con los pies apoyados» sin más no cuenta.
+- Valor provisional: el actual en cada ejercicio auditado antes del lote 24. Desde el lote 24 (`abrir-rodillas-plantas-juntas`, DS-455), `true` conservador, porque R2.2 no admite un `false` sin D. DeepSeek (DS-394, C17) lo señaló.
 - Estado: pendiente.
 
 ## Propuestas retiradas
@@ -333,6 +524,12 @@ El desarrollador pidió seguir con «las demas cosas a corregir» sin consultarl
     - **Qué significa:** la auditoría documental contrastó cada ejercicio con su fuente pública, y su autor lo revisó. **No es una validación clínica ni profesional:** `revisado_por_profesional` queda sin usar, y la validación profesional sigue como riesgo abierto (especificación §7.5).
     - Efecto: fuera del modo desarrollo, el motor ya puede usar estos 30. Los otros 190 siguen en `borrador`.
 
+30. **P30 · Segundo lote público: 183 ejercicios aprobados como `basado_en_fuente_publica`.**
+    - Texto de la decisión (literal): «Aprueba los ejercicios ya auditados y haz commit a main jaja, yo te apruebo y mergeo el PR».
+    - Ejercicios: los 183 de la tabla con «aprobado (2026-10-24, P30)»: todos los que estaban en LISTO PARA APROBACIÓN DOCUMENTAL con el protocolo 1.0 y sin aprobar. No incluye los PENDIENTE DE DECISIÓN, PENDIENTE_DE_FUENTE ni REQUIERE REVISIÓN PROFESIONAL, ni los 7 bloqueados (G8).
+    - En el catálogo: `estado` = `basado_en_fuente_publica`, `revisado_por` = «JJhiru», `fecha_revision` = `2026-10-24` (especificación §7.6).
+    - **No es una validación clínica ni profesional** (especificación §7.5). Las etiquetas conservadoras de CN-3, CN-4 y CN-5 se aprueban con su valor provisional.
+
 ## Decisiones del desarrollador (2026-10-22)
 
 Sobre el informe `problemas-pendientes-2026-10-21.md`.
@@ -390,4 +587,37 @@ Sobre el informe `problemas-pendientes-2026-10-21.md`.
     - Consulta: `deepseek/ejecuciones/20261023T022202Z-fase-09-lote10` y su continuación (DS-223 a DS-240). Análisis: `deepseek/analisis-claude/fase-09-lote10.md`.
     - Nuevo **CN-3** (apoyo que solo aparece en la imagen), con el valor actual como provisional. Se cuenta el alcance de CN-2. Ninguna etiqueta cambia.
     - La consulta C9 (CN-1), que en P24 figuraba como no enviada, se hizo después con la clave del `.env` (P25).
-
+28. **P28 · CN-2, D8, CN-3, Q5, M2 y M5.**
+    - **Textos (literales):** «CN-2: la decisión era que preparar el material para el ejercicio no cuenta como parte del mismo.», «D8/G5: opción A», «CN-3: para después», «Q5: ya los revisé, apruébalos.», «M2: se muestran sólo 4 ejercicios porque el resto no han sido aprobados.», «M5: consulta a Deepseek alguna solución.»
+    - **CN-2, opción (c):** preparar el material (atar o colocar una banda, dejar una toalla en el suelo o bajo el brazo) no marca exigencias. Incorporado a la especificación §4 y a la skill de auditoría (§5, paso 2). Ninguna etiqueta cambia: `agarre` y `ambos_brazos` de `banda-tobillo-fuera-sentado` quedan en `false` (nota actualizada) y el publicado `extension-codo-toalla-tumbado` no cambia.
+    - **D8 (G5), opción (a):** el validador sigue comprobando solo `impacto`. Las demás exclusiones del catálogo v1 las comprueba la auditoría de cada ejercicio. Documentado en la especificación §4 y añadido a «Otros campos» de la skill de auditoría, que antes no lo pedía. Sin cambios en el validador.
+    - **CN-3:** aplazado. Valor provisional, el actual (`true` conservador).
+    - **Q5:** el desarrollador aprueba las adaptaciones de `adaptaciones-q5-2026-10-22.md` (apartados 1 a 4). La columna «¿Pasa R3.1?» del documento no se rellenó: la aprobación es global. Se registra como **aprobación individual** de las adaptaciones presentadas (la salida que prevé el protocolo §13 si la prueba no se confirma), no como confirmación de la prueba: `cruce-piernas-isometrico` con los pies en el suelo no pasa la cláusula «si el texto no da rango y la imagen lo muestra, la imagen fija el rango». En el apartado 2 el texto de la fuente estaba pendiente; su auditoría (C3) sigue contrastando cada adaptación con la fuente.
+      - Aplicado en el catálogo: `cuadriceps-estatico-sentado` (las dos adaptaciones de `lote-10.md`, nota de posición); `cruce-piernas-isometrico` (adaptación «La fuente muestra las piernas estiradas al frente; aquí se hacen con los pies apoyados en el suelo.», instrucción 1 «Siéntate en el borde del asiento, con los pies apoyados en el suelo, y cruza los tobillos.», nota). La ilustración ya sigue esa postura: la discrepancia de R7.7 queda cerrada. `estiramiento-pecho-manos-lumbar`: nota (la versión sentada se acepta; sigue sin auditar).
+    - **Lote 10:** los 4 pasan a LISTO PARA APROBACIÓN DOCUMENTAL. Siguen en `borrador` hasta que el desarrollador los apruebe (P21).
+    - **M2:** se deja como está (ya decidido el 2026-10-22). Sin cambios. **Comprobado en el código:** `vistaAcerca` (`app.js`) lista las fuentes de todos los ejercicios válidos, también los borradores: 79 documentos, de los que solo 7 (de 4 organizaciones) tienen ejercicios publicados. Si se quiere que salgan solo esos, es la propuesta original de M2 (filtrar con `estadoUtilizable`).
+    - **M5 (Q7):** consulta C11 a DeepSeek hecha (`deepseek/ejecuciones/20261024T024933Z-fase-10-m5`, DS-241 a DS-250; análisis en `deepseek/analisis-claude/fase-10-m5.md`). Recomienda, sin decidir, un aviso genérico en la ficha y en el resumen de exclusiones (O4), después de que el validador compruebe el formato `[conservadora]` (m3) y con revisión de seguridad del texto. Q7 sigue abierta hasta que el desarrollador elija.
+29. **P29 · Auditoría del resto del catálogo, repartida con DeepSeek; aprobaciones al final.**
+    - **Texto (literal):** «Mira, con lo que ya se puede auditar la mayoria del catalogo, divide entre tu y deepseek sin importar el costo de api, y las revisiones finales la dejamos para despues. Manda el commit»
+    - **Reparto:** Claude abre las fuentes y escribe la evidencia (`evidencia/lote-NN.md`); DeepSeek redacta el borrador del lote (fase `fase-NN-loteNN`); Claude lo verifica contra las fuentes, escribe `lote-NN.md` y aplica los cambios con la autorización de P23. Las correcciones de Claude al borrador se listan en cada informe.
+    - **Aprobaciones:** ningún ejercicio cambia de `borrador` hasta la revisión final del desarrollador. Tampoco los nombres nuevos de `especifica_de` ni las adaptaciones nuevas (Q5, una a una), que se listan en cada resumen de lote.
+    - **Bloqueados:** los 7 ejercicios de fuentes que devuelven 403 (Royal Devon, CDC/Tufts y la copia de ACPRC) siguen esperando G8.
+    - **Lote 11** (St Helens, NHS Forth Valley y NHS Fife): 9 ejercicios, los 9 listos. Consulta C12.
+    - **Lote 12** (Royal Berkshire, «Bed exercises and stretches»): 15 ejercicios, los 15 listos. Consulta C13. `especifica_de` «encamados» y `flexion_profunda_rodilla` conservadora en los dos puentes.
+    - **Lote 13** (Royal Berkshire pulmonar y core, Royal Papworth, RUH Bath): 9 ejercicios, los 9 listos. Consulta C14. `esfuerzo_cardio` en Star Jacks; «mujeres» en el suelo pélvico.
+    - **Lote 14** (Hospital Clínico San Carlos, columna lumbar): 7 ejercicios; 5 listos, `movilizacion-ciatico-tumbado` REQUIERE REVISIÓN PROFESIONAL y `cruzar-pierna-tumbado` PENDIENTE DE DECISIÓN (DS-378). Consulta C15.
+    - **Lote 15** (San Carlos rodilla, Valencia, Ministerio de Sanidad): 8 ejercicios, los 8 listos. Consulta C16. Nuevo CN-4 (mano hacia atrás hasta el pie), con `true` conservador provisional.
+    - **Lote 16** (San Cecilio, ejercicios en cama): 8 ejercicios, los 8 listos. Consulta C17. Nuevo CN-5 (rodillas dobladas tumbado, sin ángulo).
+    - **Lote 17** (Sant Joan d'Alacant, León, SERMEF): 9 ejercicios, los 9 listos. Consulta C18.
+    - **Lote 18** (National Institute on Aging): 8 ejercicios, los 8 listos. Consulta C19. CN-4 aplicado como provisional en dos estiramientos de cuádriceps.
+    - **Lote 19** (Worcestershire, Medway, York): 9 ejercicios, los 9 listos. Consulta C20.
+    - **Lote 20** (Otago, Royal Wolverhampton, James Paget): 9 ejercicios, los 9 listos. Consulta C21. Dos ilustraciones corregidas.
+    - **Lote 21** (Vivifrail, HSE, CSP, Parkinson's UK): 8 ejercicios; 7 listos y `elevar-puntas-pies-apoyo` PENDIENTE_DE_FUENTE (CSP, 403). Consulta C22.
+    - **Lote 22** (South Tees): 10 ejercicios, los 10 listos. Consulta C23.
+    - **Lote 23** (Arthritis UK): 15 ejercicios; 13 listos, 2 PENDIENTE DE DECISIÓN por la posición (181 y 187). Consulta C24.
+    - **Lote 24** (Wrightington, Wigan and Leigh; East Sussex): 11 ejercicios, los 11 listos. Consulta C25. `elevaciones-laterales-botella` corregido hacia la fuente (un brazo).
+    - **Lote 25** (Cambridge University Hospitals, British Heart Foundation): 11 ejercicios, los 11 listos. Consulta C26.
+    - **Lote 26** (University Hospitals Plymouth, NHS Grampian, North Cheshire and Mersey): 11 ejercicios, los 11 listos. Consulta C27. `estiramiento-isquios-pie` corregido hacia la fuente (qué rodilla se dobla).
+    - **Lote 27** (MS Trust, Moving Medicine, Versus Arthritis): 8 ejercicios, los 8 listos. Consulta C28.
+    - **Lote 28** (St George's, ACPRC, Berkshire Healthcare, Calderdale and Huddersfield, Sherwood Forest): 8 ejercicios, los 8 listos. Consulta C29.
+    - **Lote 29** (reauditoría con el protocolo 1.0 de los 11 ejercicios de los lotes 1 a 5 en REQUIERE CORRECCIONES; NHS y Age UK Devon): los 11 listos. Consulta C30. Se actualizan sus filas en la tabla (el recuento de auditados no cambia). Corregidas las tres discrepancias de ilustración de R7.7.

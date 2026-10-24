@@ -1,0 +1,113 @@
+{
+  "idEjecucion": "20261024T034937Z-fase-15-lote15",
+  "fecha": "2026-10-24T03:49:37.529Z",
+  "fase": {
+    "id": "fase-15-lote15",
+    "titulo": "Auditoría del lote 15 (8 ejercicios: San Carlos rodilla, Valencia y Ministerio de Sanidad), borrador de DeepSeek sobre la evidencia de Claude (C16)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-15-lote15.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "2346bd45-f269-41a2-a0bb-6c50441796ef",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 640,
+    "falloCache": 54618,
+    "salida": 14776,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 87960,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "2346bd45-f269-41a2-a0bb-6c50441796ef",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 640,
+        "falloCache": 54618,
+        "salida": 14776,
+        "razonamiento": 0
+      },
+      "coste": 0.03412044,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.03412044,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "d42c92168f8b46e346f83e635fb1f7a349a049bc",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "9fca76877623df4f7541fd3be685b81922a97bfe",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/evidencia/lote-15.md"
+    ]
+  },
+  "bloque": 1,
+  "continuacion": null,
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36949,
+      "sha256": "4a7cbb32481a6295fec3a0eb92181f8f472194629754a8422e4b50b56524d332"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 15774,
+      "sha256": "7c96d4bd545c4fbfe0b6a1e2508bf923cb7c6abec44520ad3cfc2feaf88dc775"
+    },
+    {
+      "id": "registro",
+      "procedencia": "docs/auditoria-catalogo/registro.md",
+      "caracteres": 50981,
+      "sha256": "703617f3a59b79f6e2b4de07fb70c17f1d9936e6767a2d7714ef409177894eed"
+    },
+    {
+      "id": "opciones",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6246,
+      "sha256": "4430708c5729fd9d4f75a783a575a7a6d826cccc0d94bc6e5d6c2e63636eaf4b"
+    },
+    {
+      "id": "ejemplo-formato-lote-14",
+      "procedencia": "docs/auditoria-catalogo/lote-14.md",
+      "caracteres": 33501,
+      "sha256": "384fef9489e8bcc493d5195c4fbdc63c4630915497e180f6b98d47366f0e5d8f"
+    },
+    {
+      "id": "evidencia-lote-15",
+      "procedencia": "docs/auditoria-catalogo/evidencia/lote-15.md",
+      "caracteres": 8461,
+      "sha256": "74e5cdec077ef769962ef31eef4840a4ad41821cbe4130d966df32272127d9ba"
+    },
+    {
+      "id": "catalogo-lote15",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 16417,
+      "sha256": "add4560b327540ffa9b69888f13b6e941bb99f24f8d0edf25a4a7c85f9dc04da"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "58553a1474f26bde5028b368250719e143f6ccdef350277965cd6c1d24767878",
+    "respuestaApi": "e22b673efa46e38465458b5d2d4f21c962b8a11eb2fb57a1ae535dd8600264c9"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T034937Z-fase-15-lote15/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T034937Z-fase-15-lote15/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T034937Z-fase-15-lote15/respuesta-api.json"
+  }
+}

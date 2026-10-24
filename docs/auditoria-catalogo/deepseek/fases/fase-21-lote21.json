@@ -1,0 +1,52 @@
+{
+  "id": "fase-21-lote21",
+  "titulo": "Auditoría del lote 21 (8 ejercicios: Vivifrail, HSE, CSP y Parkinson's UK), borrador de DeepSeek sobre la evidencia de Claude (C22)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-21-lote21.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "registro",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "ejemplo-formato-lote-20",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/lote-20.md"
+    },
+    {
+      "id": "evidencia-lote-21",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/evidencia/lote-21.md"
+    },
+    {
+      "id": "catalogo-lote21",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "banda-aperturas-diagonal-sentado",
+        "escurrir-toalla-sentado",
+        "estiramiento-hombro-cruzado",
+        "estiramiento-hombro-cruzado-pie",
+        "puntillas-talones-apoyo",
+        "elevacion-lateral-brazos-sentado",
+        "elevar-puntas-pies-apoyo",
+        "elevar-piernas-borde-silla"
+      ]
+    }
+  ]
+}

@@ -56,7 +56,7 @@ export function leerFase(raiz, id) {
   for (const b of fase.bloques) {
     if (!b || !TIPOS.includes(b.tipo) || typeof b.id !== 'string' || ids.has(b.id)) throw new FaseInvalida(`bloque no válido: ${JSON.stringify(b).slice(0, 80)}`);
     if (b.tipo === 'archivo' && typeof b.ruta !== 'string') throw new FaseInvalida(`${b.id}: falta la ruta`);
-    if (b.parte !== undefined && (b.tipo !== 'catalogo-de-pie' || !leerParte(b.parte))) throw new FaseInvalida(`${b.id}: "parte" solo vale en catalogo-de-pie, con la forma "n/m"`);
+    if (b.parte !== undefined && (!['catalogo-de-pie', 'archivo'].includes(b.tipo) || !leerParte(b.parte))) throw new FaseInvalida(`${b.id}: "parte" solo vale en catalogo-de-pie o archivo, con la forma "n/m"`);
     if ((b.tipo === 'catalogo-ids') !== (b.ids !== undefined)) throw new FaseInvalida(`${b.id}: "ids" va solo, y siempre, en catalogo-ids`);
     if (b.tipo === 'catalogo-ids' && (!Array.isArray(b.ids) || !b.ids.length || b.ids.some((x) => typeof x !== 'string' || !ID_EJERCICIO.test(x)) || new Set(b.ids).size !== b.ids.length)) throw new FaseInvalida(`${b.id}: "ids" debe ser una lista de ids de ejercicio distintos`);
     ids.add(b.id);
@@ -112,11 +112,29 @@ function derivado(catalogo, tipo, parte, ids) {
   });
 }
 
+// "parte": "n/m" en un archivo lo divide en m tramos contiguos, cortando solo antes de un
+// encabezado «## » (nunca dentro de un apartado). Los tramos, unidos, son el archivo literal.
+export function tramoDeArchivo(texto, parte) {
+  const p = leerParte(parte);
+  const inicios = [...texto.matchAll(/\n(?=## )/g)].map((m) => m.index + 1);
+  const cortes = [0];
+  for (let k = 1; k < p.de; k++) {
+    const ideal = (texto.length * k) / p.de;
+    const candidatos = inicios.filter((x) => x > cortes[cortes.length - 1]);
+    if (!candidatos.length) throw new FaseInvalida(`no hay encabezados «## » para dividir en ${p.de} partes`);
+    cortes.push(candidatos.reduce((a, b) => (Math.abs(b - ideal) < Math.abs(a - ideal) ? b : a)));
+  }
+  cortes.push(texto.length);
+  return texto.slice(cortes[p.n - 1], cortes[p.n]);
+}
+
 export function prepararFase(raiz, fase) {
   const leer = (ruta) => readFileSync(rutaSegura(raiz, ruta), 'utf8');
   const catalogo = JSON.parse(leer('public/data/catalogo.json'));
   const bloques = fase.bloques.map((b) => (b.tipo === 'archivo'
-    ? { id: b.id, procedencia: b.ruta, texto: leer(b.ruta) }
+    ? (b.parte
+      ? { id: b.id, procedencia: `${b.ruta}#parte-${b.parte.replace('/', '-de-')}`, texto: tramoDeArchivo(leer(b.ruta), b.parte) }
+      : { id: b.id, procedencia: b.ruta, texto: leer(b.ruta) })
     : { id: b.id, procedencia: `public/data/catalogo.json#${b.tipo}${b.parte ? `-${b.parte.replace('/', '-de-')}` : ''}`, texto: derivado(catalogo, b.tipo, b.parte, b.ids) }));
   for (const b of bloques) comprobarBloque(b);
   const instrucciones = leer(fase.instrucciones);

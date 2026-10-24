@@ -1,0 +1,113 @@
+{
+  "idEjecucion": "20261024T035748Z-fase-17-lote17",
+  "fecha": "2026-10-24T03:57:48.382Z",
+  "fase": {
+    "id": "fase-17-lote17",
+    "titulo": "Auditoría del lote 17 (9 ejercicios: Sant Joan d'Alacant, Hospital de León y SERMEF), borrador de DeepSeek sobre la evidencia de Claude (C18)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-17-lote17.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "5e454786-005f-454d-a0f8-e873edb05d60",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 640,
+    "falloCache": 56350,
+    "salida": 12938,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 90449,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "5e454786-005f-454d-a0f8-e873edb05d60",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 640,
+        "falloCache": 56350,
+        "salida": 12938,
+        "razonamiento": 0
+      },
+      "coste": 0.03243444,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.03243444,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "0eb06034248c3c85663f9f794822742859d0af76",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "36cf6b94cf021c9482137ed6e9881832625ca04a",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/evidencia/lote-17.md"
+    ]
+  },
+  "bloque": 1,
+  "continuacion": null,
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36949,
+      "sha256": "4a7cbb32481a6295fec3a0eb92181f8f472194629754a8422e4b50b56524d332"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 15774,
+      "sha256": "7c96d4bd545c4fbfe0b6a1e2508bf923cb7c6abec44520ad3cfc2feaf88dc775"
+    },
+    {
+      "id": "registro",
+      "procedencia": "docs/auditoria-catalogo/registro.md",
+      "caracteres": 55176,
+      "sha256": "37535b4adcfbc5cccd8223c956df80938af2d674665b071cd82f20930134d4b6"
+    },
+    {
+      "id": "opciones",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6246,
+      "sha256": "4430708c5729fd9d4f75a783a575a7a6d826cccc0d94bc6e5d6c2e63636eaf4b"
+    },
+    {
+      "id": "ejemplo-formato-lote-16",
+      "procedencia": "docs/auditoria-catalogo/lote-16.md",
+      "caracteres": 34429,
+      "sha256": "ab3b7a7549eb1633d3411ed7eba91e99ca7260b367d529c9bd25ebe422fe9935"
+    },
+    {
+      "id": "evidencia-lote-17",
+      "procedencia": "docs/auditoria-catalogo/evidencia/lote-17.md",
+      "caracteres": 7397,
+      "sha256": "c6912c73a5949bd6fda2d13f1e33a724264a2d1f03b8fcc0e842dfe415aef0ca"
+    },
+    {
+      "id": "catalogo-lote17",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 17330,
+      "sha256": "2217b02bf9a32508674a0c9fcfc0896501be49b9e8cdbbdcc0c7a82752ea2299"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "00579daa63a7c3084e7dfbd1043378553134e40d148656432c9659967427aaf4",
+    "respuestaApi": "fc60e70c190b50ac2a0b4f5662b6ddef5ac41b91275213ab100a56290ef0cd1f"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T035748Z-fase-17-lote17/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T035748Z-fase-17-lote17/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T035748Z-fase-17-lote17/respuesta-api.json"
+  }
+}

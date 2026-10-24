@@ -1,0 +1,113 @@
+{
+  "idEjecucion": "20261024T142120Z-fase-19-lote19",
+  "fecha": "2026-10-24T14:21:20.041Z",
+  "fase": {
+    "id": "fase-19-lote19",
+    "titulo": "Auditoría del lote 19 (9 ejercicios: Worcestershire, Medway y York), borrador de DeepSeek sobre la evidencia de Claude (C20)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-19-lote19.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "c5d23582-1306-4c96-9088-64761bc49490",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 640,
+    "falloCache": 58530,
+    "salida": 12870,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 94186,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "c5d23582-1306-4c96-9088-64761bc49490",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 640,
+        "falloCache": 58530,
+        "salida": 12870,
+        "razonamiento": 0
+      },
+      "coste": 0.03300684,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.03300684,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "9ecaa6f56bbb34bd6481fee13f620ad3086870d9",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "e5c1a672b6744002a7ca7da666a0412016d15011",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/evidencia/lote-19.md"
+    ]
+  },
+  "bloque": 1,
+  "continuacion": null,
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36949,
+      "sha256": "4a7cbb32481a6295fec3a0eb92181f8f472194629754a8422e4b50b56524d332"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 15774,
+      "sha256": "7c96d4bd545c4fbfe0b6a1e2508bf923cb7c6abec44520ad3cfc2feaf88dc775"
+    },
+    {
+      "id": "registro",
+      "procedencia": "docs/auditoria-catalogo/registro.md",
+      "caracteres": 56861,
+      "sha256": "e1227ded37297dbfd3fc1e8d5776a98cbe695164052e000fce40742a1269c5c3"
+    },
+    {
+      "id": "opciones",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6246,
+      "sha256": "4430708c5729fd9d4f75a783a575a7a6d826cccc0d94bc6e5d6c2e63636eaf4b"
+    },
+    {
+      "id": "ejemplo-formato-lote-18",
+      "procedencia": "docs/auditoria-catalogo/lote-18.md",
+      "caracteres": 40192,
+      "sha256": "c39f89bb9b2b03ce5c2a042d03bad6df6cff4acee43a70cbf4298089b9833009"
+    },
+    {
+      "id": "evidencia-lote-19",
+      "procedencia": "docs/auditoria-catalogo/evidencia/lote-19.md",
+      "caracteres": 7804,
+      "sha256": "7a077db0be613075e8574b5c146e9347d550c46c7a810be6ba910dd3859c2f1b"
+    },
+    {
+      "id": "catalogo-lote19",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 16960,
+      "sha256": "06958d19a57035c2e1c65709ff4cda8c616e6e910e6bf13fc088b8a1bbbe0906"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "92f4e2c461161ec90f8b8f1bd0a5117bbd41bab3adf4c28c66c9d4a64268e7c5",
+    "respuestaApi": "6c33125508c56a9e9743d53233d347f92f4f9536e79189f8a11071721cd63718"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T142120Z-fase-19-lote19/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T142120Z-fase-19-lote19/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T142120Z-fase-19-lote19/respuesta-api.json"
+  }
+}

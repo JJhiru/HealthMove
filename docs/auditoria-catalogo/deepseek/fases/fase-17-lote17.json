@@ -1,0 +1,54 @@
+{
+  "id": "fase-17-lote17",
+  "titulo": "Auditoría del lote 17 (9 ejercicios: Sant Joan d'Alacant, Hospital de León y SERMEF), borrador de DeepSeek sobre la evidencia de Claude (C18)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-17-lote17.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "registro",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "ejemplo-formato-lote-16",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/lote-16.md"
+    },
+    {
+      "id": "evidencia-lote-17",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/evidencia/lote-17.md"
+    },
+    {
+      "id": "catalogo-lote17",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "respiracion-abdominal-tumbado",
+        "bascula-pelvica-tumbado",
+        "rotacion-rodillas-tumbado",
+        "rodilla-al-pecho-tumbado",
+        "isometrico-hombro-fuera-pared",
+        "isometrico-hombro-dentro",
+        "elevar-pierna-lado-tumbado",
+        "separar-juntar-rodillas-tumbado",
+        "elevar-brazo-lado-respiracion",
+        "respiracion-lado-brazo-adelante"
+      ]
+    }
+  ]
+}

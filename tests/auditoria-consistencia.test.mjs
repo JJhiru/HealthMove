@@ -88,6 +88,7 @@ test('las 16 exigencias coinciden en la especificación, el catálogo y la skill
 
 test('los ejercicios citados en R7.7 existen en el catálogo', () => {
   const ids = new Set(catalogo.ejercicios.map((e) => e.id));
-  assert.ok(protocolo.ilustracionesPendientes.length > 0);
+  // La lista puede estar vacía (lote 29: se corrigieron las tres); la línea debe existir.
+  assert.ok(PROTOCOLO.includes('Discrepancias conocidas'));
   for (const id of protocolo.ilustracionesPendientes) assert.ok(ids.has(id), id);
 });

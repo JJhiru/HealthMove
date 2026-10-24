@@ -1,0 +1,117 @@
+{
+  "idEjecucion": "20261024T143402Z-fase-22-lote22-bloque2",
+  "fecha": "2026-10-24T14:34:02.261Z",
+  "fase": {
+    "id": "fase-22-lote22",
+    "titulo": "Auditoría del lote 22 (10 ejercicios: South Tees: rehabilitación cardiaca y cuatro páginas), borrador de DeepSeek sobre la evidencia de Claude (C23)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-22-lote22.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "7517839d-f89f-4d31-9155-65c1df3ca61d",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 77568,
+    "falloCache": 178,
+    "salida": 3626,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 124491,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "7517839d-f89f-4d31-9155-65c1df3ca61d",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 77568,
+        "falloCache": 178,
+        "salida": 3626,
+        "razonamiento": 0
+      },
+      "coste": 0.0048700079999999995,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.0048700079999999995,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "a4794c30b3db46819f4f724b6794995bc5f054c6",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "19ce03bd35c8b14964308ca93a2b778bea50604c",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/evidencia/lote-22.md"
+    ]
+  },
+  "bloque": 2,
+  "continuacion": {
+    "continuaDe": "20261024T143343Z-fase-22-lote22",
+    "raiz": "20261024T143343Z-fase-22-lote22",
+    "orden": "Tu respuesta anterior se interrumpió por el límite de longitud. Continúa exactamente desde el punto donde se cortó, sin repetir lo ya escrito, sin resumirlo y manteniendo el mismo formato y la numeración de los hallazgos."
+  },
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36949,
+      "sha256": "4a7cbb32481a6295fec3a0eb92181f8f472194629754a8422e4b50b56524d332"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 15774,
+      "sha256": "7c96d4bd545c4fbfe0b6a1e2508bf923cb7c6abec44520ad3cfc2feaf88dc775"
+    },
+    {
+      "id": "registro",
+      "procedencia": "docs/auditoria-catalogo/registro.md",
+      "caracteres": 59367,
+      "sha256": "542c2166a67c3b78f48b36624cb830fb1a6f3069d7e1f64186a1c753787c985c"
+    },
+    {
+      "id": "opciones",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6246,
+      "sha256": "4430708c5729fd9d4f75a783a575a7a6d826cccc0d94bc6e5d6c2e63636eaf4b"
+    },
+    {
+      "id": "ejemplo-formato-lote-21",
+      "procedencia": "docs/auditoria-catalogo/lote-21.md",
+      "caracteres": 44060,
+      "sha256": "49be9d48a2793820ebb9d4b0123387b3113f5d5352366b90307831727be8b22e"
+    },
+    {
+      "id": "evidencia-lote-22",
+      "procedencia": "docs/auditoria-catalogo/evidencia/lote-22.md",
+      "caracteres": 8000,
+      "sha256": "98aa97115b887acba2031566d2013658dd0c606d5f946c756103f2b90e75bb55"
+    },
+    {
+      "id": "catalogo-lote22",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 18374,
+      "sha256": "606a42c640beb522671a6ee14cf364771b4b94ff5a9c1a0c357dddb2a6240bac"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "c49ab10aec2432d9d7bb2034712da9de8147545d8f64bec0b2bff375e5208d89",
+    "respuestaApi": "5303de3393a777470bfc251df0a79e387901d3319fa727da613831ba850f5551"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T143402Z-fase-22-lote22-bloque2/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T143402Z-fase-22-lote22-bloque2/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T143402Z-fase-22-lote22-bloque2/respuesta-api.json"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "fase-22-lote22",
+  "titulo": "Auditoría del lote 22 (10 ejercicios: South Tees: rehabilitación cardiaca y cuatro páginas), borrador de DeepSeek sobre la evidencia de Claude (C23)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-22-lote22.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "registro",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "ejemplo-formato-lote-21",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/lote-21.md"
+    },
+    {
+      "id": "evidencia-lote-22",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/evidencia/lote-22.md"
+    },
+    {
+      "id": "catalogo-lote22",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "estiramiento-triceps",
+        "estiramiento-triceps-pie",
+        "estiramiento-pecho-manos-detras",
+        "estiramiento-pecho-manos-detras-pie",
+        "banda-elevar-brazos-pie",
+        "estiramiento-flexor-cadera-pie",
+        "estiramiento-aductores-pie",
+        "almeja-tumbado",
+        "isquios-toalla-tumbado",
+        "gluteo-figura-cuatro-tumbado"
+      ]
+    }
+  ]
+}

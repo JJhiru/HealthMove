@@ -1,0 +1,117 @@
+{
+  "idEjecucion": "20261024T032902Z-fase-12-lote12-bloque2",
+  "fecha": "2026-10-24T03:29:02.499Z",
+  "fase": {
+    "id": "fase-12-lote12",
+    "titulo": "Auditoría del lote 12 (15 ejercicios: Royal Berkshire, «Bed exercises and stretches»), borrador de DeepSeek sobre la evidencia de Claude (C13)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-12-lote12.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "342c94b1-42c4-4940-bdcd-cf1e94afae2d",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 74752,
+    "falloCache": 233,
+    "salida": 4801,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 119462,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "342c94b1-42c4-4940-bdcd-cf1e94afae2d",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 74752,
+        "falloCache": 233,
+        "salida": 4801,
+        "razonamiento": 0
+      },
+      "coste": 0.006279612,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.006279612,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "98079fabdb56f8b283efbaf4e2527c5115601e0e",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "664f9d3d697a1ca377675b7d45a3e2db471131f6",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/evidencia/lote-12.md"
+    ]
+  },
+  "bloque": 2,
+  "continuacion": {
+    "continuaDe": "20261024T032823Z-fase-12-lote12",
+    "raiz": "20261024T032823Z-fase-12-lote12",
+    "orden": "Tu respuesta anterior se interrumpió por el límite de longitud. Continúa exactamente desde el punto donde se cortó, sin repetir lo ya escrito, sin resumirlo y manteniendo el mismo formato y la numeración de los hallazgos."
+  },
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36949,
+      "sha256": "4a7cbb32481a6295fec3a0eb92181f8f472194629754a8422e4b50b56524d332"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 15774,
+      "sha256": "7c96d4bd545c4fbfe0b6a1e2508bf923cb7c6abec44520ad3cfc2feaf88dc775"
+    },
+    {
+      "id": "registro",
+      "procedencia": "docs/auditoria-catalogo/registro.md",
+      "caracteres": 47832,
+      "sha256": "1f399ddb7702836d1098547214eb8496e35a70650af493e942593f81f0d44366"
+    },
+    {
+      "id": "opciones",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6246,
+      "sha256": "4430708c5729fd9d4f75a783a575a7a6d826cccc0d94bc6e5d6c2e63636eaf4b"
+    },
+    {
+      "id": "ejemplo-formato-lote-11",
+      "procedencia": "docs/auditoria-catalogo/lote-11.md",
+      "caracteres": 37281,
+      "sha256": "882de9c6a6dd4121febac5479cc340fba0e3681a64e2de4240603d9b7f0be475"
+    },
+    {
+      "id": "evidencia-lote-12",
+      "procedencia": "docs/auditoria-catalogo/evidencia/lote-12.md",
+      "caracteres": 10026,
+      "sha256": "76bc4d0672017fcfedfe5e238c23e247ea4caeac72fef4fd3e7064333b5985d7"
+    },
+    {
+      "id": "catalogo-lote12",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 25683,
+      "sha256": "a3e7bb4fb7954d6fa6dfdcade5da53869df74b7ac81d5dac6dc319624c57dbea"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "2ce82f715f132e0c03fbe793a4eb7f1a0987ad60baf2e8fa256d514cfefd74ac",
+    "respuestaApi": "42620fd41a1547e9b84819070ea6cc55c72ec931b73697e54ac139245ec4e375"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T032902Z-fase-12-lote12-bloque2/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T032902Z-fase-12-lote12-bloque2/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T032902Z-fase-12-lote12-bloque2/respuesta-api.json"
+  }
+}

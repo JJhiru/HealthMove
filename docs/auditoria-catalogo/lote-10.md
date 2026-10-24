@@ -80,7 +80,7 @@
 - Impacto (modo auditoría, ver «Resumen del lote»): sale de `cerrar_mano`.
 
 ### Decisión pendiente del desarrollador
-PENDIENTE DE DECISIÓN (CN-2: dejar la toalla en el suelo exige llegar al suelo). Cambios de «Propuesta de cambios» aplicados el 2026-10-22 (P24).
+LISTO PARA APROBACIÓN DOCUMENTAL. CN-2 resuelto por la opción (c) el 2026-10-23 (P28). Cambios de «Propuesta de cambios» aplicados el 2026-10-22 (P24).
 
 ## 67. banda-tobillo-fuera-sentado
 
@@ -140,7 +140,7 @@ PENDIENTE DE DECISIÓN (CN-2: dejar la toalla en el suelo exige llegar al suelo)
 - Impacto (modo auditoría): sale de `rodilla` y `no_doblar_rodilla`.
 
 ### Decisión pendiente del desarrollador
-PENDIENTE DE DECISIÓN (CN-2: si la preparación del material cuenta para las exigencias). Aplicado el 2026-10-22 (P24) todo lo demás: instrucción 1, dosis, adaptaciones, `flexion_profunda_rodilla` conservadora, `especifica_de` y `consultado`.
+LISTO PARA APROBACIÓN DOCUMENTAL. CN-2 resuelto por la opción (c) el 2026-10-23 (P28): `agarre` y `ambos_brazos` quedan en `false`. Aplicado el 2026-10-22 (P24) todo lo demás: instrucción 1, dosis, adaptaciones, `flexion_profunda_rodilla` conservadora, `especifica_de` y `consultado`.
 
 ## 68. cuadriceps-estatico-sentado
 
@@ -200,7 +200,7 @@ Etiquetas de la versión de HealthMove (en silla). Si el desarrollador decide qu
 - En los dos casos: `fuente.especifica_de` = «cadera»; `fuente.consultado` = 2026-10-22.
 
 ### Decisión pendiente del desarrollador
-PENDIENTE DE DECISIÓN (Q5: si una silla es una de las posiciones sentadas que permite la fuente). Aplicado el 2026-10-22 (P24): `especifica_de`, `consultado` y una nota con la duda de posición.
+LISTO PARA APROBACIÓN DOCUMENTAL. Q5 aprobada el 2026-10-23 (P28): la silla pasa y se aplican las dos adaptaciones. Aplicado el 2026-10-22 (P24): `especifica_de`, `consultado` y una nota con la duda de posición.
 
 ## 69. cruce-piernas-isometrico
 
@@ -261,7 +261,7 @@ PENDIENTE DE DECISIÓN (Q5: si una silla es una de las posiciones sentadas que p
 - Impacto (modo auditoría): sale de `un_brazo` y `cerrar_mano`.
 
 ### Decisión pendiente del desarrollador
-PENDIENTE DE DECISIÓN (Q5: postura de las piernas; con ella se resuelve la discrepancia de ilustración de R7.7). Aplicado el 2026-10-22 (P24): los dos `true` conservadores, «en el borde del asiento», la adaptación «sin dolor», `especifica_de` y `consultado`. La ilustración no se cambia hasta Q5.
+LISTO PARA APROBACIÓN DOCUMENTAL. Q5 aprobada el 2026-10-23 (P28): los pies en el suelo pasan y la discrepancia de R7.7 queda cerrada. Aplicado el 2026-10-22 (P24): los dos `true` conservadores, «en el borde del asiento», la adaptación «sin dolor», `especifica_de` y `consultado`. La ilustración no se cambia hasta Q5.
 
 ## Revisión de DeepSeek
 
@@ -289,3 +289,12 @@ PENDIENTE DE DECISIÓN (Q5: postura de las piernas; con ella se resuelve la disc
   - En la app publicada, nada cambia hasta que el desarrollador apruebe alguno.
 - **Conclusión sobre el hueco:** este lote **no** llena la combinación que hoy no genera rutina. Con la evidencia, dos de los cuatro necesitan las manos.
 - **Aplicado (P24):** todo lo que no depende de CN-2 ni de Q5. Revisado con DeepSeek (C10, P27).
+
+## Decisiones del desarrollador (2026-10-23, P28)
+
+Las decisiones pendientes de cada ejercicio quedan resueltas (`registro.md`, P28). Los 4 pasan a **LISTO PARA APROBACIÓN DOCUMENTAL** y siguen en `borrador` hasta que el desarrollador los apruebe.
+
+- `recoger-toalla-dedos-pies`: CN-2, opción (c). Dejar la toalla en el suelo es preparación y no cuenta. Sin cambios de etiquetas; el `agarre` conservador (apoyo que solo aparece en la imagen) queda como está mientras CN-3 siga aplazado.
+- `banda-tobillo-fuera-sentado`: CN-2, opción (c). Atar y colocar el lazo no cuenta: `agarre` y `ambos_brazos` quedan en `false`. Se actualiza la nota.
+- `cuadriceps-estatico-sentado`: Q5, aprobada. La silla pasa. Se aplican las dos adaptaciones de «Propuesta de cambios» y se actualiza la nota. Sin cambios de etiquetas.
+- `cruce-piernas-isometrico`: Q5, aprobada. Los pies apoyados en el suelo pasan, aunque la cláusula «la imagen fija el rango» de R3.1 no los dejaba pasar. Nueva adaptación e instrucción 1 «Siéntate en el borde del asiento, con los pies apoyados en el suelo, y cruza los tobillos.». La ilustración ya sigue esa postura: la discrepancia de R7.7 queda cerrada. Los dos `true` conservadores siguen como valor provisional (CN-3, aplazado).

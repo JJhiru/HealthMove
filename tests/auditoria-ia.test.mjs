@@ -231,14 +231,17 @@ test('preparación: solo el ejercicio indicado y el contexto normativo, sin secr
 
 test('informe: marcado como IA, separa lo determinista y se guarda solo en su carpeta sin sobrescribir', async () => {
   const p = prepararRevisionEjercicio({ raiz: RAIZ, id: 'banda-curl-sentado' });
+  // El contexto real crece con el registro; aquí se prueba el informe, no el límite de entrada.
+  const amplia = { ...config, maxTokensEntrada: 60000 };
   const salida = await revisar(p, {
-    config, clave: CLAVE, presupuesto: new Presupuesto(config),
+    config: amplia, clave: CLAVE, presupuesto: new Presupuesto(amplia),
     transporte: async () => completada(JSON.stringify({ resumen: 'x', hallazgos: [hallazgo({ evidencia: { procedencia: 'catalogo-banda-curl-sentado', cita: 'banda-curl-sentado' } })], limitaciones: [] })),
   });
   const md = informeMarkdown({ prep: p, salida, fecha: '2026-10-18T00:00:00.000Z' });
   assert.match(md, /ANÁLISIS ASISTIDO POR IA/);
   assert.match(md, /## Comprobado por herramientas deterministas/);
-  assert.match(md, /Discrepancia de ilustración pendiente \(R7\.7\): sí/);
+  // Refleja la lista real de R7.7 (que puede estar vacía).
+  assert.match(md, new RegExp(`Discrepancia de ilustración pendiente \\(R7\\.7\\): ${p.deterministas?.ilustracionPendiente ?? p.ilustracionPendiente ? 'sí' : 'no'}`));
   assert.ok(md.indexOf('Comprobado por herramientas deterministas') < md.indexOf('Sugerencias del modelo'));
   assert.ok(!md.includes(CLAVE));
   const raiz = mkdtempSync(join(tmpdir(), 'hm-ia-'));

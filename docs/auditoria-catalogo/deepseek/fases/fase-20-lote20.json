@@ -1,0 +1,56 @@
+{
+  "id": "fase-20-lote20",
+  "titulo": "Auditoría del lote 20 (9 ejercicios: Otago (Later Life Training), Royal Wolverhampton y James Paget), borrador de DeepSeek sobre la evidencia de Claude (C21)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-20-lote20.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "registro",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "ejemplo-formato-lote-19",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/lote-19.md"
+    },
+    {
+      "id": "evidencia-lote-20",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/evidencia/lote-20.md"
+    },
+    {
+      "id": "catalogo-lote20",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "brazos-arriba-manos-entrelazadas-sentado",
+        "flexion-rodilla-pie-apoyo",
+        "tandem-apoyo",
+        "circulos-cadera-pie",
+        "marcha-sitio-apoyo",
+        "arquear-espalda-pie",
+        "giro-tronco-pie",
+        "sentadilla-sin-apoyo",
+        "sentarse-levantarse-sin-manos",
+        "flexion-alterna-piernas-de-pie",
+        "mini-sentadillas",
+        "sentarse-levantarse"
+      ]
+    }
+  ]
+}

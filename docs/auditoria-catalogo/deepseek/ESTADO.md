@@ -4,7 +4,9 @@ Documento de coordinación de **Claude**. No contiene texto de DeepSeek: sus res
 
 **Procedimiento completo:** skill `auditoria-junto-a-deepseek` (`.claude/skills/auditoria-junto-a-deepseek/SKILL.md`).
 
-- **Última actualización:** 2026-10-19 11:37 -05: Grupo 2 implementado y aceptado (§7.2), reparación del worktree (§7.2) y siguiente hallazgo, DS-28/36, a la espera de D8 (§7.3). Antes: triage de la fase 01 (ver §5 y `analisis-claude/fase-01-triage.md`).
+- **Última actualización:** 2026-10-24 (P29): fases `fase-11-lote11` a `fase-29-lote29` (consultas C12 a C30, DS-251 a DS-498), una por lote de auditoría del catálogo. Ejecuciones en `ejecuciones/`, análisis en `analisis-claude/fase-NN-loteNN.md`, decisiones y estado de cada ejercicio en los `lote-NN.md` y en `registro.md` (P29). Cada lote costó entre 0,03 y 0,05 USD como mucho. Quedan bloqueados 7 ejercicios (G8: Royal Devon y CDC/Tufts devuelven 403). **Siguiente:** ninguna fase prevista; las revisiones finales y las aprobaciones quedan para el desarrollador.
+- **Actualización anterior:** 2026-10-23: fase 10 (M5, consulta C11) ejecutada y analizada (`analisis-claude/fase-10-m5.md`), DS-241 a DS-250, pendiente de decisión del desarrollador. **Este documento no recoge las fases 02 a 09**: sus ejecuciones están en `ejecuciones/`, sus análisis en `analisis-claude/` y sus decisiones en `registro.md` (P12 a P27).
+- **Antes:** 2026-10-19 11:37 -05: Grupo 2 implementado y aceptado (§7.2), reparación del worktree (§7.2) y siguiente hallazgo, DS-28/36, a la espera de D8 (§7.3). Antes: triage de la fase 01 (ver §5 y `analisis-claude/fase-01-triage.md`).
 - **Rama y commit:** `desarrollo-v1`, `defd8b0`. Sin commits nuevos: los Grupos 1 y 2 siguen sin confirmar (§7.4).
 - **Catálogo:** blob `72fda34f80d2e3222eabd5c0ce583c21c83d7699`.
 - **Protocolo:** 1.0.
@@ -41,6 +43,7 @@ HM_IA_MAX_TOKENS_ENTRADA=200000 HM_IA_MAX_TOKENS_SALIDA=16000 HM_IA_PRESUPUESTO_
 |---|---|---|---|---|---|---|
 | `20261019T001226Z-fase-01-protocolo` | fase-01-protocolo | 1 | truncada (`length`) | 0 / 52 690 / 16 000 | 0,0350 USD | verificado |
 | `20261019T001508Z-fase-01-protocolo-bloque2` | fase-01-protocolo | 2 (continúa el 1) | **completa** (`stop`) | 68 608 / 141 / 10 123 | 0,0126 USD | verificado |
+| `20261024T024933Z-fase-10-m5` | fase-10-m5 (M5, C11) | 1 | **completa** (`stop`) | 640 / 38 901 / 8 375 | 0,0217 USD | verificado |
 
 **Sobre el coste:**
 - La fase 01 costó como mucho **0,0476 USD**, calculado con la tarifa punta de `scripts/ia/tarifas.mjs`.

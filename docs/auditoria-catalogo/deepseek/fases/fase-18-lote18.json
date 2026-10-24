@@ -1,0 +1,52 @@
+{
+  "id": "fase-18-lote18",
+  "titulo": "Auditoría del lote 18 (8 ejercicios: National Institute on Aging), borrador de DeepSeek sobre la evidencia de Claude (C19)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-18-lote18.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "registro",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "ejemplo-formato-lote-17",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/lote-17.md"
+    },
+    {
+      "id": "evidencia-lote-18",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/evidencia/lote-18.md"
+    },
+    {
+      "id": "catalogo-lote18",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "flexion-tronco-delante-sentado",
+        "estiramiento-espalda-alta-sentado",
+        "extension-codo-botella-sentado",
+        "estiramiento-cuadriceps-pie",
+        "estiramiento-hombros-espalda-pared",
+        "subir-manos-pared",
+        "toalla-detras-espalda-sentado",
+        "cuadriceps-lado-suelo"
+      ]
+    }
+  ]
+}

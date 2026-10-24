@@ -1,0 +1,60 @@
+{
+  "id": "fase-12-lote12",
+  "titulo": "Auditoría del lote 12 (15 ejercicios: Royal Berkshire, «Bed exercises and stretches»), borrador de DeepSeek sobre la evidencia de Claude (C13)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-12-lote12.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "registro",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "ejemplo-formato-lote-11",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/lote-11.md"
+    },
+    {
+      "id": "evidencia-lote-12",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/evidencia/lote-12.md"
+    },
+    {
+      "id": "catalogo-lote12",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "elevacion-brazos-tumbado",
+        "banda-elevar-brazo-tumbado",
+        "banda-flexion-codo-tumbado",
+        "circulos-hombros-tumbado",
+        "apretar-gluteos-tumbado",
+        "abduccion-cadera-tumbado",
+        "banda-separar-pierna-tumbado",
+        "elevacion-pierna-recta-tumbado",
+        "banda-elevacion-pierna-tumbado",
+        "deslizar-talon-tumbado",
+        "banda-deslizar-talon-tumbado",
+        "puente-tumbado",
+        "banda-puente-tumbado",
+        "rodilla-al-lado-tumbado",
+        "bombeo-tobillos-tumbado",
+        "banda-curl-sentado"
+      ]
+    }
+  ]
+}

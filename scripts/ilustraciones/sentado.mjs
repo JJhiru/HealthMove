@@ -7,7 +7,7 @@ const PIERNA_ESTIRADA_SUELO = { caderaD: 58, rodillaD: 58, pieD: 150 };
 
 export const SENTADO = {
   // --- Catálogo v0.2.0 ---
-  'estiramiento-pecho-sentado': SF({ brazoD: 18, codoD: 18, brazoI: 18, codoI: 18 }, { brazoD: 90, codoD: 90, brazoI: 90, codoI: 90 }, { zona: ['pecho'] }),
+  'estiramiento-pecho-sentado': SF({ brazoD: 18, codoD: 18, brazoI: 18, codoI: 18 }, { brazoD: 50, codoD: 50, brazoI: 50, codoI: 50 }, { zona: ['pecho'] }),
   'giro-tronco-sentado': SF({ alcanza: { manoD: 'hombroI', manoI: 'hombroD' } }, { giro: 50 }, { giro: true }),
   'marcha-sentado-sujetandose': S(SUJETA_SILLA, { caderaD: 118, rodillaD: 20 }),
   'marcha-sentado-manos-cadera': S(MANOS_CADERA, { caderaD: 106, rodillaD: 10 }),
@@ -31,7 +31,7 @@ export const SENTADO = {
   'activacion-sentado': S({ brazoD: -28, codoD: 45, brazoI: 35, codoI: 110 }, { brazoD: 35, codoD: 110, brazoI: -28, codoI: 45, pieD: 135 }),
   // De frente, como la fuente: la banda pasa de los muslos al abdomen y se estira hacia los lados (no es un remo hacia atrás).
   'banda-remo-sentado': SF({ brazoD: 4, codoD: -35, brazoI: 4, codoI: -35, ...F({ antebrazo: 0.7 }) }, { brazoD: 14, codoD: 75, brazoI: 14, codoI: 75, ...F({ antebrazo: 0.4 }) }, { banda: [['manoD', 'manoI']] }),
-  'banda-curl-sentado': S({ brazoD: 4, codoD: 20 }, { codoD: 150 }, { banda: [['manoD', 'pieD']] }),
+  'banda-curl-sentado': S({ brazoD: 4, codoD: 20, brazoI: 4, codoI: 20 }, { codoD: 95, codoI: 95 }, { banda: [['manoD', 'pieD'], ['manoI', 'pieI']] }),
   'respiracion-abdominal-sentado': S(MANOS_ABDOMEN, {}, { zona: ['abdomen'], aire: 'entra' }),
   'extension-rodilla-sentado': S({}, { rodillaD: 88, pieD: 172 }, { zona: ['muslo'] }),
   'elevacion-pierna-recta-sentado': S({ caderaD: 92, rodillaD: 90 }, { caderaD: 112, rodillaD: 110 }),
@@ -59,7 +59,7 @@ export const SENTADO = {
   'banda-prensa-pierna-sentado': S({ caderaD: 120, rodillaD: 40, pieD: 120, brazoD: -15, codoD: 60 }, { caderaD: 95, rodillaD: 70, pieD: 140 }, { banda: [['manoD', 'pieD']] }),
   'banda-separar-rodillas-sentado': SF({}, { caderaD: 24, rodillaD: 12, caderaI: 24, rodillaI: 12 }, { banda: [['rodillaD', 'rodillaI']] }),
   'banda-aperturas-sentado': SF({ brazoD: 80, codoD: 80, brazoI: 80, codoI: 80, ...F({ brazo: 0.3, antebrazo: 0.3 }) }, { brazoD: 90, codoD: 90, brazoI: 90, codoI: 90, ...F() }, { banda: [['manoD', 'manoI']] }),
-  'banda-aperturas-diagonal-sentado': SF({ brazoD: -15, codoD: -20, brazoI: -15, codoI: -20 }, { brazoD: 130, codoD: 130, brazoI: 130, codoI: 130 }, { banda: [['manoD', 'manoI']] }),
+  'banda-aperturas-diagonal-sentado': SF({ brazoD: -15, codoD: -20, brazoI: -15, codoI: -20 }, { brazoD: 140, codoD: 140, brazoI: 25, codoI: 25 }, { banda: [['manoD', 'manoI']] }),
   'banda-elevaciones-laterales-sentado': SF({ brazoD: 8, codoD: 8, brazoI: 8, codoI: 8 }, { brazoD: 85, codoD: 85, brazoI: 85, codoI: 85 }, { banda: [['manoD', 'pieD'], ['manoI', 'pieI']] }),
   'banda-empuje-pie-sentado': S({ caderaD: 95, rodillaD: 92, pieD: 185, brazoD: -15, codoD: 60 }, { pieD: 120 }, { banda: [['manoD', 'pieD']] }),
   'banda-tobillo-fuera-sentado': PIE({}, {}, { lados: true, banda: true }),

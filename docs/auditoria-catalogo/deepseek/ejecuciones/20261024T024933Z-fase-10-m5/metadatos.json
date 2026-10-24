@@ -1,0 +1,115 @@
+{
+  "idEjecucion": "20261024T024933Z-fase-10-m5",
+  "fecha": "2026-10-24T02:49:33.458Z",
+  "fase": {
+    "id": "fase-10-m5",
+    "titulo": "M5 (Q7): cómo hacer visibles a la persona las exigencias marcadas por precaución (C11)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-10-m5.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "8a3ee145-93b9-486a-9441-c419e99efaa4",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 640,
+    "falloCache": 38901,
+    "salida": 8375,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 63517,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "8a3ee145-93b9-486a-9441-c419e99efaa4",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 640,
+        "falloCache": 38901,
+        "salida": 8375,
+        "razonamiento": 0
+      },
+      "coste": 0.02172414,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.02172414,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "5e2975b951b459ce67f77d0dc6e61967a65624d4",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "dd8a5fdb82fead9e1a4cd3d2bb1242f7b738ab79",
+      "sinConfirmar": true
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/protocolo.md",
+      "docs/especificacion-v1.md",
+      "docs/auditoria-catalogo/deepseek/fases/fase-10-m5-app-extracto.js"
+    ]
+  },
+  "bloque": 1,
+  "continuacion": null,
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36949,
+      "sha256": "4a7cbb32481a6295fec3a0eb92181f8f472194629754a8422e4b50b56524d332"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 15774,
+      "sha256": "7c96d4bd545c4fbfe0b6a1e2508bf923cb7c6abec44520ad3cfc2feaf88dc775"
+    },
+    {
+      "id": "informe-medios-menores",
+      "procedencia": "docs/auditoria-catalogo/problemas-medios-menores-2026-10-22.md",
+      "caracteres": 7259,
+      "sha256": "17e84f89d87bc0569c8b3c8b5c162cd9bdf2db8e89f0518b5a409f856d115100"
+    },
+    {
+      "id": "opciones",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6246,
+      "sha256": "4430708c5729fd9d4f75a783a575a7a6d826cccc0d94bc6e5d6c2e63636eaf4b"
+    },
+    {
+      "id": "motor",
+      "procedencia": "public/js/motor.js",
+      "caracteres": 14982,
+      "sha256": "246a5ea4fa23f7e530c62724238c9ce12fa6364d1305942dcee124720050c053"
+    },
+    {
+      "id": "app-extracto",
+      "procedencia": "docs/auditoria-catalogo/deepseek/fases/fase-10-m5-app-extracto.js",
+      "caracteres": 20450,
+      "sha256": "f0b2b13edb79036e2a253e2cd98e524dd0ba2df49d6514278fb3a81012c43e9f"
+    },
+    {
+      "id": "catalogo-publicados-conservadora",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 17576,
+      "sha256": "996766f45c9aef129de01ccd1acbc8e5302b5e2677d06cc07eef004269e3ce7c"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "8a49c2430cec25bbd0fcaa2ff9d9d052d414743a25055e098e5ae30baf5fe25b",
+    "respuestaApi": "dc077f031757ab9b490448809f30be09a629e82b365f2a6e930b83bc27b5d500"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T024933Z-fase-10-m5/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T024933Z-fase-10-m5/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T024933Z-fase-10-m5/respuesta-api.json"
+  }
+}

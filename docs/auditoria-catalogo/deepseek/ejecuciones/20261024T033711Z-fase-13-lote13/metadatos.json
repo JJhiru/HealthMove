@@ -1,0 +1,113 @@
+{
+  "idEjecucion": "20261024T033711Z-fase-13-lote13",
+  "fecha": "2026-10-24T03:37:11.223Z",
+  "fase": {
+    "id": "fase-13-lote13",
+    "titulo": "Auditoría del lote 13 (9 ejercicios: Royal Berkshire (pulmonar y core), Royal Papworth y RUH Bath), borrador de DeepSeek sobre la evidencia de Claude (C14)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-13-lote13.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "812b1c95-18b6-45b8-968b-b9a3f3f786e1",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 640,
+    "falloCache": 63358,
+    "salida": 14778,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 101855,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "812b1c95-18b6-45b8-968b-b9a3f3f786e1",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 640,
+        "falloCache": 63358,
+        "salida": 14778,
+        "razonamiento": 0
+      },
+      "coste": 0.03674484,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.03674484,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "c16f646c073f3f6a14e56eedfda6ceb64808eb28",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "27a32cb0b3daaa27a6c1d7139aceecf9f8e15f72",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/evidencia/lote-13.md"
+    ]
+  },
+  "bloque": 1,
+  "continuacion": null,
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36949,
+      "sha256": "4a7cbb32481a6295fec3a0eb92181f8f472194629754a8422e4b50b56524d332"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 15774,
+      "sha256": "7c96d4bd545c4fbfe0b6a1e2508bf923cb7c6abec44520ad3cfc2feaf88dc775"
+    },
+    {
+      "id": "registro",
+      "procedencia": "docs/auditoria-catalogo/registro.md",
+      "caracteres": 49254,
+      "sha256": "0408fe76d3b2c14f296eff50295791b2e842f899e73e6352c492553f6b20c4e0"
+    },
+    {
+      "id": "opciones",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6246,
+      "sha256": "4430708c5729fd9d4f75a783a575a7a6d826cccc0d94bc6e5d6c2e63636eaf4b"
+    },
+    {
+      "id": "ejemplo-formato-lote-12",
+      "procedencia": "docs/auditoria-catalogo/lote-12.md",
+      "caracteres": 58679,
+      "sha256": "e1d6dd1dd1b174bdb7205690a96205945d0fd06d5ba8934b4ca89d36493c133c"
+    },
+    {
+      "id": "evidencia-lote-13",
+      "procedencia": "docs/auditoria-catalogo/evidencia/lote-13.md",
+      "caracteres": 9732,
+      "sha256": "c044fee10d9576e4468d518ba470bb392462521ed8fbf2e68f28c664a5691557"
+    },
+    {
+      "id": "catalogo-lote13",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 19456,
+      "sha256": "ee9fad2aed0e1bc95d77a9a1f7d82c7c67f83b25c376a2d8076b1adca06f7b9d"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "94efe451fb9a482c5504c0598558cbe11cc9b38193890218758a67ee0d41f363",
+    "respuestaApi": "6eb26c77ae8536f80e682f75734114fed284d5a1ef03efab6c5a9d1063754dcf"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T033711Z-fase-13-lote13/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T033711Z-fase-13-lote13/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T033711Z-fase-13-lote13/respuesta-api.json"
+  }
+}

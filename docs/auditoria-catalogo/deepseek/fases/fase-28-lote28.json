@@ -1,0 +1,59 @@
+{
+  "id": "fase-28-lote28",
+  "titulo": "Auditoría del lote 28 (8 ejercicios: St George's, ACPRC (Right Decisions), Berkshire Healthcare, Calderdale and Huddersfield y Sherwood Forest. Nota de Claude: la comprobación de R7.6 la hace Claude, que renderiza las ilustraciones y las describe en la evidencia; el tobillo, el pie y los dedos de la mano no están excluidos del catálogo v1 (solo la muñeca).), borrador de DeepSeek sobre la evidencia de Claude (C29)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-28-lote28.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "registro-1",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md",
+      "parte": "1/2"
+    },
+    {
+      "id": "registro-2",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md",
+      "parte": "2/2"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "ejemplo-formato-lote-27",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/lote-27.md"
+    },
+    {
+      "id": "evidencia-lote-28",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/evidencia/lote-28.md"
+    },
+    {
+      "id": "catalogo-lote28",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "separar-juntar-dedos",
+        "dedos-hacia-pulgar",
+        "descanso-inclinado-sentado",
+        "descanso-apoyado-pared",
+        "descanso-espalda-pared",
+        "circulos-grandes-brazos-sentado",
+        "abrazar-ambas-rodillas",
+        "elevacion-pasiva-brazo-tumbado"
+      ]
+    }
+  ]
+}

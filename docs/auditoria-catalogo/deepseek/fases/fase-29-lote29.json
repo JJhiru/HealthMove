@@ -1,0 +1,63 @@
+{
+  "id": "fase-29-lote29",
+  "titulo": "Auditoría del lote 29 (11 ejercicios: Reauditoría con el protocolo 1.0 de los 11 ejercicios de los lotes 1 a 5 en REQUIERE CORRECCIONES (NHS y Age UK Devon). Nota de Claude: la comprobación de R7.6 la hace Claude (renderiza las ilustraciones; corrigió las de 243 y 252); compara también el motivo antiguo de cada ejercicio con el estado actual del catálogo.), borrador de DeepSeek sobre la evidencia de Claude (C30)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-29-lote29.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "registro-1",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md",
+      "parte": "1/2"
+    },
+    {
+      "id": "registro-2",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md",
+      "parte": "2/2"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "ejemplo-formato-lote-28",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/lote-28.md"
+    },
+    {
+      "id": "evidencia-lote-29",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/evidencia/lote-29.md"
+    },
+    {
+      "id": "catalogo-lote29",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "estiramiento-pecho-sentado",
+        "giro-tronco-sentado",
+        "tobillos-punta-talon-sentado",
+        "inclinacion-lateral-sentado",
+        "estiramiento-gemelo-sentado",
+        "abrir-cerrar-manos",
+        "banda-curl-sentado",
+        "elevacion-talones-sin-apoyo",
+        "flexiones-pared",
+        "equilibrio-una-pierna-pared",
+        "estiramiento-gemelo-pared",
+        "elevacion-talones-apoyo"
+      ]
+    }
+  ]
+}

@@ -6,6 +6,10 @@ import { calcularRestricciones, generarRutina, crearAleatorio, MINIMOS, clavePos
 import { catalogoReal, perfilCompleto, ejercicioFalso, catalogoFalso } from './ayudas.mjs';
 
 const porId = new Map(catalogoReal.ejercicios.map((e) => [e.id, e]));
+// Copia del catálogo con todo en borrador: el real ya tiene casi todo aprobado (P30),
+// y estas pruebas tratan de lo que pasa con los ejercicios sin revisar.
+const catalogoBorrador = structuredClone(catalogoReal);
+for (const e of catalogoBorrador.ejercicios) e.validacion = { ...e.validacion, estado: 'borrador' };
 
 test('cada opción se traduce a las exigencias de la especificación', () => {
   const p = perfilCompleto((p) => P.alternarOpcion(P.alternarOpcion(p, 'manos', 'cerrar_mano'), 'movilidad', 'equilibrio'));
@@ -50,7 +54,7 @@ test('sin modo desarrollo, los ejercicios en borrador nunca se usan', () => {
 });
 
 test('con modo desarrollo se genera una rutina marcada como borrador', () => {
-  const res = generarRutina(catalogoReal, perfilCompleto(), { permitirBorrador: true });
+  const res = generarRutina(catalogoBorrador, perfilCompleto(), { permitirBorrador: true });
   assert.equal(res.ok, true);
   assert.equal(res.rutina.usaBorrador, true);
 });
@@ -291,7 +295,7 @@ test('perfil incompleto: no genera y explica qué falta', () => {
 
 test('una rutina con ejercicios sin revisar deja de valer fuera del modo desarrollo', async () => {
   const { resultadoVigente } = await import('../public/js/motor.js');
-  const res = generarRutina(catalogoReal, perfilCompleto(), { permitirBorrador: true });
+  const res = generarRutina(catalogoBorrador, perfilCompleto(), { permitirBorrador: true });
   assert.equal(res.ok, true);
   assert.equal(res.rutina.usaBorrador, true);
   const guardado = { res, semilla: 1, fecha: '2026-10-14' };

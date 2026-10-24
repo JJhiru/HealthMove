@@ -1,0 +1,15 @@
+{
+  "id": "fase-11-lote11",
+  "titulo": "Auditoría del lote 11 (9 ejercicios: St Helens, NHS Forth Valley y NHS Fife), borrador de DeepSeek sobre la evidencia de Claude (C12)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-11-lote11.md",
+  "bloques": [
+    { "id": "protocolo", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/protocolo.md" },
+    { "id": "especificacion", "tipo": "archivo", "ruta": "docs/especificacion-v1.md" },
+    { "id": "registro", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/registro.md" },
+    { "id": "opciones", "tipo": "archivo", "ruta": "public/js/opciones.js" },
+    { "id": "ejemplo-formato-lote-10", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/lote-10.md" },
+    { "id": "evidencia-lote-11", "tipo": "archivo", "ruta": "docs/auditoria-catalogo/evidencia/lote-11.md" },
+    { "id": "catalogo-lote11", "tipo": "catalogo-ids", "ids": ["elevacion-pierna-recta-sentado", "apretar-gluteos-sentado", "de-pie-mano-preparada", "balanceo-brazos-sentado", "elevar-talones-sentado", "secarse-toalla-sentado", "paso-atras-apoyo", "abrazar-rodilla-tumbado", "gemelo-banda-suelo", "rodilla-al-pecho-tumbado"] }
+  ]
+}

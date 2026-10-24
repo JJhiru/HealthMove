@@ -1,0 +1,113 @@
+{
+  "idEjecucion": "20261024T141807Z-fase-18-lote18",
+  "fecha": "2026-10-24T14:18:07.567Z",
+  "fase": {
+    "id": "fase-18-lote18",
+    "titulo": "Auditoría del lote 18 (8 ejercicios: National Institute on Aging), borrador de DeepSeek sobre la evidencia de Claude (C19)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-18-lote18.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "b51eec70-016f-4485-9bc4-11a9d964f354",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 640,
+    "falloCache": 57119,
+    "salida": 14990,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 92045,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "b51eec70-016f-4485-9bc4-11a9d964f354",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 640,
+        "falloCache": 57119,
+        "salida": 14990,
+        "razonamiento": 0
+      },
+      "coste": 0.03512754,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.03512754,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "745a4564c42b1547fdfc60d28725a088ac516889",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "19c709c04d4154cff21a818929d51f9030469183",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/evidencia/lote-18.md"
+    ]
+  },
+  "bloque": 1,
+  "continuacion": null,
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36949,
+      "sha256": "4a7cbb32481a6295fec3a0eb92181f8f472194629754a8422e4b50b56524d332"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 15774,
+      "sha256": "7c96d4bd545c4fbfe0b6a1e2508bf923cb7c6abec44520ad3cfc2feaf88dc775"
+    },
+    {
+      "id": "registro",
+      "procedencia": "docs/auditoria-catalogo/registro.md",
+      "caracteres": 56026,
+      "sha256": "3a9d926ed8f236b0e0a9762a270cd880611c3ebb89d0e8de0f812b12aa8e0ecf"
+    },
+    {
+      "id": "opciones",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6246,
+      "sha256": "4430708c5729fd9d4f75a783a575a7a6d826cccc0d94bc6e5d6c2e63636eaf4b"
+    },
+    {
+      "id": "ejemplo-formato-lote-17",
+      "procedencia": "docs/auditoria-catalogo/lote-17.md",
+      "caracteres": 37948,
+      "sha256": "c1803d85df5e1a810e0b052002a2875b5f0fd421c243fe19543ef4b2b30d938d"
+    },
+    {
+      "id": "evidencia-lote-18",
+      "procedencia": "docs/auditoria-catalogo/evidencia/lote-18.md",
+      "caracteres": 8155,
+      "sha256": "78862a9ba1f54bf0368867f7df498945fb9c5c8eff6bd25a632beebae8a70656"
+    },
+    {
+      "id": "catalogo-lote18",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 15521,
+      "sha256": "8f089fe7988e97d7fda747574f82e00dd661fb53ef189f3dc8619614f5b80039"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "f2811a924850f492e267051a268fe3b41a42fd6f01c903f2033911bf54d2c4cb",
+    "respuestaApi": "2a79cb7286bfc521653d215f0888c6199300b40db83e59a8ac7b31bdcf458ace"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T141807Z-fase-18-lote18/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T141807Z-fase-18-lote18/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T141807Z-fase-18-lote18/respuesta-api.json"
+  }
+}
