@@ -110,12 +110,16 @@ test('la cabecera 1.0 exige versión del protocolo e identificador del catálogo
 });
 
 test('R7.7: no se propone para aprobación un ejercicio con ilustración discrepante', () => {
-  assert.ok(protocolo.ilustracionesPendientes.includes('banda-curl-sentado'));
+  // La lista real puede quedar vacía cuando se corrigen las ilustraciones: se prueba con una propia.
+  const conDiscrepancia = { ...protocolo, ...leerProtocolo('  - Discrepancias conocidas: `banda-curl-sentado` (`sentado.mjs:33`).'), cuestiones: protocolo.cuestiones, version: protocolo.version };
+  assert.deepEqual(conDiscrepancia.ilustracionesPendientes, ['banda-curl-sentado']);
   const original = catalogo.ejercicios.find((e) => e.id === 'banda-curl-sentado');
   const texto = informe({ decision: '**LISTO PARA APROBACIÓN DOCUMENTAL.**' })
     .replaceAll(ej.id, original.id);
   // Las etiquetas del ejemplo son las de curl-biceps-sentado: solo importa la regla R7.7.
-  assert.ok(errores(texto).some((m) => m.includes('R7.7')));
+  const msgs = (prot) => comprobarInforme(leerInforme(texto), catalogo, prot).filter((p) => p.nivel === 'error').map((p) => p.msg);
+  assert.ok(msgs(conDiscrepancia).some((m) => m.includes('R7.7')));
+  assert.ok(!msgs({ ...protocolo, ilustracionesPendientes: [] }).some((m) => m.includes('R7.7')));
 });
 
 test('un id inexistente o mal declarado es un error', () => {

@@ -240,7 +240,8 @@ test('informe: marcado como IA, separa lo determinista y se guarda solo en su ca
   const md = informeMarkdown({ prep: p, salida, fecha: '2026-10-18T00:00:00.000Z' });
   assert.match(md, /ANÁLISIS ASISTIDO POR IA/);
   assert.match(md, /## Comprobado por herramientas deterministas/);
-  assert.match(md, /Discrepancia de ilustración pendiente \(R7\.7\): sí/);
+  // Refleja la lista real de R7.7 (que puede estar vacía).
+  assert.match(md, new RegExp(`Discrepancia de ilustración pendiente \\(R7\\.7\\): ${p.deterministas?.ilustracionPendiente ?? p.ilustracionPendiente ? 'sí' : 'no'}`));
   assert.ok(md.indexOf('Comprobado por herramientas deterministas') < md.indexOf('Sugerencias del modelo'));
   assert.ok(!md.includes(CLAVE));
   const raiz = mkdtempSync(join(tmpdir(), 'hm-ia-'));

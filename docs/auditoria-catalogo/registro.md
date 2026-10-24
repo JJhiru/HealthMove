@@ -71,14 +71,14 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 
 | Lote | ID | Resultado de la auditoría | Decisión del desarrollador |
 |---|---|---|---|
-| 1 | estiramiento-pecho-sentado | REQUIERE CORRECCIONES | pendiente |
-| 1 | giro-tronco-sentado | REQUIERE CORRECCIONES | pendiente |
+| 29 | estiramiento-pecho-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 29 | giro-tronco-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 7 | marcha-sentado-sujetandose | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 6 | marcha-sentado-manos-cadera | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 7 | estiramiento-tobillo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 2 | tobillos-punta-talon-sentado | REQUIERE CORRECCIONES | pendiente |
+| 29 | tobillos-punta-talon-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 6 | inclinacion-lateral-brazo-arriba | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 2 | inclinacion-lateral-sentado | REQUIERE CORRECCIONES | pendiente |
+| 29 | inclinacion-lateral-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 6 | estiramiento-isquiotibiales-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 6 | circulos-hombros-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 8 | elevar-rodar-hombros-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
@@ -89,8 +89,8 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 6 | boxeo-circulos-pecho | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 6 | arquear-espalda-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 6 | movilidad-lumbar-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 4 | estiramiento-gemelo-sentado | REQUIERE CORRECCIONES | pendiente |
-| 4 | abrir-cerrar-manos | REQUIERE CORRECCIONES | pendiente |
+| 29 | estiramiento-gemelo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 29 | abrir-cerrar-manos | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 8 | pulgar-dedos | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 8 | activacion-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 8 | banda-remo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
@@ -101,17 +101,17 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 9 | flexion-hombro-lado-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 9 | respiracion-abdominal-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 9 | respiracion-tranquila-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 4 | banda-curl-sentado | REQUIERE CORRECCIONES | pendiente |
+| 29 | banda-curl-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 7 | sentarse-levantarse | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 7 | mini-sentadillas | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 7 | elevacion-talones-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 5 | elevacion-talones-sin-apoyo | REQUIERE CORRECCIONES | pendiente |
+| 29 | elevacion-talones-sin-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 7 | elevacion-lateral-pierna | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 7 | extension-pierna-atras | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 5 | flexiones-pared | REQUIERE CORRECCIONES | pendiente |
-| 5 | equilibrio-una-pierna-pared | REQUIERE CORRECCIONES | pendiente |
+| 29 | flexiones-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 29 | equilibrio-una-pierna-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 7 | inclinacion-lateral-de-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 5 | estiramiento-gemelo-pared | REQUIERE CORRECCIONES | pendiente |
+| 29 | estiramiento-gemelo-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 10 | recoger-toalla-dedos-pies | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 10 | banda-tobillo-fuera-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 10 | cuadriceps-estatico-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
@@ -614,3 +614,4 @@ Sobre el informe `problemas-pendientes-2026-10-21.md`.
     - **Lote 26** (University Hospitals Plymouth, NHS Grampian, North Cheshire and Mersey): 11 ejercicios, los 11 listos. Consulta C27. `estiramiento-isquios-pie` corregido hacia la fuente (qué rodilla se dobla).
     - **Lote 27** (MS Trust, Moving Medicine, Versus Arthritis): 8 ejercicios, los 8 listos. Consulta C28.
     - **Lote 28** (St George's, ACPRC, Berkshire Healthcare, Calderdale and Huddersfield, Sherwood Forest): 8 ejercicios, los 8 listos. Consulta C29.
+    - **Lote 29** (reauditoría con el protocolo 1.0 de los 11 ejercicios de los lotes 1 a 5 en REQUIERE CORRECCIONES; NHS y Age UK Devon): los 11 listos. Consulta C30. Se actualizan sus filas en la tabla (el recuento de auditados no cambia). Corregidas las tres discrepancias de ilustración de R7.7.

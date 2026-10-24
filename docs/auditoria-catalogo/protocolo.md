@@ -189,7 +189,7 @@ Una adaptación solo es válida si cumple **las cinco**:
 - **R7.5.** Si la imagen no determina un requisito, se registra la incertidumbre y se aplica la regla conservadora de esa exigencia (R2.1). La relación entre R7.4 y R2.1 la resuelve **Q2** (resuelta, 2026-10-20): el contacto sin prensión se marca `agarre` como conservador, con su nota, y no se presenta como un agarre observado.
 - **R7.6.** Las ilustraciones de HealthMove (`scripts/ilustraciones/*.mjs` → `public/data/ilustraciones.json`) se comparan con la fuente. Si introducen un movimiento, una postura o un apoyo distintos, la discrepancia se registra.
 - **R7.7.** Mientras haya una discrepancia de ilustración que induzca a interpretar el ejercicio de otra forma, esa ilustración no se da por válida y el ejercicio no se propone para aprobación documental.
-  - Discrepancias conocidas: `estiramiento-pecho-sentado` (`sentado.mjs:10`), `banda-curl-sentado` (`sentado.mjs:33`) y `equilibrio-una-pierna-pared` (`depie.mjs:18`).
+  - Discrepancias conocidas: ninguna. Las tres anteriores (estiramiento-pecho-sentado, banda-curl-sentado y equilibrio-una-pierna-pared) se corrigieron el 2026-10-24 (lote 29, P29).
 - **R7.8.** No se fijan umbrales numéricos nuevos.
   - Se usan los de la especificación: rodilla «más de 90°» (§4), evaluada como ángulo aproximado entre muslo y pierna en vista lateral (decisión 2 del registro).
   - Si un caso depende de un umbral sin formalizar, se identifica el criterio pendiente y no se inventa una cifra.

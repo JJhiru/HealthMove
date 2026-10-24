@@ -22,7 +22,7 @@
 | 26 | University Hospitals Plymouth, NHS Grampian, North Cheshire and Mersey (2) | 11 | Hecho (2026-10-24) |
 | 27 | MS Trust (2), Moving Medicine, Versus Arthritis | 8 | Hecho (2026-10-24) |
 | 28 | St George's, ACPRC (Right Decisions), Berkshire Healthcare, Calderdale and Huddersfield, Sherwood Forest | 8 | Hecho (2026-10-24) |
-| 29 | Repetición con el protocolo 1.0 de los 11 ejercicios de los lotes 1 a 5 en REQUIERE CORRECCIONES | 11 | Pendiente |
+| 29 | Repetición con el protocolo 1.0 de los 11 ejercicios de los lotes 1 a 5 en REQUIERE CORRECCIONES | 11 | Hecho (2026-10-24) |
 
 **Bloqueados (G8):** Royal Devon (3), CDC/Tufts (3) y la copia de ACPRC del Royal Devon (1). Hace falta descargar sus PDF desde el navegador.
 

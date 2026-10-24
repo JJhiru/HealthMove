@@ -64,7 +64,7 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": true,
+        "brazo_sobre_hombro": false,
         "mano_detras": false,
         "ambos_brazos": true,
         "agarre": false,
@@ -88,10 +88,10 @@
         "titulo": "Sitting exercises",
         "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/sitting-exercises/",
         "licencia": "Open Government Licence v3.0",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
+      "notas_etiquetado": "brazo_sobre_hombro: las fotos de la fuente muestran los brazos abiertos hacia abajo, con las manos por debajo de los hombros (D).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -146,10 +146,10 @@
         "titulo": "Sitting exercises",
         "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/sitting-exercises/",
         "licencia": "Open Government Licence v3.0",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Las manos van a los hombros por delante: no es mano_detras.",
+      "notas_etiquetado": "Las manos van a los hombros por delante: no es mano_detras. [conservadora] ambos_brazos: los brazos se cruzan y cada mano se apoya en el hombro contrario; no está claro si cuenta como reposo (Q1). Se cerraría con: un criterio sobre los brazos cruzados sobre el pecho.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -380,7 +380,7 @@
         "titulo": "Seated Vitality at Home",
         "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente permite sujetarse a la silla; aquí se indica apoyar las manos en los muslos para que no exija agarre."
@@ -491,7 +491,7 @@
         "No te inclines hacia delante ni hacia atrás. Mantén hasta 10 segundos.",
         "Vuelve a la posición erguida y repite hacia el otro lado."
       ],
-      "dosis": "1 o 2 veces hacia cada lado, hasta 10 segundos.",
+      "dosis": "1 vez hacia cada lado, hasta 10 segundos.",
       "duracion_estimada_seg": 50,
       "variante_de": "inclinacion-lateral-brazo-arriba",
       "fuente": {
@@ -499,7 +499,7 @@
         "titulo": "Seated Vitality at Home",
         "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
       "notas_etiquetado": "Inclinación lateral del tronco; sin brazo por encima del hombro.",
@@ -1146,7 +1146,7 @@
         "titulo": "Seated Vitality at Home",
         "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
       "notas_etiquetado": "El talón queda en el suelo y no se inclina el tronco.",
@@ -1178,7 +1178,7 @@
         "impacto": false,
         "carga_externa": false,
         "esfuerzo_cardio": false,
-        "brazo_sobre_hombro": false,
+        "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": true,
         "agarre": true,
@@ -1203,10 +1203,10 @@
         "titulo": "Seated Vitality at Home",
         "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Cerrar el puño, aunque sea sin objeto, se marca como agarre.",
+      "notas_etiquetado": "Cerrar el puño, aunque sea sin objeto, se marca como agarre. brazo_sobre_hombro: en las fotos de la fuente las manos quedan a la altura de la cara, por encima de los hombros (D).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -1423,8 +1423,8 @@
       "instrucciones": [
         "Siéntate con la espalda recta y pisa la banda con uno o los dos pies.",
         "Agarra la banda por los dos extremos.",
-        "Sube los puños hacia los hombros con las muñecas alineadas con los brazos.",
-        "Mantén hasta 5 segundos y baja los brazos despacio."
+        "Sube los puños hacia los hombros y después bájalos hasta que las manos queden a la altura de los codos, con las muñecas alineadas con los brazos.",
+        "Mantén hasta 5 segundos y relaja los brazos a los lados."
       ],
       "dosis": "Hasta 4 veces.",
       "duracion_estimada_seg": 60,
@@ -1434,7 +1434,7 @@
         "titulo": "Seated Vitality at Home",
         "url": "https://www.ageuk.org.uk/bp-assets/globalassets/devon/original-blocks/activities-and-events/a4-seated-vitality-at-home.pdf",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
       "notas_etiquetado": "[conservadora] brazo_sobre_hombro: al doblar el codo, la mano puede pasar de la altura del hombro (CN-1, P25). Se cerraría con: evidencia de la fuente de que la mano no pasa del hombro.",
@@ -1719,9 +1719,11 @@
         "titulo": "Strength exercises",
         "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/strength-exercises/",
         "licencia": "Open Government Licence v3.0",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "La fuente solo dice que se haga sin apoyo; la silla cerca y sujetarse si se pierde el equilibrio son de HealthMove, por seguridad."
+      ],
       "notas_etiquetado": "Variante más difícil indicada por la fuente. La silla queda cerca como seguridad.",
       "validacion": {
         "estado": "borrador",
@@ -1888,7 +1890,7 @@
         "titulo": "Strength exercises",
         "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/strength-exercises/",
         "licencia": "Open Government Licence v3.0",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
       "notas_etiquetado": "Palmas abiertas, sin agarre; las manos soportan parte del peso.",
@@ -1926,14 +1928,14 @@
         "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
-        "flexion_amplia_cadera": false,
+        "flexion_amplia_cadera": true,
         "puntillas_talones": false,
         "inclinacion_tronco": false,
         "rotacion_tronco": false
       },
       "instrucciones": [
         "Ponte de pie frente a una pared con los brazos estirados y las yemas de los dedos tocándola.",
-        "Levanta la pierna izquierda con la cadera nivelada y la rodilla derecha un poco doblada.",
+        "Levanta la pierna izquierda por delante, doblando la rodilla hasta la altura de la cadera, con la cadera nivelada y la rodilla derecha un poco doblada.",
         "Mantén de 5 a 10 segundos y apoya el pie con suavidad. Cambia de pierna."
       ],
       "dosis": "3 veces con cada pierna, de 5 a 10 segundos.",
@@ -1944,10 +1946,10 @@
         "titulo": "Balance exercises",
         "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/balance-exercises/",
         "licencia": "Open Government Licence v3.0",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Las yemas en la pared son apoyo sin cerrar la mano: no es agarre ni equilibrio_sin_apoyo. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano. [conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
+      "notas_etiquetado": "Las yemas en la pared son apoyo sin cerrar la mano: no es agarre ni equilibrio_sin_apoyo. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano. [conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro. [conservadora] flexion_amplia_cadera: en la foto de la fuente la rodilla sube hasta la altura de la cadera, con el muslo en torno a la horizontal, en el umbral de §4. Se cerraría con: una vista lateral que muestre que el muslo no pasa de la horizontal.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -2034,7 +2036,7 @@
         "mano_detras": false,
         "ambos_brazos": true,
         "agarre": false,
-        "peso_en_manos": false,
+        "peso_en_manos": true,
         "flexion_profunda_rodilla": false,
         "flexion_amplia_cadera": false,
         "puntillas_talones": false,
@@ -2055,10 +2057,10 @@
         "titulo": "Flexibility exercises",
         "url": "https://www.nhs.uk/live-well/exercise/strength-and-flexibility-exercises/flexibility-exercises/",
         "licencia": "Open Government Licence v3.0",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Al dar el paso atrás, el peso cae un momento sobre un pie: una_pierna. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano. [conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
+      "notas_etiquetado": "Al dar el paso atrás, el peso cae un momento sobre un pie: una_pierna. [conservadora] ambos_brazos: apoyo bilateral (Q1). Se cerraría con: fuente de que basta una mano. [conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro. [conservadora] peso_en_manos: en la foto de la fuente el cuerpo se inclina hacia la pared y parte del peso recae en las manos; el texto dice «for stability» (R7.3). Se cerraría con: evidencia de que las manos solo tocan la pared.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",

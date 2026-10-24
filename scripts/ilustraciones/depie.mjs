@@ -22,7 +22,7 @@ export const DE_PIE_FICHAS = {
   'elevacion-lateral-pierna': PAF({}, { caderaD: 28, rodillaD: 28 }),
   'extension-pierna-atras': PA({}, { caderaD: -25, rodillaD: -25 }),
   'flexiones-pared': PP({ inclina: 13 }, { inclina: 19 }, { paredX: 306 }),
-  'equilibrio-una-pierna-pared': PP({ inclina: 4 }, { caderaI: 8, rodillaI: -80 }, { paredX: 262 }),
+  'equilibrio-una-pierna-pared': PP({ inclina: 4 }, { caderaI: 85, rodillaI: 0 }, { paredX: 262 }),
   'inclinacion-lateral-de-pie': PF({}, { tronco: -16, brazoD: 4, codoD: 4 }),
   'estiramiento-gemelo-pared': PP({ caderaD: -22, rodillaD: -22, caderaI: 25, rodillaI: -5, inclina: 8 }, {}, { zona: ['pantorrilla'], paredX: 290 }),
   'flexion-alterna-piernas-de-pie': PA({}, { caderaD: 70, rodillaD: -40 }),
