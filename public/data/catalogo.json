@@ -4683,10 +4683,10 @@
         "titulo": "Exercises for the fingers, hands and wrists",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-fingers-hands-and-wrists/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
-        "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
+        "La fuente no indica repeticiones; se usa una pauta de 5 a 10."
       ],
       "notas_etiquetado": "",
       "validacion": {
@@ -4860,10 +4860,10 @@
         "titulo": "Exercises for the fingers, hands and wrists",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-fingers-hands-and-wrists/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
-        "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
+        "La fuente no indica repeticiones; se usa una pauta de 5 a 10."
       ],
       "notas_etiquetado": "",
       "validacion": {
@@ -5151,10 +5151,10 @@
         "titulo": "Exercises for the hips",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-hips/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "La fuente avisa de que puede no ser adecuado tras una operación reciente de cadera.",
+      "notas_etiquetado": "La fuente avisa de que puede no ser adecuado tras una operación reciente de cadera. [conservadora] ambos_brazos: la fuente deja usar las manos para empujar las rodillas («using your hands as needed»). Se cerraría con: evidencia de que basta una mano. Posición: la fuente lo hace sentado en el suelo o tumbado, no en una silla (PENDIENTE DE DECISIÓN, lote 23).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -5441,9 +5441,11 @@
         "titulo": "Exercises for the toes, feet and ankles",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-toes-feet-and-ankles/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "La fuente pide el abecedario entero dos veces al día; aquí se hace una vez con cada pie."
+      ],
       "notas_etiquetado": "",
       "validacion": {
         "estado": "borrador",
@@ -5497,7 +5499,7 @@
         "titulo": "Exercises for the toes, feet and ankles",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-toes-feet-and-ankles/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
       "notas_etiquetado": "Subir el pie a la rodilla contraria acerca el muslo al tronco.",
@@ -5554,10 +5556,11 @@
         "titulo": "Exercises for the toes, feet and ankles",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-toes-feet-and-ankles/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
-        "La fuente indica 3 veces; aquí de 1 a 3 para que quepa en rutinas cortas."
+        "La fuente indica 3 veces; aquí de 1 a 3 para que quepa en rutinas cortas.",
+        "La fuente lo muestra sentado en el suelo; aquí se hace sentado en una silla con una pierna estirada."
       ],
       "notas_etiquetado": "",
       "validacion": {
@@ -7926,7 +7929,7 @@
         "titulo": "Exercises for the shoulders",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-shoulders/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente lo hace de pie; sentado no exige equilibrio."
@@ -7984,7 +7987,7 @@
         "titulo": "Exercises for the shoulders",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-shoulders/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
       "notas_etiquetado": "Deja que el brazo se mueva por su peso, sin usar la fuerza del hombro. [conservadora] agarre: apoyo sin prensión (Q2). Se cerraría con: revisión profesional. [conservadora] ambos_brazos: una mano apoya y el otro brazo trabaja (Q1). Se cerraría con: fuente sin apoyo.",
@@ -9337,10 +9340,10 @@
         "titulo": "Exercises for the knees",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-knees/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "Posición: la fuente lo hace sentado en el suelo, el sofá o la cama con las piernas estiradas, no tumbado (PENDIENTE DE DECISIÓN, lote 23).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -10566,7 +10569,7 @@
         "titulo": "Exercises for the knees",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-knees/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -12022,7 +12025,7 @@
         "titulo": "Exercises for the back",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-back/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -12076,9 +12079,11 @@
         "titulo": "Exercises for the back",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-back/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "La fuente pone la cabeza girada a un lado; HealthMove no incluye posiciones ni movimientos de cuello."
+      ],
       "notas_etiquetado": "",
       "validacion": {
         "estado": "borrador",
@@ -12131,7 +12136,7 @@
         "titulo": "Exercises for the back",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-back/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -12358,7 +12363,7 @@
         "titulo": "Exercises for the knees",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-knees/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -12413,9 +12418,11 @@
         "titulo": "Exercises for the knees",
         "url": "https://www.arthritis-uk.org/information-and-support/living-with-arthritis/health-and-wellbeing/exercising-with-arthritis/exercises-for-healthy-joints/exercises-for-the-knees/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "La fuente permite hacerlo en el suelo o en la cama; aquí se hace en el suelo."
+      ],
       "notas_etiquetado": "No debe provocar dolor de espalda (Royal Berkshire, Stage 2).",
       "validacion": {
         "estado": "borrador",

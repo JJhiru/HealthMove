@@ -225,10 +225,25 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 22 | almeja-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 22 | isquios-toalla-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 22 | gluteo-figura-cuatro-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 23 | deslizamiento-tendones-dedos | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 23 | estiramiento-pulgar | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 23 | rotacion-cadera-fuera-sentado | PENDIENTE DE DECISIÓN | pendiente |
+| 23 | alfabeto-pie-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 23 | estiramiento-planta-pie-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 23 | estiramiento-pie-toalla-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 23 | codos-atras-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 23 | pendulo-hombro | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 23 | cuadriceps-toalla-rodilla-tumbado | PENDIENTE DE DECISIÓN | pendiente |
+| 23 | rodilla-cama-toalla-tobillo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 23 | rodilla-doblada-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 23 | abdomen-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 23 | elevar-brazo-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 23 | rodilla-deslizar-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 23 | elevacion-pierna-recta-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 
 ## Pendientes
 
-- Auditados: 154 de 225 (lote 22, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
+- Auditados: 169 de 225 (lote 23, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
 - Lista de candidatos a adaptación unilateral: ver los resúmenes de los lotes 1, 3 y 4.
 - ~~Tarea de interfaz pendiente: comunicar `especifica_de` (decisión 3).~~ Hecha en P17 (2026-10-21).
 - **Actualización (2026-10-16):**
@@ -544,3 +559,4 @@ Sobre el informe `problemas-pendientes-2026-10-21.md`.
     - **Lote 20** (Otago, Royal Wolverhampton, James Paget): 9 ejercicios, los 9 listos. Consulta C21. Dos ilustraciones corregidas.
     - **Lote 21** (Vivifrail, HSE, CSP, Parkinson's UK): 8 ejercicios; 7 listos y `elevar-puntas-pies-apoyo` PENDIENTE_DE_FUENTE (CSP, 403). Consulta C22.
     - **Lote 22** (South Tees): 10 ejercicios, los 10 listos. Consulta C23.
+    - **Lote 23** (Arthritis UK): 15 ejercicios; 13 listos, 2 PENDIENTE DE DECISIÓN por la posición (181 y 187). Consulta C24.

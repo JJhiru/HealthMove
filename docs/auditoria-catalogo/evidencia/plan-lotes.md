@@ -16,8 +16,7 @@
 | 20 | Later Life Training (Otago), Royal Wolverhampton (2), James Paget | 9 | Hecho (2026-10-24) |
 | 21 | Vivifrail, Chartered Society of Physiotherapy, HSE, Parkinson's UK | 8 | Hecho (2026-10-24; CSP, 403) |
 | 22 | South Tees (rehabilitación cardiaca y 4 páginas) | 10 | Hecho (2026-10-24) |
-| 23 | Arthritis UK: rodillas, espalda y caderas | 8 | Pendiente |
-| 24 | Arthritis UK: pies, manos y hombros | 7 | Pendiente |
+| 23 | Arthritis UK: todas sus páginas (une los lotes 23 y 24 previstos) | 15 | Hecho (2026-10-24) |
 | 25 | Wrightington, Wigan and Leigh (3 documentos), East Sussex | 11 | Pendiente |
 | 26 | Cambridge University Hospitals (4 páginas), British Heart Foundation (2) | 11 | Pendiente |
 | 27 | University Hospitals Plymouth, NHS Grampian, North Cheshire and Mersey (2) | 11 | Pendiente |

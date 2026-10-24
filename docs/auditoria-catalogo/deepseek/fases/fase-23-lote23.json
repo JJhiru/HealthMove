@@ -1,0 +1,68 @@
+{
+  "id": "fase-23-lote23",
+  "titulo": "Auditoría del lote 23 (15 ejercicios: Arthritis UK: rodillas, espalda, caderas, pies, manos y hombros), borrador de DeepSeek sobre la evidencia de Claude (C24)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-23-lote23.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "registro-1",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md",
+      "parte": "1/2"
+    },
+    {
+      "id": "registro-2",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md",
+      "parte": "2/2"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "ejemplo-formato-lote-22",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/lote-22.md"
+    },
+    {
+      "id": "evidencia-lote-23",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/evidencia/lote-23.md"
+    },
+    {
+      "id": "catalogo-lote23",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "deslizamiento-tendones-dedos",
+        "estiramiento-pulgar",
+        "rotacion-cadera-fuera-sentado",
+        "alfabeto-pie-sentado",
+        "estiramiento-planta-pie-sentado",
+        "estiramiento-pie-toalla-sentado",
+        "codos-atras-sentado",
+        "pendulo-hombro",
+        "cuadriceps-toalla-rodilla-tumbado",
+        "rodilla-cama-toalla-tobillo",
+        "rodilla-doblada-boca-abajo",
+        "abdomen-boca-abajo",
+        "elevar-brazo-boca-abajo",
+        "rodilla-deslizar-suelo",
+        "elevacion-pierna-recta-suelo",
+        "abdomen-profundo-tumbado",
+        "elevacion-pierna-recta-tumbado"
+      ]
+    }
+  ]
+}
