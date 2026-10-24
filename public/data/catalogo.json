@@ -6580,10 +6580,11 @@
         "titulo": "Guía de ejercicios para personas hospitalizadas: ejercicios en cama",
         "url": "https://www.husc.es/archivos/cms/medicina-fisica-y-rehabilitacion/archivos/publico/pacientes/Triptico%20Ejercicio%20Hospitalizados%20Cama.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas hospitalizadas"
       },
       "adaptaciones": [
-        "La fuente no indica la postura; se propone sentado."
+        "La guía lo muestra tumbado en la cama; aquí se hace sentado."
       ],
       "notas_etiquetado": "",
       "validacion": {
@@ -9946,7 +9947,8 @@
         "titulo": "Guía de ejercicios para personas hospitalizadas: ejercicios en cama",
         "url": "https://www.husc.es/archivos/cms/medicina-fisica-y-rehabilitacion/archivos/publico/pacientes/Triptico%20Ejercicio%20Hospitalizados%20Cama.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas hospitalizadas"
       },
       "adaptaciones": [],
       "notas_etiquetado": "[conservadora] brazo_sobre_hombro: al doblar el codo, la mano puede pasar de la altura del hombro (CN-1, P25). Se cerraría con: evidencia de la fuente de que la mano no pasa del hombro.",
@@ -10182,7 +10184,8 @@
         "titulo": "Guía de ejercicios para personas hospitalizadas: ejercicios en cama",
         "url": "https://www.husc.es/archivos/cms/medicina-fisica-y-rehabilitacion/archivos/publico/pacientes/Triptico%20Ejercicio%20Hospitalizados%20Cama.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas hospitalizadas"
       },
       "adaptaciones": [],
       "notas_etiquetado": "[conservadora] brazo_sobre_hombro: tumbado, la altura del hombro no se puede comparar y el brazo se separa del tronco (estirado, en cruz o por encima de la cabeza) (CN-1, P25). Se cerraría con: evidencia de la fuente del ángulo del brazo.",
@@ -10239,10 +10242,11 @@
         "titulo": "Guía de ejercicios para personas hospitalizadas: ejercicios en cama",
         "url": "https://www.husc.es/archivos/cms/medicina-fisica-y-rehabilitacion/archivos/publico/pacientes/Triptico%20Ejercicio%20Hospitalizados%20Cama.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas hospitalizadas"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Al abrir el brazo el tronco gira un poco.",
+      "notas_etiquetado": "Al abrir el brazo el tronco gira un poco. El brazo se abre hacia atrás en el aire: no es mano_detras (la mano no va a la espalda ni detrás de la cabeza).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -10296,7 +10300,8 @@
         "titulo": "Guía de ejercicios para personas hospitalizadas: ejercicios en cama",
         "url": "https://www.husc.es/archivos/cms/medicina-fisica-y-rehabilitacion/archivos/publico/pacientes/Triptico%20Ejercicio%20Hospitalizados%20Cama.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas hospitalizadas"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -10352,7 +10357,8 @@
         "titulo": "Guía de ejercicios para personas hospitalizadas: ejercicios en cama",
         "url": "https://www.husc.es/archivos/cms/medicina-fisica-y-rehabilitacion/archivos/publico/pacientes/Triptico%20Ejercicio%20Hospitalizados%20Cama.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas hospitalizadas"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -10408,10 +10414,11 @@
         "titulo": "Guía de ejercicios para personas hospitalizadas: ejercicios en cama",
         "url": "https://www.husc.es/archivos/cms/medicina-fisica-y-rehabilitacion/archivos/publico/pacientes/Triptico%20Ejercicio%20Hospitalizados%20Cama.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas hospitalizadas"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "flexion_profunda_rodilla: tumbado con las rodillas dobladas y los pies apoyados, sin ángulo en la fuente; valor provisional, el actual (CN-5).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -10464,10 +10471,11 @@
         "titulo": "Guía de ejercicios para personas hospitalizadas: ejercicios en cama",
         "url": "https://www.husc.es/archivos/cms/medicina-fisica-y-rehabilitacion/archivos/publico/pacientes/Triptico%20Ejercicio%20Hospitalizados%20Cama.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas hospitalizadas"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] flexion_profunda_rodilla: en la foto la rodilla doblada pasa de 90° y el texto no fija el ángulo. Se cerraría con: evidencia de la fuente de que no pasa de 90°. [conservadora] flexion_amplia_cadera: el muslo sube hacia el tronco sin que conste si más que al estar sentado. Se cerraría con: una vista del ángulo entre el muslo y el tronco.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",

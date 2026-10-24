@@ -1,0 +1,113 @@
+{
+  "idEjecucion": "20261024T035348Z-fase-16-lote16",
+  "fecha": "2026-10-24T03:53:48.068Z",
+  "fase": {
+    "id": "fase-16-lote16",
+    "titulo": "Auditoría del lote 16 (8 ejercicios: Hospital Universitario San Cecilio), borrador de DeepSeek sobre la evidencia de Claude (C17)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-16-lote16.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "284886d2-d213-4b0f-8122-ae16dfe30243",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 640,
+    "falloCache": 55673,
+    "salida": 13103,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 89660,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "284886d2-d213-4b0f-8122-ae16dfe30243",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 640,
+        "falloCache": 55673,
+        "salida": 13103,
+        "razonamiento": 0
+      },
+      "coste": 0.03242934,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.03242934,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "7ef3ed30aebb7b38b9b38eeaa76be9f6cdb04cad",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "1fb2bf161404cd9a8476e79399c1d88a91e6114e",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/evidencia/lote-16.md"
+    ]
+  },
+  "bloque": 1,
+  "continuacion": null,
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36949,
+      "sha256": "4a7cbb32481a6295fec3a0eb92181f8f472194629754a8422e4b50b56524d332"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 15774,
+      "sha256": "7c96d4bd545c4fbfe0b6a1e2508bf923cb7c6abec44520ad3cfc2feaf88dc775"
+    },
+    {
+      "id": "registro",
+      "procedencia": "docs/auditoria-catalogo/registro.md",
+      "caracteres": 53066,
+      "sha256": "9dd2f223288d4759f70a46ed523293b137971f714108478fa5f50c9fdb177729"
+    },
+    {
+      "id": "opciones",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6246,
+      "sha256": "4430708c5729fd9d4f75a783a575a7a6d826cccc0d94bc6e5d6c2e63636eaf4b"
+    },
+    {
+      "id": "ejemplo-formato-lote-15",
+      "procedencia": "docs/auditoria-catalogo/lote-15.md",
+      "caracteres": 37974,
+      "sha256": "cd7e0611115266984a1e926740b2455e036376aa3ef2890fc517082971dc9396"
+    },
+    {
+      "id": "evidencia-lote-16",
+      "procedencia": "docs/auditoria-catalogo/evidencia/lote-16.md",
+      "caracteres": 5875,
+      "sha256": "219d55c93b7edf8076e2ca51a181a411396644ab699fac5e05c0d74dc3f2568e"
+    },
+    {
+      "id": "catalogo-lote16",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 15848,
+      "sha256": "4b990e7692aa25005113cded149db864673e71962ceb9281ae22016b0102afdc"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "71db3dbd186f02d6639a782c4cb6a9b434d1eaf01103a64e3a4e6679bf7a8631",
+    "respuestaApi": "e91e53b502992daff3750aa059e00b6a7f1a33468485da9715dd0f06b6d41b48"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T035348Z-fase-16-lote16/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T035348Z-fase-16-lote16/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T035348Z-fase-16-lote16/respuesta-api.json"
+  }
+}

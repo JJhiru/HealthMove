@@ -1,0 +1,53 @@
+{
+  "id": "fase-16-lote16",
+  "titulo": "Auditoría del lote 16 (8 ejercicios: Hospital Universitario San Cecilio), borrador de DeepSeek sobre la evidencia de Claude (C17)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-16-lote16.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "registro",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "ejemplo-formato-lote-15",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/lote-15.md"
+    },
+    {
+      "id": "evidencia-lote-16",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/evidencia/lote-16.md"
+    },
+    {
+      "id": "catalogo-lote16",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "respiracion-costal-sentado",
+        "flexion-codo-tumbado",
+        "respiracion-lado-brazo-adelante",
+        "apertura-pecho-lado",
+        "torax-manos-entrelazadas-tumbado",
+        "torax-codos-tumbado",
+        "agarrar-sabana-dedos-pies",
+        "pedaleo-pies-cama",
+        "deslizar-talon-tumbado"
+      ]
+    }
+  ]
+}
