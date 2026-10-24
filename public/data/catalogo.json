@@ -5905,10 +5905,12 @@
         "url": "https://www.southtees.nhs.uk/resources/cardiac-rehabilitation-exercise-programme",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "rehabilitación cardiaca",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
-      "adaptaciones": [],
-      "notas_etiquetado": "Posición: el 2026-10-22 se separó en dos entradas (C2, P23): esta, sentada, y estiramiento-triceps-pie, de pie. La fuente no indica la posición de este ejercicio; las dos versiones quedan pendientes de auditoría.",
+      "adaptaciones": [
+        "La fuente no indica la posición y su dibujo es de pie; aquí se hace sentado."
+      ],
+      "notas_etiquetado": "Posición: el 2026-10-22 se separó en dos entradas (C2, P23): esta, sentada, y estiramiento-triceps-pie, de pie.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -5961,10 +5963,10 @@
         "url": "https://www.southtees.nhs.uk/resources/cardiac-rehabilitation-exercise-programme",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "rehabilitación cardiaca",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "equilibrio_sin_apoyo: con las dos manos ocupadas no hay forma de sujetarse a nada (especificación §7, regla 4; C2, P23). Versión de pie separada de estiramiento-triceps el 2026-10-22. La fuente no indica la posición de este ejercicio; las dos versiones quedan pendientes de auditoría.",
+      "notas_etiquetado": "equilibrio_sin_apoyo: con las dos manos ocupadas no hay forma de sujetarse a nada (especificación §7, regla 4; C2, P23). Versión de pie separada de estiramiento-triceps el 2026-10-22. El dibujo de la fuente es de pie.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -6135,12 +6137,13 @@
         "url": "https://www.southtees.nhs.uk/resources/cardiac-rehabilitation-exercise-programme",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "rehabilitación cardiaca",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
-        "La fuente indica el tiempo pero no las repeticiones; se usan 2."
+        "La fuente indica el tiempo pero no las repeticiones; se usan 2.",
+        "La fuente no indica la posición y su dibujo es de pie; aquí se hace sentado."
       ],
-      "notas_etiquetado": "Posición: el 2026-10-22 se separó en dos entradas (C2, P23): esta, sentada, y estiramiento-pecho-manos-detras-pie, de pie. La fuente no indica la posición de este ejercicio; las dos versiones quedan pendientes de auditoría.",
+      "notas_etiquetado": "Posición: el 2026-10-22 se separó en dos entradas (C2, P23): esta, sentada, y estiramiento-pecho-manos-detras-pie, de pie.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -6193,12 +6196,12 @@
         "url": "https://www.southtees.nhs.uk/resources/cardiac-rehabilitation-exercise-programme",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "rehabilitación cardiaca",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente indica el tiempo pero no las repeticiones; se usan 2."
       ],
-      "notas_etiquetado": "equilibrio_sin_apoyo: con las dos manos ocupadas no hay forma de sujetarse a nada (especificación §7, regla 4; C2, P23). Versión de pie separada de estiramiento-pecho-manos-detras el 2026-10-22. La fuente no indica la posición de este ejercicio; las dos versiones quedan pendientes de auditoría.",
+      "notas_etiquetado": "equilibrio_sin_apoyo: con las dos manos ocupadas no hay forma de sujetarse a nada (especificación §7, regla 4; C2, P23). Versión de pie separada de estiramiento-pecho-manos-detras el 2026-10-22. El dibujo de la fuente es de pie.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -8330,7 +8333,7 @@
         "titulo": "Rotator cuff in standing with resistance band",
         "url": "https://www.southtees.nhs.uk/?p=32161",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-22"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10.",
@@ -8862,12 +8865,12 @@
         "url": "https://www.southtees.nhs.uk/resources/cardiac-rehabilitation-exercise-programme",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "rehabilitación cardiaca",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente propone sujetarse solo si hay inestabilidad; aquí se sujeta siempre."
       ],
-      "notas_etiquetado": "Casi todo el peso cae sobre la pierna de delante.",
+      "notas_etiquetado": "Casi todo el peso cae sobre la pierna de delante. [conservadora] agarre: apoyo en el respaldo sin prensión visible (Q2). Se cerraría con: revisión profesional.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -8921,12 +8924,12 @@
         "url": "https://www.southtees.nhs.uk/resources/cardiac-rehabilitation-exercise-programme",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "rehabilitación cardiaca",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente lo hace con las manos en la cadera y propone sujetarse si hay inestabilidad; aquí se sujeta siempre."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] agarre: apoyo en el respaldo sin prensión visible (Q2). Se cerraría con: revisión profesional.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -9610,7 +9613,7 @@
         "ambos_brazos": false,
         "agarre": false,
         "peso_en_manos": false,
-        "flexion_profunda_rodilla": false,
+        "flexion_profunda_rodilla": true,
         "flexion_amplia_cadera": false,
         "puntillas_talones": false,
         "inclinacion_tronco": false,
@@ -9630,12 +9633,12 @@
         "titulo": "The clam",
         "url": "https://www.southtees.nhs.uk/resources/the-clam/",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] flexion_profunda_rodilla: las fotos dejan las rodillas en torno a 90° y el texto no fija el ángulo. Se cerraría con: evidencia de que no pasan de 90°.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -9667,7 +9670,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -9690,12 +9693,12 @@
         "titulo": "Hamstring stretch",
         "url": "https://www.southtees.nhs.uk/resources/hamstring-stretch-1",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente no fija tiempos; se usa la pauta del NIA para estiramientos."
       ],
-      "notas_etiquetado": "La fuente pide consultar antes si tienes un problema de espalda.",
+      "notas_etiquetado": "La fuente pide consultar antes si tienes un problema de espalda. ambos_brazos: las fotos A y B muestran las dos manos sujetando la pierna o la toalla (D).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -12468,7 +12471,7 @@
         "titulo": "Gluteal stretches in lying",
         "url": "https://southtees.mixd.co.uk/resources/gluteal-stretches-in-lying/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente no fija tiempos; se usa la pauta del NIA para estiramientos."

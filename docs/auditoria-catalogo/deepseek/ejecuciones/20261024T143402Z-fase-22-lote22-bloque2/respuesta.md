@@ -1,0 +1,88 @@
+…iquetas tienen `agarre: true` por el criterio conservador de Q2 (P10), pero ninguna de las dos lleva la nota `[conservadora]` que exige R2.4. En `estiramiento-flexor-cadera-pie` la nota actual («Casi todo el peso cae sobre la pierna de delante.») no cubre el `agarre`; en `estiramiento-aductores-pie` el campo está vacío.
+- **Consecuencia potencial:** un `true` conservador sin su nota incumple R2.4 y la verificación del protocolo («Todo `true` conservador tiene su nota `[conservadora]`»). La trazabilidad de por qué se marca `agarre` se pierde.
+- **Nivel de certeza:** alta (la etiqueta y la ausencia de nota son verificables en el catálogo).
+- **Recomendación:** añadir en los dos la nota `[conservadora] agarre: apoyo sin prensión visible (Q2). Se cerraría con: revisión profesional que confirme que basta apoyar la palma abierta.` (forma de R2.4).
+- **Prueba o evidencia que permitiría confirmarlo:** comprobar en el catálogo que `agarre` es `true` y que `notas_etiquetado` no contiene la nota de `agarre`.
+- **¿Requiere decisión humana?:** no. Es una corrección de forma de la nota, no de la etiqueta.
+
+### DS-431 · `flexion_profunda_rodilla` en `almeja-tumbado`: la etiqueta actual no es coherente con la evidencia
+- **Ubicación exacta:** catálogo, `almeja-tumbado`, `exigencias.flexion_profunda_rodilla` (`false`); `evidencia-lote-22`, apartado 176.
+- **Evidencia:** «Rodilla y cadera (D, fotos): las rodillas en torno a 90°; las caderas dobladas a unos 45°.» (evidencia, 176).
+- **Explicación:** §4 marca `flexion_profunda_rodilla` con «rodilla más de 90°». Las fotos muestran las rodillas en torno a 90° y la de arriba se abre más al separarla. R7.8 pide no inventar umbrales y usar la medida aproximada entre muslo y pierna en vista lateral. La etiqueta actual es `false` sin que la evidencia permita afirmar que la rodilla no pasa de 90°. Aplicando R2.1 y R7.8, el valor conservador es `true` con nota. Es un caso de la clase de CN-5 (rodillas dobladas sin ángulo exacto), pero aquí la evidencia sí da un ángulo aproximado («en torno a 90°»), así que no es un N puro.
+- **Consecuencia potencial:** si se mantiene `false`, el ejercicio se ofrece a perfiles con `rodilla` (filtro `rodilla` de `opciones.js`) sin que la evidencia lo respalde. Si se cambia a `true`, sale de ese filtro. Es un cambio de etiqueta que necesita aprobación (R2.6).
+- **Nivel de certeza:** media. La evidencia da un ángulo aproximado, pero no una vista lateral que permita medirlo con precisión; la relación con CN-5 no está cerrada.
+- **Recomendación:** proponer `true` conservador con nota `[conservadora]`, o registrar el caso como equivalente a CN-5 y mantener el valor provisional hasta que se resuelva. No decido yo.
+- **Prueba o evidencia que permitiría confirmarlo:** una foto lateral de la fuente que permita medir el ángulo entre muslo y pierna, o una decisión sobre CN-5 que fije el criterio para esta clase.
+- **¿Requiere decisión humana?:** sí. Aprobar el cambio de etiqueta o remitirlo a CN-5.
+
+### DS-432 · `ambos_brazos` en `isquios-toalla-tumbado`: la etiqueta actual contradice las fotos de la fuente
+- **Ubicación exacta:** catálogo, `isquios-toalla-tumbado`, `exigencias.ambos_brazos` (`false`); `evidencia-lote-22`, apartado 177.
+- **Evidencia:** «Fotos (D): A, **las dos manos** sujetan la pierna por detrás del muslo; B, **las dos manos** sujetan los extremos de la toalla; C, la otra pierna estirada.» (evidencia, 177). «Catálogo: `ambos_brazos: false`; **las dos fotos muestran las dos manos**.» (evidencia, 177).
+- **Explicación:** Q1 (P9) cuenta como `ambos_brazos` el uso simultáneo de los dos brazos. Las dos fotos de la fuente muestran las dos manos sujetando la pierna o la toalla. La etiqueta actual es `false`, lo que contradice la evidencia D. Es un C3 (diferencia sin documentar) que se resuelve corrigiendo hacia la fuente (aclaración con evidencia D).
+- **Consecuencia potencial:** el ejercicio se ofrece a perfiles con `un_brazo` (filtro `un_brazo` de `opciones.js`) aunque la fuente muestra las dos manos. Es un falso negativo de la etiqueta.
+- **Nivel de certeza:** alta (la evidencia lo dice literalmente y las fotos son D).
+- **Recomendación:** cambiar `ambos_brazos` a `true` (D) y añadir una nota que describa el fundamento real. Revisar también la ilustración de HealthMove, que muestra una sola mano (R7.6).
+- **Prueba o evidencia que permitiría confirmarlo:** abrir F4 y comprobar las fotos A y B.
+- **¿Requiere decisión humana?:** sí. Aprobar el cambio de etiqueta (R2.6) y la corrección de la ilustración.
+
+### DS-433 · La evidencia no describe las ilustraciones de HealthMove de 7 de los 10 ejercicios
+- **Ubicación exacta:** `evidencia-lote-22`, apartados 169 a 176 y 178; catálogo, campo de ilustración (no incluido en el bloque `catalogo-lote22`).
+- **Evidencia:** la evidencia solo describe la ilustración de HealthMove en 177 («tumbado, una pierna levantada en vertical y la mano hacia ella») y en 178 («tumbado, la pierna en "4" que se acerca»). En los demás apartados no hay descripción de la ilustración de HealthMove.
+- **Explicación:** R7.6 pide comparar las ilustraciones de HealthMove con la fuente y registrar las discrepancias. R7.7 impide dar por válida una ilustración con discrepancia. Sin la descripción de la ilustración de HealthMove, no puedo aplicar R7.6/R7.7 en 169 a 176.
+- **Consecuencia potencial:** podría haber discrepancias de ilustración no detectadas en 7 ejercicios. El informe no puede cerrarlos como LISTO PARA APROBACIÓN DOCUMENTAL con la misma seguridad que los que sí tienen la comparación.
+- **Nivel de certeza:** alta (la ausencia es verificable en la evidencia).
+- **Recomendación:** completar la evidencia con la descripción de las ilustraciones de HealthMove de 169 a 176 y compararlas con la fuente antes de cerrar el lote.
+- **Prueba o evidencia que permitiría confirmarlo:** renderizar las ilustraciones desde `ilustraciones.json` y compararlas con las imágenes de la fuente.
+- **¿Requiere decisión humana?:** no. Es una tarea de verificación de Claude antes del informe definitivo.
+
+### DS-434 · La evidencia no distingue la posición de las dos versiones de los estiramientos de tríceps y pecho
+- **Ubicación exacta:** `evidencia-lote-22`, apartados 169/170 y 171/172.
+- **Evidencia:** «Posición: la fuente no la indica en el texto; el dibujo es de pie. El catálogo tiene las dos versiones desde P23.» (evidencia, 169). «Posición: como 169 y 170.» (evidencia, 171).
+- **Explicación:** la evidencia agrupa las dos versiones (sentada y de pie) en un mismo apartado y no distingue qué parte del texto o del dibujo se aplica a cada una. Para la versión de pie, el dibujo es D; para la sentada, la posición no consta. La evidencia no permite confirmar si la fuente permite la posición sentada (ver DS-428).
+- **Consecuencia potencial:** la auditoría de la versión sentada se apoya en una inferencia (la fuente no prohíbe la posición sentada) y no en evidencia D. La versión de pie sí tiene evidencia D.
+- **Nivel de certeza:** media. La evidencia dice lo que dice, pero no separa las dos versiones.
+- **Recomendación:** que Claude separe en la evidencia lo que la fuente dice de cada posición, o que confirme que la fuente no fija la posición y que la versión sentada es una adaptación de HealthMove.
+- **Prueba o evidencia que permitiría confirmarlo:** abrir F1 y comprobar si el texto o alguna imagen permiten la posición sentada.
+- **¿Requiere decisión humana?:** no. Es una tarea de verificación de Claude.
+
+### DS-435 · `fuente.consultado` desactualizado en los 10 ejercicios
+- **Ubicación exacta:** catálogo, los 10 ejercicios, `fuente.consultado` (`2026-10-14` en 8 y `2026-10-22` en `banda-elevar-brazos-pie`); `evidencia-lote-22`, cabecera («Páginas HTML descargadas con `curl` el 2026-10-24»).
+- **Evidencia:** «Páginas HTML descargadas con `curl` el 2026-10-24 (HTTP 200)» (evidencia, cabecera).
+- **Explicación:** la evidencia se preparó el 2026-10-24, pero el catálogo conserva `consultado` de fechas anteriores. La trazabilidad de la fecha de consulta de la fuente no refleja la auditoría actual.
+- **Consecuencia potencial:** un informe posterior no puede saber si la fuente se consultó en la fecha de la auditoría. Es un problema de trazabilidad (apartado 10.1 del protocolo), no de etiquetas.
+- **Nivel de certeza:** alta (las fechas son verificables en el catálogo y en la evidencia).
+- **Recomendación:** actualizar `fuente.consultado` a `2026-10-24` en los 10 ejercicios, como se ha hecho en lotes anteriores (P16 a P21).
+- **Prueba o evidencia que permitiría confirmarlo:** comprobar la fecha de descarga en la evidencia y el valor de `consultado` en el catálogo.
+- **¿Requiere decisión humana?:** no. Es una actualización de trazabilidad, no de etiquetas.
+
+---
+
+## Limitaciones de la verificación
+
+- **No he abierto las fuentes originales.** Todo lo que digo sobre lo que dice una fuente se basa en la evidencia de Claude (`evidencia-lote-22`). No puedo confirmar que las citas sean literales ni que las descripciones de las imágenes sean correctas.
+- **No he visto las ilustraciones de HealthMove** de 7 de los 10 ejercicios (ver DS-433). No puedo aplicar R7.6/R7.7 en esos casos.
+- **La evidencia agrupa las dos versiones de los estiramientos de tríceps y pecho** (169/170 y 171/172) y no distingue la posición de cada una (ver DS-434).
+- **No he podido comprobar el estado de validación** de los 10 ejercicios más allá de lo que dice el catálogo (`borrador` en todos). No he comprobado si alguno tiene una aprobación registrada en `registro.md` que no aparezca en el bloque del catálogo.
+- **No he podido medir el impacto en la disponibilidad** de los cambios propuestos (R9.1). Los cambios de `flexion_profunda_rodilla` en `almeja-tumbado` y de `ambos_brazos` en `isquios-toalla-tumbado` afectan a los filtros `rodilla` y `un_brazo` de `opciones.js`, pero no he ejecutado `node scripts/disponibilidad.mjs`.
+- **No he podido comprobar si la fuente permite la posición sentada** en los estiramientos de tríceps y pecho (ver DS-428 y DS-434).
+- **No he podido comprobar si la fuente permite hacer los ejercicios con un solo brazo** en los casos en que HealthMove lo hace con los dos. La evidencia no lo dice en ningún apartado.
+- **No he podido comprobar el aviso de gafas de protección** de `banda-elevar-brazos-pie` más allá de lo que dice la evidencia (ver DS-429).
+- **No he podido comprobar si `almeja-tumbado` es un caso equivalente a CN-5** o si la evidencia D de las fotos basta para cerrarlo sin pasar por CN-5 (ver DS-431).
+- **No he podido comprobar si `isquios-toalla-tumbado` tiene una nota de `ambos_brazos`** que explique por qué está en `false`. El catálogo no la tiene, pero podría estar en otro campo que no veo.
+
+---
+
+## Resumen del lote
+
+- **10 ejercicios auditados por primera vez con el protocolo 1.0.**
+- **7 LISTOS PARA APROBACIÓN DOCUMENTAL, una vez aplicados los cambios propuestos:** 169, 170, 171, 172, 173, 174, 175, 178 (8 en total; corrijo: son 8, no 7).
+- **2 REQUIERE CORRECCIONES:** `almeja-tumbado` (DS-431) e `isquios-toalla-tumbado` (DS-432).
+- **Cambios de etiqueta propuestos:** 2 (`flexion_profunda_rodilla` en `almeja-tumbado`; `ambos_brazos` en `isquios-toalla-tumbado`). Los dos necesitan aprobación (R2.6).
+- **Adaptaciones nuevas propuestas:** 2 (posición sentada en `estiramiento-triceps` y `estiramiento-pecho-manos-detras`; Q5, una a una).
+- **Notas `[conservadora]` que faltan:** 2 (`agarre` en `estiramiento-flexor-cadera-pie` y `estiramiento-aductores-pie`; DS-430).
+- **Ilustraciones que revisar:** 1 (`isquios-toalla-tumbado`; DS-432).
+- **Aviso de seguridad que decidir:** 1 (`banda-elevar-brazos-pie`; DS-429).
+- **Trazabilidad:** actualizar `fuente.consultado` en los 10 (DS-435).
+- **Ninguna etiqueta cambia de valor sin aprobación del desarrollador.**
+
+FIN DEL BORRADOR

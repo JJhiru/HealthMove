@@ -34,7 +34,7 @@ export const TUMBADO = {
   'pierna-adelante-atras-lado': LADO_CAMA({ caderaD: -15, rodillaD: -15 }, { caderaD: 65, rodillaD: -15 }),
   'elevar-pierna-lado-tumbado': CL({}, { caderaI: 30, rodillaI: 30 }),
   'almeja-tumbado': CL({ caderaI: 4, rodillaI: -30, caderaD: 4, rodillaD: -30, cortoD: { muslo: 0.6, pierna: 0.8 }, cortoI: { muslo: 0.6, pierna: 0.8 } }, { caderaI: 40, rodillaI: -8 }, { zona: ['gluteo'] }),
-  'isquios-toalla-tumbado': C(RODILLAS, { caderaD: 85, rodillaD: 85, pieD: 175, alcanza: { manoD: 'rodillaD' } }, { toalla: [['manoD', 'pieD']], zona: ['muslo'] }),
+  'isquios-toalla-tumbado': C(RODILLAS, { caderaD: 85, rodillaD: 85, pieD: 175, alcanza: { manoD: 'rodillaD', manoI: 'rodillaD' } }, { toalla: [['manoD', 'pieD'], ['manoI', 'pieD']], zona: ['muslo'] }),
   'abrir-rodillas-plantas-juntas': CP(RODILLAS_PLANTA, { caderaD: 45, caderaI: 45, rodillaD: -20, rodillaI: -20 }),
   'separar-juntar-rodillas-tumbado': CP(RODILLAS_PLANTA, { caderaD: 25, caderaI: 25 }),
   'circulos-tobillo-tumbado': PIE({}, { tobillo: 0 }, { circulo: true }),

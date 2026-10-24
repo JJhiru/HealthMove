@@ -215,10 +215,20 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 21 | elevacion-lateral-brazos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 21 | elevar-puntas-pies-apoyo | PENDIENTE_DE_FUENTE | pendiente |
 | 21 | elevar-piernas-borde-silla | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 22 | estiramiento-triceps | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 22 | estiramiento-triceps-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 22 | estiramiento-pecho-manos-detras | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 22 | estiramiento-pecho-manos-detras-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 22 | banda-elevar-brazos-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 22 | estiramiento-flexor-cadera-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 22 | estiramiento-aductores-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 22 | almeja-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 22 | isquios-toalla-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 22 | gluteo-figura-cuatro-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 
 ## Pendientes
 
-- Auditados: 144 de 225 (lote 21, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
+- Auditados: 154 de 225 (lote 22, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
 - Lista de candidatos a adaptación unilateral: ver los resúmenes de los lotes 1, 3 y 4.
 - ~~Tarea de interfaz pendiente: comunicar `especifica_de` (decisión 3).~~ Hecha en P17 (2026-10-21).
 - **Actualización (2026-10-16):**
@@ -533,3 +543,4 @@ Sobre el informe `problemas-pendientes-2026-10-21.md`.
     - **Lote 19** (Worcestershire, Medway, York): 9 ejercicios, los 9 listos. Consulta C20.
     - **Lote 20** (Otago, Royal Wolverhampton, James Paget): 9 ejercicios, los 9 listos. Consulta C21. Dos ilustraciones corregidas.
     - **Lote 21** (Vivifrail, HSE, CSP, Parkinson's UK): 8 ejercicios; 7 listos y `elevar-puntas-pies-apoyo` PENDIENTE_DE_FUENTE (CSP, 403). Consulta C22.
+    - **Lote 22** (South Tees): 10 ejercicios, los 10 listos. Consulta C23.
