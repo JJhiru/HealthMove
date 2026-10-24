@@ -91,7 +91,7 @@ export const TUMBADO = {
   'abdomen-boca-abajo': BA({}, {}, { zona: ['abdomen'] }),
   'elevar-brazo-boca-abajo': BA({ brazoD: 180, codoD: 180, brazoI: 180, codoI: 180 }, { brazoD: 195, codoD: 195 }),
   'abrir-codos-toalla-suelo': SUP({ brazoD: 160, codoD: 160, cortoD: { brazo: 0.4, antebrazo: 0.4 }, brazoI: 160, codoI: 160, cortoI: { brazo: 0.4, antebrazo: 0.4 } }, { brazoD: 120, codoD: 200, cortoD: {}, brazoI: 120, codoI: 200, cortoI: {} }, { toalla: [['cadera', 'cuello']] }),
-  'gluteo-pierna-cruzada-suelo': SS({}, { caderaD: 125, rodillaD: 20, alcanza: { manoD: 'rodillaD', manoI: 'rodillaD' } }, { zona: ['gluteo'] }),
+  'gluteo-pierna-cruzada-suelo': SS({}, { caderaD: 140, rodillaD: -120, alcanza: { manoD: 'rodillaD', manoI: 'rodillaD' } }, { zona: ['gluteo'] }),
   'mariposa-suelo': { base: 'suelo-sentado', vista: 'frente', ini: { caderaD: 72, rodillaD: -120, caderaI: 72, rodillaI: -120, cortoD: { muslo: 0.85, pierna: 0.75 }, cortoI: { muslo: 0.85, pierna: 0.75 }, brazoD: 10, codoD: -20, brazoI: 10, codoI: -20 }, fin: { caderaD: 84, caderaI: 84 }, zona: ['musloI'] },
   'rodilla-deslizar-suelo': SS({}, { caderaD: 140, rodillaD: 20 }),
   'elevacion-pierna-recta-suelo': SU({ caderaI: 40, rodillaI: -40 }, { caderaD: 30, rodillaD: 30 }),

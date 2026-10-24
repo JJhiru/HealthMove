@@ -1,0 +1,64 @@
+{
+  "id": "fase-25-lote25",
+  "titulo": "Auditoría del lote 25 (11 ejercicios: Cambridge University Hospitals y British Heart Foundation), borrador de DeepSeek sobre la evidencia de Claude (C26)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-25-lote25.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "registro-1",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md",
+      "parte": "1/2"
+    },
+    {
+      "id": "registro-2",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md",
+      "parte": "2/2"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "ejemplo-formato-lote-22",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/lote-22.md"
+    },
+    {
+      "id": "evidencia-lote-25",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/evidencia/lote-25.md"
+    },
+    {
+      "id": "catalogo-lote25",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "abrazar-rodilla-sentado",
+        "circulos-cadera-sentado",
+        "marcha-circulos-codos-sentado",
+        "rodilla-mano-contraria-sentado",
+        "talones-flexion-codo-sentado",
+        "circulos-tobillo-tumbado",
+        "abdomen-profundo-tumbado",
+        "extension-lumbar-manos",
+        "abrir-codos-toalla-suelo",
+        "gluteo-pierna-cruzada-suelo",
+        "mariposa-suelo",
+        "abdomen-sentado",
+        "extension-lumbar-antebrazos"
+      ]
+    }
+  ]
+}

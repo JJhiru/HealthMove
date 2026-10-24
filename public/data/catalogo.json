@@ -5016,7 +5016,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -5038,10 +5038,11 @@
         "titulo": "Chair-based exercises",
         "url": "https://www.bhf.org.uk/informationsupport/heart-matters-magazine/activity/chair-based-exercises",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] ambos_brazos: la fuente dice que se sujete la pierna por debajo del muslo sin decir con cuántas manos. Se cerraría con: evidencia de que basta una mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -5095,7 +5096,8 @@
         "titulo": "Chair-based exercises",
         "url": "https://www.bhf.org.uk/informationsupport/heart-matters-magazine/activity/chair-based-exercises",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -6839,9 +6841,11 @@
         "titulo": "Warm-up exercises",
         "url": "https://www.bhf.org.uk/informationsupport/heart-matters-magazine/activity/warm-up-exercises",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "La fuente permite hacerlo sentado o de pie; aquí se hace sentado."
+      ],
       "notas_etiquetado": "[conservadora] brazo_sobre_hombro: los codos pueden pasar la altura del hombro en el círculo (CN-1, P25). Se cerraría con: evidencia de la fuente de la altura de los codos.",
       "validacion": {
         "estado": "borrador",
@@ -6895,10 +6899,12 @@
         "titulo": "Warm-up exercises",
         "url": "https://www.bhf.org.uk/informationsupport/heart-matters-magazine/activity/warm-up-exercises",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
-      "adaptaciones": [],
-      "notas_etiquetado": "[conservadora] ambos_brazos: brazos alternos sin pausa (Q1). Se cerraría con: fuente con un brazo.",
+      "adaptaciones": [
+        "La fuente permite hacerlo sentado o de pie; aquí se hace sentado."
+      ],
+      "notas_etiquetado": "[conservadora] ambos_brazos: brazos alternos sin pausa (Q1). Se cerraría con: fuente con un brazo. [conservadora] rotacion_tronco: la mano cruza al muslo contrario y el tronco puede girar algo. Se cerraría con: evidencia de que el tronco no gira.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -6951,9 +6957,11 @@
         "titulo": "Warm-up exercises",
         "url": "https://www.bhf.org.uk/informationsupport/heart-matters-magazine/activity/warm-up-exercises",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "La fuente permite hacerlo sentado o de pie; aquí se hace sentado."
+      ],
       "notas_etiquetado": "[conservadora] ambos_brazos: brazos alternos sin pausa (Q1). Se cerraría con: fuente con un brazo. [conservadora] brazo_sobre_hombro: al doblar el codo, la mano puede pasar de la altura del hombro (CN-1, P25). Se cerraría con: evidencia de la fuente de que la mano no pasa del hombro.",
       "validacion": {
         "estado": "borrador",
@@ -9879,9 +9887,11 @@
         "url": "https://www.cuh.nhs.uk/patient-information/exercises-for-patients-before-and-after-a-hip-injury-or-operation",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
         "especifica_de": "lesión u operación de cadera",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "La fuente permite hacerlo tumbado o sentado con la espalda apoyada; aquí se hace tumbado."
+      ],
       "notas_etiquetado": "",
       "validacion": {
         "estado": "borrador",
@@ -10613,7 +10623,7 @@
         "ambos_brazos": false,
         "agarre": false,
         "peso_en_manos": false,
-        "flexion_profunda_rodilla": false,
+        "flexion_profunda_rodilla": true,
         "flexion_amplia_cadera": false,
         "puntillas_talones": false,
         "inclinacion_tronco": false,
@@ -10632,12 +10642,12 @@
         "titulo": "Back mobility exercises",
         "url": "https://www.cuh.nhs.uk/patient-information/back-mobility-exercises/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] flexion_profunda_rodilla: tumbado con las rodillas dobladas, en torno a 90° en el dibujo (clase de CN-5). Se cerraría con: la decisión de CN-5 o una vista lateral.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -11575,7 +11585,7 @@
         "titulo": "Back mobility exercises",
         "url": "https://www.cuh.nhs.uk/patient-information/back-mobility-exercises/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
@@ -12200,7 +12210,7 @@
         "titulo": "Thoracic spine exercises",
         "url": "https://www.cuh.nhs.uk/patient-information/thoracic-spine-exercises/",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
@@ -12257,12 +12267,12 @@
         "titulo": "Stretches for the hip",
         "url": "https://cuh.nhs.uk/patient-information/stretches-for-the-hip",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente no fija tiempos; se usa la pauta del NIA para estiramientos."
       ],
-      "notas_etiquetado": "No hacerlo tras una prótesis de cadera: cruza la pierna. [conservadora] ambos_brazos: no consta si los brazos solo reposan (Q1). Se cerraría con: la fuente o su imagen.",
+      "notas_etiquetado": "Observación de HealthMove, no de la fuente: cruzar la pierna suele desaconsejarse tras una prótesis de cadera (no llega al usuario, Q7). agarre: el brazo abraza la rodilla (D, dibujo). [conservadora] ambos_brazos: un brazo abraza la rodilla y la otra mano queda junto al cuerpo, probablemente apoyada (Q1). Se cerraría con: una imagen que muestre la otra mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -12313,7 +12323,7 @@
         "titulo": "Stretches for the hip",
         "url": "https://cuh.nhs.uk/patient-information/stretches-for-the-hip",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente no fija tiempos; se usa la pauta del NIA para estiramientos."
