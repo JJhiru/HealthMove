@@ -100,9 +100,12 @@ test('rutina mal formada o sin bloques: se bloquea', () => {
 });
 
 test('rutina con borradores fuera del modo desarrollo: se bloquea', () => {
+  // Copia con todo en borrador: el catálogo real ya tiene casi todo aprobado (P30).
+  const borrador = structuredClone(catalogoReal);
+  for (const e of borrador.ejercicios) e.validacion = { ...e.validacion, estado: 'borrador' };
   const p = perfilCompleto();
-  const r = guardada(catalogoReal, p);
-  const c = comprobarRutina(r, catalogoReal, p, { permitirBorrador: false });
+  const r = guardada(borrador, p);
+  const c = comprobarRutina(r, borrador, p, { permitirBorrador: false });
   assert.equal(c.estado, 'bloqueada');
   assert.ok(c.motivos.every((m) => m.tipo === 'incompatible' && m.motivos.some((x) => x.tipo === 'sin_revisar')));
 });

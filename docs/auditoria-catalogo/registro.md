@@ -71,14 +71,14 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 
 | Lote | ID | Resultado de la auditoría | Decisión del desarrollador |
 |---|---|---|---|
-| 29 | estiramiento-pecho-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 29 | giro-tronco-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 29 | estiramiento-pecho-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 29 | giro-tronco-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 | 7 | marcha-sentado-sujetandose | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 6 | marcha-sentado-manos-cadera | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 7 | estiramiento-tobillo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 29 | tobillos-punta-talon-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 29 | tobillos-punta-talon-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 | 6 | inclinacion-lateral-brazo-arriba | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 29 | inclinacion-lateral-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 29 | inclinacion-lateral-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 | 6 | estiramiento-isquiotibiales-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 6 | circulos-hombros-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 8 | elevar-rodar-hombros-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
@@ -89,8 +89,8 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 6 | boxeo-circulos-pecho | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 6 | arquear-espalda-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 6 | movilidad-lumbar-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 29 | estiramiento-gemelo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 29 | abrir-cerrar-manos | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 29 | estiramiento-gemelo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 29 | abrir-cerrar-manos | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 | 8 | pulgar-dedos | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 8 | activacion-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 8 | banda-remo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
@@ -101,194 +101,194 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 9 | flexion-hombro-lado-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 9 | respiracion-abdominal-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 9 | respiracion-tranquila-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 29 | banda-curl-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 29 | banda-curl-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 | 7 | sentarse-levantarse | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 7 | mini-sentadillas | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 7 | elevacion-talones-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 29 | elevacion-talones-sin-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 29 | elevacion-talones-sin-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 | 7 | elevacion-lateral-pierna | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
 | 7 | extension-pierna-atras | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 29 | flexiones-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 29 | equilibrio-una-pierna-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 29 | flexiones-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 29 | equilibrio-una-pierna-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 | 7 | inclinacion-lateral-de-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-21, P21) |
-| 29 | estiramiento-gemelo-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 10 | recoger-toalla-dedos-pies | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 10 | banda-tobillo-fuera-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 10 | cuadriceps-estatico-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 10 | cruce-piernas-isometrico | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 11 | elevacion-pierna-recta-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 11 | apretar-gluteos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 11 | de-pie-mano-preparada | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 11 | balanceo-brazos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 11 | elevar-talones-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 11 | secarse-toalla-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 11 | paso-atras-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 11 | abrazar-rodilla-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 11 | gemelo-banda-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 12 | elevacion-brazos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 12 | banda-elevar-brazo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 12 | banda-flexion-codo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 12 | circulos-hombros-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 12 | apretar-gluteos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 12 | abduccion-cadera-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 12 | banda-separar-pierna-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 12 | elevacion-pierna-recta-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 12 | banda-elevacion-pierna-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 12 | deslizar-talon-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 12 | banda-deslizar-talon-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 12 | puente-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 12 | banda-puente-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 12 | rodilla-al-lado-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 12 | bombeo-tobillos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 13 | puno-extension-codo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 13 | estiramiento-pecho-manos-lumbar | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 13 | estiramiento-pecho-manos-lumbar-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 13 | abrir-pierna-brazo-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 13 | suelo-pelvico-lentas | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 13 | suelo-pelvico-rapidas | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 13 | manos-entrelazadas-arriba-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 13 | circulos-pierna-lado-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 13 | rodillas-lado-lado-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 14 | circulos-rodilla-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 14 | control-abdominal-brazos-arriba | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 14 | abdominal-isometrico-muslos | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 14 | oblicuos-isometricos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 29 | estiramiento-gemelo-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 10 | recoger-toalla-dedos-pies | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 10 | banda-tobillo-fuera-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 10 | cuadriceps-estatico-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 10 | cruce-piernas-isometrico | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 11 | elevacion-pierna-recta-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 11 | apretar-gluteos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 11 | de-pie-mano-preparada | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 11 | balanceo-brazos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 11 | elevar-talones-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 11 | secarse-toalla-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 11 | paso-atras-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 11 | abrazar-rodilla-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 11 | gemelo-banda-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | elevacion-brazos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | banda-elevar-brazo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | banda-flexion-codo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | circulos-hombros-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | apretar-gluteos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | abduccion-cadera-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | banda-separar-pierna-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | elevacion-pierna-recta-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | banda-elevacion-pierna-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | deslizar-talon-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | banda-deslizar-talon-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | puente-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | banda-puente-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | rodilla-al-lado-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 12 | bombeo-tobillos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 13 | puno-extension-codo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 13 | estiramiento-pecho-manos-lumbar | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 13 | estiramiento-pecho-manos-lumbar-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 13 | abrir-pierna-brazo-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 13 | suelo-pelvico-lentas | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 13 | suelo-pelvico-rapidas | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 13 | manos-entrelazadas-arriba-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 13 | circulos-pierna-lado-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 13 | rodillas-lado-lado-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 14 | circulos-rodilla-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 14 | control-abdominal-brazos-arriba | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 14 | abdominal-isometrico-muslos | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 14 | oblicuos-isometricos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 | 14 | movilizacion-ciatico-tumbado | REQUIERE REVISIÓN PROFESIONAL | pendiente |
 | 14 | cruzar-pierna-tumbado | PENDIENTE DE DECISIÓN | pendiente |
-| 14 | autoelongacion-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 15 | elevar-rodilla-mantenida-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 15 | flexion-alterna-piernas-de-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 15 | toalla-entre-rodillas-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 15 | estiramiento-soleo-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 15 | estiramiento-lateral-muslo-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 15 | psoas-borde-cama | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 15 | extension-cadera-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 15 | cuadriceps-boca-abajo-toalla | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 16 | respiracion-costal-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 16 | flexion-codo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 16 | respiracion-lado-brazo-adelante | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 16 | apertura-pecho-lado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 16 | torax-manos-entrelazadas-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 16 | torax-codos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 16 | agarrar-sabana-dedos-pies | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 16 | pedaleo-pies-cama | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 17 | respiracion-abdominal-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 17 | bascula-pelvica-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 17 | rotacion-rodillas-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 17 | rodilla-al-pecho-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 17 | isometrico-hombro-fuera-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 17 | isometrico-hombro-dentro | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 17 | elevar-pierna-lado-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 17 | separar-juntar-rodillas-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 17 | elevar-brazo-lado-respiracion | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 18 | flexion-tronco-delante-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 18 | estiramiento-espalda-alta-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 18 | extension-codo-botella-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 18 | estiramiento-cuadriceps-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 18 | estiramiento-hombros-espalda-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 18 | subir-manos-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 18 | toalla-detras-espalda-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 18 | cuadriceps-lado-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 19 | banda-press-pecho-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 19 | banda-prensa-pierna-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 19 | banda-separar-rodillas-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 19 | banda-aperturas-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 19 | banda-elevaciones-laterales-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 19 | banda-empuje-pie-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 19 | banda-sentarse-levantarse | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 19 | cuadriceps-estatico-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 19 | flexion-rodilla-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 20 | brazos-arriba-manos-entrelazadas-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 20 | flexion-rodilla-pie-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 20 | tandem-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 20 | circulos-cadera-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 20 | marcha-sitio-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 20 | arquear-espalda-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 20 | giro-tronco-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 20 | sentadilla-sin-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 20 | sentarse-levantarse-sin-manos | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 21 | banda-aperturas-diagonal-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 21 | escurrir-toalla-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 21 | estiramiento-hombro-cruzado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 21 | estiramiento-hombro-cruzado-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 21 | puntillas-talones-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 21 | elevacion-lateral-brazos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 14 | autoelongacion-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 15 | elevar-rodilla-mantenida-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 15 | flexion-alterna-piernas-de-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 15 | toalla-entre-rodillas-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 15 | estiramiento-soleo-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 15 | estiramiento-lateral-muslo-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 15 | psoas-borde-cama | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 15 | extension-cadera-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 15 | cuadriceps-boca-abajo-toalla | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 16 | respiracion-costal-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 16 | flexion-codo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 16 | respiracion-lado-brazo-adelante | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 16 | apertura-pecho-lado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 16 | torax-manos-entrelazadas-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 16 | torax-codos-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 16 | agarrar-sabana-dedos-pies | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 16 | pedaleo-pies-cama | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 17 | respiracion-abdominal-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 17 | bascula-pelvica-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 17 | rotacion-rodillas-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 17 | rodilla-al-pecho-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 17 | isometrico-hombro-fuera-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 17 | isometrico-hombro-dentro | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 17 | elevar-pierna-lado-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 17 | separar-juntar-rodillas-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 17 | elevar-brazo-lado-respiracion | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 18 | flexion-tronco-delante-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 18 | estiramiento-espalda-alta-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 18 | extension-codo-botella-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 18 | estiramiento-cuadriceps-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 18 | estiramiento-hombros-espalda-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 18 | subir-manos-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 18 | toalla-detras-espalda-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 18 | cuadriceps-lado-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 19 | banda-press-pecho-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 19 | banda-prensa-pierna-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 19 | banda-separar-rodillas-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 19 | banda-aperturas-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 19 | banda-elevaciones-laterales-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 19 | banda-empuje-pie-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 19 | banda-sentarse-levantarse | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 19 | cuadriceps-estatico-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 19 | flexion-rodilla-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 20 | brazos-arriba-manos-entrelazadas-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 20 | flexion-rodilla-pie-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 20 | tandem-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 20 | circulos-cadera-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 20 | marcha-sitio-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 20 | arquear-espalda-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 20 | giro-tronco-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 20 | sentadilla-sin-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 20 | sentarse-levantarse-sin-manos | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 21 | banda-aperturas-diagonal-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 21 | escurrir-toalla-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 21 | estiramiento-hombro-cruzado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 21 | estiramiento-hombro-cruzado-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 21 | puntillas-talones-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 21 | elevacion-lateral-brazos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 | 21 | elevar-puntas-pies-apoyo | PENDIENTE_DE_FUENTE | pendiente |
-| 21 | elevar-piernas-borde-silla | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 22 | estiramiento-triceps | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 22 | estiramiento-triceps-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 22 | estiramiento-pecho-manos-detras | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 22 | estiramiento-pecho-manos-detras-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 22 | banda-elevar-brazos-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 22 | estiramiento-flexor-cadera-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 22 | estiramiento-aductores-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 22 | almeja-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 22 | isquios-toalla-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 22 | gluteo-figura-cuatro-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 23 | deslizamiento-tendones-dedos | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 23 | estiramiento-pulgar | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 21 | elevar-piernas-borde-silla | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | estiramiento-triceps | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | estiramiento-triceps-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | estiramiento-pecho-manos-detras | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | estiramiento-pecho-manos-detras-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | banda-elevar-brazos-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | estiramiento-flexor-cadera-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | estiramiento-aductores-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | almeja-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | isquios-toalla-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 22 | gluteo-figura-cuatro-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | deslizamiento-tendones-dedos | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | estiramiento-pulgar | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 | 23 | rotacion-cadera-fuera-sentado | PENDIENTE DE DECISIÓN | pendiente |
-| 23 | alfabeto-pie-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 23 | estiramiento-planta-pie-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 23 | estiramiento-pie-toalla-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 23 | codos-atras-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 23 | pendulo-hombro | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 23 | alfabeto-pie-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | estiramiento-planta-pie-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | estiramiento-pie-toalla-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | codos-atras-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | pendulo-hombro | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 | 23 | cuadriceps-toalla-rodilla-tumbado | PENDIENTE DE DECISIÓN | pendiente |
-| 23 | rodilla-cama-toalla-tobillo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 23 | rodilla-doblada-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 23 | abdomen-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 23 | elevar-brazo-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 23 | rodilla-deslizar-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 23 | elevacion-pierna-recta-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 24 | remo-inclinado-botella | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 24 | elevaciones-frontales-botella | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 24 | elevaciones-laterales-botella | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 24 | press-hombros-botella-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 24 | banda-deslizar-brazos-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 24 | cruz-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 24 | extension-lumbar-antebrazos | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 24 | abrir-rodillas-plantas-juntas | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 24 | toalla-entre-rodillas-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 24 | pierna-adelante-atras-lado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 24 | flexor-cadera-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 25 | abrazar-rodilla-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 25 | circulos-cadera-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 25 | marcha-circulos-codos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 25 | rodilla-mano-contraria-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 25 | talones-flexion-codo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 25 | circulos-tobillo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 25 | abdomen-profundo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 25 | extension-lumbar-manos | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 25 | abrir-codos-toalla-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 25 | gluteo-pierna-cruzada-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 25 | mariposa-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 26 | hombros-abajo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 26 | press-pecho-botella-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 26 | elevacion-lateral-botella-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 26 | flexion-hombro-botella-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 26 | marcha-apertura-brazos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 26 | toques-laterales-brazos-arriba-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 26 | arrancar-cortacesped-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 26 | estiramiento-isquios-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 26 | limpiaparabrisas-pie-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 26 | deslizar-toalla-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 26 | estiramiento-pecho-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 27 | abdomen-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 27 | desplazar-peso-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 27 | puente-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 27 | bascula-pelvica-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 27 | alcance-cruzado-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 27 | press-encima-cabeza-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 27 | circulos-tobillo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 27 | separar-dedos-pies-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 28 | separar-juntar-dedos | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 28 | dedos-hacia-pulgar | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 28 | descanso-inclinado-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 28 | descanso-apoyado-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 28 | descanso-espalda-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 28 | circulos-grandes-brazos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 28 | abrazar-ambas-rodillas | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
-| 28 | elevacion-pasiva-brazo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 23 | rodilla-cama-toalla-tobillo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | rodilla-doblada-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | abdomen-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | elevar-brazo-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | rodilla-deslizar-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 23 | elevacion-pierna-recta-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | remo-inclinado-botella | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | elevaciones-frontales-botella | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | elevaciones-laterales-botella | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | press-hombros-botella-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | banda-deslizar-brazos-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | cruz-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | extension-lumbar-antebrazos | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | abrir-rodillas-plantas-juntas | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | toalla-entre-rodillas-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | pierna-adelante-atras-lado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 24 | flexor-cadera-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | abrazar-rodilla-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | circulos-cadera-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | marcha-circulos-codos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | rodilla-mano-contraria-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | talones-flexion-codo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | circulos-tobillo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | abdomen-profundo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | extension-lumbar-manos | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | abrir-codos-toalla-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | gluteo-pierna-cruzada-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 25 | mariposa-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | hombros-abajo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | press-pecho-botella-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | elevacion-lateral-botella-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | flexion-hombro-botella-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | marcha-apertura-brazos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | toques-laterales-brazos-arriba-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | arrancar-cortacesped-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | estiramiento-isquios-pie | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | limpiaparabrisas-pie-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | deslizar-toalla-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 26 | estiramiento-pecho-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 27 | abdomen-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 27 | desplazar-peso-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 27 | puente-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 27 | bascula-pelvica-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 27 | alcance-cruzado-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 27 | press-encima-cabeza-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 27 | circulos-tobillo-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 27 | separar-dedos-pies-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 28 | separar-juntar-dedos | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 28 | dedos-hacia-pulgar | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 28 | descanso-inclinado-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 28 | descanso-apoyado-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 28 | descanso-espalda-pared | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 28 | circulos-grandes-brazos-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 28 | abrazar-ambas-rodillas | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
+| 28 | elevacion-pasiva-brazo-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | aprobado (2026-10-24, P30) |
 
 ## Pendientes
 
@@ -523,6 +523,12 @@ El desarrollador pidió seguir con «las demas cosas a corregir» sin consultarl
     - En el catálogo: `estado` = `basado_en_fuente_publica`, `revisado_por` = «JJhiru», `fecha_revision` = `2026-10-21` (especificación §7.6).
     - **Qué significa:** la auditoría documental contrastó cada ejercicio con su fuente pública, y su autor lo revisó. **No es una validación clínica ni profesional:** `revisado_por_profesional` queda sin usar, y la validación profesional sigue como riesgo abierto (especificación §7.5).
     - Efecto: fuera del modo desarrollo, el motor ya puede usar estos 30. Los otros 190 siguen en `borrador`.
+
+30. **P30 · Segundo lote público: 183 ejercicios aprobados como `basado_en_fuente_publica`.**
+    - Texto de la decisión (literal): «Aprueba los ejercicios ya auditados y haz commit a main jaja, yo te apruebo y mergeo el PR».
+    - Ejercicios: los 183 de la tabla con «aprobado (2026-10-24, P30)»: todos los que estaban en LISTO PARA APROBACIÓN DOCUMENTAL con el protocolo 1.0 y sin aprobar. No incluye los PENDIENTE DE DECISIÓN, PENDIENTE_DE_FUENTE ni REQUIERE REVISIÓN PROFESIONAL, ni los 7 bloqueados (G8).
+    - En el catálogo: `estado` = `basado_en_fuente_publica`, `revisado_por` = «JJhiru», `fecha_revision` = `2026-10-24` (especificación §7.6).
+    - **No es una validación clínica ni profesional** (especificación §7.5). Las etiquetas conservadoras de CN-3, CN-4 y CN-5 se aprueban con su valor provisional.
 
 ## Decisiones del desarrollador (2026-10-22)
 
