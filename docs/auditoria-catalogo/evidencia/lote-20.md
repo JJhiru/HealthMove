@@ -53,7 +53,7 @@
 - **Dibujo (D):** de pie, una mano en el respaldo de una silla, marchando.
 - **Apoyo:** opcional en la fuente; HealthMove lo hace siempre.
 - **Catálogo:** `variante_de: flexion-alterna-piernas-de-pie`.
-- **Ilustración de HealthMove:** de pie con la silla delante, la rodilla sube.
+- **Ilustración de HealthMove:** de pie con la silla delante, la rodilla sube. **Antes**, el pie de la pierna elevada caía sobre el asiento (como en `flexion-alterna-piernas-de-pie`, lote 15); **corregida por Claude** (`depie.mjs`).
 
 ## 157. arquear-espalda-pie · F1, «Back Extension», p. 8
 
@@ -67,7 +67,7 @@
 - **Texto (D):** de pie, alto; «Fold the arms in front of the chest or place one hand on the chair»; estirar el tronco hacia arriba y girar despacio la cabeza y los hombros a la derecha, sin girar la cadera; volver y repetir al otro lado; 5 veces.
 - **Dibujos (D):** de pie de frente junto a una silla, con una mano en la silla; y con los brazos cruzados.
 - **Cuello (D):** la fuente gira «the head and shoulders»; HealthMove dice «los hombros» (la cabeza no; exclusión del cuello).
-- **Ilustración de HealthMove:** de frente, giro del tronco con la silla al lado.
+- **Ilustración de HealthMove:** de frente, giro del tronco con la silla al lado. **Antes** dibujaba los brazos cruzados, mientras la instrucción pide apoyar una mano en la silla (las dos opciones están en la fuente, pero dibujo e instrucción no coincidían); **corregida por Claude** (`depie.mjs`): una mano en el hombro contrario y la otra en el respaldo.
 
 ## 159. sentadilla-sin-apoyo · F1, «Knee Bends No Support», p. 20
 

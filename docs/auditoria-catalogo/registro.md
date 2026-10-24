@@ -198,10 +198,19 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 19 | banda-sentarse-levantarse | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 19 | cuadriceps-estatico-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 19 | flexion-rodilla-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 20 | brazos-arriba-manos-entrelazadas-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 20 | flexion-rodilla-pie-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 20 | tandem-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 20 | circulos-cadera-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 20 | marcha-sitio-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 20 | arquear-espalda-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 20 | giro-tronco-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 20 | sentadilla-sin-apoyo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 20 | sentarse-levantarse-sin-manos | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 
 ## Pendientes
 
-- Auditados: 127 de 225 (lote 19, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
+- Auditados: 136 de 225 (lote 20, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
 - Lista de candidatos a adaptación unilateral: ver los resúmenes de los lotes 1, 3 y 4.
 - ~~Tarea de interfaz pendiente: comunicar `especifica_de` (decisión 3).~~ Hecha en P17 (2026-10-21).
 - **Actualización (2026-10-16):**
@@ -514,3 +523,4 @@ Sobre el informe `problemas-pendientes-2026-10-21.md`.
     - **Lote 17** (Sant Joan d'Alacant, León, SERMEF): 9 ejercicios, los 9 listos. Consulta C18.
     - **Lote 18** (National Institute on Aging): 8 ejercicios, los 8 listos. Consulta C19. CN-4 aplicado como provisional en dos estiramientos de cuádriceps.
     - **Lote 19** (Worcestershire, Medway, York): 9 ejercicios, los 9 listos. Consulta C20.
+    - **Lote 20** (Otago, Royal Wolverhampton, James Paget): 9 ejercicios, los 9 listos. Consulta C21. Dos ilustraciones corregidas.

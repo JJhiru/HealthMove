@@ -1,0 +1,113 @@
+{
+  "idEjecucion": "20261024T142518Z-fase-20-lote20",
+  "fecha": "2026-10-24T14:25:18.275Z",
+  "fase": {
+    "id": "fase-20-lote20",
+    "titulo": "Auditoría del lote 20 (9 ejercicios: Otago (Later Life Training), Royal Wolverhampton y James Paget), borrador de DeepSeek sobre la evidencia de Claude (C21)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-20-lote20.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "4a4ed219-097e-4339-b2bd-7fc6c7457c6c",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 640,
+    "falloCache": 59661,
+    "salida": 15705,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 96077,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "4a4ed219-097e-4339-b2bd-7fc6c7457c6c",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 640,
+        "falloCache": 59661,
+        "salida": 15705,
+        "razonamiento": 0
+      },
+      "coste": 0.03674814,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.03674814,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "a9651924e5c92a7101b6f197f795f464284f86e4",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "fefa94611596190a941d1e990a1e0c79eaf0c453",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/evidencia/lote-20.md"
+    ]
+  },
+  "bloque": 1,
+  "continuacion": null,
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36949,
+      "sha256": "4a7cbb32481a6295fec3a0eb92181f8f472194629754a8422e4b50b56524d332"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 15774,
+      "sha256": "7c96d4bd545c4fbfe0b6a1e2508bf923cb7c6abec44520ad3cfc2feaf88dc775"
+    },
+    {
+      "id": "registro",
+      "procedencia": "docs/auditoria-catalogo/registro.md",
+      "caracteres": 57708,
+      "sha256": "547d44f925fd61cd153fef200323efb2fd05614a5c482ef4aa23fdfe4779af63"
+    },
+    {
+      "id": "opciones",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6246,
+      "sha256": "4430708c5729fd9d4f75a783a575a7a6d826cccc0d94bc6e5d6c2e63636eaf4b"
+    },
+    {
+      "id": "ejemplo-formato-lote-19",
+      "procedencia": "docs/auditoria-catalogo/lote-19.md",
+      "caracteres": 38808,
+      "sha256": "5c5d20070a268d5c49e67d9bb9db8b2e6622be3edf82380d76e41a05c53cf9a0"
+    },
+    {
+      "id": "evidencia-lote-20",
+      "procedencia": "docs/auditoria-catalogo/evidencia/lote-20.md",
+      "caracteres": 8208,
+      "sha256": "1244d0323129b85ab2a868447f4bbd0d5fb04e4505dccef622240036fb8feaa4"
+    },
+    {
+      "id": "catalogo-lote20",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 20822,
+      "sha256": "30d8e17d432d3fd8f569f5334065d2568ff3e0c35ccf300306fc0075adeb0473"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "44e6ee5939cb27c882578a73caa4a190a1502bb90847f54d2b450f6dfaff1c88",
+    "respuestaApi": "599e96709b9f08d901a7a18384b0aa34bc797478a531f929038165d11318b696"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T142518Z-fase-20-lote20/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T142518Z-fase-20-lote20/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T142518Z-fase-20-lote20/respuesta-api.json"
+  }
+}
