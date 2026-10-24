@@ -1,0 +1,572 @@
+# Borrador de auditoría · lote 15 (consulta C16)
+
+> **Alcance y límites de este borrador.** Audito los 8 ejercicios del lote (110 a 117) con el protocolo 1.0, a partir de la evidencia de Claude (`evidencia-lote-15`) y del catálogo (`catalogo-lote15`). No he abierto las fuentes originales: todo lo que afirmo sobre ellas procede de la evidencia de Claude. No emito juicios clínicos ni apruebo nada. `estiramiento-gemelo-pared` se usa solo como contexto de `variante_de` y no se audita.
+>
+> **Limitaciones de la verificación** (comunes a los 8):
+> - No he visto las fuentes. Las citas entre «» son las que aparecen en la evidencia de Claude; no las he podido contrastar con el PDF.
+> - La evidencia no describe con detalle todas las figuras (por ejemplo, la figura 29 de F1 en el apartado 106 del lote 14, o el dibujo 1 de F2 en 110). Donde la evidencia no describe una imagen, lo digo.
+> - No he podido comprobar el estado real de las ilustraciones de HealthMove en `ilustraciones.json`: la evidencia dice que dos se han corregido (`flexion-alterna-piernas-de-pie` y `estiramiento-lateral-muslo-pared`), pero no he visto el archivo. Lo trato como hecho declarado por Claude, no verificado por mí.
+> - No he podido comprobar la versión exacta del catálogo (apartado 10.2 del protocolo): el bloque `catalogo-lote15` no trae `version`, `actualizado` ni commit. Lo señalo como limitación, no como hallazgo.
+
+---
+
+## 110. elevar-rodilla-mantenida-sentado
+
+### Identificación
+- ID: `elevar-rodilla-mantenida-sentado`
+- Nombre: Elevar la rodilla y mantener
+- Fuente: Consorcio Hospital General Universitario de Valencia (Centro de Salud Fuensanta), «10 ejercicios para la rodilla», n.º 2 «Sentados, flexionar rodilla y cadera» (F2)
+- Población destinataria de la fuente (si la declara): el folleto es de ejercicios para la rodilla; no declara un grupo más concreto. `especifica_de` actual: «rodilla».
+- Estado inicial: `borrador`; sin auditar
+- Resultado documental: fiel, con una adaptación ya documentada cuya redacción es inexacta (ver DS-380)
+
+### Evidencia de la fuente
+- Ubicación exacta: F2, n.º 2 «Sentados, flexionar rodilla y cadera» (apartado 110).
+- Pasos originales relevantes, resumidos con palabras propias: sentado recto en una silla; levantar la punta del pie con la rodilla doblada; elevar la rodilla y mantenerla en el aire 5 segundos; bajar despacio. No da repeticiones.
+- Coincidencias (C1): posición, movimiento, tiempo de mantenimiento.
+- Diferencias (C3) y adaptaciones documentadas (C2): C3, la fuente no da repeticiones; HealthMove usa «De 2 a 10 veces» con la pauta de NHS Forth Valley. Ya está en `adaptaciones`, pero la redacción dice «La fuente no indica repeticiones; se usa la pauta general de NHS Forth Valley», que es correcta en el fondo. Ver DS-380 para el caso de 112, no de este.
+- Adaptaciones que deben documentarse: ninguna nueva.
+- Hechos, inferencias e incertidumbres: D (texto y dibujos), la rodilla sube por encima del asiento. I (dibujo 2), el muslo se acerca al tronco más que al estar sentado.
+- Limitaciones de la verificación: la evidencia no describe el dibujo 1 con detalle; no consta si la mano se apoya en algún sitio.
+
+### Auditoría de exigencias
+
+| Exigencia | Etiqueta actual | Evidencia (D/I/N) y fundamento | Regla | Resultado propuesto | Motivo |
+|---|---|---|---|---|---|
+| equilibrio_sin_apoyo | false | D: sentado | evidencia | FALSE | Solo se define de pie |
+| una_pierna | false | D: sentado | evidencia | FALSE | — |
+| sentarse_levantarse | false | D: sentado | evidencia | FALSE | — |
+| impacto | false | D: movimiento lento | evidencia | FALSE | — |
+| carga_externa | false | D: sin peso | evidencia | FALSE | — |
+| esfuerzo_cardio | false | D: movimiento local | evidencia | FALSE | — |
+| brazo_sobre_hombro | false | D (texto): los brazos no intervienen | evidencia | FALSE | — |
+| mano_detras | false | D (texto): los brazos no intervienen | evidencia | FALSE | — |
+| ambos_brazos | false | D (texto): los brazos no intervienen | evidencia | FALSE | — |
+| agarre | false | D (texto): las manos no intervienen | evidencia | FALSE | — |
+| peso_en_manos | false | D: sentado | evidencia | FALSE | R7.3 |
+| flexion_profunda_rodilla | false | D (texto): rodilla doblada con la punta del pie arriba, sin que conste que pase de 90° | evidencia | FALSE | — |
+| flexion_amplia_cadera | true | I (dibujo 2): la rodilla sube por encima del asiento; el muslo se acerca al tronco más que al estar sentado | conservadora | TRUE | R2.1: ante la duda, `true` conservador con nota |
+| puntillas_talones | false | D: sentado | evidencia | FALSE | Solo se define de pie |
+| inclinacion_tronco | false | D (texto): «sentado recto» | evidencia | FALSE | — |
+| rotacion_tronco | false | D: sin giro | evidencia | FALSE | — |
+
+### Otros campos
+- Fase `principal`, posición `sentado`, recurso `silla`, dosis: coherentes.
+- Ilustración: coincide (evidencia).
+- Exclusiones del catálogo v1: ninguna.
+- `fuente.especifica_de`: «rodilla» (coherente con el título del folleto; ver DS-381 sobre el criterio de nombres).
+
+### Incidencias
+- `flexion_amplia_cadera: true` con evidencia I: falta la nota `[conservadora]` (R2.4). Ver DS-382.
+
+### Propuesta de cambios
+- `exigencias.flexion_amplia_cadera`: se mantiene `true`, pero se añade la nota `[conservadora]` (R2.4).
+- `fuente.consultado`: 2026-10-24.
+
+### Decisión pendiente del desarrollador
+LISTO PARA APROBACIÓN DOCUMENTAL, una vez aplicados los cambios propuestos.
+
+---
+
+## 111. flexion-alterna-piernas-de-pie
+
+### Identificación
+- ID: `flexion-alterna-piernas-de-pie`
+- Nombre: Elevar una rodilla de pie con apoyo
+- Fuente: Ministerio de Sanidad y semFYC, «Prevenir las caídas es posible» (2016), «Flexionar de forma alterna las piernas estando de pie» (F3)
+- Población destinataria de la fuente (si la declara): el folleto es de prevención de caídas; no declara un grupo más concreto. `especifica_de` actual: no tiene.
+- Estado inicial: `borrador`; sin auditar
+- Resultado documental: fiel, con una adaptación ya documentada (apoyo siempre) y una ilustración corregida
+
+### Evidencia de la fuente
+- Ubicación exacta: F3, «Flexionar de forma alterna las piernas estando de pie» (apartado 111).
+- Pasos originales relevantes, resumidos con palabras propias: de pie, flexionar una pierna mientras la otra sigue en el suelo; mantener la pierna elevada «unos 5 segundos»; bajar y cambiar. «Si se siente más seguro, sitúese de pie apoyado al lado de una mesa, silla firme o barandilla». «Mantenga la posición contando hasta 10 para cada una de las piernas. Descanse de 1 a 3 minutos y repita».
+- Coincidencias (C1): posición, movimiento, tiempo de mantenimiento.
+- Diferencias (C3) y adaptaciones documentadas (C2): C3, la fuente permite hacerlo sin apoyo; HealthMove lo hace siempre con apoyo. Ya está en `adaptaciones`.
+- Adaptaciones que deben documentarse: ninguna nueva.
+- Hechos, inferencias e incertidumbres: D (texto y figura), una pierna doblada con la rodilla hacia delante, sin apoyo en la figura. D (texto), el apoyo es opcional. I (texto), la dosis da dos tiempos (5 segundos y contar hasta 10); no queda claro si son el mismo tiempo.
+- Limitaciones de la verificación: la evidencia no describe si la figura muestra la mano en algún sitio; el texto dice que el apoyo es opcional.
+
+### Auditoría de exigencias
+
+| Exigencia | Etiqueta actual | Evidencia (D/I/N) y fundamento | Regla | Resultado propuesto | Motivo |
+|---|---|---|---|---|---|
+| equilibrio_sin_apoyo | false | D (texto): la fuente permite el apoyo; HealthMove lo hace siempre | evidencia | FALSE | §4: no exige no sujetarse |
+| una_pierna | true | D (texto y figura): una pierna se eleva mientras la otra sigue en el suelo | evidencia | TRUE | §4: el peso cae sobre un solo pie |
+| sentarse_levantarse | false | D: de pie | evidencia | FALSE | — |
+| impacto | false | D: movimiento lento | evidencia | FALSE | — |
+| carga_externa | false | D: sin peso | evidencia | FALSE | — |
+| esfuerzo_cardio | false | D: movimiento local | evidencia | FALSE | — |
+| brazo_sobre_hombro | false | D (texto): los brazos no intervienen | evidencia | FALSE | — |
+| mano_detras | false | D (texto): los brazos no intervienen | evidencia | FALSE | — |
+| ambos_brazos | false | D (texto): una mano se apoya; la otra no interviene | evidencia | FALSE | DG-4 / Q1 (P9): una mano en apoyo, la otra en reposo; no es uso simultáneo |
+| agarre | true | I (texto): «apóyate en ella»; no consta prensión | conservadora | TRUE | Q2 (P10): contacto sin prensión, `true` conservador con nota |
+| peso_en_manos | false | D: de pie; la mano se apoya, no carga el peso | evidencia | FALSE | R7.3 |
+| flexion_profunda_rodilla | false | D (texto): la pierna elevada se dobla con la rodilla hacia delante, sin que conste que pase de 90° | evidencia | FALSE | — |
+| flexion_amplia_cadera | true | I (texto): «subir la rodilla»; el muslo se acerca al tronco como mínimo igual que sentado | conservadora | TRUE | R2.1: ante la duda, `true` conservador con nota |
+| puntillas_talones | false | D: el pie de apoyo está plano | evidencia | FALSE | — |
+| inclinacion_tronco | false | D (texto): de pie, sin inclinación | evidencia | FALSE | — |
+| rotacion_tronco | false | D: sin giro | evidencia | FALSE | — |
+
+### Otros campos
+- Fase `principal`, posición `de_pie`, recurso `silla`, dosis: coherentes.
+- Ilustración: corregida por Claude (antes el pie de la pierna elevada quedaba apoyado sobre el asiento; ahora la rodilla sube y el pie queda en el aire). Coincide con la fuente (evidencia).
+- Exclusiones del catálogo v1: ninguna.
+- `fuente.especifica_de`: no tiene. La fuente no declara un grupo más concreto que «prevención de caídas»; ver DS-381.
+
+### Incidencias
+- `flexion_amplia_cadera: true` con evidencia I: falta la nota `[conservadora]` (R2.4). Ver DS-382.
+- La nota actual de `agarre` ya está en la forma de R2.4; la de `flexion_amplia_cadera` no.
+
+### Propuesta de cambios
+- `exigencias.flexion_amplia_cadera`: se mantiene `true`, pero se añade la nota `[conservadora]` (R2.4).
+- `fuente.consultado`: 2026-10-24.
+
+### Decisión pendiente del desarrollador
+LISTO PARA APROBACIÓN DOCUMENTAL, una vez aplicados los cambios propuestos.
+
+---
+
+## 112. toalla-entre-rodillas-sentado
+
+### Identificación
+- ID: `toalla-entre-rodillas-sentado`
+- Nombre: Apretar una toalla entre las rodillas
+- Fuente: Hospital Clínico San Carlos, «Guía práctica de recomendaciones para pacientes: Ejercicios de Rodilla», «Add sentado», p. 6 (F1)
+- Población destinataria de la fuente (si la declara): pacientes de rodilla de la Unidad de Fisioterapia; `especifica_de` actual: no tiene.
+- Estado inicial: `borrador`; sin auditar
+- Resultado documental: fiel, con una adaptación cuya redacción es inexacta (ver DS-380)
+
+### Evidencia de la fuente
+- Ubicación exacta: F1, «Add sentado», p. 6 (apartado 112).
+- Pasos originales relevantes, resumidos con palabras propias: sentado en silla, rodillas a 90°, plantas de los pies pegadas al suelo; pelota de tenis o toalla enrollada entre las rodillas; apretar las dos rodillas y mantener 3 a 5 segundos.
+- Coincidencias (C1): posición, movimiento, tiempo de apriete.
+- Diferencias (C3) y adaptaciones documentadas (C2): C3, la fuente no da repeticiones; HealthMove usa «10 veces». Ya está en `adaptaciones`, pero la redacción dice «La fuente indica el tiempo de apriete pero no las repeticiones; se usan 10». **La evidencia dice que la regla general de F1 (p. 3) sí da repeticiones** («empezar con 5 repeticiones e ir subiendo hasta 3 veces más»). La adaptación es inexacta en el fondo: la fuente sí da una pauta de repeticiones, aunque sea general. Ver DS-380.
+- Adaptaciones que deben documentarse: la redacción de la adaptación debe corregirse (DS-380).
+- Hechos, inferencias e incertidumbres: D (texto y foto), las dos rodillas aprietan la toalla o la pelota; las manos sobre los muslos. D (texto), las rodillas a 90°.
+- Limitaciones de la verificación: la evidencia no describe si la foto muestra las manos cerradas o abiertas; dice «manos sobre los muslos».
+
+### Auditoría de exigencias
+
+| Exigencia | Etiqueta actual | Evidencia (D/I/N) y fundamento | Regla | Resultado propuesto | Motivo |
+|---|---|---|---|---|---|
+| equilibrio_sin_apoyo | false | D: sentado | evidencia | FALSE | Solo se define de pie |
+| una_pierna | false | D: sentado | evidencia | FALSE | — |
+| sentarse_levantarse | false | D: sentado | evidencia | FALSE | — |
+| impacto | false | D: contracción estática | evidencia | FALSE | — |
+| carga_externa | false | D: sin peso | evidencia | FALSE | — |
+| esfuerzo_cardio | false | D: contracción estática | evidencia | FALSE | — |
+| brazo_sobre_hombro | false | D (texto y foto): las manos están sobre los muslos, por debajo del hombro | evidencia | FALSE | — |
+| mano_detras | false | D (foto): las manos están delante, sobre los muslos | evidencia | FALSE | — |
+| ambos_brazos | false | D (texto): las manos no intervienen en el apriete | evidencia | FALSE | DG-4 / Q1 (P9): las manos reposan |
+| agarre | false | D (texto y foto): las manos están sobre los muslos; no se pide cerrar la mano | evidencia | FALSE | R7.4 / Q2 (P10): contacto con el propio cuerpo, no apoyo |
+| peso_en_manos | false | D: sentado; las manos no cargan el peso | evidencia | FALSE | R7.3 |
+| flexion_profunda_rodilla | false | D (texto): rodillas a 90°, no más | evidencia | FALSE | — |
+| flexion_amplia_cadera | false | D: sentado | evidencia | FALSE | — |
+| puntillas_talones | false | D: sentado | evidencia | FALSE | Solo se define de pie |
+| inclinacion_tronco | false | D (texto): sentado recto | evidencia | FALSE | — |
+| rotacion_tronco | false | D: sin giro | evidencia | FALSE | — |
+
+### Otros campos
+- Fase `principal`, posición `sentado`, recursos `silla` y `toalla`, dosis: coherentes.
+- Ilustración: coincide (evidencia).
+- Exclusiones del catálogo v1: ninguna.
+- `fuente.especifica_de`: no tiene. La fuente es de pacientes de rodilla; ver DS-381.
+
+### Incidencias
+- La adaptación actual dice que la fuente no da repeticiones; la evidencia dice que la regla general de F1 sí las da. Ver DS-380.
+
+### Propuesta de cambios
+- `adaptaciones`: corregir la redacción para reflejar que la fuente da una pauta general de repeticiones (5, hasta 3 veces más) y que HealthMove usa 10 (DS-380).
+- `fuente.consultado`: 2026-10-24.
+
+### Decisión pendiente del desarrollador
+LISTO PARA APROBACIÓN DOCUMENTAL, una vez aplicados los cambios propuestos.
+
+---
+
+## 113. estiramiento-soleo-pared
+
+### Identificación
+- ID: `estiramiento-soleo-pared`
+- Nombre: Estirar la pantorrilla con la rodilla doblada
+- Fuente: Hospital Clínico San Carlos, «Guía práctica de recomendaciones para pacientes: Ejercicios de Rodilla», «Tríceps sural, b) sóleo», p. 14 (F1)
+- Población destinataria de la fuente (si la declara): pacientes de rodilla de la Unidad de Fisioterapia; `especifica_de` actual: no tiene.
+- Estado inicial: `borrador`; sin auditar
+- Resultado documental: fiel, con una adaptación ya documentada y una diferencia entre texto e imagen de la fuente (ver DS-383)
+
+### Evidencia de la fuente
+- Ubicación exacta: F1, «Tríceps sural, b) sóleo», p. 14 (apartado 113).
+- Pasos originales relevantes, resumidos con palabras propias: de pie, la pierna a estirar retrasada y «ligeramente en flexión»; la otra delante con la rodilla doblada, como dando un paso largo; sin despegar el talón de detrás, llevar el peso a la pierna de delante. Regla general: 30 a 60 s, 5 veces.
+- Coincidencias (C1): posición, movimiento, pierna retrasada con la rodilla algo doblada.
+- Diferencias (C3) y adaptaciones documentadas (C2): C3, la guía propone 5 veces; HealthMove usa 2. Ya está en `adaptaciones`.
+- Adaptaciones que deben documentarse: ninguna nueva.
+- Hechos, inferencias e incertidumbres: D (texto), la pierna retrasada con la rodilla algo doblada. D (foto), las dos manos apoyadas en la pared. **El texto no menciona la pared ni las manos**; la foto sí. Ver DS-383.
+- Limitaciones de la verificación: la evidencia no dice si la foto muestra las manos cerradas o abiertas; dice «las dos manos apoyadas en la pared».
+
+### Auditoría de exigencias
+
+| Exigencia | Etiqueta actual | Evidencia (D/I/N) y fundamento | Regla | Resultado propuesto | Motivo |
+|---|---|---|---|---|---|
+| equilibrio_sin_apoyo | false | D (foto): las dos manos en la pared | evidencia | FALSE | §4: se sujeta a algo |
+| una_pierna | false | D (texto): las dos piernas en el suelo, una delante y otra detrás | evidencia | FALSE | — |
+| sentarse_levantarse | false | D: de pie | evidencia | FALSE | — |
+| impacto | false | D: estiramiento | evidencia | FALSE | — |
+| carga_externa | false | D: sin peso | evidencia | FALSE | — |
+| esfuerzo_cardio | false | D: estiramiento | evidencia | FALSE | — |
+| brazo_sobre_hombro | false | D (foto): las manos están en la pared, por debajo del hombro | evidencia | FALSE | — |
+| mano_detras | false | D (foto): las manos están delante, en la pared | evidencia | FALSE | — |
+| ambos_brazos | true | D (foto): las dos manos apoyadas en la pared | evidencia | TRUE | Q1 (P9): apoyo bilateral |
+| agarre | false | I (foto): las manos se apoyan; no consta prensión | conservadora | TRUE | Q2 (P10): contacto sin prensión, `true` conservador con nota |
+| peso_en_manos | false | D: de pie; las manos se apoyan, no cargan el peso | evidencia | FALSE | R7.3 |
+| flexion_profunda_rodilla | false | D (texto): la pierna de delante doblada, sin que conste que pase de 90° | evidencia | FALSE | — |
+| flexion_amplia_cadera | false | D (texto): paso largo, sin que el muslo se acerque al tronco | evidencia | FALSE | — |
+| puntillas_talones | false | D (texto): «sin despegar el talón de detrás» | evidencia | FALSE | — |
+| inclinacion_tronco | false | D (texto): de pie, sin inclinación | evidencia | FALSE | — |
+| rotacion_tronco | false | D: sin giro | evidencia | FALSE | — |
+
+### Otros campos
+- Fase `calma`, posición `de_pie`, recurso `pared`, dosis: coherentes.
+- Ilustración: coincide (evidencia).
+- Exclusiones del catálogo v1: ninguna.
+- `fuente.especifica_de`: no tiene. La fuente es de pacientes de rodilla; ver DS-381.
+- `variante_de`: `estiramiento-gemelo-pared` (no auditado en este lote).
+
+### Incidencias
+- `agarre: false` con las manos apoyadas en la pared: falta la nota `[conservadora]` (R2.4). Ver DS-382.
+- El texto de la fuente no menciona la pared ni las manos; la foto sí. La instrucción de HealthMove («Apoya las manos en la pared») es una adaptación que no está documentada. Ver DS-383.
+
+### Propuesta de cambios
+- `exigencias.agarre`: se mantiene `true`, pero se añade la nota `[conservadora]` (R2.4).
+- `adaptaciones`: añadir que la fuente no menciona la pared ni las manos en el texto, y que HealthMove las apoya en la pared siguiendo la foto (DS-383).
+- `fuente.consultado`: 2026-10-24.
+
+### Decisión pendiente del desarrollador
+LISTO PARA APROBACIÓN DOCUMENTAL, una vez aplicados los cambios propuestos.
+
+---
+
+## 114. estiramiento-lateral-muslo-pared
+
+### Identificación
+- ID: `estiramiento-lateral-muslo-pared`
+- Nombre: Estirar el lateral del muslo en la pared
+- Fuente: Hospital Clínico San Carlos, «Guía práctica de recomendaciones para pacientes: Ejercicios de Rodilla», «Tensor de la Fascia Lata», pp. 13-14 (F1)
+- Población destinataria de la fuente (si la declara): pacientes de rodilla de la Unidad de Fisioterapia; `especifica_de` actual: no tiene.
+- Estado inicial: `borrador`; sin auditar
+- Resultado documental: fiel, con una adaptación ya documentada y una ilustración corregida
+
+### Evidencia de la fuente
+- Ubicación exacta: F1, «Tensor de la Fascia Lata», pp. 13-14 (apartado 114).
+- Pasos originales relevantes, resumidos con palabras propias: de pie, apoyado en una pared; llevar la pierna a estirar por detrás de la otra y poner los pies en paralelo; inclinarse dejando caer la cadera hacia la pared. Para más estiramiento, elevar e inclinar el brazo del lado que se estira, formando una «C» con el cuerpo.
+- Coincidencias (C1): posición, movimiento, inclinación del tronco.
+- Diferencias (C3) y adaptaciones documentadas (C2): C3, la guía propone 5 veces y subir el brazo para más intensidad; HealthMove usa 2 y sin subir el brazo. Ya está en `adaptaciones`.
+- Adaptaciones que deben documentarse: ninguna nueva.
+- Hechos, inferencias e incertidumbres: D (texto y fotos), una mano apoyada en la pared a la altura del hombro; la cadera cae hacia la pared y el tronco se inclina hacia el lado. D (foto 2), la versión con el brazo por encima de la cabeza.
+- Limitaciones de la verificación: la evidencia no dice si la foto 1 muestra la mano cerrada o abierta; dice «una mano apoyada en la pared».
+
+### Auditoría de exigencias
+
+| Exigencia | Etiqueta actual | Evidencia (D/I/N) y fundamento | Regla | Resultado propuesto | Motivo |
+|---|---|---|---|---|---|
+| equilibrio_sin_apoyo | false | D (texto y foto): una mano en la pared | evidencia | FALSE | §4: se sujeta a algo |
+| una_pierna | false | D (texto): los pies en paralelo, las piernas cruzadas | evidencia | FALSE | — |
+| sentarse_levantarse | false | D: de pie | evidencia | FALSE | — |
+| impacto | false | D: estiramiento | evidencia | FALSE | — |
+| carga_externa | false | D: sin peso | evidencia | FALSE | — |
+| esfuerzo_cardio | false | D: estiramiento | evidencia | FALSE | — |
+| brazo_sobre_hombro | false | D (foto 1): la mano está en la pared a la altura del hombro, no por encima | evidencia | FALSE | — |
+| mano_detras | false | D (foto 1): la mano está delante, en la pared | evidencia | FALSE | — |
+| ambos_brazos | false | D (texto): una mano se apoya; la otra no interviene | evidencia | FALSE | DG-4 / Q1 (P9): una mano en apoyo, la otra en reposo |
+| agarre | false | I (foto 1): la mano se apoya; no consta prensión | conservadora | TRUE | Q2 (P10): contacto sin prensión, `true` conservador con nota |
+| peso_en_manos | false | D: de pie; la mano se apoya, no carga el peso | evidencia | FALSE | R7.3 |
+| flexion_profunda_rodilla | false | D (texto): las piernas cruzadas, sin que consten dobladas más de 90° | evidencia | FALSE | — |
+| flexion_amplia_cadera | false | D (texto): las piernas cruzadas, sin que el muslo se acerque al tronco | evidencia | FALSE | — |
+| puntillas_talones | false | D: los pies en el suelo | evidencia | FALSE | — |
+| inclinacion_tronco | true | D (texto y fotos): la cadera cae hacia la pared y el tronco se inclina hacia el lado | evidencia | TRUE | §4: inclinar la espalda hacia un lado |
+| rotacion_tronco | false | D: sin giro | evidencia | FALSE | — |
+
+### Otros campos
+- Fase `calma`, posición `de_pie`, recurso `pared`, dosis: coherentes.
+- Ilustración: corregida por Claude (antes la mano en la pared quedaba a la altura de la cabeza, por encima del hombro, cuando `brazo_sobre_hombro` es `false`; ahora queda por debajo del hombro, como en la foto 1). Coincide con la fuente (evidencia).
+- Exclusiones del catálogo v1: ninguna.
+- `fuente.especifica_de`: no tiene. La fuente es de pacientes de rodilla; ver DS-381.
+
+### Incidencias
+- `agarre: false` con la mano apoyada en la pared: falta la nota `[conservadora]` (R2.4). Ver DS-382.
+
+### Propuesta de cambios
+- `exigencias.agarre`: se mantiene `true`, pero se añade la nota `[conservadora]` (R2.4).
+- `fuente.consultado`: 2026-10-24.
+
+### Decisión pendiente del desarrollador
+LISTO PARA APROBACIÓN DOCUMENTAL, una vez aplicados los cambios propuestos.
+
+---
+
+## 115. psoas-borde-cama
+
+### Identificación
+- ID: `psoas-borde-cama`
+- Nombre: Estirar la cadera con la pierna fuera de la cama
+- Fuente: Hospital Clínico San Carlos, «Guía práctica de recomendaciones para pacientes: Ejercicios de Rodilla», «Psoas», p. 16 (F1)
+- Población destinataria de la fuente (si la declara): pacientes de rodilla de la Unidad de Fisioterapia; `especifica_de` actual: no tiene.
+- Estado inicial: `borrador`; sin auditar
+- Resultado documental: fiel, con una adaptación ya documentada y una nota de HealthMove que no está en la fuente (ver DS-384)
+
+### Evidencia de la fuente
+- Ubicación exacta: F1, «Psoas», p. 16 (apartado 115).
+- Pasos originales relevantes, resumidos con palabras propias: boca arriba, una pierna flexionada llevando la rodilla hacia el pecho; sacar por fuera de la cama la pierna a estirar y dejarla caer por su propio peso. El texto no dice si se sujeta la rodilla.
+- Coincidencias (C1): posición, movimiento, pierna fuera de la cama.
+- Diferencias (C3) y adaptaciones documentadas (C2): C3, la guía propone 5 veces; HealthMove usa 2. Ya está en `adaptaciones`.
+- Adaptaciones que deben documentarse: ninguna nueva.
+- Hechos, inferencias e incertidumbres: D (foto), una rodilla llevada al pecho sujeta con las manos; la otra pierna cuelga por fuera. D (foto), la rodilla de la pierna doblada queda muy flexionada y el muslo pegado al tronco. **El texto no dice si se sujeta la rodilla**; la foto sí. Ver DS-384.
+- Limitaciones de la verificación: la evidencia no describe si la foto muestra las manos cerradas o abiertas; dice «sujeta con las manos».
+
+### Auditoría de exigencias
+
+| Exigencia | Etiqueta actual | Evidencia (D/I/N) y fundamento | Regla | Resultado propuesto | Motivo |
+|---|---|---|---|---|---|
+| equilibrio_sin_apoyo | false | D: tumbado | evidencia | FALSE | Solo se define de pie |
+| una_pierna | false | D: tumbado | evidencia | FALSE | — |
+| sentarse_levantarse | false | D: tumbado | evidencia | FALSE | — |
+| impacto | false | D: estiramiento | evidencia | FALSE | — |
+| carga_externa | false | D: sin peso | evidencia | FALSE | — |
+| esfuerzo_cardio | false | D: estiramiento | evidencia | FALSE | — |
+| brazo_sobre_hombro | false | D (foto): las manos sujetan la rodilla, por debajo del hombro | evidencia | FALSE | — |
+| mano_detras | false | D (foto): las manos están delante, en la rodilla | evidencia | FALSE | — |
+| ambos_brazos | false | D (foto): las dos manos sujetan la rodilla | evidencia | TRUE | Q1 (P9): uso simultáneo de los dos brazos |
+| agarre | true | D (foto): las manos sujetan la rodilla | evidencia | TRUE | §4: sujetar |
+| peso_en_manos | false | D: tumbado; las manos no cargan el peso | evidencia | FALSE | R7.3 |
+| flexion_profunda_rodilla | true | D (foto): la rodilla de la pierna doblada queda muy flexionada | evidencia | TRUE | §4: rodilla más de 90° |
+| flexion_amplia_cadera | true | D (foto): el muslo queda pegado al tronco | evidencia | TRUE | §4: muslo más cerca del tronco que al estar sentado |
+| puntillas_talones | false | D: tumbado | evidencia | FALSE | Solo se define de pie |
+| inclinacion_tronco | false | D: espalda en la cama | evidencia | FALSE | — |
+| rotacion_tronco | false | D: sin giro | evidencia | FALSE | — |
+
+### Otros campos
+- Fase `calma`, posición `tumbado`, recurso `cama`, dosis: coherentes.
+- Ilustración: coincide (evidencia); las manos no se distinguen.
+- Exclusiones del catálogo v1: ninguna.
+- `fuente.especifica_de`: no tiene. La fuente es de pacientes de rodilla; ver DS-381.
+- Nota actual: «Riesgo de caer de la cama: el cuerpo debe quedar bien apoyado y solo la pierna fuera». **No está en la fuente**; la ha añadido HealthMove. Ver DS-384.
+
+### Incidencias
+- `ambos_brazos: false` con las dos manos sujetando la rodilla en la foto: la etiqueta actual es `false`, pero la foto muestra las dos manos. Ver DS-385.
+- Nota de HealthMove que no está en la fuente: ver DS-384.
+
+### Propuesta de cambios
+- `exigencias.ambos_brazos`: `false` → `true` (D, foto) (DS-385).
+- `notas_etiquetado`: marcar la observación como de HealthMove, no de la guía (DS-384).
+- `fuente.consultado`: 2026-10-24.
+
+### Decisión pendiente del desarrollador
+REQUIERE CORRECCIONES (DS-385: `ambos_brazos` debe pasar a `true` con evidencia D; DS-384: la nota debe marcarse como de HealthMove).
+
+---
+
+## 116. extension-cadera-boca-abajo
+
+### Identificación
+- ID: `extension-cadera-boca-abajo`
+- Nombre: Levantar la pierna estirada boca abajo
+- Fuente: Hospital Clínico San Carlos, «Guía práctica de recomendaciones para pacientes: Ejercicios de Rodilla», «Extensores de cadera tumbado», p. 9 (F1)
+- Población destinataria de la fuente (si la declara): pacientes de rodilla de la Unidad de Fisioterapia; `especifica_de` actual: no tiene.
+- Estado inicial: `borrador`; sin auditar
+- Resultado documental: fiel, con una adaptación ya documentada y una nota conservadora ya en la forma de R2.4
+
+### Evidencia de la fuente
+- Ubicación exacta: F1, «Extensores de cadera tumbado», p. 9 (apartado 116).
+- Pasos originales relevantes, resumidos con palabras propias: boca abajo, con almohada o cojín bajo el ombligo, «Frente apoyada sobre las manos»; levantar toda la pierna sin doblarla; mantener 3 segundos y volver.
+- Coincidencias (C1): posición, movimiento, tiempo de mantenimiento.
+- Diferencias (C3) y adaptaciones documentadas (C2): C3, la guía usa una camilla; HealthMove usa el suelo. C3, la almohada se omite. Ya está en `adaptaciones`.
+- Adaptaciones que deben documentarse: ninguna nueva.
+- Hechos, inferencias e incertidumbres: D (texto y fotos), la frente sobre las manos, los codos doblados hacia los lados, una pierna estirada elevada. I (fotos), las manos quedan bajo la frente, a la altura de la cabeza; tumbado no se puede comparar bien con la altura del hombro (CN-1).
+- Limitaciones de la verificación: la evidencia no describe si las fotos muestran las manos cerradas o abiertas; dice «manos bajo la frente».
+
+### Auditoría de exigencias
+
+| Exigencia | Etiqueta actual | Evidencia (D/I/N) y fundamento | Regla | Resultado propuesto | Motivo |
+|---|---|---|---|---|---|
+| equilibrio_sin_apoyo | false | D: tumbado | evidencia | FALSE | Solo se define de pie |
+| una_pierna | false | D: tumbado | evidencia | FALSE | — |
+| sentarse_levantarse | false | D: tumbado | evidencia | FALSE | — |
+| impacto | false | D: movimiento lento | evidencia | FALSE | — |
+| carga_externa | false | D: sin peso | evidencia | FALSE | — |
+| esfuerzo_cardio | false | D: movimiento local | evidencia | FALSE | — |
+| brazo_sobre_hombro | true | I (fotos): las manos quedan bajo la frente, a la altura de la cabeza; tumbado no se puede comparar bien con la altura del hombro | conservadora | TRUE | CN-1 (P25): ante la duda, `true` conservador con nota |
+| mano_detras | false | D (fotos): las manos están delante, bajo la frente | evidencia | FALSE | — |
+| ambos_brazos | false | D (texto): las manos no intervienen en el movimiento | evidencia | FALSE | DG-4 / Q1 (P9): las manos reposan |
+| agarre | false | D (texto y fotos): las manos están bajo la frente; no se pide cerrar la mano | evidencia | FALSE | R7.4 / Q2 (P10): contacto con el propio cuerpo, no apoyo |
+| peso_en_manos | false | D: tumbado; las manos no cargan el peso | evidencia | FALSE | R7.3 |
+| flexion_profunda_rodilla | false | D (texto): la pierna se levanta sin doblarla | evidencia | FALSE | — |
+| flexion_amplia_cadera | false | D: tumbado | evidencia | FALSE | — |
+| puntillas_talones | false | D: tumbado | evidencia | FALSE | Solo se define de pie |
+| inclinacion_tronco | false | D: espalda en el suelo | evidencia | FALSE | — |
+| rotacion_tronco | false | D: sin giro | evidencia | FALSE | — |
+
+### Otros campos
+- Fase `principal`, posición `suelo`, recursos: ninguno, dosis: coherentes.
+- Ilustración: coincide (evidencia); los brazos no se distinguen.
+- Exclusiones del catálogo v1: ninguna.
+- `fuente.especifica_de`: no tiene. La fuente es de pacientes de rodilla; ver DS-381.
+
+### Incidencias
+- Ninguna de etiquetas. La nota de `brazo_sobre_hombro` ya está en la forma de R2.4.
+
+### Propuesta de cambios
+- `fuente.consultado`: 2026-10-24.
+
+### Decisión pendiente del desarrollador
+LISTO PARA APROBACIÓN DOCUMENTAL, una vez aplicados los cambios propuestos.
+
+---
+
+## 117. cuadriceps-boca-abajo-toalla
+
+### Identificación
+- ID: `cuadriceps-boca-abajo-toalla`
+- Nombre: Estirar el muslo boca abajo con una toalla
+- Fuente: Hospital Clínico San Carlos, «Guía práctica de recomendaciones para pacientes: Ejercicios de Rodilla», «Cuádriceps, a) tumbado», p. 13 (F1)
+- Población destinataria de la fuente (si la declara): pacientes de rodilla de la Unidad de Fisioterapia; `especifica_de` actual: no tiene.
+- Estado inicial: `borrador`; sin auditar
+- Resultado documental: fiel, con una adaptación ya documentada y una diferencia entre texto e imagen de la fuente (ver DS-386)
+
+### Evidencia de la fuente
+- Ubicación exacta: F1, «Cuádriceps, a) tumbado», p. 13 (apartado 117).
+- Pasos originales relevantes, resumidos con palabras propias: boca abajo, llevar el talón al glúteo; con la mano del mismo lado, coger el pie o el tobillo; si no llega, usar una toalla. Regla general: 30 a 60 s, 5 veces.
+- Coincidencias (C1): posición, movimiento, mano del mismo lado.
+- Diferencias (C3) y adaptaciones documentadas (C2): C3, la guía propone 5 veces; HealthMove usa 2. Ya está en `adaptaciones`.
+- Adaptaciones que deben documentarse: ninguna nueva.
+- Hechos, inferencias e incertidumbres: D (texto y fotos), la mano del mismo lado sujeta el tobillo por detrás, con la rodilla muy doblada. I (fotos), la mano va hacia atrás, por detrás del cuerpo, hasta el pie.
+- Limitaciones de la verificación: la evidencia no describe si las fotos muestran las manos cerradas o abiertas; dice «sujeta el tobillo».
+
+### Auditoría de exigencias
+
+| Exigencia | Etiqueta actual | Evidencia (D/I/N) y fundamento | Regla | Resultado propuesto | Motivo |
+|---|---|---|---|---|---|
+| equilibrio_sin_apoyo | false | D: tumbado | evidencia | FALSE | Solo se define de pie |
+| una_pierna | false | D: tumbado | evidencia | FALSE | — |
+| sentarse_levantarse | false | D: tumbado | evidencia | FALSE | — |
+| impacto | false | D: estiramiento | evidencia | FALSE | — |
+| carga_externa | false | D: sin peso | evidencia | FALSE | — |
+| esfuerzo_cardio | false | D: estiramiento | evidencia | FALSE | — |
+| brazo_sobre_hombro | false | D (texto y fotos): la mano sujeta el tobillo, por debajo del hombro | evidencia | FALSE | — |
+| mano_detras | true | D (texto y fotos): la mano va hacia atrás, por detrás del cuerpo, hasta el pie | evidencia | TRUE | §4: mano detrás de la espalda |
+| ambos_brazos | false | D (texto): una mano sujeta; la otra no interviene | evidencia | FALSE | DG-4 / Q1 (P9): una mano trabaja, la otra en reposo |
+| agarre | true | D (texto y fotos): la mano sujeta el tobillo | evidencia | TRUE | §4: sujetar |
+| peso_en_manos | false | D: tumbado; la mano no carga el peso | evidencia | FALSE | R7.3 |
+| flexion_profunda_rodilla | true | D (texto y fotos): la rodilla queda muy doblada | evidencia | TRUE | §4: rodilla más de 90° |
+| flexion_amplia_cadera | false | D: tumbado | evidencia | FALSE | — |
+| puntillas_talones | false | D: tumbado | evidencia | FALSE | Solo se define de pie |
+| inclinacion_tronco | false | D: espalda en el suelo | evidencia | FALSE | — |
+| rotacion_tronco | false | D: sin giro | evidencia | FALSE | — |
+
+### Otros campos
+- Fase `calma`, posición `suelo`, recurso `toalla`, dosis: coherentes.
+- Ilustración: coincide (evidencia).
+- Exclusiones del catálogo v1: ninguna.
+- `fuente.especifica_de`: no tiene. La fuente es de pacientes de rodilla; ver DS-381.
+
+### Incidencias
+- El texto de la fuente dice «coger el pie o el tobillo»; la instrucción de HealthMove dice «coge el pie o el tobillo con la mano de ese lado». Coincide. No hay incidencia de etiquetas.
+
+### Propuesta de cambios
+- `fuente.consultado`: 2026-10-24.
+
+### Decisión pendiente del desarrollador
+LISTO PARA APROBACIÓN DOCUMENTAL, una vez aplicados los cambios propuestos.
+
+---
+
+## Hallazgos DS
+
+### DS-380 · La adaptación de `toalla-entre-rodillas-sentado` dice que la fuente no da repeticiones, pero la regla general de F1 sí las da
+- **Ubicación exacta:** `catalogo-lote15`, ejercicio `toalla-entre-rodillas-sentado`, campo `adaptaciones`; `evidencia-lote-15`, apartado 112 y «F1, datos comunes (D, p. 3)».
+- **Evidencia:** la adaptación actual dice «La fuente indica el tiempo de apriete pero no las repeticiones; se usan 10». La evidencia de Claude dice: «Regla general: en los de movilidad, empezar con 5 repeticiones e ir subiendo hasta 3 veces más si no hay fatiga ni dolor».
+- **Explicación:** la adaptación es inexacta en el fondo. La fuente sí da una pauta de repeticiones, aunque sea general y no específica del ejercicio. La adaptación correcta sería: «La fuente da una pauta general de 5 repeticiones, hasta 3 veces más; aquí se usan 10».
+- **Consecuencia potencial:** el usuario lee en «Cambios respecto a la fuente» una afirmación que no es cierta. Es un C3 (diferencia sin documentar correctamente) que debería ser C2 (adaptación documentada con fundamento verificable, R3.2).
+- **Nivel de certeza:** alta (la evidencia de Claude es explícita).
+- **Recomendación:** corregir la redacción de la adaptación para reflejar la pauta general de F1.
+- **Prueba o evidencia que permitiría confirmarlo:** releer la p. 3 de F1 y comprobar que la regla general se aplica a este ejercicio.
+- **¿Requiere decisión humana?:** no para la corrección de la redacción (es una aclaración hacia la fuente, R3.1); sí para aprobar la adaptación nueva si se cambia el número de repeticiones (no es el caso: se mantiene 10).
+
+### DS-381 · Criterio de nombres para `fuente.especifica_de` en las fuentes de rodilla
+- **Ubicación exacta:** `catalogo-lote15`, ejercicios 112 a 117 (F1) y 110 (F2); `evidencia-lote-15`, apartados 110 a 117.
+- **Evidencia:** la evidencia dice para F1: «Población: pacientes de rodilla de la Unidad de Fisioterapia (no hay frase de población más concreta que el título)». Para F2: «el folleto es de ejercicios para la rodilla; no declara un grupo más concreto. `especifica_de` actual: "rodilla"». Para F3: «el folleto es de prevención de caídas; no declara un grupo más concreto».
+- **Explicación:** R8.1 dice que `especifica_de` solo se rellena con la población que la fuente declara, con un nombre breve coherente con los existentes. En F1 y F2, la fuente no declara una población con una frase; el título es «Ejercicios de Rodilla» o «10 ejercicios para la rodilla». En F3, el título es «Prevenir las caídas es posible». No está claro si el título cuenta como «población declarada» o si es una inferencia. El caso de F2 ya tiene `especifica_de: "rodilla"`; el de F1 no tiene; el de F3 no tiene. Es un caso de aplicación de R8.1 que el protocolo no resuelve con claridad.
+- **Consecuencia potencial:** si el título cuenta como población declarada, F1 debería llevar «rodilla» (o similar) y F3 «prevención de caídas» (o similar). Si no cuenta, F2 debería quitar «rodilla». La inconsistencia actual (F2 sí, F1 no) no tiene justificación documentada.
+- **Nivel de certeza:** media (la evidencia es clara sobre lo que dicen las fuentes; lo que no está claro es el criterio).
+- **Recomendación:** registrar como CN (R1.4) o consultar al desarrollador. No propongo un valor: la decisión es suya.
+- **Prueba o evidencia que permitiría confirmarlo:** revisar si el protocolo o el registro tienen un criterio previo sobre «título como población». No lo he encontrado en los documentos entregados.
+- **¿Requiere decisión humana?:** sí. Es un CN de aplicación de R8.1.
+
+### DS-382 · Notas `[conservadora]` que faltan en varios ejercicios del lote
+- **Ubicación exacta:** `catalogo-lote15`, ejercicios 110 (`flexion_amplia_cadera`), 111 (`flexion_amplia_cadera`), 113 (`agarre`), 114 (`agarre`).
+- **Evidencia:** R2.4: «Se anota en `notas_etiquetado` … con esta forma: `[conservadora] <exigencia>: <motivo>. Se cerraría con: <evidencia que falta>.`». En 110 y 111, `flexion_amplia_cadera` es `true` con evidencia I (la evidencia de Claude dice «I (dibujo 2)» y «I (texto)»). En 113 y 114, `agarre` es `false` en el catálogo, pero la evidencia de Claude dice que las manos se apoyan en la pared (I, sin prensión), lo que según Q2 (P10) debería ser `true` conservador con nota.
+- **Explicación:** hay dos problemas distintos agrupados aquí:
+  1. En 110 y 111, `flexion_amplia_cadera` es `true` con evidencia I, pero no tiene nota `[conservadora]`. R2.4 lo exige.
+  2. En 113 y 114, `agarre` es `false` en el catálogo, pero la evidencia de Claude describe las manos apoyadas en la pared sin prensión. Según Q2 (P10), eso es `true` conservador con nota. La etiqueta actual es `false`, lo que contradice Q2.
+- **Consecuencia potencial:** en 110 y 111, falta la trazabilidad de la incertidumbre. En 113 y 114, la etiqueta `agarre: false` no aplica Q2 y podría dejar pasar el ejercicio a perfiles con dificultad para cerrar la mano.
+- **Nivel de certeza:** alta para 110 y 111 (R2.4 es explícita). Alta para 113 y 114 (Q2 es explícita y la evidencia de Claude describe el apoyo).
+- **Recomendación:** añadir las notas `[conservadora]` en 110 y 111; cambiar `agarre` a `true` conservador con nota en 113 y 114.
+- **Prueba o evidencia que permitiría confirmarlo:** revisar las notas actuales en el catálogo (el bloque `catalogo-lote15` las muestra vacías en 110, 111, 113 y 114 para `agarre`).
+- **¿Requiere decisión humana?:** no para las notas (R2.4 es una regla aprobada); sí para el cambio de `agarre` en 113 y 114 si se considera que Q2 no se aplica (no veo motivo para no aplicarla).
+
+### DS-383 · `estiramiento-soleo-pared`: la instrucción de apoyar las manos en la pared no está documentada como adaptación
+- **Ubicación exacta:** `catalogo-lote15`, ejercicio `estiramiento-soleo-pared`, campo `instrucciones` y `adaptaciones`; `evidencia-lote-15`, apartado 113.
+- **Evidencia:** la evidencia dice: «Foto (D): de frente a una pared, las dos manos apoyadas en la pared, la pierna de atrás con la rodilla algo doblada. El texto no menciona la pared ni las manos». La instrucción de HealthMove dice: «Apoya las manos en la pared».
+- **Explicación:** la fuente no menciona la pared ni las manos en el texto; solo la foto las muestra. HealthMove añade la instrucción de apoyar las manos. Según R3.1, la ejecución de HealthMove debe ser una de las que permite la fuente. La foto muestra el apoyo, pero el texto no lo pide. Es un caso de «la imagen fija el rango» (R3.1) o de adaptación nueva. No está documentado en `adaptaciones`.
+- **Consecuencia potencial:** el usuario lee una instrucción que no está en el texto de la fuente y no sabe que es una adaptación. Es un C3 (diferencia sin documentar).
+- **Nivel de certeza:** alta (la evidencia es explícita).
+- **Recomendación:** documentar en `adaptaciones` que la fuente no menciona la pared ni las manos en el texto, y que HealthMove las apoya en la pared siguiendo la foto. Si se considera que la foto fija el rango (R3.1), es una aclaración; si no, es una adaptación nueva que requiere aprobación (Q5).
+- **Prueba o evidencia que permitiría confirmarlo:** releer el texto completo de F1, p. 14, para ver si en algún momento menciona la pared o las manos.
+- **¿Requiere decisión humana?:** sí, si se considera adaptación nueva (Q5). No, si se considera aclaración hacia la fuente.
+
+### DS-384 · `psoas-borde-cama`: la nota sobre el riesgo de caer de la cama no está en la fuente
+- **Ubicación exacta:** `catalogo-lote15`, ejercicio `psoas-borde-cama`, campo `notas_etiquetado`; `evidencia-lote-15`, apartado 115.
+- **Evidencia:** la nota actual dice: «Riesgo de caer de la cama: el cuerpo debe quedar bien apoyado y solo la pierna fuera». La evidencia de Claude dice: «nota de HealthMove sobre el riesgo de caer de la cama (no está en la fuente; nota no visible)».
+- **Explicación:** la nota es un consejo de seguridad de HealthMove (clase 2 o 3 de DG-6), no de la fuente. Según R6.3, si HealthMove añade un consejo de clase 2 o 3 que la fuente no contiene, es una diferencia con la fuente y se documenta como adaptación (C2), nunca se atribuye a la fuente. La nota actual no está marcada como de HealthMove.
+- **Consecuencia potencial:** la nota se puede leer como si viniera de la fuente. Es un C3 (diferencia sin documentar).
+- **Nivel de certeza:** alta (la evidencia es explícita).
+- **Recomendación:** marcar la nota como de HealthMove, no de la guía. Si se quiere, moverla a `adaptaciones` (R6.3) o dejarla en `notas_etiquetado` con la marca.
+- **Prueba o evidencia que permitiría confirmarlo:** releer F1, p. 16, para ver si menciona el riesgo de caer.
+- **¿Requiere decisión humana?:** no para marcar la nota (R6.3 es una regla aprobada); sí para decidir si se mueve a `adaptaciones` o se queda en `notas_etiquetado`.
+
+### DS-385 · `psoas-borde-cama`: `ambos_brazos` es `false` pero la foto muestra las dos manos sujetando la rodilla
+- **Ubicación exacta:** `catalogo-lote15`, ejercicio `psoas-borde-cama`, exigencia `ambos_brazos`; `evidencia-lote-15`, apartado 115.
+- **Evidencia:** la evidencia dice: «Foto (D): tumbada en una camilla alta, junto al borde; una rodilla llevada al pecho sujeta con las manos; la otra pierna cuelga por fuera». El catálogo tiene `ambos_brazos: false`.
+- **Explicación:** la foto muestra las dos manos sujetando la rodilla. Según Q1 (P9), el uso simultáneo de los dos brazos cuenta como `ambos_brazos: true`. La etiqueta actual es `false`, lo que contradice la evidencia D de la foto.
+- **Consecuencia potencial:** el ejercicio se ofrece a perfiles con «Solo puedo usar un brazo» aunque la foto muestra que se necesitan los dos. Es un falso negativo.
+- **Nivel de certeza:** alta (la evidencia es explícita y Q1 es explícita).
+- **Recomendación:** cambiar `ambos_brazos` a `true` con evidencia D.
+- **Prueba o evidencia que permitiría confirmarlo:** revisar la foto de F1, p. 16, y comprobar que las dos manos sujetan la rodilla.
+- **¿Requiere decisión humana?:** no para el cambio (R2.2 permite `false` solo con D de que la exigencia no aparece; aquí la D dice que sí aparece). Sí para aprobar el cambio en el plan (R2.6).
+
+### DS-386 · `cuadriceps-boca-abajo-toalla`: la instrucción de HealthMove no menciona la toalla como alternativa
+- **Ubicación exacta:** `catalogo-lote15`, ejercicio `cuadriceps-boca-abajo-toalla`, campo `instrucciones`; `evidencia-lote-15`, apartado 117.
+- **Evidencia:** la fuente dice: «si no llega, usar una toalla». La instrucción de HealthMove dice: «Lleva un talón hacia el glúteo y coge el pie o el tobillo con la mano de ese lado. Si no llegas, usa una toalla». Coincide.
+- **Explicación:** no hay incidencia. La instrucción de HealthMove recoge la alternativa de la toalla. El nombre del ejercicio («con una toalla») sugiere que la toalla es obligatoria, pero la instrucción la presenta como alternativa. Es una posible ambigüedad de nombre, no de etiqueta.
+- **Consecuencia potencial:** el usuario puede pensar que necesita una toalla para hacer el ejercicio, cuando la fuente la presenta como alternativa si no llega. El recurso `toalla` está en `recursos`, lo que refuerza esa impresión.
+- **Nivel de certeza:** media (la evidencia es clara sobre el texto; lo que no está claro es si el nombre y el recurso deben reflejar la alternativa).
+- **Recomendación:** valorar si el nombre y el recurso deben indicar que la toalla es opcional. No propongo un cambio de etiqueta.
+- **Prueba o evidencia que permitiría confirmarlo:** revisar si el motor trata `recursos` como obligatorios (sí, según §8 de la especificación: «se dispone de todos sus recursos»). Si la toalla es opcional, el recurso no debería ser obligatorio.
+- **¿Requiere decisión humana?:** sí. Es una decisión sobre el nombre y el recurso, no sobre una etiqueta.
+
+---
+
+## Resumen del lote
+
+- **8 ejercicios auditados por primera vez con el protocolo 1.0.**
+- **Resultados propuestos:**
+  - LISTO PARA APROBACIÓN DOCUMENTAL, una vez aplicados los cambios propuestos: 110, 111, 112, 113, 114, 116, 117.
+  - REQUIERE CORRECCIONES: 115 (`psoas-borde-cama`, DS-385 y DS-384).
+- **Cambios de etiquetas propuestos:**
+  - 113 y 114: `agarre` `false` → `true` conservador con nota (DS-382).
+  - 115: `ambos_brazos` `false` → `true` (DS-385).
+- **Notas `[conservadora]` que faltan:** 110 y 111 (`flexion_amplia_cadera`), 113 y 114 (`agarre`) (DS-382).
+- **Adaptaciones que deben corregirse o documentarse:** 112 (redacción inexacta, DS-380), 113 (apoyo en la pared no documentado, DS-383), 115 (nota de HealthMove no marcada, DS-384).
+- **Ilustraciones corregidas por Claude:** `flexion-alterna-piernas-de-pie` y `estiramiento-lateral-muslo-pared` (declarado en la evidencia; no verificado por mí).
+- **Cuestión abierta:** DS-381 (criterio de nombres para `especifica_de` en fuentes de rodilla y prevención de caídas). Requiere decisión humana o registro como CN.
+
+FIN DEL BORRADOR

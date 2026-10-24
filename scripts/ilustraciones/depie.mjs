@@ -25,7 +25,7 @@ export const DE_PIE_FICHAS = {
   'equilibrio-una-pierna-pared': PP({ inclina: 4 }, { caderaI: 8, rodillaI: -80 }, { paredX: 262 }),
   'inclinacion-lateral-de-pie': PF({}, { tronco: -16, brazoD: 4, codoD: 4 }),
   'estiramiento-gemelo-pared': PP({ caderaD: -22, rodillaD: -22, caderaI: 25, rodillaI: -5, inclina: 8 }, {}, { zona: ['pantorrilla'], paredX: 290 }),
-  'flexion-alterna-piernas-de-pie': PA({}, { caderaD: 80, rodillaD: -5 }),
+  'flexion-alterna-piernas-de-pie': PA({}, { caderaD: 70, rodillaD: -40 }),
 
   // --- Ampliación v0.3.0 ---
   'elevar-puntas-pies-apoyo': PA({}, { pieD: 125, pieI: 125 }),
@@ -62,7 +62,7 @@ export const DE_PIE_FICHAS = {
   'estiramiento-aductores-pie': PAF({ caderaD: 22, rodillaD: 22, caderaI: 22, rodillaI: 22 }, { caderaD: 12, rodillaD: 12, caderaI: 30, rodillaI: 30, dx: -14 }, { zona: ['musloI'] }),
   'estiramiento-isquios-pie': PA({ caderaD: 24, rodillaD: 24, pieD: 160, caderaI: -12, rodillaI: -40, tronco: 22 }, {}, { zona: ['muslo'] }),
   'estiramiento-soleo-pared': PP({ caderaD: -12, rodillaD: -36, caderaI: 22, rodillaI: -8, inclina: 6 }, {}, { zona: ['pantorrilla'], paredX: 285 }),
-  'estiramiento-lateral-muslo-pared': PF({ caderaD: -10, rodillaD: -10, alcanza: { manoI: 'pared' } }, { dx: 10, tronco: -8, alcanza: { manoI: 'pared' } }, { apoyos: ['pared'], paredX: 250, zona: ['musloI'] }),
+  'estiramiento-lateral-muslo-pared': PF({ caderaD: -10, rodillaD: -10, brazoI: 40, codoI: 95 }, { dx: 10, tronco: -8, brazoI: 34, codoI: 90 }, { apoyos: ['pared'], paredX: 228, zona: ['musloI'] }),
   'isometrico-hombro-fuera-pared': PF({ brazoI: 4, codoI: 90 }, {}, { apoyos: ['pared'], paredX: 246, toalla: ['codoI'], zona: ['hombro'] }),
   'isometrico-hombro-dentro': SF({ brazoD: 4, codoD: -90, alcanza: { manoI: 'manoD' } }, {}, { toalla: ['codoD'], zona: ['hombro'] }),
 };

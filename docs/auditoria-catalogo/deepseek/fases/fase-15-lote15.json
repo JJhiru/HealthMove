@@ -1,0 +1,53 @@
+{
+  "id": "fase-15-lote15",
+  "titulo": "Auditoría del lote 15 (8 ejercicios: San Carlos rodilla, Valencia y Ministerio de Sanidad), borrador de DeepSeek sobre la evidencia de Claude (C16)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-15-lote15.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "registro",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "ejemplo-formato-lote-14",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/lote-14.md"
+    },
+    {
+      "id": "evidencia-lote-15",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/evidencia/lote-15.md"
+    },
+    {
+      "id": "catalogo-lote15",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "elevar-rodilla-mantenida-sentado",
+        "flexion-alterna-piernas-de-pie",
+        "toalla-entre-rodillas-sentado",
+        "estiramiento-soleo-pared",
+        "estiramiento-lateral-muslo-pared",
+        "psoas-borde-cama",
+        "extension-cadera-boca-abajo",
+        "cuadriceps-boca-abajo-toalla",
+        "estiramiento-gemelo-pared"
+      ]
+    }
+  ]
+}

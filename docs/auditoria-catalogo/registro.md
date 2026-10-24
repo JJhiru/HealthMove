@@ -156,10 +156,18 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 14 | movilizacion-ciatico-tumbado | REQUIERE REVISIÓN PROFESIONAL | pendiente |
 | 14 | cruzar-pierna-tumbado | PENDIENTE DE DECISIÓN | pendiente |
 | 14 | autoelongacion-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 15 | elevar-rodilla-mantenida-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 15 | flexion-alterna-piernas-de-pie | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 15 | toalla-entre-rodillas-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 15 | estiramiento-soleo-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 15 | estiramiento-lateral-muslo-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 15 | psoas-borde-cama | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 15 | extension-cadera-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 15 | cuadriceps-boca-abajo-toalla | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 
 ## Pendientes
 
-- Auditados: 85 de 225 (lote 14, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
+- Auditados: 93 de 225 (lote 15, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
 - Lista de candidatos a adaptación unilateral: ver los resúmenes de los lotes 1, 3 y 4.
 - ~~Tarea de interfaz pendiente: comunicar `especifica_de` (decisión 3).~~ Hecha en P17 (2026-10-21).
 - **Actualización (2026-10-16):**
@@ -198,6 +206,15 @@ Plantilla en `protocolo.md`, R1.4.
 - Propuesta del auditor (sin aplicar): (a) cuenta, con `true` conservador, que es el valor actual; (b) no cuenta si el texto no lo pide y el movimiento no lo necesita.
 - Valor provisional: `ambos_brazos` y `agarre` en `true` conservador (P24).
 - Estado: **aplazado (P28, 2026-10-23)**. Se mantiene el valor provisional.
+
+### CN-4 · La mano que va hacia atrás, hasta el pie
+- Ejercicio(s): `cuadriceps-boca-abajo-toalla` (lote 15). Casos equivalentes sin auditar: `estiramiento-cuadriceps-pie`, `cuadriceps-lado-suelo` y cualquier estiramiento de cuádriceps en que la mano coge el pie o el tobillo por detrás.
+- Detalle: la especificación §4 marca `mano_detras` con «mano detrás de la espalda o de la cabeza», y la opción del perfil dice «Me cuesta llevar la mano a la espalda o detrás de la cabeza». Al coger el pie por detrás, la mano va hacia atrás, junto al glúteo, sin llegar a la espalda.
+- Evidencia: D (San Carlos, «Ejercicios de Rodilla», p. 13: la mano del mismo lado coge el tobillo por detrás).
+- Reglas consideradas y por qué no resuelven: §4 no dice si «detrás de la espalda» incluye la mano que va hacia atrás por debajo de la cintura. R2.1 permite marcar ante la duda, pero no fija el criterio para toda la clase.
+- Propuesta del auditor (sin aplicar): (a) cuenta: `true` en toda la clase; (b) no cuenta si la mano no pasa de la cintura.
+- Valor provisional: `true` conservador (R2.1), en `cuadriceps-boca-abajo-toalla` desde P29 y en los demás al auditarlos. DeepSeek (C16) lo proponía como `true`.
+- Estado: pendiente.
 
 ## Propuestas retiradas
 
@@ -449,3 +466,4 @@ Sobre el informe `problemas-pendientes-2026-10-21.md`.
     - **Lote 12** (Royal Berkshire, «Bed exercises and stretches»): 15 ejercicios, los 15 listos. Consulta C13. `especifica_de` «encamados» y `flexion_profunda_rodilla` conservadora en los dos puentes.
     - **Lote 13** (Royal Berkshire pulmonar y core, Royal Papworth, RUH Bath): 9 ejercicios, los 9 listos. Consulta C14. `esfuerzo_cardio` en Star Jacks; «mujeres» en el suelo pélvico.
     - **Lote 14** (Hospital Clínico San Carlos, columna lumbar): 7 ejercicios; 5 listos, `movilizacion-ciatico-tumbado` REQUIERE REVISIÓN PROFESIONAL y `cruzar-pierna-tumbado` PENDIENTE DE DECISIÓN (DS-378). Consulta C15.
+    - **Lote 15** (San Carlos rodilla, Valencia, Ministerio de Sanidad): 8 ejercicios, los 8 listos. Consulta C16. Nuevo CN-4 (mano hacia atrás hasta el pie), con `true` conservador provisional.
