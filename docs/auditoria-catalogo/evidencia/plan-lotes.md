@@ -12,7 +12,7 @@
 | 16 | Hospital Universitario San Cecilio | 8 | Hecho (2026-10-24) |
 | 17 | Hospital Sant Joan d'Alacant, Hospital de León, SERMEF | 9 | Hecho (2026-10-24) |
 | 18 | National Institute on Aging | 8 | Hecho (2026-10-24) |
-| 19 | Worcestershire County Council, Medway, York and Scarborough | 9 | Pendiente |
+| 19 | Worcestershire County Council, Medway, York and Scarborough | 9 | Hecho (2026-10-24) |
 | 20 | Later Life Training (Otago), Royal Wolverhampton (2), James Paget | 9 | Pendiente |
 | 21 | Vivifrail, Chartered Society of Physiotherapy, HSE, Parkinson's UK | 8 | Pendiente |
 | 22 | South Tees (rehabilitación cardiaca y 4 páginas) | 10 | Pendiente |

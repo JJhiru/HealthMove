@@ -189,10 +189,19 @@ Las cuestiones que siguen abiertas (Q1-Q8) están en el apartado 13 del protocol
 | 18 | subir-manos-pared | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 18 | toalla-detras-espalda-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 | 18 | cuadriceps-lado-suelo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 19 | banda-press-pecho-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 19 | banda-prensa-pierna-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 19 | banda-separar-rodillas-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 19 | banda-aperturas-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 19 | banda-elevaciones-laterales-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 19 | banda-empuje-pie-sentado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 19 | banda-sentarse-levantarse | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 19 | cuadriceps-estatico-tumbado | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
+| 19 | flexion-rodilla-boca-abajo | LISTO PARA APROBACIÓN DOCUMENTAL | pendiente |
 
 ## Pendientes
 
-- Auditados: 118 de 225 (lote 18, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
+- Auditados: 127 de 225 (lote 19, 2026-10-24). Desde P29 se audita por fuente con DeepSeek; la lista de fuentes pendientes está en `evidencia/plan-lotes.md`. **Royal Devon está bloqueada** (403 desde el script, 2026-10-21): hace falta descargar su PDF a mano para auditar sus 3 ejercicios.
 - Lista de candidatos a adaptación unilateral: ver los resúmenes de los lotes 1, 3 y 4.
 - ~~Tarea de interfaz pendiente: comunicar `especifica_de` (decisión 3).~~ Hecha en P17 (2026-10-21).
 - **Actualización (2026-10-16):**
@@ -504,3 +513,4 @@ Sobre el informe `problemas-pendientes-2026-10-21.md`.
     - **Lote 16** (San Cecilio, ejercicios en cama): 8 ejercicios, los 8 listos. Consulta C17. Nuevo CN-5 (rodillas dobladas tumbado, sin ángulo).
     - **Lote 17** (Sant Joan d'Alacant, León, SERMEF): 9 ejercicios, los 9 listos. Consulta C18.
     - **Lote 18** (National Institute on Aging): 8 ejercicios, los 8 listos. Consulta C19. CN-4 aplicado como provisional en dos estiramientos de cuádriceps.
+    - **Lote 19** (Worcestershire, Medway, York): 9 ejercicios, los 9 listos. Consulta C20.

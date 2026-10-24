@@ -1,0 +1,54 @@
+{
+  "id": "fase-19-lote19",
+  "titulo": "Auditoría del lote 19 (9 ejercicios: Worcestershire, Medway y York), borrador de DeepSeek sobre la evidencia de Claude (C20)",
+  "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+  "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-19-lote19.md",
+  "bloques": [
+    {
+      "id": "protocolo",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/protocolo.md"
+    },
+    {
+      "id": "especificacion",
+      "tipo": "archivo",
+      "ruta": "docs/especificacion-v1.md"
+    },
+    {
+      "id": "registro",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/registro.md"
+    },
+    {
+      "id": "opciones",
+      "tipo": "archivo",
+      "ruta": "public/js/opciones.js"
+    },
+    {
+      "id": "ejemplo-formato-lote-18",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/lote-18.md"
+    },
+    {
+      "id": "evidencia-lote-19",
+      "tipo": "archivo",
+      "ruta": "docs/auditoria-catalogo/evidencia/lote-19.md"
+    },
+    {
+      "id": "catalogo-lote19",
+      "tipo": "catalogo-ids",
+      "ids": [
+        "banda-press-pecho-sentado",
+        "banda-prensa-pierna-sentado",
+        "banda-separar-rodillas-sentado",
+        "banda-aperturas-sentado",
+        "banda-elevaciones-laterales-sentado",
+        "banda-empuje-pie-sentado",
+        "banda-sentarse-levantarse",
+        "cuadriceps-estatico-tumbado",
+        "flexion-rodilla-boca-abajo",
+        "sentarse-levantarse"
+      ]
+    }
+  ]
+}

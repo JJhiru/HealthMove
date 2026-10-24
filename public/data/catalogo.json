@@ -4211,7 +4211,8 @@
         "titulo": "The Resistance Band Exercise Guide",
         "url": "https://www.worcestershire.gov.uk/sites/default/files/2024-12/resistance_band_accessible_leaflet_online_version.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores de 50"
       },
       "adaptaciones": [],
       "notas_etiquetado": "Con las manos más cerca de los extremos de la banda es más fácil.",
@@ -4269,7 +4270,8 @@
         "titulo": "The Resistance Band Exercise Guide",
         "url": "https://www.worcestershire.gov.uk/sites/default/files/2024-12/resistance_band_accessible_leaflet_online_version.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores de 50"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -4304,7 +4306,7 @@
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
         "mano_detras": false,
-        "ambos_brazos": false,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
@@ -4327,10 +4329,11 @@
         "titulo": "The Resistance Band Exercise Guide",
         "url": "https://www.worcestershire.gov.uk/sites/default/files/2024-12/resistance_band_accessible_leaflet_online_version.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores de 50"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Sujetar los extremos de la banda se marca como agarre.",
+      "notas_etiquetado": "[conservadora] ambos_brazos y agarre: el dibujo deja las dos manos junto a los extremos de la banda y no se ve si los sujetan; el texto no lo dice. Se cerraría con: evidencia de que la banda se queda sola alrededor de los muslos.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -4385,7 +4388,8 @@
         "titulo": "The Resistance Band Exercise Guide",
         "url": "https://www.worcestershire.gov.uk/sites/default/files/2024-12/resistance_band_accessible_leaflet_online_version.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores de 50"
       },
       "adaptaciones": [],
       "notas_etiquetado": "[conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
@@ -4500,7 +4504,8 @@
         "titulo": "The Resistance Band Exercise Guide",
         "url": "https://www.worcestershire.gov.uk/sites/default/files/2024-12/resistance_band_accessible_leaflet_online_version.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores de 50"
       },
       "adaptaciones": [],
       "notas_etiquetado": "[conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
@@ -4558,7 +4563,8 @@
         "titulo": "The Resistance Band Exercise Guide",
         "url": "https://www.worcestershire.gov.uk/sites/default/files/2024-12/resistance_band_accessible_leaflet_online_version.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores de 50"
       },
       "adaptaciones": [],
       "notas_etiquetado": "",
@@ -7733,10 +7739,11 @@
         "titulo": "The Resistance Band Exercise Guide",
         "url": "https://www.worcestershire.gov.uk/sites/default/files/2024-12/resistance_band_accessible_leaflet_online_version.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores de 50"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Con las manos más cerca de los extremos de la banda es más fácil.",
+      "notas_etiquetado": "Con las manos más cerca de los extremos de la banda es más fácil. [conservadora] flexion_profunda_rodilla: con los pies retrasados, al levantarse la rodilla puede pasar de 90° y la fuente no da el ángulo. Se cerraría con: una vista lateral de la transición.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -9257,7 +9264,7 @@
         "url": "https://www.medway.nhs.uk/app/app-uploads/2024/04/Knee-Exercises-Patient-Information-Leaflet.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "lesión de rodilla",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
       "notas_etiquetado": "La rótula sube al tensar el muslo.",
@@ -11599,10 +11606,11 @@
         "titulo": "Knee Exercises (PIL636)",
         "url": "https://yorkhospitals.nhs.uk/seecmsfile/?id=6834",
         "licencia": "Todos los derechos reservados: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "dolor de rodilla"
       },
       "adaptaciones": [
-        "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
+        "La fuente no indica repeticiones; aquí se proponen de 5 a 10."
       ],
       "notas_etiquetado": "",
       "validacion": {
