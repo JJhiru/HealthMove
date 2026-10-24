@@ -4746,12 +4746,13 @@
         "url": "https://www.stgeorges.nhs.uk/wp-content/uploads/2021/09/RA-hand-exercises.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "artritis reumatoide",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
-        "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10."
+        "La fuente deja las repeticiones en blanco para que las fije el fisioterapeuta; se usa una pauta de 5 a 10.",
+        "La fuente no indica dónde apoyar las manos; aquí se apoyan en los muslos."
       ],
-      "notas_etiquetado": "La fuente recomienda calentar antes las manos con agua tibia. [conservadora] ambos_brazos: no consta si los brazos solo reposan (Q1). Se cerraría con: la fuente o su imagen.",
+      "notas_etiquetado": "La fuente recomienda calentar antes las manos con agua tibia. [conservadora] ambos_brazos: la instrucción apoya las dos manos en los muslos y la fuente no dice si los brazos solo reposan (Q1). Se cerraría con: una imagen de la fuente que muestre la posición de los brazos.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -4805,7 +4806,7 @@
         "url": "https://www.stgeorges.nhs.uk/wp-content/uploads/2021/09/RA-hand-exercises.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "artritis reumatoide",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [
         "La fuente usa una superficie plana; aquí se usa el muslo.",
@@ -6675,12 +6676,13 @@
         "titulo": "Positions to ease breathlessness (GL-01)",
         "url": "https://rightdecisions.scot.nhs.uk/media/fibfur4q/acprc-managing-breathlessness.pdf",
         "licencia": "© ACPRC: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "problemas pulmonares"
       },
       "adaptaciones": [
         "La fuente no fija la duración; se usan 1 o 2 minutos."
       ],
-      "notas_etiquetado": "",
+      "notas_etiquetado": "[conservadora] flexion_amplia_cadera: al inclinarse con los codos en las rodillas, el muslo se acerca al tronco; la fuente no da ángulo. Se cerraría con: una vista lateral que muestre el ángulo entre muslo y tronco.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -7023,7 +7025,7 @@
         "url": "https://plr.cht.nhs.uk/download/1113/Home%20Exercise%20Programme%20Beginners",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "rehabilitación cardiaca",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
       "adaptaciones": [],
       "notas_etiquetado": "Si cansa, la fuente propone círculos más pequeños o descansar.",
@@ -8417,12 +8419,13 @@
         "titulo": "Positions to ease breathlessness (GL-01)",
         "url": "https://rightdecisions.scot.nhs.uk/media/fibfur4q/acprc-managing-breathlessness.pdf",
         "licencia": "© ACPRC: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "problemas pulmonares"
       },
       "adaptaciones": [
         "La fuente no fija la duración; se usan 1 o 2 minutos."
       ],
-      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
+      "notas_etiquetado": "[conservadora] brazo_sobre_hombro: la fuente no dice hasta dónde suben los codos al apoyarse en la pared (su dibujo usa un respaldo, con los codos por debajo de los hombros) y no consta que el brazo no pase de la altura del hombro (CN-1, P25). Se cerraría con: una imagen de la fuente con los codos apoyados en la pared.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -8475,7 +8478,8 @@
         "titulo": "Positions to ease breathlessness (GL-01)",
         "url": "https://rightdecisions.scot.nhs.uk/media/fibfur4q/acprc-managing-breathlessness.pdf",
         "licencia": "© ACPRC: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "problemas pulmonares"
       },
       "adaptaciones": [
         "La fuente no fija la duración; se usan 1 o 2 minutos."
@@ -10711,9 +10715,11 @@
         "url": "https://www.berkshirehealthcare.nhs.uk/media/qwqaccdd/bh1165n-low-back-pain-v1-feb-2026.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
         "especifica_de": "dolor lumbar",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "La fuente no indica cómo bajar las piernas; aquí se baja un pie cada vez."
+      ],
       "notas_etiquetado": "",
       "validacion": {
         "estado": "borrador",
@@ -12861,10 +12867,11 @@
         "titulo": "Shoulder range of movement exercises",
         "url": "https://www.sfh-tr.nhs.uk/media/0romp4a3/pil202509-04-srme-shoulder-range-of-movement-exercises.pdf",
         "licencia": "Sin licencia indicada: instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "hombro"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "La fuente avisa de que es normal una molestia leve de estiramiento que cede pronto.",
+      "notas_etiquetado": "La fuente avisa de que es normal una molestia leve de estiramiento que cede pronto. [conservadora] agarre: la fuente dice «hold or support» y no consta que la mano buena se cierre (Q2). Se cerraría con: una imagen o un vídeo de la fuente que muestre la mano.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",

@@ -1,0 +1,119 @@
+{
+  "idEjecucion": "20261024T150850Z-fase-28-lote28",
+  "fecha": "2026-10-24T15:08:50.104Z",
+  "fase": {
+    "id": "fase-28-lote28",
+    "titulo": "Auditoría del lote 28 (8 ejercicios: St George's, ACPRC (Right Decisions), Berkshire Healthcare, Calderdale and Huddersfield y Sherwood Forest. Nota de Claude: la comprobación de R7.6 la hace Claude, que renderiza las ilustraciones y las describe en la evidencia; el tobillo, el pie y los dedos de la mano no están excluidos del catálogo v1 (solo la muñeca).), borrador de DeepSeek sobre la evidencia de Claude (C29)",
+    "instrucciones": "scripts/ia/instrucciones/auditoria-documental.md",
+    "tarea": "docs/auditoria-catalogo/deepseek/fases/fase-28-lote28.md"
+  },
+  "estado": "completa",
+  "modelo": {
+    "configurado": "deepseek-flash",
+    "informado": "deepseek-flash"
+  },
+  "idRespuesta": "14118013-0ecd-49d6-97f7-11dfe8e9eeff",
+  "finishReason": "stop",
+  "uso": {
+    "aciertoCache": 640,
+    "falloCache": 59293,
+    "salida": 15826,
+    "razonamiento": 0
+  },
+  "tokensEntradaEstimados": 94865,
+  "intentos": [
+    {
+      "n": 1,
+      "estado": "completa",
+      "finishReason": "stop",
+      "id": "14118013-0ecd-49d6-97f7-11dfe8e9eeff",
+      "modelo": "deepseek-flash",
+      "uso": {
+        "aciertoCache": 640,
+        "falloCache": 59293,
+        "salida": 15826,
+        "razonamiento": 0
+      },
+      "coste": 0.03678294,
+      "costeExacto": true
+    }
+  ],
+  "costeTotalCotaSuperiorUSD": 0.03678294,
+  "notaCoste": "Calculado con la tarifa punta de scripts/ia/tarifas.mjs (cota superior). DeepSeek no devuelve el importe facturado; en horario valle es la mitad.",
+  "versiones": {
+    "commit": "ba9f863d6e8988e8a2be322f01c949cbf1b1b004",
+    "catalogo": {
+      "version": "0.3.0",
+      "actualizado": "2026-10-14",
+      "blob": "d1f59552be2f32afb7683823cc05318b7e30946d",
+      "sinConfirmar": false
+    },
+    "protocolo": "1.0",
+    "archivosSinConfirmar": [
+      "docs/auditoria-catalogo/evidencia/lote-28.md"
+    ]
+  },
+  "bloque": 1,
+  "continuacion": null,
+  "bloques": [
+    {
+      "id": "protocolo",
+      "procedencia": "docs/auditoria-catalogo/protocolo.md",
+      "caracteres": 36949,
+      "sha256": "4a7cbb32481a6295fec3a0eb92181f8f472194629754a8422e4b50b56524d332"
+    },
+    {
+      "id": "especificacion",
+      "procedencia": "docs/especificacion-v1.md",
+      "caracteres": 15774,
+      "sha256": "7c96d4bd545c4fbfe0b6a1e2508bf923cb7c6abec44520ad3cfc2feaf88dc775"
+    },
+    {
+      "id": "registro-1",
+      "procedencia": "docs/auditoria-catalogo/registro.md#parte-1-de-2",
+      "caracteres": 32650,
+      "sha256": "1fe2678db0e0657f4f93f08bbf582d1e0414d9da56937032e5332e4981b53403"
+    },
+    {
+      "id": "registro-2",
+      "procedencia": "docs/auditoria-catalogo/registro.md#parte-2-de-2",
+      "caracteres": 33064,
+      "sha256": "ded1ca05c690efb242951ed66236804f6f8b7f68060b5a3f09d64a85e5a54ac0"
+    },
+    {
+      "id": "opciones",
+      "procedencia": "public/js/opciones.js",
+      "caracteres": 6246,
+      "sha256": "4430708c5729fd9d4f75a783a575a7a6d826cccc0d94bc6e5d6c2e63636eaf4b"
+    },
+    {
+      "id": "ejemplo-formato-lote-27",
+      "procedencia": "docs/auditoria-catalogo/lote-27.md",
+      "caracteres": 36503,
+      "sha256": "e0afadbe10cc5c5cb9eac184f5cbcdc34a6c03f06790597f98c76427ecbc45c6"
+    },
+    {
+      "id": "evidencia-lote-28",
+      "procedencia": "docs/auditoria-catalogo/evidencia/lote-28.md",
+      "caracteres": 7570,
+      "sha256": "bc316e0bae75d2d71af98ad59cc4ce2c828c88fa1274ead570dacd9145afd901"
+    },
+    {
+      "id": "catalogo-lote28",
+      "procedencia": "public/data/catalogo.json#catalogo-ids",
+      "caracteres": 13321,
+      "sha256": "c13bdcdb031c7da577b67e5ea025fa1ac216e34efe3696a1fc8e3979bb9d4826"
+    }
+  ],
+  "hashes": {
+    "instrucciones": "6915740a9fee85acb4e20fad0bce8e37c859aeb3538fb44801830c21ab755a20",
+    "respuesta": "b9f6cef1dd76ed41d504d58dbc6c85e94859921f96393bcfdfc2514531653ffc",
+    "respuestaApi": "d7a9add34c688a0ca2c4331348421276825f6cd4ed7f4174ec78bd8f54b3706e"
+  },
+  "literalVerificado": true,
+  "archivos": {
+    "solicitud": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T150850Z-fase-28-lote28/solicitud.json",
+    "respuesta": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T150850Z-fase-28-lote28/respuesta.md",
+    "respuestaApi": "docs/auditoria-catalogo/deepseek/ejecuciones/20261024T150850Z-fase-28-lote28/respuesta-api.json"
+  }
+}

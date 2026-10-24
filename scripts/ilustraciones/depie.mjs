@@ -50,7 +50,7 @@ export const DE_PIE_FICHAS = {
   'press-hombros-botella-pie': PF({ brazoD: 90, codoD: 175, brazoI: 90, codoI: 175 }, { brazoD: 165, codoD: 170, brazoI: 165, codoI: 170 }, { botella: ['manoD', 'manoI'] }),
   'banda-deslizar-brazos-pared': PP({ inclina: 8 }, { inclina: 10, alcanza: { manoD: 'paredAlta', manoI: 'paredAlta' } }, { banda: [['manoD', 'manoI']], paredX: 270 }),
   'banda-elevar-brazos-pie': PF({ brazoD: 8, codoD: 8, brazoI: 8, codoI: 8 }, { brazoD: 150, codoD: 150, brazoI: 150, codoI: 150 }, { banda: [['manoD', 'manoI']] }),
-  'descanso-apoyado-pared': PP({ inclina: 14 }, {}, { paredX: 262, aire: 'sale', ini: { inclina: 14, alcanza: { manoD: 'paredAlta', manoI: 'paredAlta' } }, fin: {} }),
+  'descanso-apoyado-pared': PP({ inclina: 14 }, {}, { paredX: 262, aire: 'sale', ini: { inclina: 14, alcanza: { manoD: 'pared', manoI: 'pared' } }, fin: {} }),
   'descanso-espalda-pared': P({ inclina: -7 }, {}, { apoyos: ['pared-detras'], paredX: 150, aire: 'sale' }),
   'abrir-pierna-brazo-pared': PF({ alcanza: { manoD: 'pared' } }, { caderaI: 25, rodillaI: 25, brazoI: 90, codoI: 90, alcanza: { manoD: 'pared' } }, { apoyos: ['pared-detras'], paredX: 118 }),
   'estiramiento-hombros-espalda-pared': PF({ brazoD: 90, codoD: 180, brazoI: 90, codoI: 180 }, { codoD: 0, codoI: 0 }, { apoyos: ['pared-fondo'], zona: ['hombro'] }),
