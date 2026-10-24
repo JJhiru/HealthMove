@@ -3803,10 +3803,13 @@
         "titulo": "Exercise & Physical Activity: Your Everyday Guide (copia de la Univ. de Missouri)",
         "url": "https://geriatrictoolkit.missouri.edu/consumer/Exercise_and_Physical_ActivityYour_Everyday_Guide_from_The_NIA.pdf",
         "licencia": "Obra del Gobierno federal de EE. UU. (en principio de dominio público; el documento no lo indica): instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores"
       },
-      "adaptaciones": [],
-      "notas_etiquetado": "La fuente pide consultar antes si te han operado de cadera o espalda. Inclinarse desde la cadera acerca el muslo al tronco.",
+      "adaptaciones": [
+        "La fuente pide además relajar el cuello y bajar la barbilla; HealthMove no incluye posiciones ni movimientos de cuello."
+      ],
+      "notas_etiquetado": "La fuente pide consultar antes si te han operado de cadera o espalda. flexion_amplia_cadera e inclinacion_tronco: inclinarse desde la cadera acerca el muslo al tronco y lleva el tronco hacia delante (D: texto y foto).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -6215,7 +6218,7 @@
         "brazo_sobre_hombro": true,
         "mano_detras": false,
         "ambos_brazos": true,
-        "agarre": true,
+        "agarre": false,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": false,
         "flexion_amplia_cadera": false,
@@ -6224,7 +6227,7 @@
         "rotacion_tronco": false
       },
       "instrucciones": [
-        "Siéntate erguido y entrelaza las manos al frente con las palmas hacia fuera.",
+        "Siéntate erguido y lleva los brazos al frente con las palmas hacia fuera.",
         "Estira los brazos a la altura de los hombros y alarga el alcance, con los hombros relajados.",
         "Mantén sin mover el tronco y respira con normalidad."
       ],
@@ -6236,9 +6239,12 @@
         "titulo": "Exercise & Physical Activity: Your Everyday Guide (copia de la Univ. de Missouri)",
         "url": "https://geriatrictoolkit.missouri.edu/consumer/Exercise_and_Physical_ActivityYour_Everyday_Guide_from_The_NIA.pdf",
         "licencia": "Obra del Gobierno federal de EE. UU. (en principio de dominio público; el documento no lo indica): instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "Se omite la versión más difícil de la fuente, que cruza los brazos y entrelaza los dedos."
+      ],
       "notas_etiquetado": "[conservadora] brazo_sobre_hombro: el brazo llega a la altura del hombro, o no se dice hasta dónde sube, y no consta que no la pase (CN-1, P25). Se cerraría con: evidencia de la fuente de que el brazo no pasa de la altura del hombro.",
       "validacion": {
         "estado": "borrador",
@@ -6404,9 +6410,12 @@
         "titulo": "Exercise & Physical Activity: Your Everyday Guide (copia de la Univ. de Missouri)",
         "url": "https://geriatrictoolkit.missouri.edu/consumer/Exercise_and_Physical_ActivityYour_Everyday_Guide_from_The_NIA.pdf",
         "licencia": "Obra del Gobierno federal de EE. UU. (en principio de dominio público; el documento no lo indica): instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores"
       },
-      "adaptaciones": [],
+      "adaptaciones": [
+        "La fuente usa una pesa; aquí, una botella."
+      ],
       "notas_etiquetado": "",
       "validacion": {
         "estado": "borrador",
@@ -7814,8 +7823,8 @@
         "carga_externa": false,
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": false,
-        "mano_detras": false,
-        "ambos_brazos": false,
+        "mano_detras": true,
+        "ambos_brazos": true,
         "agarre": true,
         "peso_en_manos": false,
         "flexion_profunda_rodilla": true,
@@ -7838,10 +7847,11 @@
         "titulo": "Exercise & Physical Activity: Your Everyday Guide (copia de la Univ. de Missouri)",
         "url": "https://geriatrictoolkit.missouri.edu/consumer/Exercise_and_Physical_ActivityYour_Everyday_Guide_from_The_NIA.pdf",
         "licencia": "Obra del Gobierno federal de EE. UU. (en principio de dominio público; el documento no lo indica): instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "La fuente pide consultar antes si te han operado de cadera o espalda.",
+      "notas_etiquetado": "La fuente pide consultar antes si te han operado de cadera o espalda. [conservadora] mano_detras: la mano coge el pie por detrás del cuerpo; no está decidido si cuenta como «mano detrás de la espalda» (CN-4). Se cerraría con: la decisión de CN-4. ambos_brazos: una mano se sujeta a la silla mientras la otra coge el pie (Q1).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -8537,7 +8547,8 @@
         "titulo": "Exercise & Physical Activity: Your Everyday Guide (copia de la Univ. de Missouri)",
         "url": "https://geriatrictoolkit.missouri.edu/consumer/Exercise_and_Physical_ActivityYour_Everyday_Guide_from_The_NIA.pdf",
         "licencia": "Obra del Gobierno federal de EE. UU. (en principio de dominio público; el documento no lo indica): instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores"
       },
       "adaptaciones": [],
       "notas_etiquetado": "La fuente pide parar enseguida si hay dolor agudo.",
@@ -8594,10 +8605,11 @@
         "titulo": "Exercise & Physical Activity: Your Everyday Guide (copia de la Univ. de Missouri)",
         "url": "https://geriatrictoolkit.missouri.edu/consumer/Exercise_and_Physical_ActivityYour_Everyday_Guide_from_The_NIA.pdf",
         "licencia": "Obra del Gobierno federal de EE. UU. (en principio de dominio público; el documento no lo indica): instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "Al inclinarte hacia la pared las manos soportan algo de peso.",
+      "notas_etiquetado": "[conservadora] peso_en_manos: al inclinarse hacia la pared, las manos soportan parte del peso y la fuente no dice cuánto. Se cerraría con: revisión profesional.",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
@@ -8652,7 +8664,8 @@
         "titulo": "Exercise & Physical Activity: Your Everyday Guide (copia de la Univ. de Missouri)",
         "url": "https://geriatrictoolkit.missouri.edu/consumer/Exercise_and_Physical_ActivityYour_Everyday_Guide_from_The_NIA.pdf",
         "licencia": "Obra del Gobierno federal de EE. UU. (en principio de dominio público; el documento no lo indica): instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores"
       },
       "adaptaciones": [
         "La fuente lo hace de pie; sentado no exige equilibrio."
@@ -11621,7 +11634,7 @@
         "carga_externa": false,
         "esfuerzo_cardio": false,
         "brazo_sobre_hombro": true,
-        "mano_detras": false,
+        "mano_detras": true,
         "ambos_brazos": false,
         "agarre": true,
         "peso_en_manos": false,
@@ -11645,10 +11658,11 @@
         "titulo": "Exercise & Physical Activity: Your Everyday Guide (copia de la Univ. de Missouri)",
         "url": "https://geriatrictoolkit.missouri.edu/consumer/Exercise_and_Physical_ActivityYour_Everyday_Guide_from_The_NIA.pdf",
         "licencia": "Obra del Gobierno federal de EE. UU. (en principio de dominio público; el documento no lo indica): instrucciones redactadas con palabras propias",
-        "consultado": "2026-10-14"
+        "consultado": "2026-10-24",
+        "especifica_de": "personas mayores"
       },
       "adaptaciones": [],
-      "notas_etiquetado": "La fuente propone la versión de pie si cuesta bajar al suelo, y consultar antes tras una operación de cadera o espalda. [conservadora] brazo_sobre_hombro: tumbado, la altura del hombro no se puede comparar y el brazo se separa del tronco (estirado, en cruz o por encima de la cabeza) (CN-1, P25). Se cerraría con: evidencia de la fuente del ángulo del brazo.",
+      "notas_etiquetado": "La fuente propone la versión de pie si cuesta bajar al suelo, y consultar antes tras una operación de cadera o espalda. [conservadora] brazo_sobre_hombro: tumbado, la altura del hombro no se puede comparar y el brazo se separa del tronco (estirado, en cruz o por encima de la cabeza) (CN-1, P25). Se cerraría con: evidencia de la fuente del ángulo del brazo. [conservadora] mano_detras: la mano coge el pie por detrás del cuerpo; no está decidido si cuenta como «mano detrás de la espalda» (CN-4). Se cerraría con: la decisión de CN-4. ambos_brazos: el brazo de abajo solo sostiene la cabeza (reposo).",
       "validacion": {
         "estado": "borrador",
         "responsable": "Autor de HealthMove (sin titulación sanitaria)",
