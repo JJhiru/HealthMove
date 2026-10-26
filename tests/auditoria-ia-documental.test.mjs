@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // Auditoría documental con DeepSeek (scripts/ia/auditoria-documental.mjs, orden auditar-documentos).
 // Sin red: transporte simulado. Lo esencial: la respuesta se guarda literal, byte a byte, también si
 // llega truncada o vacía; los reintentos están acotados; nada se sobrescribe.

@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // ============================================================
 //  Control local del gasto de una ejecución. No conoce el saldo de
 //  la cuenta ni lo limita: solo impide que esta herramienta envíe

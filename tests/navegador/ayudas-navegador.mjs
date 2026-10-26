@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // Utilidades para las pruebas de integración en un navegador real, sin dependencias:
 //  - un servidor estático con node:http que sirve public/ (y permite sustituir el catálogo);
 //  - un cliente mínimo del protocolo de depuración de Chrome (CDP) sobre el WebSocket de Node (≥ 22).

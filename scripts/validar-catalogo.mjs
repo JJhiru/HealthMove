@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // ============================================================
 //  Valida public/data/catalogo.json contra las reglas de
 //  docs/especificacion-v1.md (§4 y §7).

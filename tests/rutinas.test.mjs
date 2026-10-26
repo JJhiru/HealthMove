@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // Contrato de las rutinas guardadas: antes de mostrarlas o reproducirlas se comprueba cada bloque
 // con el perfil y el catálogo actuales. La comprobación nunca modifica la rutina.
 import { test } from 'node:test';

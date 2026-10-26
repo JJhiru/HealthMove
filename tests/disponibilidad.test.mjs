@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // Herramienta de impacto en la disponibilidad (scripts/disponibilidad.mjs, protocolo apartado 9):
 // cuenta con el motor real, aplica los escenarios solo en memoria y nunca escribe datos.
 import { test } from 'node:test';

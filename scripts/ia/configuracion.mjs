@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // ============================================================
 //  Configuración de la revisión asistida por IA, solo desde
 //  variables de entorno. No se lee ningún archivo .env.

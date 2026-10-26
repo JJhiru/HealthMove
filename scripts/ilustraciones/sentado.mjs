@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // Fichas de pose: ejercicios sentado en una silla.
 import { S, SF, MANO, PIE, MANOS_CADERA, SUJETA_SILLA, MANOS_ABDOMEN, PUNO_PECHO } from './comun.mjs';
 

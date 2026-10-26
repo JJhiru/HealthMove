@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // ============================================================
 //  Ilustraciones de ejercicios: una figura articulada en SVG.
 //  Misma figura, mismos colores y mismos apoyos en todo el catálogo.

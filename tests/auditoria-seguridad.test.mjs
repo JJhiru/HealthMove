@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // Entradas de scripts/auditoria.mjs (validar, comparar): solo informes .md del repositorio
 // o «<revisión>:<ruta>»; nada llega a git como opción y una entrada inválida no escribe nada.
 // Las pruebas de lectura usan una raíz temporal; las de la CLI no modifican el proyecto.

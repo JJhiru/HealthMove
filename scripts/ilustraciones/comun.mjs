@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // Ayudantes para escribir las fichas de pose de public/js/figura.js.
 // Ángulos (vista de lado, mirando a la derecha): 0° = hacia abajo, 90° = hacia delante, 180° = hacia arriba.
 // «brazo»/«cadera» son el brazo y el muslo; «codo»/«rodilla», el antebrazo y la pierna (siempre absolutos).

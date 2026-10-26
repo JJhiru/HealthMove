@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // Pruebas de integración de la app en un navegador real (Chromium sin interfaz).
 // Comprueban lo que se ve en pantalla y lo que queda en localStorage, no el código fuente.
 // Uso: npm run test:navegador   (navegador: HM_CHROME, PATH o caché de Playwright; si no hay, se omiten)
@@ -32,8 +33,8 @@ const perfil = {
   sinImpacto: P.alternarOpcion(perfilCompleto(), 'indicaciones', 'sin_impacto'),
 };
 // Rutina guardada tal como la guarda la app (generar en app.js).
-function rutinaGuardada(p = perfil.base, semilla = 3) {
-  const res = generarRutina(catalogoReal, p, { semilla, permitirBorrador: true });
+function rutinaGuardada(p = perfil.base, semilla = 3, catalogo = catalogoReal) {
+  const res = generarRutina(catalogo, p, { semilla, permitirBorrador: true });
   assert.equal(res.ok, true);
   return JSON.parse(JSON.stringify({ res, semilla, fecha: '2026-10-17T09:00:00.000Z' }));
 }
@@ -44,6 +45,21 @@ async function conPestana(fn) {
 const cifra = (t) => t.evaluar('document.getElementById("cifra")?.textContent');
 const segundos = (mmss) => { const [m, s] = mmss.split(':').map(Number); return m * 60 + s; };
 const esperar = (ms) => new Promise((ok) => setTimeout(ok, ms));
+
+test('0. primera visita: tras el nombre y el aviso se sigue directamente con el cuestionario', { skip: omitir }, () => conPestana(async (t) => {
+  await t.sembrar();
+  await t.abrirApp('#inicio');
+  await t.hasta('!!document.getElementById("nombre")');
+  await t.evaluar('document.getElementById("nombre").value = "Ana"');
+  await t.pulsar('button[type="submit"][form="form-nombre"]');
+  await t.hasta('!!document.getElementById("acepto")');
+  assert.equal(await t.leer('nombre'), 'Ana');
+  await t.evaluar('document.getElementById("acepto").checked = true');
+  await t.pulsar('[data-accion="aceptar-aviso"]');
+  await t.hasta('location.hash === "#perfil/posicion"');
+  assert.equal((await t.leer('perfil')).avisoAceptado, true);
+  assert.deepEqual(t.errores, []);
+}));
 
 test('1-6. generar, empezar, pausar y reanudar, avanzar y retroceder, finalizar y volver a abrir', { skip: omitir }, () => conPestana(async (t) => {
   await t.sembrar({ valores: { nombre: '', perfil: perfil.base, desarrollo: true } });
@@ -226,7 +242,11 @@ test('8c. si no se puede guardar la copia, el perfil original no se sobrescribe'
 }));
 
 test('9. salir del modo desarrollo con una rutina con borradores: queda bloqueada y se conserva', { skip: omitir }, () => conPestana(async (t) => {
-  const texto = JSON.stringify(rutinaGuardada());
+  // Se sirve una copia con todo en borrador: el catálogo real ya tiene casi todo aprobado (P30).
+  const borrador = JSON.parse(JSON.stringify(catalogoReal));
+  for (const e of borrador.ejercicios) e.validacion = { ...e.validacion, estado: 'borrador', revisado_por: null, fecha_revision: null };
+  servidor.catalogo = JSON.stringify(borrador);
+  const texto = JSON.stringify(rutinaGuardada(perfil.base, 3, borrador));
   await t.sembrar({ valores: { nombre: '', perfil: perfil.base, desarrollo: true }, textos: { resultado: texto } });
   await t.abrirApp('#rutina');
   assert.match(await t.texto(), /Tu rutina|esta es tu rutina/);

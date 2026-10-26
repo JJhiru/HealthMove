@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // ============================================================
 //  HealthMove — interfaz.
 //  Pantallas por hash (#inicio, #perfil/…, #resumen, #rutina…).
@@ -961,7 +962,9 @@ document.addEventListener('click', (ev) => {
     case 'aceptar-aviso':
       if (!document.getElementById('acepto')?.checked) { document.getElementById('acepto')?.focus(); return; }
       cambiarPerfil(P.aceptarAviso(estado.perfil));
-      if (location.hash === '#inicio') router(); else ir('inicio');
+      // La primera vez se sigue directamente con el cuestionario; con un perfil ya empezado, a la portada.
+      if (estado.perfil.posicion === null) ir('perfil/posicion');
+      else if (location.hash === '#inicio') router(); else ir('inicio');
       break;
     case 'tras-posicion': {
       const p = estado.perfil;

@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // Contratos de validación del catálogo y de cada ejercicio (public/js/validacion.js),
 // y su efecto en el motor: un dato inválido nunca entra en una rutina.
 import { test } from 'node:test';

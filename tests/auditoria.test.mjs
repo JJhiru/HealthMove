@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // Herramientas de auditoría (scripts/auditoria.mjs y scripts/auditoria/informes.mjs):
 // leen informes y registro sin modificarlos y detectan incumplimientos de estructura,
 // trazabilidad e invariantes del protocolo.

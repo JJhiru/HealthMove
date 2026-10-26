@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // ============================================================
 //  Almacenamiento local. Todo se queda en este dispositivo.
 //  localStorage puede fallar (modo privado, datos bloqueados):

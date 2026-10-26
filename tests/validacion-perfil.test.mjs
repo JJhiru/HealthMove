@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // Contratos del perfil: tipos y valores estrictos. Un perfil inválido nunca produce una rutina.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
