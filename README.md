@@ -1,6 +1,6 @@
 # HealthMove
 
-#### Video Demo: submit50 cs50/problems/2026/x/project
+#### Video Demo: https://www.youtube.com/watch?v=UUWy9xcTEUk
 
 #### Description:
 
