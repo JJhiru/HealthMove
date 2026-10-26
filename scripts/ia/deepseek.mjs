@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // ============================================================
 //  Cliente mínimo de la API de DeepSeek (formato OpenAI, sin streaming).
 //  Documentación: https://api-docs.deepseek.com (consultada el 2026-10-18).

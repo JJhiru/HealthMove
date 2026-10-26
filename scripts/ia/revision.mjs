@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // ============================================================
 //  Revisión asistida por IA, genérica: instrucciones versionadas +
 //  contexto + entradas delimitadas → hallazgos JSON validados.

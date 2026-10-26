@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // ============================================================
 //  Herramientas de solo lectura para la auditoría del catálogo.
 //  Las reglas viven en docs/auditoria-catalogo/protocolo.md;

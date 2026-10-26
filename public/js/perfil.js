@@ -1,3 +1,4 @@
+// CS50 AI citation: the profile questions and what each one excludes are JJhiru's decisions (docs/especificacion-v1.md); the code was written with the help of Claude (Anthropic), an AI assistant.
 // ============================================================
 //  Modelo del perfil (docs/especificacion-v1.md, §5 y §6).
 //  Funciones puras: cada cambio devuelve un perfil nuevo, así

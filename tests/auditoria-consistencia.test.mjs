@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // Consistencia entre protocolo, skill, CLAUDE.md, registro, especificación y catálogo:
 // todo lo que uno cita existe en el otro. Solo lee archivos.
 import { test } from 'node:test';

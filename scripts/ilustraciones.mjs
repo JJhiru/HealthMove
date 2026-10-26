@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // ============================================================
 //  Genera public/data/ilustraciones.json a partir de las fichas
 //  de pose de scripts/ilustraciones/*.mjs (una por ejercicio).

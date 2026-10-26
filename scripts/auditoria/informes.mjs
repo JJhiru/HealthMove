@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // ============================================================
 //  Lectura y comprobación de los informes de auditoría
 //  (docs/auditoria-catalogo/lote-*.md) y de registro.md.

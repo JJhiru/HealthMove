@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // Revisión asistida por IA (scripts/ia/, scripts/auditoria-ia.mjs). Ninguna prueba usa la red:
 // el cliente recibe un transporte simulado y la CLI se ejecuta con fetch sustituido por uno que falla.
 import { test } from 'node:test';

@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { SECCIONES } from '../public/js/opciones.js';

@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // scripts/auditoria.mjs frente a un entorno de git hostil o heredado (por ejemplo, desde un hook,
 // que exporta GIT_DIR y GIT_INDEX_FILE). Todo ocurre en directorios temporales: un repositorio
 // ajeno, un HOME con ~/.gitconfig propio y destinos de trazas. No se toca la configuración real.

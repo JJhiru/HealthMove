@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // Utilidades compartidas por los tests.
 import { readFileSync } from 'node:fs';
 import { SECCIONES } from '../public/js/opciones.js';

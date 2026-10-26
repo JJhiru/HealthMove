@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // Fichas de pose: ejercicios de pie (y tres que la fuente plantea de pie pero se hacen sentado).
 import { S, SF, P, PF, PA, PAF, PP, MANOS_CADERA } from './comun.mjs';
 

@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // ============================================================
 //  Tarifas de DeepSeek en USD por millón de tokens.
 //  Copiadas de la documentación oficial el día indicado; DeepSeek

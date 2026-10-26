@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // ============================================================
 //  Revisión documental asistida por IA (DeepSeek). Complementa a
 //  scripts/auditoria.mjs: no lo sustituye ni decide nada.

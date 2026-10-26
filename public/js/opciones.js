@@ -1,3 +1,4 @@
+// CS50 AI citation: the profile options and what each one excludes are JJhiru's decisions (docs/especificacion-v1.md); the code was written with the help of Claude (Anthropic), an AI assistant.
 // ============================================================
 //  Opciones del perfil y lo que excluye cada una.
 //  Fuente de verdad: docs/especificacion-v1.md, §5.

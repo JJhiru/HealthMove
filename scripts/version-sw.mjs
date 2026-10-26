@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // ============================================================
 //  Recalcula PRECACHE y VERSION en public/sw.js.
 //  PRECACHE = todos los archivos de public/ (menos sw.js).

@@ -1,9 +1,10 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // ============================================================
 //  Service worker de HealthMove: la app arranca desde la caché,
 //  sin red, y se actualiza en segundo plano.
 //  VERSION y PRECACHE los escribe `npm run version-sw`; no editar a mano.
 // ============================================================
-const VERSION = 'hm-693f481e9379';
+const VERSION = 'hm-b48e52533ade';
 const PRECACHE = [
   './',
   'data/catalogo.json',

@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // Caracterización de la huella de scripts/auditoria/informes.mjs (`huella`).
 // Es una huella LITERAL del objeto JSON del ejercicio en el catálogo: SHA-256 de
 // JSON.stringify(ejercicio), en el orden de claves del archivo, recortada a 16 hex.

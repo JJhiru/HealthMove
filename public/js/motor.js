@@ -1,3 +1,4 @@
+// CS50 AI citation: the compatibility rules follow JJhiru's specification and decisions (docs/especificacion-v1.md, docs/auditoria-catalogo/registro.md); the code was written with the help of Claude (Anthropic), an AI assistant.
 // ============================================================
 //  Motor de reglas (docs/especificacion-v1.md, §8).
 //  1. Traduce el perfil a restricciones explícitas.

@@ -1,3 +1,4 @@
+// CS50 AI citation: written with the help of Claude (Anthropic), an AI assistant. Requirements, design decisions and review: JJhiru.
 // Fichas de pose: ejercicios tumbado en la cama y en el suelo.
 // Tumbado de lado se dibuja visto desde arriba («planta» con la figura de perfil), que es como se ve
 // el movimiento hacia delante y hacia atrás; los movimientos hacia arriba, con la vista de frente girada.
